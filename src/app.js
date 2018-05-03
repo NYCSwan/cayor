@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+
 import './App.css';
 import Navigation from './navigation/navigation.react';
 import Footer from './navigation/footer.react';
@@ -10,7 +12,8 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <div className='body'>
-          <Routes />
+          <Routes
+            props={this.props} />
           <Footer />
         </div>
       </div>
@@ -18,4 +21,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
