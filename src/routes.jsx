@@ -11,7 +11,7 @@ import Esg from './esg/esg.react';
 
 const Routes = (props) => (
   <Switch>
-    <Route path="/" exact render={(routeProps) => { // eslint-disable-line
+    <Route exact path="/" render={(routeProps) => { // eslint-disable-line
         return <Homepage
           {...routeProps} /> }}
     />
