@@ -12,17 +12,27 @@ class Approach extends Component {
       {value: 'Targeted Regions & Countries', url: 'regions'}
     ],
     currentDetails: 'Our Philosophy',
-    pageDetails: ['Test']
+    philosophyText: ['Test philosophy'],
+    sectorText: ['Test sectors'],
+    regionText: ['Test regions and countries']
+
+  }
+
+  handleClick = (e) => {
+    console.log('handle sub navigation click', e);
+    this.setState({
+      currentDetails: e.target.innerText
+    })
   }
 
   renderDetails() {
     const {currentDetails} = this.state;
     if (currentDetails === 'Our Philosophy') {
-      return <PhilosophyDetails pageDetails={this.state.pageDetails} />
+      return <PhilosophyDetails pageDetails={this.state.philosophyText} />
     } else if (currentDetails === 'Targeted Investment Sectors') {
-      return <SectorDetails pageDetails={this.state.pageDetails} />
+      return <SectorDetails pageDetails={this.state.sectorText} />
     } else if (currentDetails === 'Targeted Regions & Countries') {
-      return <RegionDetails pageDetails={this.state.pageDetails} />
+      return <RegionDetails pageDetails={this.state.regionText} />
     }
   }
 
@@ -32,7 +42,8 @@ class Approach extends Component {
         approach
         <SubNav
           navItems={this.state.navItems}
-          match={this.props.match} />
+          match={this.props.match}
+          handleClick={this.handleClick} />
         { this.renderDetails() }
       </div>
     );

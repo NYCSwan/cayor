@@ -4,7 +4,7 @@ const PageDetails = (props) => (
   <div className="PageDetails">
   { props.pageDetails.map(detail => {
     return (
-      <p>{detail}</p>
+      <p key={detail}>{detail}</p>
     )
   })}
   </div>

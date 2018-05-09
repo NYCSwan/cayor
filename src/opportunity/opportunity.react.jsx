@@ -12,17 +12,27 @@ class Opportunities extends Component {
       {value: 'The Cayor Perspective', url: 'perspective'}
     ],
     currentDetails: 'Africa Opportunity',
-    pageDetails: ['Test']
+    africaText: ['Test african opportunity'],
+    whyText: ['Test why cayor'],
+    perspectiveText: ['Test perspective']
+
+  }
+
+  handleClick = (e) => {
+    console.log('handle sub navigation click', e);
+    this.setState({
+      currentDetails: e.target.innerText
+    })
   }
 
   renderDetails() {
     const {currentDetails} = this.state;
     if (currentDetails === 'Africa Opportunity') {
-      return <AfricaDetails pageDetails={this.state.pageDetails} />
+      return <AfricaDetails pageDetails={this.state.africaText} />
     } else if (currentDetails === 'Why Cayor') {
-      return <WhyCayorDetails pageDetails={this.state.pageDetails} />
+      return <WhyCayorDetails pageDetails={this.state.whyText} />
     } else if (currentDetails === 'The Cayor Perspective') {
-      return <CayorPerspectiveDetails pageDetails={this.state.pageDetails} />
+      return <CayorPerspectiveDetails pageDetails={this.state.perspectiveText} />
     }
   }
 
@@ -32,7 +42,8 @@ class Opportunities extends Component {
       opportunity
         <SubNav
           navItems={this.state.navItems}
-          match={this.props.match} />
+          match={this.props.match}
+          handleClick={this.handleClick} />
         { this.renderDetails() }
       </div>
     );

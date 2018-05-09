@@ -4,7 +4,7 @@ import PageDetails from '../layout/pageDetails.react';
 const SectorDetails = (props) => (
   <div className="SectorDetails">
     <PageDetails
-      props={props.pageDetails} />
+      pageDetails={props.pageDetails} />
   </div>
 )
 

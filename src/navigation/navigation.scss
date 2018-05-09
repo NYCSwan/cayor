@@ -1,12 +1,15 @@
+@import '../_variables';
+
 .header {
   width: 100%;
 
-  > img {
+  img {
     width: 200px;
   }
 
-  > li {
+  li {
     list-style: none;
-    display: inline-block;
+    display: inline;
+    padding: 5px 10px;
   }
 }

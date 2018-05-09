@@ -1,11 +1,15 @@
 import React from 'react';
+import './sub_navigation.css';
 
 const SubNav = (props) => (
   <aside className="sub_navigation">
-    <ul>
+    <ul className='list'>
       { props.navItems.map(navItem => {
         return (
-          <li>{navItem.value}</li>
+          <li key={navItem.value}
+            onClick={props.handleClick}>
+            {navItem.value}
+          </li>
         )
       }
       )}

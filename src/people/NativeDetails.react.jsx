@@ -4,7 +4,7 @@ import PageDetails from '../layout/pageDetails.react';
 const NativeDetails = (props) => (
   <div className="NativeDetails">
     <PageDetails
-      props={props.pageDetails} />
+      pageDetails={props.pageDetails} />
   </div>
 )
 

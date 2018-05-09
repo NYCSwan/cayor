@@ -1,0 +1,26 @@
+@import '../../_variables';
+
+.image-slide {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  // display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &.accra {
+    background-image: url('../../media/Accra.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    .banner {
+      color: $white
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+}

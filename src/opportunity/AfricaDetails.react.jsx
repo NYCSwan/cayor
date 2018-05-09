@@ -4,7 +4,7 @@ import PageDetails from '../layout/pageDetails.react';
 const AfricaDetails = (props) => (
   <div className="AfricaDetails">
     <PageDetails
-      props={props.pageDetails} />
+      pageDetails={props.pageDetails} />
   </div>
 )
 

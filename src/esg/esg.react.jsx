@@ -12,17 +12,26 @@ class Esg extends Component {
       {value: 'Framework', url: 'framework'}
     ],
     currentDetails: 'Philosophy',
-    pageDetails: ['Test']
+    philosophyText: ['Test philosophy'],
+    strategyText: ['Test strategy'],
+    frameworkText: ['Test framework']
+
   }
 
+    handleClick = (e) => {
+      console.log('handle sub navigation click', e);
+      this.setState({
+        currentDetails: e.target.innerText
+      })
+    }
   renderDetails() {
     const {currentDetails} = this.state;
     if (currentDetails === 'Philosophy') {
-      return <EsgPhilosophyDetails pageDetails={this.state.pageDetails} />
+      return <EsgPhilosophyDetails pageDetails={this.state.philosophyText} />
     } else if (currentDetails === 'Strategy') {
-      return <EsgStrategyDetails pageDetails={this.state.pageDetails} />
+      return <EsgStrategyDetails pageDetails={this.state.strategyText} />
     } else if (currentDetails === 'Framework') {
-      return <EsgFrameworkDetails pageDetails={this.state.pageDetails} />
+      return <EsgFrameworkDetails pageDetails={this.state.frameworkText} />
     }
   }
 
@@ -32,7 +41,8 @@ class Esg extends Component {
         ESG
         <SubNav
           navItems={this.state.navItems}
-          match={this.props.match} />
+          match={this.props.match}
+          handleClick={this.handleClick} />
         { this.renderDetails() }
       </div>
     );

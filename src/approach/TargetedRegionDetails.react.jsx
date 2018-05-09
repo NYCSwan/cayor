@@ -2,9 +2,9 @@ import React from 'react';
 import PageDetails from '../layout/pageDetails.react';
 
 const RegionDetails = (props) => (
-  <div className="RegionDetails">
+  <div className="regionDetails">
     <PageDetails
-      props={props.pageDetails} />
+      pageDetails={props.pageDetails} />
   </div>
 )
 

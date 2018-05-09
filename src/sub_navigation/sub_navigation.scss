@@ -1,0 +1,17 @@
+@import '../_variables';
+
+.sub_navigation {
+  float: left;
+  max-height: 400px;
+  margin-left: 10px;
+
+  .list {
+    color: $primaryGrey;
+    text-align: left;
+
+    li {
+      list-style: none;
+      padding: 20px 10px;
+    }
+  }
+}

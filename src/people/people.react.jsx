@@ -15,19 +15,30 @@ class People extends Component {
       {value: 'Team Bios', url: 'bios'}
     ],
     currentDetails: 'Focused',
-    pageDetails: ['Test']
+    focusedText: ['Test focus'],
+    nativeText: ['Test native'],
+    experiencedText: ['Test expierienced'],
+    teamText: ['Test team']
+
+  }
+
+  handleClick = (e) => {
+    console.log('handle sub navigation click', e);
+    this.setState({
+      currentDetails: e.target.innerText
+    })
   }
 
   renderDetails() {
     const {currentDetails} = this.state;
     if (currentDetails === 'Focused') {
-      return <FocusedDetails pageDetails={this.state.pageDetails} />
+      return <FocusedDetails pageDetails={this.state.focusedText} />
     } else if (currentDetails === 'Native') {
-      return <NativeDetails pageDetails={this.state.pageDetails} />
+      return <NativeDetails pageDetails={this.state.nativeText} />
     } else if (currentDetails === 'Experienced') {
-      return <ExperiencedDetails pageDetails={this.state.pageDetails} />
+      return <ExperiencedDetails pageDetails={this.state.experiencedText} />
     } else {
-      return <TeamDetails pageDetails={this.state.pageDetails} />
+      return <TeamDetails pageDetails={this.state.teamText} />
     }
   }
 
@@ -37,7 +48,8 @@ class People extends Component {
         People
         <SubNav
           navItems={this.state.navItems}
-          match={this.props.match} />
+          match={this.props.match}
+          handleClick={this.handleClick} />
         { this.renderDetails() }
       </div>
     );

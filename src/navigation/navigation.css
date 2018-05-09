@@ -1,0 +1,8 @@
+.header {
+  width: 100%; }
+  .header img {
+    width: 200px; }
+  .header li {
+    list-style: none;
+    display: inline;
+    padding: 5px 10px; }

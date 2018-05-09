@@ -4,7 +4,7 @@ import PageDetails from '../layout/pageDetails.react';
 const EsgPhilosophyDetails = (props) => (
   <div className="EsgPhilosophyDetails">
     <PageDetails
-      props={props.pageDetails} />
+      pageDetails={props.pageDetails} />
   </div>
 )
 
