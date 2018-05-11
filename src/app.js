@@ -48,7 +48,8 @@ class App extends Component {
           this.handleContactModal()
         }
           <Routes
-            props={this.props} />
+            props={this.props}
+            key={this.props.match.path} />
           <Footer />
         </div>
       </div>

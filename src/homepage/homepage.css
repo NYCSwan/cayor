@@ -1,9 +1,9 @@
 .homepage {
   background: #ffffff;
-  -webkit-transition: all 4s ease-in-out;
-  -moz-transition: all 4s ease-in-out;
-  -o-transition: all 4s ease-in-out;
-  transition: all 4s ease-in-out;
-  z-index: 2;
-  overflow-y: auto;
-  overflow-x: hidden; }
+  animation: slideLeft 3s ease-out 0s 1; }
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }

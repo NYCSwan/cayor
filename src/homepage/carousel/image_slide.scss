@@ -9,6 +9,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 100;
 
   &.accra {
     background-image: url('../../media/Accra.jpg');
@@ -17,10 +18,23 @@
     background-size: 100% 100%;
 
     .banner {
-      color: $white
+      color: $white;
       width: 100%;
       margin: auto;
     }
   }
 
+  &.joburg {
+    background-image: url('../../media/anastasia.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &.lagos {
+    background-image: url('../../media/canal.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 }

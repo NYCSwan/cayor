@@ -6,13 +6,16 @@ class Homepage extends Component {
     imageUrls: ['accra', 'joburg', 'lagos'],
     slideText: ['Text 1', 'Text 2', 'Text 3']
   }
-  
+
+
   render() {
+    // <div className="homepage">
+    // </div>
     return (
-      <div className="homepage">
-        <Carousel imageUrls={this.state.imageUrls}
-        slideText={this.state.slideText}/>
-      </div>
+
+          <Carousel
+            imageUrls={this.state.imageUrls}
+            slideText={this.state.slideText} />
     );
   }
 }

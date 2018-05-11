@@ -2,11 +2,27 @@
   width: 100%;
   height: 100vh;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100; }
   .image-slide.accra {
     background-image: url("../../media/Accra.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%; }
     .image-slide.accra .banner {
-      color: #ffffff; }
+      color: #ffffff;
+      width: 100%;
+      margin: auto; }
+  .image-slide.joburg {
+    background-image: url("../../media/anastasia.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }
+  .image-slide.lagos {
+    background-image: url("../../media/canal.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }

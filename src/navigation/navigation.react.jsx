@@ -6,7 +6,7 @@ import './navigation.css';
 const Navigation = props => (
 
   <header className='header'>
-    <a href='/' alt='homepage'><img src={Logo} alt='logo' /></a>
+    <a className='logo' href='/' alt='homepage'><img src={Logo} alt='logo' /></a>
     <ul>
       <li><a href='people'>PEOPLE</a></li>
       <li><a href='approach' alt='Cayor Approach'>APPROACH</a></li>
