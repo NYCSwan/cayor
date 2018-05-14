@@ -5,9 +5,16 @@ import './navigation.css';
 
 const Navigation = props => (
 
-  <header className='header'>
-    <a className='logo' href='/' alt='homepage'><img src={Logo} alt='logo' /></a>
-    <ul>
+  <header className='header slideIn'>
+    <a
+      className='logo left'
+      href='/'
+      alt='homepage'>
+      <img
+        src={Logo}
+        alt='logo' />
+    </a>
+    <ul className='nav'>
       <li><a href='people'>PEOPLE</a></li>
       <li><a href='approach' alt='Cayor Approach'>APPROACH</a></li>
       <li><a href='opportunity' alt='Cayor Opportunities'>OPPORTUNITY</a></li>
@@ -15,7 +22,6 @@ const Navigation = props => (
       <li onClick={props.handleClick}><Clock offset='2' /> ACCRA</li>
       <li onClick={props.handleClick}><Clock offset='0'/> JOHANESSBURG</li>
     </ul>
-
   </header>
 )
 

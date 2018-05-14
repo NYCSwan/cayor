@@ -1,10 +1,22 @@
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
 .header {
   width: 100%;
   z-index: 1; }
   .header .logo {
     width: 200px;
-    float: left; }
-  .header li {
-    list-style: none;
     display: inline;
-    padding: 5px 10px; }
+    margin-top: 2%;
+    margin-left: 4%; }
+    .header .logo img {
+      position: relative; }
+  .header .nav {
+    width: 60%; }
+    .header .nav li {
+      list-style: none;
+      display: inline;
+      padding: 5px 10px; }

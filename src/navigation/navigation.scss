@@ -1,4 +1,5 @@
 @import '../_variables';
+@import '../_defaults';
 
 .header {
   width: 100%;
@@ -6,12 +7,22 @@
 
   .logo {
     width: 200px;
-    float: left;
+    display: inline;
+    margin-top: 2%;
+    margin-left: 4%;
+    
+    img {
+      position: relative;
+    }
   }
 
-  li {
-    list-style: none;
-    display: inline;
-    padding: 5px 10px;
+  .nav {
+    width: 60%;
+
+    li {
+      list-style: none;
+      display: inline;
+      padding: 5px 10px;
+    }
   }
 }
