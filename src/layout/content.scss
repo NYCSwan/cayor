@@ -1,0 +1,53 @@
+@import '../_variables';
+@import '../_keyframes';
+
+
+@include keyframes(slide-left) {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@include keyframes(slide-right) {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+  .content {
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    @include animation('slide-left 3s ease-out 0s 1');
+    // animation: slideLeft 2s ease-out 0s 1;
+  }
+
+  .slide-enter, .slide-appear {
+    width: 0;
+    // transform: translateX(-100%);
+  }
+
+  .slide-enter-active {
+    width: 100%;
+    transition: width 3s linear;
+    background-color: blue;
+    // transform: translateX(0);
+  }
+
+  .slide-exit {
+    opacity: 1;
+  }
+
+  .slide-exit-active {
+    opacity: 1;
+    transition: all 3s ease-in;
+    transform: translateY(0);
+    // transition: opacity 5s ease-out;
+    // animation: slideRight 6s ease-out 0s 1;
+  }
