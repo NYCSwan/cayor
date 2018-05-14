@@ -6,7 +6,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 100; }
+  z-index: -1; }
   .image-slide.accra {
     background-image: url("../../media/Accra.jpg");
     background-position: center;

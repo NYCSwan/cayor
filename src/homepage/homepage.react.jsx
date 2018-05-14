@@ -12,7 +12,6 @@ class Homepage extends Component {
     // <div className="homepage">
     // </div>
     return (
-
           <Carousel
             imageUrls={this.state.imageUrls}
             slideText={this.state.slideText} />

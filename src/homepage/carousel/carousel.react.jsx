@@ -8,14 +8,20 @@ class Carousel extends Component {
   state = {
     currentImageIdx: 0
   }
-  
 
-  componentDidAppear() {
+  componentDidMount() {
     console.log('componentDidMount');
     this.triggerCarouselSider();
+    // this.props.handlePageTransition;
+  }
+
+  componentDidAppear() {
+    console.log('component Did appear');
+    // this.triggerCarouselSider();
   }
 
   componentWillLeave() {
+    console.log(' component will leave');
     clearInterval(this.slider);
   }
 
@@ -44,12 +50,7 @@ class Carousel extends Component {
     }
   }
 
-  // renderImageByIndex() {
-  //   const { currentImageIdx } = this.state;
-  //   return (
-  //
-  //   )
-  // }
+
 
   render() {
     const { imageUrls, slideText } = this.props;
@@ -66,14 +67,15 @@ class Carousel extends Component {
 // <div className="carousel">
 // </div>
     return (
-      <div>
-
-          <BgImageSlide
-            url={url} key={currentImageIdx}
-            slideText={slideText[currentImageIdx]} />
-          <SlideKey
-            key={url}
-            activeSlide={this.state.currentImageIdx} />
+      <div
+        className="slideIn">
+        <BgImageSlide
+          url={url}
+          key={currentImageIdx}
+          slideText={slideText[currentImageIdx]} />
+        <SlideKey
+          key={url}
+          activeSlide={this.state.currentImageIdx} />
       </div>
     );
   }
