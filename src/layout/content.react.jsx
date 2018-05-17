@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Navigation from '../navigation/navigation.react';
@@ -7,29 +7,48 @@ import Routes from '../routes';
 
 import './content.css';
 
-const Content = (props) => (
-  <main className='content'>
-    <TransitionGroup>
-      <CSSTransition
-        in={props.transitionPage}
-        timeout={1000}
-        key={props.transitionKey}
-        classNames='slide'
-        appear>
-        <div>
-        {/* props.transitionPage && */}
-          <div>
-            <Navigation
-            handleClick={props.handleClick} />
-            <Routes
-              props={props.props} />
-            <Footer />
-          </div>
+class Content extends Component {
+  state = {
+    slideToRight: false,
+    slideToLeft: false
+  }
 
-        </div>
-      </CSSTransition>
-    </TransitionGroup>
-  </main>
-);
+  togglePageTransition = () => {
+    console.log(' handle home page transition');
+    this.setState({
+      slideToLeft: !this.state.slideToLeft
+
+    })
+  }
+
+
+  render() {
+    console.log('render content component');
+    const { slideToLeft, slideToRight } = this.state;
+
+    return (
+
+      <main className='content'>
+
+
+
+            {/* props.transitionPage && */}
+            <div>
+
+              <Routes
+              props={this.props.props}
+              handlePageTransition={this.togglePageTransition}
+              slideToLeft={slideToLeft}
+              slideToRight={slideToRight} />
+              <Footer />
+
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
+      </main>
+    )
+
+  }
+}
 
 export default Content;
