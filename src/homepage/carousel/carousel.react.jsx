@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-// import { CSSTransitionGroup } from 'react-transition-group';
-
+// import { CSSTransition } from 'react-transition-group';
+import Footer from '../../layout/footer.react';
+import Navigation from '../../navigation/navigation.react';
 import BgImageSlide from './bg_image_slide.react';
 import SlideKey from './slide_key.react';
 
@@ -11,17 +12,12 @@ class Carousel extends Component {
 
   componentDidMount() {
     console.log('componentDidMount');
-    this.triggerCarouselSider();
+    // this.triggerCarouselSider();
     // this.props.handlePageTransition;
   }
 
-  componentDidAppear() {
-    console.log('component Did appear');
-    // this.triggerCarouselSider();
-  }
-
-  componentWillLeave() {
-    console.log(' component will leave');
+  componentWillUnmount() {
+    console.log(' component will unmount');
     clearInterval(this.slider);
   }
 
@@ -50,10 +46,8 @@ class Carousel extends Component {
     }
   }
 
-
-
   render() {
-    const { imageUrls, slideText } = this.props;
+    const { imageUrls, slideText, handlePageTransition } = this.props;
     const { currentImageIdx } = this.state;
     const url = imageUrls[currentImageIdx];
 // debugger
@@ -66,12 +60,18 @@ class Carousel extends Component {
 
 // <div className="carousel">
 // </div>
+// <CSSTransition>
+// </CSSTransition>
     return (
       <div
-        className="slideIn">
+        className="slide">
         <BgImageSlide
           url={url}
           key={currentImageIdx}
+          history={this.props.history}
+          location={this.props.location}
+          handleClick={this.props.handleClick}
+          handlePageTransition={handlePageTransition}
           slideText={slideText[currentImageIdx]} />
         <SlideKey
           key={url}

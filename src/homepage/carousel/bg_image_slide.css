@@ -1,0 +1,95 @@
+.image-slide.accra, .image-slide.joburg, .image-slide.lagos {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1; }
+  .image-slide.accra .banner, .image-slide.joburg .banner, .image-slide.lagos .banner {
+    vertical-align: middle;
+    height: calc(100% - 200px);
+    color: #ffffff;
+    margin: auto; }
+
+.image-slide.accra {
+  background-image: url("../../media/Accra.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+.image-slide.joburg {
+  background-image: url("../../media/anastasia.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+.image-slide.lagos {
+  background-image: url("../../media/canal.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .banner {
+    height: calc(100%-140px); } }
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .banner {
+    height: calc(100%-140px); } }
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  .banner {
+    height: calc(100%-140px); } }
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .banner {
+    height: calc(100%-140px); } }
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  .banner {
+    height: calc(100%-140px); } }
