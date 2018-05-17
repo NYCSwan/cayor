@@ -6,6 +6,15 @@ import App from './app';
 import registerServiceWorker from './registerServiceWorker';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
+// childFactory={child => React.cloneElement(
+// child,
+// {
+//   classNames: location.state.transition,
+//   timeout: location.state.duration
+// }
+// )}
+
+
 
 ReactDOM.render((
   <Router>

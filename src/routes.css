@@ -1,0 +1,13 @@
+.slide-enter, .slide-appear {
+  opacity: 0;
+  background-color: blue; }
+  .slide-enter .slide-enter-active, .slide-enter .slide-appear-active, .slide-appear .slide-enter-active, .slide-appear .slide-appear-active {
+    opacity: 1;
+    transition: opacity 13s linear; }
+
+.slide-exit {
+  width: 100%;
+  transition: width 13s linear;
+  background-color: green; }
+  .slide-exit .slide-exit-active {
+    width: 0; }

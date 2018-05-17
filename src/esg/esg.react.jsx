@@ -3,6 +3,8 @@ import EsgStrategyDetails from './EsgStrategyDetails.react';
 import EsgPhilosophyDetails from './EsgPhilosophyDetails.react';
 import EsgFrameworkDetails from './EsgFrameworkDetails.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
+import Footer from '../layout/footer.react';
+import Navigation from '../navigation/navigation.react';
 
 class Esg extends Component {
   state = {
@@ -38,12 +40,17 @@ class Esg extends Component {
   render() {
     return (
       <div className="esg">
+        <Navigation
+          history={this.props.history}
+          location={this.props.location}
+          handleClick={this.props.handleClick} />
         ESG
         <SubNav
           navItems={this.state.navItems}
           match={this.props.match}
           handleClick={this.handleClick} />
         { this.renderDetails() }
+        <Footer />
       </div>
     );
   }

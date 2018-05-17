@@ -4,6 +4,9 @@ import FocusedDetails from './FocusedDetails.react';
 import NativeDetails from './NativeDetails.react';
 import ExperiencedDetails from './ExperiencedDetails.react';
 import TeamDetails from './TeamDetails.react';
+import Footer from '../layout/footer.react';
+import Navigation from '../navigation/navigation.react';
+import './people.css';
 
 class People extends Component {
 
@@ -44,13 +47,17 @@ class People extends Component {
 
   render() {
     return (
-      <div className="People">
-        People
+      <div className="people">
+        <Navigation
+          history={this.props.history}
+          location={this.props.location}
+          handleClick={this.props.handleClick} />
         <SubNav
           navItems={this.state.navItems}
           match={this.props.match}
           handleClick={this.handleClick} />
         { this.renderDetails() }
+        <Footer />
       </div>
     );
   }

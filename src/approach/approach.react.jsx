@@ -3,6 +3,8 @@ import SubNav from '../sub_navigation/sub_navigation.react';
 import PhilosophyDetails from './OurPhilosophyDetails.react';
 import SectorDetails from './SectorDetails.react';
 import RegionDetails from './TargetedRegionDetails.react';
+import Footer from '../layout/footer.react';
+import Navigation from '../navigation/navigation.react';
 
 class Approach extends Component {
   state = {
@@ -39,12 +41,17 @@ class Approach extends Component {
   render() {
     return (
       <div className="approach">
+        <Navigation
+          history={this.props.history}
+          location={this.props.location}
+          handleClick={this.props.handleClick} />
         approach
         <SubNav
           navItems={this.state.navItems}
           match={this.props.match}
           handleClick={this.handleClick} />
         { this.renderDetails() }
+        <Footer />
       </div>
     );
   }

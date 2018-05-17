@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import './App.css';
-import Content from './layout/content.react';
+import Routes from './routes';
 import ContactAccra from './contact/ContactAccra.react';
 import ContactJoburg from './contact/ContactJoburg.react';
 
@@ -10,7 +10,9 @@ class App extends Component {
   state = {
     isContactModalOpen: false,
     contactLocation: '',
-    transitionPage: false
+    transitionPage: false,
+    slideToRight: false,
+    slideToLeft: false
   }
 
   handleClick = (e) => {
@@ -22,14 +24,7 @@ class App extends Component {
     })
   }
 
-  handlePageTransition = () => {
-    console.log(' handle home page transition');
-    this.setState({
-      transitionPage: !this.state.transitionPage
-    })
-  }
-
-  handleContactModal = () => {
+    handleContactModal = () => {
     console.log('handleContactModal display');
     const { contactLocation } = this.state;
 
@@ -44,18 +39,28 @@ class App extends Component {
     console.log('handle modal close-- TBD');
   }
 
+
+  togglePageTransition = () => {
+    console.log(' handle home page transition');
+    this.setState({
+      slideToLeft: !this.state.slideToLeft
+
+    })
+  }
+
   render() {
     return (
       <div className="App">
         { this.state.isContactModalOpen &&
           this.handleContactModal()
         }
-        <Content
-          props={this.props}
-          transitionPage={this.state.transitionPage}
+        <Routes
           transitionKey={this.props.match.path}
           handleClick={this.handleClick}
-          handlePageTransition={this.handlePageTransition} />
+          handlePageTransition={this.handlePageTransition}
+          location={this.props.location}
+          match={this.props.match}
+          history={this.props.history} />
       </div>
     );
   }
