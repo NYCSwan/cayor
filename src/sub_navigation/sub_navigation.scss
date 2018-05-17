@@ -1,9 +1,12 @@
 @import '../_variables';
+@import '../_mixins';
 
 .sub_navigation {
   float: left;
   max-height: 400px;
   margin-left: 10px;
+  display: inline-block;
+
 
   .list {
     color: $primaryGrey;
@@ -15,3 +18,19 @@
     }
   }
 }
+
+  @include respond-to(phone) {
+    .sub_navigation {
+      max-height: 250px;
+      margin-left: 1%;
+      background-color: $backgroundGrey;
+      
+      .list {
+        font-size: 0.8rem;
+
+        li{
+          padding: 7px 5px;
+        }
+      }
+    }
+  }
