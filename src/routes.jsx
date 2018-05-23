@@ -34,7 +34,7 @@ class Routes extends Component {
   render() {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
   const timeout = { enter: 10000, exit: 900 };
-
+console.log('currentKey', currentKey);
     return (
       <Router history={history}>
         <Route
@@ -43,7 +43,7 @@ class Routes extends Component {
               {...location.state}>
               <CSSTransition
                 timeout={timeout}
-                key={currentKey}
+                key={location.pathname.split('/')[1] || '/'}
                 classNames='slide'
                 appear={true}
                 onEnter={() => {

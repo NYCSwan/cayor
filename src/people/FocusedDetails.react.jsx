@@ -1,5 +1,6 @@
 import React from 'react';
 import PageDetails from '../layout/pageDetails.react';
+import './focused-details.scss';
 
 const FocusedDetails = (props) => (
   <div className="FocusedDetails">

@@ -1,26 +1,26 @@
-.slide-enter, .slide-appear {
+.slide-enter {
   // width: 0;
   opacity: 0;
   background-color: blue;
-  // transform: translateX(-100%);
+  transform: translateX(-100%);
 
-  .slide-enter-active, .slide-appear-active {
+  &.slide-enter-active, .slide-appear-active {
     // width: 100%;
     opacity: 1;
-    transition: opacity 13s linear;
+    transition: all 13s ease-in;
 
     // transform: translateX(0);
   }
 }
 
 .slide-exit {
-  width: 100%;
-  transition: width 13s linear;
+  // width: 100%;
   background-color: green;
 
-  .slide-exit-active {
-    width: 0;
-    // opacity: 1;
+  &.slide-exit-active {
+    // width: 0;
+    opacity: 0;
+    transition: width 13s linear;
     // transition: all 3s ease-in;
     // transform: translateY(0);
     // transition: opacity 5s ease-out;

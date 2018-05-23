@@ -2,7 +2,8 @@
   float: left;
   max-height: 400px;
   margin-left: 10px;
-  display: inline-block; }
+  display: inline-block;
+  width: 20%; }
   .sub_navigation .list {
     color: #484848;
     text-align: left; }

@@ -2,7 +2,7 @@ import React from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 // the childFactory allows to change the transition of the leaving component
-// https://github.com/reactjs/react-transition-group/issues/182
+// https://github.com/reactjs/react-transition-group/issues/182lk
 const childFactoryCreator = (props) => child => React.cloneElement(child, props)
 
 export default ({ transition = '', duration = 0, pageKey, children }) => (

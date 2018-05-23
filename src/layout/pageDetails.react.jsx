@@ -1,5 +1,5 @@
 import React from 'react';
-import './page-details.scss';
+import './page-details.css';
 
 const PageDetails = (props) => (
   <div className="PageDetails">
