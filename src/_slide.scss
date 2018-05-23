@@ -1,47 +1,60 @@
 @mixin slide-enter {
   &.slide-enter{
-    z-index: 10;
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
+    // z-index: 10;
+    // transform: translateX(-100%);
+    // -webkit-transform: translateX(-100%);
 
     &.slide-enter-active {
-      // left: 0;
-      // animation: slide-in 0.5s forwards;
-      // opacity: 1;
       animation: slide-in 3s forwards;
-      -webkit-animation: slide-in 0.5s forwards;
-      // transform: translateX(0);
-      transition: animation 3s ease 3s;
-
+      -webkit-animation: slide-in 3s forwards;
+      transition: animation 3s ease;
     }
   }
 
   @keyframes slide-in {
+    0% { transform: translateX(-100%);}
     100% { transform: translateX(0%); }
   }
 
   @-webkit-keyframes slide-in {
+    0% { -webkit-transform: translateX(-100%);}
     100% { -webkit-transform: translateX(0%); }
   }
+}
 
+@mixin slide-appear {
+  &.slide-appear{
+    // z-index: 10;
+    // transform: translateX(-100%);
+    // -webkit-transform: translateX(-100%);
+
+    &.slide-appear-active {
+      animation: slide-in 3s forwards;
+      -webkit-animation: slide-in 3s forwards;
+      transition: animation 3s ease;
+    }
+  }
+
+  @keyframes slide-in {
+    0% { transform: translateX(-100%);}
+    100% { transform: translateX(0%); }
+  }
+
+  @-webkit-keyframes slide-in {
+    0% { -webkit-transform: translateX(-100%);}
+    100% { -webkit-transform: translateX(0%); }
+  }
 }
 
 @mixin slide-exit {
   // width: 100%;
-  // background-color: green;
   &.slide-exit {
-
+    background-color: green;
+    // z-index: 10;
     &.slide-exit-active {
-      animation: slide-out 1s forwards;
-      -webkit-animation: slide-out 1s forwards;
-      // width: 0;
-      // opacity: 0;
-      // transform: translateX(-100%);
-      // animation: slide-out 6s ease-out 0s 1;
-      transition: animation 1s ease 0;
-      // transition: all 3s ease-in;
-      // transform: translateY(0);
-      // transition: opacity 5s ease-out;
+      animation: slide-out 2s backwards;
+      -webkit-animation: slide-out 2s backwards;
+      transition: animation 2s ease;
     }
   }
 

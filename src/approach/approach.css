@@ -1,8 +1,8 @@
-.people {
+.approach {
   width: 100%;
   height: 100%;
   overflow: hidden; }
-  .people.slide-appear.slide-appear-active {
+  .approach.slide-enter.slide-enter-active {
     animation: slide-in 3s forwards;
     -webkit-animation: slide-in 3s forwards;
     transition: animation 3s ease; }
@@ -18,25 +18,9 @@
     -webkit-transform: translateX(-100%); }
   100% {
     -webkit-transform: translateX(0%); } }
-  .people.slide-enter.slide-enter-active {
-    animation: slide-in 3s forwards;
-    -webkit-animation: slide-in 3s forwards;
-    transition: animation 3s ease; }
-
-@keyframes slide-in {
-  0% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(0%); } }
-
-@-webkit-keyframes slide-in {
-  0% {
-    -webkit-transform: translateX(-100%); }
-  100% {
-    -webkit-transform: translateX(0%); } }
-  .people.slide-exit {
+  .approach.slide-exit {
     background-color: green; }
-    .people.slide-exit.slide-exit-active {
+    .approach.slide-exit.slide-exit-active {
       animation: slide-out 2s backwards;
       -webkit-animation: slide-out 2s backwards;
       transition: animation 2s ease; }

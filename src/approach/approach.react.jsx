@@ -5,6 +5,7 @@ import SectorDetails from './SectorDetails.react';
 import RegionDetails from './TargetedRegionDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
+import './approach.css';
 
 class Approach extends Component {
   state = {
@@ -45,7 +46,6 @@ class Approach extends Component {
           history={this.props.history}
           location={this.props.location}
           handleClick={this.props.handleClick} />
-        approach
         <SubNav
           navItems={this.state.navItems}
           match={this.props.match}

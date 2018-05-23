@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import AfricaDetails from './AfricaDetails.react';
 import WhyCayorDetails from './WhyCayorDetails.react';
 import CayorPerspectiveDetails from './CayorPerspectiveDetails.react';
+import Footer from '../layout/footer.react';
+import Navigation from '../navigation/navigation.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
+import './opportunity.css';
 
 class Opportunities extends Component {
   state = {
@@ -38,13 +41,17 @@ class Opportunities extends Component {
 
   render() {
     return (
-      <div className="Opportunity">
-      opportunity
+      <div className="opportunity">
+        <Navigation
+          history={this.props.history}
+          location={this.props.location}
+          handleClick={this.props.handleClick} />
         <SubNav
           navItems={this.state.navItems}
           match={this.props.match}
           handleClick={this.handleClick} />
         { this.renderDetails() }
+        <Footer />
       </div>
     );
   }

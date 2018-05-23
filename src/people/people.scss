@@ -2,8 +2,10 @@
 
 .people {
   width: 100%;
-  height: 600px;
+  height: 100%;
+  overflow: hidden;
 
+  @include slide-appear;
   @include slide-enter;
   @include slide-exit;
 }

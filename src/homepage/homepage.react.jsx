@@ -14,7 +14,6 @@ class Homepage extends Component {
   componentWillMount() {
     console.log('componentDidMount');
     this.triggerCarouselSider();
-    // this.props.handlePageTransition;
   }
 
   componentWillUnmount() {
@@ -22,25 +21,11 @@ class Homepage extends Component {
     clearInterval(this.slider);
   }
 
-  componentWillAppear() {
-    console.log('component will appear');
-    this.renderCarousel()
-    // this.triggerCarouselSider();
-  }
-
   renderSpinner() {
     return (
       <div>spinner</div>
     )
   }
-
-  // renderCarousel() {
-  //   return (
-  //     <Carousel
-  //     imageUrls={this.state.imageUrls}
-  //     slideText={this.state.slideText} />
-  //   )
-  // }
 
   triggerCarouselSider = () => {
     console.log('trigger carousel');
@@ -52,7 +37,8 @@ class Homepage extends Component {
 
   rotateCarouselIndex = () => {
     console.log('rotateCarouselIndex');
-    const { currentImageIdx, imageUrls } = this.state;
+    const {imageUrls, currentImageIdx } = this.state;
+    // const {currentImageIdx} = this.props;
     const maxIndex = imageUrls.length -1;
     const nextIndex = currentImageIdx +1;
 
@@ -68,23 +54,13 @@ class Homepage extends Component {
   }
 
   render() {
-    // const {  handlePageTransition } = this.props;
-    const { imageUrls, slideText, currentImageIdx } = this.state;
+    // const { currentImageIdx } = this.props;
+    const { currentImageIdx, imageUrls, slideText } = this.state;
     const url = imageUrls[currentImageIdx];
-    // render() {
-    //   return (
-    //     <div className="homepage">
-    //     { this.props.showSpinner === false ?
-    //       this.renderSpinner()
-    //       :
-    //       this.renderCarousel()
-    //       }
-    //     </div>
-    //   );
-    // }
+
     return (
       <div
-        className="slide">
+        className="homepage">
         <BgImageSlide
           url={url}
           key={currentImageIdx}

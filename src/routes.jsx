@@ -17,25 +17,50 @@ const history = createHistory();
 
 class Routes extends Component {
   state = {
+    // currentImageIdx: 0,
     showTest: false
   }
-
-  componentWillAppear() {
-    console.log('component will appear');
-    debugger
-    // this.triggerCarouselSider();
-  }
-
-  componentWillLeave() {
-    console.log(' component will leave');
-    // clearInterval(this.slider);
-  }
-
+  //
+  // componentWillMount() {
+  //   console.log('componentDidMount');
+  //   this.triggerCarouselSider();
+  // }
+  //
+  // componentWillUnmount() {
+  //   console.log(' component will unmount');
+  //   clearInterval(this.slider);
+  // }
+  //
+  // triggerCarouselSider = () => {
+  //   console.log('trigger carousel');
+  //   this.slider = setInterval(
+  //     () => this.rotateCarouselIndex(),
+  //     10000
+  //   );
+  // }
+  //
+  // rotateCarouselIndex = () => {
+  //   console.log('rotateCarouselIndex');
+  //   const {imageUrls } = this.state;
+  //   const {currentImageIdx} = this.props;
+  //   const maxIndex = imageUrls.length -1;
+  //   const nextIndex = currentImageIdx +1;
+  //
+  //   if (currentImageIdx === maxIndex) {
+  //     this.setState({
+  //       currentImageIdx: 0
+  //     })
+  //   } else {
+  //     this.setState({
+  //       currentImageIdx: nextIndex
+  //     })
+  //   }
+  // }
 
   render() {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
-  const timeout = { enter: 1000, exit: 500 };
-console.log('currentKey', currentKey);
+  const timeout = { appear: 3000, enter: 3000, exit: 2000 };
+  console.log('currentKey', currentKey);
 
     return (
       <Router history={history}>
@@ -44,6 +69,7 @@ console.log('currentKey', currentKey);
             <TransitionGroup
               {...location.state}>
               <CSSTransition
+                in={true}
                 timeout={timeout}
                 key={location.pathname.split('/')[1] || '/'}
                 classNames='slide'
@@ -65,24 +91,15 @@ console.log('currentKey', currentKey);
                     <Route exact path="/" render={(routeProps) => { // eslint-disable-line
                       return <Homepage
                         {...routeProps}
-                        handlePageTransition={this.props.handlePageTransition}
-                        slideToLeft={this.props.slideToLeft}
-                        slideToRight={this.props.slideToRight}
                         showSpinner={this.state.showTest} /> }}
                       />
                     <Route exact path="/people" render={(routeProps) => { // eslint-disable-line
                       return <People
-                        {...routeProps}
-                        handlePageTransition={this.props.handlePageTransition}
-                        slideToLeft={this.props.slideToLeft}
-                        slideToRight={this.props.slideToRight} /> }}
+                        {...routeProps} /> }}
                         />
                     <Route path="/opportunity" exact render={(routeProps) => { // eslint-disable-line
                       return <Opportunities
-                        {...routeProps}
-                        handlePageTransition={this.props.handlePageTransition}
-                        slideToLeft={this.props.slideToLeft}
-                        slideToRight={this.props.slideToRight} /> }}
+                        {...routeProps} /> }}
                         />
                     <Route path="/approach" exact render={(routeProps) => { // eslint-disable-line
                       return <Approach

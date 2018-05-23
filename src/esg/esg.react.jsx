@@ -5,6 +5,7 @@ import EsgFrameworkDetails from './EsgFrameworkDetails.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
+import './esg.css';
 
 class Esg extends Component {
   state = {
@@ -44,7 +45,6 @@ class Esg extends Component {
           history={this.props.history}
           location={this.props.location}
           handleClick={this.props.handleClick} />
-        ESG
         <SubNav
           navItems={this.state.navItems}
           match={this.props.match}
