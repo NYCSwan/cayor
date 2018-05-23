@@ -45,10 +45,6 @@ p {
 .right {
   float: right; }
 
-.pageContainer {
-  display: flex;
-  flex-flow: column; }
-
 .header {
   width: 100%;
   z-index: 1;

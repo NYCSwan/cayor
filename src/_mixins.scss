@@ -1,11 +1,5 @@
 // Media queries
 
-// @mixin phone {
-//   @media only screen and (max-width: 480px) {
-//     @content;
-//   }
-// }
-
 @mixin respond-to($media) {
   @if $media == phone {
     /* iPhone 4 ----------- */
@@ -74,4 +68,11 @@
       @content;
     }
   }
+}
+
+// pageContainer
+
+@mixin pageContainer {
+  display: flex;
+  flex-flow: column;
 }

@@ -1,5 +1,9 @@
+@import '../_slide';
+
 .people {
   width: 100%;
   height: 600px;
-  
+
+  @include slide-enter;
+  @include slide-exit;
 }

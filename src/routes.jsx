@@ -20,8 +20,9 @@ class Routes extends Component {
     showTest: false
   }
 
-  componentDidAppear() {
-    console.log('component Did appear');
+  componentWillAppear() {
+    console.log('component will appear');
+    debugger
     // this.triggerCarouselSider();
   }
 
@@ -33,8 +34,9 @@ class Routes extends Component {
 
   render() {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
-  const timeout = { enter: 10000, exit: 900 };
+  const timeout = { enter: 1000, exit: 500 };
 console.log('currentKey', currentKey);
+
     return (
       <Router history={history}>
         <Route
@@ -46,21 +48,27 @@ console.log('currentKey', currentKey);
                 key={location.pathname.split('/')[1] || '/'}
                 classNames='slide'
                 appear={true}
-                onEnter={() => {
+                onEntering={() => {
                   this.setState({
                     showTest: true
                   })
                 }}
+                onExit={() => {
+                  this.setState({
+                    showTest: false
+                  })
+                }}
+                mountOnEnter
                 unmountOnExit>
-                <div>
                   <Switch
                     location={location}>
                     <Route exact path="/" render={(routeProps) => { // eslint-disable-line
                       return <Homepage
-                      {...routeProps}
-                      handlePageTransition={this.props.handlePageTransition}
-                      slideToLeft={this.props.slideToLeft}
-                      slideToRight={this.props.slideToRight} /> }}
+                        {...routeProps}
+                        handlePageTransition={this.props.handlePageTransition}
+                        slideToLeft={this.props.slideToLeft}
+                        slideToRight={this.props.slideToRight}
+                        showSpinner={this.state.showTest} /> }}
                       />
                     <Route exact path="/people" render={(routeProps) => { // eslint-disable-line
                       return <People
@@ -91,7 +99,6 @@ console.log('currentKey', currentKey);
                       slideToRight={this.props.slideToRight} /> }}
                     />
                   </Switch>
-                </div>
               </CSSTransition>
             </TransitionGroup>
           )}
