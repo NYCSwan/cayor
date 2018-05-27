@@ -1,8 +1,8 @@
-@import '../../_mixins';
+// @import '../../_mixins';
 @import '../../_variables';
 
-.image-slide {
-  &.accra, &.joburg, &.lagos{
+.carousel {
+  &.slide {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -11,39 +11,53 @@
     left: 0;
     top: 0;
     z-index: -1;
-
-    .banner {
-      vertical-align: middle;
-      height: calc(100% - 200px);
-      color: $white;
-      margin: auto;
+  }
+  ol.carousel-indicators {
+    position: absolute;
+    top: 550px;
+    li {
+      color: $primaryGrey;
+    }
+    li.active {
+      color: $red;
     }
   }
-
-  &.accra {
-    background-image: url('../../media/Accra.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+  div.carousel-caption {
+    &.d-none {
+      &.d-md-block {
+        height: calc(100% - 200px);
+        color: $white;
+        // margin: auto;
+        position: absolute;
+        top: 300px;
+      }
+    }
+    // vertical-align: middle;
   }
-
-  &.joburg {
-    background-image: url('../../media/anastasia.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-
-  &.lagos {
-    background-image: url('../../media/canal.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
+  // &.accra {
+  //   background-image: url('../../media/Accra.jpg');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  // }
+  //
+  // &.joburg {
+  //   background-image: url('../../media/anastasia.jpg');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  // }
+  //
+  // &.lagos {
+  //   background-image: url('../../media/canal.jpg');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  // }
 }
 
-@include respond-to(phone) {
-  .banner {
-    height: calc(100%-140px);
-  }
-}
+// @include respond-to(phone) {
+//   .banner {
+//     height: calc(100%-140px);
+//   }
+// }

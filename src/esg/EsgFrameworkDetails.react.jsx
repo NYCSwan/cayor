@@ -4,7 +4,8 @@ import PageDetails from '../layout/pageDetails.react';
 const EsgFrameworkDetails = (props) => (
   <div className="EsgFrameworkDetails">
     <PageDetails
-      pageDetails={props.pageDetails} />
+      pageDetails={props.pageDetails}
+      fadeIn={props.fadeIn} />
   </div>
 )
 

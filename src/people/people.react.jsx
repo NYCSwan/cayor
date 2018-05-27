@@ -18,9 +18,9 @@ class People extends Component {
       {value: 'Team Bios', url: 'bios'}
     ],
     currentDetails: 'Focused',
-    focusedText: ['Test focus'],
-    nativeText: ['Test native'],
-    experiencedText: ['Test expierienced'],
+    focusedText: ['Our Managing Partners and Investment Team are hands-on, with a consistent track record of regularly interacting with company management and creating value.', 'Our Managing Partners have been actively involved in the management of their respective funds including: fund raising, accounting management and relationship management.', 'When it comes to Africa and sector-specific experience, our team has executed transactions across: agro-processing, food, beverage, packaging, TMT, media, banking and insurance sectors.'],
+    nativeText: ['The Cayor team is comprised of four African nationals, a Zimbabwean, a Nigerian, a Cameroonian and Ghanaian.','Together we have deep Africa investment experience, having spent over 30 years investing in the Continent. '],
+    experiencedText: ['Our team has principal investment expertise specifically related to Middle Market Investments across various sectors in Africa, and we are among the most experienced private equity investors active in Africa today.','We developed our world class experience working at leading emerging market focused private equity firms, such as: Actis, Citi Venture Capital International (CVCI) and Phatisa. We embody the rigorous standards, technical expertise and investment excellence that investors have come to expect from these leading institutions.','The team has extensive deal-related skills including: sector specific investment experience, mergers and acquisitions, restructuring, and divestitures expertise, as well as experience dealing with co-investors, local regulators and other relevant stakeholders.'],
     teamText: ['Test team']
 
   }

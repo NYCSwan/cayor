@@ -6,7 +6,7 @@ import './navigation.css';
 
 const Navigation = props => (
 
-  <header className='header slide'>
+  <header className='header'>
     <NavLink to='/' className='logo-container'>
       <img
         className='logo'

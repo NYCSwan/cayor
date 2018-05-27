@@ -15,18 +15,22 @@ class Esg extends Component {
       {value: 'Framework', url: 'framework'}
     ],
     currentDetails: 'Philosophy',
-    philosophyText: ['Test philosophy'],
+    philosophyText: ['Test philosophy aekjrhlkdjhgfl kdjfhgl akdjhg alksjdhflvaskdhflkdsfjhglnakdjhglnakdjhglnsdkjfhglsnkdjfghlsdkfjghlksdjfhg'],
     strategyText: ['Test strategy'],
-    frameworkText: ['Test framework']
+    frameworkText: ['Test framework'],
+    fadeIn: false
 
   }
 
     handleClick = (e) => {
       console.log('handle sub navigation click', e);
+
       this.setState({
+        fadeIn: true,
         currentDetails: e.target.innerText
       })
     }
+
   renderDetails() {
     const {currentDetails} = this.state;
     if (currentDetails === 'Philosophy') {

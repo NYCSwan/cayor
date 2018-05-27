@@ -1,13 +1,15 @@
 @mixin slide-enter {
   &.slide-enter{
-    // z-index: 10;
+    z-index: 10;
+    opacity: 0;
     // transform: translateX(-100%);
     // -webkit-transform: translateX(-100%);
 
     &.slide-enter-active {
-      animation: slide-in 3s forwards;
-      -webkit-animation: slide-in 3s forwards;
-      transition: animation 3s ease;
+      opacity: 1;
+      animation: slide-in 500ms forwards;
+      -webkit-animation: slide-in 500ms forwards;
+      transition: animation 500ms ease, opacity 500ms ease;
     }
   }
 
@@ -29,9 +31,9 @@
     // -webkit-transform: translateX(-100%);
 
     &.slide-appear-active {
-      animation: slide-in 3s forwards;
-      -webkit-animation: slide-in 3s forwards;
-      transition: animation 3s ease;
+      animation: slide-in 700ms forwards 200ms;
+      -webkit-animation: slide-in 700ms forwards 200ms;
+      transition: animation 700ms ease;
     }
   }
 
@@ -50,11 +52,14 @@
   // width: 100%;
   &.slide-exit {
     background-color: green;
-    // z-index: 10;
+    z-index: 1;
+    opacity: 1;
+    
     &.slide-exit-active {
-      animation: slide-out 2s backwards;
-      -webkit-animation: slide-out 2s backwards;
-      transition: animation 2s ease;
+      opacity: 0;
+      animation: slide-out 2s forwards;
+      -webkit-animation: slide-out 2s forwards;
+      transition: animation 2s ease, opacity 500ms ease;
     }
   }
 

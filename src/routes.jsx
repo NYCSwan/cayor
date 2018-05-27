@@ -59,7 +59,7 @@ class Routes extends Component {
 
   render() {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
-  const timeout = { appear: 3000, enter: 3000, exit: 2000 };
+  const timeout = { enter: 500, exit: 500 };
   console.log('currentKey', currentKey);
 
     return (
@@ -67,19 +67,22 @@ class Routes extends Component {
         <Route
           render={({ location }) => (
             <TransitionGroup
-              {...location.state}>
+            childFactory={child => React.cloneElement(
+              child, {classNames: "slide", timeout: timeout}
+            )}>
               <CSSTransition
-                in={true}
+
                 timeout={timeout}
-                key={location.pathname.split('/')[1] || '/'}
+                key={location.key}
                 classNames='slide'
-                appear={true}
+
                 onEntering={() => {
                   this.setState({
                     showTest: true
                   })
                 }}
                 onExit={() => {
+                  
                   this.setState({
                     showTest: false
                   })
@@ -103,17 +106,11 @@ class Routes extends Component {
                         />
                     <Route path="/approach" exact render={(routeProps) => { // eslint-disable-line
                       return <Approach
-                      {...routeProps}
-                      handlePageTransition={this.props.handlePageTransition}
-                      slideToLeft={this.props.slideToLeft}
-                      slideToRight={this.props.slideToRight} /> }}
+                      {...routeProps} /> }}
                       />
                     <Route path="/esg" exact render={(routeProps) => { // eslint-disable-line
                       return <Esg
-                      {...routeProps}
-                      handlePageTransition={this.props.handlePageTransition}
-                      slideToLeft={this.props.slideToLeft}
-                      slideToRight={this.props.slideToRight} /> }}
+                      {...routeProps} /> }}
                     />
                   </Switch>
               </CSSTransition>
