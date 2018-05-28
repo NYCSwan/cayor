@@ -19,7 +19,6 @@
   100% {
     -webkit-transform: translateX(0%); } }
   .esg.slide-enter {
-    z-index: 10;
     opacity: 0; }
     .esg.slide-enter.slide-enter-active {
       opacity: 1;
@@ -40,7 +39,6 @@
     -webkit-transform: translateX(0%); } }
   .esg.slide-exit {
     background-color: green;
-    z-index: 1;
     opacity: 1; }
     .esg.slide-exit.slide-exit-active {
       opacity: 0;
