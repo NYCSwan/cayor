@@ -74,6 +74,9 @@ p {
       color: #ffffff; }
       .header .nav li .link {
         color: #ffffff; }
+        .header .nav li .link.selected {
+          color: #9b1d1f;
+          font-weight: bolder; }
     .header .nav .clock {
       display: flex;
       flex-flow: row nowrap; }

@@ -14,20 +14,30 @@ const Navigation = props => (
         alt='logo' />
     </NavLink>
     <ul className='nav right'>
-      <li><NavLink to='people' className='link'>PEOPLE</NavLink></li>
       <li>
-        <NavLink to='approach' className='link'>APPROACH</NavLink></li>
+        <NavLink to='/people' activeClassName="selected"
+        className='link'>PEOPLE</NavLink></li>
       <li>
-        <NavLink to='opportunity' className='link'>OPPORTUNITY</NavLink></li>
+        <NavLink to='/approach' activeClassName="selected"
+        className='link'>APPROACH</NavLink></li>
       <li>
-        <NavLink to='esg' className='link'>ESG</NavLink></li>
+        <NavLink to='/opportunity' activeClassName="selected"
+        className='link'>OPPORTUNITY</NavLink></li>
+      <li>
+        <NavLink to='/esg' activeClassName="selected"
+        className='link'>ESG</NavLink></li>
       <li
-        onClick={props.handleClick} className='clock'>
-        <Clock offset='2' />ACCRA</li>
+        onClick={props.handleClick}
+        activeClassName="selected"
+        className='clock'>
+        <Clock offset='2' />ACCRA
+        </li>
       <li
-      onClick={props.handleClick}
-      className='clock'>
-      <Clock offset='0'/>JOHANESSBURG</li>
+        onClick={props.handleClick}
+        activeClassName="selected"
+        className='clock'>
+        <Clock offset='0'/>JOHANESSBURG
+      </li>
     </ul>
   </header>
 )
