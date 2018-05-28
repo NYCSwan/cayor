@@ -13,14 +13,14 @@ const items = [
   {
     src: Slide1,
     altText: 'We are a principal investment firm focused on investing in high growth sectors in select sub-Saharan African countries.',
-    caption: 'focused on investing in high growth sectors in select sub-Saharan African countries.',
-    header: 'We are a principal investment firm '
+    caption: 'We are a principal investment firm focused on investing in high growth sectors in select sub-Saharan African countries.',
+    header: 'Invested in Africa'
   },
   {
     src: Slide2,
     altText: 'We are driven and entrepreneurial, and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
-    caption: 'and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
-    header: 'We are driven and entrepreneurial',
+    caption: ' We are driven and entrepreneurial and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
+    header: 'Building New Empires in Africa\'s Middle Market',
 
   },
   {
