@@ -17,8 +17,11 @@
       list-style: none;
       padding: 20px 10px;
       &.active {
-        color: $red;
+        color: $cayorRed;
         font-weight: bolder;
+        .caret {
+          transform: rotate(180deg);
+        }
         &:hover {
           font-weight: bolder;
         }
@@ -27,6 +30,9 @@
         text-decoration: underline;
         font-weight: bold;
         cursor: grab;
+        .caret {
+          transform: rotate(-180deg);
+        }
       }
     }
   }

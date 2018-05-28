@@ -74,30 +74,38 @@ p {
   .header .logo-container {
     width: 200px;
     display: flex;
-    margin-left: 2%; }
+    margin-left: 3%; }
     .header .logo-container .logo {
       align-self: center;
       width: 150px;
       height: auto; }
   .header .nav {
     width: 40%;
-    margin-right: 2%;
+    margin-right: 4%;
+    padding-right: 4%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-content: center;
     align-items: center;
     color: #ffffff;
     font-size: 0.8em; }
-    .header .nav li {
+    .header .nav .link {
       list-style: none;
       display: inline;
-      color: #ffffff; }
-      .header .nav li .link {
-        color: #ffffff; }
-        .header .nav li .link.selected {
-          color: #9b1d1f;
-          text-shadow: 1px 1px 1px #ffffff;
-          font-weight: bolder; }
+      color: #ffffff;
+      order: 1;
+      margin-left: -5px;
+      margin-right: -5px; }
+      .header .nav .link.selected {
+        color: #9b1d1f;
+        font-size: 1.1em;
+        text-shadow: 1px 0 1px #D5d5d5;
+        font-weight: bold; }
     .header .nav .clock {
       display: flex;
-      flex-flow: row nowrap; }
+      flex-flow: row nowrap;
+      margin-right: 5px;
+      font-size: .9em;
+      text-align: justify;
+      order: 2; }

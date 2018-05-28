@@ -40,10 +40,11 @@
     background-size: 100% 120%;
 
   }
+
   .logo-container {
     width: 200px;
     display: flex;
-    margin-left: 2%;
+    margin-left: 3%;
 
     .logo {
       align-self: center;
@@ -54,33 +55,42 @@
 
   .nav {
     width: 40%;
-    margin-right: 2%;
+    margin-right: 4%;
+    padding-right: 4%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-content: center;
     align-items: center;
     color: $white;
     font-size: 0.8em;
 
-    li {
-      list-style: none;
-      display: inline;
-      // padding: 5px;
-      color: $white;
-
       .link {
+        list-style: none;
+        display: inline;
         color: $white;
+        order: 1;
+        margin-left: -5px;
+        margin-right: -5px;
+        
         &.selected {
           color: $red;
-          text-shadow: 1px 1px 1px $white;
-          font-weight: bolder;
-          // text-decoration: underline;
+          font-size: 1.1em;
+          text-shadow: 1px 0 1px $lightGrey;
+          font-weight: bold;
         }
       }
-    }
-    .clock {
-      display: flex;
-      flex-flow: row nowrap;
-    }
+
+      .clock {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-right: 5px;
+        font-size: .9em;
+        text-align: justify;
+        order:2;
+        // flex: 2 2;
+        // line-height: .9em;
+      }
+
   }
 }
