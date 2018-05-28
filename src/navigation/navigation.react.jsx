@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Clock from '../clocks/clock.react';
-import Logo from '../media/cayor_color_2inch.jpg';
+import Logo from '../media/cayor_color.png';
 import './navigation.css';
 
 const Navigation = props => (
 
-  <header className='header'>
+  <header className={`header ${props.headerImg}`}>
     <NavLink to='/' className='logo-container'>
       <img
         className='logo'
