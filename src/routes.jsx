@@ -71,24 +71,9 @@ class Routes extends Component {
               child, {classNames: "slide", timeout: timeout}
             )}>
               <CSSTransition
-
                 timeout={timeout}
                 key={location.key}
-                classNames='slide'
-
-                onEntering={() => {
-                  this.setState({
-                    showTest: true
-                  })
-                }}
-                onExit={() => {
-                  
-                  this.setState({
-                    showTest: false
-                  })
-                }}
-                mountOnEnter
-                unmountOnExit>
+                mountOnEnter>
                   <Switch
                     location={location}>
                     <Route exact path="/" render={(routeProps) => { // eslint-disable-line

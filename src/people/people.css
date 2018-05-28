@@ -19,7 +19,6 @@
   100% {
     -webkit-transform: translateX(0%); } }
   .people.slide-enter {
-    z-index: 10;
     opacity: 0; }
     .people.slide-enter.slide-enter-active {
       opacity: 1;
@@ -40,7 +39,6 @@
     -webkit-transform: translateX(0%); } }
   .people.slide-exit {
     background-color: green;
-    z-index: 1;
     opacity: 1; }
     .people.slide-exit.slide-exit-active {
       opacity: 0;
