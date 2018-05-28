@@ -1,0 +1,43 @@
+@import '../_variables';
+@import '../_mixins';
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: $transparent;
+  // padding: 50px;
+  position: absolute;
+  bottom: 0;
+  // align-self: flex-end;
+  // z-index: 1;
+  // display: flex;
+  // flex-direction: row;
+  // order: 10;
+
+  .right, .left {
+    width: 30%;
+  }
+
+  .left {
+    margin-left: 5%;
+    padding-left: 50px;
+  }
+  .right {
+    margin-right: 5%;
+    padding-right: 25px;
+  }
+}
+
+@include respond-to(phone) {
+  .footer {
+    height: 40px;
+    .left {
+      margin-left: 2%;
+      padding-left: 15px;
+    }
+    .right {
+      margin-right: 2%;
+      padding-right: 15px;
+    }
+  }
+}

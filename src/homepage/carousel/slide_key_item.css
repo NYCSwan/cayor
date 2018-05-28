@@ -1,0 +1,13 @@
+.container {
+  display: inline-block; }
+  .container .slide1, .container .slide2, .container .slide0 {
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #484848;
+    display: inline-block;
+    background-color: #484848;
+    height: 20px;
+    margin-left: 10px; }
+    .container .slide1.active, .container .slide2.active, .container .slide0.active {
+      border: 1px solid #9b1d1f;
+      background-color: #9b1d1f; }

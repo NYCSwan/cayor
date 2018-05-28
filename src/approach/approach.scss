@@ -1,0 +1,10 @@
+@import '../_slide';
+
+.approach {
+  width: 100%;
+  height: calc(100%-200px);
+  overflow: hidden;
+
+  @include slide-enter;
+  @include slide-exit;
+}

@@ -1,0 +1,63 @@
+// @import '../../_mixins';
+@import '../../_variables';
+
+.carousel {
+  &.slide {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  ol.carousel-indicators {
+    position: absolute;
+    top: 550px;
+    li {
+      color: $primaryGrey;
+    }
+    li.active {
+      color: $red;
+    }
+  }
+  div.carousel-caption {
+    &.d-none {
+      &.d-md-block {
+        height: calc(100% - 200px);
+        color: $white;
+        // margin: auto;
+        position: absolute;
+        top: 300px;
+      }
+    }
+    // vertical-align: middle;
+  }
+  // &.accra {
+  //   background-image: url('../../media/Accra.jpg');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  // }
+  //
+  // &.joburg {
+  //   background-image: url('../../media/anastasia.jpg');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  // }
+  //
+  // &.lagos {
+  //   background-image: url('../../media/canal.jpg');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  // }
+}
+
+// @include respond-to(phone) {
+//   .banner {
+//     height: calc(100%-140px);
+//   }
+// }

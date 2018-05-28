@@ -1,0 +1,59 @@
+.esg {
+  width: 100%;
+  height: calc(100%-200px);
+  overflow: hidden; }
+  .esg.slide-appear.slide-appear-active {
+    animation: slide-in 700ms forwards 200ms;
+    -webkit-animation: slide-in 700ms forwards 200ms;
+    transition: animation 700ms ease; }
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0%); } }
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0%); } }
+  .esg.slide-enter {
+    opacity: 0; }
+    .esg.slide-enter.slide-enter-active {
+      opacity: 1;
+      animation: slide-in 500ms forwards;
+      -webkit-animation: slide-in 500ms forwards;
+      transition: animation 500ms ease, opacity 500ms ease; }
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0%); } }
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0%); } }
+  .esg.slide-exit {
+    background-color: green;
+    opacity: 1; }
+    .esg.slide-exit.slide-exit-active {
+      opacity: 0;
+      animation: slide-out 2s forwards;
+      -webkit-animation: slide-out 2s forwards;
+      transition: animation 2s ease, opacity 500ms ease; }
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-100%); } }
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%); }
+  100% {
+    -webkit-transform: translateX(-100%); } }

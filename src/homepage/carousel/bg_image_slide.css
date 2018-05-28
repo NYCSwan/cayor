@@ -1,0 +1,23 @@
+.carousel.slide {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1; }
+
+.carousel ol.carousel-indicators {
+  position: absolute;
+  top: 550px; }
+  .carousel ol.carousel-indicators li {
+    color: #484848; }
+  .carousel ol.carousel-indicators li.active {
+    color: #9b1d1f; }
+
+.carousel div.carousel-caption.d-none.d-md-block {
+  height: calc(100% - 200px);
+  color: #ffffff;
+  position: absolute;
+  top: 300px; }

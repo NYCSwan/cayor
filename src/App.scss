@@ -1,0 +1,16 @@
+@import './_variables';
+@import './_defaults';
+
+body {
+  margin: auto;
+
+  .App {
+    text-align: center;
+    height: 100%;
+
+    .body {
+      color: $primaryText;
+    }
+  }
+
+}

@@ -1,0 +1,11 @@
+@import '../_slide';
+
+.esg {
+  width: 100%;
+  height: calc(100%-200px);
+  overflow: hidden;
+
+  @include slide-appear;
+  @include slide-enter;
+  @include slide-exit;
+}

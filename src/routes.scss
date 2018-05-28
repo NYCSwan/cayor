@@ -1,0 +1,40 @@
+// @import './_slide';
+//
+// .slide {
+//
+//   @include slide-enter;
+//   @include slide-exit;
+// }
+
+// &.slide-enter {
+//   // opacity: 0;
+//   // transition: ease-in 1s;
+//   transform: translateX(-100%);
+//   left: -100%;
+//
+//
+//   &.slide-enter-active, .slide-appear-active {
+//     // left: 0;
+//     animation: slide-in 0.5s forwards;
+//     // opacity: 1;
+//     transform: translateX(100%);
+//     transition: 3s;
+//
+//   }
+// }
+//
+// &.slide-exit {
+//   // width: 100%;
+//   background-color: green;
+//
+//   &.slide-exit-active {
+//     // width: 0;
+//     opacity: 0;
+//     transform: translateX(-100%);
+//     transition: all 3s;
+//     // transition: all 3s ease-in;
+//     // transform: translateY(0);
+//     // transition: opacity 5s ease-out;
+//     // animation: slideRight 6s ease-out 0s 1;
+//   }
+// }

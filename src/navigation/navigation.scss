@@ -1,0 +1,53 @@
+@import '../_variables';
+@import '../_defaults';
+
+.header {
+  width: 100%;
+  z-index: 1;
+  order: 1;
+  display: flex;
+  height: 125px;
+  justify-content: space-between;
+  background-color: $backgroundGrey;
+
+  .logo-container {
+    width: 200px;
+    display: flex;
+    margin-left: 2%;
+
+    .logo {
+      align-self: center;
+    }
+  }
+
+  .nav {
+    width: 40%;
+    margin-right: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: $white;
+    font-size: 0.8em;
+
+    li {
+      list-style: none;
+      display: inline;
+      // padding: 5px;
+      color: $white;
+
+      .link {
+        color: $white;
+        &.selected {
+          color: $red;
+          font-weight: bolder;
+          // text-decoration: underline;
+        }
+      }
+    }
+    .clock {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
+}
