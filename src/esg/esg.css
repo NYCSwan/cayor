@@ -3,9 +3,8 @@
   height: calc(100%-200px);
   overflow: hidden; }
   .esg.slide-appear.slide-appear-active {
-    animation: slide-in 700ms forwards 200ms;
-    -webkit-animation: slide-in 700ms forwards 200ms;
-    transition: animation 700ms ease; }
+    height: 100%;
+    transition: height 400ms ease; }
 
 @keyframes slide-in {
   0% {
@@ -19,41 +18,44 @@
   100% {
     -webkit-transform: translateX(0%); } }
   .esg.slide-enter {
-    opacity: 0; }
+    z-index: 10;
+    opacity: 0;
+    height: 0; }
     .esg.slide-enter.slide-enter-active {
+      height: 100%;
       opacity: 1;
-      animation: slide-in 500ms forwards;
-      -webkit-animation: slide-in 500ms forwards;
-      transition: animation 500ms ease, opacity 500ms ease; }
+      animation: slide-in 800ms forwards;
+      -webkit-animation: slide-in 800ms forwards;
+      transition: height 50ms ease 850ms, animation 1s ease 850ms, opacity 1s ease 850ms; }
 
 @keyframes slide-in {
   0% {
-    transform: translateX(-100%); }
+    transform: translate3d(-100%, 0, 0); }
   100% {
-    transform: translateX(0%); } }
+    transform: translate3d(0%, 0, 0); } }
 
 @-webkit-keyframes slide-in {
   0% {
-    -webkit-transform: translateX(-100%); }
+    -webkit-transform: translate3d(-100%, 0, 0); }
   100% {
-    -webkit-transform: translateX(0%); } }
+    -webkit-transform: translate3d(0%, 0, 0); } }
   .esg.slide-exit {
-    background-color: green;
+    z-index: 10;
     opacity: 1; }
     .esg.slide-exit.slide-exit-active {
       opacity: 0;
-      animation: slide-out 2s forwards;
-      -webkit-animation: slide-out 2s forwards;
-      transition: animation 2s ease, opacity 500ms ease; }
+      animation: slide-out 800ms forwards;
+      -webkit-animation: slide-out 800ms forwards;
+      transition: all 800ms ease; }
 
 @keyframes slide-out {
   0% {
-    transform: translateX(0%); }
+    transform: translate3d(0%, 0, 0); }
   100% {
-    transform: translateX(-100%); } }
+    transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slide-out {
   0% {
-    -webkit-transform: translateX(0%); }
+    -webkit-transform: translate3d(0%, 0, 0); }
   100% {
-    -webkit-transform: translateX(-100%); } }
+    -webkit-transform: translate3d(-100%, 0, 0); } }
