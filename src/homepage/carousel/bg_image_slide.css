@@ -7,6 +7,11 @@
   left: 0;
   top: 0;
   z-index: -1; }
+  .carousel.slide img {
+    background-blend-mode: darken;
+    height: 100%; }
+  .carousel.slide .carousel-item {
+    height: inherit; }
 
 .carousel ol.carousel-indicators {
   position: absolute;

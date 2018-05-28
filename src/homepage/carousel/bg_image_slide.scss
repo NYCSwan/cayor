@@ -11,6 +11,14 @@
     left: 0;
     top: 0;
     z-index: -1;
+
+    img {
+      background-blend-mode: darken;
+      height: 100%;
+    }
+    .carousel-item {
+      height: inherit;
+    }
   }
   ol.carousel-indicators {
     position: absolute;

@@ -1,13 +1,10 @@
 import React from 'react';
-import {
-  UncontrolledCarousel
-} from 'reactstrap';
-
+import { UncontrolledCarousel } from 'reactstrap';
 import './bg_image_slide.css';
 
-import Slide1 from '../../media/Accra.jpg';
+import Slide1 from '../../media/slide1.jpg';
 import Slide2 from '../../media/anastasia.jpg';
-import Slide3 from '../../media/canal.jpg';
+import Slide3 from '../../media/slide3.jpg';
 
 const items = [
   {
