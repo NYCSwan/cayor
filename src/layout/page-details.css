@@ -1,6 +1,6 @@
 .PageDetails {
-  max-height: 850px;
-  min-height: 650px;
+  max-height: 350px;
+  min-height: 100px;
   display: inline-block;
   width: 75%; }
   .PageDetails p {
@@ -9,91 +9,91 @@
 
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 /* iPhone 6+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  max-height: 350px;
-  min-height: 300px;
+  max-height: 150px;
+  min-height: 100px;
   p {
     margin: 15px; } }

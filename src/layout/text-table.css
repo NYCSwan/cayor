@@ -1,0 +1,10 @@
+.text-table {
+  height: auto;
+  width: 100%;
+  display: inline-block; }
+  .text-table h4 {
+    text-align: left; }
+  .text-table li {
+    list-style: initial;
+    padding: 5px 10px;
+    text-align: left; }

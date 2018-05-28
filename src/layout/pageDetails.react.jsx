@@ -1,5 +1,5 @@
 import React from 'react';
-import {Fade } from 'reactstrap';
+import { Fade } from 'reactstrap';
 
 import './page-details.css';
 
