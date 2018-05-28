@@ -1,15 +1,26 @@
 .sub_navigation {
   float: left;
-  max-height: 400px;
+  height: 80%;
   margin-left: 10px;
   display: inline-block;
   width: 20%; }
   .sub_navigation .list {
     color: #484848;
-    text-align: left; }
+    text-align: left;
+    width: 100%;
+    margin-top: 10px; }
     .sub_navigation .list li {
       list-style: none;
       padding: 20px 10px; }
+      .sub_navigation .list li.active {
+        color: #9b1d1f;
+        font-weight: bolder; }
+        .sub_navigation .list li.active:hover {
+          font-weight: bolder; }
+      .sub_navigation .list li:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: grab; }
 
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {

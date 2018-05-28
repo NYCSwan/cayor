@@ -3,7 +3,7 @@
 
 .sub_navigation {
   float: left;
-  max-height: 400px;
+  height: 80%;
   margin-left: 10px;
   display: inline-block;
   width: 20%;
@@ -11,10 +11,23 @@
   .list {
     color: $primaryGrey;
     text-align: left;
-
+    width: 100%;
+    margin-top: 10px;
     li {
       list-style: none;
       padding: 20px 10px;
+      &.active {
+        color: $red;
+        font-weight: bolder;
+        &:hover {
+          font-weight: bolder;
+        }
+      }
+      &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: grab;
+      }
     }
   }
 }
