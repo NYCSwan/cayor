@@ -2,6 +2,7 @@
   "name": "cayor-capital",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shrouded-chamber-28717.herokuapp.com/",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
