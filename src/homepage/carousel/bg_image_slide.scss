@@ -2,70 +2,72 @@
 @import '../../_variables';
 
 .carousel {
+  overflow-y: hidden;
   &.slide {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    max-width: 150%;
     margin: 0;
     padding: 0;
+    display: block;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
+    transition: opacity 600s ease;
 
-    img {
-      background-blend-mode: darken;
+    .carousel-inner {
       height: 100%;
-    }
-    .carousel-item {
-      height: inherit;
-    }
-  }
-  ol.carousel-indicators {
-    position: absolute;
-    top: 550px;
-    li {
-      color: $primaryGrey;
-    }
-    li.active {
-      color: $red;
-    }
-  }
-  div.carousel-caption {
-    &.d-none {
-      &.d-md-block {
-        height: calc(100% - 200px);
-        color: $white;
-        // margin: auto;
-        position: absolute;
-        top: 300px;
+      .carousel-item {
+        height: 100%;
+        opacity: 0.1;
+
+        &.active {
+          position: relative;
+          opacity: 1;
+          margin: 0 auto;
+
+          .carousel-caption.d-none.d-md-block {
+            position: absolute;
+            color: $white;
+            height: auto;
+            top: 200px;
+            h3 {
+              font-size: 46px;
+              width: 600px;
+              margin: 0 auto;
+            }
+            p {
+              font-size: 20px;
+              width: 400px;
+              margin: 10px auto;
+            }
+          }
+        }
       }
     }
-    // vertical-align: middle;
-  }
-  // &.accra {
-  //   background-image: url('../../media/Accra.jpg');
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: 100% 100%;
-  // }
-  //
-  // &.joburg {
-  //   background-image: url('../../media/anastasia.jpg');
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: 100% 100%;
-  // }
-  //
-  // &.lagos {
-  //   background-image: url('../../media/canal.jpg');
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: 100% 100%;
-  // }
-}
+    .carousel-control-next {
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+      }
+    }
+    .carousel-control-prev {
+      .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+      }
+    }
+    .carousel-indicators {
+      position: absolute;
+      bottom: 15%;
+      li {
+        background-color: $cayorRed;
 
-// @include respond-to(phone) {
-//   .banner {
-//     height: calc(100%-140px);
-//   }
-// }
+        &.active {
+          background-color: $accentGrey;
+          border: .1em solid $primaryGrey;
+        }
+      }
+    }
+
+  }
+}

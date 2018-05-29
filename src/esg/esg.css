@@ -19,14 +19,12 @@
     -webkit-transform: translateX(0%); } }
   .esg.slide-enter {
     z-index: 10;
-    opacity: 0;
-    height: 0; }
+    opacity: 0.1; }
     .esg.slide-enter.slide-enter-active {
-      height: 100%;
       opacity: 1;
       animation: slide-in 800ms forwards;
       -webkit-animation: slide-in 800ms forwards;
-      transition: height 50ms ease 850ms, animation 1s ease 850ms, opacity 1s ease 850ms; }
+      transition: height 500ms ease 800ms, animation 1s ease 850ms, opacity 1s ease 850ms; }
 
 @keyframes slide-in {
   0% {

@@ -9,7 +9,7 @@
   height: 125px;
   justify-content: space-between;
   background-color: $backgroundGrey;
-
+  border-bottom: 1px solid $primaryGrey;
   &.people, &.opportunity, &.approach, &.esg {
     width: 100%;
     height: 150px;
@@ -72,7 +72,7 @@
         order: 1;
         margin-left: -5px;
         margin-right: -5px;
-        
+
         &.selected {
           color: $red;
           font-size: 1.1em;

@@ -11,21 +11,21 @@ class Homepage extends Component {
   //   this.preloadSlide();
   // }
 
-  preloadSlide = () => {
-    return <BgImageSlide />
-  }
+  // preloadSlide = () => {
+  //   return <BgImageSlide />
+  // }
 
   render() {
     return (
 
       <div
-      className="homepage">
-      <Navigation
-      history={this.props.history}
-      location={this.props.location}
-      handleClick={this.props.handleClick} />
-      {this.preloadSlide()}
-      <Footer />
+        className="homepage">
+        <Navigation
+          history={this.props.history}
+          location={this.props.location}
+          handleClick={this.props.handleClick} />
+        <BgImageSlide />
+        <Footer />
       </div>
     )
   }
