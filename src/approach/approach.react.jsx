@@ -371,10 +371,12 @@ class Approach extends Component {
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick} />
+          handleClick={this.props.handleClick}
+          headerImg='approach' />
         <SubNav
           navItems={navItems}
           match={this.props.match}
+          currentDetails={currentDetails}
           handleClick={this.handleClick} />
         { currentDetails === 'The Cayor Approach' ?
           <PageDetails

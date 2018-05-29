@@ -3,9 +3,9 @@
   .container .slide1, .container .slide2, .container .slide0 {
     width: 20px;
     border-radius: 50%;
-    border: 1px solid #484848;
+    border: 1px solid #696969;
     display: inline-block;
-    background-color: #484848;
+    background-color: #696969;
     height: 20px;
     margin-left: 10px; }
     .container .slide1.active, .container .slide2.active, .container .slide0.active {

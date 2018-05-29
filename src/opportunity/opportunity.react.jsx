@@ -132,11 +132,13 @@ class Opportunities extends Component {
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick} />
+          handleClick={this.props.handleClick}
+          headerImg='opportunity' />
         <SubNav
           navItems={navItems}
           match={this.props.match}
-          handleClick={this.handleClick} />
+          handleClick={this.handleClick}
+          currentDetails={currentDetails} />
         { this.renderDetails() }
         { currentDetails === 'Africa Opportunity' ?
           <PageDetails

@@ -59,7 +59,7 @@ class Routes extends Component {
 
   render() {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
-  const timeout = { enter: 500, exit: 500 };
+  const timeout = { enter: 1850, exit: 800 };
   console.log('currentKey', currentKey);
 
     return (
@@ -67,7 +67,7 @@ class Routes extends Component {
         <Route
           render={({ location }) => (
             <TransitionGroup
-            childFactory={child => React.cloneElement(
+              childFactory={child => React.cloneElement(
               child, {classNames: "slide", timeout: timeout}
             )}>
               <CSSTransition

@@ -85,11 +85,13 @@ class Esg extends Component {
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick} />
+          handleClick={this.props.handleClick}
+          headerImg='esg' />
         <SubNav
           navItems={navItems}
           match={this.props.match}
           handleClick={this.handleClick}
+          currentDetails={currentDetails}
           fadeIn={fadeIn} />
           { currentDetails === 'Framework' ?
             <TextTableContainer

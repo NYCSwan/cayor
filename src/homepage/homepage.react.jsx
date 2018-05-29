@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 // import Carousel from './carousel/carousel.react';
 import BgImageSlide from './carousel/bg_image_slide.react';
 // import SlideKey from './carousel/slide_key.react';
@@ -6,17 +6,30 @@ import './homepage.css';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 
-const Homepage = (props) => (
+class Homepage extends Component {
+  // componentWillMount() {
+  //   this.preloadSlide();
+  // }
 
-  <div
-    className="homepage">
-    <Navigation
-      history={props.history}
-      location={props.location}
-      handleClick={props.handleClick} />
-    <BgImageSlide />
-    <Footer />
-  </div>
-)
+  // preloadSlide = () => {
+  //   return <BgImageSlide />
+  // }
+
+  render() {
+    return (
+
+      <div
+        className="homepage">
+        <Navigation
+          history={this.props.history}
+          location={this.props.location}
+          handleClick={this.props.handleClick} />
+        <BgImageSlide />
+        <Footer />
+      </div>
+    )
+  }
+}
+
 
 export default Homepage;

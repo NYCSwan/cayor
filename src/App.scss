@@ -1,16 +1,14 @@
 @import './_variables';
 @import './_defaults';
-
-body {
-  margin: auto;
+@import './_mixins';
 
   .App {
     text-align: center;
-    height: 100%;
-
-    .body {
-      color: $primaryText;
-    }
+    height: 100vh;
+    color: $primaryText;
+    // .body {
+    // }
   }
-
-}
+  @include respond-to(phone) {
+    
+  }

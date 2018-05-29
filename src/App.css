@@ -45,10 +45,15 @@ p {
 .right {
   float: right; }
 
-body {
-  margin: auto; }
-  body .App {
-    text-align: center;
-    height: 100%; }
-    body .App .body {
-      color: #444444; }
+.App {
+  text-align: center;
+  height: 100vh;
+  color: #444444; }
+
+/* iPhone 4 ----------- */
+/* iPhone 5 ----------- */
+/* iPhone 6 ----------- */
+/* iPhone 6+ ----------- */
+/* Samsung Galaxy S3 ----------- */
+/* Samsung Galaxy S4 ----------- */
+/* Samsung Galaxy S5 ----------- */
