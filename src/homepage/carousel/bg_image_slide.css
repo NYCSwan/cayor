@@ -25,24 +25,33 @@
             position: absolute;
             color: #ffffff;
             height: auto;
-            top: 200px; }
+            top: 15%; }
             .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
               font-size: 46px;
-              width: 600px;
+              width: 62%;
               margin: 0 auto; }
             .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
               font-size: 20px;
-              width: 400px;
+              width: 40%;
               margin: 10px auto; }
     .carousel.slide .carousel-control-next .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230A2342' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+      height: 40px;
+      width: 40px; }
     .carousel.slide .carousel-control-prev .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230A2342' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+      height: 40px;
+      width: 40px; }
+      .carousel.slide .carousel-control-prev .carousel-control-prev-icon:hover {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230A2342' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        border: 1px solid #0A2342; }
     .carousel.slide .carousel-indicators {
       position: absolute;
       bottom: 15%; }
       .carousel.slide .carousel-indicators li {
         background-color: #9B1D1F; }
         .carousel.slide .carousel-indicators li.active {
-          background-color: #484848;
-          border: 0.1em solid #696969; }
+          background-color: #0A2342; }

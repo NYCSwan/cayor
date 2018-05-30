@@ -23,7 +23,8 @@ class Homepage extends Component {
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick} />
+          handleClick={this.props.handleClick}
+          headerImg='homepage' />
         <BgImageSlide />
         <Footer />
       </div>
