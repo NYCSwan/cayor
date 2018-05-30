@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
-import PageDetails from '../layout/pageDetails.react';
+// import PageDetails from '../layout/pageDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
@@ -17,11 +17,13 @@ class Approach extends Component {
     ],
     currentDetails: 'The Cayor Approach',
     approachHeader: "Target the Middle Market",
-    approachText: ['Cayor defines the middle market as investments in the $20 to $40 million range, with capital delivered from Funds ranging from $200 to $300 million in size.'],
-    approachTableText: [
-      {
+    approachTableText: [{
         header: 'We believe the middle market is attractive for a number of reasons:',
         details: [{
+          dkey: 'a00',
+          text: 'Cayor defines the middle market as investments in the $20 to $40 million range, with capital delivered from Funds ranging from $200 to $300 million in size.'
+        },
+        {
           dKey: 0,
           text: 'Reduced Competition: there is less competition for middle market assets, which will yield more attractive asset pricing and superior returns for investors.'
         },
@@ -332,39 +334,45 @@ class Approach extends Component {
           text: 'Clear commitment to realise an exit over a period of 3 to 7 years'
         }]
       }
-    ]
+    ],
+    fadeIn: true
   }
 
   handleClick = (e) => {
     console.log('handle sub navigation click', e);
     this.setState({
-      currentDetails: e.target.innerText
+      currentDetails: e.target.innerText,
+      fadeIn: true
     })
   }
 
   renderTextDetails() {
-    const {currentDetails, criteriaTableText, sectorsTableText, regionsTableText, approachTableText} = this.state;
+    const {currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText} = this.state;
 
     if (currentDetails === 'The Cayor Approach') {
       return <TextTableContainer
+        fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={approachTableText} />
     } else if (currentDetails === 'Investment Sectors') {
       return <TextTableContainer
+        fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ sectorsTableText } />
     } else if (currentDetails === 'Target Regions & Countries') {
       return <RegionDetails
+        fadeIn={fadeIn}
         text={ regionsTableText } />
     } else {
       return <TextTableContainer
+        fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ criteriaTableText } />
     }
   }
 
   render() {
-    const { navItems, approachText, fadeIn, currentDetails} = this.state;
+    const { navItems, approachHeader, currentDetails} = this.state;
 
     return (
       <div className="approach">
@@ -378,13 +386,12 @@ class Approach extends Component {
           match={this.props.match}
           currentDetails={currentDetails}
           handleClick={this.handleClick} />
+
         { currentDetails === 'The Cayor Approach' ?
-          <PageDetails
-          fadeIn={fadeIn}
-          pageDetails={approachText} />
+          <h3 className='header left'>{approachHeader}</h3>
           : null
         }
-          {this.renderTextDetails()}
+        {this.renderTextDetails()}
         <Footer />
       </div>
     );

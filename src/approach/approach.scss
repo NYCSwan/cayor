@@ -1,10 +1,18 @@
 @import '../_slide';
+@import '../variables';
 
 .approach {
   width: 100%;
   height: calc(100%-200px);
   overflow: hidden;
 
+  .header {
+    .left {
+      float: left;
+      display: inline;
+      color: $primaryGrey;
+    }
+  }
   @include slide-enter;
   @include slide-exit;
 }
