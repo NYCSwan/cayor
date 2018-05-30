@@ -3,16 +3,29 @@ import { withRouter } from 'react-router-dom';
 
 import './App.css';
 import Routes from './routes';
-import ContactAccra from './contact/ContactAccra.react';
-import ContactJoburg from './contact/ContactJoburg.react';
+import ContactForm from './contact/contact_form.react';
+// import ContactJoburg from './contact/ContactJoburg.react';
+import Accra from './media/Ghana_map.jpg';
+import Joburg from './media/SAfrica_map.jpg';
 
 class App extends Component {
   state = {
     isContactModalOpen: false,
     contactLocation: '',
-    transitionPage: false,
-    slideToRight: false,
-    slideToLeft: false
+    joburgContactDetails: [
+      {location: 'Johannesburg'},
+      {street_address: 'Suite No. 23, Unit E0002, Building 4'},
+      {city_state: 'Asbury Park, Magalieszight Ave Dunkeld West Johannesburg'},
+      {phone: '+2711 593 3266'},
+      {imageUrl: Joburg, imageAlt: 'Map of South Africa, Cayor\'s first location.'}
+    ],
+    accraContactDetails: [
+      {location: 'Accra'},
+      {street_address: 'tbd'},
+      {city_state: 'tbd'},
+      {phone: '+'},
+      {imageUrl: Accra, imageAlt: 'Map of Ghana, Cayor\'s second location.'}
+    ]
   }
 
   handleClick = (e) => {
@@ -24,14 +37,14 @@ class App extends Component {
     })
   }
 
-    handleContactModal = () => {
+  handleContactModal = () => {
     console.log('handleContactModal display');
     const { contactLocation } = this.state;
 
     if (contactLocation === 'accra') {
-      return <ContactAccra />
+      return <ContactForm contactDetails={this.state.accrontactDetails} />
     } else {
-      return <ContactJoburg />
+      return <ContactForm contactDetails={this.state.joburgContactDetails} />
     }
   }
 

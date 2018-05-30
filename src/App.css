@@ -48,7 +48,8 @@ p {
 .App {
   text-align: center;
   height: 100vh;
-  color: #444444; }
+  color: #444444;
+  font-family: 'Roboto', sans-serif; }
 
 /* iPhone 4 ----------- */
 /* iPhone 5 ----------- */
