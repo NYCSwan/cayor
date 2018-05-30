@@ -1,6 +1,7 @@
 .text-table {
   height: auto;
-  width: 100%;
+  position: relative;
+  width: 60%;
   display: inline-block; }
   .text-table h4 {
     text-align: left; }

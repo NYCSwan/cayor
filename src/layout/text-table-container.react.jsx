@@ -48,7 +48,8 @@ class TextTableContainer extends Component {
         <h4>{this.props.mainHeader}</h4>
       }
         <TextTable
-        text={this.props.text[currentDetailIdx]}/>
+          fadeIn={this.props.fadeIn}
+          text={this.props.text[currentDetailIdx]}/>
         {this.props.text.length > 1 &&
           <div>
           <Button
