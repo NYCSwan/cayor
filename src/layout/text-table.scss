@@ -1,13 +1,15 @@
 .text-table {
   height: auto;
   position: relative;
-  width: 60%;
+  // width: 60%;
   display: inline-block;
   h4 {
-    text-align: left;
+    text-align: center;
+    margin: 0;
+    width: 100%;
   }
   li {
-    list-style: initial;
+    list-style: none;
     padding: 5px 10px;
     text-align: left;
   }

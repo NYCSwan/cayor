@@ -45,7 +45,7 @@ class TextTableContainer extends Component {
 
       <div className="text-table-container">
       {this.props.mainHeader &&
-        <h4>{this.props.mainHeader}</h4>
+        <h4 className='header left'>{this.props.mainHeader}</h4>
       }
         <TextTable
           fadeIn={this.props.fadeIn}

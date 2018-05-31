@@ -1,8 +1,19 @@
 @import '../_defaults';
+@import '../_variables';
 
 .text-table-container {
   width: 75%;
   display: inline-block;
   margin-bottom: 0;
   margin-top: 30px;
+
+  .header {
+    &.left {
+      float: left;
+      width: 40%;
+      display: inline-block;
+      color: $primaryGrey;
+      background: $transparent;
+    }
+  }
 }
