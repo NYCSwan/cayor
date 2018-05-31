@@ -17,7 +17,7 @@ const items = [
     src: Slide2,
     altText: 'We are driven and entrepreneurial, and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
     caption: 'We are driven and entrepreneurial and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
-    header: 'Building New Empires In Africa\'s Middle Markets.',
+    header: 'Building New Platforms In Africa\'s Middle Markets.',
 
   },
   {
