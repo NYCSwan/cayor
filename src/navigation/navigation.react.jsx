@@ -18,11 +18,11 @@ const Navigation = props => (
         <NavLink to='/people' activeClassName="selected"
         className='link'>PEOPLE</NavLink></li>
       <li>
-        <NavLink to='/approach' activeClassName="selected"
-        className='link'>APPROACH</NavLink></li>
-      <li>
         <NavLink to='/opportunity' activeClassName="selected"
         className='link'>OPPORTUNITY</NavLink></li>
+      <li>
+        <NavLink to='/approach' activeClassName="selected"
+        className='link'>APPROACH</NavLink></li>
       <li>
         <NavLink to='/esg' activeClassName="selected"
         className='link'>ESG</NavLink></li>
