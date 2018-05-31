@@ -40,7 +40,7 @@ class App extends Component {
   handleContactModal = () => {
     console.log('handleContactModal display');
     const { contactLocation } = this.state;
-
+    debugger
     if (contactLocation === 'accra') {
       return <ContactForm contactDetails={this.state.accrontactDetails} />
     } else {
@@ -53,13 +53,13 @@ class App extends Component {
   }
 
 
-  togglePageTransition = () => {
-    console.log(' handle home page transition');
-    this.setState({
-      slideToLeft: !this.state.slideToLeft
-
-    })
-  }
+  // togglePageTransition = () => {
+  //   console.log(' handle home page transition');
+  //   this.setState({
+  //     slideToLeft: !this.state.slideToLeft
+  //
+  //   })
+  // }
 
   render() {
     return (
@@ -70,7 +70,6 @@ class App extends Component {
         <Routes
           transitionKey={this.props.match.path}
           handleClick={this.handleClick}
-          handlePageTransition={this.handlePageTransition}
           location={this.props.location}
           match={this.props.match}
           history={this.props.history} />

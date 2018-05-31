@@ -79,6 +79,7 @@ class Routes extends Component {
                     <Route exact path="/" render={(routeProps) => { // eslint-disable-line
                       return <Homepage
                         {...routeProps}
+                        handleClockClick={routeProps.handleClick}
                         showSpinner={this.state.showTest} /> }}
                       />
                     <Route exact path="/people" render={(routeProps) => { // eslint-disable-line
