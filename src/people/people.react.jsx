@@ -22,7 +22,43 @@ class People extends Component {
     focusedText: ['Our Managing Partners and Investment Team are hands-on, with a consistent track record of regularly interacting with company management and creating value.', 'Our Managing Partners have been actively involved in the management of their respective funds including: fund raising, accounting management and relationship management.', 'When it comes to Africa and sector-specific experience, our team has executed transactions across: agro-processing, food, beverage, packaging, TMT, media, banking and insurance sectors.'],
     nativeText: ['The Cayor team is comprised of four African nationals, a Zimbabwean, a Nigerian, a Cameroonian and Ghanaian.','Together we have deep Africa investment experience, having spent over 30 years investing in the Continent. '],
     experiencedText: ['Our team has principal investment expertise specifically related to Middle Market Investments across various sectors in Africa, and we are among the most experienced private equity investors active in Africa today.','We developed our world class experience working at leading emerging market focused private equity firms, such as: Actis, Citi Venture Capital International (CVCI) and Phatisa. We embody the rigorous standards, technical expertise and investment excellence that investors have come to expect from these leading institutions.','The team has extensive deal-related skills including: sector specific investment experience, mergers and acquisitions, restructuring, and divestitures expertise, as well as experience dealing with co-investors, local regulators and other relevant stakeholders.'],
-    teamText: ['Test team']
+    teamText: ['Test team'],
+    teamDetails: [{
+      name: 'Fungai Ruwende',
+      position: 'Managing Partner',
+      summary: 'TBD',
+      experience: 'TBD',
+      education: 'TBD',
+      url: 'fungai'
+
+    },
+    {
+      name: 'Dafe Diejomaoh',
+      position: 'Managing Partner',
+      summary: 'TBD',
+      experience: 'TBD',
+      education: 'TBD',
+      url: 'dafe'
+
+    },
+    {
+      name: 'Yannick Mpollo',
+      position: 'Principal',
+      summary: 'TBD',
+      experience: 'TBD',
+      education: 'TBD',
+      url: 'yannick'
+    },
+    {
+      name: 'Kofi Domfeh',
+      position: 'Vice President',
+      summary: 'TBD',
+      experience: 'TBD',
+      education: 'TBD',
+      url: 'kofi'
+
+    }],
+    fadeIn: true,
 
   }
 
@@ -34,7 +70,7 @@ class People extends Component {
   }
 
   renderDetails() {
-    const {currentDetails, fadeIn, experiencedText, nativeText, focusedText, teamText} = this.state;
+    const {currentDetails, fadeIn, teamDetails, experiencedText, nativeText, focusedText, teamText} = this.state;
     if (currentDetails === 'Focused') {
       return <PageDetails fadeIn={fadeIn} pageDetails={focusedText} />
     } else if (currentDetails === 'Native') {
@@ -42,7 +78,7 @@ class People extends Component {
     } else if (currentDetails === 'Experienced') {
       return <PageDetails fadeIn={fadeIn}  pageDetails={experiencedText} />
     } else {
-      return <TeamDetails pageDetails={teamText} />
+      return <TeamDetails fadeIn={fadeIn} teamDetails={teamDetails} pageDetails={teamText} />
     }
   }
 

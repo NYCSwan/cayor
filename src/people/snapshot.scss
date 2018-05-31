@@ -1,0 +1,30 @@
+@import '../_variables';
+
+.snapshot {
+  width: 48%;
+  height: 130px;
+  border: 1px solid $cayorRed;
+  background-color: $cayorRed;
+  color: $white;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2% 1%;
+  .headshot {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    // display: inline;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 7%;
+  }
+  // h4, h5 {
+  //   &.Dafe, &.Fungai , &.Yannick, &.Kofi {
+  //   width: 250px;
+  //   height: 75px;
+  //   }
+  // }
+}
