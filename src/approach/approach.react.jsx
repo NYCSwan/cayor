@@ -226,42 +226,45 @@ class Approach extends Component {
     regionsTableText: [
       {
         header: 'West Africa',
+        className: 'west-africa',
         details: [{
-          dKey: 0,
+          dKey: 'w0',
           text: "Cote D'Ivoire"
         },
         {
-          dKey: 1,
+          dKey: 'w1',
           text: 'Cameroon'
         },
         {
-          dKey: 2,
+          dKey: 'w2',
           text: 'Ghana'
         },
         {
-          dKey: 3,
+          dKey: 'w3',
           text: 'Nigeria'
         }]
       },
       {
         header: 'East Africa',
+        className: 'east-africa',
         details: [{
-          dKey: 0,
+          dKey: 'e0',
           text: 'Kenya'
         },
         {
-          dKey: 1,
+          dKey: 'e1',
           text: 'Tanzania'
         },
         {
-          dKey: 2,
+          dKey: 'e2',
           text: 'Uganda'
         }]
       },
       {
         header: 'Southern Africa',
+        className: 'south-africa',
         details: [{
-          dKey: 0,
+          dKey: 's0',
           text: 'South Africa'
         }]
       }],
@@ -347,11 +350,12 @@ class Approach extends Component {
   }
 
   renderTextDetails() {
-    const {currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText} = this.state;
+    const { approachHeader, currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText } = this.state;
 
     if (currentDetails === 'The Cayor Approach') {
       return <TextTableContainer
         fadeIn={fadeIn}
+        mainHeader={approachHeader}
         currentDetails={currentDetails}
         text={approachTableText} />
     } else if (currentDetails === 'Investment Sectors') {
@@ -372,25 +376,20 @@ class Approach extends Component {
   }
 
   render() {
-    const { navItems, approachHeader, currentDetails} = this.state;
+    const { navItems, currentDetails} = this.state;
 
     return (
       <div className="approach">
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick}
+          handleClick={this.props.handleClockClick}
           headerImg='approach' />
         <SubNav
           navItems={navItems}
           match={this.props.match}
           currentDetails={currentDetails}
           handleClick={this.handleClick} />
-
-        { currentDetails === 'The Cayor Approach' ?
-          <h3 className='header left'>{approachHeader}</h3>
-          : null
-        }
         {this.renderTextDetails()}
         <Footer />
       </div>

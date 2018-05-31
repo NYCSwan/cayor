@@ -1,11 +1,7 @@
 .approach {
   width: 100%;
-  height: calc(100%-200px);
+  height: 80%;
   overflow: hidden; }
-  .approach .header .left {
-    float: left;
-    display: inline;
-    color: #696969; }
   .approach.slide-enter {
     z-index: 10;
     opacity: 0.1; }

@@ -3,16 +3,10 @@
 
 .approach {
   width: 100%;
-  height: calc(100%-200px);
+  height: 80%;//calc(100%-250px);
   overflow: hidden;
 
-  .header {
-    .left {
-      float: left;
-      display: inline;
-      color: $primaryGrey;
-    }
-  }
+
   @include slide-enter;
   @include slide-exit;
 }
