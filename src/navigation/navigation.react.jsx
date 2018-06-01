@@ -26,19 +26,21 @@ const Navigation = props => (
       <li>
         <NavLink to='/esg' activeClassName="selected"
         className='link'>ESG</NavLink></li>
-      <li
-        onClick={props.handleClick}
-        activeClassName="selected"
-        className='clock'>
-        <Clock offset='2' />ACCRA
-        </li>
-      <li
-        onClick={props.handleClick}
-        activeClassName="selected"
-        className='clock'>
-        <Clock offset='0'/>JOHANESSBURG
-      </li>
     </ul>
+    <div
+      onClick={props.handleClockClick}
+      activeClassName="selected"
+      className='clock-container'>
+      <Clock offset='2' />
+      <h6>ACCRA</h6>
+    </div>
+    <div
+      onClick={props.handleClockClick}
+      activeClassName="selected"
+      className='clock-container'>
+      <Clock offset='0'/>
+      <p>JOHANESSBURG</p>
+    </div>
   </header>
 )
 

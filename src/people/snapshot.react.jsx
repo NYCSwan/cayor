@@ -1,10 +1,10 @@
 import React from 'react';
-import { Fade } from 'reactstrap';
+import { Fade, Collapse } from 'reactstrap';
 import Dafe from '../media/Accra.jpg';
 import Fungai from '../media/Accra.jpg';
 import Yannick from '../media/Accra.jpg';
 import Kofi from '../media/Accra.jpg';
-
+import PopOut from '../layout/pop-out.react';
 import './snapshot.css';
 
 const getImage = (name) => {
@@ -30,6 +30,11 @@ const Snapshot = (props) => (
       <h4 className={props.name}>{props.name}</h4>
       <h5 className={props.name}>{props.role}</h5>
     </div>
+    <Collapse
+      isOpen={props.isOpen}>
+      <PopOut
+        personDetails={props.personDetails} />
+    </Collapse>
   </Fade>
 )
 

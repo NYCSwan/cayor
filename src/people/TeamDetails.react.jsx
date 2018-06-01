@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Snapshot from './snapshot.react';
 import PageDetails from '../layout/pageDetails.react';
+// import { Collapse } from 'reactstrap';
+
 import './team-details.css';
 
 class TeamDetails extends Component {
@@ -15,7 +17,7 @@ class TeamDetails extends Component {
     const teamMember = []
 
     if (e.target.className.includes('Fungai Ruwende')) {
-      debugger;
+      // debugger;
       teamMember.push(teamDetails[0].summary);
       teamMember.push(teamDetails[0].experience);
       teamMember.push(teamDetails[0].education);
@@ -59,15 +61,13 @@ class TeamDetails extends Component {
       { teamDetails.map(member => {
         return (
           <Snapshot
+            isOpen={isOpen}
             name={member.name}
             role={member.position}
-            handleClick={this.handleClick} />
+            handleClick={this.handleClick}
+            personDetails={personDetails} />
         )
       })}
-      {isOpen &&
-        <PageDetails
-          pageDetails={personDetails} />
-      }
       </div>
 
     )

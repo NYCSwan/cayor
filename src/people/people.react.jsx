@@ -91,14 +91,14 @@ class People extends Component {
           headerImg='people'
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick} />
+          handleClockClick={this.props.handleClockClick} />
         <SubNav
           navItems={navItems}
           match={this.props.match}
           currentDetails={currentDetails}
           handleClick={this.handleClick} />
         { this.renderDetails() }
-        <Footer />
+        <Footer location={this.props.location}/>
       </div>
     );
   }

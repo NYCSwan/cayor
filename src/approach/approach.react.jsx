@@ -391,7 +391,7 @@ class Approach extends Component {
           currentDetails={currentDetails}
           handleClick={this.handleClick} />
         {this.renderTextDetails()}
-        <Footer />
+        <Footer location={this.props.location} />
       </div>
     );
   }

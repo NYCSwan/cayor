@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import './App.css';
 import Routes from './routes';
 import ContactForm from './contact/contact_form.react';
-// import ContactJoburg from './contact/ContactJoburg.react';
 import Accra from './media/Ghana_map.jpg';
 import Joburg from './media/SAfrica_map.jpg';
 
@@ -30,7 +29,7 @@ class App extends Component {
 
   handleClick = (e) => {
     console.log('click contact', e);
-    debugger
+    // debugger
     this.setState({
       isContactModalOpen: true,
       contactLocation: e.target.innerText.toLocaleLowerCase()
@@ -42,7 +41,7 @@ class App extends Component {
     const { contactLocation } = this.state;
     debugger
     if (contactLocation === 'accra') {
-      return <ContactForm contactDetails={this.state.accrontactDetails} />
+      return <ContactForm contactDetails={this.state.accraContactDetails} />
     } else {
       return <ContactForm contactDetails={this.state.joburgContactDetails} />
     }

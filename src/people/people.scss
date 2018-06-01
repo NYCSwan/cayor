@@ -5,7 +5,7 @@
   height: 100%;
   overflow: hidden;
 
-  @include slide-appear;
+  // @include slide-appear;
   @include slide-enter;
   @include slide-exit;
 }

@@ -39,9 +39,9 @@ class Clock extends Component {
 
   render() {
     return (
-      <div>
+      <div className="clock">
       { this.state.time &&
-        <div className="clock">
+        <div>
           <MinuteHand time={this.state.time} />
           <HourHand time={this.state.time} />
         </div>

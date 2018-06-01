@@ -26,7 +26,7 @@ class Homepage extends Component {
           handleClick={this.props.handleClick}
           headerImg='homepage' />
         <BgImageSlide />
-        <Footer />
+        <Footer location={this.props.location} />
       </div>
     )
   }

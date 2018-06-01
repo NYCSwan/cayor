@@ -60,7 +60,7 @@ p {
     background-position: center top;
     background-repeat: no-repeat; }
   .header.people {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("../media/people_banner.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("../media/esg_banner.jpg");
     background-size: 100% 120%; }
   .header.opportunity {
     background: url("../media/opportunity_banner.jpg");
@@ -82,12 +82,12 @@ p {
       width: 150px;
       height: auto; }
   .header .nav {
-    width: 40%;
+    width: 30%;
     margin-right: 4%;
     padding-right: 4%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     align-items: center;
     color: #ffffff;
@@ -104,10 +104,15 @@ p {
         font-size: 1.1em;
         text-shadow: 1px 0 1px #0A2342;
         font-weight: bold; }
-    .header .nav .clock {
-      display: flex;
-      flex-flow: row nowrap;
-      margin-right: 5px;
-      font-size: .9em;
-      text-align: justify;
-      order: 2; }
+  .header .clock-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 4%;
+    font-size: .9em;
+    text-align: left;
+    order: 2;
+    width: 10%;
+    height: auto;
+    background-color: blue; }
+    .header .clock-container h6 {
+      color: #ffffff; }

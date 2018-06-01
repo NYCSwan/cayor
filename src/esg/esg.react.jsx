@@ -104,7 +104,7 @@ class Esg extends Component {
               fadeIn={fadeIn}
               pageDetails={currentDetails === 'Philosophy' ? philosophyText : strategyText} />
           }
-        <Footer />
+        <Footer location={this.props.location} />
       </div>
     );
   }

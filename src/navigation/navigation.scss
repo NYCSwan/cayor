@@ -19,7 +19,7 @@
   }
 
   &.people {
-    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .2) ), url('../media/people_banner.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .2) ), url('../media/esg_banner.jpg');
     background-size: 100% 120%;
   }
 
@@ -56,43 +56,53 @@
   }
 
   .nav {
-    width: 40%;
+    width: 30%;
     margin-right: 4%;
     padding-right: 4%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     align-items: center;
     color: $white;
     font-size: 0.8em;
 
-      .link {
-        list-style: none;
-        display: inline;
-        color: $white;
-        order: 1;
-        margin-left: -5px;
-        margin-right: -5px;
+    .link {
+      list-style: none;
+      display: inline;
+      color: $white;
+      order: 1;
+      margin-left: -5px;
+      margin-right: -5px;
 
-        &.selected {
-          color: $red;
-          font-size: 1.1em;
-          text-shadow: 1px 0 1px $primaryBlue;
-          font-weight: bold;
-        }
+      &.selected {
+        color: $red;
+        font-size: 1.1em;
+        text-shadow: 1px 0 1px $primaryBlue;
+        font-weight: bold;
       }
-
-      .clock {
-        display: flex;
-        flex-flow: row nowrap;
-        margin-right: 5px;
-        font-size: .9em;
-        text-align: justify;
-        order:2;
-        // flex: 2 2;
-        // line-height: .9em;
-      }
-
+    }
   }
+
+  .clock-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 4%;
+    font-size: .9em;
+    text-align: left;
+    order: 2;
+    width: 10%;
+    height: auto;
+    background-color: blue;
+    .clock {
+
+    }
+    h6 {
+      color: $white;
+    }
+    // flex: 2 2;
+    // line-height: .9em;
+  }
+  .clock-container
+
 }

@@ -146,7 +146,7 @@ class Opportunities extends Component {
             pageDetails={africaText} />
           : null
         }
-        <Footer />
+        <Footer location={this.props.location} />
       </div>
     );
   }
