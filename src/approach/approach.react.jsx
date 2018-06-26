@@ -5,67 +5,58 @@ import TextTableContainer from '../layout/text-table-container.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
+import Agribusiness from '../media/world.png';
 import './approach.css';
+
 
 class Approach extends Component {
   state = {
     navItems: [
-      {value: 'The Cayor Approach', url: 'approach'},
-      {value: 'Investment Sectors', url: 'sectors'},
-      {value: 'Investment Criteria', url: 'criteria'},
-      {value: 'Target Regions & Countries', url: 'regions'}
+      {value: 'The Cayor Approach', key: 'approach', style: 'top'},
+      {value: 'The Middle Market', key: 'middle', style: 'sub'},
+      {value: 'Structured Deal Origination', key: 'structuredDeals', style: 'sub'},
+      {value: 'Strategy', key: 'strategy', style: 'sub'},
+      {value: 'Drive Returns from Both Deal and Portfolio Management', key: 'returns', style: 'sub'},
+      {value: 'Investment Sectors', key: 'sectors', style: 'top'},
+      {value: 'Investment Criteria', key: 'criteria', style: 'top'},
+      {value: 'Target Regions & Countries', key: 'regions', style: 'top'}
     ],
     currentDetails: 'The Cayor Approach',
-    approachHeader: "Target the Middle Market",
     approachTableText: [{
         header: 'We believe the middle market is attractive for a number of reasons:',
+        template: 'long',
         details: [{
           dkey: 'a00',
-          text: 'Cayor defines the middle market as investments in the $20 to $40 million range, with capital delivered from Funds ranging from $200 to $300 million in size.'
+          subHeader: 'reduced competition',
+          text: 'In our experience to date, there is less competition for middle market assets, resulting in more attractive asset pricing and superior returns for investors.'
         },
         {
-          dKey: 0,
-          text: 'Reduced Competition: there is less competition for middle market assets, which will yield more attractive asset pricing and superior returns for investors.'
+          dKey: 'a01',
+          subHeader: 'Superior Transaction Flow',
+          text: 'We continue to generate attractive transaction flow arising from demand for expansion capital. We target transactions ranging from $20 to $40 million in size because we believe that transactions in this range allow for proprietary transaction flow with lower entry valuations, better corporate governance terms, and greater scope for us to add value and drive growth and returns.'
         },
         {
-          dKey: 1,
-          text: 'Superior Transaction Flow: we continue to generate attractive deal flow as a result of demand for expansion capital from companies seeking to benefit from high growth rates in Sub-Saharan African markets.'
-        },
-        {
-          dKey: 2,
-          text: 'Our target transactions allow for: proprietary deals with lower entry valuations, better corporate governance terms, and greater scope for Cayor to add value and drive growth and returns.'
-        },
-        {
-          dKey: 3,
-          text: 'Cayor’s Competitive Advantage: our team’s combined experience executing transactions in the middle market space, and across the target geographies and sectors, gives Cayor a comparative advantage.'
-        },
-        {
-          dKey: 4,
-          text: 'Cayor’s distinctive characteristics further differentiate us from our competitors. We represent cultural and geographic diversity, possess excellent analytical and portfolio management skills, have extensive networks in Sub-Saharan Africa and maintain a sterling reputation.'
+          dKey: 'a02',
+          subHeader: 'The Cayor Advantage',
+          text: 'Our team’s cumulative experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.'
         }]
       },
       {
-        header: 'Structured & Proprietary Deal Flow:',
+        header: 'We believe superior origination is a competitive advantage that we maintain through a combination of:',
+        template: 'long',
         details: [
           {
-            dKey:0,
-            text: 'Map sectors to identify attractive targets'
+            dKey:'a01',
+            text: 'Continually mapping market sectors and engaging associated professional networks.'
           },
           {
-            dKey:1,
-            text: 'Develop shadow portfolio of target companies'
-          },
-          {
-            dKey:2,
-            text: 'Access corporate M&A decision-makers'
-          },
-          {
-            dKey:3,
-            text: 'Build relationships with key stakeholders'
+            dKey:'s02',
+            text: 'Adopting a geographic approach to sourcing investments that positions Cayor as a preferred capital partner and recognized brand, thus driving inbound enquiries.'
           }]
       },
       {
-        header: 'Strategy With A Clear Investment Philosophy:',
+        header: 'Cayor’s investment philosophy has clearly defined principles.',
+        template: 'bullet',
         details: [{
           dKey: 0,
           text: 'Strong Management Team'
@@ -128,6 +119,7 @@ class Approach extends Component {
     sectorsTableText: [
       {
         header: 'Financial Services',
+        image: Agribusiness,
         details: [{
           dKey: 0,
           text: 'Consumer Finance'
@@ -201,6 +193,7 @@ class Approach extends Component {
       },
       {
         header: 'Agribusiness',
+        image: Agribusiness,
         details: [{ // eslint-disable-line
           dKey: 0,
           text: "Inputs (E.g.: Seeds, Fertilizer & Crop Protection)"

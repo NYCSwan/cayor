@@ -13,27 +13,34 @@
     text-align: left;
     width: 100%;
     margin-top: 10px;
-    li {
+    .hideIcon {
+      display: none;
+    }
+    .top {
       list-style: none;
       padding: 20px 10px;
+      color: $primaryBlue;
       &.active {
         color: $cayorRed;
         font-weight: bolder;
-        .caret {
-          transform: rotate(180deg);
-        }
         &:hover {
           font-weight: bolder;
         }
+        // .caret {
+        //   transform: rotate(180deg);
+        // }
       }
       &:hover {
         text-decoration: underline;
         font-weight: bold;
         cursor: grab;
-        .caret {
-          transform: rotate(-180deg);
-        }
+        // .caret {
+        //   transform: rotate(-180deg);
+        // }
       }
+    }
+    .sub {
+      color: $primaryGrey;
     }
   }
 }
