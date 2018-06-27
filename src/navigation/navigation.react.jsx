@@ -15,16 +15,16 @@ const Navigation = props => (
     </NavLink>
     <div className='right'>
       <ul className='nav'>
-        <li>
+        <li className='linkContainer'>
           <NavLink to='/people' activeClassName="selected"
           className='link'>PEOPLE</NavLink></li>
-        <li>
+        <li className='linkContainer'>
           <NavLink to='/opportunity' activeClassName="selected"
           className='link'>OPPORTUNITY</NavLink></li>
-        <li>
+        <li className='linkContainer'>
           <NavLink to='/approach' activeClassName="selected"
           className='link'>APPROACH</NavLink></li>
-        <li>
+        <li className='linkContainer'>
           <NavLink to='/esg' activeClassName="selected"
           className='link'>ESG</NavLink></li>
       </ul>
