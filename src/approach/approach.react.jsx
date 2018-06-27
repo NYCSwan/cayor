@@ -378,12 +378,14 @@ class Approach extends Component {
           location={this.props.location}
           handleClick={this.props.handleClockClick}
           headerImg='approach' />
-        <SubNav
-          navItems={navItems}
-          match={this.props.match}
-          currentDetails={currentDetails}
-          handleClick={this.handleClick} />
-        {this.renderTextDetails()}
+        <main className='body'>
+          <SubNav
+            navItems={navItems}
+            match={this.props.match}
+            currentDetails={currentDetails}
+            handleClick={this.handleClick} />
+          {this.renderTextDetails()}
+        </main>
         <Footer location={this.props.location} />
       </div>
     );

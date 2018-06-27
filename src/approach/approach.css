@@ -1,7 +1,11 @@
 .approach {
   width: 100%;
-  height: 80%;
+  height: 100%;
   overflow: hidden; }
+  .approach .main {
+    display: flex;
+    flex: row;
+    align-content: stretch; }
   .approach.slide-enter {
     z-index: 10;
     opacity: 0.1; }

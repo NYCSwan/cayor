@@ -3,9 +3,16 @@
 
 .approach {
   width: 100%;
-  height: 80%;//calc(100%-250px);
+  height: 100%; //calc(100%-250px);
   overflow: hidden;
+  // display: flex;
+  // flex: column;
 
+  .main {
+    display: flex;
+    flex: row;
+    align-content: stretch;
+  }
 
   @include slide-enter;
   @include slide-exit;
