@@ -49,12 +49,7 @@ p {
   text-align: center;
   height: 100vh;
   color: #444444;
-  font-family: 'Roboto', sans-serif; }
-
-/* iPhone 4 ----------- */
-/* iPhone 5 ----------- */
-/* iPhone 6 ----------- */
-/* iPhone 6+ ----------- */
-/* Samsung Galaxy S3 ----------- */
-/* Samsung Galaxy S4 ----------- */
-/* Samsung Galaxy S5 ----------- */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300; }
+  .App .routes {
+    min-height: 100vh; }

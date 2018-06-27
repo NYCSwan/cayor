@@ -9,6 +9,8 @@ import Opportunities from './opportunity/opportunity.react';
 import Approach from './approach/approach.react';
 import Esg from './esg/esg.react';
 
+import './routes.css';
+
 const history = createHistory();
 // take out handlePageTransition={this.props.handlePageTransition}
 // slideToLeft={this.props.slideToLeft}
@@ -20,42 +22,6 @@ class Routes extends Component {
     // currentImageIdx: 0,
     showTest: false
   }
-  //
-  // componentWillMount() {
-  //   console.log('componentDidMount');
-  //   this.triggerCarouselSider();
-  // }
-  //
-  // componentWillUnmount() {
-  //   console.log(' component will unmount');
-  //   clearInterval(this.slider);
-  // }
-  //
-  // triggerCarouselSider = () => {
-  //   console.log('trigger carousel');
-  //   this.slider = setInterval(
-  //     () => this.rotateCarouselIndex(),
-  //     10000
-  //   );
-  // }
-  //
-  // rotateCarouselIndex = () => {
-  //   console.log('rotateCarouselIndex');
-  //   const {imageUrls } = this.state;
-  //   const {currentImageIdx} = this.props;
-  //   const maxIndex = imageUrls.length -1;
-  //   const nextIndex = currentImageIdx +1;
-  //
-  //   if (currentImageIdx === maxIndex) {
-  //     this.setState({
-  //       currentImageIdx: 0
-  //     })
-  //   } else {
-  //     this.setState({
-  //       currentImageIdx: nextIndex
-  //     })
-  //   }
-  // }
 
   render() {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
@@ -68,6 +34,7 @@ class Routes extends Component {
         <Route
           render={({ location }) => (
             <TransitionGroup
+              className='router'
               childFactory={child => React.cloneElement(
               child, {classNames: "slide", timeout: timeout}
             )}>

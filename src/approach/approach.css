@@ -3,9 +3,11 @@
   height: 100%;
   overflow: hidden; }
   .approach .main {
+    height: 1000px;
     display: flex;
     flex: row;
-    align-content: stretch; }
+    align-items: stretch;
+    justify-content: space-between; }
   .approach.slide-enter {
     z-index: 10;
     opacity: 0.1; }

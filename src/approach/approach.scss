@@ -9,9 +9,11 @@
   // flex: column;
 
   .main {
+    height: 1000px;
     display: flex;
     flex: row;
-    align-content: stretch;
+    align-items: stretch;
+    justify-content: space-between;
   }
 
   @include slide-enter;

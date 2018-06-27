@@ -67,6 +67,7 @@ class App extends Component {
           this.handleContactModal()
         }
         <Routes
+          className='routes'
           transitionKey={this.props.match.path}
           handleClick={this.handleClick}
           location={this.props.location}
