@@ -1,5 +1,11 @@
-import React from 'react';
-import { UncontrolledCarousel } from 'reactstrap';
+import React, { Component } from 'react';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
+} from 'reactstrap';
 import './bg_image_slide.css';
 
 import Slide1 from '../../media/slide1c.jpg';
@@ -28,9 +34,70 @@ const items = [
   }
 ];
 
-const BgImageSlide = (props) => (
-  <UncontrolledCarousel interval={8000} items={items} />
-    );
+class BgImageSlide extends Component {
+  state = {
+    activeIndex: 0
+  }
 
+  // componentDidMount() {
+  //   this.animating()
+  // }
+  //
+  onExiting = () => {
+    this.animating = true;
+    debugger;
+  }
+
+  onExited = () => {
+    this.animating = false;
+
+  }
+
+  next = () => {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+    this.setState({ activeIndex: nextIndex });
+  }
+
+  previous = () => {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+    this.setState({ activeIndex: nextIndex });
+  }
+
+  goToIndex = (newIndex) => {
+    if (this.animating) return;
+    this.setState({ activeIndex: newIndex });
+  }
+
+  render() {
+    const { activeIndex } = this.state;
+
+    return (
+      <Carousel
+        activeIndex={activeIndex}
+        next={this.next}
+        previous={this.previous}>
+        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+          {items.map((item) => {
+            return (
+              <CarouselItem
+                onExiting={this.onExiting}
+                onExited={this.onExited}
+                key={item.src}
+              >
+                <div className='overlay'>
+                  <img src={item.src} alt={item.altText} className='backgroundImage'/>
+                </div>
+                <CarouselCaption captionText={item.caption} captionHeader={item.header} />
+              </CarouselItem>
+            )
+          })}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+      </Carousel>
+    );
+  }
+}
 
 export default BgImageSlide;
