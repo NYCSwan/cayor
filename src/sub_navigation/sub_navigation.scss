@@ -8,12 +8,13 @@
   display: inline-block;
   width: 25%;
   background-color: $lightGrey;
+  opacity: 90%;
 
   .list {
     color: $primaryGrey;
     text-align: left;
     width: 100%;
-    margin: 10px;
+    // margin: 10px;
     height: 100%;
     .hideIcon {
       display: none;
@@ -22,7 +23,8 @@
       list-style: none;
       padding: 20px 10px;
       color: $primaryBlue;
-
+      font-weight: 400;
+      width: 95%;
       &.active {
         font-weight: bolder;
         &:hover {
@@ -43,9 +45,13 @@
     }
     .sub {
       color: $primaryGrey;
+      padding: 10px 10px;
       list-style: none;
+      width: 90%;
+
       &.active {
         color: $cayorRed;
+        margin-left: -10%;
       }
     }
   }

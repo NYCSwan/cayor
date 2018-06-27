@@ -3,19 +3,21 @@
   height: 100%;
   display: inline-block;
   width: 25%;
-  background-color: #D5d5d5; }
+  background-color: #D5d5d5;
+  opacity: 90%; }
   .sub_navigation .list {
     color: #696969;
     text-align: left;
     width: 100%;
-    margin: 10px;
     height: 100%; }
     .sub_navigation .list .hideIcon {
       display: none; }
     .sub_navigation .list .top {
       list-style: none;
       padding: 20px 10px;
-      color: #0A2342; }
+      color: #0A2342;
+      font-weight: 400;
+      width: 95%; }
       .sub_navigation .list .top.active {
         font-weight: bolder; }
         .sub_navigation .list .top.active:hover {
@@ -26,9 +28,12 @@
         cursor: grab; }
     .sub_navigation .list .sub {
       color: #696969;
-      list-style: none; }
+      padding: 10px 10px;
+      list-style: none;
+      width: 90%; }
       .sub_navigation .list .sub.active {
-        color: #9B1D1F; }
+        color: #9B1D1F;
+        margin-left: -10%; }
 
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
