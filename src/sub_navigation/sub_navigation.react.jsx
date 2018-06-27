@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-// import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight';
+import { faLongArrowAltRight } from '@fortawesome/fontawesome-free-solid';
 import './sub_navigation.css';
 
 const SubNav = (props) => (
@@ -12,8 +12,18 @@ const SubNav = (props) => (
             key={navItem.value}
             onClick={props.handleClick}
             className={props.currentDetails === navItem.value ? `${navItem.style} active` : navItem.style}>
-            {navItem.value}
-            <FontAwesomeIcon className={props.currentDetails === navItem.value ? `active` : 'hideIcon'} />
+            {
+              navItem.style === 'sub' ?
+              <FontAwesomeIcon
+                className={props.currentDetails.includes(navItem.value) ? `active` : 'hideIcon'}
+                icon={faLongArrowAltRight}
+                pull='left' />
+              : null
+            }
+            { navItem.style === 'top' ?
+              navItem.value.toUpperCase() :
+              navItem.value
+            }
           </li>
         )
       }
