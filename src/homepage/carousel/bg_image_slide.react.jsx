@@ -6,11 +6,12 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-import './bg_image_slide.css';
-
+import { Link } from 'react-router-dom';
+// import Button from '../../layout/button.react';
 import Slide1 from '../../media/slide1c.jpg';
 import Slide2 from '../../media/anastasia.jpg';
 import Slide3 from '../../media/slide3c.jpeg';
+import './bg_image_slide.css';
 
 const items = [
   {
@@ -35,8 +36,44 @@ const items = [
 ];
 
 class BgImageSlide extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { activeIndex: 0 };
+  //   this.next = this.next.bind(this);
+  //   this.previous = this.previous.bind(this);
+  //   this.goToIndex = this.goToIndex.bind(this);
+  //   this.onExiting = this.onExiting.bind(this);
+  //   this.onExited = this.onExited.bind(this);
+  // }
+  //
+  // onExiting() {
+  //   this.animating = true;
+  // }
+  //
+  // onExited() {
+  //   this.animating = false;
+  // }
+  //
+  // next() {
+  //   if (this.animating) return;
+  //   const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+  //   this.setState({ activeIndex: nextIndex });
+  // }
+  //
+  // previous() {
+  //   if (this.animating) return;
+  //   const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+  //   this.setState({ activeIndex: nextIndex });
+  // }
+  //
+  // goToIndex(newIndex) {
+  //   if (this.animating) return;
+  //   this.setState({ activeIndex: newIndex });
+  // }
+
   state = {
-    activeIndex: 0
+    activeIndex: 0,
+    direction: 'left'
   }
 
   // componentDidMount() {
@@ -44,30 +81,72 @@ class BgImageSlide extends Component {
   // }
   //
   onExiting = () => {
+    console.log('on exiting');
     this.animating = true;
-    debugger;
   }
 
   onExited = () => {
+    console.log('on exited');
     this.animating = false;
 
   }
 
-  next = () => {
+  handleNext = () => {
+    console.log('next');
     if (this.animating) return;
     const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
+    this.setState({ activeIndex: nextIndex, direction: 'right' });
   }
 
-  previous = () => {
+  handlePrevious = () => {
+    console.log('previous');
     if (this.animating) return;
     const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
+    this.setState({ activeIndex: nextIndex, direction: 'left' });
   }
 
   goToIndex = (newIndex) => {
+    console.log('goToIndex');
     if (this.animating) return;
     this.setState({ activeIndex: newIndex });
+  }
+
+  handleReadMoreClick() {
+    console.log('handle read more click');
+    const { activeIndex } = this.state;
+    if (activeIndex === 0) {
+      return this.props.history.push('/approach')
+    } else if (activeIndex === 1) {
+      return this.props.history.push('/opportunity')
+    } else {
+      return this.props.history.push('/esg')
+    }
+  }
+
+  renderLink() {
+    const { activeIndex } = this.state;
+    // const { match } = this.props;
+
+    if (activeIndex === 0) {
+      return (
+        <ul>
+          <li><Link to={`/approach`} replace>READ MORE</Link></li>
+        </ul>
+      )
+    } else if (activeIndex === 1) {
+      return (
+        <ul>
+          <li><Link to={`/opportunity`} replace>READ ME</Link></li>
+        </ul>
+      )
+    } else {
+      return (
+        <ul>
+          <li><Link to={`/esg`} replace>READ ME</Link></li>
+        </ul>
+      )
+    }
+
   }
 
   render() {
@@ -76,8 +155,9 @@ class BgImageSlide extends Component {
     return (
       <Carousel
         activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}>
+        next={this.handleNext}
+        previous={this.handlePrevious}
+        ride='carousel'>
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {items.map((item) => {
             return (
@@ -93,8 +173,9 @@ class BgImageSlide extends Component {
               </CarouselItem>
             )
           })}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+          {/* this.renderLink() */}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.handlePrevious} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={this.handleNext} />
       </Carousel>
     );
   }

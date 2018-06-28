@@ -21,35 +21,43 @@ class Esg extends Component {
         header: 'Our Framework and Policy Guidelines support the following objectives:',
         details: [{
           dKey: 0,
-          text: 'Adhere to the UNPRI, and the IFC performance standards;'
+          text: 'Adhere to the UNPRI, and the IFC performance standards;',
+          style: 'text'
         },
         {
           dKey: 7,
-          text: 'Integrate ESG into Cayor’s investment management framework through its ESG management system;'
+          text: 'Integrate ESG into Cayor’s investment management framework through its ESG management system;',
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;'
+          text: 'Partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;',
+          style: 'text'
         },
         {
           dKey: 2,
-          text: 'Conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications;'
+          text: 'Conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications;',
+          style: 'text'
         },
         {
           dKey: 3,
-          text: 'Fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;'
+          text: 'Fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
+          style: 'text'
         },
         {
           dKey: 4,
-          text: 'Communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to compliance;'
+          text: 'Communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to compliance;',
+          style: 'text'
         },
         {
           dKey: 5,
-          text: 'Implement reasonable precautions to protect the health and safety of Portfolio Company employees and any external parties, such as affected communities;'
+          text: 'Implement reasonable precautions to protect the health and safety of Portfolio Company employees and any external parties, such as affected communities;',
+          style: 'text'
         },
         {
           dKey: 6,
-          text: 'Implement responsible practices to ensure that good governance will enhance the reputation of the Fund and the Cayor brand at all times'
+          text: 'Implement responsible practices to ensure that good governance will enhance the reputation of the Fund and the Cayor brand at all times',
+          style: 'text'
         }]
       }
     ],
