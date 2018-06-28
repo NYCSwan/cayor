@@ -43,6 +43,9 @@ class TextTableContainer extends Component {
       {this.props.mainHeader &&
         <h4 className='header left'>{this.props.mainHeader}</h4>
       }
+      {/* this.props.text.template === 'bullet' ?
+        <BulletPointTextContainer
+          currentDetails */}
         <TextTable
           fadeIn={this.props.fadeIn}
           text={this.props.text[currentDetailIdx]}/>

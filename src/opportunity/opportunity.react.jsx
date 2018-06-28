@@ -7,6 +7,7 @@ import Navigation from '../navigation/navigation.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
 import PageDetails from '../layout/pageDetails.react';
+import Demographics from '../media/canal.jpg';
 
 import './opportunity.css';
 
@@ -14,26 +15,28 @@ class Opportunities extends Component {
   state = {
     currentDetails: 'africa opportunity',
     navItems: [
+      {value: 'Why Cayor', url: 'cayor', style: 'top'},
       {value: 'Africa Opportunity', url: 'africa', style: 'top'},
-      {value: 'Why Cayor', url: 'cayor', style: 'top'}
     ],
     africaText: ['We believe that the consumer goods & services, infrastructure, financial services and agriculture sectors will be engines of growth across the continent, providing the most attractive investment opportunities and potential for sustainable value creation.','The Africa private equity landscape is shifting: existing GPs are moving up in fund size and pursuing larger transactions in excess of $50 million. Conversely, regional or country specific funds, due to their smaller sizes, are typically investing less than $20 million per transaction.'],
     africaTableText: [
       {
         header: 'Our thesis is that demographic and structural shifts will drive economic growth in Africa, including:',
+        template: 'bullet',
+        image: Demographics,
         details: [{
           dKey: 0,
-          text: "growth in consumer demand;",
+          text: "Growth in consumer demand;",
           style: 'text'
         },
         {
           dKey: 1,
-          text: 'closing the infrastructure deficit gap;',
+          text: 'Closing the infrastructure deficit gap;',
           style: 'text'
         },
         {
           dKey: 2,
-          text: 'increased financial inclusion;',
+          text: 'Increased financial inclusion;',
           style: 'text'
         },
         {
@@ -120,7 +123,7 @@ class Opportunities extends Component {
     console.log('handle sub navigation click', e);
     // debugger;
     this.setState({
-      currentDetails: e.target.innerText,
+      currentDetails: e.target.innerText.toLowerCase(),
       fadeIn: true
     })
   }

@@ -4,23 +4,25 @@
   padding-top: 5%;
   display: inline-block;
   width: 25%;
-  background-color: #D5d5d5;
-  opacity: 90%; }
+  background-color: #D5d5d561; }
   .sub_navigation .list {
     color: #696969;
     text-align: left;
     width: 100%;
     font-size: 1em;
-    height: 100%; }
+    height: 100%;
+    list-style: none;
+    margin-left: 4%; }
     .sub_navigation .list .hideIcon {
       display: none; }
     .sub_navigation .list .active {
-      color: #9B1D1F; }
+      color: #9B1D1F;
+      margin-left: -3%; }
     .sub_navigation .list .top {
       list-style: none;
       padding: 20px 10px;
-      color: #0A2342;
-      font-weight: 400;
+      color: #113a6e;
+      font-weight: 700;
       width: 95%; }
       .sub_navigation .list .top.active {
         font-weight: bolder; }
