@@ -1,6 +1,7 @@
 .sub_navigation {
   float: left;
   height: 100%;
+  padding-top: 5%;
   display: inline-block;
   width: 25%;
   background-color: #D5d5d5;
@@ -9,9 +10,12 @@
     color: #696969;
     text-align: left;
     width: 100%;
+    font-size: 1em;
     height: 100%; }
     .sub_navigation .list .hideIcon {
       display: none; }
+    .sub_navigation .list .active {
+      color: #9B1D1F; }
     .sub_navigation .list .top {
       list-style: none;
       padding: 20px 10px;

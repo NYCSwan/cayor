@@ -11,15 +11,11 @@ const SubNav = (props) => (
           <li
             key={navItem.value}
             onClick={props.handleClick}
-            className={props.currentDetails === navItem.value ? `${navItem.style} active` : navItem.style}>
-            {
-              navItem.style === 'sub' ?
-              <FontAwesomeIcon
-                className={props.currentDetails.includes(navItem.value) ? `active` : 'hideIcon'}
-                icon={faLongArrowAltRight}
-                pull='left' />
-              : null
-            }
+            className={props.currentDetails === navItem.value.toLowerCase() ? `${navItem.style} active` : navItem.style}>
+            <FontAwesomeIcon
+              className={props.currentDetails.includes(navItem.value.toLowerCase()) ? `active` : 'hideIcon'}
+              icon={faLongArrowAltRight}
+              pull='left' />
             { navItem.style === 'top' ?
               navItem.value.toUpperCase() :
               navItem.value
