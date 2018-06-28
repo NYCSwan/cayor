@@ -27,10 +27,6 @@ class TextTableContainer extends Component {
       this.setState({
         currentDetailIdx: 0
       })
-    } else if (e.target.value === "Back" && currentDetailIdx !== 0){
-      this.setState({
-        currentDetailIdx: currentDetailIdx -1
-      })
     } else {
       this.setState({
         currentDetailIdx: maxIndex
@@ -52,14 +48,11 @@ class TextTableContainer extends Component {
           text={this.props.text[currentDetailIdx]}/>
         {this.props.text.length > 1 &&
           <div>
-          <Button
-          handleClick={this.handleButtonClick}
-          value='Back'
-          text='Back' />
-          <Button
-          handleClick={this.handleButtonClick}
-          value='Next'
-          text='Next' />
+            <Button
+              style="button next interior"
+              handleClick={this.handleButtonClick}
+              value='Next'
+              text='>>' />
           </div>
         }
       </div>

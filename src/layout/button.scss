@@ -1,0 +1,22 @@
+@import '../_variables';
+
+.button {
+  background-color: $transparent;
+  border: $primaryGrey 1px solid;
+  &.next.interior {
+    background-color: $cayorRed;
+    width: 5%;
+    height: auto;
+    color: $white;
+    border-top: $white 1px solid;
+    border-bottom: $white 1px solid;
+    border-left: $white 1px solid;
+    border-tright: $cayorRed 1px solid;
+    text-align: left;
+    padding-left: 1%;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    font-weight: 300;
+  }
+}

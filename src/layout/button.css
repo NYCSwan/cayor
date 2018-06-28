@@ -1,0 +1,18 @@
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border: #696969 1px solid; }
+  .button.next.interior {
+    background-color: #9B1D1F;
+    width: 5%;
+    height: auto;
+    color: #ffffff;
+    border-top: #ffffff 1px solid;
+    border-bottom: #ffffff 1px solid;
+    border-left: #ffffff 1px solid;
+    border-tright: #9B1D1F 1px solid;
+    text-align: left;
+    padding-left: 1%;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    font-weight: 300; }

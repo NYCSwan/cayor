@@ -9,7 +9,13 @@ const TextTable = (props) => (
     <h4>{props.text.header.toUpperCase()}</h4>
     <ul>
       {props.text.details.map(detail => {
-        return <li key={detail.dKey}>{detail.text}</li>
+        return (
+          <li
+            key={detail.dKey}
+            className={detail.style}>
+            {detail.style === 'subHeader' ? detail.text.toUpperCase() : detail.text}
+          </li>
+        )
       })}
     </ul>
   </Fade>

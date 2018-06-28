@@ -1,15 +1,24 @@
 .text-table {
   height: auto;
   position: relative;
-  display: inline-block; }
+  width: 90%;
+  display: inline-block;
+  padding-top: 5%;
+  padding-right: 5%;
+  color: #696969; }
   .text-table h4 {
-    text-align: center;
+    text-align: left;
     margin: 0;
     width: 100%;
     font-family: "Merriweather", serif;
-    color: #0A2342; }
-  .text-table li {
+    color: #0A2342;
+    padding-bottom: 3%; }
+  .text-table .text, .text-table .subHeader {
     list-style: none;
-    padding: 5px 10px;
+    padding: 15px 0;
+    margin-left: -3.4%;
     text-align: left;
-    font-weight: 400; }
+    font-size: 1em; }
+  .text-table .subHeader {
+    color: #9B1D1F;
+    padding: 15px 0 5px 0; }
