@@ -12,12 +12,12 @@ import './people.css';
 class People extends Component {
 
   state = {
-    currentDetails: 'Focused',
+    currentDetails: 'focused',
     navItems: [
-      {value: 'Focused', url: 'focused'},
-      {value: 'Native', url: 'native'},
-      {value: 'Experienced', url: 'experienced'},
-      {value: 'Team Bios', url: 'bios'}
+      {value: 'Focused', url: 'focused', style: 'top'},
+      {value: 'Native', url: 'native', style: 'top'},
+      {value: 'Experienced', url: 'experienced', style: 'top'},
+      {value: 'Team Bios', url: 'bios', style: 'top'}
     ],
     focusedText: ['Our Managing Partners and Investment Team are hands-on, with a consistent track record of regularly interacting with company management and creating value.', 'Our Managing Partners have been actively involved in the management of their respective funds including: fund raising, accounting management and relationship management.', 'When it comes to Africa and sector-specific experience, our team has executed transactions across: agro-processing, food, beverage, packaging, TMT, media, banking and insurance sectors.'],
     nativeText: ['The Cayor team is comprised of four African nationals, a Zimbabwean, a Nigerian, a Cameroonian and Ghanaian.','Together we have deep Africa investment experience, having spent over 30 years investing in the Continent. '],
@@ -65,17 +65,17 @@ class People extends Component {
   handleClick = (e) => {
     console.log('handle sub navigation click', e);
     this.setState({
-      currentDetails: e.target.innerText
+      currentDetails: e.target.innerText.toLowerCase()
     })
   }
 
   renderDetails() {
     const {currentDetails, fadeIn, teamDetails, experiencedText, nativeText, focusedText, teamText} = this.state;
-    if (currentDetails === 'Focused') {
+    if (currentDetails === 'focused') {
       return <PageDetails fadeIn={fadeIn} pageDetails={focusedText} />
-    } else if (currentDetails === 'Native') {
+    } else if (currentDetails === 'native') {
       return <PageDetails fadeIn={fadeIn} pageDetails={nativeText} />
-    } else if (currentDetails === 'Experienced') {
+    } else if (currentDetails === 'experienced') {
       return <PageDetails fadeIn={fadeIn}  pageDetails={experiencedText} />
     } else {
       return <TeamDetails fadeIn={fadeIn} teamDetails={teamDetails} pageDetails={teamText} />

@@ -1,7 +1,13 @@
 .esg {
   width: 100%;
-  height: calc(100%-200px);
+  height: 100%;
   overflow: hidden; }
+  .esg .body {
+    height: 1000px;
+    display: flex;
+    flex: row;
+    align-items: stretch;
+    justify-content: space-between; }
   .esg.slide-appear.slide-appear-active {
     height: 100%;
     transition: height 400ms ease; }

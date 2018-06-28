@@ -4,7 +4,7 @@ import './footer.css';
 const Footer = (props) => (
   <footer className='footer'>
     <small className="left">{String.fromCharCode(169)}2018 Cayor Capital</small>
-    <small>All Rights Reserved.</small>
+    <small className="middle">All Rights Reserved.</small>
     <small className="right"> WEB FRAUD - PHISHING PRIVACY POLICIES</small>
   </footer>
 )

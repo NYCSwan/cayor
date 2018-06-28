@@ -8,11 +8,11 @@ import './esg.css';
 
 class Esg extends Component {
   state = {
-    currentDetails: 'Philosophy',
+    currentDetails: 'philosophy',
     navItems: [
-      {value: 'Philosophy', key: 'philosophy', style: ''},
-      {value: 'Strategy', key: 'strategy', style: ''},
-      {value: 'Framework', key: 'framework', style: ''}
+      {value: 'Philosophy', key: 'philosophy', style: 'top'},
+      {value: 'Strategy', key: 'strategy', style: 'top'},
+      {value: 'Framework', key: 'framework', style: 'top'}
     ],
     philosophyText: ['Cayor considers our approach to responsible investing to be both risk and return focused.','ESG is a key consideration in Cayor’s investment decision-making and ownership practices. We believe researching, assessing and managing factors related to ESG enhances our ability to meet the long-term investment objectives of our fund. At Cayor, ESG considerations are not contradictory to achieving our commercial objectives.','Instead, Cayor uses ESG management to identify opportunities to enhance the internal efficiencies and market opportunities of our portfolio companies; while reducing the risks associated with our investment process. We are driven by the principle that active ownership adds sustained value at exit, and contributes to the advancement of sustainable development within Africa.'],
     strategyText: ['We have developed a strategy to achieve balance between environmental and social impact and generating commercial returns; underpinned by our ESG philosophy.','From the start, the team will apply our ESG strategy to the Fund’s portfolio companies and their operational activities.','Post-investment, Cayor will closely monitor progress on ESG matters and compliance by portfolio companies relative to our ESG Framework and Policy Guidelines.'],
@@ -62,7 +62,7 @@ class Esg extends Component {
 
       this.setState({
         fadeIn: true,
-        currentDetails: e.target.innerText
+        currentDetails: e.target.innerText.toLowerCase()
       })
     }
 
@@ -87,23 +87,25 @@ class Esg extends Component {
           location={this.props.location}
           handleClick={this.props.handleClick}
           headerImg='esg' />
-        <SubNav
-          navItems={navItems}
-          match={this.props.match}
-          handleClick={this.handleClick}
-          currentDetails={currentDetails}
-          fadeIn={fadeIn} />
-          { currentDetails === 'Framework' ?
-            <TextTableContainer
-            currentDetails={currentDetails}
-            text={frameworkTableText}/>
-            : null
-          }
-          {currentDetails !== 'Framework' &&
-            <PageDetails
-              fadeIn={fadeIn}
-              pageDetails={currentDetails === 'Philosophy' ? philosophyText : strategyText} />
-          }
+          <main className='body'>
+            <SubNav
+              navItems={navItems}
+              match={this.props.match}
+              handleClick={this.handleClick}
+              currentDetails={currentDetails}
+              fadeIn={fadeIn} />
+              { currentDetails === 'Framework' ?
+                <TextTableContainer
+                currentDetails={currentDetails}
+                text={frameworkTableText}/>
+                : null
+              }
+              {currentDetails !== 'Framework' &&
+                <PageDetails
+                  fadeIn={fadeIn}
+                  pageDetails={currentDetails === 'Philosophy' ? philosophyText : strategyText} />
+              }
+          </main>
         <Footer location={this.props.location} />
       </div>
     );

@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Clock from '../clocks/clock.react';
-import Logo from '../media/cayor_color.png';
+import ColorLogo from '../media/cayor_color.png';
+import WhiteLogo from '../media/grey-white-icon.png';
 import './navigation.css';
 
 const Navigation = props => (
@@ -10,10 +11,10 @@ const Navigation = props => (
     <NavLink to='/' className='logo-container'>
       <img
         className='logo'
-        src={Logo}
+        src={props.location.pathname === '/' ? WhiteLogo : ColorLogo }
         alt='logo' />
     </NavLink>
-    <div className='right'>
+    <div className={props.location.pathname === '/' ? 'right homepage' : 'right'}>
       <ul className='nav'>
         <li className='linkContainer'>
           <NavLink to='/people' activeClassName="selected"

@@ -53,16 +53,17 @@ p {
   color: #696969;
   justify-content: flex-end;
   align-content: flex-end;
-  background-color: rgba(0, 0, 0, 0);
-  border-bottom: 2px solid #D5d5d561; }
+  background-color: rgba(0, 0, 0, 0); }
   .header.people, .header.opportunity, .header.approach, .header.esg {
     width: 100%;
     height: 100px;
     object-fit: contain;
     background-position: center top;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #D5d5d561; }
   .header.homepage {
-    height: 100px; }
+    height: 100px;
+    color: #ffffff; }
   .header .logo-container {
     width: 200px;
     display: flex;
@@ -75,32 +76,39 @@ p {
     display: flex;
     flex-flow: row wrap;
     width: 80%;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    color: #444444; }
+    .header .right.homepage {
+      color: #ffffff; }
     .header .right .nav {
       width: 30%;
       margin-right: 4%;
-      padding-right: 4%;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
       align-content: center;
       align-items: center;
-      color: #444444;
       font-size: 0.8em;
       font-weight: 400;
       height: 100px; }
-      .header .right .nav .linkContainer .link {
-        list-style: none;
-        display: inline;
-        color: #444444;
-        order: 1; }
-        .header .right .nav .linkContainer .link.selected {
+      .header .right .nav .linkContainer {
+        height: auto; }
+        .header .right .nav .linkContainer .link {
+          list-style: none;
+          display: inline;
+          color: inherit;
+          order: 1;
           margin-bottom: 50%;
-          font-size: 1.1em;
-          font-weight: bold;
-          border-bottom: 2px solid #9B1D1F;
-          padding-bottom: 51%;
-          line-height: 300%; }
+          padding-bottom: 51; }
+          .header .right .nav .linkContainer .link.selected {
+            font-size: 1.1em;
+            font-weight: bold;
+            border-bottom: 2px solid #9B1D1F;
+            line-height: 300%; }
+          .header .right .nav .linkContainer .link:hover {
+            border-bottom: 2px solid #9B1D1F;
+            padding-bottom: 51%;
+            text-decoration: none; }
     .header .right .clocks {
       width: 15%;
       display: flex;
@@ -118,5 +126,4 @@ p {
           margin-left: 1%;
           padding-left: 15%;
           text-align: left;
-          font-size: .7em;
-          color: #444444; }
+          font-size: .7em; }

@@ -337,7 +337,7 @@ class Approach extends Component {
   handleClick = (e) => {
     console.log('handle sub navigation click', e);
     this.setState({
-      currentDetails: e.target.innerText,
+      currentDetails: e.target.innerText.toLowerCase(),
       fadeIn: true
     })
   }
@@ -345,18 +345,18 @@ class Approach extends Component {
   renderTextDetails() {
     const { approachHeader, currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText } = this.state;
 
-    if (currentDetails === 'The Cayor Approach') {
+    if (currentDetails === 'the cayor approach') {
       return <TextTableContainer
         fadeIn={fadeIn}
         mainHeader={approachHeader}
         currentDetails={currentDetails}
         text={approachTableText} />
-    } else if (currentDetails === 'Investment Sectors') {
+    } else if (currentDetails === 'investment sectors') {
       return <TextTableContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ sectorsTableText } />
-    } else if (currentDetails === 'Target Regions & Countries') {
+    } else if (currentDetails === 'target regions & countries') {
       return <RegionDetails
         fadeIn={fadeIn}
         text={ regionsTableText } />

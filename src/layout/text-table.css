@@ -5,8 +5,11 @@
   .text-table h4 {
     text-align: center;
     margin: 0;
-    width: 100%; }
+    width: 100%;
+    font-family: "Merriweather", serif;
+    color: #0A2342; }
   .text-table li {
     list-style: none;
     padding: 5px 10px;
-    text-align: left; }
+    text-align: left;
+    font-weight: 400; }

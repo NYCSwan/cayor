@@ -1,19 +1,20 @@
 .footer {
   position: absolute;
-  width: 100%;
+  width: 75%;
   height: 50px;
   background-color: rgba(0, 0, 0, 0);
   bottom: 0;
-  color: #000; }
-  .footer .right, .footer .left {
-    width: 30%; }
+  color: #696969;
+  left: 25%; }
+  .footer .right, .footer .left, .footer .middle {
+    width: 30%;
+    font-size: .6em;
+    padding-top: 20px; }
   .footer .left {
     margin-left: 5%;
-    padding-top: 20px;
     padding-left: 50px; }
   .footer .right {
     margin-right: 5%;
-    padding-top: 20px;
     padding-right: 25px; }
 
 /* iPhone 4 ----------- */

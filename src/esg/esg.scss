@@ -2,9 +2,15 @@
 
 .esg {
   width: 100%;
-  height: calc(100%-200px);
+  height: 100%;
   overflow: hidden;
-
+  .body {
+    height: 1000px;
+    display: flex;
+    flex: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
   @include slide-appear;
   @include slide-enter;
   @include slide-exit;

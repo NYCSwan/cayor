@@ -14,8 +14,8 @@ class Opportunities extends Component {
   state = {
     currentDetails: 'Africa Opportunity',
     navItems: [
-      {value: 'Africa Opportunity', url: 'africa'},
-      {value: 'Why Cayor', url: 'cayor'}
+      {value: 'Africa Opportunity', url: 'africa', style: 'top'},
+      {value: 'Why Cayor', url: 'cayor', style: 'top'}
     ],
     africaText: ['We believe that the consumer goods & services, infrastructure, financial services and agriculture sectors will be engines of growth across the continent, providing the most attractive investment opportunities and potential for sustainable value creation.','The Africa private equity landscape is shifting: existing GPs are moving up in fund size and pursuing larger transactions in excess of $50 million. Conversely, regional or country specific funds, due to their smaller sizes, are typically investing less than $20 million per transaction.'],
     africaTableText: [
