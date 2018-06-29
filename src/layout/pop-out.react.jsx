@@ -2,17 +2,18 @@ import React from 'react';
 import { Card, CardBody, CardTitle, CardText, CardSubtitle } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faWindowClose } from '@fortawesome/fontawesome-free-solid';
+import './pop-out.css';
 
 const PopOut = (props) => {
   return (
     <div>
       <Card>
         <CardBody>
-        <FontAwesomeIcon
-          onClick={props.handleClose}
-          className={'close'}
-          icon={faWindowClose}
-          pull='right' />
+          <FontAwesomeIcon
+            onClick={props.handleClose}
+            className={'close'}
+            icon={faWindowClose}
+            pull='right' />
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.role}</CardSubtitle>
           <CardText>{props.personDetails.summary}</CardText>

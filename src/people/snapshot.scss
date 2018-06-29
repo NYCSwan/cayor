@@ -7,16 +7,27 @@
   display: flex;
   flex-flow: row wrap;
   margin: 2% 1%;
-
   .headshot {
     width: 100px;
     height: 100px;
     margin: 0;
   }
-  
-  &.active {
 
+  &.active {
+    order: 1;
+    width: 100%;
+    transform:scale(1.1);
+    background-color: $lightGreySemiTransparent;
+    .headshot {
+
+    }
   }
+
+  &.inactive {
+    transform:scale(0.8);
+    order: 10;
+  }
+
   .text {
     display: flex;
     flex-direction: column;

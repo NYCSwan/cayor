@@ -9,6 +9,14 @@
     width: 100px;
     height: 100px;
     margin: 0; }
+  .snapshot.active {
+    order: 1;
+    width: 100%;
+    transform: scale(1.1);
+    background-color: #D5d5d561; }
+  .snapshot.inactive {
+    transform: scale(0.8);
+    order: 10; }
   .snapshot .text {
     display: flex;
     flex-direction: column;

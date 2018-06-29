@@ -98,13 +98,12 @@ p {
           display: inline;
           color: inherit;
           order: 1;
-          margin-bottom: 50%;
-          padding-bottom: 51; }
+          padding-bottom: 51%; }
           .header .right .nav .linkContainer .link.selected {
             font-size: 1.1em;
             font-weight: bold;
             border-bottom: 2px solid #9B1D1F;
-            line-height: 300%; }
+            padding-bottom: 45%; }
           .header .right .nav .linkContainer .link:hover {
             border-bottom: 2px solid #9B1D1F;
             padding-bottom: 51%;
