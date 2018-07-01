@@ -3,16 +3,19 @@
 
 .approach {
   width: 100%;
-  height: calc(100%-200px);
+  height: 100%; //calc(100%-250px);
   overflow: hidden;
+  // display: flex;
+  // flex: column;
 
-  .header {
-    .left {
-      float: left;
-      display: inline;
-      color: $primaryGrey;
-    }
+  .body {
+    height: 1000px;
+    display: flex;
+    flex: row;
+    align-items: stretch;
+    justify-content: space-between;
   }
+
   @include slide-enter;
   @include slide-exit;
 }

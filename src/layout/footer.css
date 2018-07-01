@@ -1,12 +1,15 @@
 .footer {
   position: absolute;
-  width: 100%;
+  width: 75%;
   height: 50px;
   background-color: rgba(0, 0, 0, 0);
   bottom: 0;
-  z-index: 10; }
-  .footer .right, .footer .left {
-    width: 30%; }
+  color: #696969;
+  left: 25%; }
+  .footer .right, .footer .left, .footer .middle {
+    width: 30%;
+    font-size: .6em;
+    padding-top: 20px; }
   .footer .left {
     margin-left: 5%;
     padding-left: 50px; }
@@ -20,9 +23,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
@@ -30,9 +35,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 /* iPhone 5 ----------- */
@@ -41,9 +48,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -51,9 +60,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 /* iPhone 6 ----------- */
@@ -62,9 +73,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -72,9 +85,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 /* iPhone 6+ ----------- */
@@ -83,9 +98,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -93,9 +110,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 /* Samsung Galaxy S3 ----------- */
@@ -104,9 +123,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -114,9 +135,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 /* Samsung Galaxy S4 ----------- */
@@ -125,9 +148,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
@@ -135,9 +160,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 /* Samsung Galaxy S5 ----------- */
@@ -146,9 +173,11 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
@@ -156,7 +185,9 @@
     height: 40px; }
     .footer .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px; }
     .footer .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px; } }

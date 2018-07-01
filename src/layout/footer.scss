@@ -3,18 +3,16 @@
 
 .footer {
   position: absolute;
-  width: 100%;
+  width: 75%;
   height: 50px;
   background-color: $transparent;
   bottom: 0;
-  // align-self: flex-end;
-  z-index: 10;
-  // display: flex;
-  // flex-direction: row;
-  // order: 10;
-
-  .right, .left {
+  color: $primaryGrey;
+  left: 25%;
+  .right, .left, .middle {
     width: 30%;
+    font-size: .6em;
+    padding-top: 20px;
   }
 
   .left {
@@ -23,6 +21,7 @@
   }
   .right {
     margin-right: 5%;
+    // padding-top: 20px;
     padding-right: 25px;
   }
 }
@@ -32,10 +31,12 @@
     height: 40px;
     .left {
       margin-left: 2%;
+      padding-top: 10px;
       padding-left: 15px;
     }
     .right {
       margin-right: 2%;
+      padding-top: 10px;
       padding-right: 15px;
     }
   }

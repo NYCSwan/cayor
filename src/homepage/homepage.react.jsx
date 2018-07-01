@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import BgImageSlide from './carousel/bg_image_slide.react';
 // import SlideKey from './carousel/slide_key.react';
 import './homepage.css';
-import Footer from '../layout/footer.react';
+// import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 
 class Homepage extends Component {
@@ -26,7 +26,6 @@ class Homepage extends Component {
           handleClick={this.props.handleClick}
           headerImg='homepage' />
         <BgImageSlide />
-        <Footer />
       </div>
     )
   }

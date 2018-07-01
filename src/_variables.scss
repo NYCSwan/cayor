@@ -1,17 +1,22 @@
 $backgroundColor: #eee !default;
 $backgroundGrey: rgba(72,72,72,0.5);
-
+$backgroundOverlay: #0A2342;
 $primaryText: rgb(68,68,68);
 
 $primaryGrey: #696969;
 $accentGrey: rgb(72,72,72);
 $lightGrey: #D5d5d5;
+$lightGreySemiTransparent: #D5d5d561;
 
 $cayorRed: #9B1D1F;
 $red: rgb(155,29,31);
 $white: #ffffff;
 $transparent: rgba(0,0,0,0.0);
 $primaryBlue: #0A2342;
+$primaryBlueSemiTransparent: #0A234266;
 
 // Fonts
 // $phoneFont:
+$copy-font-family: 'Josefin Sans', sans-serif;
+$alt-copy-font-family: 'Fjalla One', sans-serif;
+$headline-font-family: 'Merriweather', serif;

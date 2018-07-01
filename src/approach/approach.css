@@ -1,11 +1,13 @@
 .approach {
   width: 100%;
-  height: calc(100%-200px);
+  height: 100%;
   overflow: hidden; }
-  .approach .header .left {
-    float: left;
-    display: inline;
-    color: #696969; }
+  .approach .body {
+    height: 1000px;
+    display: flex;
+    flex: row;
+    align-items: stretch;
+    justify-content: space-between; }
   .approach.slide-enter {
     z-index: 10;
     opacity: 0.1; }

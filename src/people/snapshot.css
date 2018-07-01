@@ -1,0 +1,18 @@
+.snapshot {
+  width: 48%;
+  height: 130px;
+  border: 1px solid #9B1D1F;
+  background-color: #9B1D1F;
+  color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2% 1%; }
+  .snapshot .headshot {
+    width: 150px;
+    height: 150px;
+    margin: 0; }
+  .snapshot .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 7%; }

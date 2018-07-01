@@ -1,0 +1,25 @@
+.regionDetails {
+  background: url('../media/world.png') no-repeat center center;
+  background-size: auto 60%;
+  display: flex;
+  flex: row wrap;
+  justify-content: space-between;
+  width: 70%;
+  height: 600px;
+
+  .west-africa {
+    width: 300px;
+    order: 1;
+    align-self: center;
+  }
+  .east-africa {
+    order: 10;
+    width: 300px;
+    align-self: center;
+  }
+  .south-africa {
+    order: 1;
+    align-self: flex-end;
+
+  }
+}

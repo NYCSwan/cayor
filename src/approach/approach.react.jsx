@@ -5,67 +5,73 @@ import TextTableContainer from '../layout/text-table-container.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
+import Agribusiness from '../media/world.png';
 import './approach.css';
+
 
 class Approach extends Component {
   state = {
     navItems: [
-      {value: 'The Cayor Approach', url: 'approach'},
-      {value: 'Investment Sectors', url: 'sectors'},
-      {value: 'Investment Criteria', url: 'criteria'},
-      {value: 'Target Regions & Countries', url: 'regions'}
+      {value: 'The Cayor Approach', key: 'approach', style: 'top'},
+      {value: 'The Middle Market', key: 'middle', style: 'sub'},
+      {value: 'Structured Deal Origination', key: 'structuredDeals', style: 'sub'},
+      {value: 'Strategy', key: 'strategy', style: 'sub'},
+      {value: 'Drive Returns from Both Deal and Portfolio Management', key: 'returns', style: 'sub'},
+      {value: 'Investment Sectors', key: 'sectors', style: 'top'},
+      {value: 'Investment Criteria', key: 'criteria', style: 'top'},
+      {value: 'Target Regions & Countries', key: 'regions', style: 'top'}
     ],
-    currentDetails: 'The Cayor Approach',
-    approachHeader: "Target the Middle Market",
+    
+    currentDetails: 'the middle market',
     approachTableText: [{
         header: 'We believe the middle market is attractive for a number of reasons:',
         details: [{
-          dkey: 'a00',
-          text: 'Cayor defines the middle market as investments in the $20 to $40 million range, with capital delivered from Funds ranging from $200 to $300 million in size.'
+          dKey: 'a00',
+          text: 'reduced competition',
+          style: 'subHeader'
         },
         {
-          dKey: 0,
-          text: 'Reduced Competition: there is less competition for middle market assets, which will yield more attractive asset pricing and superior returns for investors.'
+          dKey: 'a01',
+          text: 'In our experience to date, there is less competition for middle market assets, resulting in more attractive asset pricing and superior returns for investors.',
+          style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Superior Transaction Flow: we continue to generate attractive deal flow as a result of demand for expansion capital from companies seeking to benefit from high growth rates in Sub-Saharan African markets.'
+          dKey: 'a02',
+          text: 'Superior Transaction Flow',
+          style: 'subHeader'
         },
         {
-          dKey: 2,
-          text: 'Our target transactions allow for: proprietary deals with lower entry valuations, better corporate governance terms, and greater scope for Cayor to add value and drive growth and returns.'
+          dKey: 'a03',
+          text: 'We continue to generate attractive transaction flow arising from demand for expansion capital. We target transactions ranging from $20 to $40 million in size because we believe that transactions in this range allow for proprietary transaction flow with lower entry valuations, better corporate governance terms, and greater scope for us to add value and drive growth and returns.',
+          style: 'text'
         },
         {
-          dKey: 3,
-          text: 'Cayor’s Competitive Advantage: our team’s combined experience executing transactions in the middle market space, and across the target geographies and sectors, gives Cayor a comparative advantage.'
+          dKey: 'a04',
+          text: 'The Cayor Advantage',
+          style: 'subHeader'
         },
         {
-          dKey: 4,
-          text: 'Cayor’s distinctive characteristics further differentiate us from our competitors. We represent cultural and geographic diversity, possess excellent analytical and portfolio management skills, have extensive networks in Sub-Saharan Africa and maintain a sterling reputation.'
+          dKey: 'a05',
+          text: 'Our team’s cumulative experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.',
+          style: 'text'
         }]
       },
       {
-        header: 'Structured & Proprietary Deal Flow:',
+        header: 'We believe superior origination is a competitive advantage that we maintain through a combination of:',
         details: [
           {
-            dKey:0,
-            text: 'Map sectors to identify attractive targets'
+            dKey:'a01',
+            text: 'Continually mapping market sectors and engaging associated professional networks.',
+            style: 'text'
           },
           {
-            dKey:1,
-            text: 'Develop shadow portfolio of target companies'
-          },
-          {
-            dKey:2,
-            text: 'Access corporate M&A decision-makers'
-          },
-          {
-            dKey:3,
-            text: 'Build relationships with key stakeholders'
+            dKey:'s02',
+            text: 'Adopting a geographic approach to sourcing investments that positions Cayor as a preferred capital partner and recognized brand, thus driving inbound enquiries.',
+            style: 'text'
           }]
       },
       {
-        header: 'Strategy With A Clear Investment Philosophy:',
+        header: 'Cayor’s investment philosophy has clearly defined principles.',
         details: [{
           dKey: 0,
           text: 'Strong Management Team'
@@ -128,6 +134,7 @@ class Approach extends Component {
     sectorsTableText: [
       {
         header: 'Financial Services',
+        image: Agribusiness,
         details: [{
           dKey: 0,
           text: 'Consumer Finance'
@@ -201,137 +208,193 @@ class Approach extends Component {
       },
       {
         header: 'Agribusiness',
+        image: Agribusiness,
         details: [{ // eslint-disable-line
           dKey: 0,
-          text: "Inputs (E.g.: Seeds, Fertilizer & Crop Protection)"
+          text: "Inputs (E.g.: Seeds, Fertilizer & Crop Protection)",
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Equipment'
+          text: 'Equipment',
+          style: 'text'
         },
         ,
         {
           dKey: 2,
-          text: 'Storage'
+          text: 'Storage',
+          style: 'text'
         },
         {
           dKey: 3,
-          text: 'Agri-processing'
+          text: 'Agri-processing',
+          style: 'text'
         },
         {
           dKey: 4,
-          text: 'Logistics'
+          text: 'Logistics',
+          style: 'text'
         }]
       }],
     regionsTableText: [
       {
         header: 'West Africa',
+        className: 'west-africa',
         details: [{
-          dKey: 0,
-          text: "Cote D'Ivoire"
+          dKey: 'w0',
+          text: "Cote D'Ivoire",
+          style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Cameroon'
+          dKey: 'w1',
+          text: 'Cameroon',
+          style: 'text'
         },
         {
-          dKey: 2,
-          text: 'Ghana'
+          dKey: 'w2',
+          text: 'Ghana',
+          style: 'text'
         },
         {
-          dKey: 3,
-          text: 'Nigeria'
+          dKey: 'w3',
+          text: 'Nigeria',
+          style: 'text'
         }]
       },
       {
         header: 'East Africa',
+        className: 'east-africa',
         details: [{
-          dKey: 0,
-          text: 'Kenya'
+          dKey: 'e0',
+          text: 'Kenya',
+          style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Tanzania'
+          dKey: 'e1',
+          text: 'Tanzania',
+          style: 'text'
         },
         {
-          dKey: 2,
-          text: 'Uganda'
+          dKey: 'e2',
+          text: 'Uganda',
+          style: 'text'
         }]
       },
       {
         header: 'Southern Africa',
+        className: 'south-africa',
         details: [{
-          dKey: 0,
-          text: 'South Africa'
+          dKey: 's0',
+          text: 'South Africa',
+          style: 'text'
         }]
       }],
     criteriaTableText: [
       {
         header: 'Deal Type Investment Criteria:',
         details: [{
-          dKey: 0,
-          text: 'We take significant minority stake in companies with board representation and a robust set of minority protection rights, which will enable us to drive value and influence key decisions.'
+          dKey: 'c00',
+          text: 'We take significant minority stake in companies with board representation and a robust set of minority protection rights, which will enable us to drive value and influence key decisions.',
+          style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Growth Capital: Provide high growth and profitable mature companies capital to fund their expansion plans'
+          dKey: 'c01',
+          text: 'Growth Capital',
+          style: 'subHeader'
         },
         {
-          dKey: 2,
-          text: 'Acquisition: Provide capital to purchase a controlling stake in private companies'
+          dKey: 'c02',
+          text: 'Provide high growth and profitable mature companies capital to fund their expansion plans',
+          style: 'text'
         },
         {
-          dKey: 3,
-          text: 'Management Buy Outs (MBO): Provide reputable management teams with funding to acquire a controlling stake in private companies'
+          dKey: 'c03',
+          text: 'Acquisition',
+          style: 'subHeader'
         },
         {
-          dKey: 4,
-          text: 'Replacement: Provide capital to acquire equity stakes from shareholders who are seeking to exit'
+          dKey: 'c04',
+          text: 'Provide capital to purchase a controlling stake in private companies',
+          style: 'text'
         },
         {
-          dKey: 5,
-          text: 'Other: PIPE, Pre-IPO, Quasi Equity and Structured Transactions'
+          dKey: 'c05',
+          text: 'Management Buy Outs (MBO)',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'c06',
+          text: 'Provide reputable management teams with funding to acquire a controlling stake in private companies',
+          style: 'text'
+        },
+        {
+          dKey: 'c07',
+          text: 'Replacement',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'c08',
+          text: 'Provide capital to acquire equity stakes from shareholders who are seeking to exit',
+          style: 'text'
+        },
+        {
+          dKey: 'c09',
+          text: 'Other',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'c10',
+          text: 'PIPE, Pre-IPO, Quasi Equity and Structured Transactions',
+          style: 'text'
         }]
       },
       {
         header: 'Size',
         details: [{
-          dKey: 0,
-          text: 'Leading market position and strong business fundamentals'
+          dKey: 's00',
+          text: 'Leading market position and strong business fundamentals',
+          style: 'text'
         },
         {
-          dKey: 1,
+          dKey: 's01',
+          style: 'text',
           text: 'EBITDA'
         },
         {
-          dKey: 2,
-          text: 'US$5 million'
+          dKey: 's02',
+          text: 'US$5 million',
+          style: 'text'
         }]
       },
       {
         header: 'Performance',
         details: [{
-          dKey: 0,
-          text: 'Sub-Saharan Africa based businesses with strong growth potential'
+          dKey: 'p00',
+          text: 'Sub-Saharan Africa based businesses with strong growth potential',
+          style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Profitable and cash flow positive businesses with favourable working capital dynamics'
+          dKey: 'p01',
+          text: 'Profitable and cash flow positive businesses with favourable working capital dynamics',
+          style: 'text'
         }]
       },
       {
         header: 'Management',
         details: [{
-          dKey: 0,
-          text: 'Innovative and experienced management team with proven operational and financial track record'
+          dKey: 'm00',
+          text: 'Innovative and experienced management team with proven operational and financial track record',
+          style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Strong commitment to good governance and ethics'
+          dKey: 'm01',
+          text: 'Strong commitment to good governance and ethics',
+          style: 'text'
         },
         {
-          dKey: 2,
-          text: 'Clear commitment to realise an exit over a period of 3 to 7 years'
+          dKey: 'm02',
+          text: 'Clear commitment to realise an exit over a period of 3 to 7 years',
+          style: 'text'
         }]
       }
     ],
@@ -341,25 +404,26 @@ class Approach extends Component {
   handleClick = (e) => {
     console.log('handle sub navigation click', e);
     this.setState({
-      currentDetails: e.target.innerText,
+      currentDetails: e.target.innerText.toLowerCase(),
       fadeIn: true
     })
   }
 
   renderTextDetails() {
-    const {currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText} = this.state;
+    const { approachHeader, currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText } = this.state;
 
-    if (currentDetails === 'The Cayor Approach') {
+    if (currentDetails === 'the cayor approach') {
       return <TextTableContainer
         fadeIn={fadeIn}
+        mainHeader={approachHeader}
         currentDetails={currentDetails}
         text={approachTableText} />
-    } else if (currentDetails === 'Investment Sectors') {
+    } else if (currentDetails === 'investment sectors') {
       return <TextTableContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ sectorsTableText } />
-    } else if (currentDetails === 'Target Regions & Countries') {
+    } else if (currentDetails === 'target regions & countries') {
       return <RegionDetails
         fadeIn={fadeIn}
         text={ regionsTableText } />
@@ -372,27 +436,24 @@ class Approach extends Component {
   }
 
   render() {
-    const { navItems, approachHeader, currentDetails} = this.state;
+    const { navItems, currentDetails} = this.state;
 
     return (
       <div className="approach">
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick}
+          handleClick={this.props.handleClockClick}
           headerImg='approach' />
-        <SubNav
-          navItems={navItems}
-          match={this.props.match}
-          currentDetails={currentDetails}
-          handleClick={this.handleClick} />
-
-        { currentDetails === 'The Cayor Approach' ?
-          <h3 className='header left'>{approachHeader}</h3>
-          : null
-        }
-        {this.renderTextDetails()}
-        <Footer />
+        <main className='body'>
+          <SubNav
+            navItems={navItems}
+            match={this.props.match}
+            currentDetails={currentDetails}
+            handleClick={this.handleClick} />
+          {this.renderTextDetails()}
+        </main>
+        <Footer location={this.props.location} />
       </div>
     );
   }

@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import './App.css';
 import Routes from './routes';
 import ContactForm from './contact/contact_form.react';
-// import ContactJoburg from './contact/ContactJoburg.react';
 import Accra from './media/Ghana_map.jpg';
 import Joburg from './media/SAfrica_map.jpg';
 
@@ -30,7 +29,7 @@ class App extends Component {
 
   handleClick = (e) => {
     console.log('click contact', e);
-    debugger
+    // debugger
     this.setState({
       isContactModalOpen: true,
       contactLocation: e.target.innerText.toLocaleLowerCase()
@@ -40,9 +39,9 @@ class App extends Component {
   handleContactModal = () => {
     console.log('handleContactModal display');
     const { contactLocation } = this.state;
-
+    debugger
     if (contactLocation === 'accra') {
-      return <ContactForm contactDetails={this.state.accrontactDetails} />
+      return <ContactForm contactDetails={this.state.accraContactDetails} />
     } else {
       return <ContactForm contactDetails={this.state.joburgContactDetails} />
     }
@@ -53,13 +52,13 @@ class App extends Component {
   }
 
 
-  togglePageTransition = () => {
-    console.log(' handle home page transition');
-    this.setState({
-      slideToLeft: !this.state.slideToLeft
-
-    })
-  }
+  // togglePageTransition = () => {
+  //   console.log(' handle home page transition');
+  //   this.setState({
+  //     slideToLeft: !this.state.slideToLeft
+  //
+  //   })
+  // }
 
   render() {
     return (
@@ -68,9 +67,9 @@ class App extends Component {
           this.handleContactModal()
         }
         <Routes
+          className='routes'
           transitionKey={this.props.match.path}
           handleClick={this.handleClick}
-          handlePageTransition={this.handlePageTransition}
           location={this.props.location}
           match={this.props.match}
           history={this.props.history} />

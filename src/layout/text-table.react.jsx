@@ -5,10 +5,17 @@ import './text-table.css';
 
 const TextTable = (props) => (
   <Fade in={props.fadeIn} className="text-table">
-    <h4>{props.text.header}</h4>
+    { props.text.image ? <img src={props.text.image} alt={props.text.header}/> : null }
+    <h4>{props.text.header.toUpperCase()}</h4>
     <ul>
       {props.text.details.map(detail => {
-        return <li key={detail.dKey}>{detail.text}</li>
+        return (
+          <li
+            key={detail.dKey}
+            className={detail.style}>
+            {detail.style === 'subHeader' ? detail.text.toUpperCase() : detail.text}
+          </li>
+        )
       })}
     </ul>
   </Fade>

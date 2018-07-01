@@ -1,13 +1,17 @@
 import React from 'react';
 import TextTable from '../layout/text-table.react';
+import './region-details.css';
 
 const RegionDetails = (props) => (
   <div className="regionDetails">
   {props.text.map(region => {
     return (
-      <TextTable
-        key={region}
-        text={region} />
+      <div className={region.className}>
+        <TextTable
+          key={region}
+          text={region}
+        />
+      </div>
     )
   })}
   </div>

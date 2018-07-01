@@ -6,10 +6,9 @@
     text-align: center;
     height: 100vh;
     color: $primaryText;
-    font-family: 'Roboto', sans-serif;
-    // .body {
-    // }
-  }
-  @include respond-to(phone) {
-
+    font-family: $copy-font-family;
+    font-weight: 300;
+    .routes {
+      min-height: 100vh;
+    }
   }
