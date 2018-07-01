@@ -17,132 +17,158 @@ class Approach extends Component {
   state = {
     navItems: [
       {value: 'The Cayor Approach', key: 'approach', style: 'top'},
+      {value: 'Clear Investment Philosophy', key: 'strategy', style: 'sub'},
       {value: 'The Middle Market', key: 'middle', style: 'sub'},
       {value: 'Structured Deal Origination', key: 'structuredDeals', style: 'sub'},
-      {value: 'Strategy', key: 'strategy', style: 'sub'},
-      {value: 'Drive Returns from Both Deal and Portfolio Management', key: 'returns', style: 'sub'},
+      {value: 'Deal & Portfolio Mgmt', key: 'returns', style: 'sub'},
       {value: 'Investment Sectors', key: 'sectors', style: 'top'},
       {value: 'Investment Criteria', key: 'criteria', style: 'top'},
       {value: 'Target Regions & Countries', key: 'regions', style: 'top'}
     ],
-    currentDetails: 'the middle market',
-    approachTableText: [{
-        header: 'We believe the middle market is attractive for a number of reasons:',
-        details: [{
-          dKey: 'a00',
-          text: 'reduced competition',
-          style: 'subHeader'
-        },
-        {
-          dKey: 'a01',
-          text: 'In our experience to date, there is less competition for middle market assets, resulting in more attractive asset pricing and superior returns for investors.',
-          style: 'text'
-        },
-        {
-          dKey: 'a02',
-          text: 'Superior Transaction Flow',
-          style: 'subHeader'
-        },
-        {
-          dKey: 'a03',
-          text: 'We continue to generate attractive transaction flow arising from demand for expansion capital. We target transactions ranging from $20 to $40 million in size because we believe that transactions in this range allow for proprietary transaction flow with lower entry valuations, better corporate governance terms, and greater scope for us to add value and drive growth and returns.',
-          style: 'text'
-        },
-        {
-          dKey: 'a04',
-          text: 'The Cayor Advantage',
-          style: 'subHeader'
-        },
-        {
-          dKey: 'a05',
-          text: 'Our team’s cumulative experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.',
-          style: 'text'
-        }]
-      },
+    currentDetails: 'clear investment philosophy',
+    cayorApproachTableText: [
       {
-        header: 'We believe superior origination is a competitive advantage that we maintain through a combination of:',
+        header: 'Structured Approach to Deal Origination',
         details: [
           {
-            dKey:'a01',
+            dKey: 'a01',
+            text: 'We believe superior origination is a competitive advantage that we maintain through a combination of:',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'a02'
             text: 'Continually mapping market sectors and engaging associated professional networks.',
             style: 'text'
           },
           {
-            dKey:'s02',
+            dKey: 'a03',
             text: 'Adopting a geographic approach to sourcing investments that positions Cayor as a preferred capital partner and recognized brand, thus driving inbound enquiries.',
             style: 'text'
           }]
       },
       {
-        header: 'Cayor’s investment philosophy has clearly defined principles.',
+        header: 'We believe the middle market is attractive for a number of reasons:',
+        details: [
+          {
+          dKey: 'a00',
+          text: 'reduced competition',
+          style: 'subHeader'
+        },
+          {
+            dKey: 'a01',
+            text: 'In our experience to date, there is less competition for middle market assets, resulting in more attractive asset pricing and superior returns for investors.',
+            style: 'text'
+          },
+          {
+            dKey: 'a02',
+            text: 'Superior Transaction Flow',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'a03',
+            text: 'We continue to generate attractive transaction flow arising from demand for expansion capital. We target transactions ranging from $20 to $40 million in size because we believe that transactions in this range allow for proprietary transaction flow with lower entry valuations, better corporate governance terms, and greater scope for us to add value and drive growth and returns.',
+            style: 'text'
+          },
+          {
+            dKey: 'a04',
+            text: 'The Cayor Advantage',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'a05',
+            text: 'Our team’s cumulative experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.',
+            style: 'text'
+          }]
+      },
+      {
+        header: 'Execute a Strategy With A Clear Investment Philosophy',
+        template: 'other',
         details: [{
-          dKey: 0,
+          dKey: 's00',
+          text: 'Cayor’s investment philosophy has clearly defined principles. Whenever we consider an opportunity, we focus on investments that possess the following attributes:',
+          style: 'text'
+        },
+        {
+          dKey: 's01',
+          text: 'Investment Philosophy',
+          style: 'header'
+        }
+        {
+          dKey: 's02',
           text: 'Strong Management Team',
           style: 'text'
         },
         {
-          dKey: 1,
+          dKey: 's03',
           text: 'Clearly Identifiable Growth Prospects',
           style: 'text'
         },
         {
-          dKey: 2,
+          dKey: 's04',
           text: 'Cash Flow Generative',
           style: 'text'
         },
         {
-          dKey: 3,
+          dKey: 's05',
           text: 'Scope To Add Value',
           style: 'text'
         },
         {
-          dKey: 4,
-          text: 'lear Prospects For Exit',
+          dKey: 's06',
+          text: 'Clear Prospects For Exit',
           style: 'text'
         },
         {
-          dKey: 5,
-          text: 'ESG Excellence',
+          dKey: 's07',
+          text: 'Demonstrated ESG Excellence',
           style: 'text'
         }]
       },
       {
-        header: 'Generate Gross Super Returns:',
-        details: [{
-          dKey: 0,
-          text: 'Target reasonable entry valuations',
+        header: 'Drive Returns from Both Deal and Portfolio Management',
+        details: [
+          {
+            dKey: 'd00',
+            text: 'We drive returns for our investors in connection with specific transactions AND across the aggregate portfolio by:',
+            style: 'text'
+          }
+          {
+            dKey: 'd01',
+            text: 'Generate Gross Super Returns:',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'd02',
+            text: 'We target reasonable entry valuations',
+            style: 'text'
+          },
+          {
+            dKey: 'd03',
+            text: 'We significantly grow EBITDA by investing in sectors with enduring growth drivers, and in companies with clear, quantifiable and executable value addition plans',
+            style: 'text'
+          },
+          {
+            dKey: 'd04',
+            text: 'We invest in companies with cash-generative business models where we reward management for working capital and capex management and the pay down of debt',
+            style: 'text'
+          },
+          {
+            dKey: 'd05',
+            text: 'We drive exits throughout the deal cycle'
+          },
+          {
+            dKey: 'd06',
+            text: 'Delivering High Net Returns:',
+            style: 'subHeader'
+          },
+          {
+          dKey: 'd07',
+          text: 'We minimise gross-to-net returns for investors by, amongst other strategies, structuring cash yields from investments to reduce reliance on management fees',
           style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Significantly grow EBITDA',
-          style: 'text'
-        },
-        {
-          dKey: 2,
-          text: 'Generate cash',
-          style: 'text'
-        },
-        {
-          dKey: 3,
-          text: 'Drive exits throughout the deal cycle'
-        }]
-      },
-      {
-        header: 'Deliver High Net Returns:',
-        details: [{
-          dKey: 0,
-          text: 'Minimise gross-to-net returns for LPs',
-          style: 'text'
-        },
-        {
-          dKey: 1,
-          text: 'Dynamically construct',
-          style: 'text'
-        },
-        {
-          dKey: 2,
-          text: 'Manage a diversified portfolio',
+          dKey: 'd08',
+          text: 'We dynamically construct our investment portfolio by investing across sectors with differentiated risk return profiles and striking a balance between low and higher risk/return opportunities',
           style: 'text'
         }]
       }],
@@ -152,32 +178,32 @@ class Approach extends Component {
         image: Agribusiness,
         template: 'bullet',
         details: [{
-          dKey: 0,
+          dKey: 'f00',
           text: 'Consumer Finance',
           style: 'text'
         },
         {
-          dKey: 1,
+          dKey: 'f01',
           text: 'Insurance',
           style: 'text'
         },
         {
-          dKey: 2,
+          dKey: 'f02',
           text: 'Banking',
           style: 'text'
         },
         {
-          dKey: 3,
+          dKey: 'f03',
           text: 'Fintech',
           style: 'text'
         },
         {
-          dKey: 4,
+          dKey: 'f04',
           text: 'Payments',
           style: 'text'
         },
         {
-          dKey: 5,
+          dKey: 'f05',
           text: 'Financial Infrastructure',
           style: 'text'
         }]
@@ -187,32 +213,32 @@ class Approach extends Component {
         template: 'bullet',
         image: MiddleClass,
         details: [{
-          dKey: 0,
+          dKey: 'i00',
           text: 'Materials (E.g.: Steel & Cement)',
           style: 'text'
         },
         {
-          dKey: 1,
+          dKey: 'i01',
           text: 'Equipment Rentals',
           style: 'text'
         },
         {
-          dKey: 2,
+          dKey: 'i02',
           text: 'Logistics',
           style: 'text'
         },
         {
-          dKey: 3,
+          dKey: 'i03',
           text: 'Facilities Management',
           style: 'text'
         },
         {
-          dKey: 4,
+          dKey: 'i04',
           text: 'Engineering Services',
           style: 'text'
         },
         {
-          dKey: 5,
+          dKey: 'i05',
           text: 'Repairs & Maintenance',
           style: 'text'
         }]
@@ -222,22 +248,22 @@ class Approach extends Component {
         image: FashionStore,
         template: 'bullet',
         details: [{
-          dKey: 0,
+          dKey: 'c00',
           text: 'Retail',
           style: 'text'
         },
         {
-          dKey: 1,
+          dKey: 'c01',
           text: 'Food & Beverage',
           style: 'text'
         },
         {
-          dKey: 2,
+          dKey: 'c02',
           text: 'FMCG',
           style: 'text'
         },
         {
-          dKey: 3,
+          dKey: 'c03',
           text: 'Services',
           style: 'text'
         }]
@@ -247,28 +273,28 @@ class Approach extends Component {
         image: Agribusiness,
         template: 'bullet',
         details: [{ // eslint-disable-line
-          dKey: 0,
+          dKey: 'a00',
           text: "Inputs (E.g.: Seeds, Fertilizer & Crop Protection)",
           style: 'text'
         },
         {
-          dKey: 1,
+          dKey: 'a01',
           text: 'Equipment',
           style: 'text'
         },
         ,
         {
-          dKey: 2,
+          dKey: 'a02',
           text: 'Storage',
           style: 'text'
         },
         {
-          dKey: 3,
+          dKey: 'a03',
           text: 'Agri-processing',
           style: 'text'
         },
         {
-          dKey: 4,
+          dKey: 'a04',
           text: 'Logistics',
           style: 'text'
         }]
@@ -326,17 +352,17 @@ class Approach extends Component {
           style: 'text'
         }]
       }],
-    criteriaTableText: [
+    investmentCriteriaTableText: [
       {
-        header: 'Deal Type Investment Criteria:',
+        header: 'Deal Type Criteria:',
         details: [{
           dKey: 'c00',
-          text: 'We take significant minority stake in companies with board representation and a robust set of minority protection rights, which will enable us to drive value and influence key decisions.',
+          text: 'We pursue control opportunities as well as take significant minority stakes in companies where we have board representation and a robust set of minority protection rights, which often yield effective control and enable us to drive value and key decisions.',
           style: 'text'
         },
         {
           dKey: 'c01',
-          text: 'Growth Capital',
+          text: 'Growth Capital:',
           style: 'subHeader'
         },
         {
@@ -346,7 +372,7 @@ class Approach extends Component {
         },
         {
           dKey: 'c03',
-          text: 'Acquisition',
+          text: 'Acquisition:',
           style: 'subHeader'
         },
         {
@@ -356,7 +382,7 @@ class Approach extends Component {
         },
         {
           dKey: 'c05',
-          text: 'Management Buy Outs (MBO)',
+          text: 'Management Buy Outs (MBO):',
           style: 'subHeader'
         },
         {
@@ -366,7 +392,7 @@ class Approach extends Component {
         },
         {
           dKey: 'c07',
-          text: 'Replacement',
+          text: 'Replacement:',
           style: 'subHeader'
         },
         {
@@ -376,7 +402,7 @@ class Approach extends Component {
         },
         {
           dKey: 'c09',
-          text: 'Other',
+          text: 'Other:',
           style: 'subHeader'
         },
         {
@@ -386,58 +412,65 @@ class Approach extends Component {
         }]
       },
       {
-        header: 'Size',
-        template: 'bullet',
-
-        details: [{
+        header: 'Target Company Criteria',
+        template: 'other',
+        // images: [],
+        details: [
+        {
           dKey: 's00',
-          text: 'Leading market position and strong business fundamentals',
+          text: 'We typically invest US$20 - 40 million in businesses with a clear scope for value addition on the basis of a conservative valuation.',
           style: 'text'
         },
         {
           dKey: 's01',
-          style: 'text',
-          text: 'EBITDA'
+          text: 'Size',
+          style: 'header'
         },
         {
           dKey: 's02',
-          text: 'US$5 million',
+          text: 'Leading market position and strong business fundamentals',
           style: 'text'
-        }]
-      },
-      {
-        header: 'Performance',
-        image: ConsumerMarket,
-        details: [{
+        },
+        {
+          dKey: 's03',
+          style: 'text',
+          text: 'EBITDA > US$5 million'
+        },
+        {
           dKey: 'p00',
+          text: 'Performance',
+          style: 'header'
+        },
+        {
+          dKey: 'p01',
           text: 'Sub-Saharan Africa based businesses with strong growth potential',
           style: 'text'
         },
         {
-          dKey: 'p01',
+          dKey: 'p02',
           text: 'Profitable and cash flow positive businesses with favourable working capital dynamics',
           style: 'text'
-        }]
-      },
-      {
-        header: 'Management',
-        details: [{
+        },
+        {
           dKey: 'm00',
+          text: 'Management',
+          style: 'header',
+        },
+        {
+          dKey: 'm01',
           text: 'Innovative and experienced management team with proven operational and financial track record',
           style: 'text'
         },
         {
-          dKey: 'm01',
+          dKey: 'm02',
           text: 'Strong commitment to good governance and ethics',
           style: 'text'
         },
         {
-          dKey: 'm02',
+          dKey: 'm03',
           text: 'Clear commitment to realise an exit over a period of 3 to 7 years',
           style: 'text'
-        }]
-      }
-    ],
+        }],
     fadeIn: true
   }
 
@@ -450,14 +483,14 @@ class Approach extends Component {
   }
 // refactor this ish
   renderTextDetails() {
-    const { approachHeader, currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText } = this.state;
+    const { approachHeader, currentDetails, fadeIn, investmentCriteriaTableText, sectorsTableText, regionsTableText, cayorApproachTableText } = this.state;
 
     if (currentDetails === 'the cayor approach') {
       return <TextTableContainer
         fadeIn={fadeIn}
         mainHeader={approachHeader}
         currentDetails={currentDetails}
-        text={approachTableText} />
+        text={cayorApproachTableText} />
     } else if (currentDetails === 'investment sectors') {
       // debugger;
       return <SectorsContainer
@@ -472,34 +505,34 @@ class Approach extends Component {
       return <TextTableContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
-        text={ criteriaTableText } />
+        text={ investmentCriteriaTableText } />
     } else if (currentDetails.includes('the middle')) {
       return  <TextTableContainer
         fadeIn={fadeIn}
       mainHeader={approachHeader}
       currentDetails={currentDetails}
-      text={approachTableText}
+      text={cayorApproachTableText}
       newIndex={0} />
     } else if (currentDetails.includes('structured deal')) {
       return  <TextTableContainer
         fadeIn={fadeIn}
       mainHeader={approachHeader}
       currentDetails={currentDetails}
-      text={approachTableText}
+      text={cayorApproachTableText}
       newIndex={1} />
     } else if (currentDetails.includes('strategy')) {
       return  <TextTableContainer
         fadeIn={fadeIn}
       mainHeader={approachHeader}
       currentDetails={currentDetails}
-      text={approachTableText}
+      text={cayorApproachTableText}
       newIndex={2} />
     } else if (currentDetails.includes('drive')) {
       return  <TextTableContainer
         fadeIn={fadeIn}
       mainHeader={approachHeader}
       currentDetails={currentDetails}
-      text={approachTableText}
+      text={cayorApproachTableText}
       newIndex={3} />
     }
   }
