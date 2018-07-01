@@ -18,7 +18,7 @@ class Approach extends Component {
     navItems: [
       {value: 'The Cayor Approach', key: 'approach', style: 'top'},
       {value: 'Clear Investment Philosophy', key: 'strategy', style: 'sub'},
-      {value: 'The Middle Market', key: 'middle', style: 'sub'},
+      {value: 'Middle Market Focus', key: 'middle', style: 'sub'},
       {value: 'Structured Deal Origination', key: 'structuredDeals', style: 'sub'},
       {value: 'Deal & Portfolio Mgmt', key: 'returns', style: 'sub'},
       {value: 'Investment Sectors', key: 'sectors', style: 'top'},
@@ -36,7 +36,7 @@ class Approach extends Component {
             style: 'subHeader'
           },
           {
-            dKey: 'a02'
+            dKey: 'a02',
             text: 'Continually mapping market sectors and engaging associated professional networks.',
             style: 'text'
           },
@@ -92,7 +92,7 @@ class Approach extends Component {
           dKey: 's01',
           text: 'Investment Philosophy',
           style: 'header'
-        }
+        },
         {
           dKey: 's02',
           text: 'Strong Management Team',
@@ -131,7 +131,7 @@ class Approach extends Component {
             dKey: 'd00',
             text: 'We drive returns for our investors in connection with specific transactions AND across the aggregate portfolio by:',
             style: 'text'
-          }
+          },
           {
             dKey: 'd01',
             text: 'Generate Gross Super Returns:',
@@ -470,7 +470,9 @@ class Approach extends Component {
           dKey: 'm03',
           text: 'Clear commitment to realise an exit over a period of 3 to 7 years',
           style: 'text'
-        }],
+        }]
+      }
+    ],
     fadeIn: true
   }
 

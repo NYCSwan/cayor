@@ -11,61 +11,74 @@ class Esg extends Component {
   state = {
     currentDetails: 'philosophy',
     navItems: [
-      {value: 'Philosophy', key: 'philosophy', style: 'top'},
-      {value: 'Strategy', key: 'strategy', style: 'top'},
-      {value: 'Framework', key: 'framework', style: 'top'}
+      {value: 'ESG Philosophy', key: 'philosophy', style: 'top'},
+      {value: 'ESG Strategy', key: 'strategy', style: 'top'},
+      {value: 'ESG Framework', key: 'framework', style: 'top'}
     ],
-    philosophyText: ['Cayor considers our approach to responsible investing to be both risk and return focused.','ESG is a key consideration in Cayor’s investment decision-making and ownership practices. We believe researching, assessing and managing factors related to ESG enhances our ability to meet the long-term investment objectives of our fund. At Cayor, ESG considerations are not contradictory to achieving our commercial objectives.','Instead, Cayor uses ESG management to identify opportunities to enhance the internal efficiencies and market opportunities of our portfolio companies; while reducing the risks associated with our investment process. We are driven by the principle that active ownership adds sustained value at exit, and contributes to the advancement of sustainable development within Africa.'],
-    strategyText: ['We have developed a strategy to achieve balance between environmental and social impact and generating commercial returns; underpinned by our ESG philosophy.','From the start, the team will apply our ESG strategy to the Fund’s portfolio companies and their operational activities.','Post-investment, Cayor will closely monitor progress on ESG matters and compliance by portfolio companies relative to our ESG Framework and Policy Guidelines.'],
+    philosophyText: [
+      {
+        dKey: 'p00',
+        text: 'We consider our approach to responsible investing to be both risk and return focused.',
+        style: 'subHeader'
+    },
+    {
+      dKey: 'p01',
+      text: 'ESG factors inform our investment decision-making and ownership practices. We believe researching, assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives for our fund. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.',
+      style: 'text'
+    },
+    {
+      dKey: 'p02',
+      text: 'Rather, we seek to identify opportunities for enhancing the internal efficiencies and market opportunities of our portfolio companies through ESG management, while reducing the risks associated with our investment process. This approach is premised on the tenet that active ownership can add sustained value at exit and to the advancement of sustainable development within Africa.',
+      style: 'text'
+    }],
     frameworkTableText: [
       {
         header: 'Our Framework and Policy Guidelines support the following objectives:',
         template: 'bullet',
         image: Business,
         details: [{
-          dKey: 0,
-          text: 'Adhere to the UNPRI, and the IFC performance standards;',
+          dKey: 'f00',
+          text: 'To adhere to the UNPRI, and the IFC performance standards;',
           style: 'text'
         },
         {
-          dKey: 7,
-          text: 'Integrate ESG into Cayor’s investment management framework through its ESG management system;',
+          dKey: 'f07',
+          text: 'To integrate ESG into our investment management framework through our ESG management system;',
           style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;',
+          dKey: 'f01',
+          text: 'To partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;',
           style: 'text'
         },
         {
-          dKey: 2,
-          text: 'Conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications;',
+          dKey: 'f02',
+          text: 'To conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications, as required;',
           style: 'text'
         },
         {
-          dKey: 3,
-          text: 'Fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
+          dKey: 'f03',
+          text: 'To fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
           style: 'text'
         },
         {
-          dKey: 4,
-          text: 'Communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to compliance;',
+          dKey: 'f04',
+          text: 'To communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to conformance with our policy;',
           style: 'text'
         },
         {
-          dKey: 5,
-          text: 'Implement reasonable precautions to protect the health and safety of Portfolio Company employees and any external parties, such as affected communities;',
+          dKey: 'f05',
+          text: 'To implement reasonable precautions to protect the health and safety of portfolio company employees and any external parties such as affected communities; and',
           style: 'text'
         },
         {
-          dKey: 6,
-          text: 'Implement responsible practices to ensure that good governance will enhance the reputation of the Fund and the Cayor brand at all times',
+          dKey: 'f06',
+          text: 'To implement responsible practices to ensure that good governance will enhance the reputation of the Fund and Cayor brand at all times',
           style: 'text'
         }]
       }
     ],
     fadeIn: true
-
   }
 
     handleClick = (e) => {

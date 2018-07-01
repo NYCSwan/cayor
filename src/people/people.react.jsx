@@ -20,16 +20,46 @@ class People extends Component {
       {value: 'Team Bios', url: 'bios', style: 'top'}
     ],
     experiencedTextTable: [{
-      header: 'We have in excess of 30 years of Africa specific principal investment experience. As such, we are among the most experienced private equity investors active on the continent today.',
-      details: [{
-        'Our combined experience was developed at leading emerging market focused private equity firms including: Actis, Citi Venture Capital International (CVCI) and Phatisa. These institutions’ rigorous standards requiring technical and investment excellence has resulted in world class skills across the Cayor Team.', 'We have extensive deal-related skills including: sector specific investment experience, mergers and acquisitions, restructuring, and divestitures expertise, as well as experience dealing with co-investors, local regulators and other relevant stakeholders.', 'We possess the maturity, experience and soft skills that are imperative to successful deal making, including being sensitive to and intimately familiar with cultural and business norms in Africa'
-      ]},
+      header: 'Experienced',
+      details: [
+        {
+          dKey: 'e00',
+          style: 'subHeader',
+          text: 'We have in excess of 30 years of Africa specific principal investment experience. As such, we are among the most experienced private equity investors active on the continent today.'
+        },
+        {
+          dKey: 'e01',
+          text: 'Our combined experience was developed at leading emerging market focused private equity firms including: Actis, Citi Venture Capital International (CVCI) and Phatisa. These institutions’ rigorous standards requiring technical and investment excellence has resulted in world class skills across the Cayor Team.',
+          style: 'text'
+        },
+        {
+          dKey: 'e02',
+          text: 'We have extensive deal-related skills including: sector specific investment experience, mergers and acquisitions, restructuring, and divestitures expertise, as well as experience dealing with co-investors, local regulators and other relevant stakeholders.',
+          style: 'text'
+        },
+        {
+          dKey: 'e03',
+          text: 'We possess the maturity, experience and soft skills that are imperative to successful deal making, including being sensitive to and intimately familiar with cultural and business norms in Africa',
+          style: 'text'
+        }]
     }],
-    nativeText: [{
-      header: 'Our team currently consists of four African nationals: a Nigerian, Zimbabwean, Cameroonian and Ghanaian.',
+    nativeTextTable: [
+      {
+      header: 'Native',
       details: [{
-        'We’ve grown up, been educated in, and worked on the continent, and as a result have developed deep and broad relationship networks with business owners, regulators, intermediaries, advisors and co-investment partners.', 'Our wide network includes peers who are key decision makers in corporations and high-level government officials (central bankers, ministers, exchange regulators, etc).'
-
+        dKey: 'n00',
+        text: 'Our team currently consists of four African nationals: a Nigerian, Zimbabwean, Cameroonian and Ghanaian.',
+        style: 'subHeader'
+      },
+      {
+        dKey: 'n01',
+        text: 'We’ve grown up, been educated in, and worked on the continent, and as a result have developed deep and broad relationship networks with business owners, regulators, intermediaries, advisors and co-investment partners.',
+        style: 'text'
+      },
+      {
+        dKey: 'n02',
+        text: 'Our wide network includes peers who are key decision makers in corporations and high-level government officials (central bankers, ministers, exchange regulators, etc.).',
+        style: 'text'
       }]
     }],
     teamDetails: [{
@@ -68,7 +98,6 @@ class People extends Component {
 
     }],
     fadeIn: true,
-
   }
 
   handleClick = (e) => {
@@ -79,11 +108,11 @@ class People extends Component {
   }
 
   renderDetails() {
-    const {currentDetails, fadeIn, teamDetails, experiencedText, nativeText, focusedText, teamText} = this.state;
+    const {currentDetails, fadeIn, teamDetails, experiencedText, nativeTextTable, focusedText, teamText} = this.state;
     if (currentDetails === 'focused') {
       return <PageDetails fadeIn={fadeIn} pageDetails={focusedText} />
     } else if (currentDetails === 'native') {
-      return <PageDetails fadeIn={fadeIn} pageDetails={nativeText} />
+      return <PageDetails fadeIn={fadeIn} pageDetails={nativeTextTable} />
     } else if (currentDetails === 'experienced') {
       return <PageDetails fadeIn={fadeIn}  pageDetails={experiencedText} />
     } else {

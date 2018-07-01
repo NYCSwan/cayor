@@ -16,87 +16,112 @@ class Opportunities extends Component {
     currentDetails: 'why cayor',
     navItems: [
       {value: 'Why Cayor', url: 'cayor', style: 'top'},
-      {value: 'Africa Opportunity', url: 'africa', style: 'top'},
+      {value: 'Experienced Africa Private Equity Investors', url: 'experienced_investors', style: 'sub'},
+      {value: 'Extensive Africa Network', url: 'african_network', style: 'sub'},
+      {value: 'Entrepreneurial', url: 'entrepreneurial', style: 'sub'},
+      {value: 'Why Africa', url: 'africa', style: 'top'},
+
     ],
-    africaText: ['We believe that the consumer goods & services, infrastructure, financial services and agriculture sectors will be engines of growth across the continent, providing the most attractive investment opportunities and potential for sustainable value creation.','The Africa private equity landscape is shifting: existing GPs are moving up in fund size and pursuing larger transactions in excess of $50 million. Conversely, regional or country specific funds, due to their smaller sizes, are typically investing less than $20 million per transaction.'],
     africaTableText: [
       {
         header: 'Our thesis is that demographic and structural shifts will drive economic growth in Africa, including:',
-        template: 'bullet',
-        image: Demographics,
-        details: [{
-          dKey: 0,
-          text: "Growth in consumer demand;",
-          style: 'text'
-        },
-        {
-          dKey: 1,
-          text: 'Closing the infrastructure deficit gap;',
-          style: 'text'
-        },
-        {
-          dKey: 2,
-          text: 'Increased financial inclusion;',
-          style: 'text'
-        },
-        {
-          dKey: 3,
-          text: 'And expansion of agricultural output',
-          style: 'text'
-        }]
+        template: 'other',
+        // image: Demographics,
+        details: [
+          {
+            dKey: 'w00',
+            text: 'We believe that the consumer goods & services, infrastructure, financial services and agriculture sectors will be engines of growth across the continent, providing the most attractive investment opportunities and potential for sustainable value creation.',
+            style: 'text'
+          },
+          {
+            dKey: 'w01',
+            text: 'Our thesis is that demographic and structural shifts will drive economic growth in Africa, including:',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'w0',
+            text: "Growth in consumer demand;",
+            style: 'text'
+          },
+          {
+            dKey: 'w0',
+            text: 'Closing the infrastructure deficit gap;',
+            style: 'text'
+          },
+          {
+            dKey: 'w0',
+            text: 'Increased financial inclusion;',
+            style: 'text'
+          },
+          {
+            dKey: 'w0',
+            text: 'And expansion of agricultural output',
+            style: 'text'
+          }
+        ]
     }],
-    whyTableText: [
+    whyCayorTableText: [
       {
         header: 'Experienced Africa Private Equity Investors:',
         details: [{
-          dKey: 0,
-          text: '30 years of experience in and across Africa',
+          dKey: 'i00',
+          text: 'We are Seasoned private equity investors with investment experience gained in Africa over a combined 30 years',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'i01',
+          text: 'In prior roles, we evaluated in excess of 300 investment opportunities and invested in 11 companies, and as a result acquired invaluable investment knowledge related to what pitfalls to avoid and how to increase, and monetize, shareholder value',
           style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Together Cayor has evaluated in excess of 300 investment opportunities and invested in 11 companies',
+          dKey: 'i02',
+          text: 'We are well-grounded in private equity having risen to partnership/senior management in internationally recognized and established principal investment firms',
           style: 'text'
         },
         {
-          dKey: 2,
-          text: 'Our team has acquired unique investment knowledge related to increasing and monetizing shareholder value; while avoiding market and region specific pitfalls',
+          dKey: 'i03',
+          text: 'We leverage tactical and strategic investment approaches in deal execution to achieve superior returns for our investors',
+          style: 'text'
+        },
+        {
+          dKey: 'i04',
+          text: 'We have an established track record of leading successful and difficult investments with invaluable lessons learnt and have invested different vintage funds through up and down cycles.  We are as a result experienced in navigating exogenous factors',
           style: 'text'
         }]
       },
       {
         header: 'Extensive Africa Network:',
         details: [{
-          dKey: 0,
-          text: 'We are native Africans in our 30s and 40s, and our peers are decision makers across Africa in government and in boardrooms',
+          dKey: 'n00',
+          text: 'We are native Africans with peers who are now key decision makers across Africa in government and in boardrooms',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'n01',
+          text: 'We have a track record of successfully collaborating with industry experts, managers and advisors to improve financial performance of portfolio companies',
           style: 'text'
         },
         {
-          dKey: 1,
-          text: 'We have a history of successfully collaborating with industry experts, managers and advisors to improve financial performance of portfolio companies',
-          style: 'text'
-        },
-        {
-          dKey: 2,
-          text: 'The Cayor team leverages our network to originate, evaluate and exit investments',
+          dKey: 'n02',
+          text: 'We continue to successfully leverage our extensive network to originate, evaluate, monitor and exit investments',
           style: 'text'
         }]
       },
       {
         header: 'Entrepreneurial:',
         details: [{
-          dKey: 0,
-          text: 'Cayor’s approach to generating value aligns with the needs of mid-market owners and managers focused on sustainable growth',
+          dKey: 'e00',
+          text: 'As a newly established and growing company, we can identify with mid-market owners and managers',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'e01',
+          text: 'Our flat and highly responsive decision-making structure (Investment Committee consists of the Partners who are hands on in transaction execution and are based in Africa) allows for a higher level of flexibility and responsiveness, crucial for complex and often challenging Africa transactions',
           style: 'text'
         },
         {
-          dKey: 1,
-          text: 'Cayor is structured to be flat and efficient, enhanced by highly responsive decision-making; with our Managing Partners engaging hands-on in transaction execution and based in Africa',
-          style: 'text'
-        },
-        {
-          dKey: 2,
-          text: 'We are well-versed in African cultural norms and aspirations affecting business, resulting in our ability to effectively build rapport with African business owners',
+          dKey: 'e02',
+          text: 'Our sensitivity to African cultural norms and owners’ aspirations, that affect business operations and outcomes, helps build rapport with African business owners',
           style: 'text'
         }]
       },
@@ -104,13 +129,13 @@ class Opportunities extends Component {
         header: 'Trusted Partnerships:',
         details: [
           {
-            dKey: 0,
-            text: 'Cayor can easily provide prospective partners with endorsements of the owners and managers from the companies across our previous portfolios.',
-            style: 'text'
+            dKey: 'p00',
+            text: 'We are easily referenced with owners and managers from previous portfolio companies',
+            style: 'subHeader'
           },
           {
-            dKey: 1,
-            text: 'The team is always willing to invest the necessary time upfront, to proactively develop a deep relationship with potential partners, even prior to investment',
+            dKey: 'p01',
+            text: 'We are willing to invest considerable time and resources to develop relationships with business owners prior to financial close, which is often a key consideration to successfully consummating, and most importantly, managing Africa investments',
             style: 'text'
           }
         ]
@@ -130,7 +155,7 @@ class Opportunities extends Component {
 
   renderDetails() {
     console.log('renderDetails');
-    const {currentDetails, africaTableText, whyTableText} = this.state;
+    const {currentDetails, africaTableText, whyCayorTableText} = this.state;
     if (currentDetails === 'africa opportunity') {
       return <TextTableContainer
         currentDetails={currentDetails}
@@ -138,12 +163,12 @@ class Opportunities extends Component {
     } else {
       return <TextTableContainer
         currentDetails={currentDetails}
-        text={ whyTableText }/>;
+        text={ whyCayorTableText }/>;
     }
   }
 
   render() {
-    const { currentDetails, navItems, africaText } = this.state;
+    const { currentDetails, navItems, africaTableText } = this.state;
 
     return (
       <div className="opportunity">
@@ -161,7 +186,7 @@ class Opportunities extends Component {
         { currentDetails === 'Africa Opportunity' ?
           <PageDetails
             fadeIn={this.state.fadeIn}
-            pageDetails={africaText} />
+            pageDetails={africaTableText} />
           : null
         }
         <Footer location={this.props.location} />
