@@ -4,6 +4,7 @@ import PageDetails from '../layout/pageDetails.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
+import Business from '../media/business.jpg'
 import './esg.css';
 
 class Esg extends Component {
@@ -19,6 +20,8 @@ class Esg extends Component {
     frameworkTableText: [
       {
         header: 'Our Framework and Policy Guidelines support the following objectives:',
+        template: 'bullet',
+        image: Business,
         details: [{
           dKey: 0,
           text: 'Adhere to the UNPRI, and the IFC performance standards;',
@@ -76,12 +79,12 @@ class Esg extends Component {
 
   // renderDetails() {
   //   const {currentDetails} = this.state;
-  //   if (currentDetails === 'Philosophy') {
-  //     return <EsgPhilosophyDetails pageDetails={this.state.philosophyText} />
-  //   } else if (currentDetails === 'Strategy') {
-  //     return <EsgStrategyDetails pageDetails={this.state.strategyText} />
-  //   } else if (currentDetails === 'Framework') {
-  //     return <EsgFrameworkDetails pageDetails={this.state.frameworkText} />
+  //   if (currentDetails === 'philosophy') {
+  //     return <PageDetails pageDetails={this.state.philosophyText} />
+  //   } else if (currentDetails === 'strategy') {
+  //     return <PageDetails pageDetails={this.state.strategyText} />
+  //   } else if (currentDetails === 'framework') {
+  //     return <PageDetails pageDetails={this.state.frameworkTableText} />
   //   }
   // }
 
@@ -102,16 +105,16 @@ class Esg extends Component {
               handleClick={this.handleClick}
               currentDetails={currentDetails}
               fadeIn={fadeIn} />
-              { currentDetails === 'Framework' ?
+              { currentDetails === 'framework' ?
                 <TextTableContainer
                 currentDetails={currentDetails}
                 text={frameworkTableText}/>
                 : null
               }
-              {currentDetails !== 'Framework' &&
+              {currentDetails !== 'framework' &&
                 <PageDetails
                   fadeIn={fadeIn}
-                  pageDetails={currentDetails === 'Philosophy' ? philosophyText : strategyText} />
+                  pageDetails={currentDetails === 'philosophy' ? philosophyText : strategyText} />
               }
           </main>
         <Footer location={this.props.location} />

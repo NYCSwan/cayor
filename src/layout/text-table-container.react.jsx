@@ -14,6 +14,17 @@ class TextTableContainer extends Component {
       // debugger;
     }
   }
+  componentWillReceiveProps({ newIndex }) {
+    console.log('componentWillReceiveProps text table');
+    if (newIndex !== this.props.newIndex) {
+      this.handleNavClick();
+    }
+  }
+  // componentWillUpdate({newProps}) {
+  //   if(this.newProps.newIndex !== this.props.newIndex) {
+  //     this.handleNavClick(newProps.newIndex);
+  //   }
+  // }
 
   handleButtonClick = (e) => {
     const {currentDetailIdx} = this.state;
@@ -32,6 +43,11 @@ class TextTableContainer extends Component {
         currentDetailIdx: maxIndex
       })
     }
+  }
+
+  handleNavClick = (index) => {
+    const { newIndex } = this.props;
+    this.setState({ currentDetailIdx: newIndex });
   }
 
   render() {

@@ -65,6 +65,8 @@
     flex-flow: row wrap;
     width: 80%;
     justify-content: flex-end;
+    align-content: stretch;
+    align-items: stretch;
     color: $primaryText;
     &.homepage {
       color: $white;
@@ -82,7 +84,6 @@
       height: 100px;
 
       .linkContainer {
-        // width: 25%;
         height: auto;
         .link {
           list-style: none;
@@ -90,18 +91,20 @@
           color: inherit;
           order: 1;
           // margin-bottom: 50%;
-          padding-bottom: 51%;
+          padding-bottom: 39%;
+          // &:nth($list, $n);
           &.selected {
             font-size: 1.1em;
             font-weight: bold;
+            align-self: baseline;
             border-bottom: 2px solid $cayorRed;
-            // line-height: 300%;
-            padding-bottom: 45%;
+            line-height: 1;
+            padding-bottom: 38%;
 
           }
           &:hover {
             border-bottom: 2px solid $cayorRed;
-            padding-bottom: 51%;
+            // padding-bottom: 49%;
             text-decoration: none;
           }
         }

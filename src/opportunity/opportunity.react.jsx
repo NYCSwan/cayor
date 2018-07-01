@@ -13,7 +13,7 @@ import './opportunity.css';
 
 class Opportunities extends Component {
   state = {
-    currentDetails: 'africa opportunity',
+    currentDetails: 'why cayor',
     navItems: [
       {value: 'Why Cayor', url: 'cayor', style: 'top'},
       {value: 'Africa Opportunity', url: 'africa', style: 'top'},

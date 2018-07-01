@@ -6,6 +6,10 @@ import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
 import Agribusiness from '../media/world.png';
+import FashionStore from '../media/middle_class.jpg';
+import MiddleClass from '../media/canal.jpg';
+import ConsumerMarket from '../media/consumer-market.jpg';
+import SectorsContainer from './SectorDetails.react';
 import './approach.css';
 
 
@@ -21,7 +25,6 @@ class Approach extends Component {
       {value: 'Investment Criteria', key: 'criteria', style: 'top'},
       {value: 'Target Regions & Countries', key: 'regions', style: 'top'}
     ],
-    
     currentDetails: 'the middle market',
     approachTableText: [{
         header: 'We believe the middle market is attractive for a number of reasons:',
@@ -74,42 +77,51 @@ class Approach extends Component {
         header: 'Cayor’s investment philosophy has clearly defined principles.',
         details: [{
           dKey: 0,
-          text: 'Strong Management Team'
+          text: 'Strong Management Team',
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Clearly Identifiable Growth Prospects'
+          text: 'Clearly Identifiable Growth Prospects',
+          style: 'text'
         },
         {
           dKey: 2,
-          text: 'Cash Flow Generative'
+          text: 'Cash Flow Generative',
+          style: 'text'
         },
         {
           dKey: 3,
-          text: 'Scope To Add Value'
+          text: 'Scope To Add Value',
+          style: 'text'
         },
         {
           dKey: 4,
-          text: 'lear Prospects For Exit'
+          text: 'lear Prospects For Exit',
+          style: 'text'
         },
         {
           dKey: 5,
-          text: 'ESG Excellence'
+          text: 'ESG Excellence',
+          style: 'text'
         }]
       },
       {
         header: 'Generate Gross Super Returns:',
         details: [{
           dKey: 0,
-          text: 'Target reasonable entry valuations'
+          text: 'Target reasonable entry valuations',
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Significantly grow EBITDA'
+          text: 'Significantly grow EBITDA',
+          style: 'text'
         },
         {
           dKey: 2,
-          text: 'Generate cash'
+          text: 'Generate cash',
+          style: 'text'
         },
         {
           dKey: 3,
@@ -120,95 +132,120 @@ class Approach extends Component {
         header: 'Deliver High Net Returns:',
         details: [{
           dKey: 0,
-          text: 'Minimise gross-to-net returns for LPs'
+          text: 'Minimise gross-to-net returns for LPs',
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Dynamically construct'
+          text: 'Dynamically construct',
+          style: 'text'
         },
         {
           dKey: 2,
-          text: 'Manage a diversified portfolio'
+          text: 'Manage a diversified portfolio',
+          style: 'text'
         }]
       }],
     sectorsTableText: [
       {
         header: 'Financial Services',
         image: Agribusiness,
+        template: 'bullet',
         details: [{
           dKey: 0,
-          text: 'Consumer Finance'
+          text: 'Consumer Finance',
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Insurance'
+          text: 'Insurance',
+          style: 'text'
         },
         {
           dKey: 2,
-          text: 'Banking'
+          text: 'Banking',
+          style: 'text'
         },
         {
           dKey: 3,
-          text: 'Fintech'
+          text: 'Fintech',
+          style: 'text'
         },
         {
           dKey: 4,
-          text: 'Payments'
+          text: 'Payments',
+          style: 'text'
         },
         {
           dKey: 5,
-          text: 'Financial Infrastructure'
+          text: 'Financial Infrastructure',
+          style: 'text'
         }]
       },
       {
         header: 'Infrastructure Services',
+        template: 'bullet',
+        image: MiddleClass,
         details: [{
           dKey: 0,
-          text: 'Materials (E.g.: Steel & Cement)'
+          text: 'Materials (E.g.: Steel & Cement)',
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Equipment Rentals'
+          text: 'Equipment Rentals',
+          style: 'text'
         },
         {
           dKey: 2,
-          text: 'Logistics'
+          text: 'Logistics',
+          style: 'text'
         },
         {
           dKey: 3,
-          text: 'Facilities Management'
+          text: 'Facilities Management',
+          style: 'text'
         },
         {
           dKey: 4,
-          text: 'Engineering Services'
+          text: 'Engineering Services',
+          style: 'text'
         },
         {
           dKey: 5,
-          text: 'Repairs & Maintenance'
+          text: 'Repairs & Maintenance',
+          style: 'text'
         }]
       },
       {
         header: 'Consumer Goods & Services',
+        image: FashionStore,
+        template: 'bullet',
         details: [{
           dKey: 0,
-          text: 'Retail'
+          text: 'Retail',
+          style: 'text'
         },
         {
           dKey: 1,
-          text: 'Food & Beverage'
+          text: 'Food & Beverage',
+          style: 'text'
         },
         {
           dKey: 2,
-          text: 'FMCG'
+          text: 'FMCG',
+          style: 'text'
         },
         {
           dKey: 3,
-          text: 'Services'
+          text: 'Services',
+          style: 'text'
         }]
       },
       {
         header: 'Agribusiness',
         image: Agribusiness,
+        template: 'bullet',
         details: [{ // eslint-disable-line
           dKey: 0,
           text: "Inputs (E.g.: Seeds, Fertilizer & Crop Protection)",
@@ -350,6 +387,8 @@ class Approach extends Component {
       },
       {
         header: 'Size',
+        template: 'bullet',
+
         details: [{
           dKey: 's00',
           text: 'Leading market position and strong business fundamentals',
@@ -368,6 +407,7 @@ class Approach extends Component {
       },
       {
         header: 'Performance',
+        image: ConsumerMarket,
         details: [{
           dKey: 'p00',
           text: 'Sub-Saharan Africa based businesses with strong growth potential',
@@ -408,7 +448,7 @@ class Approach extends Component {
       fadeIn: true
     })
   }
-
+// refactor this ish
   renderTextDetails() {
     const { approachHeader, currentDetails, fadeIn, criteriaTableText, sectorsTableText, regionsTableText, approachTableText } = this.state;
 
@@ -419,19 +459,48 @@ class Approach extends Component {
         currentDetails={currentDetails}
         text={approachTableText} />
     } else if (currentDetails === 'investment sectors') {
-      return <TextTableContainer
+      // debugger;
+      return <SectorsContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ sectorsTableText } />
-    } else if (currentDetails === 'target regions & countries') {
+    } else if (currentDetails === 'investment criteria') {
       return <RegionDetails
         fadeIn={fadeIn}
         text={ regionsTableText } />
-    } else {
+    } else if (currentDetails.includes('target regions')) {
       return <TextTableContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ criteriaTableText } />
+    } else if (currentDetails.includes('the middle')) {
+      return  <TextTableContainer
+        fadeIn={fadeIn}
+      mainHeader={approachHeader}
+      currentDetails={currentDetails}
+      text={approachTableText}
+      newIndex={0} />
+    } else if (currentDetails.includes('structured deal')) {
+      return  <TextTableContainer
+        fadeIn={fadeIn}
+      mainHeader={approachHeader}
+      currentDetails={currentDetails}
+      text={approachTableText}
+      newIndex={1} />
+    } else if (currentDetails.includes('strategy')) {
+      return  <TextTableContainer
+        fadeIn={fadeIn}
+      mainHeader={approachHeader}
+      currentDetails={currentDetails}
+      text={approachTableText}
+      newIndex={2} />
+    } else if (currentDetails.includes('drive')) {
+      return  <TextTableContainer
+        fadeIn={fadeIn}
+      mainHeader={approachHeader}
+      currentDetails={currentDetails}
+      text={approachTableText}
+      newIndex={3} />
     }
   }
 
