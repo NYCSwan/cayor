@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import findKey from 'lodash/findKey';
 import pickBy from 'lodash/pickBy';
 import SubNav from '../sub_navigation/sub_navigation.react';
-// import FocusedDetails from './FocusedDetails.react';
-// import NativeDetails from './NativeDetails.react';
 import PageDetails from '../layout/pageDetails.react';
 import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
@@ -113,8 +111,7 @@ class People extends Component {
       const { navItems } = this.state;
       const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
       const index = Number(findKey(currentNavItem));
-      debugger;
-      // const newIndex = navItems.indexOf({value: e.target.innerText)
+      // debugger;
       this.setState({
         currentDetails: e.target.innerText.toLowerCase(),
         fadeIn: true,
@@ -124,7 +121,6 @@ class People extends Component {
 
     handleButtonClick = (e) => {
       const { currentDetailIdx, navItems } = this.state;
-      // const {text} = this.props;
       const maxIndex = navItems.length-1;
 
       if (e.target.value === "Next" && currentDetailIdx !== maxIndex){
@@ -145,7 +141,6 @@ class People extends Component {
   renderDetails() {
     const { currentDetails, fadeIn, teamDetails, experiencedTextTable, nativeTextTable, focusedText, teamText, currentDetailIdx } = this.state;
     if (currentDetails === 'native') {
-      // debugger
       return (
         <TextTableContainer
           fadeIn={fadeIn}

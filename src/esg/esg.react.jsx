@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import findKey from 'lodash/findKey';
+import pickBy from 'lodash/pickBy';
+
 import TextTableContainer from '../layout/text-table-container.react';
-import PageDetails from '../layout/pageDetails.react';
+// import PageDetails from '../layout/pageDetails.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
@@ -9,28 +12,50 @@ import './esg.css';
 
 class Esg extends Component {
   state = {
-    currentDetails: 'philosophy',
+    currentDetails: 'esg philosophy',
     navItems: [
       {value: 'ESG Philosophy', key: 'philosophy', style: 'top'},
       {value: 'ESG Strategy', key: 'strategy', style: 'top'},
       {value: 'ESG Framework', key: 'framework', style: 'top'}
     ],
-    philosophyText: [
+    philosophyTextTable: [
       {
-        dKey: 'p00',
-        text: 'We consider our approach to responsible investing to be both risk and return focused.',
-        style: 'subHeader'
-    },
-    {
-      dKey: 'p01',
-      text: 'ESG factors inform our investment decision-making and ownership practices. We believe researching, assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives for our fund. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.',
-      style: 'text'
-    },
-    {
-      dKey: 'p02',
-      text: 'Rather, we seek to identify opportunities for enhancing the internal efficiencies and market opportunities of our portfolio companies through ESG management, while reducing the risks associated with our investment process. This approach is premised on the tenet that active ownership can add sustained value at exit and to the advancement of sustainable development within Africa.',
-      style: 'text'
-    }],
+        header: 'ESG Philosophy',
+        details: [
+        {
+          dKey: 'p00',
+          text: 'We consider our approach to responsible investing to be both risk and return focused.',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'p01',
+          text: 'ESG factors inform our investment decision-making and ownership practices. We believe researching, assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives for our fund. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.',
+          style: 'text'
+        },
+        {
+          dKey: 'p02',
+          text: 'Rather, we seek to identify opportunities for enhancing the internal efficiencies and market opportunities of our portfolio companies through ESG management, while reducing the risks associated with our investment process. This approach is premised on the tenet that active ownership can add sustained value at exit and to the advancement of sustainable development within Africa.',
+          style: 'text'
+        }]
+      }
+    ],
+    strategyTextTable: [
+      {
+        header: 'ESG Strategy',
+        details: [
+          {
+            dKey: 's00',
+            text: 'We have developed a strategy to achieve the requisite balance between environmental and social impact and generating commercial returns, all of which is underpinned by our ESG philosophy.',
+            style: 'subHeader'
+          },
+          {
+            dKey: 's01',
+            text: 'Starting at the initial stages of the investment process, we apply the principles described below to the Fund’s portfolio companies and their operational activities. Post-investment, we will closely monitor progress on ESG matters and compliance by portfolio companies relative to Cayor’s ESG framework and policy guidelines.',
+            style: 'text'
+          }
+        ]
+      }
+    ],
     frameworkTableText: [
       {
         header: 'Our Framework and Policy Guidelines support the following objectives:',
@@ -78,32 +103,71 @@ class Esg extends Component {
         }]
       }
     ],
-    fadeIn: true
+    fadeIn: true,
+    currentDetailIdx: 0
   }
 
-    handleClick = (e) => {
-      console.log('handle sub navigation click', e);
+  handleClick = (e) => {
+    console.log('handle sub navigation click esg');
+    const { navItems } = this.state;
+    const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
+    const index = Number(findKey(currentNavItem))-1;
+    // debugger;
+    // const newIndex = navItems.indexOf({value: e.target.innerText)
+    this.setState({
+      currentDetails: e.target.innerText.toLowerCase(),
+      fadeIn: true,
+      currentDetailIdx: index
+    })
+  }
 
-      this.setState({
-        fadeIn: true,
-        currentDetails: e.target.innerText.toLowerCase()
-      })
+
+  renderDetails() {
+    console.log('renderDetails');
+    const {currentDetails, currentDetailIdx, fadeIn, philosophyTextTable, strategyTextTable, frameworkTableText} = this.state;
+    if (currentDetails === 'esg philosophy') {
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={philosophyTextTable}
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      )
+    } else if (currentDetails === 'esg strategy'){
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={ strategyTextTable }
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      );
+    } else {
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={ frameworkTableText }
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      );
     }
-
-  // renderDetails() {
-  //   const {currentDetails} = this.state;
-  //   if (currentDetails === 'philosophy') {
-  //     return <PageDetails pageDetails={this.state.philosophyText} />
-  //   } else if (currentDetails === 'strategy') {
-  //     return <PageDetails pageDetails={this.state.strategyText} />
-  //   } else if (currentDetails === 'framework') {
-  //     return <PageDetails pageDetails={this.state.frameworkTableText} />
-  //   }
-  // }
+  }
 
   render() {
-    const { currentDetails, fadeIn, navItems, frameworkTableText, philosophyText, strategyText } = this.state;
-
+    const { currentDetails, fadeIn, navItems, frameworkTableText, philosophyTextTable, strategyTextTable } = this.state;
+    // { currentDetails === 'framework' ?
+    //   <TextTableContainer
+    //   currentDetails={currentDetails}
+    //   text={frameworkTableText}/>
+    //   : null
+    // }
+    // {/* currentDetails !== 'framework' &&
+    //   <PageDetails
+    //     fadeIn={fadeIn}
+    //     pageDetails={currentDetails === 'philosophy' ? philosophyTextTable : strategyText} />
+    // */}
     return (
       <div className="esg">
         <Navigation
@@ -118,17 +182,7 @@ class Esg extends Component {
               handleClick={this.handleClick}
               currentDetails={currentDetails}
               fadeIn={fadeIn} />
-              { currentDetails === 'framework' ?
-                <TextTableContainer
-                currentDetails={currentDetails}
-                text={frameworkTableText}/>
-                : null
-              }
-              {currentDetails !== 'framework' &&
-                <PageDetails
-                  fadeIn={fadeIn}
-                  pageDetails={currentDetails === 'philosophy' ? philosophyText : strategyText} />
-              }
+              { this.renderDetails() }
           </main>
         <Footer location={this.props.location} />
       </div>
