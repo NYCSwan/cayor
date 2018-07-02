@@ -13,12 +13,13 @@ import './opportunity.css';
 
 class Opportunities extends Component {
   state = {
-    currentDetails: 'why cayor',
+    currentDetails: 'experienced africa private equity investors',
     navItems: [
       {value: 'Why Cayor', url: 'cayor', style: 'top'},
       {value: 'Experienced Africa Private Equity Investors', url: 'experienced_investors', style: 'sub'},
       {value: 'Extensive Africa Network', url: 'african_network', style: 'sub'},
       {value: 'Entrepreneurial', url: 'entrepreneurial', style: 'sub'},
+      {value: 'Trusted Partnerships', url: 'partnerships', style: 'sub'},
       {value: 'Why Africa', url: 'africa', style: 'top'},
 
     ],
@@ -39,22 +40,22 @@ class Opportunities extends Component {
             style: 'subHeader'
           },
           {
-            dKey: 'w0',
+            dKey: 'w02',
             text: "Growth in consumer demand;",
             style: 'text'
           },
           {
-            dKey: 'w0',
+            dKey: 'w03',
             text: 'Closing the infrastructure deficit gap;',
             style: 'text'
           },
           {
-            dKey: 'w0',
+            dKey: 'w04',
             text: 'Increased financial inclusion;',
             style: 'text'
           },
           {
-            dKey: 'w0',
+            dKey: 'w05',
             text: 'And expansion of agricultural output',
             style: 'text'
           }
@@ -155,13 +156,15 @@ class Opportunities extends Component {
 
   renderDetails() {
     console.log('renderDetails');
-    const {currentDetails, africaTableText, whyCayorTableText} = this.state;
-    if (currentDetails === 'africa opportunity') {
+    const {currentDetails, fadeIn, africaTableText, whyCayorTableText} = this.state;
+    if (currentDetails === 'why africa') {
       return <TextTableContainer
+        fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={africaTableText}/>
     } else {
       return <TextTableContainer
+        fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ whyCayorTableText }/>;
     }
@@ -183,12 +186,12 @@ class Opportunities extends Component {
           handleClick={this.handleClick}
           currentDetails={currentDetails} />
         { this.renderDetails() }
-        { currentDetails === 'Africa Opportunity' ?
+        {/* currentDetails === 'why africa' ?
           <PageDetails
             fadeIn={this.state.fadeIn}
             pageDetails={africaTableText} />
           : null
-        }
+        */}
         <Footer location={this.props.location} />
       </div>
     );

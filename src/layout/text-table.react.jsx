@@ -5,6 +5,11 @@ import './text-table.css';
 
 const TextTable = (props) => (
   <Fade in={props.fadeIn} className={props.text.template ? `text-table ${props.text.template}` : 'text-table'}>
+    {/*
+      props.text.template === 'other' ?
+      <div>
+
+    */}
     <div className='headerContainer'>
       { props.text.image ?
         <img

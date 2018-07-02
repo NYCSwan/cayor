@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import findKey from 'lodash/findKey';
+import pickBy from 'lodash/pickBy';
+
 import SubNav from '../sub_navigation/sub_navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
 // import PageDetails from '../layout/pageDetails.react';
@@ -23,6 +26,8 @@ class Approach extends Component {
       {value: 'Deal & Portfolio Mgmt', key: 'returns', style: 'sub'},
       {value: 'Investment Sectors', key: 'sectors', style: 'top'},
       {value: 'Investment Criteria', key: 'criteria', style: 'top'},
+      {value: 'Deal Type Criteria', key: 'deals', style: 'sub'},
+      {value: 'Target Company Criteria', key: 'companies', style: 'sub'},
       {value: 'Target Regions & Countries', key: 'regions', style: 'top'}
     ],
     currentDetails: 'clear investment philosophy',
@@ -473,74 +478,60 @@ class Approach extends Component {
         }]
       }
     ],
-    fadeIn: true
+    fadeIn: true,
+    currentDetailIdx: 1
   }
 
   handleClick = (e) => {
     console.log('handle sub navigation click', e);
+    const { navItems } = this.state;
+    const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
+    const index = Number(findKey(currentNavItem));
+    // debugger;
+    // const newIndex = navItems.indexOf({value: e.target.innerText)
     this.setState({
       currentDetails: e.target.innerText.toLowerCase(),
-      fadeIn: true
+      fadeIn: true,
+      currentDetailIdx: index
     })
   }
+
+  selectCurrentNavItem = (value) => {
+
+  }
+
 // refactor this ish
   renderTextDetails() {
-    const { approachHeader, currentDetails, fadeIn, investmentCriteriaTableText, sectorsTableText, regionsTableText, cayorApproachTableText } = this.state;
+    const { currentDetails, currentDetailIdx, fadeIn, investmentCriteriaTableText, sectorsTableText, regionsTableText, cayorApproachTableText } = this.state;
 
-    if (currentDetails === 'the cayor approach') {
-      return <TextTableContainer
+    if (currentDetails === 'the cayor approach' || currentDetails === 'clear investment philosophy' || currentDetails === 'middle market focus' || currentDetails === 'structured deal origination' || currentDetails === 'deal & portfolio mgmt') {
+      // debugger
+      return (<TextTableContainer
         fadeIn={fadeIn}
-        mainHeader={approachHeader}
         currentDetails={currentDetails}
-        text={cayorApproachTableText} />
+        text={cayorApproachTableText}
+        currentDetailIdx={currentDetailIdx} />)
     } else if (currentDetails === 'investment sectors') {
       // debugger;
-      return <SectorsContainer
+      return (<SectorsContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
-        text={ sectorsTableText } />
-    } else if (currentDetails === 'investment criteria') {
-      return <RegionDetails
+        text={ sectorsTableText }
+        currentDetailIdx={currentDetailIdx} />)
+    } else if (currentDetails === 'investment criteria' || 'deal type criteria' || 'target company criteria') {
+      return (<TextTableContainer
         fadeIn={fadeIn}
-        text={ regionsTableText } />
+        currentDetails={currentDetails}
+        text={ investmentCriteriaTableText } />)
     } else if (currentDetails.includes('target regions')) {
-      return <TextTableContainer
+      return ( <RegionDetails
         fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={ investmentCriteriaTableText } />
-    } else if (currentDetails.includes('the middle')) {
-      return  <TextTableContainer
-        fadeIn={fadeIn}
-      mainHeader={approachHeader}
-      currentDetails={currentDetails}
-      text={cayorApproachTableText}
-      newIndex={0} />
-    } else if (currentDetails.includes('structured deal')) {
-      return  <TextTableContainer
-        fadeIn={fadeIn}
-      mainHeader={approachHeader}
-      currentDetails={currentDetails}
-      text={cayorApproachTableText}
-      newIndex={1} />
-    } else if (currentDetails.includes('strategy')) {
-      return  <TextTableContainer
-        fadeIn={fadeIn}
-      mainHeader={approachHeader}
-      currentDetails={currentDetails}
-      text={cayorApproachTableText}
-      newIndex={2} />
-    } else if (currentDetails.includes('drive')) {
-      return  <TextTableContainer
-        fadeIn={fadeIn}
-      mainHeader={approachHeader}
-      currentDetails={currentDetails}
-      text={cayorApproachTableText}
-      newIndex={3} />
+        text={ regionsTableText } />)
     }
   }
 
   render() {
-    const { navItems, currentDetails} = this.state;
+    const { navItems, currentDetails, currentDetailIdx } = this.state;
 
     return (
       <div className="approach">
@@ -554,7 +545,8 @@ class Approach extends Component {
             navItems={navItems}
             match={this.props.match}
             currentDetails={currentDetails}
-            handleClick={this.handleClick} />
+            handleClick={this.handleClick}
+            currentDetailIdx={currentDetailIdx} />
           {this.renderTextDetails()}
         </main>
         <Footer location={this.props.location} />

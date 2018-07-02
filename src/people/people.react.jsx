@@ -7,20 +7,21 @@ import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 // import PeopleHeaderImg from '../media/people_banner.jpg';
+import TextTableContainer from '../layout/text-table-container.react';
 import './people.css';
 
 class People extends Component {
 
   state = {
-    currentDetails: 'focused',
+    currentDetails: 'experienced',
     navItems: [
       {value: 'Experienced', url: 'experienced', style: 'top'},
       {value: 'Native', url: 'native', style: 'top'},
-      // {value: 'Focused', url: 'focused', style: 'top'},
       {value: 'Team Bios', url: 'bios', style: 'top'}
     ],
-    experiencedTextTable: [{
-      header: 'Experienced',
+    experiencedTextTable: [
+      {
+      header: '',
       details: [
         {
           dKey: 'e00',
@@ -41,11 +42,12 @@ class People extends Component {
           dKey: 'e03',
           text: 'We possess the maturity, experience and soft skills that are imperative to successful deal making, including being sensitive to and intimately familiar with cultural and business norms in Africa',
           style: 'text'
-        }]
+        }
+      ]
     }],
     nativeTextTable: [
       {
-      header: 'Native',
+      header: '',
       details: [{
         dKey: 'n00',
         text: 'Our team currently consists of four African nationals: a Nigerian, Zimbabwean, Cameroonian and Ghanaian.',
@@ -108,13 +110,17 @@ class People extends Component {
   }
 
   renderDetails() {
-    const {currentDetails, fadeIn, teamDetails, experiencedText, nativeTextTable, focusedText, teamText} = this.state;
-    if (currentDetails === 'focused') {
-      return <PageDetails fadeIn={fadeIn} pageDetails={focusedText} />
-    } else if (currentDetails === 'native') {
-      return <PageDetails fadeIn={fadeIn} pageDetails={nativeTextTable} />
+    const {currentDetails, fadeIn, teamDetails, experiencedTextTable, nativeTextTable, focusedText, teamText} = this.state;
+    if (currentDetails === 'native') {
+      return <TextTableContainer
+        fadeIn={fadeIn}
+        currentDetails={currentDetails}
+        text={nativeTextTable} />
     } else if (currentDetails === 'experienced') {
-      return <PageDetails fadeIn={fadeIn}  pageDetails={experiencedText} />
+      return <TextTableContainer
+        fadeIn={fadeIn}
+        currentDetails={currentDetails}
+        text={experiencedTextTable} />
     } else {
       return <TeamDetails fadeIn={fadeIn} teamDetails={teamDetails} pageDetails={teamText} />
     }
