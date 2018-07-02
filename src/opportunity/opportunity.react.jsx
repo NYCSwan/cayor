@@ -6,8 +6,8 @@ import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
-import PageDetails from '../layout/pageDetails.react';
-import Demographics from '../media/canal.jpg';
+// import PageDetails from '../layout/pageDetails.react';
+// import Demographics from '../media/canal.jpg';
 
 import './opportunity.css';
 
@@ -23,7 +23,7 @@ class Opportunities extends Component {
       {value: 'Why Africa', url: 'africa', style: 'top'},
 
     ],
-    africaTableText: [
+    whyAfricaTableText: [
       {
         header: 'Our thesis is that demographic and structural shifts will drive economic growth in Africa, including:',
         template: 'other',
@@ -156,12 +156,12 @@ class Opportunities extends Component {
 
   renderDetails() {
     console.log('renderDetails');
-    const {currentDetails, fadeIn, africaTableText, whyCayorTableText} = this.state;
+    const {currentDetails, fadeIn, whyAfricaTableText, whyCayorTableText} = this.state;
     if (currentDetails === 'why africa') {
       return <TextTableContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
-        text={africaTableText}/>
+        text={whyAfricaTableText}/>
     } else {
       return <TextTableContainer
         fadeIn={fadeIn}
@@ -171,7 +171,7 @@ class Opportunities extends Component {
   }
 
   render() {
-    const { currentDetails, navItems, africaTableText } = this.state;
+    const { currentDetails, navItems } = this.state;
 
     return (
       <div className="opportunity">
@@ -189,7 +189,7 @@ class Opportunities extends Component {
         {/* currentDetails === 'why africa' ?
           <PageDetails
             fadeIn={this.state.fadeIn}
-            pageDetails={africaTableText} />
+            pageDetails={whyAfricaTableText} />
           : null
         */}
         <Footer location={this.props.location} />

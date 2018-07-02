@@ -44,6 +44,39 @@
       font-size: 1em;
     }
   }
+  &.other {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 15%;
+    .header {
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-start;
+      align-content: center;
+      color: $cayorRed;
+      h4 {
+        text-align: left;
+        margin: 0 10px;
+        width: 50%;
+        font-family: $open-sans-font-family;
+        color: $primaryBlue;
+        // padding-bottom: 3%;
+        font-size: 1.4em;
+        height: auto;
+      }
+
+    }
+    .text {
+      list-style: none;
+      padding: 10px 0;
+      margin-left: 8%;
+      text-align: left;
+      // font-weight: 400;
+      font-size: 1em;
+    }
+  }
 
   h4 {
     text-align: left;

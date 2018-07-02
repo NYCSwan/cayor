@@ -11,7 +11,7 @@ import RegionDetails from './TargetRegionDetails.react';
 import Agribusiness from '../media/world.png';
 import FashionStore from '../media/middle_class.jpg';
 import MiddleClass from '../media/canal.jpg';
-import ConsumerMarket from '../media/consumer-market.jpg';
+// import ConsumerMarket from '../media/consumer-market.jpg';
 import SectorsContainer from './SectorDetails.react';
 import './approach.css';
 
@@ -32,59 +32,6 @@ class Approach extends Component {
     ],
     currentDetails: 'clear investment philosophy',
     cayorApproachTableText: [
-      {
-        header: 'Structured Approach to Deal Origination',
-        details: [
-          {
-            dKey: 'a01',
-            text: 'We believe superior origination is a competitive advantage that we maintain through a combination of:',
-            style: 'subHeader'
-          },
-          {
-            dKey: 'a02',
-            text: 'Continually mapping market sectors and engaging associated professional networks.',
-            style: 'text'
-          },
-          {
-            dKey: 'a03',
-            text: 'Adopting a geographic approach to sourcing investments that positions Cayor as a preferred capital partner and recognized brand, thus driving inbound enquiries.',
-            style: 'text'
-          }]
-      },
-      {
-        header: 'We believe the middle market is attractive for a number of reasons:',
-        details: [
-          {
-          dKey: 'a00',
-          text: 'reduced competition',
-          style: 'subHeader'
-        },
-          {
-            dKey: 'a01',
-            text: 'In our experience to date, there is less competition for middle market assets, resulting in more attractive asset pricing and superior returns for investors.',
-            style: 'text'
-          },
-          {
-            dKey: 'a02',
-            text: 'Superior Transaction Flow',
-            style: 'subHeader'
-          },
-          {
-            dKey: 'a03',
-            text: 'We continue to generate attractive transaction flow arising from demand for expansion capital. We target transactions ranging from $20 to $40 million in size because we believe that transactions in this range allow for proprietary transaction flow with lower entry valuations, better corporate governance terms, and greater scope for us to add value and drive growth and returns.',
-            style: 'text'
-          },
-          {
-            dKey: 'a04',
-            text: 'The Cayor Advantage',
-            style: 'subHeader'
-          },
-          {
-            dKey: 'a05',
-            text: 'Our team’s cumulative experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.',
-            style: 'text'
-          }]
-      },
       {
         header: 'Execute a Strategy With A Clear Investment Philosophy',
         template: 'other',
@@ -130,6 +77,59 @@ class Approach extends Component {
         }]
       },
       {
+        header: 'We believe the middle market is attractive for a number of reasons:',
+        details: [
+          {
+          dKey: 'a00',
+          text: 'reduced competition',
+          style: 'subHeader'
+        },
+          {
+            dKey: 'a01',
+            text: 'In our experience to date, there is less competition for middle market assets, resulting in more attractive asset pricing and superior returns for investors.',
+            style: 'text'
+          },
+          {
+            dKey: 'a02',
+            text: 'Superior Transaction Flow',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'a03',
+            text: 'We continue to generate attractive transaction flow arising from demand for expansion capital. We target transactions ranging from $20 to $40 million in size because we believe that transactions in this range allow for proprietary transaction flow with lower entry valuations, better corporate governance terms, and greater scope for us to add value and drive growth and returns.',
+            style: 'text'
+          },
+          {
+            dKey: 'a04',
+            text: 'The Cayor Advantage',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'a05',
+            text: 'Our team’s cumulative experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.',
+            style: 'text'
+          }]
+      },
+      {
+        header: 'Structured Approach to Deal Origination',
+        details: [
+          {
+            dKey: 'a01',
+            text: 'We believe superior origination is a competitive advantage that we maintain through a combination of:',
+            style: 'subHeader'
+          },
+          {
+            dKey: 'a02',
+            text: 'Continually mapping market sectors and engaging associated professional networks.',
+            style: 'text'
+          },
+          {
+            dKey: 'a03',
+            text: 'Adopting a geographic approach to sourcing investments that positions Cayor as a preferred capital partner and recognized brand, thus driving inbound enquiries.',
+            style: 'text'
+          }]
+      },
+      {
         header: 'Drive Returns from Both Deal and Portfolio Management',
         details: [
           {
@@ -159,7 +159,8 @@ class Approach extends Component {
           },
           {
             dKey: 'd05',
-            text: 'We drive exits throughout the deal cycle'
+            text: 'We drive exits throughout the deal cycle',
+            style: 'text'
           },
           {
             dKey: 'd06',
@@ -479,14 +480,14 @@ class Approach extends Component {
       }
     ],
     fadeIn: true,
-    currentDetailIdx: 1
+    currentDetailIdx: 0
   }
 
   handleClick = (e) => {
     console.log('handle sub navigation click', e);
     const { navItems } = this.state;
     const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
-    const index = Number(findKey(currentNavItem));
+    const index = Number(findKey(currentNavItem))-1;
     // debugger;
     // const newIndex = navItems.indexOf({value: e.target.innerText)
     this.setState({
@@ -496,10 +497,25 @@ class Approach extends Component {
     })
   }
 
-  selectCurrentNavItem = (value) => {
+  handleButtonClick = (e) => {
+    const {currentIdx} = this.state;
+    const {text} = this.props;
+    const maxIndex = text.length-1;
 
+    if (e.target.value === "Next" && currentIdx !== maxIndex){
+      this.setState({
+        currentIdx: currentIdx +1
+      })
+    } else if (e.target.value === "Next" && currentIdx === maxIndex){
+      this.setState({
+        currentIdx: 0
+      })
+    } else {
+      this.setState({
+        currentIdx: maxIndex
+      })
+    }
   }
-
 // refactor this ish
   renderTextDetails() {
     const { currentDetails, currentDetailIdx, fadeIn, investmentCriteriaTableText, sectorsTableText, regionsTableText, cayorApproachTableText } = this.state;
@@ -510,23 +526,27 @@ class Approach extends Component {
         fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={cayorApproachTableText}
-        currentDetailIdx={currentDetailIdx} />)
+        currentDetailIdx={currentDetailIdx}
+        handleButtonClick={this.handleButtonClick} />)
     } else if (currentDetails === 'investment sectors') {
       // debugger;
       return (<SectorsContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
         text={ sectorsTableText }
-        currentDetailIdx={currentDetailIdx} />)
-    } else if (currentDetails === 'investment criteria' || 'deal type criteria' || 'target company criteria') {
+        currentDetailIdx={currentDetailIdx}
+        handleButtonClick={this.handleButtonClick} />)
+    } else if (currentDetails === 'investment criteria' || currentDetails === 'deal type criteria' || currentDetails === 'target company criteria') {
       return (<TextTableContainer
         fadeIn={fadeIn}
         currentDetails={currentDetails}
-        text={ investmentCriteriaTableText } />)
+        text={ investmentCriteriaTableText }
+        handleButtonClick={this.handleButtonClick}/>)
     } else if (currentDetails.includes('target regions')) {
       return ( <RegionDetails
         fadeIn={fadeIn}
-        text={ regionsTableText } />)
+        text={ regionsTableText }
+        handleButtonClick={this.handleButtonClick} />)
     }
   }
 

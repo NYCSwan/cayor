@@ -34,6 +34,32 @@
       margin-left: 8%;
       text-align: left;
       font-size: 1em; }
+  .text-table.other {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 15%; }
+    .text-table.other .header {
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-start;
+      align-content: center;
+      color: #9B1D1F; }
+      .text-table.other .header h4 {
+        text-align: left;
+        margin: 0 10px;
+        width: 50%;
+        font-family: "Open Sans", sans-serif;
+        color: #113a6e;
+        font-size: 1.4em;
+        height: auto; }
+    .text-table.other .text {
+      list-style: none;
+      padding: 10px 0;
+      margin-left: 8%;
+      text-align: left;
+      font-size: 1em; }
   .text-table h4 {
     text-align: left;
     margin: 0;
