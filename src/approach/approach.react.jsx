@@ -498,21 +498,21 @@ class Approach extends Component {
   }
 
   handleButtonClick = (e) => {
-    const {currentIdx} = this.state;
-    const {text} = this.props;
-    const maxIndex = text.length-1;
+    const { navItems, currentDetailIdx } = this.state;
+    // const {text} = this.props;
+    const maxIndex = navItems.length-1;
 
-    if (e.target.value === "Next" && currentIdx !== maxIndex){
+    if (e.target.value === "Next" && currentDetailIdx !== maxIndex){
       this.setState({
-        currentIdx: currentIdx +1
+        currentDetailIdx: currentDetailIdx +1
       })
-    } else if (e.target.value === "Next" && currentIdx === maxIndex){
+    } else if (e.target.value === "Next" && currentDetailIdx === maxIndex){
       this.setState({
-        currentIdx: 0
+        currentDetailIdx: 0
       })
     } else {
       this.setState({
-        currentIdx: maxIndex
+        currentDetailIdx: maxIndex
       })
     }
   }

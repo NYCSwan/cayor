@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import findKey from 'lodash/findKey';
+import pickBy from 'lodash/pickBy';
 import SubNav from '../sub_navigation/sub_navigation.react';
 // import FocusedDetails from './FocusedDetails.react';
 // import NativeDetails from './NativeDetails.react';
@@ -48,7 +50,8 @@ class People extends Component {
     nativeTextTable: [
       {
       header: '',
-      details: [{
+      details: [
+      {
         dKey: 'n00',
         text: 'Our team currently consists of four African nationals: a Nigerian, Zimbabwean, Cameroonian and Ghanaian.',
         style: 'subHeader'
@@ -63,66 +66,110 @@ class People extends Component {
         text: 'Our wide network includes peers who are key decision makers in corporations and high-level government officials (central bankers, ministers, exchange regulators, etc.).',
         style: 'text'
       }]
-    }],
-    teamDetails: [{
-      name: 'Fungai Ruwende',
-      position: 'Managing Partner',
-      summary: 'TBD',
-      experience: 'TBD',
-      education: 'TBD',
-      url: 'fungai'
+      }],
+    teamDetails: [
+      {
+        name: 'Fungai Ruwende',
+        position: 'Managing Partner',
+        summary: 'TBD',
+        experience: 'TBD',
+        education: 'TBD',
+        url: 'fungai'
 
-    },
-    {
-      name: 'Dafe Diejomaoh',
-      position: 'Managing Partner',
-      summary: 'TBD',
-      experience: 'TBD',
-      education: 'TBD',
-      url: 'dafe'
+      },
+      {
+        name: 'Dafe Diejomaoh',
+        position: 'Managing Partner',
+        summary: 'TBD',
+        experience: 'TBD',
+        education: 'TBD',
+        url: 'dafe'
 
-    },
-    {
-      name: 'Yannick Mpollo',
-      position: 'Principal',
-      summary: 'TBD',
-      experience: 'TBD',
-      education: 'TBD',
-      url: 'yannick'
-    },
-    {
-      name: 'Kofi Domfeh',
-      position: 'Vice President',
-      summary: 'TBD',
-      experience: 'TBD',
-      education: 'TBD',
-      url: 'kofi'
+      },
+      {
+        name: 'Yannick Mpollo',
+        position: 'Principal',
+        summary: 'TBD',
+        experience: 'TBD',
+        education: 'TBD',
+        url: 'yannick'
+      },
+      {
+        name: 'Kofi Domfeh',
+        position: 'Vice President',
+        summary: 'TBD',
+        experience: 'TBD',
+        education: 'TBD',
+        url: 'kofi'
 
-    }],
+      }
+    ],
     fadeIn: true,
+    currentDetailIdx: 0
   }
 
-  handleClick = (e) => {
-    console.log('handle sub navigation click', e);
-    this.setState({
-      currentDetails: e.target.innerText.toLowerCase()
-    })
-  }
+    handleClick = (e) => {
+      console.log('handle sub navigation click opportunity');
+      const { navItems } = this.state;
+      const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
+      const index = Number(findKey(currentNavItem));
+      debugger;
+      // const newIndex = navItems.indexOf({value: e.target.innerText)
+      this.setState({
+        currentDetails: e.target.innerText.toLowerCase(),
+        fadeIn: true,
+        currentDetailIdx: index
+      })
+    }
+
+    handleButtonClick = (e) => {
+      const { currentDetailIdx, navItems } = this.state;
+      // const {text} = this.props;
+      const maxIndex = navItems.length-1;
+
+      if (e.target.value === "Next" && currentDetailIdx !== maxIndex){
+        this.setState({
+          currentDetailIdx: currentDetailIdx +1
+        })
+      } else if (e.target.value === "Next" && currentDetailIdx === maxIndex){
+        this.setState({
+          currentDetailIdx: 0
+        })
+      } else {
+        this.setState({
+          currentDetailIdx: maxIndex
+        })
+      }
+    }
 
   renderDetails() {
-    const {currentDetails, fadeIn, teamDetails, experiencedTextTable, nativeTextTable, focusedText, teamText} = this.state;
+    const { currentDetails, fadeIn, teamDetails, experiencedTextTable, nativeTextTable, focusedText, teamText, currentDetailIdx } = this.state;
     if (currentDetails === 'native') {
-      return <TextTableContainer
-        fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={nativeTextTable} />
+      // debugger
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={nativeTextTable}
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      )
     } else if (currentDetails === 'experienced') {
-      return <TextTableContainer
-        fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={experiencedTextTable} />
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={experiencedTextTable}
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      )
     } else {
-      return <TeamDetails fadeIn={fadeIn} teamDetails={teamDetails} pageDetails={teamText} />
+      return (
+        <TeamDetails
+          fadeIn={fadeIn}
+          teamDetails={teamDetails}
+          pageDetails={teamText} />
+      )
     }
   }
 
