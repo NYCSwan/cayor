@@ -522,31 +522,49 @@ class Approach extends Component {
 
     if (currentDetails === 'the cayor approach' || currentDetails === 'clear investment philosophy' || currentDetails === 'middle market focus' || currentDetails === 'structured deal origination' || currentDetails === 'deal & portfolio mgmt') {
       // debugger
-      return (<TextTableContainer
-        fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={cayorApproachTableText}
-        currentDetailIdx={currentDetailIdx}
-        handleButtonClick={this.handleButtonClick} />)
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={cayorApproachTableText}
+          currentDetailIdx={currentDetailIdx}
+          handleButtonClick={this.handleButtonClick} />
+      )
     } else if (currentDetails === 'investment sectors') {
       // debugger;
-      return (<SectorsContainer
-        fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={ sectorsTableText }
-        currentDetailIdx={currentDetailIdx}
-        handleButtonClick={this.handleButtonClick} />)
-    } else if (currentDetails === 'investment criteria' || currentDetails === 'deal type criteria' || currentDetails === 'target company criteria') {
-      return (<TextTableContainer
-        fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={ investmentCriteriaTableText }
-        handleButtonClick={this.handleButtonClick}/>)
+      return (
+        <SectorsContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={ sectorsTableText }
+          currentDetailIdx={currentDetailIdx}
+          handleButtonClick={this.handleButtonClick} />
+      )
+    } else if (currentDetails === 'investment criteria' || currentDetails === 'deal type criteria') {
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          currentDetailIdx={0}
+          text={ investmentCriteriaTableText }
+          handleButtonClick={this.handleButtonClick}/>
+      )
+    } else if (currentDetails === 'target company criteria') {
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          currentDetailIdx={1}
+          text={ investmentCriteriaTableText }
+          handleButtonClick={this.handleButtonClick}/>
+      )
     } else if (currentDetails.includes('target regions')) {
-      return ( <RegionDetails
-        fadeIn={fadeIn}
-        text={ regionsTableText }
-        handleButtonClick={this.handleButtonClick} />)
+      return (
+        <RegionDetails
+          fadeIn={fadeIn}
+          text={ regionsTableText }
+          handleButtonClick={this.handleButtonClick} />
+      )
     }
   }
 

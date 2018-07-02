@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-// import AfricaDetails from './AfricaDetails.react';
-// import WhyCayorDetails from './WhyCayorDetails.react';
-// import CayorPerspectiveDetails from './CayorPerspectiveDetails.react';
+import findKey from 'lodash/findKey';
+import pickBy from 'lodash/pickBy';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
@@ -142,31 +141,64 @@ class Opportunities extends Component {
         ]
       }
     ],
-    fadeIn: true
+    fadeIn: true,
+    currentDetailIdx: 0
   }
 
   handleClick = (e) => {
-    console.log('handle sub navigation click', e);
+    console.log('handle sub navigation click opportunity');
+    const { navItems } = this.state;
+    const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
+    const index = Number(findKey(currentNavItem))-1;
     // debugger;
+    // const newIndex = navItems.indexOf({value: e.target.innerText)
     this.setState({
       currentDetails: e.target.innerText.toLowerCase(),
-      fadeIn: true
+      fadeIn: true,
+      currentDetailIdx: index
     })
   }
 
+  handleButtonClick = (e) => {
+    const {currentIdx} = this.state;
+    const {text} = this.props;
+    const maxIndex = text.length-1;
+
+    if (e.target.value === "Next" && currentIdx !== maxIndex){
+      this.setState({
+        currentIdx: currentIdx +1
+      })
+    } else if (e.target.value === "Next" && currentIdx === maxIndex){
+      this.setState({
+        currentIdx: 0
+      })
+    } else {
+      this.setState({
+        currentIdx: maxIndex
+      })
+    }
+  }
   renderDetails() {
     console.log('renderDetails');
-    const {currentDetails, fadeIn, whyAfricaTableText, whyCayorTableText} = this.state;
+    const {currentDetails, currentDetailIdx, fadeIn, whyAfricaTableText, whyCayorTableText} = this.state;
     if (currentDetails === 'why africa') {
-      return <TextTableContainer
-        fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={whyAfricaTableText}/>
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={whyAfricaTableText}
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      )
     } else {
-      return <TextTableContainer
-        fadeIn={fadeIn}
-        currentDetails={currentDetails}
-        text={ whyCayorTableText }/>;
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={ whyCayorTableText }
+          currentDetailIdx={currentDetailIdx}
+          handleButtonClick={this.handleButtonClick} />
+      );
     }
   }
 
@@ -186,12 +218,6 @@ class Opportunities extends Component {
           handleClick={this.handleClick}
           currentDetails={currentDetails} />
         { this.renderDetails() }
-        {/* currentDetails === 'why africa' ?
-          <PageDetails
-            fadeIn={this.state.fadeIn}
-            pageDetails={whyAfricaTableText} />
-          : null
-        */}
         <Footer location={this.props.location} />
       </div>
     );
