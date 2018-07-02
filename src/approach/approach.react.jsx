@@ -12,7 +12,7 @@ import Agribusiness from '../media/world.png';
 import FashionStore from '../media/middle_class.jpg';
 import MiddleClass from '../media/canal.jpg';
 // import ConsumerMarket from '../media/consumer-market.jpg';
-import SectorsContainer from './SectorDetails.react';
+import SectorsContainer from './sectors_container.react';
 import './approach.css';
 
 

@@ -11,7 +11,7 @@
     flex-flow: column;
     justify-content: center;
     align-content: center;
-    margin-left: 15%; }
+    margin-left: 5%; }
     .text-table.bullet .headerContainer {
       display: flex;
       flex-flow: row;

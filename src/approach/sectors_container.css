@@ -1,0 +1,44 @@
+.SectorsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-content: flex-start; }
+  .SectorsContainer ul {
+    padding-left: 0; }
+  .SectorsContainer .Financial.Services {
+    width: 35%;
+    height: 33%; }
+    .SectorsContainer .Financial.Services .headerImg {
+      width: 70px;
+      height: 70px; }
+    .SectorsContainer .Financial.Services .text {
+      padding-top: 5px;
+      padding-bottom: 0; }
+  .SectorsContainer .Infrastructure.Services {
+    width: 35%;
+    height: 33%; }
+    .SectorsContainer .Infrastructure.Services .headerImg {
+      width: 70px;
+      height: 70px; }
+    .SectorsContainer .Infrastructure.Services .text {
+      padding-top: 5px;
+      padding-bottom: 0; }
+  .SectorsContainer .Consumer.Goods {
+    width: 35%;
+    height: 33%; }
+    .SectorsContainer .Consumer.Goods .headerImg {
+      width: 70px;
+      height: 70px; }
+    .SectorsContainer .Consumer.Goods .text {
+      padding-top: 5px;
+      padding-bottom: 0; }
+  .SectorsContainer .Agribusiness {
+    width: 35%;
+    height: 33%; }
+    .SectorsContainer .Agribusiness .headerImg {
+      max-width: 70px;
+      max-height: 70px; }
+    .SectorsContainer .Agribusiness .text {
+      padding-top: 5px;
+      padding-bottom: 0; }
