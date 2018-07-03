@@ -1,11 +1,13 @@
+@import '../_variables';
+
 .clock {
   border-radius: 50%;
-  background: #fff url(/images/posts/clocks/ios_clock.svg) no-repeat center;
-  background-size: 88%;
-  border: 1px solid black;
-  height: 25px;
+  background: $lightGreySemiTransparent;
+  // background-size: 100%;
+  border: 2px solid $primaryBlue;
+  height: 30px;
   position: relative;
-  width: 15px;
+  width: 30px;
   display: inline-block;
 
   .minute-container, .hour-container {
@@ -14,26 +16,38 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 1;
+  }
+
+  .clockButton {
+    position: absolute;
+    z-index: 10;
+    left:42%;
+    top: 40%;
+    width: 4px;
+    height: 4px;
+    background-color: $primaryBlue;
+    border-radius: 50%;
   }
 
   .hour {
-    background: #000;
-    height: 20%;
-    left: 48.75%;
+    background: $primaryBlue;
+    height: 25%;
+    left: 47%;
     position: absolute;
-    top: 30%;
+    top: 28%;
     transform-origin: 50% 100%;
-    width: 14%;
+    width: 8%;
   }
 
   .minute {
-    background: #000;
-    height: 40%;
-    left: 49%;
+    background: $primaryBlue;
+    height: 45%;
+    left: 42%;
     position: absolute;
     top: 10%;
     transform-origin: 50% 100%;
-    width: 11%;
+    width: 8%;
   }
 
   .hour-container {

@@ -95,16 +95,16 @@ class Navigation extends Component {
               <ul className='nav'>
                 <li className='linkContainer'>
                   <NavLink to='/people' activeClassName="selected"
-                  className='link'>PEOPLE</NavLink></li>
+                  className='link people'>PEOPLE</NavLink></li>
                 <li className='linkContainer'>
                   <NavLink to='/opportunity' activeClassName="selected"
-                  className='link'>OPPORTUNITY</NavLink></li>
+                  className='link opportunity'>OPPORTUNITY</NavLink></li>
                 <li className='linkContainer'>
                   <NavLink to='/approach' activeClassName="selected"
-                  className='link'>APPROACH</NavLink></li>
+                  className='link approach'>APPROACH</NavLink></li>
                 <li className='linkContainer'>
                   <NavLink to='/esg' activeClassName="selected"
-                  className='link'>ESG</NavLink></li>
+                  className='link esg'>ESG</NavLink></li>
               </ul>
               <div className='clocks'>
                 <div

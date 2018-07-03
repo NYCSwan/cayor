@@ -31,7 +31,7 @@
 // li
     .top {
       list-style: none;
-      padding: 20px 10px;
+      padding: 12px 10px;
       color: $primaryBlue;
       font-weight: 700;
       width: 75%;
@@ -39,7 +39,7 @@
       -moz-text-align-last: left;
       &.active {
         font-weight: bolder;
-        margin-left: -2s%;
+        margin-left: -2%;
 
         &:hover {
           font-weight: bolder;
@@ -53,14 +53,19 @@
     }
     .sub {
       color: $primaryGrey;
-      padding: 2px 10px;
+      padding: 4px 10px;
       list-style: none;
-      width: 70%;
+      width: 80%;
       text-align: left;
         -moz-text-align-last: left;
       &.active {
         color: $cayorRed;
         margin-left: -1%;
+      }
+      &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: grab;
       }
     }
   }

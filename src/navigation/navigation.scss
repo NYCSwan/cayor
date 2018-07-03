@@ -100,29 +100,55 @@
             display: inline;
             color: inherit;
             order: 1;
-            // margin-bottom: 50%;
-            padding-bottom: 39%;
-            // &:nth($list, $n);
             &.selected {
               font-size: 1.1em;
               font-weight: bold;
               align-self: baseline;
               border-bottom: 2px solid $cayorRed;
               line-height: 1;
-              padding-bottom: 38%;
 
             }
             &:hover {
-              border-bottom: 2px solid $cayorRed;
-              // padding-bottom: 49%;
+              // border-bottom: 2px solid $cayorRed;
+              font-weight: 700;
               text-decoration: none;
+              color: $cayorRed;
+            }
+
+            &.people {
+              padding-bottom: 68%;
+              &:hover {
+                padding-bottom: 77%;
+              }
+            }
+
+            &.opportunity {
+              padding-bottom: 38%;
+              &:hover {
+                padding-bottom: 42%;
+              }
+            }
+
+            &.approach {
+              padding-bottom: 50%;
+              &:hover {
+                padding-bottom: 56%;
+              }
+            }
+
+            &.esg {
+              padding-bottom: 136%;
+              &:hover {
+                padding-bottom: 154%;
+              }
+
             }
           }
         }
       }
 
       .clocks {
-        width: 15%;
+        width: 18%;
         display: flex;
         flex-flow: row;
         order: 2;
@@ -140,7 +166,9 @@
             margin-left: 1%;
             padding-left: 15%;
             text-align: left;
-            font-size: .7em;
+            font-size: .8em;
+            align-self: center;
+            margin-top: 7%;
             // color: $primaryText;
           }
         }
