@@ -83,7 +83,7 @@
       list-style: none;
       padding: 7px 0;
       text-align: left;
-      // font-weight: 400;
+      width: 80%;
       margin-left: -3.4%;
       font-size: 1em;
       &.bullet {
@@ -94,7 +94,7 @@
     h4 {
       text-align: left;
       margin: 0;
-      width: 100%;
+      width: 90%;
       font-family: $open-sans-font-family;
       color: $primaryBlue;
       padding-bottom: 3%;
@@ -112,5 +112,6 @@
       font-weight: bold;
       color: $cayorRed;
       padding: 15px 0 5px 0;
+      width: 90%;
     }
 }

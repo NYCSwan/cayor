@@ -165,14 +165,15 @@ class People extends Component {
   }
 
   render() {
-    const {currentDetails, navItems} = this.state;
+    const {currentDetails, navItems, fadeIn} = this.state;
 
     return (
       <div className="people">
         <Navigation
+          fadeIn={fadeIn}
           headerImg='people'
           history={this.props.history}
-          location={this.props.location}
+          location={this.props.location}          handleClose={this.props.handleClose}          isContactModalOpen={this.props.isContactModalOpen}
           handleClockClick={this.props.handleClockClick} />
         <SubNav
           navItems={navItems}

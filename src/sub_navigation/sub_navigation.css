@@ -4,6 +4,7 @@
   padding-top: 2%;
   display: inline-block;
   width: 25%;
+  border-right: 1px solid #D5d5d5;
   background-color: #D5d5d561; }
   .sub_navigation .list {
     color: #696969;

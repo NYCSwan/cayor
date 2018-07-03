@@ -12,7 +12,6 @@ import './navigation.css';
 class Navigation extends Component {
   state = {
     contactLocation: '',
-    // isContactModalOpen: false,
     joburgContactDetails: [
       {
         location: 'Johannesburg',
@@ -56,7 +55,7 @@ class Navigation extends Component {
   renderContactPopover = () => {
     console.log('renderContactPopover');
     const { contactLocation, accraContactDetails, joburgContactDetails } = this.state;
-    const { isContactModalOpen, fadeIn } = this.props;
+    const { isContactModalOpen, fadeIn, handleClose } = this.props;
     // debugger
     if (contactLocation === 'accra') {
       return (
@@ -64,6 +63,7 @@ class Navigation extends Component {
           fadeIn={fadeIn}
           contactDetails={accraContactDetails}
           contactLocation={contactLocation}
+          handleClose={handleClose}
           isContactModalOpen={isContactModalOpen} />
       )
     } else {
@@ -72,6 +72,7 @@ class Navigation extends Component {
           fadeIn={fadeIn}
           contactDetails={joburgContactDetails}
           contactLocation={contactLocation}
+          handleClose={handleClose}
           isContactModalOpen={isContactModalOpen} />
       )
     }

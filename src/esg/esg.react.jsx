@@ -171,23 +171,13 @@ class Esg extends Component {
 
   render() {
     const { currentDetails, currentDetailIdx, fadeIn, navItems } = this.state;
-    // { currentDetails === 'framework' ?
-    //   <TextTableContainer
-    //   currentDetails={currentDetails}
-    //   text={frameworkTableText}/>
-    //   : null
-    // }
-    // {/* currentDetails !== 'framework' &&
-    //   <PageDetails
-    //     fadeIn={fadeIn}
-    //     pageDetails={currentDetails === 'philosophy' ? philosophyTextTable : strategyText} />
-    // */}
     return (
       <div className="esg">
         <Navigation
+          fadeIn={fadeIn}
           history={this.props.history}
-          location={this.props.location}
-          handleClockClick={this.props.handleClockClick}
+          location={this.props.location}          handleClose={this.props.handleClose}
+          handleClockClick={this.props.handleClockClick}          isContactModalOpen={this.props.isContactModalOpen}
           headerImg='esg' />
           <main className='body'>
             <SubNav

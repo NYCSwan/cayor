@@ -1,5 +1,5 @@
 @import '../_variables';
-@import '../_defaults';
+// @import '../_defaults';
 
 .header {
   width: 100%;
@@ -161,7 +161,11 @@
           align-items: center;
           margin-right: 1%;
           height: auto;
-
+          &:hover {
+            cursor: grab;
+            color: $cayorRed;
+            font-weight: bolder;
+          }
           h6 {
             margin-left: 1%;
             padding-left: 15%;
@@ -172,6 +176,7 @@
             // color: $primaryText;
           }
         }
+
       }
     }
    }

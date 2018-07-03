@@ -45,6 +45,7 @@
     list-style: none;
     padding: 7px 0;
     text-align: left;
+    width: 80%;
     margin-left: -3.4%;
     font-size: 1em; }
     .text-table .text.bullet {
@@ -52,7 +53,7 @@
   .text-table h4 {
     text-align: left;
     margin: 0;
-    width: 100%;
+    width: 90%;
     font-family: "Open Sans", sans-serif;
     color: #113a6e;
     padding-bottom: 3%;
@@ -66,4 +67,5 @@
   .text-table .subHeader {
     font-weight: bold;
     color: #9B1D1F;
-    padding: 15px 0 5px 0; }
+    padding: 15px 0 5px 0;
+    width: 90%; }

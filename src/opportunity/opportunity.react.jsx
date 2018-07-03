@@ -159,23 +159,34 @@ class Opportunities extends Component {
     })
   }
 
-  handleButtonClick = (e) => {
+  handleButtonClick = () => {
     const { currentDetailIdx, navItems } = this.state;
     // const {text} = this.props;
-    const maxIndex = navItems.length-1;
-
-    if (e.target.value === "Next" && currentDetailIdx !== maxIndex){
+    const maxIndex = navItems.length;
+    const index = currentDetailIdx +1;
+    const details = navItems[index+1].vale.toLowerCase();
+    debugger
+    if (currentDetailIdx === -1) {
       this.setState({
-        currentDetailIdx: currentDetailIdx +1
+        currentDetailIdx: index,
+        currentDetails: 'experienced africa private equity investors'
       })
-    } else if (e.target.value === "Next" && currentDetailIdx === maxIndex){
+    } else if (currentDetailIdx === 0) {
       this.setState({
-        currentDetailIdx: 0
+        currentDetailIdx: index,
+        currentDetails: 'extensive africa network'
+      })
+    } else if (currentDetailIdx !== maxIndex){
+      this.setState({
+        currentDetailIdx: index,
+        currentDetails: details
       })
     } else {
       this.setState({
-        currentDetailIdx: maxIndex
+        currentDetailIdx: maxIndex,
+        currentDetails: details
       })
+
     }
   }
 
@@ -221,7 +232,7 @@ class Opportunities extends Component {
           fadeIn={fadeIn}
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick}
+          handleClose={this.props.handleClose}
           handleClockClick={this.props.handleClockClick}
           isContactModalOpen={this.props.isContactModalOpen}
           headerImg='opportunity' />

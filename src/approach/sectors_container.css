@@ -7,38 +7,70 @@
   .SectorsContainer ul {
     padding-left: 0; }
   .SectorsContainer .Financial.Services {
-    width: 35%;
+    width: 45%;
     height: 33%; }
-    .SectorsContainer .Financial.Services .headerImg {
-      width: 70px;
-      height: 70px; }
-    .SectorsContainer .Financial.Services .text {
-      padding-top: 5px;
-      padding-bottom: 0; }
+    .SectorsContainer .Financial.Services .text-table .headerContainer {
+      border-left: 2px solid #9B1D1F;
+      border-bottom: 2px solid #9B1D1F;
+      padding: 2px; }
+      .SectorsContainer .Financial.Services .text-table .headerContainer h4 {
+        display: inline-block;
+        line-height: normal;
+        padding-top: 5%; }
+    .SectorsContainer .Financial.Services .approach {
+      padding-top: 10px; }
+      .SectorsContainer .Financial.Services .approach .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+        margin-left: 25%; }
   .SectorsContainer .Infrastructure.Services {
-    width: 35%;
+    width: 45%;
     height: 33%; }
-    .SectorsContainer .Infrastructure.Services .headerImg {
-      width: 70px;
-      height: 70px; }
-    .SectorsContainer .Infrastructure.Services .text {
-      padding-top: 5px;
-      padding-bottom: 0; }
+    .SectorsContainer .Infrastructure.Services .headerContainer {
+      border-left: 2px solid #9B1D1F;
+      border-bottom: 2px solid #9B1D1F;
+      padding: 2px; }
+      .SectorsContainer .Infrastructure.Services .headerContainer h4 {
+        display: inline-block;
+        line-height: normal;
+        padding-top: 5%; }
+    .SectorsContainer .Infrastructure.Services .approach {
+      padding-top: 10px; }
+      .SectorsContainer .Infrastructure.Services .approach .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+        margin-left: 25%; }
   .SectorsContainer .Consumer.Goods {
-    width: 35%;
+    width: 45%;
     height: 33%; }
-    .SectorsContainer .Consumer.Goods .headerImg {
-      width: 70px;
-      height: 70px; }
-    .SectorsContainer .Consumer.Goods .text {
-      padding-top: 5px;
-      padding-bottom: 0; }
+    .SectorsContainer .Consumer.Goods .headerContainer {
+      border-left: 2px solid #9B1D1F;
+      border-bottom: 2px solid #9B1D1F;
+      padding: 2px; }
+      .SectorsContainer .Consumer.Goods .headerContainer h4 {
+        display: inline-block;
+        line-height: normal;
+        padding-top: 5%; }
+    .SectorsContainer .Consumer.Goods .approach {
+      padding-top: 10px; }
+      .SectorsContainer .Consumer.Goods .approach .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+        margin-left: 25%; }
   .SectorsContainer .Agribusiness {
-    width: 35%;
+    width: 45%;
     height: 33%; }
-    .SectorsContainer .Agribusiness .headerImg {
-      max-width: 70px;
-      max-height: 70px; }
-    .SectorsContainer .Agribusiness .text {
-      padding-top: 5px;
-      padding-bottom: 0; }
+    .SectorsContainer .Agribusiness .headerContainer {
+      border-left: 2px solid #9B1D1F;
+      border-bottom: 2px solid #9B1D1F;
+      padding: 2px; }
+      .SectorsContainer .Agribusiness .headerContainer h4 {
+        display: inline-block;
+        line-height: normal;
+        padding-top: 5%; }
+    .SectorsContainer .Agribusiness .approach {
+      padding-top: 10px; }
+      .SectorsContainer .Agribusiness .approach .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+        margin-left: 25%; }

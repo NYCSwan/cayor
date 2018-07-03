@@ -18,5 +18,8 @@
     right: 0;
     top: 15%;
     font-weight: 300;
+    &:disabled {
+      background-color: $lightGrey;
+    }
   }
 }
