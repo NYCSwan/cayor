@@ -5,8 +5,6 @@ import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
-// import PageDetails from '../layout/pageDetails.react';
-// import Demographics from '../media/canal.jpg';
 
 import './opportunity.css';
 
@@ -142,7 +140,8 @@ class Opportunities extends Component {
       }
     ],
     fadeIn: true,
-    currentDetailIdx: 0
+    currentDetailIdx: 0,
+    buttonDisabled: false
   }
 
   handleClick = (e) => {
@@ -150,8 +149,11 @@ class Opportunities extends Component {
     const { navItems } = this.state;
     const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
     const index = Number(findKey(currentNavItem))-1;
-    // debugger;
-    // const newIndex = navItems.indexOf({value: e.target.innerText)
+    if (index === 3) {
+      this.setState({ buttonDisabled: true })
+    } else {
+      this.setState({ buttonDisabled: false })
+    }
     this.setState({
       currentDetails: e.target.innerText.toLowerCase(),
       fadeIn: true,
@@ -164,27 +166,37 @@ class Opportunities extends Component {
     // const {text} = this.props;
     const maxIndex = navItems.length;
     const index = currentDetailIdx +1;
-    const details = navItems[index+1].vale.toLowerCase();
-    debugger
+    const details = navItems[index+1].value.toLowerCase();
+    // debugger
     if (currentDetailIdx === -1) {
       this.setState({
         currentDetailIdx: index,
-        currentDetails: 'experienced africa private equity investors'
+        currentDetails: 'experienced africa private equity investors',
+        buttonDisabled: false
       })
     } else if (currentDetailIdx === 0) {
       this.setState({
         currentDetailIdx: index,
-        currentDetails: 'extensive africa network'
+        currentDetails: 'extensive africa network',
+        buttonDisabled: false
       })
-    } else if (currentDetailIdx !== maxIndex){
+    } else if (index === 3) {
       this.setState({
         currentDetailIdx: index,
-        currentDetails: details
+        currentDetails: details,
+        buttonDisabled: true
+      })
+    }else if (currentDetailIdx !== maxIndex){
+      this.setState({
+        currentDetailIdx: index,
+        currentDetails: details,
+        buttonDisabled: false
       })
     } else {
       this.setState({
         currentDetailIdx: maxIndex,
-        currentDetails: details
+        currentDetails: details,
+        buttonDisabled: true
       })
 
     }
@@ -192,11 +204,12 @@ class Opportunities extends Component {
 
   renderDetails() {
     console.log('renderDetails');
-    const {currentDetails, currentDetailIdx, fadeIn, whyAfricaTableText, whyCayorTableText} = this.state;
+    const {currentDetails, currentDetailIdx, fadeIn, whyAfricaTableText, whyCayorTableText, buttonDisabled} = this.state;
     if (currentDetails === 'why africa') {
       return (
         <TextTableContainer
           fadeIn={fadeIn}
+          disabled={buttonDisabled}
           currentDetails={currentDetails}
           text={whyAfricaTableText}
           currentDetailIdx={0}
@@ -205,6 +218,7 @@ class Opportunities extends Component {
     } else if (currentDetails === 'why cayor'){
       return (
         <TextTableContainer
+          disabled={buttonDisabled}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           text={ whyCayorTableText }
@@ -215,6 +229,7 @@ class Opportunities extends Component {
       return (
         <TextTableContainer
           fadeIn={fadeIn}
+          disabled={buttonDisabled}
           currentDetails={currentDetails}
           text={ whyCayorTableText }
           currentDetailIdx={currentDetailIdx}
@@ -224,7 +239,7 @@ class Opportunities extends Component {
   }
 
   render() {
-    const { currentDetails, navItems, fadeIn } = this.state;
+    const { currentDetails, navItems, fadeIn, currentDetailIdx } = this.state;
 
     return (
       <div className="opportunity">
@@ -240,7 +255,8 @@ class Opportunities extends Component {
           navItems={navItems}
           match={this.props.match}
           handleClick={this.handleClick}
-          currentDetails={currentDetails} />
+          currentDetails={currentDetails}
+          currentDetailIdx={currentDetailIdx} />
         { this.renderDetails() }
         <Footer location={this.props.location} />
       </div>
