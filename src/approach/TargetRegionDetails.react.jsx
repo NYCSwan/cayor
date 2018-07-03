@@ -8,6 +8,7 @@ const RegionDetails = (props) => (
     return (
       <div className={region.className}>
         <TextTable
+          location={props.location}
           key={region}
           text={region}
         />

@@ -39,7 +39,7 @@
       -moz-text-align-last: left;
       &.active {
         font-weight: bolder;
-        margin-left: -6%;
+        margin-left: -2s%;
 
         &:hover {
           font-weight: bolder;
@@ -53,7 +53,7 @@
     }
     .sub {
       color: $primaryGrey;
-      padding: 10px 10px;
+      padding: 2px 10px;
       list-style: none;
       width: 70%;
       text-align: left;

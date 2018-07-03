@@ -11,6 +11,7 @@ const TextTableContainer = (props) => (
       : null
     }
       <TextTable
+        location={props.location}
         fadeIn={props.fadeIn}
         text={props.text[props.currentDetailIdx]}/>
       {props.text.length > 1 &&

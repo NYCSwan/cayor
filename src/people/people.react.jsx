@@ -5,7 +5,6 @@ import SubNav from '../sub_navigation/sub_navigation.react';
 import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
-// import PeopleHeaderImg from '../media/people_banner.jpg';
 import TextTableContainer from '../layout/text-table-container.react';
 import './people.css';
 
@@ -20,7 +19,6 @@ class People extends Component {
     ],
     experiencedTextTable: [
       {
-      header: '',
       details: [
         {
           dKey: 'e00',
@@ -46,7 +44,6 @@ class People extends Component {
     }],
     nativeTextTable: [
       {
-      header: '',
       details: [
       {
         dKey: 'n00',

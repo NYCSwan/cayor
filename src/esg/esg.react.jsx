@@ -20,7 +20,7 @@ class Esg extends Component {
     ],
     philosophyTextTable: [
       {
-        header: 'ESG Philosophy',
+        header: 'Cayor\'s ESG Philosophy',
         details: [
         {
           dKey: 'p00',
@@ -41,7 +41,7 @@ class Esg extends Component {
     ],
     strategyTextTable: [
       {
-        header: 'ESG Strategy',
+        header: 'Cayor\'s ESG Strategy',
         details: [
           {
             dKey: 's00',
@@ -60,15 +60,14 @@ class Esg extends Component {
       {
         header: 'Our Framework and Policy Guidelines support the following objectives:',
         template: 'bullet',
-        image: Business,
         details: [{
           dKey: 'f00',
-          text: 'To adhere to the UNPRI, and the IFC performance standards;',
-          style: 'text'
+          text: 'Policy',
+          style: 'subHeader'
         },
         {
-          dKey: 'f07',
-          text: 'To integrate ESG into our investment management framework through our ESG management system;',
+          dKey: 'f08',
+          text: 'To adhere to the UNPRI, and the IFC performance standards;',
           style: 'text'
         },
         {
@@ -77,23 +76,38 @@ class Esg extends Component {
           style: 'text'
         },
         {
+          dKey: 'f07',
+          text: 'To fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
+          style: 'text'
+        },
+        {
+          dKey: 'f09',
+          text: 'Process',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'f03',
+          text: 'To integrate ESG into our investment management framework through our ESG management system;',
+          style: 'text'
+        },
+        {
           dKey: 'f02',
           text: 'To conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications, as required;',
           style: 'text'
         },
         {
-          dKey: 'f03',
-          text: 'To fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
+          dKey: 'f05',
+          text: 'To implement reasonable precautions to protect the health and safety of portfolio company employees and any external parties such as affected communities; and',
           style: 'text'
+        },
+        {
+          dKey: 'f10',
+          text: 'Management',
+          style: 'subHeader'
         },
         {
           dKey: 'f04',
           text: 'To communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to conformance with our policy;',
-          style: 'text'
-        },
-        {
-          dKey: 'f05',
-          text: 'To implement reasonable precautions to protect the health and safety of portfolio company employees and any external parties such as affected communities; and',
           style: 'text'
         },
         {

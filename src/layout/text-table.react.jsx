@@ -5,11 +5,8 @@ import './text-table.css';
 
 const TextTable = (props) => (
   <Fade in={props.fadeIn} className={props.text.template ? `text-table ${props.text.template}` : 'text-table'}>
-    {/*
-      props.text.template === 'other' ?
-      <div>
-
-    */}
+    {
+      props.text.header ?
     <div className='headerContainer'>
       { props.text.image ?
         <img
@@ -20,7 +17,9 @@ const TextTable = (props) => (
       }
       <h4>{props.text.header.toUpperCase()}</h4>
     </div>
-    <ul>
+    : null
+    }
+    <ul className={props.location}>
       {props.text.details.map(detail => {
         return (
           <li

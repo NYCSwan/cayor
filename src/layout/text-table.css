@@ -3,7 +3,7 @@
   position: relative;
   width: 90%;
   display: inline-block;
-  padding-top: 5%;
+  padding-top: 4.5%;
   padding-right: 5%;
   color: #696969; }
   .text-table.bullet {
@@ -23,16 +23,17 @@
       .text-table.bullet .headerContainer h4 {
         text-align: left;
         margin: 0 10px;
-        width: 50%;
+        width: 70%;
         font-family: "Open Sans", sans-serif;
         color: #113a6e;
         font-size: 1.4em;
         height: auto; }
     .text-table.bullet .text {
       list-style: none;
-      padding: 10px 0;
-      margin-left: 8%;
+      padding: 7px 0;
+      margin-left: 4%;
       text-align: left;
+      width: 80%;
       font-size: 1em; }
   .text-table.other {
     display: flex;
@@ -40,28 +41,14 @@
     justify-content: center;
     align-content: center;
     margin-left: 5%; }
-    .text-table.other .header {
-      display: flex;
-      flex-flow: row;
-      justify-content: flex-start;
-      align-content: center;
-      color: #9B1D1F; }
-      .text-table.other .header h4 {
-        text-align: left;
-        margin: 0 10px;
-        width: 50%;
-        font-family: "Open Sans", sans-serif;
-        color: #113a6e;
-        font-size: 1.4em;
-        height: auto; }
-    .text-table.other .text {
-      list-style: none;
-      padding: 10px 0;
-      text-align: left;
-      margin-left: -3.4%;
-      font-size: 1em; }
-      .text-table.other .text.bullet {
-        margin-left: 0; }
+  .text-table .text {
+    list-style: none;
+    padding: 7px 0;
+    text-align: left;
+    margin-left: -3.4%;
+    font-size: 1em; }
+    .text-table .text.bullet {
+      margin-left: 0; }
   .text-table h4 {
     text-align: left;
     margin: 0;
@@ -72,7 +59,7 @@
     font-weight: bold; }
   .text-table .text, .text-table .subHeader {
     list-style: none;
-    padding: 15px 0;
+    padding: 10px 0 5px 0;
     margin-left: -3.4%;
     text-align: left;
     font-size: 1em; }

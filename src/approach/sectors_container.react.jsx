@@ -7,11 +7,12 @@ const SectorsContainer = (props) => (
   { props.text.map((section) => {
     return (
       <div className={section.header}>
-        <TextTable
-          key={section.header}
-          fadeIn={props.fadeIn}
-          currentDetails={props.currentDetails}
-          text={ section } />
+      <TextTable
+        location={props.location}
+        key={section.header}
+        fadeIn={props.fadeIn}
+        currentDetails={props.currentDetails}
+        text={ section } />
       </div>
     )
   })}

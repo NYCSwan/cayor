@@ -25,10 +25,10 @@ class Approach extends Component {
       {value: 'Structured Deal Origination', key: 'structuredDeals', style: 'sub'},
       {value: 'Deal & Portfolio Mgmt', key: 'returns', style: 'sub'},
       {value: 'Investment Sectors', key: 'sectors', style: 'top'},
+      {value: 'Target Regions & Countries', key: 'regions', style: 'top'},
       {value: 'Investment Criteria', key: 'criteria', style: 'top'},
       {value: 'Deal Type Criteria', key: 'deals', style: 'sub'},
-      {value: 'Target Company Criteria', key: 'companies', style: 'sub'},
-      {value: 'Target Regions & Countries', key: 'regions', style: 'top'}
+      {value: 'Target Company Criteria', key: 'companies', style: 'sub'}
     ],
     currentDetails: 'clear investment philosophy',
     cayorApproachTableText: [
@@ -38,42 +38,37 @@ class Approach extends Component {
         details: [{
           dKey: 's00',
           text: 'Cayor’s investment philosophy has clearly defined principles. Whenever we consider an opportunity, we focus on investments that possess the following attributes:',
-          style: 'text'
-        },
-        {
-          dKey: 's01',
-          text: 'Investment Philosophy',
-          style: 'header'
+          style: 'subHeader'
         },
         {
           dKey: 's02',
           text: 'Strong Management Team',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 's03',
           text: 'Clearly Identifiable Growth Prospects',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 's04',
           text: 'Cash Flow Generative',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 's05',
           text: 'Scope To Add Value',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 's06',
           text: 'Clear Prospects For Exit',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 's07',
           text: 'Demonstrated ESG Excellence',
-          style: 'text'
+          style: 'text bullet'
         }]
       },
       {
@@ -135,7 +130,7 @@ class Approach extends Component {
           {
             dKey: 'd00',
             text: 'We drive returns for our investors in connection with specific transactions AND across the aggregate portfolio by:',
-            style: 'text'
+            style: 'subHeader'
           },
           {
             dKey: 'd01',
@@ -145,22 +140,22 @@ class Approach extends Component {
           {
             dKey: 'd02',
             text: 'We target reasonable entry valuations',
-            style: 'text'
+            style: 'text bullet'
           },
           {
             dKey: 'd03',
             text: 'We significantly grow EBITDA by investing in sectors with enduring growth drivers, and in companies with clear, quantifiable and executable value addition plans',
-            style: 'text'
+            style: 'text bullet'
           },
           {
             dKey: 'd04',
             text: 'We invest in companies with cash-generative business models where we reward management for working capital and capex management and the pay down of debt',
-            style: 'text'
+            style: 'text bullet'
           },
           {
             dKey: 'd05',
             text: 'We drive exits throughout the deal cycle',
-            style: 'text'
+            style: 'text bullet'
           },
           {
             dKey: 'd06',
@@ -430,52 +425,52 @@ class Approach extends Component {
         {
           dKey: 's01',
           text: 'Size',
-          style: 'header'
+          style: 'subHeader'
         },
         {
           dKey: 's02',
           text: 'Leading market position and strong business fundamentals',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 's03',
-          style: 'text',
+          style: 'text bullet',
           text: 'EBITDA > US$5 million'
         },
         {
           dKey: 'p00',
           text: 'Performance',
-          style: 'header'
+          style: 'subHeader'
         },
         {
           dKey: 'p01',
           text: 'Sub-Saharan Africa based businesses with strong growth potential',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 'p02',
           text: 'Profitable and cash flow positive businesses with favourable working capital dynamics',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 'm00',
           text: 'Management',
-          style: 'header',
+          style: 'subHeader',
         },
         {
           dKey: 'm01',
           text: 'Innovative and experienced management team with proven operational and financial track record',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 'm02',
           text: 'Strong commitment to good governance and ethics',
-          style: 'text'
+          style: 'text bullet'
         },
         {
           dKey: 'm03',
           text: 'Clear commitment to realise an exit over a period of 3 to 7 years',
-          style: 'text'
+          style: 'text bullet'
         }]
       }
     ],
@@ -520,10 +515,11 @@ class Approach extends Component {
   renderTextDetails() {
     const { currentDetails, currentDetailIdx, fadeIn, investmentCriteriaTableText, sectorsTableText, regionsTableText, cayorApproachTableText } = this.state;
 
-    if (currentDetails === 'the cayor approach' || currentDetails === 'clear investment philosophy' || currentDetails === 'middle market focus' || currentDetails === 'structured deal origination' || currentDetails === 'deal & portfolio mgmt') {
+    if (currentDetails === 'clear investment philosophy' || currentDetails === 'middle market focus' || currentDetails === 'structured deal origination' || currentDetails === 'deal & portfolio mgmt') {
       // debugger
       return (
         <TextTableContainer
+          location={this.props.location.pathname.split('/')[1]}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           text={cayorApproachTableText}
@@ -534,6 +530,7 @@ class Approach extends Component {
       // debugger;
       return (
         <SectorsContainer
+          location={this.props.location.pathname.split('/')[1]}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           text={ sectorsTableText }
@@ -543,6 +540,7 @@ class Approach extends Component {
     } else if (currentDetails === 'investment criteria' || currentDetails === 'deal type criteria') {
       return (
         <TextTableContainer
+          location={this.props.location.pathname.split('/')[1]}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           currentDetailIdx={0}
@@ -552,6 +550,7 @@ class Approach extends Component {
     } else if (currentDetails === 'target company criteria') {
       return (
         <TextTableContainer
+          location={this.props.location.pathname.split('/')[1]}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           currentDetailIdx={1}
@@ -561,8 +560,19 @@ class Approach extends Component {
     } else if (currentDetails.includes('target regions')) {
       return (
         <RegionDetails
+          location={this.props.location.pathname.split('/')[1]}
           fadeIn={fadeIn}
           text={ regionsTableText }
+          handleButtonClick={this.handleButtonClick} />
+      )
+    } else if (currentDetails === 'the cayor approach') {
+      return (
+        <TextTableContainer
+          location={this.props.location.pathname.split('/')[1]}
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={cayorApproachTableText}
+          currentDetailIdx={0}
           handleButtonClick={this.handleButtonClick} />
       )
     }
