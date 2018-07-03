@@ -28,8 +28,8 @@ class MinuteHand extends Component {
     const { minuteHand } = this.state;
 
     return (
-      <div className="minute-container">
-        <div className='minute' data-angle={minuteHand}></div>
+      <div className={`${this.props.className} minute-container`}>
+        <div className={`${this.props.className} minute`} data-angle={minuteHand}></div>
       </div>
     )
   }

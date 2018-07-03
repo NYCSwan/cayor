@@ -39,7 +39,7 @@
     flex-flow: column;
     justify-content: center;
     align-content: center;
-    margin-left: 15%; }
+    margin-left: 5%; }
     .text-table.other .header {
       display: flex;
       flex-flow: row;
@@ -57,9 +57,11 @@
     .text-table.other .text {
       list-style: none;
       padding: 10px 0;
-      margin-left: 8%;
       text-align: left;
+      margin-left: -3.4%;
       font-size: 1em; }
+      .text-table.other .text.bullet {
+        margin-left: 0; }
   .text-table h4 {
     text-align: left;
     margin: 0;

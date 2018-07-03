@@ -124,7 +124,7 @@ class Esg extends Component {
 
   renderDetails() {
     console.log('renderDetails');
-    const {currentDetails, currentDetailIdx, fadeIn, philosophyTextTable, strategyTextTable, frameworkTableText} = this.state;
+    const {currentDetails, fadeIn, philosophyTextTable, strategyTextTable, frameworkTableText} = this.state;
     if (currentDetails === 'esg philosophy') {
       return (
         <TextTableContainer
@@ -156,7 +156,7 @@ class Esg extends Component {
   }
 
   render() {
-    const { currentDetails, fadeIn, navItems, frameworkTableText, philosophyTextTable, strategyTextTable } = this.state;
+    const { currentDetails, currentDetailIdx, fadeIn, navItems } = this.state;
     // { currentDetails === 'framework' ?
     //   <TextTableContainer
     //   currentDetails={currentDetails}
@@ -173,7 +173,7 @@ class Esg extends Component {
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick}
+          handleClockClick={this.props.handleClockClick}
           headerImg='esg' />
           <main className='body'>
             <SubNav
@@ -181,6 +181,7 @@ class Esg extends Component {
               match={this.props.match}
               handleClick={this.handleClick}
               currentDetails={currentDetails}
+              currentDetailIdx={currentDetailIdx}
               fadeIn={fadeIn} />
               { this.renderDetails() }
           </main>

@@ -1,19 +1,37 @@
 import React from 'react';
-import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
+import { Popover, PopoverHeader, PopoverBody, Fade } from 'reactstrap';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/fontawesome-free-solid';
+import './contact_form.css';
 
 const ContactForm = (props) => (
-  <Popover className="contactForm">
-    <PopoverHeader>Contact Us</PopoverHeader>
+  <Popover
+    className="contactForm"
+    target={props.contactLocation}
+    hideArrow={true}
+    placement={'top-end'}
+    isOpen={props.isContactModalOpen}>
+
+    <PopoverHeader>
+      <FontAwesomeIcon className={'times'} icon={faTimes} pull='right' />
+      <h5>CONTACT US</h5>
+    </PopoverHeader>
     <PopoverBody>
     {props.contactDetails.map(detail => {
       return (
-        <div className='contactBody' key={detail.locationcd}>
+        <Fade
+          in={props.fadeIn}
+          key={detail.location}
+          className='contactBody'>
           <h3>{detail.location}</h3>
           <img src={detail.imageUrl} alt={detail.imageAlt} />
-          <h4>{detail.street_address}</h4>
-          <h4>{detail.city_state}</h4>
-          <h3>{detail.phone}</h3>
-        </div>
+          <aside className='address'>
+            <h4>{detail.street_address}</h4>
+            <h4>{detail.street_address2}</h4>
+            <h4>{detail.city}</h4>
+            <h4>{detail.phone}</h4>
+          </aside>
+        </Fade>
       )
     })}
     </PopoverBody>

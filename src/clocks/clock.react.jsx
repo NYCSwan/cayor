@@ -39,11 +39,11 @@ class Clock extends Component {
 
   render() {
     return (
-      <div className="clock">
+      <div className={`${this.props.className} clock`}>
       { this.state.time &&
         <div>
-          <MinuteHand time={this.state.time} />
-          <HourHand time={this.state.time} />
+          <MinuteHand className={this.props.className} time={this.state.time} />
+          <HourHand className={this.props.className} time={this.state.time} />
         </div>
       }
       </div>

@@ -24,39 +24,39 @@ class Opportunities extends Component {
     ],
     whyAfricaTableText: [
       {
-        header: 'Our thesis is that demographic and structural shifts will drive economic growth in Africa, including:',
+        header: 'Demographic & cultural shifts will drive economic growth in African middle markets',
         template: 'other',
         // image: Demographics,
         details: [
           {
-            dKey: 'w00',
-            text: 'We believe that the consumer goods & services, infrastructure, financial services and agriculture sectors will be engines of growth across the continent, providing the most attractive investment opportunities and potential for sustainable value creation.',
-            style: 'text'
-          },
-          {
             dKey: 'w01',
-            text: 'Our thesis is that demographic and structural shifts will drive economic growth in Africa, including:',
+            text: 'We believe that the consumer goods & services, infrastructure, financial services and agriculture sectors will be engines of growth across the continent, providing the most attractive investment opportunities and potential for sustainable value creation.',
             style: 'subHeader'
           },
           {
             dKey: 'w02',
-            text: "Growth in consumer demand;",
+            text: 'Our thesis is that demographic and structural shifts will drive economic growth in Africa, including:',
             style: 'text'
           },
           {
             dKey: 'w03',
-            text: 'Closing the infrastructure deficit gap;',
-            style: 'text'
+            text: "Growth in consumer demand;",
+            style: 'text bullet'
           },
           {
             dKey: 'w04',
-            text: 'Increased financial inclusion;',
-            style: 'text'
+            text: 'Closing the infrastructure deficit gap;',
+            style: 'text bullet'
           },
           {
             dKey: 'w05',
+            text: 'Increased financial inclusion;',
+            style: 'text bullet'
+          },
+          {
+            dKey: 'w06',
             text: 'And expansion of agricultural output',
-            style: 'text'
+            style: 'text bullet'
           }
         ]
     }],
@@ -213,14 +213,17 @@ class Opportunities extends Component {
   }
 
   render() {
-    const { currentDetails, navItems } = this.state;
+    const { currentDetails, navItems, fadeIn } = this.state;
 
     return (
       <div className="opportunity">
         <Navigation
+          fadeIn={fadeIn}
           history={this.props.history}
           location={this.props.location}
           handleClick={this.props.handleClick}
+          handleClockClick={this.props.handleClockClick}
+          isContactModalOpen={this.props.isContactModalOpen}
           headerImg='opportunity' />
         <SubNav
           navItems={navItems}

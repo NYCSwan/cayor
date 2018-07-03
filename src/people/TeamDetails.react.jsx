@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Snapshot from './snapshot.react';
-import PageDetails from '../layout/pageDetails.react';
-// import { Collapse } from 'reactstrap';
 
 import './team-details.css';
 

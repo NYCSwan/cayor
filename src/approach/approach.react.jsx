@@ -576,7 +576,8 @@ class Approach extends Component {
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClockClick}
+          handleClockClick={this.props.handleClockClick}
+          isContactModalOpen={this.props.isContactModalOpen}
           headerImg='approach' />
         <main className='body'>
           <SubNav

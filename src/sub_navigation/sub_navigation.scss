@@ -4,7 +4,7 @@
 .sub_navigation {
   float: left;
   height: 100%;
-  padding-top: 5%;
+  padding-top: 2%;
   display: inline-block;
   width: 25%;
   background-color: $lightGreySemiTransparent;
@@ -13,28 +13,34 @@
   .list {
     color: $primaryGrey;
     text-align: left;
-    width: 100%;
+    width: 80%;
     font-size: 1em;
     height: 100%;
     list-style: none;
     margin-left: 4%;
+    float: right;
     // FontAwesomeIcon
     .hideIcon {
       display: none;
     }
     .active {
       color: $cayorRed;
-      margin-left: -3%;
+      margin-left: -12%;
     }
 
+// li
     .top {
       list-style: none;
       padding: 20px 10px;
       color: $primaryBlue;
       font-weight: 700;
-      width: 95%;
+      width: 75%;
+      text-align: left;
+      -moz-text-align-last: left;
       &.active {
         font-weight: bolder;
+        margin-left: -6%;
+
         &:hover {
           font-weight: bolder;
         }
@@ -49,11 +55,12 @@
       color: $primaryGrey;
       padding: 10px 10px;
       list-style: none;
-      width: 90%;
-
+      width: 70%;
+      text-align: left;
+        -moz-text-align-last: left;
       &.active {
         color: $cayorRed;
-        margin-left: -10%;
+        margin-left: -1%;
       }
     }
   }

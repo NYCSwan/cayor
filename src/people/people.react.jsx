@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import findKey from 'lodash/findKey';
 import pickBy from 'lodash/pickBy';
 import SubNav from '../sub_navigation/sub_navigation.react';
-import PageDetails from '../layout/pageDetails.react';
 import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
@@ -139,7 +138,7 @@ class People extends Component {
     }
 
   renderDetails() {
-    const { currentDetails, fadeIn, teamDetails, experiencedTextTable, nativeTextTable, focusedText, teamText, currentDetailIdx } = this.state;
+    const { currentDetails, fadeIn, teamDetails, experiencedTextTable, nativeTextTable, teamText } = this.state;
     if (currentDetails === 'native') {
       return (
         <TextTableContainer
