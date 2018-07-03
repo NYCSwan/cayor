@@ -1,11 +1,11 @@
 .regionDetails {
   background: url("../media/world.png") no-repeat center center;
-  background-size: auto 60%;
+  background-size: auto 50%;
   display: flex;
   flex: row wrap;
   justify-content: space-between;
   width: 70%;
-  height: 600px; }
+  height: 60%; }
   .regionDetails .west-africa {
     width: 300px;
     order: 1;
@@ -15,5 +15,6 @@
     width: 300px;
     align-self: center; }
   .regionDetails .south-africa {
+    width: 300px;
     order: 1;
     align-self: flex-end; }

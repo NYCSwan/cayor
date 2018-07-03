@@ -4,10 +4,22 @@ import { Fade } from 'reactstrap';
 import './text-table.css';
 
 const TextTable = (props) => (
-  <Fade in={props.fadeIn} className="text-table">
-    { props.text.image ? <img src={props.text.image} alt={props.text.header}/> : null }
-    <h4>{props.text.header.toUpperCase()}</h4>
-    <ul>
+  <Fade in={props.fadeIn} className={props.text.template ? `text-table ${props.text.template}` : 'text-table'}>
+    {
+      props.text.header ?
+    <div className='headerContainer'>
+      { props.text.image ?
+        <img
+          src={props.text.image}
+          alt={props.text.header}
+          className='headerImg' />
+        : null
+      }
+      <h4>{props.text.header.toUpperCase()}</h4>
+    </div>
+    : null
+    }
+    <ul className={props.location}>
       {props.text.details.map(detail => {
         return (
           <li

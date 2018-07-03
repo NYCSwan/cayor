@@ -27,7 +27,7 @@ class Routes extends Component {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
   const timeout = { enter: 1850, exit: 800 };
   console.log('currentKey', currentKey);
-  const {handleClick} = this.props;
+  const {handleClick, isContactModalOpen} = this.props;
 
     return (
       <Router history={history}>
@@ -47,26 +47,31 @@ class Routes extends Component {
                     <Route exact path="/" render={(routeProps) => { // eslint-disable-line
                       return <Homepage
                         handleClockClick={handleClick}
+                        isContactModalOpen={isContactModalOpen}
                         {...routeProps} /> }}
                       />
                     <Route exact path="/people" render={(routeProps) => { // eslint-disable-line
                       return <People
                       handleClockClick={handleClick}
+                      isContactModalOpen={isContactModalOpen}
                         {...routeProps} /> }}
                         />
                     <Route path="/opportunity" exact render={(routeProps) => { // eslint-disable-line
                       return <Opportunities
                       handleClockClick={handleClick}
+                      isContactModalOpen={isContactModalOpen}
                         {...routeProps} /> }}
                         />
                     <Route path="/approach" exact render={(routeProps) => { // eslint-disable-line
                       return <Approach
                       handleClockClick={handleClick}
+                      isContactModalOpen={isContactModalOpen}
                       {...routeProps} /> }}
                       />
                     <Route path="/esg" exact render={(routeProps) => { // eslint-disable-line
                       return <Esg
                       handleClockClick={handleClick}
+                      isContactModalOpen={isContactModalOpen}
                       {...routeProps} /> }}
                     />
                   </Switch>

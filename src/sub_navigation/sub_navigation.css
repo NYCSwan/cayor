@@ -1,29 +1,35 @@
 .sub_navigation {
   float: left;
   height: 100%;
-  padding-top: 5%;
+  padding-top: 2%;
   display: inline-block;
   width: 25%;
-  background-color: #D5d5d5;
-  opacity: 90%; }
+  background-color: #D5d5d561; }
   .sub_navigation .list {
     color: #696969;
     text-align: left;
-    width: 100%;
+    width: 80%;
     font-size: 1em;
-    height: 100%; }
+    height: 100%;
+    list-style: none;
+    margin-left: 4%;
+    float: right; }
     .sub_navigation .list .hideIcon {
       display: none; }
     .sub_navigation .list .active {
-      color: #9B1D1F; }
+      color: #9B1D1F;
+      margin-left: -12%; }
     .sub_navigation .list .top {
       list-style: none;
       padding: 20px 10px;
-      color: #0A2342;
-      font-weight: 400;
-      width: 95%; }
+      color: #113a6e;
+      font-weight: 700;
+      width: 75%;
+      text-align: left;
+      -moz-text-align-last: left; }
       .sub_navigation .list .top.active {
-        font-weight: bolder; }
+        font-weight: bolder;
+        margin-left: -2%; }
         .sub_navigation .list .top.active:hover {
           font-weight: bolder; }
       .sub_navigation .list .top:hover {
@@ -32,12 +38,14 @@
         cursor: grab; }
     .sub_navigation .list .sub {
       color: #696969;
-      padding: 10px 10px;
+      padding: 2px 10px;
       list-style: none;
-      width: 90%; }
+      width: 70%;
+      text-align: left;
+      -moz-text-align-last: left; }
       .sub_navigation .list .sub.active {
         color: #9B1D1F;
-        margin-left: -10%; }
+        margin-left: -1%; }
 
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {

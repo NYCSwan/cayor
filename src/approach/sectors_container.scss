@@ -1,0 +1,64 @@
+.SectorsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-content: flex-start;
+  ul {
+    padding-left: 0;
+  }
+  .Financial {
+    &.Services {
+      width: 35%;
+      height: 33%;
+      .headerImg {
+        width: 70px;
+        height: 70px;
+      }
+      .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .Infrastructure {
+    &.Services {
+      width: 35%;
+      height: 33%;
+      .headerImg {
+        width: 70px;
+        height: 70px;
+      }
+      .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .Consumer {
+    &.Goods {
+      width: 35%;
+      height: 33%;
+      .headerImg {
+        width: 70px;
+        height: 70px;
+      }
+      .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .Agribusiness {
+    width: 35%;
+    height: 33%;
+    .headerImg {
+      max-width: 70px;
+      max-height: 70px;
+    }
+    .text {
+      padding-top: 5px;
+      padding-bottom: 0;
+    }
+  }
+}

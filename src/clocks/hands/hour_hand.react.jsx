@@ -26,8 +26,8 @@ class HourHand extends Component {
 
   render() {
     return (
-      <div className="hour-container">
-        <div className="hour"></div>
+      <div className={`${this.props.className} hour-container`}>
+        <div className={`${this.props.className} hour`}></div>
       </div>
     )
   }

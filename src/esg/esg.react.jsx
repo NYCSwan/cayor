@@ -1,99 +1,193 @@
 import React, { Component } from 'react';
+import findKey from 'lodash/findKey';
+import pickBy from 'lodash/pickBy';
+
 import TextTableContainer from '../layout/text-table-container.react';
-import PageDetails from '../layout/pageDetails.react';
+// import PageDetails from '../layout/pageDetails.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
+import Business from '../media/business.jpg'
 import './esg.css';
 
 class Esg extends Component {
   state = {
-    currentDetails: 'philosophy',
+    currentDetails: 'esg philosophy',
     navItems: [
-      {value: 'Philosophy', key: 'philosophy', style: 'top'},
-      {value: 'Strategy', key: 'strategy', style: 'top'},
-      {value: 'Framework', key: 'framework', style: 'top'}
+      {value: 'ESG Philosophy', key: 'philosophy', style: 'top'},
+      {value: 'ESG Strategy', key: 'strategy', style: 'top'},
+      {value: 'ESG Framework', key: 'framework', style: 'top'}
     ],
-    philosophyText: ['Cayor considers our approach to responsible investing to be both risk and return focused.','ESG is a key consideration in Cayor’s investment decision-making and ownership practices. We believe researching, assessing and managing factors related to ESG enhances our ability to meet the long-term investment objectives of our fund. At Cayor, ESG considerations are not contradictory to achieving our commercial objectives.','Instead, Cayor uses ESG management to identify opportunities to enhance the internal efficiencies and market opportunities of our portfolio companies; while reducing the risks associated with our investment process. We are driven by the principle that active ownership adds sustained value at exit, and contributes to the advancement of sustainable development within Africa.'],
-    strategyText: ['We have developed a strategy to achieve balance between environmental and social impact and generating commercial returns; underpinned by our ESG philosophy.','From the start, the team will apply our ESG strategy to the Fund’s portfolio companies and their operational activities.','Post-investment, Cayor will closely monitor progress on ESG matters and compliance by portfolio companies relative to our ESG Framework and Policy Guidelines.'],
-    frameworkTableText: [
+    philosophyTextTable: [
       {
-        header: 'Our Framework and Policy Guidelines support the following objectives:',
-        details: [{
-          dKey: 0,
-          text: 'Adhere to the UNPRI, and the IFC performance standards;',
+        header: 'Cayor\'s ESG Philosophy',
+        details: [
+        {
+          dKey: 'p00',
+          text: 'We consider our approach to responsible investing to be both risk and return focused.',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'p01',
+          text: 'ESG factors inform our investment decision-making and ownership practices. We believe researching, assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives for our fund. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.',
           style: 'text'
         },
         {
-          dKey: 7,
-          text: 'Integrate ESG into Cayor’s investment management framework through its ESG management system;',
-          style: 'text'
-        },
-        {
-          dKey: 1,
-          text: 'Partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;',
-          style: 'text'
-        },
-        {
-          dKey: 2,
-          text: 'Conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications;',
-          style: 'text'
-        },
-        {
-          dKey: 3,
-          text: 'Fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
-          style: 'text'
-        },
-        {
-          dKey: 4,
-          text: 'Communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to compliance;',
-          style: 'text'
-        },
-        {
-          dKey: 5,
-          text: 'Implement reasonable precautions to protect the health and safety of Portfolio Company employees and any external parties, such as affected communities;',
-          style: 'text'
-        },
-        {
-          dKey: 6,
-          text: 'Implement responsible practices to ensure that good governance will enhance the reputation of the Fund and the Cayor brand at all times',
+          dKey: 'p02',
+          text: 'Rather, we seek to identify opportunities for enhancing the internal efficiencies and market opportunities of our portfolio companies through ESG management, while reducing the risks associated with our investment process. This approach is premised on the tenet that active ownership can add sustained value at exit and to the advancement of sustainable development within Africa.',
           style: 'text'
         }]
       }
     ],
-    fadeIn: true
-
+    strategyTextTable: [
+      {
+        header: 'Cayor\'s ESG Strategy',
+        details: [
+          {
+            dKey: 's00',
+            text: 'We have developed a strategy to achieve the requisite balance between environmental and social impact and generating commercial returns, all of which is underpinned by our ESG philosophy.',
+            style: 'subHeader'
+          },
+          {
+            dKey: 's01',
+            text: 'Starting at the initial stages of the investment process, we apply the principles described below to the Fund’s portfolio companies and their operational activities. Post-investment, we will closely monitor progress on ESG matters and compliance by portfolio companies relative to Cayor’s ESG framework and policy guidelines.',
+            style: 'text'
+          }
+        ]
+      }
+    ],
+    frameworkTableText: [
+      {
+        header: 'Our Framework and Policy Guidelines support the following objectives:',
+        template: 'bullet',
+        details: [{
+          dKey: 'f00',
+          text: 'Policy',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'f08',
+          text: 'To adhere to the UNPRI, and the IFC performance standards;',
+          style: 'text'
+        },
+        {
+          dKey: 'f01',
+          text: 'To partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;',
+          style: 'text'
+        },
+        {
+          dKey: 'f07',
+          text: 'To fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
+          style: 'text'
+        },
+        {
+          dKey: 'f09',
+          text: 'Process',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'f03',
+          text: 'To integrate ESG into our investment management framework through our ESG management system;',
+          style: 'text'
+        },
+        {
+          dKey: 'f02',
+          text: 'To conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications, as required;',
+          style: 'text'
+        },
+        {
+          dKey: 'f05',
+          text: 'To implement reasonable precautions to protect the health and safety of portfolio company employees and any external parties such as affected communities; and',
+          style: 'text'
+        },
+        {
+          dKey: 'f10',
+          text: 'Management',
+          style: 'subHeader'
+        },
+        {
+          dKey: 'f04',
+          text: 'To communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to conformance with our policy;',
+          style: 'text'
+        },
+        {
+          dKey: 'f06',
+          text: 'To implement responsible practices to ensure that good governance will enhance the reputation of the Fund and Cayor brand at all times',
+          style: 'text'
+        }]
+      }
+    ],
+    fadeIn: true,
+    currentDetailIdx: 0
   }
 
-    handleClick = (e) => {
-      console.log('handle sub navigation click', e);
+  handleClick = (e) => {
+    console.log('handle sub navigation click esg');
+    const { navItems } = this.state;
+    const currentNavItem = pickBy(navItems, item => e.target.innerText.toLowerCase() === item.value.toLowerCase());
+    const index = Number(findKey(currentNavItem))-1;
+    // debugger;
+    // const newIndex = navItems.indexOf({value: e.target.innerText)
+    this.setState({
+      currentDetails: e.target.innerText.toLowerCase(),
+      fadeIn: true,
+      currentDetailIdx: index
+    })
+  }
 
-      this.setState({
-        fadeIn: true,
-        currentDetails: e.target.innerText.toLowerCase()
-      })
+
+  renderDetails() {
+    console.log('renderDetails');
+    const {currentDetails, fadeIn, philosophyTextTable, strategyTextTable, frameworkTableText} = this.state;
+    if (currentDetails === 'esg philosophy') {
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={philosophyTextTable}
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      )
+    } else if (currentDetails === 'esg strategy'){
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={ strategyTextTable }
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      );
+    } else {
+      return (
+        <TextTableContainer
+          fadeIn={fadeIn}
+          currentDetails={currentDetails}
+          text={ frameworkTableText }
+          currentDetailIdx={0}
+          handleButtonClick={this.handleButtonClick} />
+      );
     }
-
-  // renderDetails() {
-  //   const {currentDetails} = this.state;
-  //   if (currentDetails === 'Philosophy') {
-  //     return <EsgPhilosophyDetails pageDetails={this.state.philosophyText} />
-  //   } else if (currentDetails === 'Strategy') {
-  //     return <EsgStrategyDetails pageDetails={this.state.strategyText} />
-  //   } else if (currentDetails === 'Framework') {
-  //     return <EsgFrameworkDetails pageDetails={this.state.frameworkText} />
-  //   }
-  // }
+  }
 
   render() {
-    const { currentDetails, fadeIn, navItems, frameworkTableText, philosophyText, strategyText } = this.state;
-
+    const { currentDetails, currentDetailIdx, fadeIn, navItems } = this.state;
+    // { currentDetails === 'framework' ?
+    //   <TextTableContainer
+    //   currentDetails={currentDetails}
+    //   text={frameworkTableText}/>
+    //   : null
+    // }
+    // {/* currentDetails !== 'framework' &&
+    //   <PageDetails
+    //     fadeIn={fadeIn}
+    //     pageDetails={currentDetails === 'philosophy' ? philosophyTextTable : strategyText} />
+    // */}
     return (
       <div className="esg">
         <Navigation
           history={this.props.history}
           location={this.props.location}
-          handleClick={this.props.handleClick}
+          handleClockClick={this.props.handleClockClick}
           headerImg='esg' />
           <main className='body'>
             <SubNav
@@ -101,18 +195,9 @@ class Esg extends Component {
               match={this.props.match}
               handleClick={this.handleClick}
               currentDetails={currentDetails}
+              currentDetailIdx={currentDetailIdx}
               fadeIn={fadeIn} />
-              { currentDetails === 'Framework' ?
-                <TextTableContainer
-                currentDetails={currentDetails}
-                text={frameworkTableText}/>
-                : null
-              }
-              {currentDetails !== 'Framework' &&
-                <PageDetails
-                  fadeIn={fadeIn}
-                  pageDetails={currentDetails === 'Philosophy' ? philosophyText : strategyText} />
-              }
+              { this.renderDetails() }
           </main>
         <Footer location={this.props.location} />
       </div>

@@ -1,18 +1,27 @@
 .snapshot {
   width: 48%;
   height: 130px;
-  border: 1px solid #9B1D1F;
-  background-color: #9B1D1F;
-  color: #ffffff;
+  color: #113a6e;
   display: flex;
   flex-flow: row wrap;
   margin: 2% 1%; }
   .snapshot .headshot {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 0; }
+  .snapshot.active {
+    order: 1;
+    width: 100%;
+    transform: scale(1.1);
+    background-color: #D5d5d561; }
+  .snapshot.inactive {
+    transform: scale(0.8);
+    order: 10; }
   .snapshot .text {
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
-    margin-top: 7%; }
+    align-content: flex-start;
+    margin-left: 5%; }
+  .snapshot .collapse {
+    width: 100%;
+    border-top: 1px solid #9B1D1F; }
