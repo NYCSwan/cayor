@@ -1,0 +1,11 @@
+.card .card-body {
+  margin: 10px 10% 10px 0; }
+  .card .card-body .card-subtitle {
+    color: #9B1D1F;
+    float: left;
+    text-align: left;
+    display: block;
+    width: 100%; }
+  .card .card-body .card-text {
+    text-align: left;
+    width: 90%; }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Fade, Collapse } from 'reactstrap';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/fontawesome-free-solid';
 import Dafe from '../media/Accra.jpg';
 import Fungai from '../media/Accra.jpg';
 import Yannick from '../media/Accra.jpg';
@@ -25,16 +27,21 @@ const Snapshot = (props) => (
     key={props.name}
     className={[props.isOpen && !props.name.includes(props.currentPerson) ? 'snapshot inactive' : 'snapshot', props.isOpen && props.name.includes(props.currentPerson) ? `active` : null ]}>
     {getImage(props.name, props.handleClick)}
-    {/* props.isOpen && props.name.includes(props.currentPerson) ?
-      null
-      :
-    */}
       <div
         className='text'
         onClick={props.handleClick}>
         <h4 className={props.name}>{props.name}</h4>
         <h5 className={props.name}>{props.role}</h5>
       </div>
+      {
+        props.isOpen && props.name.includes(props.currentPerson) ?
+        <FontAwesomeIcon
+        onClick={props.handleClose}
+        className={'close'}
+        icon={faTimes}
+        pull='right' />
+        : null
+      }
     <Collapse
       isOpen={props.isOpen && props.name.includes(props.currentPerson)}>
       <PopOut
