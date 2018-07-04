@@ -12,7 +12,6 @@ import './navigation.css';
 class Navigation extends Component {
   state = {
     contactLocation: '',
-    // isContactModalOpen: false,
     joburgContactDetails: [
       {
         location: 'Johannesburg',
@@ -56,7 +55,7 @@ class Navigation extends Component {
   renderContactPopover = () => {
     console.log('renderContactPopover');
     const { contactLocation, accraContactDetails, joburgContactDetails } = this.state;
-    const { isContactModalOpen, fadeIn } = this.props;
+    const { isContactModalOpen, fadeIn, handleClose } = this.props;
     // debugger
     if (contactLocation === 'accra') {
       return (
@@ -64,6 +63,7 @@ class Navigation extends Component {
           fadeIn={fadeIn}
           contactDetails={accraContactDetails}
           contactLocation={contactLocation}
+          handleClose={handleClose}
           isContactModalOpen={isContactModalOpen} />
       )
     } else {
@@ -72,6 +72,7 @@ class Navigation extends Component {
           fadeIn={fadeIn}
           contactDetails={joburgContactDetails}
           contactLocation={contactLocation}
+          handleClose={handleClose}
           isContactModalOpen={isContactModalOpen} />
       )
     }
@@ -95,16 +96,16 @@ class Navigation extends Component {
               <ul className='nav'>
                 <li className='linkContainer'>
                   <NavLink to='/people' activeClassName="selected"
-                  className='link'>PEOPLE</NavLink></li>
+                  className='link people'>PEOPLE</NavLink></li>
                 <li className='linkContainer'>
                   <NavLink to='/opportunity' activeClassName="selected"
-                  className='link'>OPPORTUNITY</NavLink></li>
+                  className='link opportunity'>OPPORTUNITY</NavLink></li>
                 <li className='linkContainer'>
                   <NavLink to='/approach' activeClassName="selected"
-                  className='link'>APPROACH</NavLink></li>
+                  className='link approach'>APPROACH</NavLink></li>
                 <li className='linkContainer'>
                   <NavLink to='/esg' activeClassName="selected"
-                  className='link'>ESG</NavLink></li>
+                  className='link esg'>ESG</NavLink></li>
               </ul>
               <div className='clocks'>
                 <div

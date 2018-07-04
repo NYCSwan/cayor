@@ -13,7 +13,7 @@ const ContactForm = (props) => (
     isOpen={props.isContactModalOpen}>
 
     <PopoverHeader>
-      <FontAwesomeIcon className={'times'} icon={faTimes} pull='right' />
+      <FontAwesomeIcon onClick={props.handleClose} className={'times'} icon={faTimes} pull='right' />
       <h5>CONTACT US</h5>
     </PopoverHeader>
     <PopoverBody>

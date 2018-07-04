@@ -8,10 +8,10 @@ import TextTableContainer from '../layout/text-table-container.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
-import Agribusiness from '../media/world.png';
-import FashionStore from '../media/middle_class.jpg';
-import MiddleClass from '../media/canal.jpg';
-// import ConsumerMarket from '../media/consumer-market.jpg';
+import Agribusiness from '../media/agribusiness.jpg';
+import Manufacturing from '../media/manufacturing.jpg';
+import MiddleClass from '../media/middle_class.jpg';
+import Infrastructure from '../media/working_manufacturing.jpg'
 import SectorsContainer from './sectors_container.react';
 import './approach.css';
 
@@ -176,7 +176,7 @@ class Approach extends Component {
     sectorsTableText: [
       {
         header: 'Financial Services',
-        image: Agribusiness,
+        image: Infrastructure,
         template: 'bullet',
         details: [{
           dKey: 'f00',
@@ -246,7 +246,7 @@ class Approach extends Component {
       },
       {
         header: 'Consumer Goods & Services',
-        image: FashionStore,
+        image: Manufacturing,
         template: 'bullet',
         details: [{
           dKey: 'c00',
@@ -475,7 +475,8 @@ class Approach extends Component {
       }
     ],
     fadeIn: true,
-    currentDetailIdx: 0
+    currentDetailIdx: 0,
+    buttonDisabled: false
   }
 
   handleClick = (e) => {
@@ -485,6 +486,12 @@ class Approach extends Component {
     const index = Number(findKey(currentNavItem))-1;
     // debugger;
     // const newIndex = navItems.indexOf({value: e.target.innerText)
+    if (index === 3 || index === 8) {
+      this.setState({ buttonDisabled: true })
+    } else {
+      this.setState({ buttonDisabled: false })
+    }
+
     this.setState({
       currentDetails: e.target.innerText.toLowerCase(),
       fadeIn: true,
@@ -492,28 +499,48 @@ class Approach extends Component {
     })
   }
 
-  handleButtonClick = (e) => {
+  handleButtonClick = () => {
     const { navItems, currentDetailIdx } = this.state;
-    // const {text} = this.props;
-    const maxIndex = navItems.length-1;
-
-    if (e.target.value === "Next" && currentDetailIdx !== maxIndex){
+    const maxIndex = navItems.length -2;
+    const index = currentDetailIdx +1;
+    const details = navItems[index+1].value.toLowerCase();
+// debugger
+    if (currentDetailIdx === -1) {
       this.setState({
-        currentDetailIdx: currentDetailIdx +1
+        currentDetailIdx: index,
+        currentDetails: 'clear imvestment philosophy',
+        buttonDisabled: false
       })
-    } else if (e.target.value === "Next" && currentDetailIdx === maxIndex){
+    } else if (currentDetailIdx === 0) {
       this.setState({
-        currentDetailIdx: 0
+        currentDetailIdx: index,
+        currentDetails: 'middle market focus',
+        buttonDisabled: false
+      })
+    } else if (currentDetailIdx === 2){
+      this.setState({
+        currentDetailIdx: index,
+        currentDetails: details,
+        buttonDisabled: true
+      })
+    } else if (index !== maxIndex){
+      this.setState({
+        currentDetailIdx: index,
+        currentDetails: details,
+        buttonDisabled: false
       })
     } else {
       this.setState({
-        currentDetailIdx: maxIndex
+        currentDetailIdx: maxIndex,
+        currentDetails: details,
+        buttonDisabled: true
       })
+
     }
   }
 // refactor this ish
   renderTextDetails() {
-    const { currentDetails, currentDetailIdx, fadeIn, investmentCriteriaTableText, sectorsTableText, regionsTableText, cayorApproachTableText } = this.state;
+    const { currentDetails, currentDetailIdx, fadeIn, investmentCriteriaTableText, sectorsTableText, regionsTableText, cayorApproachTableText, buttonDisabled } = this.state;
 
     if (currentDetails === 'clear investment philosophy' || currentDetails === 'middle market focus' || currentDetails === 'structured deal origination' || currentDetails === 'deal & portfolio mgmt') {
       // debugger
@@ -521,6 +548,7 @@ class Approach extends Component {
         <TextTableContainer
           location={this.props.location.pathname.split('/')[1]}
           fadeIn={fadeIn}
+          disabled={buttonDisabled}
           currentDetails={currentDetails}
           text={cayorApproachTableText}
           currentDetailIdx={currentDetailIdx}
@@ -541,6 +569,7 @@ class Approach extends Component {
       return (
         <TextTableContainer
           location={this.props.location.pathname.split('/')[1]}
+          disabled={buttonDisabled}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           currentDetailIdx={0}
@@ -551,6 +580,7 @@ class Approach extends Component {
       return (
         <TextTableContainer
           location={this.props.location.pathname.split('/')[1]}
+          disabled={buttonDisabled}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           currentDetailIdx={1}
@@ -569,6 +599,7 @@ class Approach extends Component {
       return (
         <TextTableContainer
           location={this.props.location.pathname.split('/')[1]}
+          disabled={buttonDisabled}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           text={cayorApproachTableText}
@@ -579,13 +610,15 @@ class Approach extends Component {
   }
 
   render() {
-    const { navItems, currentDetails, currentDetailIdx } = this.state;
+    const { navItems, fadeIn, currentDetails, currentDetailIdx } = this.state;
 
     return (
       <div className="approach">
         <Navigation
+          fadeIn={fadeIn}
           history={this.props.history}
           location={this.props.location}
+          handleClose={this.props.handleClose}
           handleClockClick={this.props.handleClockClick}
           isContactModalOpen={this.props.isContactModalOpen}
           headerImg='approach' />

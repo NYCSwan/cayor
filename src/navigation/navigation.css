@@ -1,50 +1,3 @@
-h1 {
-  font-size: 2.5rem; }
-
-h2 {
-  font-size: 2.25rem; }
-
-h3 {
-  font-size: 2rem; }
-
-h4 {
-  font-size: 1.75rem; }
-
-h5 {
-  font-size: 1.5rem; }
-
-h6 {
-  font-size: 1.25rem; }
-
-p {
-  font-size: 1rem; }
-
-@media (max-width: 480px) {
-  html {
-    font-size: 12px; } }
-
-@media (min-width: 480px) {
-  html {
-    font-size: 13px; } }
-
-@media (min-width: 768px) {
-  html {
-    font-size: 14px; } }
-
-@media (min-width: 992px) {
-  html {
-    font-size: 15px; } }
-
-@media (min-width: 1200px) {
-  html {
-    font-size: 16px; } }
-
-.left {
-  float: left; }
-
-.right {
-  float: right; }
-
 .header {
   width: 100%;
   z-index: 1;
@@ -109,20 +62,35 @@ p {
               list-style: none;
               display: inline;
               color: inherit;
-              order: 1;
-              padding-bottom: 39%; }
+              order: 1; }
               .header #accra #jbg .right .nav .linkContainer .link.selected {
                 font-size: 1.1em;
                 font-weight: bold;
                 align-self: baseline;
                 border-bottom: 2px solid #9B1D1F;
-                line-height: 1;
-                padding-bottom: 38%; }
+                line-height: 1; }
               .header #accra #jbg .right .nav .linkContainer .link:hover {
-                border-bottom: 2px solid #9B1D1F;
-                text-decoration: none; }
+                font-weight: 700;
+                text-decoration: none;
+                color: #9B1D1F; }
+              .header #accra #jbg .right .nav .linkContainer .link.people {
+                padding-bottom: 68%; }
+                .header #accra #jbg .right .nav .linkContainer .link.people:hover {
+                  padding-bottom: 77%; }
+              .header #accra #jbg .right .nav .linkContainer .link.opportunity {
+                padding-bottom: 38%; }
+                .header #accra #jbg .right .nav .linkContainer .link.opportunity:hover {
+                  padding-bottom: 42%; }
+              .header #accra #jbg .right .nav .linkContainer .link.approach {
+                padding-bottom: 50%; }
+                .header #accra #jbg .right .nav .linkContainer .link.approach:hover {
+                  padding-bottom: 56%; }
+              .header #accra #jbg .right .nav .linkContainer .link.esg {
+                padding-bottom: 136%; }
+                .header #accra #jbg .right .nav .linkContainer .link.esg:hover {
+                  padding-bottom: 154%; }
         .header #accra #jbg .right .clocks {
-          width: 15%;
+          width: 18%;
           display: flex;
           flex-flow: row;
           order: 2; }
@@ -134,8 +102,14 @@ p {
             align-items: center;
             margin-right: 1%;
             height: auto; }
+            .header #accra #jbg .right .clocks .clock-container:hover {
+              cursor: grab;
+              color: #9B1D1F;
+              font-weight: bolder; }
             .header #accra #jbg .right .clocks .clock-container h6 {
               margin-left: 1%;
               padding-left: 15%;
               text-align: left;
-              font-size: .7em; }
+              font-size: .8em;
+              align-self: center;
+              margin-top: 7%; }

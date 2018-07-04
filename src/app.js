@@ -45,10 +45,10 @@ class App extends Component {
   //   }
   // }
 
-  // handleModalClose = () => {
-  //   console.log('handle modal close-- TBD');
-  //   this.setState({ isContactModalOpen: false });
-  // }
+  handleModalClose = () => {
+    console.log('handle modal close');
+    this.setState({ isContactModalOpen: false });
+  }
 
 
   // togglePageTransition = () => {
@@ -64,6 +64,7 @@ class App extends Component {
       <div className="App">
         <Routes
           className='routes'
+          handleClose={this.handleModalClose}
           transitionKey={this.props.match.path}
           handleClick={this.handleClick}
           location={this.props.location}

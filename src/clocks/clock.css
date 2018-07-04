@@ -1,34 +1,43 @@
 .clock {
   border-radius: 50%;
-  background: #fff url(/images/posts/clocks/ios_clock.svg) no-repeat center;
-  background-size: 88%;
-  border: 1px solid black;
-  height: 25px;
+  background: #D5d5d561;
+  border: 2px solid #113a6e;
+  height: 30px;
   position: relative;
-  width: 15px;
+  width: 30px;
   display: inline-block; }
   .clock .minute-container, .clock .hour-container {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0; }
-  .clock .hour {
-    background: #000;
-    height: 20%;
-    left: 48.75%;
+    left: 0;
+    z-index: 1; }
+  .clock .clockButton {
     position: absolute;
-    top: 30%;
+    z-index: 10;
+    left: 42%;
+    top: 44%;
+    width: 4px;
+    height: 4px;
+    background-color: #113a6e;
+    border-radius: 50%; }
+  .clock .hour {
+    background: #113a6e;
+    height: 25%;
+    left: 47%;
+    position: absolute;
+    top: 28%;
     transform-origin: 50% 100%;
-    width: 14%; }
+    width: 8%; }
   .clock .minute {
-    background: #000;
-    height: 40%;
-    left: 49%;
+    background: #113a6e;
+    height: 45%;
+    left: 42%;
     position: absolute;
     top: 10%;
     transform-origin: 50% 100%;
-    width: 11%; }
+    width: 8%; }
   .clock .hour-container {
     animation: rotate 43200s infinite linear; }
   .clock .minute-container {

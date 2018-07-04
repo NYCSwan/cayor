@@ -22,8 +22,7 @@ const SubNav = (props) => (
             }
           </li>
         )
-      }
-      )}
+      })}
     </ul>
   </aside>
 )

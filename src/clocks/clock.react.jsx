@@ -43,6 +43,7 @@ class Clock extends Component {
       { this.state.time &&
         <div>
           <MinuteHand className={this.props.className} time={this.state.time} />
+          <div className='clockButton'></div>
           <HourHand className={this.props.className} time={this.state.time} />
         </div>
       }

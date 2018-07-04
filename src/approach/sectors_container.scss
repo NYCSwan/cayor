@@ -1,3 +1,5 @@
+@import '../_variables';
+
 .SectorsContainer {
   display: flex;
   flex-flow: row wrap;
@@ -9,56 +11,103 @@
   }
   .Financial {
     &.Services {
-      width: 35%;
+      width: 45%;
       height: 33%;
-      .headerImg {
-        width: 70px;
-        height: 70px;
+      .text-table {
+
+        .headerContainer {
+          border-left: 2px solid $cayorRed;
+          border-bottom: 2px solid $cayorRed;
+          padding: 2px;
+          h4 {
+            display: inline-block;
+            line-height: normal;
+            padding-top: 5%;
+          }
+        }
       }
-      .text {
-        padding-top: 5px;
-        padding-bottom: 0;
+
+      .approach {
+        padding-top: 10px;
+        .text {
+          padding-top: 5px;
+          padding-bottom: 0;
+          margin-left: 25%;
+        }
       }
     }
   }
   .Infrastructure {
     &.Services {
-      width: 35%;
+      width: 45%;
       height: 33%;
-      .headerImg {
-        width: 70px;
-        height: 70px;
+      .headerContainer {
+        border-left: 2px solid $cayorRed;
+        border-bottom: 2px solid $cayorRed;
+        padding: 2px;
+        h4 {
+          display: inline-block;
+          line-height: normal;
+          padding-top: 5%;
+        }
       }
-      .text {
-        padding-top: 5px;
-        padding-bottom: 0;
+
+      .approach {
+        padding-top: 10px;
+        .text {
+          padding-top: 5px;
+          padding-bottom: 0;
+          margin-left: 25%;
+        }
       }
     }
   }
   .Consumer {
     &.Goods {
-      width: 35%;
+      width: 45%;
       height: 33%;
-      .headerImg {
-        width: 70px;
-        height: 70px;
+      .headerContainer {
+        border-left: 2px solid $cayorRed;
+        border-bottom: 2px solid $cayorRed;
+        padding: 2px;
+        h4 {
+          display: inline-block;
+          line-height: normal;
+          padding-top: 5%;
+        }
       }
-      .text {
-        padding-top: 5px;
-        padding-bottom: 0;
+
+      .approach {
+        padding-top: 10px;
+        .text {
+          padding-top: 5px;
+          padding-bottom: 0;
+          margin-left: 25%;
+        }
       }
     }
   }
   .Agribusiness {
-    width: 35%;
+    width: 45%;
     height: 33%;
-    .headerImg {
-      max-width: 70px;
-      max-height: 70px;
+    .headerContainer {
+      border-left: 2px solid $cayorRed;
+      border-bottom: 2px solid $cayorRed;
+      padding: 2px;
+      h4 {
+        display: inline-block;
+        line-height: normal;
+        padding-top: 5%;
+      }
     }
-    .text {
-      padding-top: 5px;
-      padding-bottom: 0;
+    
+    .approach {
+      padding-top: 10px;
+      .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+        margin-left: 25%;
+      }
     }
   }
 }

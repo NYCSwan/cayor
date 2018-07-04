@@ -27,7 +27,7 @@ class Routes extends Component {
   const currentKey = this.props.location.pathname.split('/')[1] || '/';
   const timeout = { enter: 1850, exit: 800 };
   console.log('currentKey', currentKey);
-  const {handleClick, isContactModalOpen} = this.props;
+  const {handleClick, isContactModalOpen, handleClose} = this.props;
 
     return (
       <Router history={history}>
@@ -46,30 +46,35 @@ class Routes extends Component {
                     location={location}>
                     <Route exact path="/" render={(routeProps) => { // eslint-disable-line
                       return <Homepage
+                        handleClose={handleClose}
                         handleClockClick={handleClick}
                         isContactModalOpen={isContactModalOpen}
                         {...routeProps} /> }}
                       />
                     <Route exact path="/people" render={(routeProps) => { // eslint-disable-line
                       return <People
+                        handleClose={handleClose}
                       handleClockClick={handleClick}
                       isContactModalOpen={isContactModalOpen}
                         {...routeProps} /> }}
                         />
                     <Route path="/opportunity" exact render={(routeProps) => { // eslint-disable-line
                       return <Opportunities
+                        handleClose={handleClose}
                       handleClockClick={handleClick}
                       isContactModalOpen={isContactModalOpen}
                         {...routeProps} /> }}
                         />
                     <Route path="/approach" exact render={(routeProps) => { // eslint-disable-line
                       return <Approach
+                        handleClose={handleClose}
                       handleClockClick={handleClick}
                       isContactModalOpen={isContactModalOpen}
                       {...routeProps} /> }}
                       />
                     <Route path="/esg" exact render={(routeProps) => { // eslint-disable-line
                       return <Esg
+                        handleClose={handleClose}
                       handleClockClick={handleClick}
                       isContactModalOpen={isContactModalOpen}
                       {...routeProps} /> }}
