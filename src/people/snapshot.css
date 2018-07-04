@@ -16,12 +16,20 @@
     background-color: #D5d5d561; }
   .snapshot.inactive {
     transform: scale(0.8);
-    order: 10; }
+    order: 10;
+    display: none; }
   .snapshot .text {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    width: 60%;
     margin-left: 5%; }
+  .snapshot .close {
+    position: absolute;
+    top: 10px;
+    right: 20px; }
   .snapshot .collapse {
     width: 100%;
     border-top: 1px solid #9B1D1F; }
+    .snapshot .collapse .show {
+      width: 48%; }

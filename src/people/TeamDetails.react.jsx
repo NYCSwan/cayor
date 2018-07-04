@@ -14,8 +14,7 @@ class TeamDetails extends Component {
     console.log('handle person click');
     const { teamDetails } = this.props;
     const teamMember = [];
-    // debugger;
-    if (e.target.className.includes('Fungai Ruwende')) {
+    if (e.target.classList.value === 'Fungai Ruwende') {
       teamMember.push(teamDetails[0].summary);
       teamMember.push(teamDetails[0].experience);
       teamMember.push(teamDetails[0].education);
@@ -24,7 +23,7 @@ class TeamDetails extends Component {
         personDetails: teamMember,
         currentPerson: 'Fungai'
       })
-    } else if ( e.target.className.includes('Dafe Diejomaoh')) {
+    } else if ( e.target.classList.value === 'Dafe Diejomaoh') {
       teamMember.push(teamDetails[1].summary);
       teamMember.push(teamDetails[1].experience);
       teamMember.push(teamDetails[1].education);
@@ -32,7 +31,7 @@ class TeamDetails extends Component {
         personDetails: teamMember,
         currentPerson: 'Dafe'
       })
-    } else if ( e.target.className.includes('Yannick Mpollo')) {
+    } else if ( e.target.classList.value === 'Yannick Mpollo') {
       teamMember.push(teamDetails[2].summary);
       teamMember.push(teamDetails[2].experience);
       teamMember.push(teamDetails[2].education);
@@ -48,6 +47,7 @@ class TeamDetails extends Component {
         personDetails: teamMember,
         currentPerson: 'Kofi'
       })
+      // debugger;
     }
     this.setState({ isOpen: true });
 
@@ -56,10 +56,10 @@ class TeamDetails extends Component {
   handleClose = () => {
     this.setState({ isOpen: false });
   }
+
   render() {
     const { isOpen, personDetails, currentPerson } = this.state;
     const { teamDetails } = this.props;
-
     return (
       <div className="TeamDetails">
 
