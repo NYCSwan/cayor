@@ -2,13 +2,19 @@
 @import './_defaults';
 @import './_mixins';
 
-  .App {
-    text-align: center;
-    height: 100vh;
-    color: $primaryText;
-    font-family: $copy-font-family;
-    font-weight: 400;
-    .routes {
-      min-height: 100vh;
+html {
+  height: 100%;
+  body {
+    height: 100%;
+    .App {
+      text-align: center;
+      height: 100vh;
+      color: $primaryText;
+      font-family: $copy-font-family;
+      font-weight: 400;
+      .routes {
+        min-height: 100vh;
+      }
     }
   }
+}

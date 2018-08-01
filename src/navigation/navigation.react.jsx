@@ -118,7 +118,7 @@ class Navigation extends Component {
                   onClick={this.handleClockClick}
                   className='jbg clock-container'>
                   <Clock className='jbg' offset='0'/>
-                  <h6 className='jbg'>JBG</h6>
+                  <h6 className='jbg'>JHB</h6>
                 </div>
               </div>
               </div>
