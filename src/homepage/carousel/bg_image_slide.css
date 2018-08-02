@@ -1,43 +1,48 @@
 .carousel {
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  z-index: 1; }
   .carousel.slide {
     min-height: 100%;
-    max-height: 100%;
-    max-width: 100%;
+    min-width: 100%;
     margin: 0;
     padding: 0;
-    display: block;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
     transition: opacity 600s ease; }
     .carousel.slide .carousel-inner {
-      height: 100%;
-      max-width: 100%; }
+      min-height: 100%;
+      min-width: 100%; }
       .carousel.slide .carousel-inner .carousel-item {
-        opacity: 0.1; }
+        opacity: 0.1;
+        min-height: 1024px; }
+        .carousel.slide .carousel-inner .carousel-item .linkContainer {
+          position: absolute;
+          bottom: 100%; }
+          .carousel.slide .carousel-inner .carousel-item .linkContainer .link {
+            top: -60%;
+            left: 45%;
+            z-index: 100; }
         .carousel.slide .carousel-inner .carousel-item .overlay {
-          position: relative; }
-          .carousel.slide .carousel-inner .carousel-item .overlay:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #0A234266;
-            -moz-transition: background .3s linear;
-            -webkit-transition: background .3s linear;
-            -o-transition: background .3s linear;
-            transition: background .3s linear; }
+          position: fixed;
+          min-height: 1024px;
+          height: inherit;
+          background-color: #0A234266;
+          z-index: 100;
+          opacity: 1; }
           .carousel.slide .carousel-inner .carousel-item .overlay .backgroundImage {
-            width: 100%; }
+            background-color: #0A234266;
+            width: 100%;
+            min-height: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            left: 0; }
         .carousel.slide .carousel-inner .carousel-item.active {
-          position: relative;
+          z-index: 100;
           opacity: 1;
-          margin: 0 auto; }
+          margin: 0;
+          height: 100%; }
           .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
             font-family: "Merriweather", serif;
             left: 1%;
@@ -45,7 +50,8 @@
             position: absolute;
             color: #ffffff;
             height: auto;
-            top: 15%; }
+            top: 25%;
+            z-index: 100; }
             .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
               font-size: 46px;
               font-weight: lighter;
@@ -56,28 +62,28 @@
               font-size: 18px;
               width: 50%;
               margin: 30px auto; }
-    .carousel.slide .carousel-control-next .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-      height: 40px;
-      width: 40px; }
-    .carousel.slide .carousel-control-prev .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-      height: 40px;
-      width: 40px; }
-      .carousel.slide .carousel-control-prev .carousel-control-prev-icon:hover {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230A2342' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-        width: 50px;
-        height: 50px;
-        padding: 5px;
-        margin: 10px;
-        border: 1px solid #113a6e; }
+    .carousel.slide .carousel-control-next {
+      z-index: 150; }
+      .carousel.slide .carousel-control-next .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+        opacity: 1;
+        height: 40px;
+        width: 40px; }
+    .carousel.slide .carousel-control-prev {
+      z-index: 150; }
+      .carousel.slide .carousel-control-prev .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        height: 40px;
+        width: 40px; }
     .carousel.slide .carousel-indicators {
       position: absolute;
-      bottom: 15%; }
+      bottom: 15%;
+      z-index: 150; }
       .carousel.slide .carousel-indicators li {
         background-color: #ffffff;
         border-radius: 50%;
         width: 10px;
-        height: 10px; }
+        height: 10px;
+        z-index: 150; }
         .carousel.slide .carousel-indicators li.active {
           background-color: #9B1D1F; }

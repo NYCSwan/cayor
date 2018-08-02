@@ -8,11 +8,12 @@ import TextTableContainer from '../layout/text-table-container.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
-import Agribusiness from '../media/agribusiness.jpg';
+import Agribusiness from '../media/agribusinessSquare.jpeg';
 import Manufacturing from '../media/manufacturing.jpg';
 import MiddleClass from '../media/middle_class.jpg';
 import Infrastructure from '../media/working_manufacturing.jpg'
 import SectorsContainer from './sectors_container.react';
+import FinTech from '../media/computer.jpg';
 import './approach.css';
 
 
@@ -176,7 +177,7 @@ class Approach extends Component {
     sectorsTableText: [
       {
         header: 'Financial Services',
-        image: Infrastructure,
+        image: FinTech,
         template: 'bullet',
         details: [{
           dKey: 'f00',
@@ -202,17 +203,12 @@ class Approach extends Component {
           dKey: 'f04',
           text: 'Payments',
           style: 'text'
-        },
-        {
-          dKey: 'f05',
-          text: 'Financial Infrastructure',
-          style: 'text'
         }]
       },
       {
         header: 'Infrastructure Services',
         template: 'bullet',
-        image: MiddleClass,
+        image: Infrastructure,
         details: [{
           dKey: 'i00',
           text: 'Materials (E.g.: Steel & Cement)',
@@ -235,11 +231,6 @@ class Approach extends Component {
         },
         {
           dKey: 'i04',
-          text: 'Engineering Services',
-          style: 'text'
-        },
-        {
-          dKey: 'i05',
           text: 'Repairs & Maintenance',
           style: 'text'
         }]

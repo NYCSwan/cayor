@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import Clock from '../clocks/clock.react';
-import ColorLogo from '../media/cayor_color.png';
+// import ColorLogo from '../media/cayor_color.png';
 import WhiteLogo from '../media/grey-white-icon.png';
 import ContactForm from '../contact/contact_form.react';
 import Accra from '../media/Ghana_map.jpg';
@@ -86,7 +86,7 @@ class Navigation extends Component {
         <NavLink to='/' className='logo-container'>
           <img
             className='logo'
-            src={this.props.location.pathname === '/' ? WhiteLogo : ColorLogo }
+            src={ WhiteLogo }
             alt='logo' />
         </NavLink>
 
@@ -118,7 +118,7 @@ class Navigation extends Component {
                   onClick={this.handleClockClick}
                   className='jbg clock-container'>
                   <Clock className='jbg' offset='0'/>
-                  <h6 className='jbg'>JBG</h6>
+                  <h6 className='jbg'>JHB</h6>
                 </div>
               </div>
               </div>

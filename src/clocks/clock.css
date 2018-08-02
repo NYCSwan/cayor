@@ -1,10 +1,10 @@
 .clock {
   border-radius: 50%;
   background: #D5d5d561;
-  border: 2px solid #113a6e;
-  height: 30px;
+  border: 1px solid #113a6e;
+  height: 22px;
   position: relative;
-  width: 30px;
+  width: 22px;
   display: inline-block; }
   .clock .minute-container, .clock .hour-container {
     position: absolute;
@@ -18,8 +18,8 @@
     z-index: 10;
     left: 42%;
     top: 44%;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background-color: #113a6e;
     border-radius: 50%; }
   .clock .hour {
@@ -27,7 +27,7 @@
     height: 25%;
     left: 47%;
     position: absolute;
-    top: 28%;
+    top: 15%;
     transform-origin: 50% 100%;
     width: 8%; }
   .clock .minute {

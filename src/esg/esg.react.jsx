@@ -7,7 +7,6 @@ import TextTableContainer from '../layout/text-table-container.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
-import Business from '../media/business.jpg'
 import './esg.css';
 
 class Esg extends Component {

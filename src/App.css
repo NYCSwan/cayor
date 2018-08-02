@@ -45,11 +45,15 @@ p {
 .right {
   float: right; }
 
-.App {
-  text-align: center;
-  height: 100vh;
-  color: #444444;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400; }
-  .App .routes {
-    min-height: 100vh; }
+html {
+  height: 100%; }
+  html body {
+    height: 100%; }
+    html body .App {
+      text-align: center;
+      height: 100vh;
+      color: #444444;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 400; }
+      html body .App .routes {
+        min-height: 100vh; }

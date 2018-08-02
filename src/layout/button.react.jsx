@@ -4,7 +4,7 @@ import './button.css';
 const Button = (props) => (
   <button
     disabled={props.disabled}
-    className={props.style || 'button'}
+    className={ props.styles || 'button' }
     onClick={props.handleClick}
     value={props.value}>
     {props.text}
