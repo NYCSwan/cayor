@@ -2,11 +2,14 @@
 
 .snapshot {
   width: 48%;
-  height: 130px;
+  height: 104px;
   color: $primaryBlue;
   display: flex;
   flex-flow: row wrap;
-  margin: 2% 1%;
+  margin: 2% 1% 0 1%;
+  border-bottom: 2px solid $cayorRed;
+  border-left: 2px solid $cayorRed;
+  padding-left: 2px;
   .headshot {
     width: 100px;
     height: 100px;
@@ -18,6 +21,7 @@
     width: 100%;
     transform:scale(1.1);
     background-color: $lightGreySemiTransparent;
+    border: none;
     .headshot {
 
     }
@@ -43,7 +47,7 @@
   }
   .collapse {
     width: 100%;
-    border-top: 1px solid $cayorRed;
+    border-top: 2px solid $cayorRed;
     .show {
       width: 48%;
     }
