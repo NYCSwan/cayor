@@ -44,10 +44,13 @@ class BgImageSlide extends Component {
     direction: 'prev'
   }
 
-  componentDidMount() {
-    this.animating;
-  }
+  // componentDidMount() {
+  //   this.animating;
+  // }
 
+  componentWillUnmount() {
+    this.animating = false;
+  }
   onExiting = () => {
     console.log('on exiting');
     this.animating = true;
@@ -134,13 +137,13 @@ class BgImageSlide extends Component {
         </CarouselItem>
       )
     });
-
+// ride='carousel'
     return (
       <Carousel
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
-        ride='carousel'>
+        >
         <CarouselIndicators
           items={items}
           activeIndex={activeIndex} onClickHandler={this.goToIndex} />

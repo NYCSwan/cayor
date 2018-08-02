@@ -18,7 +18,7 @@ const TextTableContainer = (props) => (
         <div>
           <Button
             disabled={props.disabled}
-            style={"button next interior"}
+            styles="button next interior"
             handleClick={props.handleButtonClick}
             value='Next'
             text='>>' />

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import Clock from '../clocks/clock.react';
-import ColorLogo from '../media/cayor_color.png';
+// import ColorLogo from '../media/cayor_color.png';
 import WhiteLogo from '../media/grey-white-icon.png';
 import ContactForm from '../contact/contact_form.react';
 import Accra from '../media/Ghana_map.jpg';
@@ -86,7 +86,7 @@ class Navigation extends Component {
         <NavLink to='/' className='logo-container'>
           <img
             className='logo'
-            src={this.props.location.pathname === '/' ? WhiteLogo : ColorLogo }
+            src={ WhiteLogo }
             alt='logo' />
         </NavLink>
 
