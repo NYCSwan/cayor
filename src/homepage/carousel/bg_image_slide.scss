@@ -32,9 +32,12 @@
             top: -60%;
             left: 45%;
             z-index: 100;
-            // margin-bottom: -50%;
+            margin-bottom: -50%;
+            color: $white;
+            font-weight: bold;
           }
         }
+        // shadow over image
         .overlay {
           position: fixed;
           min-height: 1024px;
@@ -44,12 +47,12 @@
           opacity: 1;
           // &:before {
           //   content: "";
-          //   display: block;
+          display: block;
           //   position: fixed;
-          //   top: 0;
-          //   bottom: 0;
-          //   left: 0;
-          //   right: 0;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
           //   -moz-transition: background .3s linear;
           //   -webkit-transition: background .3s linear;
           //   -o-transition: background .3s linear;
@@ -120,7 +123,6 @@
         opacity: 1;
         height: 40px;
         width: 40px;
-
       }
     }
 
@@ -130,7 +132,6 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
         height: 40px;
         width: 40px;
-
       }
     }
 
@@ -151,7 +152,6 @@
         }
       }
     }
-
   }
 }
 // ADD MEDIA QUERIES TO SHRINK IMAGE ACCORDINGLY
