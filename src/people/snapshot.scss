@@ -9,7 +9,7 @@
   margin: 2% 1% 0 1%;
   justify-content: flex-end;
   // align-items: flex-start;
-  align-content: flex-end;
+  align-content: flex-start;
   background-color: $primaryBlueSemiTransparent;
   // border: 2px solid $primaryGrey;
   // border-left: 2px solid $cayorRed;
@@ -26,12 +26,13 @@
     transform: scale(1.1);
     border: none;
     position: fixed;
-    top: 70%;
+    // top: 70%;
     z-index: 100;
     background-color: $primaryBlueSemiTransparent;
-
-    // .headshot {
-    // }
+    justify-content: flex-start;
+    .headshot {
+      float: right;
+    }
   }
 
   &.inactive {
@@ -41,10 +42,9 @@
   }
 
   .text {
-    // background-color: $primaryBlueSemiTransparent;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: stretch;
     width: 68%;
     margin-left: 5%;
@@ -55,21 +55,17 @@
     }
     h5 {
       align-self: baseline;
-      // margin-top: 4%;
       font-size: 1.2em;
     }
     h4,
     h5 {
       text-align: justify;
-      // &.Dafe, &.Fungai , &.Yannick, &.Kofi {
-      // width: 250px;
-      // height: 75px;
-      // }
     }
   }
   .close {
-    top: 10px;
-    right: 20px;
+    position: fixed;
+    top: 5%;
+    left: 95%;
   }
   .collapse {
     width: 100%;

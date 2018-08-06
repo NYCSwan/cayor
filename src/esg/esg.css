@@ -9,10 +9,16 @@
     align-items: stretch;
     justify-content: space-between; }
     .esg .body .framework {
-      background-color: blue; }
+      padding-top: 3%; }
       .esg .body .framework .text-table-container {
         width: inherit;
-        height: auto; }
+        height: 65%; }
+        .esg .body .framework .text-table-container .text-table {
+          padding-top: 10%;
+          overflow-y: scroll;
+          height: 550px; }
+          .esg .body .framework .text-table-container .text-table ul {
+            margin-top: 8%; }
   .esg.slide-appear.slide-appear-active {
     height: 100%;
     transition: height 400ms ease; }

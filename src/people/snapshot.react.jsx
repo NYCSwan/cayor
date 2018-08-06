@@ -52,6 +52,7 @@ const getImage = (name, handleClick) => {
   }
 };
 const activeClass = classNames({});
+
 const Snapshot = props => (
   <Fade
     in={props.fadeIn}
@@ -72,8 +73,8 @@ const Snapshot = props => (
       {props.isOpen ? null : (
         <Button
           disabled={props.isOpen}
-          styles="button more"
-          onClick={() => props.handleClick}
+          styles={`button more ${props.name}`}
+          onClick={props.handleClick}
           value="More"
           text="More"
         />

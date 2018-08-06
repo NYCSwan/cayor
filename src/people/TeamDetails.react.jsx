@@ -14,7 +14,8 @@ class TeamDetails extends Component {
     console.log('handle person click');
     const { teamDetails } = this.props;
     const teamMember = [];
-    if (e.target.classList.value === 'Fungai Ruwende') {
+
+    if (e.target.classList.value.includes('Fungai Ruwende')) {
       teamMember.push(teamDetails[0].summary);
       teamMember.push(teamDetails[0].experience);
       teamMember.push(teamDetails[0].education);
@@ -23,7 +24,7 @@ class TeamDetails extends Component {
         personDetails: teamMember,
         currentPerson: 'Fungai',
       });
-    } else if (e.target.classList.value === 'Dafe Diejomaoh') {
+    } else if (e.target.classList.value.includes('Dafe Diejomaoh')) {
       teamMember.push(teamDetails[1].summary);
       teamMember.push(teamDetails[1].experience);
       teamMember.push(teamDetails[1].education);
@@ -31,7 +32,7 @@ class TeamDetails extends Component {
         personDetails: teamMember,
         currentPerson: 'Dafe',
       });
-    } else if (e.target.classList.value === 'Yannick Mpollo') {
+    } else if (e.target.classList.value.includes('Yannick Mpollo')) {
       teamMember.push(teamDetails[2].summary);
       teamMember.push(teamDetails[2].experience);
       teamMember.push(teamDetails[2].education);

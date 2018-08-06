@@ -11,10 +11,18 @@
     align-items: stretch;
     justify-content: space-between;
     .framework {
-      background-color: blue;
+      padding-top: 3%;
       .text-table-container {
         width: inherit;
-        height: auto;
+        height: 65%;
+        .text-table {
+          padding-top: 10%;
+          overflow-y: scroll;
+          height: 550px;
+          ul {
+            margin-top: 8%;
+          }
+        }
       }
     }
   }

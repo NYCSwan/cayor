@@ -22,4 +22,5 @@
     max-width: 30%;
     background-color: #113a6e;
     color: #ffffff;
-    align-self: flex-end; }
+    align-self: flex-end;
+    display: inline; }
