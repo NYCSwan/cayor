@@ -2,19 +2,26 @@
   background: url("../media/countries.jpg") no-repeat center center;
   background-size: auto 75%;
   display: flex;
-  flex: column wrap;
-  justify-content: center;
+  flex: row wrap;
+  justify-content: space-between;
   width: 70%;
-  height: 65%; }
+  height: 60%; }
   .regionDetails .west-africa {
     width: 300px;
     order: 1;
+    position: fixed;
+    top: 30%;
     align-self: flex-start; }
   .regionDetails .east-africa {
     order: 10;
-    width: 300px;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    width: 250px;
     align-self: flex-start; }
   .regionDetails .south-africa {
-    width: 300px;
+    width: 400px;
     order: 1;
-    align-self: center; }
+    position: fixed;
+    left: inherit;
+    align-self: flex-end; }
