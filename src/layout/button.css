@@ -18,3 +18,8 @@
     font-weight: 300; }
     .button.next.interior:disabled {
       background-color: #D5d5d5; }
+  .button.more {
+    max-width: 30%;
+    background-color: #113a6e;
+    color: #ffffff;
+    align-self: flex-end; }

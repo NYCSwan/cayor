@@ -10,6 +10,13 @@
     flex: row;
     align-items: stretch;
     justify-content: space-between;
+    .framework {
+      background-color: blue;
+      .text-table-container {
+        width: inherit;
+        height: auto;
+      }
+    }
   }
   @include slide-appear;
   @include slide-enter;

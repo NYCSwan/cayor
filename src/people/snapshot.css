@@ -5,19 +5,21 @@
   display: flex;
   flex-flow: row wrap;
   margin: 2% 1% 0 1%;
-  border-bottom: 2px solid #9B1D1F;
-  border-left: 2px solid #9B1D1F;
-  padding-left: 2px; }
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  background-color: #0A234266; }
   .snapshot .headshot {
     width: 100px;
     height: 100px;
     margin: 0; }
   .snapshot.active {
     order: 1;
-    width: 100%;
+    width: 55%;
     transform: scale(1.1);
-    background-color: #D5d5d561;
-    border: none; }
+    border: none;
+    position: fixed;
+    top: 50%; }
   .snapshot.inactive {
     transform: scale(0.8);
     order: 10;
@@ -25,9 +27,19 @@
   .snapshot .text {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
     width: 60%;
     margin-left: 5%; }
+    .snapshot .text h4 {
+      border-bottom: 1px solid #D5d5d561;
+      color: #ffffff;
+      font-size: 1.5em; }
+    .snapshot .text h5 {
+      align-self: baseline;
+      padding-top: 2%;
+      font-size: 1.2em; }
+    .snapshot .text h4,
+    .snapshot .text h5 {
+      text-align: justify; }
   .snapshot .close {
     position: absolute;
     top: 10px;

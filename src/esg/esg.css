@@ -8,6 +8,11 @@
     flex: row;
     align-items: stretch;
     justify-content: space-between; }
+    .esg .body .framework {
+      background-color: blue; }
+      .esg .body .framework .text-table-container {
+        width: inherit;
+        height: auto; }
   .esg.slide-appear.slide-appear-active {
     height: 100%;
     transition: height 400ms ease; }

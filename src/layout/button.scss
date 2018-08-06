@@ -22,4 +22,10 @@
       background-color: $lightGrey;
     }
   }
+  &.more {
+    max-width: 30%;
+    background-color: $primaryBlue;
+    color: $white;
+    align-self: flex-end;
+  }
 }
