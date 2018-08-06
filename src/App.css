@@ -54,6 +54,7 @@ html {
       height: 100vh;
       color: #444444;
       font-family: "Josefin Sans", sans-serif;
-      font-weight: 400; }
+      font-weight: 400;
+      word-wrap: normal; }
       html body .App .routes {
         min-height: 100vh; }

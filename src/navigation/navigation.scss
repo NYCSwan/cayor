@@ -69,14 +69,14 @@
   // Right Navigation
   #accra {
     width: 80%;
-    justify-content: flex-end;
+    // justify-content: center;
     z-index: 1000;
-
+    // display: flex;
     #jbg {
       display: flex;
       flex-flow: row wrap;
       width: 100%;
-      justify-content: flex-end;
+      // justify-content: center;
       align-content: stretch;
       align-items: stretch;
       .right {
@@ -98,8 +98,8 @@
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
-          align-content: center;
-          align-items: center;
+          align-content: baseline;
+          align-items: flex-end;
           font-size: 0.8em;
           font-weight: 400;
           height: 100px;
@@ -112,45 +112,46 @@
               display: inline;
               color: inherit;
               order: 1;
+
               &.selected {
                 font-size: 1.1em;
                 font-weight: bold;
                 align-self: baseline;
-                border-bottom: 2px solid $cayorRed;
+                border-bottom: 3px solid $cayorRed;
                 line-height: 1;
               }
               &:hover {
-                // border-bottom: 2px solid $cayorRed;
+                border-bottom: 3px solid $cayorRed;
                 font-weight: 700;
                 text-decoration: none;
                 color: $cayorRed;
               }
 
               &.people {
-                padding-bottom: 68%;
+                padding-bottom: 118%;
                 &:hover {
-                  padding-bottom: 77%;
+                  padding-bottom: 133%;
                 }
               }
 
               &.opportunity {
-                padding-bottom: 38%;
+                padding-bottom: 63%;
                 &:hover {
-                  padding-bottom: 42%;
+                  padding-bottom: 72%;
                 }
               }
 
               &.approach {
-                padding-bottom: 50%;
+                padding-bottom: 85%;
                 &:hover {
-                  padding-bottom: 56%;
+                  padding-bottom: 97%;
                 }
               }
 
               &.esg {
-                padding-bottom: 136%;
+                padding-bottom: 236%;
                 &:hover {
-                  padding-bottom: 154%;
+                  padding-bottom: 260%;
                 }
               }
             }
@@ -163,14 +164,16 @@
           flex-flow: row;
           order: 2;
           z-index: 1000;
-
+          height: auto;
           .clock-container {
             width: 50%;
             display: flex;
             flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-end;
             margin-right: 2%;
+            // margin-top: -2%;
+
             height: auto;
             &:hover {
               cursor: grab;
@@ -178,13 +181,11 @@
               font-weight: bolder;
             }
             h6 {
-              margin-left: 1%;
+              margin-top: 83px;
               padding-left: 15%;
               text-align: left;
               font-size: 0.8em;
-              align-self: center;
-              margin-top: 7%;
-              // color: $primaryText;
+              align-self: flex-end;
             }
           }
         }
@@ -195,3 +196,5 @@
   // height: 0;
   // align-self: flex-end;
 }
+
+// media width 980 fix flex, etc.
