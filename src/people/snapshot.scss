@@ -2,34 +2,36 @@
 
 .snapshot {
   width: 48%;
-  height: 104px;
+  height: 105px;
   color: $primaryBlue;
   display: flex;
   flex-flow: row wrap;
   margin: 2% 1% 0 1%;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
+  justify-content: flex-end;
+  // align-items: flex-start;
+  align-content: flex-end;
   background-color: $primaryBlueSemiTransparent;
   // border: 2px solid $primaryGrey;
   // border-left: 2px solid $cayorRed;
   // padding-left: 2px;
   .headshot {
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 105px;
     margin: 0;
   }
 
   &.active {
-    order: 1;
+    // order: 10;
     width: 55%;
     transform: scale(1.1);
-    // background-color: $primaryBlueSemiTransparent;
     border: none;
     position: fixed;
-    top: 50%;
-    .headshot {
-    }
+    top: 70%;
+    z-index: 100;
+    background-color: $primaryBlueSemiTransparent;
+
+    // .headshot {
+    // }
   }
 
   &.inactive {
@@ -39,10 +41,12 @@
   }
 
   .text {
+    // background-color: $primaryBlueSemiTransparent;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    width: 60%;
+    justify-content: flex-end;
+    align-items: stretch;
+    width: 68%;
     margin-left: 5%;
     h4 {
       border-bottom: 1px solid $lightGreySemiTransparent;
@@ -51,7 +55,7 @@
     }
     h5 {
       align-self: baseline;
-      padding-top: 2%;
+      // margin-top: 4%;
       font-size: 1.2em;
     }
     h4,
@@ -64,7 +68,6 @@
     }
   }
   .close {
-    position: absolute;
     top: 10px;
     right: 20px;
   }
@@ -72,7 +75,9 @@
     width: 100%;
     border-top: 2px solid $cayorRed;
     .show {
-      width: 48%;
+      // width: 48%;
+      position: fixed;
+      top: 100%;
     }
   }
 }

@@ -69,13 +69,15 @@ const Snapshot = props => (
     <div className="text" onClick={props.handleClick}>
       <h4 className={props.name}>{props.name}</h4>
       <h5 className={props.name}>{props.role}</h5>
-      <Button
-        disabled={props.isOpen}
-        styles="button more"
-        onClick={() => props.handleClick}
-        value="More"
-        text="More"
-      />
+      {props.isOpen ? null : (
+        <Button
+          disabled={props.isOpen}
+          styles="button more"
+          onClick={() => props.handleClick}
+          value="More"
+          text="More"
+        />
+      )}
     </div>
     {props.isOpen && props.name.includes(props.currentPerson) ? (
       <FontAwesomeIcon
