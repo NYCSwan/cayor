@@ -1,0 +1,48 @@
+@import '../_variables';
+
+.scrollIcon {
+  color: $primaryBlue;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: 10;
+  -webkit-animation-iteration-count: 10;
+
+  @-webkit-keyframes bounce {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-5px);
+    }
+  }
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  // @keyframes fadeOut {
+  //   0% {
+  //     opacity: 1;
+  //   }
+  //   100% {
+  //     opacity: 0;
+  //   }
+  // }
+
+  &.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    // transition: fadeOut 9s 1s linear;
+    // transition-delay: 1s;
+  }
+}
