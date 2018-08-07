@@ -2,7 +2,6 @@ import React from 'react';
 import { Fade, Collapse } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/fontawesome-free-solid';
-import classNames from 'classnames';
 import Dafe from '../media/Accra.jpg';
 import Fungai from '../media/Accra.jpg';
 import Yannick from '../media/Accra.jpg';
@@ -51,7 +50,7 @@ const getImage = (name, handleClick) => {
     );
   }
 };
-const activeClass = classNames({});
+// const activeClass = classNames({});
 
 const Snapshot = props => (
   <Fade

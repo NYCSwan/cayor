@@ -10,7 +10,6 @@ import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
 import Agribusiness from '../media/agribusinessSquare.jpeg';
 import Manufacturing from '../media/canalSq.jpg';
-import MiddleClass from '../media/middle_class.jpg';
 import Infrastructure from '../media/working_manufacturing.jpg';
 import SectorsContainer from './sectors_container.react';
 import FinTech from '../media/computer.jpg';
@@ -248,7 +247,6 @@ class Approach extends Component {
             text: 'Equipment',
             style: 'text',
           },
-          ,
           {
             dKey: 'a02',
             text: 'Storage',

@@ -7,7 +7,6 @@ import TextTableContainer from '../layout/text-table-container.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import Footer from '../layout/footer.react';
 import ScrollIndicator from '../layout/scrollIndicator.react';
-
 import Navigation from '../navigation/navigation.react';
 import './esg.css';
 
