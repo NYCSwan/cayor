@@ -12,6 +12,7 @@ html {
       color: $primaryText;
       font-family: $copy-font-family;
       font-weight: 400;
+      word-wrap: normal;
       .routes {
         min-height: 100vh;
       }

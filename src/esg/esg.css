@@ -8,6 +8,23 @@
     flex: row;
     align-items: stretch;
     justify-content: space-between; }
+    .esg .body .framework {
+      padding-top: 3%; }
+      .esg .body .framework .text-table-container {
+        width: inherit;
+        height: 65%; }
+        .esg .body .framework .text-table-container .text-table {
+          padding-top: 10%;
+          overflow-y: scroll;
+          height: 550px; }
+          .esg .body .framework .text-table-container .text-table ul {
+            margin-top: 8%; }
+      .esg .body .framework .scrollIcon {
+        position: fixed;
+        width: 100px;
+        height: auto;
+        right: 50px;
+        bottom: 150px; }
   .esg.slide-appear.slide-appear-active {
     height: 100%;
     transition: height 400ms ease; }

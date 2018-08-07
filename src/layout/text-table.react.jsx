@@ -3,33 +3,37 @@ import { Fade } from 'reactstrap';
 
 import './text-table.css';
 
-const TextTable = (props) => (
-  <Fade in={props.fadeIn} className={props.text.template ? `text-table ${props.text.template}` : 'text-table'}>
-    {
-      props.text.header ?
-    <div className='headerContainer'>
-      { props.text.image ?
-        <img
-          src={props.text.image}
-          alt={props.text.header}
-          className='headerImg' />
-        : null
+const TextTable = props => (
+  <Fade in={props.fadeIn}>
+    <div
+      className={
+        props.text.template ? `text-table ${props.text.template}` : 'text-table'
       }
-      <h4>{props.text.header.toUpperCase()}</h4>
+    >
+      {props.text.header ? (
+        <div className="headerContainer">
+          {props.text.image ? (
+            <img
+              src={props.text.image}
+              alt={props.text.header}
+              className="headerImg"
+            />
+          ) : null}
+          <h4>{props.text.header.toUpperCase()}</h4>
+        </div>
+      ) : null}
+      <ul className={props.location}>
+        {props.text.details.map(detail => {
+          return (
+            <li key={detail.dKey} className={detail.style}>
+              {detail.style === 'subHeader'
+                ? detail.text.toUpperCase()
+                : detail.text}
+            </li>
+          );
+        })}
+      </ul>
     </div>
-    : null
-    }
-    <ul className={props.location}>
-      {props.text.details.map(detail => {
-        return (
-          <li
-            key={detail.dKey}
-            className={detail.style}>
-            {detail.style === 'subHeader' ? detail.text.toUpperCase() : detail.text}
-          </li>
-        )
-      })}
-    </ul>
   </Fade>
-)
+);
 export default TextTable;
