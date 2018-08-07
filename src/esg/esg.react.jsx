@@ -202,6 +202,7 @@ class Esg extends Component {
 
   render() {
     const { currentDetails, currentDetailIdx, fadeIn, navItems } = this.state;
+
     return (
       <div className="esg">
         <Navigation

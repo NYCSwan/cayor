@@ -24,6 +24,13 @@
           }
         }
       }
+      .scrollIcon {
+        position: fixed;
+        width: 100px;
+        height: auto;
+        right: 50px;
+        bottom: 150px;
+      }
     }
   }
   @include slide-appear;

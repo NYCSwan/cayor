@@ -19,6 +19,12 @@
           height: 550px; }
           .esg .body .framework .text-table-container .text-table ul {
             margin-top: 8%; }
+      .esg .body .framework .scrollIcon {
+        position: fixed;
+        width: 100px;
+        height: auto;
+        right: 50px;
+        bottom: 150px; }
   .esg.slide-appear.slide-appear-active {
     height: 100%;
     transition: height 400ms ease; }
