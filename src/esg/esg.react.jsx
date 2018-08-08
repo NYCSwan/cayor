@@ -20,7 +20,7 @@ class Esg extends Component {
     ],
     philosophyTextTable: [
       {
-        header: "Cayor's ESG Philosophy",
+        header: 'ESG Philosophy',
         details: [
           {
             dKey: 'p00',
@@ -31,13 +31,13 @@ class Esg extends Component {
           {
             dKey: 'p01',
             text:
-              'ESG factors inform our investment decision-making and ownership practices. We believe researching, assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives for our fund. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.',
+              'ESG factors inform our investment decision-making and ownership practices. We believe assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives of our fund and investments. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.',
             style: 'text',
           },
           {
             dKey: 'p02',
             text:
-              'Rather, we seek to identify opportunities for enhancing the internal efficiencies and market opportunities of our portfolio companies through ESG management, while reducing the risks associated with our investment process. This approach is premised on the tenet that active ownership can add sustained value at exit and to the advancement of sustainable development within Africa.',
+              'Instead, through active ESG management, we seek to identify opportunities to enhance the internal efficiencies of our portfolio companies and reduce the risks associated with our investment process. This approach is premised on the belief that active management of ESG factors can tangibly increase exit valuations of our investments and simultaneously contribute to the advancement of sustainable development in Arica.',
             style: 'text',
           },
         ],
@@ -45,7 +45,7 @@ class Esg extends Component {
     ],
     strategyTextTable: [
       {
-        header: "Cayor's ESG Strategy",
+        header: 'ESG Strategy',
         details: [
           {
             dKey: 's00',
@@ -56,7 +56,7 @@ class Esg extends Component {
           {
             dKey: 's01',
             text:
-              'Starting at the initial stages of the investment process, we apply the principles described below to the Fund’s portfolio companies and their operational activities. Post-investment, we will closely monitor progress on ESG matters and compliance by portfolio companies relative to Cayor’s ESG framework and policy guidelines.',
+              'At the initial stages of the investment process, we apply the principles outlined in our ESG Framework to the Fund’s portfolio companies and their operational activities. Post-investment, we will closely monitor progress on ESG matters and compliance by portfolio companies relative to Cayor’s ESG framework and policy guidelines.',
             style: 'text',
           },
         ],
@@ -65,7 +65,7 @@ class Esg extends Component {
     frameworkTableText: [
       {
         header:
-          'Our Framework and Policy Guidelines support the following objectives:',
+          'Our Framework and Policy Guidelines have been formulated with the following objectives:',
         template: 'bullet',
         details: [
           {
