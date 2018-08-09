@@ -62,6 +62,7 @@ class TeamDetails extends Component {
     const { teamDetails } = this.props;
     return (
       <div className="TeamDetails">
+        {isOpen && <div className="shaddow" onClick={this.handleClose} />}
         {teamDetails.map(member => {
           return (
             <Snapshot

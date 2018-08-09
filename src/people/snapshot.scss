@@ -7,17 +7,13 @@
   display: flex;
   flex-flow: row wrap;
   margin: 2% 1% 0 1%;
-  justify-content: flex-end;
-  // align-items: flex-start;
+  justify-content: flex-start;
   align-content: flex-start;
-  background-color: $primaryBlueSemiTransparent;
-  // border: 2px solid $primaryGrey;
-  // border-left: 2px solid $cayorRed;
-  // padding-left: 2px;
+  background-color: $transparent;
+  border: 2px solid $cayorRedShaddow;
   .headshot {
-    width: 105px;
-    height: 105px;
-    margin: 0;
+    width: 100px;
+    height: 100px;
   }
 
   &.active {
@@ -28,7 +24,7 @@
     position: fixed;
     // top: 70%;
     z-index: 100;
-    background-color: $primaryBlueSemiTransparent;
+    background-color: $lightGrey;
     justify-content: flex-start;
     .headshot {
       float: right;
@@ -49,8 +45,8 @@
     width: 68%;
     margin-left: 5%;
     h4 {
-      border-bottom: 1px solid $lightGreySemiTransparent;
-      color: $white;
+      border-bottom: 1px solid $white;
+      color: $cayorRed;
       font-size: 1.5em;
     }
     h5 {
@@ -63,6 +59,8 @@
     }
   }
   .close {
+    // align-self: flex-start;
+
     position: fixed;
     top: 5%;
     left: 95%;

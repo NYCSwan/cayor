@@ -2,14 +2,14 @@
   background-color: rgba(0, 0, 0, 0);
   border: #696969 1px solid; }
   .button.next.interior {
-    background-color: #9B1D1F;
+    background-color: #9b1d1f;
     width: 5%;
     height: auto;
     color: #ffffff;
     border-top: #ffffff 1px solid;
     border-bottom: #ffffff 1px solid;
     border-left: #ffffff 1px solid;
-    border-right: #9B1D1F 1px solid;
+    border-right: #9b1d1f 1px solid;
     text-align: left;
     padding-left: 1%;
     position: absolute;
@@ -17,7 +17,7 @@
     top: 25%;
     font-weight: 300; }
     .button.next.interior:disabled {
-      background-color: #D5d5d5; }
+      background-color: #d5d5d5; }
   .button.more {
     max-width: 30%;
     background-color: #113a6e;

@@ -128,16 +128,16 @@
     width: 45%;
     height: 30%;
     .headerContainer {
-      border-top: 3px solid $primaryBlueSemiTransparent;
-      border-right: 3px solid $primaryBlueSemiTransparent;
-      border-bottom: 5px solid $primaryBlueSemiTransparent;
+      border-top: 2px solid $primaryBlueSemiTransparent;
+      border-right: 2px solid $primaryBlueSemiTransparent;
+      border-bottom: 4px solid $primaryBlueSemiTransparent;
       background-color: $transparent;
       max-height: 70px;
       .headerImg {
-        border-left: 3px solid $primaryBlueSemiTransparent;
-        border-bottom: 5px solid $primaryBlueSemiTransparent;
-        border-right: 3px solid $primaryBlueSemiTransparent;
-        margin: 0 3px 5px 0;
+        border-left: 2px solid $primaryBlueSemiTransparent;
+        //   border-bottom: 5px solid $primaryBlueSemiTransparent;
+        border-right: 2px solid $primaryBlueSemiTransparent;
+        margin-right: 2px;
       }
       h4 {
         display: inline-block;

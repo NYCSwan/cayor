@@ -1,18 +1,26 @@
 @import '../_variables';
 
 .card {
+  border-right: 1px solid $cayorRedShaddow;
+  border-bottom: 1px solid $cayorRedShaddow;
+  border-left: 1px solid $cayorRedShaddow;
+  border-radius: 0;
   .card-body {
     margin: 10px 10% 10px 0;
+    overflow-y: scroll;
     .card-subtitle {
       color: $cayorRed;
       float: left;
+      font-size: 1em;
       text-align: left;
       display: block;
       width: 100%;
     }
     .card-text {
       text-align: left;
-      width: 90%
+      width: 90%;
+      font-size: 0.9em;
+      color: $primaryGrey;
     }
   }
 }
