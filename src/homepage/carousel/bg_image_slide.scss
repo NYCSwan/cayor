@@ -26,61 +26,16 @@
         min-height: 1024px;
 
         .linkContainer {
-          position: absolute;
-          bottom: 100%;
+          position: fixed;
+          margin-top: 40%;
+          z-index: 100;
           .link {
             top: -60%;
             left: 45%;
-            z-index: 100;
+            z-index: 500;
             margin-bottom: -50%;
             color: $white;
             font-weight: bold;
-          }
-        }
-        // shadow over image
-        .overlay {
-          position: fixed;
-          min-height: 1024px;
-          height: inherit;
-          background-color: $primaryBlueSemiTransparent;
-          z-index: 100;
-          opacity: 1;
-          // &:before {
-          //   content: "";
-          display: block;
-          //   position: fixed;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          //   -moz-transition: background .3s linear;
-          //   -webkit-transition: background .3s linear;
-          //   -o-transition: background .3s linear;
-          //   transition: background .3s linear;
-          // }
-          .backgroundImage {
-            background-color: $primaryBlueSemiTransparent;
-            width: 100%;
-            min-height: 100%;
-            z-index: 1;
-            // set up proportionate scaling
-            // width: 100%
-            // height: auto;
-
-            // set up positioning
-            position: fixed;
-            top: 0;
-            left: 0;
-            // -webkit-filter : hue-rotate(180deg);
-            // filter : hue-rotate(180deg);
-            // &.slide3 {
-            //   min-height: 120%;
-            //   height: auto;
-            // }
-            // &.slide1 {
-            //   min-height: 105%;
-            //   height: auto;
-            // }
           }
         }
         &.active {
@@ -112,46 +67,83 @@
             }
           }
         }
-      }
-    }
+        // shadow over image
+        // .overlay {
+        //   position: absolute;
+        //   min-height: 1024px;
+        //   background: $primaryBlueSemiTransparent;
+        //   z-index: 100;
+        //   opacity: 1;
+        //   bottom: 0;
+        //   left: 0;
+        // right: 0;
+        // vertical-align: middle;
+        .backgroundImage {
+          top: 0;
+          width: 100%;
+          min-height: 100%;
+          z-index: 10;
+          overflow-y: hidden;
+          overflow-x: hidden;
 
-    .carousel-control-next {
-      z-index: 150;
+          // set up proportionate scaling
+          // width: 100%;
+          height: auto;
 
-      .carousel-control-next-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-        opacity: 1;
-        height: 40px;
-        width: 40px;
-      }
-    }
-
-    .carousel-control-prev {
-      z-index: 150;
-      .carousel-control-prev-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-        height: 40px;
-        width: 40px;
-      }
-    }
-
-    .carousel-indicators {
-      position: absolute;
-      bottom: 15%;
-      z-index: 150;
-
-      li {
-        background-color: $white;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        z-index: 150;
-
-        &.active {
-          background-color: $cayorRed;
+          // set up positioning
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          // &.slide3 {
+          //   min-height: 120%;
+          //   height: auto;
+          // }
+          // &.slide1 {
+          //   min-height: 105%;
+          //   height: auto;
+          // }
         }
       }
     }
   }
+
+  .carousel-control-next {
+    z-index: 150;
+
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+      opacity: 1;
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .carousel-control-prev {
+    z-index: 150;
+    .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 15%;
+    z-index: 150;
+
+    li {
+      background-color: $white;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      z-index: 150;
+
+      &.active {
+        background-color: $cayorRed;
+      }
+    }
+  }
 }
+
 // ADD MEDIA QUERIES TO SHRINK IMAGE ACCORDINGLY

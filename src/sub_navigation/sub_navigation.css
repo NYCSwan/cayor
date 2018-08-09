@@ -4,8 +4,8 @@
   padding-top: 3%;
   display: inline-block;
   width: 25%;
-  border-right: 1px solid #D5d5d5;
-  background-color: #D5d5d561; }
+  border-right: 1px solid #d5d5d5;
+  background-color: #d5d5d561; }
   .sub_navigation .list {
     color: #696969;
     text-align: left;
@@ -18,7 +18,7 @@
     .sub_navigation .list .hideIcon {
       display: none; }
     .sub_navigation .list .active {
-      color: #9B1D1F;
+      color: #9b1d1f;
       margin-left: -12%; }
     .sub_navigation .list .top {
       list-style: none;
@@ -45,7 +45,7 @@
       text-align: left;
       -moz-text-align-last: left; }
       .sub_navigation .list .sub.active {
-        color: #9B1D1F;
+        color: #9b1d1f;
         margin-left: -1%; }
       .sub_navigation .list .sub:hover {
         text-decoration: underline;

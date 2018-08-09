@@ -5,20 +5,20 @@
   display: flex;
   flex-flow: row wrap;
   margin: 2% 1% 0 1%;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-content: flex-start;
-  background-color: #0A234266; }
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #470c0d; }
   .snapshot .headshot {
-    width: 105px;
-    height: 105px;
-    margin: 0; }
+    width: 100px;
+    height: 100px; }
   .snapshot.active {
     width: 55%;
     transform: scale(1.1);
     border: none;
     position: fixed;
     z-index: 100;
-    background-color: #0A234266;
+    background-color: #d5d5d5;
     justify-content: flex-start; }
     .snapshot.active .headshot {
       float: right; }
@@ -34,8 +34,8 @@
     width: 68%;
     margin-left: 5%; }
     .snapshot .text h4 {
-      border-bottom: 1px solid #D5d5d561;
-      color: #ffffff;
+      border-bottom: 1px solid #ffffff;
+      color: #9b1d1f;
       font-size: 1.5em; }
     .snapshot .text h5 {
       align-self: baseline;
@@ -49,7 +49,7 @@
     left: 95%; }
   .snapshot .collapse {
     width: 100%;
-    border-top: 2px solid #9B1D1F; }
+    border-top: 2px solid #9b1d1f; }
     .snapshot .collapse .show {
       position: fixed;
       top: 100%; }

@@ -13,7 +13,7 @@
     object-fit: contain;
     background-position: center top;
     background-repeat: no-repeat;
-    border-bottom: 2px solid #D5d5d5; }
+    border-bottom: 2px solid #d5d5d5; }
   .header.people {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../media/joburg_header.jpeg");
     background-size: 100% 100%; }
@@ -81,13 +81,13 @@
                 font-size: 1.1em;
                 font-weight: bold;
                 align-self: baseline;
-                border-bottom: 3px solid #9B1D1F;
+                border-bottom: 3px solid #9b1d1f;
                 line-height: 1; }
               .header #accra #jbg .right .nav .linkContainer .link:hover {
-                border-bottom: 3px solid #9B1D1F;
+                border-bottom: 3px solid #9b1d1f;
                 font-weight: 700;
                 text-decoration: none;
-                color: #9B1D1F; }
+                color: #9b1d1f; }
               .header #accra #jbg .right .nav .linkContainer .link.people {
                 padding-bottom: 118%; }
                 .header #accra #jbg .right .nav .linkContainer .link.people:hover {
@@ -121,7 +121,7 @@
             height: auto; }
             .header #accra #jbg .right .clocks .clock-container:hover {
               cursor: grab;
-              color: #9B1D1F;
+              color: #9b1d1f;
               font-weight: bolder; }
             .header #accra #jbg .right .clocks .clock-container h6 {
               margin-top: 83px;

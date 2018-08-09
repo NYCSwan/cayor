@@ -4,13 +4,14 @@
   border-radius: 50%;
   background: $lightGreySemiTransparent;
   // background-size: 100%;
-  border: 1px solid $primaryBlue;
-  height: 22px;
+  border: 1px solid $white;
+  height: 20px;
   position: relative;
-  width: 22px;
+  width: 20px;
   display: inline-block;
 
-  .minute-container, .hour-container {
+  .minute-container,
+  .hour-container {
     position: absolute;
     top: 0;
     right: 0;
@@ -22,16 +23,16 @@
   .clockButton {
     position: absolute;
     z-index: 10;
-    left:42%;
+    left: 42%;
     top: 44%;
     width: 3px;
     height: 3px;
-    background-color: $primaryBlue;
+    background-color: $white;
     border-radius: 50%;
   }
 
   .hour {
-    background: $primaryBlue;
+    background: $white;
     height: 25%;
     left: 47%;
     position: absolute;
@@ -41,7 +42,7 @@
   }
 
   .minute {
-    background: $primaryBlue;
+    background: $white;
     height: 45%;
     left: 42%;
     position: absolute;

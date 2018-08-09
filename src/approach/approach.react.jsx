@@ -8,11 +8,11 @@ import TextTableContainer from '../layout/text-table-container.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
-import Agribusiness from '../media/agribusinessSquare.jpeg';
-import Manufacturing from '../media/canalSq.jpg';
-import Infrastructure from '../media/working_manufacturing.jpg';
+import Agribusiness from '../media/shipping.jpg';
+import Manufacturing from '../media/manufacturing.jpg';
+import Infrastructure from '../media/machine_industrialCropped.jpeg';
 import SectorsContainer from './sectors_container.react';
-import FinTech from '../media/computer.jpg';
+import FinTech from '../media/United_Bank_for_Africa_in_Ghana.jpg';
 import './approach.css';
 
 class Approach extends Component {

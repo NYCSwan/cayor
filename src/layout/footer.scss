@@ -2,27 +2,27 @@
 @import '../_mixins';
 
 .footer {
-  position: absolute;
+  position: fixed;
+  // display: block;
   width: 75%;
-  height: 50px;
+  max-height: 50px;
   background-color: $transparent;
-  bottom: 0;
+  bottom: 5px;
   color: $primaryGrey;
   left: 25%;
-  .right, .left, .middle {
+  .right,
+  .left {
     width: 30%;
-    font-size: .6em;
-    padding-top: 20px;
   }
 
   .left {
-    margin-left: 5%;
-    padding-left: 50px;
+    margin-left: 1%;
+    // padding-left: 50px;
   }
   .right {
-    margin-right: 5%;
+    margin-right: 1%;
     // padding-top: 20px;
-    padding-right: 25px;
+    // padding-right: 25px;
   }
 }
 
@@ -31,13 +31,13 @@
     height: 40px;
     .left {
       margin-left: 2%;
-      padding-top: 10px;
-      padding-left: 15px;
+      // padding-top: 10px;
+      // padding-left: 15px;
     }
     .right {
       margin-right: 2%;
-      padding-top: 10px;
-      padding-right: 15px;
+      // padding-top: 10px;
+      // padding-right: 15px;
     }
   }
 }
