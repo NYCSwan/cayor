@@ -17,23 +17,37 @@
       height: 30%;
       .text-table {
         .headerContainer {
+          border-top: 1px solid $primaryBlue;
+          border-right: 1px solid $primaryBlue;
           border-bottom: 2px solid $primaryBlue;
-          background-color: $lightGrey;
+          background-color: $transparent;
           max-height: 70px;
+          box-shadow: 0 0 5px $lightGreySemiTransparent,
+            5px 5px 8px $primaryBlueSemiTransparent;
+          .headerImg {
+            // border: 1px solid $primaryBlue;
+            box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
+            border-left: 1px solid $primaryBlue;
+            border-bottom: 2px solid $primaryBlue;
+            border-right: 1px solid $primaryBlue;
+          }
           h4 {
             display: inline-block;
             line-height: normal;
             padding-top: 5%;
+            color: $cayorRed;
+            font-size: 1.2em;
+            text-align: center;
           }
         }
-      }
 
-      .approach {
-        padding-top: 10px;
-        .text {
-          padding-top: 5px;
-          padding-bottom: 0;
-          margin-left: 25%;
+        .approach {
+          padding-top: 10px;
+          .text {
+            padding-top: 5px;
+            padding-bottom: 0;
+            margin-left: 30%;
+          }
         }
       }
     }
@@ -43,13 +57,24 @@
       width: 45%;
       height: 30%;
       .headerContainer {
-        border-bottom: 2px solid $primaryBlue;
-        background-color: $lightGrey;
-        max-height: 70px;
+        border-top: 3px solid $primaryBlue;
+        border-right: 3px solid $primaryBlue;
+        border-bottom: 5px solid $primaryBlue;
+        border-left: 3px solid $primaryBlue;
+        background-color: $transparent;
+        max-height: 97px;
+        .headerImg {
+          border-right: 2px solid $cayorRed;
+          margin-right: 2px;
+        }
         h4 {
           display: inline-block;
           line-height: normal;
-          padding-top: 1%;
+          padding: 5%;
+          color: $cayorRed;
+          font-size: 1.2em;
+          text-align: center;
+          align-self: center;
         }
       }
 
@@ -58,7 +83,7 @@
         .text {
           padding-top: 5px;
           padding-bottom: 0;
-          margin-left: 25%;
+          margin-left: 30%;
         }
       }
     }
@@ -68,13 +93,24 @@
       width: 45%;
       height: 30%;
       .headerContainer {
-        border-bottom: 2px solid $primaryBlue;
-        background-color: $lightGrey;
-        max-height: 70px;
+        border-top: 5px solid $primaryBlue;
+        border-right: 5px solid $primaryBlue;
+        border-bottom: 5px solid $primaryBlue;
+        border-left: 5px solid $primaryBlue;
+        background-color: $transparent;
+        max-height: 110px;
+
+        .headerImg {
+          width: 90px;
+          margin: 2%;
+        }
         h4 {
           display: inline-block;
           line-height: normal;
-          padding-top: 1%;
+          margin: 7% 5%;
+          color: $cayorRed;
+          font-size: 1.2em;
+          text-align: center;
         }
       }
 
@@ -83,7 +119,7 @@
         .text {
           padding-top: 5px;
           padding-bottom: 0;
-          margin-left: 25%;
+          margin-left: 30%;
         }
       }
     }
@@ -92,13 +128,24 @@
     width: 45%;
     height: 30%;
     .headerContainer {
-      border-bottom: 2px solid $primaryBlue;
-      background-color: $lightGrey;
+      border-top: 3px solid $primaryBlueSemiTransparent;
+      border-right: 3px solid $primaryBlueSemiTransparent;
+      border-bottom: 5px solid $primaryBlueSemiTransparent;
+      background-color: $transparent;
       max-height: 70px;
+      .headerImg {
+        border-left: 3px solid $primaryBlueSemiTransparent;
+        border-bottom: 5px solid $primaryBlueSemiTransparent;
+        border-right: 3px solid $primaryBlueSemiTransparent;
+        margin: 0 3px 5px 0;
+      }
       h4 {
         display: inline-block;
         line-height: normal;
         padding-top: 5%;
+        color: $cayorRed;
+        font-size: 1.2em;
+        text-align: center;
       }
     }
 
@@ -107,7 +154,8 @@
       .text {
         padding-top: 5px;
         padding-bottom: 0;
-        margin-left: 25%;
+        margin-left: 30%;
+        word-wrap: normal;
       }
     }
   }

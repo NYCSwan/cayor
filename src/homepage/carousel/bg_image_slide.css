@@ -17,35 +17,16 @@
         opacity: 0.1;
         min-height: 1024px; }
         .carousel.slide .carousel-inner .carousel-item .linkContainer {
-          position: absolute;
-          bottom: 100%; }
+          position: fixed;
+          margin-top: 40%;
+          z-index: 100; }
           .carousel.slide .carousel-inner .carousel-item .linkContainer .link {
             top: -60%;
             left: 45%;
-            z-index: 100;
+            z-index: 500;
             margin-bottom: -50%;
             color: #ffffff;
             font-weight: bold; }
-        .carousel.slide .carousel-inner .carousel-item .overlay {
-          position: fixed;
-          min-height: 1024px;
-          height: inherit;
-          background-color: #0A234266;
-          z-index: 100;
-          opacity: 1;
-          display: block;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0; }
-          .carousel.slide .carousel-inner .carousel-item .overlay .backgroundImage {
-            background-color: #0A234266;
-            width: 100%;
-            min-height: 100%;
-            z-index: 1;
-            position: fixed;
-            top: 0;
-            left: 0; }
         .carousel.slide .carousel-inner .carousel-item.active {
           z-index: 100;
           opacity: 1;
@@ -70,28 +51,39 @@
               font-size: 18px;
               width: 50%;
               margin: 30px auto; }
-    .carousel.slide .carousel-control-next {
+        .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+          top: 0;
+          width: 100%;
+          min-height: 100%;
+          z-index: 10;
+          overflow-y: hidden;
+          overflow-x: hidden;
+          height: auto;
+          position: fixed;
+          bottom: 0;
+          left: 0; }
+  .carousel .carousel-control-next {
+    z-index: 150; }
+    .carousel .carousel-control-next .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+      opacity: 1;
+      height: 40px;
+      width: 40px; }
+  .carousel .carousel-control-prev {
+    z-index: 150; }
+    .carousel .carousel-control-prev .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+      height: 40px;
+      width: 40px; }
+  .carousel .carousel-indicators {
+    position: absolute;
+    bottom: 15%;
+    z-index: 150; }
+    .carousel .carousel-indicators li {
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
       z-index: 150; }
-      .carousel.slide .carousel-control-next .carousel-control-next-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-        opacity: 1;
-        height: 40px;
-        width: 40px; }
-    .carousel.slide .carousel-control-prev {
-      z-index: 150; }
-      .carousel.slide .carousel-control-prev .carousel-control-prev-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-        height: 40px;
-        width: 40px; }
-    .carousel.slide .carousel-indicators {
-      position: absolute;
-      bottom: 15%;
-      z-index: 150; }
-      .carousel.slide .carousel-indicators li {
-        background-color: #ffffff;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        z-index: 150; }
-        .carousel.slide .carousel-indicators li.active {
-          background-color: #9B1D1F; }
+      .carousel .carousel-indicators li.active {
+        background-color: #9B1D1F; }
