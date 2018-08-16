@@ -1,3 +1,5 @@
+@import '../_mixins';
+
 .regionDetails {
   background: url('../media/countries.jpg') no-repeat center center;
   background-size: auto 75%;
@@ -6,13 +8,19 @@
   justify-content: space-between;
   width: 70%;
   height: 60%;
-
+  @include respond-to(phone) {
+    background-size: auto 30%;
+  }
   .west-africa {
     width: 300px;
     order: 1;
     position: fixed;
     top: 30%;
     align-self: flex-start;
+    @include respond-to(phone) {
+      width: 100px;
+      top: 20%;
+    }
   }
   .east-africa {
     order: 10;
@@ -21,6 +29,10 @@
     right: 0;
     width: 250px;
     align-self: flex-start;
+    @include respond-to(phone) {
+      width: 100px;
+      top: 25%;
+    }
   }
   .south-africa {
     width: 400px;
@@ -28,6 +40,9 @@
     position: fixed;
     left: inherit;
     align-self: flex-end;
-    // padding-top: 10%;
+    @include respond-to(phone) {
+      width: 100px;
+      bottom: 150px;
+    }
   }
 }

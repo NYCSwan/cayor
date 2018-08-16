@@ -1,4 +1,5 @@
 @import '../_variables';
+@import '../_mixins';
 
 .clock {
   border-radius: 50%;
@@ -9,7 +10,10 @@
   position: relative;
   width: 20px;
   display: inline-block;
-
+  @include respond-to(phone) {
+    height: 15px;
+    width: 15px;
+  }
   .minute-container,
   .hour-container {
     position: absolute;
