@@ -65,7 +65,10 @@
       width: 100px;
       padding-left: 1%;
     }
-
+    @include respond-to(tablet) {
+      width: 40px;
+      // height: 40px;
+    }
     .logo {
       align-self: center;
       width: 150px;
@@ -138,7 +141,10 @@
             justify-content: space-between;
             align-items: center;
           }
-
+          @include respond-to(tablet) {
+            width: 40%;
+            height: 40px;
+          }
           .linkContainer {
             height: auto;
             .link {
