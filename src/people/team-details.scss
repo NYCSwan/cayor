@@ -1,4 +1,5 @@
 @import '../_variables';
+@import '../_mixins';
 
 .TeamDetails {
   width: 70%;
@@ -7,7 +8,15 @@
   height: 600px;
   padding-left: 5%;
   padding-top: 2%;
-
+  @include respond-to(phone) {
+    height: 100%;
+    align-items: flex-start;
+    align-content: baseline;
+    padding-left: 0;
+  }
+  @include respond-to(phone-long) {
+    margin-top: 10%;
+  }
   .shaddow {
     z-index: 10;
     background-color: #260606;

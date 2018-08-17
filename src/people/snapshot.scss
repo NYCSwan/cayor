@@ -1,4 +1,5 @@
 @import '../_variables';
+@import '../_mixins';
 
 .snapshot {
   width: 48%;
@@ -11,9 +12,31 @@
   align-content: flex-start;
   background-color: $transparent;
   border: 2px solid $cayorRedShaddow;
+  &.fade.show {
+    @include respond-to(phone) {
+      border: none;
+      flex-flow: column nowrap;
+      height: 40%;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: center;
+      margin-top: 0;
+    }
+    @include respond-to(phone-long) {
+      height: 35%;
+    }
+  }
   .headshot {
     width: 100px;
     height: 100px;
+    @include respond-to(phone) {
+      border-radius: 50%;
+      align-self: center;
+      height: 80px;
+      width: 80px;
+    }
+    @include respond-to(phone-long) {
+    }
   }
 
   &.active {
@@ -44,18 +67,42 @@
     align-items: stretch;
     width: 68%;
     margin-left: 5%;
-    h4 {
-      border-bottom: 1px solid $white;
-      color: $cayorRed;
-      font-size: 1.5em;
+    @include respond-to(phone) {
+      width: 100%;
+      height: 60%;
+      text-align: center;
+      margin-left: 0;
     }
-    h5 {
-      align-self: baseline;
-      font-size: 1.2em;
+    @include respond-to(phone-long) {
+      width: 100%;
+      height: 40%;
+      text-align: center;
+      margin-left: 0;
     }
     h4,
     h5 {
       text-align: justify;
+    }
+    h4 {
+      border-bottom: 1px solid $white;
+      color: $cayorRed;
+      font-size: 1.5em;
+      @include respond-to(phone) {
+        font-size: 1.2em;
+        font-weight: bolder;
+        align-self: center;
+        text-align: center;
+      }
+    }
+    h5 {
+      align-self: baseline;
+      font-size: 1.2em;
+      @include respond-to(phone) {
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-bottom: 0;
+        align-self: center;
+      }
     }
   }
   .close {

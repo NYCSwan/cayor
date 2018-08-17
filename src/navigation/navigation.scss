@@ -217,6 +217,9 @@
             align-self: flex-start;
             order: 1;
           }
+          @include respond-to(phone-long) {
+            width: 35%;
+          }
           .clock-container {
             width: 49%;
             display: flex;

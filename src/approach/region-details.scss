@@ -10,6 +10,12 @@
   height: 60%;
   @include respond-to(phone) {
     background-size: auto 30%;
+    justify-content: flex-start;
+    // align-content: flex-start;
+    width: 100%;
+    height: auto;
+    background-position: unset;
+    background-position-y: 25%;
   }
   .west-africa {
     width: 300px;
@@ -21,6 +27,10 @@
       width: 100px;
       top: 20%;
     }
+    @include respond-to(phone-long) {
+      top: 17%;
+      left: 23%;
+    }
   }
   .east-africa {
     order: 10;
@@ -31,7 +41,7 @@
     align-self: flex-start;
     @include respond-to(phone) {
       width: 100px;
-      top: 25%;
+      top: 20%;
     }
   }
   .south-africa {
@@ -41,8 +51,8 @@
     left: inherit;
     align-self: flex-end;
     @include respond-to(phone) {
-      width: 100px;
-      bottom: 150px;
+      width: 150px;
+      bottom: 115px;
     }
   }
 }

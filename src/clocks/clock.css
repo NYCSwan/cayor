@@ -9,7 +9,6 @@
   /* iPhone 4 ----------- */
   /* iPhone 5 ----------- */
   /* iPhone 6 ----------- */
-  /* iPhone 6+ ----------- */
   /* Samsung Galaxy S3 ----------- */
   /* Samsung Galaxy S4 ----------- */
   /* Samsung Galaxy S5 ----------- */ }
@@ -34,14 +33,6 @@
       height: 15px;
       width: 15px; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .clock {
-      height: 15px;
-      width: 15px; } }
-  @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .clock {
-      height: 15px;
-      width: 15px; } }
-  @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .clock {
       height: 15px;
       width: 15px; } }

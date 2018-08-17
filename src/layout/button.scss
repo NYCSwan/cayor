@@ -1,4 +1,5 @@
 @import '../_variables';
+@import '../_mixins';
 
 .button {
   background-color: $transparent;
@@ -18,6 +19,13 @@
     right: 0;
     top: 25%;
     font-weight: 300;
+    @include respond-to(phone) {
+      width: 12%;
+      top: 30%;
+    }
+    @include respond-to(phone-long) {
+      top: 20%;
+    }
     &:disabled {
       background-color: $lightGrey;
     }
@@ -28,6 +36,9 @@
     color: $white;
     align-self: flex-end;
     display: inline;
+    @include respond-to(phone) {
+      display: none;
+    }
   }
 }
 // @media  height 715 fix button interior
