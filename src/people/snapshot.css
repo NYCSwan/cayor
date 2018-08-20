@@ -19,7 +19,9 @@
     /* iphoneX----------- */
     /* iPhone 6+ ----------- */
     /* pixel 2 ----------- */
-    /* pixel 2 xl ----------- */ }
+    /* pixel 2 xl ----------- */
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
@@ -158,6 +160,21 @@
     @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
       .snapshot.fade.show {
         height: 35%; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .snapshot.fade.show {
+        flex-wrap: nowrap;
+        width: 45%;
+        height: 150px; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .snapshot.fade.show {
+        flex-wrap: nowrap;
+        width: 45%;
+        height: 150px; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .snapshot.fade.show {
+        flex-wrap: nowrap;
+        width: 45%;
+        height: 150px; } }
   .snapshot .headshot {
     width: 100px;
     height: 100px;
@@ -167,10 +184,8 @@
     /* Samsung Galaxy S3 ----------- */
     /* Samsung Galaxy S4 ----------- */
     /* Samsung Galaxy S5 ----------- */
-    /* iphoneX----------- */
-    /* iPhone 6+ ----------- */
-    /* pixel 2 ----------- */
-    /* pixel 2 xl ----------- */ }
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .snapshot .headshot {
         border-radius: 50%;
@@ -243,6 +258,18 @@
         align-self: center;
         height: 80px;
         width: 80px; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .snapshot .headshot {
+        height: 145px;
+        width: 145px; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .snapshot .headshot {
+        height: 145px;
+        width: 145px; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .snapshot .headshot {
+        height: 145px;
+        width: 145px; } }
   .snapshot.active {
     width: 55%;
     transform: scale(1.1);

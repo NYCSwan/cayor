@@ -25,6 +25,11 @@
     @include respond-to(phone-long) {
       height: 35%;
     }
+    @include respond-to(tablets) {
+      flex-wrap: nowrap;
+      width: 45%;
+      height: 150px;
+    }
   }
   .headshot {
     width: 100px;
@@ -35,7 +40,9 @@
       height: 80px;
       width: 80px;
     }
-    @include respond-to(phone-long) {
+    @include respond-to(tablets) {
+      height: 145px;
+      width: 145px;
     }
   }
 

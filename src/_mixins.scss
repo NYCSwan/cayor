@@ -65,6 +65,9 @@
     @media only screen and (min-width: 1824px) {
       @content;
     }
+    @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+      @content;
+    }
   } @else if $media == phone-long {
     /* iphoneX----------- */
     @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
@@ -104,6 +107,11 @@
     }
 
     @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
+      @content;
+    }
+  } @else if $media == responsive {
+    // web small screens
+    @media only screen and (max-device-width: 652) and (orientation: portrait) {
       @content;
     }
   }

@@ -13,9 +13,13 @@
     // font-size: 0.8em;
     margin-left: 0;
     // height: 100%;
+    width: 30%;
     // background-color: blue;
   }
   .list {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
     color: $primaryGrey;
     text-align: left;
     width: 90%;
@@ -23,20 +27,24 @@
     height: 100%;
     list-style: none;
     // margin-left: 4%;
-    float: right;
-    @include respond-to(phone) {
-      font-size: 0.8em;
-      width: 100%;
-      margin-left: 0;
-      float: none;
-      padding-left: 0;
+    // float: right;
+    // @include respond-to(phone) {
+    //   font-size: 0.8em;
+    //   width: 90%;
+    //   margin-left: 0;
+    //   float: right;
+    //   padding-left: 0;
+    // }
+    @include respond-to(tablets) {
+      margin-top: 20%;
     }
     .hideIcon {
       display: none;
     }
     .active {
       color: $cayorRed;
-      margin-left: -12%;
+
+      // margin-left: -12%;
       @include respond-to(phone) {
         // font-size: 0.8em;
         // margin: -10%;
@@ -47,21 +55,23 @@
     // li
     .top {
       list-style: none;
-      padding: 12px 10px;
+      height: 20px;
+      // padding: 12px 10px;
       color: $primaryBlue;
       font-weight: 700;
-      width: 75%;
+      // width: 75%;
       text-align: left;
       -moz-text-align-last: left;
+      flex-grow: 1;
       @include respond-to(phone) {
         width: 100%;
-        float: left;
-        padding: 3px 3px;
+        // float: left;
+        // padding: 3px 3px;
       }
       &.active {
         font-weight: bolder;
         margin-left: -2%;
-
+        width: fit-content;
         &:hover {
           font-weight: bolder;
         }
@@ -79,14 +89,17 @@
       width: 90%;
       text-align: left;
       -moz-text-align-last: left;
+      flex-grow: 1;
+
       @include respond-to(phone) {
         width: 100%;
-        float: left;
-        padding: 4px 3px;
+        // float: left;
+        // padding: 4px 3px;
       }
       &.active {
         color: $cayorRed;
         margin-left: -1%;
+        width: fit-content;
       }
       &:hover {
         text-decoration: underline;

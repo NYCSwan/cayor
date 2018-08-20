@@ -17,6 +17,12 @@
   @include respond-to(phone-long) {
     margin-top: 10%;
   }
+  @include respond-to(tablets) {
+    margin-top: 5%;
+    width: 75%;
+    padding-left: 0;
+    justify-content: center;
+  }
   .shaddow {
     z-index: 10;
     background-color: #260606;

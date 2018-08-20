@@ -19,7 +19,9 @@
     /* iPhone 6 ----------- */
     /* Samsung Galaxy S3 ----------- */
     /* Samsung Galaxy S4 ----------- */
-    /* Samsung Galaxy S5 ----------- */ }
+    /* Samsung Galaxy S5 ----------- */
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .header.people, .header.opportunity, .header.approach, .header.esg {
         max-height: 100px; } }
@@ -56,6 +58,15 @@
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .header.people, .header.opportunity, .header.approach, .header.esg {
         max-height: 100px; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .header.people, .header.opportunity, .header.approach, .header.esg {
+        height: 150px; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .header.people, .header.opportunity, .header.approach, .header.esg {
+        height: 150px; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .header.people, .header.opportunity, .header.approach, .header.esg {
+        height: 150px; } }
   .header.people {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../media/joburg_header.jpeg");
     background-size: 100% 100%; }
@@ -82,7 +93,9 @@
     /* iPhone 6 ----------- */
     /* Samsung Galaxy S3 ----------- */
     /* Samsung Galaxy S4 ----------- */
-    /* Samsung Galaxy S5 ----------- */ }
+    /* Samsung Galaxy S5 ----------- */
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .header .logo-container {
         width: 100px;
@@ -131,6 +144,18 @@
       .header .logo-container {
         width: 100px;
         padding-left: 1%; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .header .logo-container {
+        width: 150px;
+        padding-left: 25px; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .header .logo-container {
+        width: 150px;
+        padding-left: 25px; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .header .logo-container {
+        width: 150px;
+        padding-left: 25px; } }
     .header .logo-container .logo {
       align-self: center;
       width: 150px;
@@ -141,55 +166,66 @@
       /* iPhone 6 ----------- */
       /* Samsung Galaxy S3 ----------- */
       /* Samsung Galaxy S4 ----------- */
-      /* Samsung Galaxy S5 ----------- */ }
+      /* Samsung Galaxy S5 ----------- */
+      /* iPads (portrait and landscape) ----------- */
+      /* kindle fire (portrait and landscape) ----------- */ }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .header .logo-container .logo {
-          width: 100%;
+          width: 100px;
           padding: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .header .logo-container .logo {
+          width: 100px; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .header .logo-container .logo {
+          width: 100px; } }
+      @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+        .header .logo-container .logo {
+          width: 100px; } }
   .header #accra {
     width: 80%;
     z-index: 1000; }
@@ -204,7 +240,10 @@
       /* iPhone 6 ----------- */
       /* Samsung Galaxy S3 ----------- */
       /* Samsung Galaxy S4 ----------- */
-      /* Samsung Galaxy S5 ----------- */ }
+      /* Samsung Galaxy S5 ----------- */
+      /* iPads (portrait and landscape) ----------- */
+      /* kindle fire (portrait and landscape) ----------- */
+      /* Large screens ----------- */ }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .header #accra #jbg {
           height: 100%; } }
@@ -241,6 +280,21 @@
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .header #accra #jbg {
           height: 100%; } }
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .header #accra #jbg {
+          height: 100%; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .header #accra #jbg {
+          height: 100%; } }
+      @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+        .header #accra #jbg {
+          height: 100%; } }
+      @media only screen and (min-width: 1824px) {
+        .header #accra #jbg {
+          height: 100%; } }
+      @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+        .header #accra #jbg {
+          height: 100%; } }
       .header #accra #jbg .right {
         display: flex;
         flex-flow: row wrap;
@@ -250,82 +304,12 @@
         align-items: stretch;
         color: #ffffff;
         z-index: 1000; }
-        .header #accra #jbg .right .mobileIcon {
-          display: none;
-          /* iPhone 4 ----------- */
-          /* iPhone 5 ----------- */
-          /* iPhone 6 ----------- */
-          /* Samsung Galaxy S3 ----------- */
-          /* Samsung Galaxy S4 ----------- */
-          /* Samsung Galaxy S5 ----------- */ }
-          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
-          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-            .header #accra #jbg .right .mobileIcon {
-              display: inline;
-              color: #9b1d1f;
-              height: auto; } }
         .header #accra #jbg .right .nav {
           width: 30%;
           margin-right: 4%;
           display: flex;
           flex-flow: row wrap;
-          justify-content: space-between;
-          align-content: baseline;
-          align-items: flex-end;
+          justify-content: space-around;
           font-size: 0.8em;
           font-weight: 400;
           height: 100px;
@@ -335,11 +319,14 @@
           /* iPhone 6 ----------- */
           /* Samsung Galaxy S3 ----------- */
           /* Samsung Galaxy S4 ----------- */
-          /* Samsung Galaxy S5 ----------- */ }
+          /* Samsung Galaxy S5 ----------- */
+          /* iPads (portrait and landscape) ----------- */
+          /* kindle fire (portrait and landscape) ----------- */
+          /* Large screens ----------- */ }
           @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -348,7 +335,7 @@
           @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -357,7 +344,7 @@
           @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -366,7 +353,7 @@
           @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -375,7 +362,7 @@
           @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -384,7 +371,7 @@
           @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -393,7 +380,7 @@
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -402,7 +389,7 @@
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -411,7 +398,7 @@
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -420,7 +407,7 @@
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -429,7 +416,7 @@
           @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
@@ -438,214 +425,96 @@
           @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .nav {
               order: 5;
-              width: 75%;
+              width: 100%;
               height: 30px;
               align-self: flex-end;
               flex-wrap: nowrap;
               justify-content: space-between;
               align-items: center; } }
+          @media only screen and (min-width: 768px) and (max-width: 959px) {
+            .header #accra #jbg .right .nav {
+              width: 40%;
+              height: 100%;
+              align-items: flex-end; } }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            .header #accra #jbg .right .nav {
+              width: 40%;
+              height: 100%;
+              align-items: flex-end; } }
+          @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+            .header #accra #jbg .right .nav {
+              width: 40%;
+              height: 100%;
+              align-items: flex-end; } }
+          @media only screen and (min-width: 1824px) {
+            .header #accra #jbg .right .nav {
+              align-items: flex-end;
+              height: 100%; } }
+          @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+            .header #accra #jbg .right .nav {
+              align-items: flex-end;
+              height: 100%; } }
           .header #accra #jbg .right .nav .linkContainer {
-            height: auto; }
+            height: 100%;
+            display: flex;
+            /* iPads (portrait and landscape) ----------- */
+            /* kindle fire (portrait and landscape) ----------- */
+            /* Large screens ----------- */ }
+            @media only screen and (min-width: 768px) and (max-width: 959px) {
+              .header #accra #jbg .right .nav .linkContainer {
+                align-self: flex-end; } }
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+              .header #accra #jbg .right .nav .linkContainer {
+                align-self: flex-end; } }
+            @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+              .header #accra #jbg .right .nav .linkContainer {
+                align-self: flex-end; } }
+            @media only screen and (min-width: 1824px) {
+              .header #accra #jbg .right .nav .linkContainer {
+                align-self: flex-end;
+                height: 55%; } }
+            @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+              .header #accra #jbg .right .nav .linkContainer {
+                align-self: flex-end;
+                height: 55%; } }
             .header #accra #jbg .right .nav .linkContainer .link {
+              align-self: flex-end;
               list-style: none;
-              display: inline;
+              font-weight: bold;
               color: inherit;
-              order: 1; }
+              order: 1;
+              height: 50%;
+              /* Large screens ----------- */ }
+              @media only screen and (min-width: 1824px) {
+                .header #accra #jbg .right .nav .linkContainer .link {
+                  height: 50%;
+                  align-self: flex-start;
+                  margin-top: 0; } }
+              @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+                .header #accra #jbg .right .nav .linkContainer .link {
+                  height: 50%;
+                  align-self: flex-start;
+                  margin-top: 0; } }
               .header #accra #jbg .right .nav .linkContainer .link.selected {
+                height: 50%;
                 font-size: 1.1em;
-                font-weight: bold;
-                align-self: baseline;
+                align-self: flex-end;
                 border-bottom: 3px solid #9b1d1f;
-                line-height: 1; }
+                line-height: 1;
+                /* Large screens ----------- */ }
+                @media only screen and (min-width: 1824px) {
+                  .header #accra #jbg .right .nav .linkContainer .link.selected {
+                    height: 100%;
+                    align-self: flex-start; } }
+                @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+                  .header #accra #jbg .right .nav .linkContainer .link.selected {
+                    height: 100%;
+                    align-self: flex-start; } }
               .header #accra #jbg .right .nav .linkContainer .link:hover {
                 border-bottom: 3px solid #9b1d1f;
                 font-weight: 700;
                 text-decoration: none;
                 color: #9b1d1f; }
-              .header #accra #jbg .right .nav .linkContainer .link.people {
-                padding-bottom: 118%;
-                /* iPhone 4 ----------- */
-                /* iPhone 5 ----------- */
-                /* iPhone 6 ----------- */
-                /* Samsung Galaxy S3 ----------- */
-                /* Samsung Galaxy S4 ----------- */
-                /* Samsung Galaxy S5 ----------- */ }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.people {
-                    padding-bottom: 0; } }
-                .header #accra #jbg .right .nav .linkContainer .link.people:hover {
-                  padding-bottom: 133%; }
-              .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                padding-bottom: 63%;
-                /* iPhone 4 ----------- */
-                /* iPhone 5 ----------- */
-                /* iPhone 6 ----------- */
-                /* Samsung Galaxy S3 ----------- */
-                /* Samsung Galaxy S4 ----------- */
-                /* Samsung Galaxy S5 ----------- */ }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.opportunity {
-                    padding-bottom: 0; } }
-                .header #accra #jbg .right .nav .linkContainer .link.opportunity:hover {
-                  padding-bottom: 72%; }
-              .header #accra #jbg .right .nav .linkContainer .link.approach {
-                padding-bottom: 85%;
-                /* iPhone 4 ----------- */
-                /* iPhone 5 ----------- */
-                /* iPhone 6 ----------- */
-                /* Samsung Galaxy S3 ----------- */
-                /* Samsung Galaxy S4 ----------- */
-                /* Samsung Galaxy S5 ----------- */ }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.approach {
-                    padding-bottom: 0; } }
-                .header #accra #jbg .right .nav .linkContainer .link.approach:hover {
-                  padding-bottom: 97%; }
-              .header #accra #jbg .right .nav .linkContainer .link.esg {
-                padding-bottom: 236%;
-                /* iPhone 4 ----------- */
-                /* iPhone 5 ----------- */
-                /* iPhone 6 ----------- */
-                /* Samsung Galaxy S3 ----------- */
-                /* Samsung Galaxy S4 ----------- */
-                /* Samsung Galaxy S5 ----------- */ }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                  .header #accra #jbg .right .nav .linkContainer .link.esg {
-                    padding-bottom: 0; } }
-                .header #accra #jbg .right .nav .linkContainer .link.esg:hover {
-                  padding-bottom: 260%; }
         .header #accra #jbg .right .clocks {
           width: 18%;
           display: flex;
@@ -663,78 +532,81 @@
           /* iphoneX----------- */
           /* iPhone 6+ ----------- */
           /* pixel 2 ----------- */
-          /* pixel 2 xl ----------- */ }
+          /* pixel 2 xl ----------- */
+          /* iPads (portrait and landscape) ----------- */
+          /* kindle fire (portrait and landscape) ----------- */
+          /* Large screens ----------- */ }
           @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .clocks {
-              width: 25%;
+              width: 45%;
               height: 60%;
-              align-self: flex-start;
+              align-self: center;
               order: 1; } }
           @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
             .header #accra #jbg .right .clocks {
@@ -766,6 +638,44 @@
           @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
             .header #accra #jbg .right .clocks {
               width: 35%; } }
+          @media only screen and (min-width: 768px) and (max-width: 959px) {
+            .header #accra #jbg .right .clocks {
+              width: 30%;
+              height: 100%;
+              align-self: center;
+              justify-content: center;
+              align-items: center;
+              align-content: center; } }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            .header #accra #jbg .right .clocks {
+              width: 30%;
+              height: 100%;
+              align-self: center;
+              justify-content: center;
+              align-items: center;
+              align-content: center; } }
+          @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+            .header #accra #jbg .right .clocks {
+              width: 30%;
+              height: 100%;
+              align-self: center;
+              justify-content: center;
+              align-items: center;
+              align-content: center; } }
+          @media only screen and (min-width: 1824px) {
+            .header #accra #jbg .right .clocks {
+              height: 100%;
+              align-self: center;
+              justify-content: center;
+              align-items: center;
+              align-content: center; } }
+          @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+            .header #accra #jbg .right .clocks {
+              height: 100%;
+              align-self: center;
+              justify-content: center;
+              align-items: center;
+              align-content: center; } }
           .header #accra #jbg .right .clocks .clock-container {
             width: 49%;
             display: flex;
@@ -779,43 +689,100 @@
             /* iPhone 6 ----------- */
             /* Samsung Galaxy S3 ----------- */
             /* Samsung Galaxy S4 ----------- */
-            /* Samsung Galaxy S5 ----------- */ }
+            /* Samsung Galaxy S5 ----------- */
+            /* iPads (portrait and landscape) ----------- */
+            /* kindle fire (portrait and landscape) ----------- */
+            /* Large screens ----------- */ }
             @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
             @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
               .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly; } }
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap; } }
+            @media only screen and (min-width: 768px) and (max-width: 959px) {
+              .header #accra #jbg .right .clocks .clock-container {
+                justify-content: space-evenly;
+                height: 100%;
+                align-items: center;
+                margin-right: 0; } }
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+              .header #accra #jbg .right .clocks .clock-container {
+                justify-content: space-evenly;
+                height: 100%;
+                align-items: center;
+                margin-right: 0; } }
+            @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+              .header #accra #jbg .right .clocks .clock-container {
+                justify-content: space-evenly;
+                height: 100%;
+                align-items: center;
+                margin-right: 0; } }
+            @media only screen and (min-width: 1824px) {
+              .header #accra #jbg .right .clocks .clock-container {
+                justify-content: space-evenly;
+                height: 100%;
+                align-items: center;
+                margin-right: 0; } }
+            @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+              .header #accra #jbg .right .clocks .clock-container {
+                justify-content: space-evenly;
+                height: 100%;
+                align-items: center;
+                margin-right: 0; } }
             .header #accra #jbg .right .clocks .clock-container:hover {
               cursor: grab;
               color: #9b1d1f;
@@ -831,64 +798,92 @@
               /* iPhone 6 ----------- */
               /* Samsung Galaxy S3 ----------- */
               /* Samsung Galaxy S4 ----------- */
-              /* Samsung Galaxy S5 ----------- */ }
+              /* Samsung Galaxy S5 ----------- */
+              /* iPads (portrait and landscape) ----------- */
+              /* kindle fire (portrait and landscape) ----------- */
+              /* Large screens ----------- */ }
               @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
-                  margin-top: 0;
+                  margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
+              @media only screen and (min-width: 768px) and (max-width: 959px) {
+                .header #accra #jbg .right .clocks .clock-container h6 {
+                  height: 50%;
+                  align-self: flex-end;
+                  margin-top: 0; } }
+              @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                .header #accra #jbg .right .clocks .clock-container h6 {
+                  height: 50%;
+                  align-self: flex-end;
+                  margin-top: 0; } }
+              @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+                .header #accra #jbg .right .clocks .clock-container h6 {
+                  height: 50%;
+                  align-self: flex-end;
+                  margin-top: 0; } }
+              @media only screen and (min-width: 1824px) {
+                .header #accra #jbg .right .clocks .clock-container h6 {
+                  height: 50%;
+                  align-self: flex-end;
+                  margin-top: 0; } }
+              @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+                .header #accra #jbg .right .clocks .clock-container h6 {
+                  height: 50%;
+                  align-self: flex-end;
+                  margin-top: 0; } }

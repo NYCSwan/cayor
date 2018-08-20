@@ -11,7 +11,9 @@
   /* iPhone 6 ----------- */
   /* Samsung Galaxy S3 ----------- */
   /* Samsung Galaxy S4 ----------- */
-  /* Samsung Galaxy S5 ----------- */ }
+  /* Samsung Galaxy S5 ----------- */
+  /* iPads (portrait and landscape) ----------- */
+  /* kindle fire (portrait and landscape) ----------- */ }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
@@ -108,6 +110,21 @@
       height: auto;
       background-position: unset;
       background-position-y: 25%; } }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .regionDetails {
+      background-size: auto 35%;
+      justify-content: center;
+      height: auto; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .regionDetails {
+      background-size: auto 35%;
+      justify-content: center;
+      height: auto; } }
+  @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+    .regionDetails {
+      background-size: auto 35%;
+      justify-content: center;
+      height: auto; } }
   .regionDetails .west-africa {
     width: 300px;
     order: 1;
@@ -123,7 +140,9 @@
     /* iphoneX----------- */
     /* iPhone 6+ ----------- */
     /* pixel 2 ----------- */
-    /* pixel 2 xl ----------- */ }
+    /* pixel 2 xl ----------- */
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
         width: 100px;
@@ -212,6 +231,18 @@
       .regionDetails .west-africa {
         top: 17%;
         left: 23%; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .regionDetails .west-africa {
+        top: 20%;
+        left: 30%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .regionDetails .west-africa {
+        top: 20%;
+        left: 30%; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .regionDetails .west-africa {
+        top: 20%;
+        left: 30%; } }
   .regionDetails .east-africa {
     order: 10;
     position: fixed;
@@ -224,7 +255,9 @@
     /* iPhone 6 ----------- */
     /* Samsung Galaxy S3 ----------- */
     /* Samsung Galaxy S4 ----------- */
-    /* Samsung Galaxy S5 ----------- */ }
+    /* Samsung Galaxy S5 ----------- */
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
@@ -272,6 +305,15 @@
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .east-africa {
         width: 100px;
+        top: 20%; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .regionDetails .east-africa {
+        top: 20%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .regionDetails .east-africa {
+        top: 20%; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .regionDetails .east-africa {
         top: 20%; } }
   .regionDetails .south-africa {
     width: 400px;
@@ -284,7 +326,9 @@
     /* iPhone 6 ----------- */
     /* Samsung Galaxy S3 ----------- */
     /* Samsung Galaxy S4 ----------- */
-    /* Samsung Galaxy S5 ----------- */ }
+    /* Samsung Galaxy S5 ----------- */
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
@@ -333,3 +377,14 @@
       .regionDetails .south-africa {
         width: 150px;
         bottom: 115px; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .regionDetails .south-africa {
+        bottom: 10%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .regionDetails .south-africa {
+        bottom: 10%; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .regionDetails .south-africa {
+        bottom: 10%; } }
+    .regionDetails .south-africa .text {
+      font-size: 1.2em; }

@@ -26,6 +26,9 @@
     @include respond-to(phone-long) {
       top: 20%;
     }
+    @include respond-to(tablets) {
+      width: 12%;
+    }
     &:disabled {
       background-color: $lightGrey;
     }

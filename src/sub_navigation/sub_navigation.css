@@ -14,143 +14,77 @@
   /* Samsung Galaxy S5 ----------- */ }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 30%; } }
   .sub_navigation .list {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
     color: #696969;
     text-align: left;
     width: 90%;
     font-size: 1em;
     height: 100%;
     list-style: none;
-    float: right;
-    /* iPhone 4 ----------- */
-    /* iPhone 5 ----------- */
-    /* iPhone 6 ----------- */
-    /* Samsung Galaxy S3 ----------- */
-    /* Samsung Galaxy S4 ----------- */
-    /* Samsung Galaxy S5 ----------- */ }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
       .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        margin-top: 20%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        margin-top: 20%; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
       .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
-    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-      .sub_navigation .list {
-        font-size: 0.8em;
-        width: 100%;
-        margin-left: 0;
-        float: none;
-        padding-left: 0; } }
+        margin-top: 20%; } }
     .sub_navigation .list .hideIcon {
       display: none; }
     .sub_navigation .list .active {
       color: #9b1d1f;
-      margin-left: -12%;
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */
@@ -159,12 +93,12 @@
       /* Samsung Galaxy S5 ----------- */ }
     .sub_navigation .list .top {
       list-style: none;
-      padding: 12px 10px;
+      height: 20px;
       color: #113a6e;
       font-weight: 700;
-      width: 75%;
       text-align: left;
       -moz-text-align-last: left;
+      flex-grow: 1;
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */
@@ -173,67 +107,44 @@
       /* Samsung Galaxy S5 ----------- */ }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%;
-          float: left;
-          padding: 3px 3px; } }
+          width: 100%; } }
       .sub_navigation .list .top.active {
         font-weight: bolder;
-        margin-left: -2%; }
+        margin-left: -2%;
+        width: fit-content; }
         .sub_navigation .list .top.active:hover {
           font-weight: bolder; }
       .sub_navigation .list .top:hover {
@@ -247,6 +158,7 @@
       width: 90%;
       text-align: left;
       -moz-text-align-last: left;
+      flex-grow: 1;
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */
@@ -255,67 +167,44 @@
       /* Samsung Galaxy S5 ----------- */ }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .sub {
-          width: 100%;
-          float: left;
-          padding: 4px 3px; } }
+          width: 100%; } }
       .sub_navigation .list .sub.active {
         color: #9b1d1f;
-        margin-left: -1%; }
+        margin-left: -1%;
+        width: fit-content; }
       .sub_navigation .list .sub:hover {
         text-decoration: underline;
         font-weight: bold;

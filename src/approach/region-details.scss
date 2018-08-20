@@ -17,6 +17,11 @@
     background-position: unset;
     background-position-y: 25%;
   }
+  @include respond-to(tablets) {
+    background-size: auto 35%;
+    justify-content: center;
+    height: auto;
+  }
   .west-africa {
     width: 300px;
     order: 1;
@@ -31,6 +36,10 @@
       top: 17%;
       left: 23%;
     }
+    @include respond-to(tablets) {
+      top: 20%;
+      left: 30%;
+    }
   }
   .east-africa {
     order: 10;
@@ -41,6 +50,9 @@
     align-self: flex-start;
     @include respond-to(phone) {
       width: 100px;
+      top: 20%;
+    }
+    @include respond-to(tablets) {
       top: 20%;
     }
   }
@@ -54,5 +66,12 @@
       width: 150px;
       bottom: 115px;
     }
+    @include respond-to(tablets) {
+      bottom: 10%;
+    }
+    .text {
+      font-size: 1.2em;
+    }
   }
 }
+// We focus on multiple regions across Sub-Saharan Africa
