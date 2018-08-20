@@ -1,4 +1,5 @@
 @import '../_variables';
+@import '../_mixins';
 // @import '../_defaults';
 
 .header {
@@ -21,6 +22,12 @@
     background-position: center top;
     background-repeat: no-repeat;
     border-bottom: 2px solid $lightGrey;
+    @include respond-to(phone) {
+      max-height: 100px;
+    }
+    @include respond-to(tablets) {
+      height: 150px;
+    }
   }
 
   &.people {
@@ -57,12 +64,29 @@
     display: flex;
     margin-left: 0;
     z-index: 1000;
+    @include respond-to(phone) {
+      width: 100px;
+      padding-left: 1%;
+    }
+    @include respond-to(tablets) {
+      width: 150px;
+      padding-left: 25px;
+      // background-color: aqua;
+    }
 
     .logo {
       align-self: center;
       width: 150px;
       height: auto;
       padding-top: 2px;
+      @include respond-to(phone) {
+        width: 100px;
+        padding: 0;
+      }
+
+      @include respond-to(tablets) {
+        width: 100px;
+      }
     }
   }
 
@@ -72,6 +96,7 @@
     // justify-content: center;
     z-index: 1000;
     // display: flex;
+
     #jbg {
       display: flex;
       flex-flow: row wrap;
@@ -79,6 +104,15 @@
       // justify-content: center;
       align-content: stretch;
       align-items: stretch;
+      @include respond-to(phone) {
+        height: 100%;
+      }
+      @include respond-to(tablets) {
+        height: 100%;
+      }
+      @include respond-to(large-screen) {
+        height: 100%;
+      }
       .right {
         display: flex;
         flex-flow: row wrap;
@@ -89,70 +123,73 @@
         color: $white;
         z-index: 1000;
 
-        // &.homepage {
-        //   color: $white;
-        // }
         .nav {
           width: 30%;
           margin-right: 4%;
           display: flex;
           flex-flow: row wrap;
-          justify-content: space-between;
-          align-content: baseline;
-          align-items: flex-end;
+          justify-content: space-around;
           font-size: 0.8em;
           font-weight: 400;
           height: 100px;
           z-index: 1000;
-
+          @include respond-to(phone) {
+            order: 5;
+            width: 100%;
+            height: 30px;
+            align-self: flex-end;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+          }
+          @include respond-to(tablets) {
+            width: 40%;
+            height: 100%;
+            align-items: flex-end;
+          }
+          @include respond-to(large-screen) {
+            align-items: flex-end;
+            height: 100%;
+          }
           .linkContainer {
-            height: auto;
+            height: 100%;
+            display: flex;
+            @include respond-to(tablets) {
+              align-self: flex-end;
+            }
+            @include respond-to(large-screen) {
+              align-self: flex-end;
+              height: 55%;
+            }
             .link {
+              align-self: flex-end;
               list-style: none;
-              display: inline;
+              font-weight: bold;
               color: inherit;
               order: 1;
-
+              height: 50%;
+              @include respond-to(large-screen) {
+                height: 50%;
+                align-self: flex-start;
+                margin-top: 0;
+              }
               &.selected {
+                height: 50%;
                 font-size: 1.1em;
-                font-weight: bold;
-                align-self: baseline;
+                align-self: flex-end;
                 border-bottom: 3px solid $cayorRed;
                 line-height: 1;
+                @include respond-to(large-screen) {
+                  height: 100%;
+                  align-self: flex-start;
+                  // margin-top: 0;5
+                }
               }
               &:hover {
                 border-bottom: 3px solid $cayorRed;
                 font-weight: 700;
                 text-decoration: none;
                 color: $cayorRed;
-              }
-
-              &.people {
-                padding-bottom: 118%;
-                &:hover {
-                  padding-bottom: 133%;
-                }
-              }
-
-              &.opportunity {
-                padding-bottom: 63%;
-                &:hover {
-                  padding-bottom: 72%;
-                }
-              }
-
-              &.approach {
-                padding-bottom: 85%;
-                &:hover {
-                  padding-bottom: 97%;
-                }
-              }
-
-              &.esg {
-                padding-bottom: 236%;
-                &:hover {
-                  padding-bottom: 260%;
-                }
               }
             }
           }
@@ -165,16 +202,58 @@
           order: 2;
           z-index: 1000;
           height: auto;
+          justify-content: flex-end;
+          @include respond-to(phone) {
+            width: 45%;
+            height: 60%;
+            align-self: center;
+            order: 1;
+          }
+          @include respond-to(phone-long) {
+            width: 35%;
+          }
+          @include respond-to(tablets) {
+            width: 30%;
+            height: 100%;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+          }
+          @include respond-to(large-screen) {
+            // width: 30%;
+            height: 100%;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+          }
           .clock-container {
-            width: 50%;
+            width: 49%;
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-start;
             align-items: flex-end;
             margin-right: 2%;
-            // margin-top: -2%;
-
             height: auto;
+            @include respond-to(phone) {
+              justify-content: center;
+              align-items: center;
+              flex-wrap: nowrap;
+            }
+            @include respond-to(tablets) {
+              justify-content: space-evenly;
+              height: 100%;
+              align-items: center;
+              margin-right: 0;
+              // align-content: center;
+            }
+            @include respond-to(large-screen) {
+              justify-content: space-evenly;
+              height: 100%;
+              align-items: center;
+              margin-right: 0;
+            }
             &:hover {
               cursor: grab;
               color: $cayorRed;
@@ -186,15 +265,28 @@
               text-align: left;
               font-size: 0.8em;
               align-self: flex-end;
+              @include respond-to(phone) {
+                margin-top: 5%;
+                align-self: center;
+                font-size: 0.7em;
+                // width: 100%;
+              }
+              @include respond-to(tablets) {
+                height: 50%;
+                align-self: flex-end;
+                margin-top: 0;
+              }
+              @include respond-to(large-screen) {
+                height: 50%;
+                align-self: flex-end;
+                margin-top: 0;
+              }
             }
           }
         }
       }
     }
   }
-  // width: 70%;
-  // height: 0;
-  // align-self: flex-end;
 }
 
 // media width 980 fix flex, etc.

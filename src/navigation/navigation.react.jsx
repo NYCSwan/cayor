@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faAlignJustify } from '@fortawesome/fontawesome-free-solid';
 import Clock from '../clocks/clock.react';
 import WhiteLogo from '../media/grey-white-icon.png';
 import ContactForm from '../contact/contact_form.react';

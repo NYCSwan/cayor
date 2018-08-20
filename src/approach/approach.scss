@@ -1,5 +1,6 @@
-@import '../_slide';
 @import '../variables';
+@import '../_slide';
+@import '../_mixins';
 
 .approach {
   width: 100%;
@@ -9,11 +10,15 @@
   // flex: column;
 
   .body {
-    height: 1000px;
+    height: 100%;
     display: flex;
     flex: row;
     align-items: stretch;
     justify-content: space-between;
+    @include respond-to(phone) {
+      // height: 100%;
+      // padding: 5px 0 0 0;
+    }
   }
 
   @include slide-enter;

@@ -5,7 +5,61 @@
   height: 20px;
   position: relative;
   width: 20px;
-  display: inline-block; }
+  display: inline-block;
+  /* iPhone 4 ----------- */
+  /* iPhone 5 ----------- */
+  /* iPhone 6 ----------- */
+  /* Samsung Galaxy S3 ----------- */
+  /* Samsung Galaxy S4 ----------- */
+  /* Samsung Galaxy S5 ----------- */ }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .clock {
+      height: 15px;
+      width: 15px; } }
   .clock .minute-container,
   .clock .hour-container {
     position: absolute;

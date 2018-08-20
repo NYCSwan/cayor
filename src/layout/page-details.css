@@ -47,19 +47,6 @@
   p {
     margin: 15px; } }
 
-/* iPhone 6+ ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 150px;
-  min-height: 100px;
-  p {
-    margin: 15px; } }
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  max-height: 150px;
-  min-height: 100px;
-  p {
-    margin: 15px; } }
-
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
   max-height: 150px;
