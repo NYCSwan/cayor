@@ -10,11 +10,8 @@
   border-right: 1px solid $lightGrey;
   background-color: $lightGreySemiTransparent;
   @include respond-to(phone) {
-    // font-size: 0.8em;
     margin-left: 0;
-    // height: 100%;
     width: 30%;
-    // background-color: blue;
   }
   .list {
     display: flex;
@@ -24,7 +21,7 @@
     text-align: left;
     width: 90%;
     font-size: 1em;
-    height: 100%;
+    height: auto;
     list-style: none;
     // margin-left: 4%;
     // float: right;
@@ -55,18 +52,22 @@
     // li
     .top {
       list-style: none;
-      height: 20px;
+      // height: 200px;
       // padding: 12px 10px;
       color: $primaryBlue;
       font-weight: 700;
-      // width: 75%;
+      width: 95%;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
       @include respond-to(phone) {
         width: 100%;
-        // float: left;
-        // padding: 3px 3px;
+        // max-height: 75px;
+      }
+      @include respond-to(large-screen) {
+        // max-height: 100px;
+        align-self: flex-start;
+        margin-top: 0;
       }
       &.active {
         font-weight: bolder;
@@ -93,8 +94,12 @@
 
       @include respond-to(phone) {
         width: 100%;
-        // float: left;
-        // padding: 4px 3px;
+        max-height: 75px;
+      }
+      @include respond-to(large-screen) {
+        max-height: 100px;
+        align-self: flex-start;
+        margin-top: 0;
       }
       &.active {
         color: $cayorRed;
