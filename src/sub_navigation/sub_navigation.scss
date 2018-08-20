@@ -19,10 +19,11 @@
     justify-content: flex-start;
     color: $primaryGrey;
     text-align: left;
-    width: 90%;
+    width: 95%;
     font-size: 1em;
     height: auto;
     list-style: none;
+    padding-inline-start: 0;
     // margin-left: 4%;
     // float: right;
     // @include respond-to(phone) {
@@ -56,13 +57,14 @@
       // padding: 12px 10px;
       color: $primaryBlue;
       font-weight: 700;
-      width: 95%;
+      width: fit-content;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
       @include respond-to(phone) {
-        width: 100%;
+        // width: 100%;
         // max-height: 75px;
+        padding-bottom: 5px;
       }
       @include respond-to(large-screen) {
         // max-height: 100px;
@@ -73,6 +75,10 @@
         font-weight: bolder;
         margin-left: -2%;
         width: fit-content;
+        word-wrap: normal;
+        @include respond-to(phone) {
+          margin-left: 5%;
+        }
         &:hover {
           font-weight: bolder;
         }
@@ -87,7 +93,7 @@
       color: $primaryGrey;
       padding: 4px 10px;
       list-style: none;
-      width: 90%;
+      width: fit-content;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;

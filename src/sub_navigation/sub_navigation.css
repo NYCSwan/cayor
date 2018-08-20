@@ -66,10 +66,11 @@
     justify-content: flex-start;
     color: #696969;
     text-align: left;
-    width: 90%;
+    width: 95%;
     font-size: 1em;
     height: auto;
     list-style: none;
+    padding-inline-start: 0;
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -95,7 +96,7 @@
       list-style: none;
       color: #113a6e;
       font-weight: 700;
-      width: 95%;
+      width: fit-content;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
@@ -108,40 +109,40 @@
       /* Large screens ----------- */ }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
-          width: 100%; } }
+          padding-bottom: 5px; } }
       @media only screen and (min-width: 1824px) {
         .sub_navigation .list .top {
           align-self: flex-start;
@@ -153,7 +154,50 @@
       .sub_navigation .list .top.active {
         font-weight: bolder;
         margin-left: -2%;
-        width: fit-content; }
+        width: fit-content;
+        word-wrap: normal;
+        /* iPhone 4 ----------- */
+        /* iPhone 5 ----------- */
+        /* iPhone 6 ----------- */
+        /* Samsung Galaxy S3 ----------- */
+        /* Samsung Galaxy S4 ----------- */
+        /* Samsung Galaxy S5 ----------- */ }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          .sub_navigation .list .top.active {
+            margin-left: 5%; } }
         .sub_navigation .list .top.active:hover {
           font-weight: bolder; }
       .sub_navigation .list .top:hover {
@@ -164,7 +208,7 @@
       color: #696969;
       padding: 4px 10px;
       list-style: none;
-      width: 90%;
+      width: fit-content;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
