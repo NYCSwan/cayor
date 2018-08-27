@@ -5,6 +5,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  @include respond-to(phone) {
+    overflow: auto;
+  }
+  @include respond-to(tablets) {
+    overflow: auto;
+  }
+
   .body {
     height: 1000px;
     display: flex;
@@ -25,7 +32,7 @@
       }
       .text-table-container {
         width: inherit;
-        height: 65%;
+        height: 100%;
         .text-table {
           overflow-y: scroll;
           @include respond-to(phone) {

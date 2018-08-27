@@ -215,7 +215,7 @@ class People extends Component {
     const { currentDetails, navItems, fadeIn } = this.state;
     const { width, height } = this.props;
     return (
-      <div className="people" style={{ maxHeight: height, maxWidth: width }}>
+      <div className="people" style={{ minHeight: height, minWidth: width }}>
         <Navigation
           fadeIn={fadeIn}
           headerImg="people"
