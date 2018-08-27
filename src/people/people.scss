@@ -7,9 +7,6 @@
   @include respond-to(phone) {
     overflow: auto;
   }
-  @include respond-to(tablets) {
-    overflow: auto;
-  }
 
   // @include slide-appear;
   @include slide-enter;

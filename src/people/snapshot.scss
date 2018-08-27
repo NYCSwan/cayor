@@ -6,7 +6,7 @@
   max-height: 105px;
   color: $primaryBlue;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   margin: 2% 1% 0 1%;
   justify-content: flex-start;
   align-content: flex-start;
@@ -37,8 +37,8 @@
     }
   }
   .headshot {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
     border-left: 1px solid $primaryBlue;
     border-bottom: 2px solid $primaryBlue;

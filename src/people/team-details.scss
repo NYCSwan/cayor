@@ -5,7 +5,7 @@
   width: 70%;
   display: flex;
   flex-flow: row wrap;
-  height: 600px;
+  height: 100%;
   padding-left: 5%;
   padding-top: 2%;
   @include respond-to(phone) {

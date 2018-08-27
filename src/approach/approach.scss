@@ -9,9 +9,6 @@
   @include respond-to(phone) {
     overflow: auto;
   }
-  @include respond-to(tablets) {
-    overflow: auto;
-  }
 
   .body {
     height: 100%;

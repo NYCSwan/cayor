@@ -3,7 +3,7 @@
   max-height: 105px;
   color: #113a6e;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   margin: 2% 1% 0 1%;
   justify-content: flex-start;
   align-content: flex-start;
@@ -179,8 +179,8 @@
         width: 45%;
         height: 150px; } }
   .snapshot .headshot {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     box-shadow: 0 8px 4px -1px #0a234266;
     border-left: 1px solid #113a6e;
     border-bottom: 2px solid #113a6e;
