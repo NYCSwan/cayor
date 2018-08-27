@@ -157,7 +157,7 @@
     @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3.5) {
       .snapshot.fade.show {
         height: 35%; } }
-    @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
+    @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
       .snapshot.fade.show {
         height: 35%; } }
     @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -427,7 +427,7 @@
         height: 40%;
         text-align: center;
         margin-left: 0; } }
-    @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
+    @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
       .snapshot .text {
         width: 100%;
         height: 40%;

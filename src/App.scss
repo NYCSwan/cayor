@@ -13,6 +13,7 @@ html {
       font-family: $copy-font-family;
       font-weight: 400;
       word-wrap: normal;
+      box-sizing: border-box;
       .routes {
         min-height: 100vh;
       }

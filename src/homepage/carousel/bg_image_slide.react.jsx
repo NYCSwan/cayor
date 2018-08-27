@@ -8,14 +8,20 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 // import Button from '../../layout/button.react';
+import Slide1 from '../../media/slide1Cropped.jpeg';
 import Slide2 from '../../media/anastasiaCropped.jpeg';
-import Slide1 from '../../media/slide3Cropped.jpeg';
 import Slide3 from '../../media/Accra.jpg';
+import Slide1Mobile from '../../media/slide1Mobile.jpeg';
+import Slide2Mobile from '../../media/slide2Mobile.jpeg';
+import Slide3Mobile from '../../media/slide3Mobile.jpeg';
+import Slide1Tablet from '../../media/slide1Mobile.jpeg';
+import Slide2Tablet from '../../media/slide2Mobile.jpeg';
+import Slide3Tablet from '../../media/slide3Mobile.jpeg';
 import './bg_image_slide.css';
 
 const items = [
   {
-    src: Slide1,
+    src: [Slide1, Slide1Mobile, Slide1Tablet],
     name: 'Slide1',
     altText:
       'We are a principal investment firm focused on investing in high growth sectors in select sub-Saharan African countries.',
@@ -24,7 +30,7 @@ const items = [
     header: 'Invested In Africa.',
   },
   {
-    src: Slide2,
+    src: [Slide2, Slide2Mobile, Slide2Tablet],
     name: 'Slide2',
     altText:
       'We are driven and entrepreneurial, and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
@@ -33,7 +39,7 @@ const items = [
     header: "Building New Platforms In Africa's Middle Markets.",
   },
   {
-    src: Slide3,
+    src: [Slide3, Slide3Mobile, Slide3Tablet],
     name: 'Slide3',
     altText:
       'The product of our experience over time is a consistent, disciplined and value added methodology that has yielded attractive investment returns.',
@@ -47,15 +53,35 @@ class BgImageSlide extends Component {
   state = {
     activeIndex: 0,
     direction: 'prev',
+    deviceIdx: null,
   };
 
-  // componentDidMount() {
-  //   this.animating;
-  // }
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+  }
 
   componentWillUnmount() {
     this.animating = false;
+    window.removeEventListener('resize', this.updateDimensions);
   }
+
+  updateDimensions = () => {
+    // const { device}=this.state;
+
+    if (window.innerHeight <= 690) {
+      this.setState({ deviceIdx: 1 });
+    }
+    // else if (window.innerHeight > 690 && window.innerHeight < ) {
+
+    // }
+    // this.setState({device: ''})
+  };
+
+  updateImageDimensions = () => {
+    if (window.innerHeight < 700) {
+    }
+  };
+
   onExiting = () => {
     console.log('on exiting');
     this.animating = true;
@@ -135,15 +161,19 @@ class BgImageSlide extends Component {
 
   render() {
     const { activeIndex } = this.state;
+    const carouselHeight = window.innerHeight;
+    console.log(carouselHeight);
     const slides = items.map(item => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
+          key={item.src[0]}
+          interval={10000}
         >
           <img
-            src={item.src}
+            style={{ height: carouselHeight }}
+            src={item.src[0]}
             alt={item.altText}
             className={`backgroundImage ${item.name}`}
           />
@@ -161,6 +191,7 @@ class BgImageSlide extends Component {
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
+        style={{ height: carouselHeight }}
       >
         <CarouselIndicators
           items={items}

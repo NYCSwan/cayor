@@ -49,13 +49,6 @@ class Navigation extends Component {
     // this.handleModalToggle();
   };
 
-  // handleModalToggle = () => {
-  //   console.log('handle modal toggle');
-  //   const { isContactModalOpen } = this.state;
-  //
-  //   this.setState({ isContactModalOpen: !isContactModalOpen });
-  // }
-
   renderContactPopover = () => {
     console.log('renderContactPopover');
     const {

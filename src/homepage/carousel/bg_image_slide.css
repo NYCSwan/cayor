@@ -11,11 +11,25 @@
     top: 0;
     transition: opacity 600s ease; }
     .carousel.slide .carousel-inner {
-      min-height: 100%;
-      min-width: 100%; }
+      max-height: 100%;
+      max-width: 100%; }
       .carousel.slide .carousel-inner .carousel-item {
         opacity: 0.1;
-        min-height: 1024px; }
+        min-height: -webkit-fill-available;
+        max-height: -webkit-fill-available;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        /* iPhone 4 ----------- */
+        /* iPhone 5 ----------- */
+        /* iPhone 6 ----------- */
+        /* Samsung Galaxy S3 ----------- */
+        /* Samsung Galaxy S4 ----------- */
+        /* Samsung Galaxy S5 ----------- */
+        /* iphoneX----------- */
+        /* iPhone 6+ ----------- */
+        /* pixel 2 ----------- */
+        /* pixel 2 xl ----------- */ }
         .carousel.slide .carousel-inner .carousel-item .linkContainer {
           position: fixed;
           margin-top: 40%;
@@ -53,15 +67,14 @@
               margin: 30px auto; }
         .carousel.slide .carousel-inner .carousel-item .backgroundImage {
           top: 0;
-          width: 100%;
-          min-height: 100%;
+          min-width: 100%;
           z-index: 10;
-          overflow-y: hidden;
-          overflow-x: hidden;
-          height: auto;
+          height: 100%;
           position: fixed;
           bottom: 0;
           left: 0; }
+          .carousel.slide .carousel-inner .carousel-item .backgroundImage.slide1 {
+            overflow-y: hidden; }
   .carousel .carousel-control-next {
     z-index: 150; }
     .carousel .carousel-control-next .carousel-control-next-icon {
