@@ -6,111 +6,93 @@
   align-content: flex-start; }
   .SectorsContainer ul {
     padding-left: 0; }
-  .SectorsContainer .Financial.Services {
+  .SectorsContainer .Financial.Services,
+  .SectorsContainer .Infrastructure.Services {
     width: 45%;
     height: 30%; }
-    .SectorsContainer .Financial.Services .text-table .headerContainer {
+    .SectorsContainer .Financial.Services .text-table .headerContainer,
+    .SectorsContainer .Infrastructure.Services .text-table .headerContainer {
       border-top: 1px solid #113a6e;
       border-right: 1px solid #113a6e;
       border-bottom: 2px solid #113a6e;
       background-color: rgba(0, 0, 0, 0);
       max-height: 70px;
       box-shadow: 0 0 5px #d5d5d561, 5px 5px 8px #0a234266; }
-      .SectorsContainer .Financial.Services .text-table .headerContainer .headerImg {
+      .SectorsContainer .Financial.Services .text-table .headerContainer .headerImg,
+      .SectorsContainer .Infrastructure.Services .text-table .headerContainer .headerImg {
         box-shadow: 0 8px 4px -1px #0a234266;
         border-left: 1px solid #113a6e;
         border-bottom: 2px solid #113a6e;
         border-right: 1px solid #113a6e; }
-      .SectorsContainer .Financial.Services .text-table .headerContainer h4 {
+      .SectorsContainer .Financial.Services .text-table .headerContainer h4,
+      .SectorsContainer .Infrastructure.Services .text-table .headerContainer h4 {
         display: inline-block;
         line-height: normal;
         padding-top: 5%;
         color: #9b1d1f;
         font-size: 1.2em;
         text-align: center; }
-    .SectorsContainer .Financial.Services .text-table .approach {
+    .SectorsContainer .Financial.Services .text-table .approach,
+    .SectorsContainer .Infrastructure.Services .text-table .approach {
       padding-top: 10px; }
-      .SectorsContainer .Financial.Services .text-table .approach .text {
-        padding-top: 5px;
-        padding-bottom: 0;
-        margin-left: 30%; }
-  .SectorsContainer .Infrastructure.Services {
-    width: 45%;
-    height: 30%; }
-    .SectorsContainer .Infrastructure.Services .headerContainer {
-      border-top: 3px solid #113a6e;
-      border-right: 3px solid #113a6e;
-      border-bottom: 5px solid #113a6e;
-      border-left: 3px solid #113a6e;
-      background-color: rgba(0, 0, 0, 0);
-      max-height: 97px; }
-      .SectorsContainer .Infrastructure.Services .headerContainer .headerImg {
-        border-right: 2px solid #9b1d1f;
-        margin-right: 2px; }
-      .SectorsContainer .Infrastructure.Services .headerContainer h4 {
-        display: inline-block;
-        line-height: normal;
-        padding: 5%;
-        color: #9b1d1f;
-        font-size: 1.2em;
-        text-align: center;
-        align-self: center; }
-    .SectorsContainer .Infrastructure.Services .approach {
-      padding-top: 10px; }
-      .SectorsContainer .Infrastructure.Services .approach .text {
+      .SectorsContainer .Financial.Services .text-table .approach .text,
+      .SectorsContainer .Infrastructure.Services .text-table .approach .text {
         padding-top: 5px;
         padding-bottom: 0;
         margin-left: 30%; }
   .SectorsContainer .Consumer.Goods {
     width: 45%;
     height: 30%; }
-    .SectorsContainer .Consumer.Goods .headerContainer {
-      border-top: 5px solid #113a6e;
-      border-right: 5px solid #113a6e;
-      border-bottom: 5px solid #113a6e;
-      border-left: 5px solid #113a6e;
+    .SectorsContainer .Consumer.Goods .text-table .headerContainer {
+      border-top: 1px solid #113a6e;
+      border-right: 1px solid #113a6e;
+      border-bottom: 2px solid #113a6e;
       background-color: rgba(0, 0, 0, 0);
-      max-height: 110px; }
-      .SectorsContainer .Consumer.Goods .headerContainer .headerImg {
-        width: 90px;
-        margin: 2%; }
-      .SectorsContainer .Consumer.Goods .headerContainer h4 {
-        display: inline-block;
-        line-height: normal;
-        margin: 7% 5%;
-        color: #9b1d1f;
-        font-size: 1.2em;
-        text-align: center; }
-    .SectorsContainer .Consumer.Goods .approach {
-      padding-top: 10px; }
-      .SectorsContainer .Consumer.Goods .approach .text {
-        padding-top: 5px;
-        padding-bottom: 0;
-        margin-left: 30%; }
-  .SectorsContainer .Agribusiness {
-    width: 45%;
-    height: 30%; }
-    .SectorsContainer .Agribusiness .headerContainer {
-      border-top: 2px solid #0a234266;
-      border-right: 2px solid #0a234266;
-      border-bottom: 4px solid #0a234266;
-      background-color: rgba(0, 0, 0, 0);
-      max-height: 70px; }
-      .SectorsContainer .Agribusiness .headerContainer .headerImg {
-        border-left: 2px solid #0a234266;
-        border-right: 2px solid #0a234266;
-        margin-right: 2px; }
-      .SectorsContainer .Agribusiness .headerContainer h4 {
+      max-height: 70px;
+      box-shadow: 0 0 5px #d5d5d561, 5px 5px 8px #0a234266; }
+      .SectorsContainer .Consumer.Goods .text-table .headerContainer .headerImg {
+        box-shadow: 0 8px 4px -1px #0a234266;
+        border-left: 1px solid #113a6e;
+        border-bottom: 2px solid #113a6e;
+        border-right: 1px solid #113a6e; }
+      .SectorsContainer .Consumer.Goods .text-table .headerContainer h4 {
         display: inline-block;
         line-height: normal;
         padding-top: 5%;
         color: #9b1d1f;
         font-size: 1.2em;
         text-align: center; }
-    .SectorsContainer .Agribusiness .approach {
+    .SectorsContainer .Consumer.Goods .text-table .approach {
       padding-top: 10px; }
-      .SectorsContainer .Agribusiness .approach .text {
+      .SectorsContainer .Consumer.Goods .text-table .approach .text {
         padding-top: 5px;
         padding-bottom: 0;
-        margin-left: 30%;
-        word-wrap: normal; }
+        margin-left: 30%; }
+  .SectorsContainer .Agribusiness {
+    width: 45%;
+    height: 30%; }
+    .SectorsContainer .Agribusiness .text-table .headerContainer {
+      border-top: 1px solid #113a6e;
+      border-right: 1px solid #113a6e;
+      border-bottom: 2px solid #113a6e;
+      background-color: rgba(0, 0, 0, 0);
+      max-height: 70px;
+      box-shadow: 0 0 5px #d5d5d561, 5px 5px 8px #0a234266; }
+      .SectorsContainer .Agribusiness .text-table .headerContainer .headerImg {
+        box-shadow: 0 8px 4px -1px #0a234266;
+        border-left: 1px solid #113a6e;
+        border-bottom: 2px solid #113a6e;
+        border-right: 1px solid #113a6e; }
+      .SectorsContainer .Agribusiness .text-table .headerContainer h4 {
+        display: inline-block;
+        line-height: normal;
+        padding-top: 5%;
+        color: #9b1d1f;
+        font-size: 1.2em;
+        text-align: center; }
+    .SectorsContainer .Agribusiness .text-table .approach {
+      padding-top: 10px; }
+      .SectorsContainer .Agribusiness .text-table .approach .text {
+        padding-top: 5px;
+        padding-bottom: 0;
+        margin-left: 30%; }

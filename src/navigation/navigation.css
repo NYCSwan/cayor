@@ -9,7 +9,7 @@
   z-index: 1000; }
   .header.people, .header.opportunity, .header.approach, .header.esg {
     width: 100%;
-    height: 170px;
+    height: 150px;
     object-fit: contain;
     background-position: center top;
     background-repeat: no-repeat;
@@ -146,16 +146,13 @@
         padding-left: 1%; } }
     @media only screen and (min-width: 768px) and (max-width: 959px) {
       .header .logo-container {
-        width: 150px;
-        padding-left: 25px; } }
+        width: 150px; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .header .logo-container {
-        width: 150px;
-        padding-left: 25px; } }
+        width: 150px; } }
     @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
       .header .logo-container {
-        width: 150px;
-        padding-left: 25px; } }
+        width: 150px; } }
     .header .logo-container .logo {
       align-self: center;
       width: 150px;
@@ -217,84 +214,17 @@
         .header .logo-container .logo {
           width: 100px;
           padding: 0; } }
-      @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .header .logo-container .logo {
-          width: 100px; } }
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        .header .logo-container .logo {
-          width: 100px; } }
-      @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
-        .header .logo-container .logo {
-          width: 100px; } }
   .header #accra {
     width: 80%;
-    z-index: 1000; }
+    z-index: 1000;
+    height: 100%; }
     .header #accra #jbg {
       display: flex;
       flex-flow: row wrap;
       width: 100%;
       align-content: stretch;
       align-items: stretch;
-      /* iPhone 4 ----------- */
-      /* iPhone 5 ----------- */
-      /* iPhone 6 ----------- */
-      /* Samsung Galaxy S3 ----------- */
-      /* Samsung Galaxy S4 ----------- */
-      /* Samsung Galaxy S5 ----------- */
-      /* iPads (portrait and landscape) ----------- */
-      /* kindle fire (portrait and landscape) ----------- */
-      /* Large screens ----------- */ }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-width: 1824px) {
-        .header #accra #jbg {
-          height: 100%; } }
-      @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
-        .header #accra #jbg {
-          height: 100%; } }
+      height: 100%; }
       .header #accra #jbg .right {
         display: flex;
         flex-flow: row wrap;
@@ -303,7 +233,8 @@
         align-content: stretch;
         align-items: stretch;
         color: #ffffff;
-        z-index: 1000; }
+        z-index: 1000;
+        height: 100%; }
         .header #accra #jbg .right .nav {
           width: 30%;
           margin-right: 4%;
@@ -312,7 +243,7 @@
           justify-content: space-around;
           font-size: 0.8em;
           font-weight: 400;
-          height: 100px;
+          height: 100%;
           z-index: 1000;
           /* iPhone 4 ----------- */
           /* iPhone 5 ----------- */
@@ -538,8 +469,10 @@
           flex-flow: row;
           order: 2;
           z-index: 1000;
-          height: auto;
-          justify-content: flex-end;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
           /* iPhone 4 ----------- */
           /* iPhone 5 ----------- */
           /* iPhone 6 ----------- */
@@ -657,7 +590,7 @@
               width: 35%; } }
           @media only screen and (min-width: 768px) and (max-width: 959px) {
             .header #accra #jbg .right .clocks {
-              width: 30%;
+              width: 25%;
               height: 100%;
               align-self: center;
               justify-content: center;
@@ -665,7 +598,7 @@
               align-content: center; } }
           @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
             .header #accra #jbg .right .clocks {
-              width: 30%;
+              width: 25%;
               height: 100%;
               align-self: center;
               justify-content: center;
@@ -673,7 +606,7 @@
               align-content: center; } }
           @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
             .header #accra #jbg .right .clocks {
-              width: 30%;
+              width: 25%;
               height: 100%;
               align-self: center;
               justify-content: center;
@@ -697,10 +630,10 @@
             width: 49%;
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: flex-end;
+            justify-content: center;
+            align-items: center;
             margin-right: 2%;
-            height: auto;
+            height: 100%;
             /* iPhone 4 ----------- */
             /* iPhone 5 ----------- */
             /* iPhone 6 ----------- */
@@ -805,11 +738,10 @@
               color: #9b1d1f;
               font-weight: bolder; }
             .header #accra #jbg .right .clocks .clock-container h6 {
-              margin-top: 83px;
-              padding-left: 15%;
+              padding-left: 10%;
               text-align: left;
               font-size: 0.8em;
-              align-self: flex-end;
+              align-self: center;
               /* iPhone 4 ----------- */
               /* iPhone 5 ----------- */
               /* iPhone 6 ----------- */

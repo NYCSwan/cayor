@@ -3,7 +3,7 @@
 
 .snapshot {
   width: 48%;
-  height: 105px;
+  max-height: 105px;
   color: $primaryBlue;
   display: flex;
   flex-flow: row wrap;
@@ -11,16 +11,21 @@
   justify-content: flex-start;
   align-content: flex-start;
   background-color: $transparent;
-  border: 2px solid $cayorRedShaddow;
   &.fade.show {
+    border-top: 1px solid $primaryBlue;
+    border-right: 1px solid $primaryBlue;
+    border-bottom: 2px solid $primaryBlue;
+    // max-height: 70px;
+    box-shadow: 0 0 5px $lightGreySemiTransparent,
+      5px 5px 8px $primaryBlueSemiTransparent;
     @include respond-to(phone) {
       border: none;
       flex-flow: column nowrap;
-      height: 40%;
-      justify-content: flex-start;
+      max-height: 200px;
+      justify-content: space-around;
       align-items: stretch;
       align-content: center;
-      margin-top: 0;
+      margin: 10% 0;
     }
     @include respond-to(phone-long) {
       height: 35%;
@@ -34,6 +39,10 @@
   .headshot {
     width: 100px;
     height: 100px;
+    box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
+    border-left: 1px solid $primaryBlue;
+    border-bottom: 2px solid $primaryBlue;
+    border-right: 1px solid $primaryBlue;
     @include respond-to(phone) {
       border-radius: 50%;
       align-self: center;
@@ -56,8 +65,19 @@
     z-index: 100;
     background-color: $lightGrey;
     justify-content: flex-start;
+    @include respond-to(phone) {
+      width: 75%;
+      margin: 0;
+      left: 13%;
+    }
+    @include respond-to(tablets) {
+      width: 55%;
+    }
     .headshot {
       float: right;
+      @include respond-to(phone) {
+        float: none;
+      }
     }
   }
 
@@ -113,11 +133,12 @@
     }
   }
   .close {
-    // align-self: flex-start;
-
     position: fixed;
     top: 5%;
     left: 95%;
+    @include respond-to(phone) {
+      left: 90%;
+    }
   }
   .collapse {
     width: 100%;
@@ -126,6 +147,11 @@
       // width: 48%;
       position: fixed;
       top: 100%;
+      .card {
+        @include respond-to(phone) {
+          overflow-y: scroll;
+        }
+      }
     }
   }
 }

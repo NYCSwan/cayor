@@ -15,51 +15,51 @@
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .sub_navigation {
       margin-left: 0;
-      width: 32%; } }
+      width: 30%; } }
   .sub_navigation .list {
     display: flex;
     flex-flow: column;
@@ -428,3 +428,5 @@
         text-decoration: underline;
         font-weight: bold;
         cursor: grab; }
+      .sub_navigation .list .sub .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
+        width: auto; }

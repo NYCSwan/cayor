@@ -10,7 +10,6 @@
   padding-right: 5%;
   color: $primaryGrey;
   @include respond-to(phone) {
-    overflow-y: scroll;
   }
   &.bullet {
     display: flex;
@@ -23,7 +22,12 @@
       flex-flow: row;
       justify-content: flex-start;
       align-content: center;
-
+      height: 150px;
+      @include respond-to(phone) {
+        height: 150px;
+        // display: flex;
+        width: 100%;
+      }
       .headerImg {
         width: 90px;
         height: 90px;
@@ -40,19 +44,27 @@
         font-size: 1.4em;
         height: auto;
         @include respond-to(phone) {
-          font-size: 0.9em;
+          font-size: 1em;
+          color: $primaryBlue;
+
+          // background-color: blue;
+          height: 150px;
         }
       }
     }
-    .text {
-      list-style: none;
-      padding: 7px 0;
-      margin-left: 4%;
-      text-align: left;
-      width: 80%;
-      font-size: 1em;
-      @include respond-to(phone) {
-        font-size: 0.8em;
+    ul {
+      overflow-y: scroll;
+
+      .text {
+        list-style: none;
+        padding: 7px 0;
+        margin-left: 4%;
+        text-align: left;
+        width: 80%;
+        font-size: 1em;
+        @include respond-to(phone) {
+          font-size: 0.8em;
+        }
       }
     }
   }
@@ -98,6 +110,8 @@
         @include respond-to(phone) {
           width: 100%;
           font-size: 0.9em;
+          margin-left: 0;
+          width: 90%;
         }
       }
     }
@@ -112,6 +126,7 @@
       @include respond-to(phone) {
         width: 100%;
         font-size: 0.9em;
+        margin-left: 0;
       }
     }
   }
@@ -167,6 +182,8 @@
     width: 90%;
     @include respond-to(phone) {
       margin-top: 10px;
+      margin-left: -5%;
+      width: 100%;
     }
   }
 }

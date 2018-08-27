@@ -11,7 +11,7 @@
   background-color: $lightGreySemiTransparent;
   @include respond-to(phone) {
     margin-left: 0;
-    width: 32%;
+    width: 30%;
   }
   .list {
     display: flex;
@@ -131,6 +131,9 @@
         text-decoration: underline;
         font-weight: bold;
         cursor: grab;
+      }
+      .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
+        width: auto;
       }
     }
   }

@@ -1,15 +1,18 @@
 .snapshot {
   width: 48%;
-  height: 105px;
+  max-height: 105px;
   color: #113a6e;
   display: flex;
   flex-flow: row wrap;
   margin: 2% 1% 0 1%;
   justify-content: flex-start;
   align-content: flex-start;
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #470c0d; }
+  background-color: rgba(0, 0, 0, 0); }
   .snapshot.fade.show {
+    border-top: 1px solid #113a6e;
+    border-right: 1px solid #113a6e;
+    border-bottom: 2px solid #113a6e;
+    box-shadow: 0 0 5px #d5d5d561, 5px 5px 8px #0a234266;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -26,110 +29,110 @@
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .snapshot.fade.show {
         border: none;
         flex-flow: column nowrap;
-        height: 40%;
-        justify-content: flex-start;
+        max-height: 200px;
+        justify-content: space-around;
         align-items: stretch;
         align-content: center;
-        margin-top: 0; } }
+        margin: 10% 0; } }
     @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .snapshot.fade.show {
         height: 35%; } }
@@ -178,6 +181,10 @@
   .snapshot .headshot {
     width: 100px;
     height: 100px;
+    box-shadow: 0 8px 4px -1px #0a234266;
+    border-left: 1px solid #113a6e;
+    border-bottom: 2px solid #113a6e;
+    border-right: 1px solid #113a6e;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -277,9 +284,128 @@
     position: fixed;
     z-index: 100;
     background-color: #d5d5d5;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    /* iPhone 4 ----------- */
+    /* iPhone 5 ----------- */
+    /* iPhone 6 ----------- */
+    /* Samsung Galaxy S3 ----------- */
+    /* Samsung Galaxy S4 ----------- */
+    /* Samsung Galaxy S5 ----------- */
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot.active {
+        width: 75%;
+        margin: 0;
+        left: 13%; } }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      .snapshot.active {
+        width: 55%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .snapshot.active {
+        width: 55%; } }
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+      .snapshot.active {
+        width: 55%; } }
     .snapshot.active .headshot {
-      float: right; }
+      float: right;
+      /* iPhone 4 ----------- */
+      /* iPhone 5 ----------- */
+      /* iPhone 6 ----------- */
+      /* Samsung Galaxy S3 ----------- */
+      /* Samsung Galaxy S4 ----------- */
+      /* Samsung Galaxy S5 ----------- */ }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        .snapshot.active .headshot {
+          float: none; } }
+      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        .snapshot.active .headshot {
+          float: none; } }
   .snapshot.inactive {
     transform: scale(0.8);
     order: 10;
@@ -602,10 +728,95 @@
   .snapshot .close {
     position: fixed;
     top: 5%;
-    left: 95%; }
+    left: 95%;
+    /* iPhone 4 ----------- */
+    /* iPhone 5 ----------- */
+    /* iPhone 6 ----------- */
+    /* Samsung Galaxy S3 ----------- */
+    /* Samsung Galaxy S4 ----------- */
+    /* Samsung Galaxy S5 ----------- */ }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot .close {
+        left: 90%; } }
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      .snapshot .close {
+        left: 90%; } }
   .snapshot .collapse {
     width: 100%;
     border-top: 2px solid #9b1d1f; }
     .snapshot .collapse .show {
       position: fixed;
       top: 100%; }
+      .snapshot .collapse .show .card {
+        /* iPhone 4 ----------- */
+        /* iPhone 5 ----------- */
+        /* iPhone 6 ----------- */
+        /* Samsung Galaxy S3 ----------- */
+        /* Samsung Galaxy S4 ----------- */
+        /* Samsung Galaxy S5 ----------- */ }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }
+        @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          .snapshot .collapse .show .card {
+            overflow-y: scroll; } }

@@ -1,6 +1,5 @@
 @import '../_variables';
-
-// REFACTOR WITH SASS
+@import '../_mixins';
 
 .SectorsContainer {
   display: flex;
@@ -11,8 +10,50 @@
   ul {
     padding-left: 0;
   }
-  .Financial {
+  .Financial,
+  .Infrastructure {
     &.Services {
+      width: 45%;
+      height: 30%;
+      .text-table {
+        .headerContainer {
+          border-top: 1px solid $primaryBlue;
+          border-right: 1px solid $primaryBlue;
+          border-bottom: 2px solid $primaryBlue;
+          background-color: $transparent;
+          max-height: 70px;
+          box-shadow: 0 0 5px $lightGreySemiTransparent,
+            5px 5px 8px $primaryBlueSemiTransparent;
+          .headerImg {
+            box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
+            border-left: 1px solid $primaryBlue;
+            border-bottom: 2px solid $primaryBlue;
+            border-right: 1px solid $primaryBlue;
+          }
+          h4 {
+            display: inline-block;
+            line-height: normal;
+            padding-top: 5%;
+            color: $cayorRed;
+            font-size: 1.2em;
+            text-align: center;
+          }
+        }
+
+        .approach {
+          padding-top: 10px;
+          .text {
+            padding-top: 5px;
+            padding-bottom: 0;
+            margin-left: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  .Consumer {
+    &.Goods {
       width: 45%;
       height: 30%;
       .text-table {
@@ -52,110 +93,42 @@
       }
     }
   }
-  .Infrastructure {
-    &.Services {
-      width: 45%;
-      height: 30%;
-      .headerContainer {
-        border-top: 3px solid $primaryBlue;
-        border-right: 3px solid $primaryBlue;
-        border-bottom: 5px solid $primaryBlue;
-        border-left: 3px solid $primaryBlue;
-        background-color: $transparent;
-        max-height: 97px;
-        .headerImg {
-          border-right: 2px solid $cayorRed;
-          margin-right: 2px;
-        }
-        h4 {
-          display: inline-block;
-          line-height: normal;
-          padding: 5%;
-          color: $cayorRed;
-          font-size: 1.2em;
-          text-align: center;
-          align-self: center;
-        }
-      }
-
-      .approach {
-        padding-top: 10px;
-        .text {
-          padding-top: 5px;
-          padding-bottom: 0;
-          margin-left: 30%;
-        }
-      }
-    }
-  }
-  .Consumer {
-    &.Goods {
-      width: 45%;
-      height: 30%;
-      .headerContainer {
-        border-top: 5px solid $primaryBlue;
-        border-right: 5px solid $primaryBlue;
-        border-bottom: 5px solid $primaryBlue;
-        border-left: 5px solid $primaryBlue;
-        background-color: $transparent;
-        max-height: 110px;
-
-        .headerImg {
-          width: 90px;
-          margin: 2%;
-        }
-        h4 {
-          display: inline-block;
-          line-height: normal;
-          margin: 7% 5%;
-          color: $cayorRed;
-          font-size: 1.2em;
-          text-align: center;
-        }
-      }
-
-      .approach {
-        padding-top: 10px;
-        .text {
-          padding-top: 5px;
-          padding-bottom: 0;
-          margin-left: 30%;
-        }
-      }
-    }
-  }
   .Agribusiness {
     width: 45%;
     height: 30%;
-    .headerContainer {
-      border-top: 2px solid $primaryBlueSemiTransparent;
-      border-right: 2px solid $primaryBlueSemiTransparent;
-      border-bottom: 4px solid $primaryBlueSemiTransparent;
-      background-color: $transparent;
-      max-height: 70px;
-      .headerImg {
-        border-left: 2px solid $primaryBlueSemiTransparent;
-        //   border-bottom: 5px solid $primaryBlueSemiTransparent;
-        border-right: 2px solid $primaryBlueSemiTransparent;
-        margin-right: 2px;
+    .text-table {
+      .headerContainer {
+        border-top: 1px solid $primaryBlue;
+        border-right: 1px solid $primaryBlue;
+        border-bottom: 2px solid $primaryBlue;
+        background-color: $transparent;
+        max-height: 70px;
+        box-shadow: 0 0 5px $lightGreySemiTransparent,
+          5px 5px 8px $primaryBlueSemiTransparent;
+        .headerImg {
+          // border: 1px solid $primaryBlue;
+          box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
+          border-left: 1px solid $primaryBlue;
+          border-bottom: 2px solid $primaryBlue;
+          border-right: 1px solid $primaryBlue;
+        }
+        h4 {
+          display: inline-block;
+          line-height: normal;
+          padding-top: 5%;
+          color: $cayorRed;
+          font-size: 1.2em;
+          text-align: center;
+        }
       }
-      h4 {
-        display: inline-block;
-        line-height: normal;
-        padding-top: 5%;
-        color: $cayorRed;
-        font-size: 1.2em;
-        text-align: center;
-      }
-    }
 
-    .approach {
-      padding-top: 10px;
-      .text {
-        padding-top: 5px;
-        padding-bottom: 0;
-        margin-left: 30%;
-        word-wrap: normal;
+      .approach {
+        padding-top: 10px;
+        .text {
+          padding-top: 5px;
+          padding-bottom: 0;
+          margin-left: 30%;
+        }
       }
     }
   }
