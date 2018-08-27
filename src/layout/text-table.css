@@ -3,7 +3,6 @@
   position: relative;
   width: 90%;
   display: inline-block;
-  padding-top: 4.5%;
   padding-right: 5%;
   color: #696969;
   /* iPhone 4 ----------- */
@@ -17,7 +16,8 @@
     flex-flow: column;
     justify-content: center;
     align-content: center;
-    margin-left: 5%; }
+    margin-left: 5%;
+    padding-top: 0; }
     .text-table.bullet .headerContainer {
       display: flex;
       flex-flow: row;

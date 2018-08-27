@@ -201,9 +201,10 @@ class Esg extends Component {
 
   render() {
     const { currentDetails, currentDetailIdx, fadeIn, navItems } = this.state;
+    const { width, height } = this.props;
 
     return (
-      <div className="esg">
+      <div className="esg" style={{ maxHeight: height, maxWidth: width }}>
         <Navigation
           fadeIn={fadeIn}
           history={this.props.history}

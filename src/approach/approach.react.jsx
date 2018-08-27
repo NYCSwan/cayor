@@ -621,9 +621,10 @@ class Approach extends Component {
 
   render() {
     const { navItems, fadeIn, currentDetails, currentDetailIdx } = this.state;
+    const { width, height } = this.props;
 
     return (
-      <div className="approach">
+      <div className="approach" style={{ maxHeight: height, maxWidth: width }}>
         <Navigation
           fadeIn={fadeIn}
           history={this.props.history}

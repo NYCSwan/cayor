@@ -16,22 +16,18 @@
   .list {
     display: flex;
     flex-flow: column;
-    // justify-content: center;
     color: $primaryGrey;
     text-align: left;
-    width: 74%;
+    width: 80%;
     font-size: 1em;
     height: 50%;
     list-style: none;
     padding-inline-start: 0;
-    // margin-left: 4%;
     float: right;
     @include respond-to(phone) {
       text-align: fit-content;
-      width: 90%;
-      //   margin-left: 0;
-      //   float: right;
-      //   padding-left: 0;
+      width: 85%;
+      margin: 0;
     }
     @include respond-to(tablets) {
       margin-top: 20%;
@@ -42,37 +38,29 @@
     }
     .active {
       color: $cayorRed;
-
-      // margin-left: -12%;
+      line-height: normal;
       @include respond-to(phone) {
-        width: 85%;
-        // margin: -10%;
-        // background-color: blue;
+        width: 90%;
+        text-align: fit-content;
       }
     }
 
-    // li
     .top {
       list-style: none;
-      // height: 200px;
+      display: block;
       align-self: flex-end;
-
-      // padding: 12px 10px;
       color: $primaryBlue;
       font-weight: 700;
       width: fit-content;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
-      // margin-top: 5px;
       @include respond-to(phone) {
-        // width: 100%;
-        // max-height: 75px;
+        font-size: 0.9em;
         align-self: flex-start;
         padding-bottom: 5px;
       }
       @include respond-to(large-screen) {
-        // max-height: 100px;
         align-self: flex-start;
         margin-top: 0;
       }
@@ -88,7 +76,6 @@
         @include respond-to(phone) {
           margin-left: -5%;
           width: 100%;
-          font-size: 0.8em;
         }
         &:hover {
           font-weight: bolder;
@@ -96,6 +83,8 @@
         // arrow inline
         .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
           width: auto;
+          margin-left: -10px;
+          display: inline;
         }
       }
       &:hover {
@@ -112,7 +101,7 @@
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
-
+      display: block;
       @include respond-to(phone) {
         width: 100%;
         max-height: 75px;
@@ -132,8 +121,11 @@
         font-weight: bold;
         cursor: grab;
       }
+      // arrow
       .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
         width: auto;
+        margin-left: -10px;
+        display: inline;
       }
     }
   }
