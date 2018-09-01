@@ -278,7 +278,7 @@
         height: 145px;
         width: 145px; } }
   .snapshot.active {
-    width: 55%;
+    width: 100%;
     transform: scale(1.1);
     border: none;
     position: fixed;
@@ -364,6 +364,8 @@
         width: 55%; } }
     .snapshot.active .headshot {
       float: right;
+      width: 100px;
+      height: 100px;
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */
@@ -775,8 +777,7 @@
     width: 100%;
     border-top: 2px solid #9b1d1f; }
     .snapshot .collapse .show {
-      position: fixed;
-      top: 100%; }
+      position: fixed; }
       .snapshot .collapse .show .card {
         /* iPhone 4 ----------- */
         /* iPhone 5 ----------- */

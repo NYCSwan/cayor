@@ -57,7 +57,7 @@
 
   &.active {
     // order: 10;
-    width: 55%;
+    width: 100%;
     transform: scale(1.1);
     border: none;
     position: fixed;
@@ -75,6 +75,8 @@
     }
     .headshot {
       float: right;
+      width: 100px;
+      height: 100px;
       @include respond-to(phone) {
         float: none;
       }
@@ -146,7 +148,7 @@
     .show {
       // width: 48%;
       position: fixed;
-      top: 100%;
+      // top: 120%;
       .card {
         @include respond-to(phone) {
           overflow-y: scroll;

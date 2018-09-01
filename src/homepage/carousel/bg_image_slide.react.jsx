@@ -57,30 +57,28 @@ class BgImageSlide extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions);
+    this.updateDimensions();
   }
 
   componentWillUnmount() {
     this.animating = false;
-    window.removeEventListener('resize', this.updateDimensions);
   }
 
   updateDimensions = () => {
-    // const { device}=this.state;
-
-    if (window.innerHeight <= 690) {
+    // debugger;
+    if (this.props.width <= 490) {
       this.setState({ deviceIdx: 1 });
-    }
-    // else if (window.innerHeight > 690 && window.innerHeight < ) {
-
-    // }
-    // this.setState({device: ''})
-  };
-
-  updateImageDimensions = () => {
-    if (window.innerHeight < 700) {
+    } else if (this.props.width >= 780 || this.props.width < 1025) {
+      this.setState({ deviceIdx: 2 });
+    } else {
+      this.setState({ deviceIdx: 0 });
     }
   };
+
+  // updateImageDimensions = () => {
+  //   if (window.innerHeight < 700) {
+  //   }
+  // };
 
   onExiting = () => {
     console.log('on exiting');
@@ -160,20 +158,19 @@ class BgImageSlide extends Component {
   }
 
   render() {
-    const { activeIndex } = this.state;
-    const carouselHeight = window.innerHeight;
-    console.log(carouselHeight);
+    const { activeIndex, deviceIdx } = this.state;
+    const { height, width } = this.props;
+
     const slides = items.map(item => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src[0]}
-          interval={10000}
+          key={item.src[deviceIdx]}
         >
           <img
-            style={{ height: carouselHeight }}
-            src={item.src[0]}
+            style={{ height: height }}
+            src={item.src[deviceIdx]}
             alt={item.altText}
             className={`backgroundImage ${item.name}`}
           />
@@ -188,10 +185,11 @@ class BgImageSlide extends Component {
     // ride='carousel'
     return (
       <Carousel
+        interval={10000}
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
-        style={{ height: carouselHeight }}
+        style={{ height: height }}
       >
         <CarouselIndicators
           items={items}
