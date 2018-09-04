@@ -316,9 +316,6 @@
     /* Samsung Galaxy S3 ----------- */
     /* Samsung Galaxy S4 ----------- */
     /* Samsung Galaxy S5 ----------- */ }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      .text-table.other {
-        justify-content: flex-start; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .text-table.other {
         justify-content: flex-start; } }
@@ -491,9 +488,6 @@
       @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
         .text-table.other .headerContainer h4 {
           font-size: 1.2em;
-          width: 100%; } }
-      @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .text-table.other .headerContainer h4 {
           width: 100%; } }
       @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .text-table.other .headerContainer h4 {

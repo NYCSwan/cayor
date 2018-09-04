@@ -58,9 +58,6 @@
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .header.people, .header.opportunity, .header.approach, .header.esg {
         max-height: 100px; } }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      .header.people, .header.opportunity, .header.approach, .header.esg {
-        height: 150px; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .header.people, .header.opportunity, .header.approach, .header.esg {
         height: 150px; } }
@@ -144,9 +141,6 @@
       .header .logo-container {
         width: 100px;
         padding-left: 1%; } }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      .header .logo-container {
-        width: 150px; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .header .logo-container {
         width: 150px; } }
@@ -362,11 +356,6 @@
               flex-wrap: nowrap;
               justify-content: space-between;
               align-items: center; } }
-          @media only screen and (min-width: 768px) and (max-width: 959px) {
-            .header #accra #jbg .right .nav {
-              width: 40%;
-              height: 100%;
-              align-items: flex-end; } }
           @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
             .header #accra #jbg .right .nav {
               width: 40%;
@@ -393,9 +382,6 @@
             /* iPads (portrait and landscape) ----------- */
             /* kindle fire (portrait and landscape) ----------- */
             /* Large screens ----------- */ }
-            @media only screen and (min-width: 768px) and (max-width: 959px) {
-              .header #accra #jbg .right .nav .linkContainer {
-                align-self: flex-end; } }
             @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
               .header #accra #jbg .right .nav .linkContainer {
                 align-self: flex-end; } }
@@ -573,14 +559,6 @@
           @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
             .header #accra #jbg .right .clocks {
               width: 35%; } }
-          @media only screen and (min-width: 768px) and (max-width: 959px) {
-            .header #accra #jbg .right .clocks {
-              width: 25%;
-              height: 100%;
-              align-self: center;
-              justify-content: center;
-              align-items: center;
-              align-content: center; } }
           @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
             .header #accra #jbg .right .clocks {
               width: 25%;
@@ -688,12 +666,6 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: nowrap; } }
-            @media only screen and (min-width: 768px) and (max-width: 959px) {
-              .header #accra #jbg .right .clocks .clock-container {
-                justify-content: space-evenly;
-                height: 100%;
-                align-items: center;
-                margin-right: 0; } }
             @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
               .header #accra #jbg .right .clocks .clock-container {
                 justify-content: space-evenly;
@@ -796,11 +768,6 @@
                   margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
-              @media only screen and (min-width: 768px) and (max-width: 959px) {
-                .header #accra #jbg .right .clocks .clock-container h6 {
-                  height: 50%;
-                  align-self: flex-end;
-                  margin-top: 0; } }
               @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
                   height: 50%;

@@ -55,9 +55,9 @@
     }
   }
 
-  &.active {
+  &.active.fade.show {
     // order: 10;
-    width: 100%;
+    width: 50%;
     transform: scale(1.1);
     border: none;
     position: fixed;
@@ -79,6 +79,28 @@
       height: 100px;
       @include respond-to(phone) {
         float: none;
+      }
+    }
+    .close {
+      position: fixed;
+      top: 5%;
+      left: 95%;
+      @include respond-to(phone) {
+        left: 90%;
+      }
+    }
+    .collapse {
+      // width: 100%;
+      border-top: 2px solid $cayorRed;
+      &.show {
+        width: 100%;
+        position: fixed;
+        top: 100%;
+        .card {
+          @include respond-to(phone) {
+            overflow-y: scroll;
+          }
+        }
       }
     }
   }
@@ -131,28 +153,6 @@
         font-weight: bold;
         margin-bottom: 0;
         align-self: center;
-      }
-    }
-  }
-  .close {
-    position: fixed;
-    top: 5%;
-    left: 95%;
-    @include respond-to(phone) {
-      left: 90%;
-    }
-  }
-  .collapse {
-    width: 100%;
-    border-top: 2px solid $cayorRed;
-    .show {
-      // width: 48%;
-      position: fixed;
-      // top: 120%;
-      .card {
-        @include respond-to(phone) {
-          overflow-y: scroll;
-        }
       }
     }
   }

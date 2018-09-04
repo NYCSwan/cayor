@@ -66,7 +66,7 @@ const Snapshot = props => (
     ]}
   >
     {getImage(props.name, props.handleClick)}
-    <div className="text" onClick={props.handleClick}>
+    <div className={`text ${props.name}`} onClick={props.handleClick}>
       <h4 className={props.name}>{props.name}</h4>
       <h5 className={props.name}>{props.role}</h5>
       {props.isOpen ? null : (

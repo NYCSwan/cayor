@@ -110,11 +110,6 @@
       height: auto;
       background-position: unset;
       background-position-y: 25%; } }
-  @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .regionDetails {
-      background-size: auto 35%;
-      justify-content: center;
-      height: auto; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .regionDetails {
       background-size: auto 35%;
@@ -231,10 +226,6 @@
       .regionDetails .west-africa {
         top: 17%;
         left: 23%; } }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      .regionDetails .west-africa {
-        top: 20%;
-        left: 30%; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .regionDetails .west-africa {
         top: 20%;
@@ -306,9 +297,6 @@
       .regionDetails .east-africa {
         width: 100px;
         top: 20%; } }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      .regionDetails .east-africa {
-        top: 20%; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .regionDetails .east-africa {
         top: 20%; } }
@@ -377,9 +365,6 @@
       .regionDetails .south-africa {
         width: 150px;
         bottom: 115px; } }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      .regionDetails .south-africa {
-        bottom: 10%; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .regionDetails .south-africa {
         bottom: 10%; } }

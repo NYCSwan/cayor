@@ -139,10 +139,6 @@
         text-align: fit-content;
         width: 85%;
         margin: 0; } }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      .sub_navigation .list {
-        margin-top: 20%;
-        align-items: flex-start; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .sub_navigation .list {
         margin-top: 20%;
@@ -297,9 +293,6 @@
         .sub_navigation .list .top {
           align-self: flex-start;
           margin-top: 0; } }
-      @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .sub_navigation .list .top {
-          align-self: flex-start; } }
       @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .sub_navigation .list .top {
           align-self: flex-start; } }

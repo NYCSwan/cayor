@@ -65,20 +65,16 @@ class BgImageSlide extends Component {
   }
 
   updateDimensions = () => {
+    console.log('update dimensions');
     // debugger;
-    if (this.props.width <= 490) {
+    if (this.props.width <= 490 && this.props.width > 0) {
       this.setState({ deviceIdx: 1 });
-    } else if (this.props.width >= 780 || this.props.width < 1025) {
+    } else if (this.props.width >= 780 && this.props.width < 1025) {
       this.setState({ deviceIdx: 2 });
     } else {
       this.setState({ deviceIdx: 0 });
     }
   };
-
-  // updateImageDimensions = () => {
-  //   if (window.innerHeight < 700) {
-  //   }
-  // };
 
   onExiting = () => {
     console.log('on exiting');
@@ -116,18 +112,6 @@ class BgImageSlide extends Component {
     this.setState({ activeIndex: newIndex });
   };
 
-  // handleReadMoreClick() {
-  //   console.log('handle read more click');
-  //   const { activeIndex } = this.state;
-  //   if (activeIndex === 0) {
-  //     return this.props.history.push('/approach')
-  //   } else if (activeIndex === 1) {
-  //     return this.props.history.push('/opportunity')
-  //   } else {
-  //     return this.props.history.push('/esg')
-  //   }
-  // }
-
   renderLink(item) {
     console.log('renderLink');
     if (item === 'Slide1') {
@@ -159,14 +143,15 @@ class BgImageSlide extends Component {
 
   render() {
     const { activeIndex, deviceIdx } = this.state;
-    const { height, width } = this.props;
-
+    const { height } = this.props;
+    // debugger;
     const slides = items.map(item => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.src[deviceIdx]}
+          style={{ height: height }}
         >
           <img
             style={{ height: height }}
