@@ -13,7 +13,6 @@
   .fade {
     &.show {
       height: 100%;
-      // overflow: auto;
       overflow-y: scroll;
 
       .header {

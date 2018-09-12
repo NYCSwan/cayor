@@ -4,38 +4,40 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/fontawesome-free-solid';
 import './contact_form.css';
 
-const ContactForm = (props) => (
+const ContactForm = props => (
   <Popover
     className="contactForm"
     target={props.contactLocation}
     hideArrow={true}
     placement={'top-end'}
-    isOpen={props.isContactModalOpen}>
-
+    isOpen={props.isContactModalOpen}
+  >
     <PopoverHeader>
-      <FontAwesomeIcon onClick={props.handleClose} className={'times'} icon={faTimes} pull='right' />
-      <h5>CONTACT US</h5>
+      CONTACT US
+      <FontAwesomeIcon
+        onClick={props.handleClose}
+        className={'times'}
+        icon={faTimes}
+        pull="right"
+      />
     </PopoverHeader>
     <PopoverBody>
-    {props.contactDetails.map(detail => {
-      return (
-        <Fade
-          in={props.fadeIn}
-          key={detail.location}
-          className='contactBody'>
-          <h3>{detail.location}</h3>
-          <img src={detail.imageUrl} alt={detail.imageAlt} />
-          <aside className='address'>
-            <h4>{detail.street_address}</h4>
-            <h4>{detail.street_address2}</h4>
-            <h4>{detail.city}</h4>
-            <h4>{detail.phone}</h4>
-          </aside>
-        </Fade>
-      )
-    })}
+      {props.contactDetails.map(detail => {
+        return (
+          <Fade in={props.fadeIn} key={detail.location} className="contactBody">
+            <h3>{detail.location}</h3>
+            <img src={detail.imageUrl} alt={detail.imageAlt} />
+            <aside className="address">
+              <h4>{detail.street_address}</h4>
+              <h4>{detail.street_address2}</h4>
+              <h4>{detail.city}</h4>
+              <h4>{detail.phone}</h4>
+            </aside>
+          </Fade>
+        );
+      })}
     </PopoverBody>
   </Popover>
-)
+);
 
 export default ContactForm;

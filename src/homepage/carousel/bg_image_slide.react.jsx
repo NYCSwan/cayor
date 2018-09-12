@@ -7,6 +7,7 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { filter } from 'lodash';
 // import Button from '../../layout/button.react';
 import Slide1 from '../../media/slide1Cropped.jpeg';
 import Slide2 from '../../media/anastasiaCropped.jpeg';
@@ -115,9 +116,13 @@ class BgImageSlide extends Component {
   renderLink(item) {
     console.log('renderLink');
     if (item === 'Slide1') {
+      const text = filter(items, { name: item });
+      // debugger;
+      const caption = text.caption;
       return (
         <div className="linkContainer">
           <Link className="link" to={`/approach`} replace>
+            a {caption}
             READ MORE
           </Link>
         </div>
@@ -125,6 +130,7 @@ class BgImageSlide extends Component {
     } else if (item === 'slide2') {
       return (
         <div className="linkContainer">
+          {item.caption}
           <Link className="link" to={`/opportunity`} replace>
             READ MORE
           </Link>
@@ -133,6 +139,7 @@ class BgImageSlide extends Component {
     } else {
       return (
         <div className="linkContainer">
+          {item.caption}
           <Link className="link" to={`/esg`} replace>
             READ MORE
           </Link>
@@ -160,10 +167,9 @@ class BgImageSlide extends Component {
             className={`backgroundImage ${item.name}`}
           />
           <CarouselCaption
-            captionText={item.caption}
+            captionText={this.renderLink(item.name)}
             captionHeader={item.header}
           />
-          {this.renderLink(item.name)}
         </CarouselItem>
       );
     });

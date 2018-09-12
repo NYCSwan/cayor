@@ -4,7 +4,6 @@ import pickBy from 'lodash/pickBy';
 
 import SubNav from '../sub_navigation/sub_navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
-// import PageDetails from '../layout/pageDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';

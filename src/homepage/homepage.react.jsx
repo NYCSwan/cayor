@@ -10,6 +10,9 @@ const Homepage = props => (
       location={props.location}
       handleClockClick={props.handleClockClick}
       headerImg="homepage"
+      fadeIn={true}
+      handleClose={props.handleClose}
+      isContactModalOpen={props.isContactModalOpen}
     />
     <BgImageSlide height={props.height} width={props.width} />
   </div>

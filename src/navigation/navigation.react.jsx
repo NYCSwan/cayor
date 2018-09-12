@@ -20,7 +20,8 @@ class Navigation extends Component {
         city: 'Dunkeld West Johannesburg',
         phone: '+2711 593 3266',
         imageUrl: Joburg,
-        imageAlt: "Map of South Africa, Cayor's first location.",
+        imageAlt:
+          "Map of Johannesburg, South Africa, Cayor's first business location.",
       },
     ],
     accraContactDetails: [
@@ -31,7 +32,7 @@ class Navigation extends Component {
         city: 'tbd',
         phone: '+',
         imageUrl: Accra,
-        imageAlt: "Map of Ghana, Cayor's second location.",
+        imageAlt: "Map of Accra Ghana, Cayor's second office location.",
       },
     ],
   };

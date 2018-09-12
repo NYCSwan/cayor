@@ -32,8 +32,6 @@
         /* pixel 2 ----------- */
         /* pixel 2 xl ----------- */ }
         .carousel.slide .carousel-inner .carousel-item .linkContainer {
-          position: fixed;
-          top: 60%;
           z-index: 100;
           /* iPhone 4 ----------- */
           /* iPhone 5 ----------- */
@@ -78,10 +76,7 @@
             .carousel.slide .carousel-inner .carousel-item .linkContainer {
               top: 40%; } }
           .carousel.slide .carousel-inner .carousel-item .linkContainer .link {
-            top: -60%;
-            left: 45%;
             z-index: 500;
-            margin-bottom: -50%;
             color: #ffffff;
             font-weight: bold;
             /* iPhone 4 ----------- */
@@ -141,6 +136,7 @@
             height: auto;
             top: 25%;
             z-index: 100;
+            width: 100%;
             /* iPhone 4 ----------- */
             /* iPhone 5 ----------- */
             /* iPhone 6 ----------- */

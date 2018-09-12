@@ -34,7 +34,7 @@ class App extends Component {
     console.log('clock click contact', e);
     e.preventDefault();
     const { isContactModalOpen } = this.state;
-    // debugger
+    // debugger;
     this.setState({
       isContactModalOpen: !isContactModalOpen,
     });
@@ -59,6 +59,10 @@ class App extends Component {
           location={this.props.location}
           match={this.props.match}
           isContactModalOpen={isContactModalOpen}
+        />
+        <div
+          className={`shaddow ${isContactModalOpen}`}
+          onClick={this.handleModalClose}
         />
       </div>
     );

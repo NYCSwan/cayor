@@ -59,3 +59,15 @@ html {
       box-sizing: border-box; }
       html body .App .routes {
         min-height: 100vh; }
+      html body .App .shaddow {
+        display: none; }
+        html body .App .shaddow.true {
+          display: block;
+          z-index: 10;
+          background-color: #260606;
+          opacity: 0.7;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh; }
