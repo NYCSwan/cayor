@@ -1,5 +1,5 @@
 {
-  "name": "cayor-capital",
+  "name": "Cayor_Capital",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://cayor-capital.herokuapp.com/",
@@ -25,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css":
+      "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
