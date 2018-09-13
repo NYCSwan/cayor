@@ -91,11 +91,11 @@
             min-height: 440px;
             max-height: 667px;
             display: flex; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
           .carousel.slide .carousel-inner .carousel-item {
             min-height: 731px;
             max-height: 825px; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
           .carousel.slide .carousel-inner .carousel-item {
             min-height: 731px;
             max-height: 825px; } }
@@ -202,285 +202,426 @@
           margin: 0;
           height: 100%;
           display: block; }
-          .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-            font-family: "Merriweather", serif;
-            left: 1%;
-            font-stretch: extra-expanded;
-            display: flex;
-            color: #ffffff;
-            height: auto;
-            top: 25%;
-            z-index: 100;
-            width: 100%;
-            /* iPhone 4 ----------- */
-            /* iPhone 5 ----------- */
-            /* iPhone 6 ----------- */
-            /* Samsung Galaxy S3 ----------- */
-            /* Samsung Galaxy S4 ----------- */
-            /* Samsung Galaxy S5 ----------- */
-            /* iphoneX----------- */
-            /* iPhone 6+ ----------- */
-            /* pixel 2 ----------- */
-            /* pixel 2 xl ----------- */
-            /* iPads (portrait and landscape) ----------- */
-            /* kindle fire (portrait and landscape) ----------- */ }
-            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 10%;
-                display: flex;
-                flex-direction: column;
-                font-stretch: condensed; } }
-            @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2.6) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2.6) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3.5) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
-              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
-                top: 20%;
-                display: flex;
-                flex-direction: column; } }
-            .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-              font-size: 46px;
-              font-weight: lighter;
-              width: 75%;
-              margin: 0 auto;
+          .carousel.slide .carousel-inner .carousel-item.active .carousel-caption {
+            display: inline-block; }
+            .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
               /* iPhone 4 ----------- */
               /* iPhone 5 ----------- */
               /* iPhone 6 ----------- */
               /* Samsung Galaxy S3 ----------- */
               /* Samsung Galaxy S4 ----------- */
-              /* Samsung Galaxy S5 ----------- */ }
+              /* Samsung Galaxy S5 ----------- */
+              /* iphoneX----------- */
+              /* iPhone 6+ ----------- */
+              /* pixel 2 ----------- */
+              /* pixel 2 xl ----------- */
+              /* iPads (portrait and landscape) ----------- */
+              /* kindle fire (portrait and landscape) ----------- */ }
               @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
-                  font-size: 28px; } }
-            .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-              font-family: "Josefin Sans", sans-serif;
-              font-size: 18px;
-              width: 50%;
-              margin: 30px auto;
-              /* iPhone 4 ----------- */
-              /* iPhone 5 ----------- */
-              /* iPhone 6 ----------- */
-              /* Samsung Galaxy S3 ----------- */
-              /* Samsung Galaxy S4 ----------- */
-              /* Samsung Galaxy S5 ----------- */ }
-              @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important;
+                  height: 100px; } }
+              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2.6) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2.6) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3.5) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
+                  display: inline-block !important; } }
+              .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                font-family: "Merriweather", serif;
+                left: 1%;
+                font-stretch: extra-expanded;
+                display: flex;
+                color: #ffffff;
+                top: 25%;
+                z-index: 100;
+                background-color: blue;
+                /* iPhone 4 ----------- */
+                /* iPhone 5 ----------- */
+                /* iPhone 6 ----------- */
+                /* Samsung Galaxy S3 ----------- */
+                /* Samsung Galaxy S4 ----------- */
+                /* Samsung Galaxy S5 ----------- */
+                /* iphoneX----------- */
+                /* iPhone 6+ ----------- */
+                /* pixel 2 ----------- */
+                /* pixel 2 xl ----------- */
+                /* iPads (portrait and landscape) ----------- */
+                /* kindle fire (portrait and landscape) ----------- */ }
+                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    font-stretch: condensed; } }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2.6) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2.6) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3.5) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+                  .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
+                    top: 20%;
+                    display: flex;
+                    flex-direction: column; } }
+                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                  font-size: 46px;
+                  font-weight: lighter;
+                  width: 75%;
+                  margin: 0 auto;
+                  /* iPhone 4 ----------- */
+                  /* iPhone 5 ----------- */
+                  /* iPhone 6 ----------- */
+                  /* Samsung Galaxy S3 ----------- */
+                  /* Samsung Galaxy S4 ----------- */
+                  /* Samsung Galaxy S5 ----------- */ }
+                  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
+                  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
+                      font-size: 28px; } }
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
-              @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-                .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                  font-size: 14px; } }
+                  font-family: "Josefin Sans", sans-serif;
+                  font-size: 18px;
+                  width: 50%;
+                  margin: 30px auto;
+                  /* iPhone 4 ----------- */
+                  /* iPhone 5 ----------- */
+                  /* iPhone 6 ----------- */
+                  /* Samsung Galaxy S3 ----------- */
+                  /* Samsung Galaxy S4 ----------- */
+                  /* Samsung Galaxy S5 ----------- */ }
+                  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
+                  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                    .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
+                      font-size: 14px; } }
         .carousel.slide .carousel-inner .carousel-item .backgroundImage {
           top: 0;
           min-width: 100%;
           min-height: 100%;
           z-index: 10;
+          width: 100%;
           height: 100%;
           position: fixed;
           bottom: 0;
-          left: 0; }
-  .carousel .carousel-control-next {
-    z-index: 150; }
-    .carousel .carousel-control-next .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-      opacity: 1;
-      height: 40px;
-      width: 40px; }
-  .carousel .carousel-control-prev {
-    z-index: 150; }
-    .carousel .carousel-control-prev .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-      height: 40px;
-      width: 40px; }
-  .carousel .carousel-indicators {
-    position: absolute;
-    bottom: 15%;
-    z-index: 150; }
-    .carousel .carousel-indicators li {
-      background-color: #ffffff;
-      border-radius: 50%;
-      width: 10px;
-      height: 10px;
+          left: 0;
+          /* iPhone 4 ----------- */
+          /* iPhone 5 ----------- */
+          /* iPhone 6 ----------- */
+          /* Samsung Galaxy S3 ----------- */
+          /* Samsung Galaxy S4 ----------- */
+          /* Samsung Galaxy S5 ----------- */ }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+            .carousel.slide .carousel-inner .carousel-item .backgroundImage {
+              height: auto; } }
+    .carousel.slide .carousel-control-next {
       z-index: 150; }
-      .carousel .carousel-indicators li.active {
-        background-color: #9b1d1f; }
+      .carousel.slide .carousel-control-next .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+        opacity: 1;
+        height: 40px;
+        width: 40px; }
+    .carousel.slide .carousel-control-prev {
+      z-index: 150; }
+      .carousel.slide .carousel-control-prev .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        height: 40px;
+        width: 40px; }
+    .carousel.slide .carousel-indicators {
+      position: absolute;
+      bottom: 15%;
+      z-index: 150; }
+      .carousel.slide .carousel-indicators li {
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        z-index: 150; }
+        .carousel.slide .carousel-indicators li.active {
+          background-color: #9b1d1f; }

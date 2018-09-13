@@ -1,19 +1,163 @@
 .popover {
   border-top: 1px solid #9b1d1f;
   height: auto;
-  min-width: 50%; }
+  min-width: 50%;
+  /* iPhone 4 ----------- */
+  /* iPhone 5 ----------- */
+  /* iPhone 6 ----------- */
+  /* Samsung Galaxy S3 ----------- */
+  /* Samsung Galaxy S4 ----------- */
+  /* Samsung Galaxy S5 ----------- */ }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .popover {
+      min-width: 85%;
+      height: 50%; } }
   .popover.show {
     width: 60%; }
     .popover.show.contactForm {
-      width: 60%; }
+      width: 60%;
+      /* iPhone 4 ----------- */
+      /* iPhone 5 ----------- */
+      /* iPhone 6 ----------- */
+      /* Samsung Galaxy S3 ----------- */
+      /* Samsung Galaxy S4 ----------- */
+      /* Samsung Galaxy S5 ----------- */ }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        .popover.show.contactForm {
+          width: 100%; } }
+      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        .popover.show.contactForm {
+          width: 100%; } }
       .popover.show.contactForm.bs-popover-bottom {
         width: 60%;
         height: auto;
         padding-bottom: 5%;
-        font-family: "Josefin Sans", sans-serif; }
+        font-family: "Josefin Sans", sans-serif;
+        /* iPhone 4 ----------- */
+        /* iPhone 5 ----------- */
+        /* iPhone 6 ----------- */
+        /* Samsung Galaxy S3 ----------- */
+        /* Samsung Galaxy S4 ----------- */
+        /* Samsung Galaxy S5 ----------- */ }
         .popover.show.contactForm.bs-popover-bottom .popover-inner {
           width: 100%;
-          height: auto; }
+          height: auto;
+          /* iPhone 4 ----------- */
+          /* iPhone 5 ----------- */
+          /* iPhone 6 ----------- */
+          /* Samsung Galaxy S3 ----------- */
+          /* Samsung Galaxy S4 ----------- */
+          /* Samsung Galaxy S5 ----------- */ }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
+          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+            .popover.show.contactForm.bs-popover-bottom .popover-inner {
+              width: 75%; } }
           .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-header {
             background-color: rgba(0, 0, 0, 0);
             color: #113a6e;
@@ -42,7 +186,49 @@
               .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
                 width: 400px;
                 height: auto;
-                float: right; }
+                float: right;
+                /* iPhone 4 ----------- */
+                /* iPhone 5 ----------- */
+                /* iPhone 6 ----------- */
+                /* Samsung Galaxy S3 ----------- */
+                /* Samsung Galaxy S4 ----------- */
+                /* Samsung Galaxy S5 ----------- */ }
+                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
+                @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
+                    width: 200px; } }
               .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody .address {
                 padding-top: 5%; }
                 .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody .address h4 {

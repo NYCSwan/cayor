@@ -64,8 +64,8 @@ class BgImageSlide extends Component {
     this.updateDimensions();
   }
 
-  shouldComponentUpdate(newState, newProps) {
-    return this.state.deviceIdx !== newState.deviceIdx;
+  shouldComponentUpdate(nextState, nextProps) {
+    return this.props.width !== nextProps.width;
   }
 
   componentWillUnmount() {
@@ -81,6 +81,7 @@ class BgImageSlide extends Component {
       this.setState({ deviceIdx: 2 });
     } else {
       this.setState({ deviceIdx: 0 });
+      console.log('deviceIdx 0', this.props.width);
     }
   };
 
@@ -102,7 +103,6 @@ class BgImageSlide extends Component {
         ? 0
         : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex, direction: 'next' });
-    // debugger;
   };
 
   previous = () => {
@@ -121,45 +121,11 @@ class BgImageSlide extends Component {
     this.setState({ activeIndex: newIndex });
   };
 
-  // renderLink(item) {
-  //   console.log('renderLink');
-  //   if (item === 'Slide1') {
-  //     const text = filter(items, { name: item });
-  //     // debugger;
-  //     const caption = text.caption;
-  //     return (
-  //       <div className="linkContainer">
-  //         <Link className="link" to={`/approach`} replace>
-  //           a {caption}
-  //           READ MORE
-  //         </Link>
-  //       </div>
-  //     );
-  //   } else if (item === 'slide2') {
-  //     return (
-  //       <div className="linkContainer">
-  //         {item.caption}
-  //         <Link className="link" to={`/opportunity`} replace>
-  //           READ MORE
-  //         </Link>
-  //       </div>
-  //     );
-  //   } else {
-  //     return (
-  //       <div className="linkContainer">
-  //         {item.caption}
-  //         <Link className="link" to={`/esg`} replace>
-  //           READ MORE
-  //         </Link>
-  //       </div>
-  //     );
-  //   }
-  // }
-
   render() {
+    console.log('render bg image');
     const { activeIndex, deviceIdx } = this.state;
-    const { height } = this.props;
-    // debugger;
+    const { height, width } = this.props;
+
     const slides = items.map(item => {
       return (
         <CarouselItem
@@ -177,6 +143,7 @@ class BgImageSlide extends Component {
           <CarouselCaption
             captionText={item.caption}
             captionHeader={item.header}
+            style={{ height: height / 2, width: width }}
           />
           <Link className="link" to={item.link} replace>
             READ MORE

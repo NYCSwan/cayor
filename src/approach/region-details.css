@@ -17,106 +17,122 @@
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .regionDetails {
       background-size: auto 30%;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       height: auto;
       background-position: unset;
-      background-position-y: 25%; } }
+      background-position-y: 30%;
+      background-position-x: 45%; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .regionDetails {
+      background-position-y: 40%;
+      background-position-x: 45%;
       background-size: auto 35%;
       justify-content: center;
       height: auto; } }
   @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
     .regionDetails {
+      background-position-y: 40%;
+      background-position-x: 45%;
       background-size: auto 35%;
       justify-content: center;
       height: auto; } }
@@ -126,6 +142,8 @@
     position: fixed;
     top: 30%;
     align-self: flex-start;
+    font-size: 1.2em;
+    line-height: normal;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -140,52 +158,76 @@
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .west-africa {
+        left: 30%;
         width: 100px;
-        top: 20%; } }
+        align-self: flex-start;
+        top: 17%; } }
     @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .west-africa {
         top: 17%;
@@ -241,6 +283,8 @@
     right: 0;
     width: 250px;
     align-self: flex-start;
+    font-size: 1.2em;
+    line-height: normal;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -252,51 +296,63 @@
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .east-africa {
         width: 100px;
-        top: 20%; } }
+        top: 17%;
+        padding-right: 20px; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .regionDetails .east-africa {
         top: 20%; } }
@@ -309,6 +365,8 @@
     position: fixed;
     left: inherit;
     align-self: flex-end;
+    font-size: 1em;
+    line-height: normal;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -320,51 +378,51 @@
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .south-africa {
         width: 150px;
-        bottom: 115px; } }
+        bottom: 100px; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .regionDetails .south-africa {
         bottom: 10%; } }
@@ -372,4 +430,5 @@
       .regionDetails .south-africa {
         bottom: 10%; } }
     .regionDetails .south-africa .text {
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      line-height: normal; }

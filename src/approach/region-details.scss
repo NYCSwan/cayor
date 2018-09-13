@@ -10,14 +10,16 @@
   height: 60%;
   @include respond-to(phone) {
     background-size: auto 30%;
-    justify-content: flex-start;
-    // align-content: flex-start;
+    justify-content: center;
     width: 100%;
     height: auto;
     background-position: unset;
-    background-position-y: 25%;
+    background-position-y: 30%;
+    background-position-x: 45%;
   }
   @include respond-to(tablets) {
+    background-position-y: 40%;
+    background-position-x: 45%;
     background-size: auto 35%;
     justify-content: center;
     height: auto;
@@ -28,9 +30,13 @@
     position: fixed;
     top: 30%;
     align-self: flex-start;
+    font-size: 1.2em;
+    line-height: normal;
     @include respond-to(phone) {
+      left: 30%;
       width: 100px;
-      top: 20%;
+      align-self: flex-start;
+      top: 17%;
     }
     @include respond-to(phone-long) {
       top: 17%;
@@ -48,9 +54,12 @@
     right: 0;
     width: 250px;
     align-self: flex-start;
+    font-size: 1.2em;
+    line-height: normal;
     @include respond-to(phone) {
       width: 100px;
-      top: 20%;
+      top: 17%;
+      padding-right: 20px;
     }
     @include respond-to(tablets) {
       top: 20%;
@@ -62,15 +71,18 @@
     position: fixed;
     left: inherit;
     align-self: flex-end;
+    font-size: 1em;
+    line-height: normal;
     @include respond-to(phone) {
       width: 150px;
-      bottom: 115px;
+      bottom: 100px;
     }
     @include respond-to(tablets) {
       bottom: 10%;
     }
     .text {
       font-size: 1.2em;
+      line-height: normal;
     }
   }
 }
