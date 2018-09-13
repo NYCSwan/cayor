@@ -21,11 +21,13 @@
     @include respond-to(phone) {
       border: none;
       flex-flow: column nowrap;
-      max-height: 200px;
+      max-height: 300px;
       justify-content: space-around;
       align-items: stretch;
       align-content: center;
       margin: 10% 0;
+      height: 30%;
+      padding-top: 10px;
     }
     @include respond-to(phone-long) {
       height: 35%;
@@ -33,7 +35,7 @@
     @include respond-to(tablets) {
       flex-wrap: nowrap;
       width: 45%;
-      height: 150px;
+      height: 250px;
     }
   }
   .headshot {
@@ -56,19 +58,22 @@
   }
 
   &.active.fade.show {
-    // order: 10;
     width: 50%;
     transform: scale(1.1);
     border: none;
     position: fixed;
-    // top: 70%;
     z-index: 100;
     background-color: $lightGrey;
     justify-content: flex-start;
     @include respond-to(phone) {
-      width: 75%;
+      width: 80%;
       margin: 0;
-      left: 13%;
+      left: 8%;
+      max-height: 125px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
     }
     @include respond-to(tablets) {
       width: 55%;
@@ -78,7 +83,10 @@
       width: 100px;
       height: 100px;
       @include respond-to(phone) {
-        float: none;
+        box-shadow: none;
+        margin-left: 10px;
+        // float: none;
+        // align-self: flex-end;
       }
     }
     .close {
@@ -90,15 +98,35 @@
       }
     }
     .collapse {
-      // width: 100%;
       border-top: 2px solid $cayorRed;
+      display: block;
       &.show {
         width: 100%;
         position: fixed;
         top: 100%;
+        box-shadow: 0 0 0 $lightGreySemiTransparent,
+          5px 5px 8px $primaryBlueSemiTransparent;
+        @include respond-to(phone) {
+          // position: absolute;
+          height: auto;
+          overflow: scroll;
+
+          -webkit-overflow-scrolling: touch;
+        }
         .card {
-          @include respond-to(phone) {
+          overflow-y: scroll;
+          border-left: 0;
+          border-right: 0;
+          // height: inherit;
+          position: relative;
+          .card-body {
             overflow-y: scroll;
+            @include respond-to(phone) {
+              -webkit-overflow-scrolling: touch;
+            }
+            .card-text {
+              width: 100%;
+            }
           }
         }
       }

@@ -20,11 +20,11 @@
     top: 25%;
     font-weight: 300;
     @include respond-to(phone) {
-      width: 12%;
-      top: 30%;
+      width: 13%;
+      top: 80%;
     }
     @include respond-to(phone-long) {
-      top: 20%;
+      top: 80%;
     }
     @include respond-to(tablets) {
       width: 12%;

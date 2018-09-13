@@ -204,6 +204,7 @@ class People extends Component {
       return (
         <TeamDetails
           fadeIn={fadeIn}
+          height={this.props.height}
           teamDetails={teamDetails}
           pageDetails={teamText}
         />

@@ -87,8 +87,12 @@ const Snapshot = props => (
         pull="right"
       />
     ) : null}
-    <Collapse isOpen={props.isOpen && props.name.includes(props.currentPerson)}>
+    <Collapse
+      isOpen={props.isOpen && props.name.includes(props.currentPerson)}
+      timeout={0}
+    >
       <PopOut
+        height={props.height}
         handleClose={props.handleClose}
         name={props.name}
         role={props.role}

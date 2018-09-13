@@ -179,7 +179,14 @@
                 font-size: 1.1em;
                 align-self: center;
                 border-bottom: 3px solid $cayorRed;
-                line-height: 1;
+                line-height: 1.3;
+                @include respond-to(phone) {
+                  height: 50%;
+                }
+                @include respond-to(tablets) {
+                  height: 55%;
+                  align-self: flex-end;
+                }
                 @include respond-to(large-screen) {
                   height: 100%;
                   align-self: center;

@@ -186,11 +186,11 @@
       .regionDetails .west-africa {
         width: 100px;
         top: 20%; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .west-africa {
         top: 17%;
         left: 23%; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
       .regionDetails .west-africa {
         top: 17%;
         left: 23%; } }

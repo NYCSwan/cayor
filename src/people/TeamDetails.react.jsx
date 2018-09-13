@@ -59,7 +59,7 @@ class TeamDetails extends Component {
 
   render() {
     const { isOpen, personDetails, currentPerson } = this.state;
-    const { teamDetails } = this.props;
+    const { teamDetails, height } = this.props;
     return (
       <div className="TeamDetails">
         {isOpen && <div className="shaddow" onClick={this.handleClose} />}
@@ -71,6 +71,7 @@ class TeamDetails extends Component {
               currentPerson={currentPerson}
               name={member.name}
               role={member.position}
+              height={height}
               handleClose={this.handleClose}
               handleClick={this.handleClick}
               personDetails={personDetails}

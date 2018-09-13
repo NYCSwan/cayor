@@ -7,7 +7,7 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { filter } from 'lodash';
+// import { filter } from 'lodash';
 // import Button from '../../layout/button.react';
 import Slide1 from '../../media/slide1Cropped.jpeg';
 import Slide2 from '../../media/anastasiaCropped.jpeg';
@@ -29,6 +29,7 @@ const items = [
     caption:
       'We are a principal investment firm focused on investing in high growth sectors in select sub-Saharan African countries.',
     header: 'Invested In Africa.',
+    link: '/approach',
   },
   {
     src: [Slide2, Slide2Mobile, Slide2Tablet],
@@ -38,6 +39,7 @@ const items = [
     caption:
       'We are driven and entrepreneurial and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
     header: "Building New Platforms In Africa's Middle Markets.",
+    link: '/opportunity',
   },
   {
     src: [Slide3, Slide3Mobile, Slide3Tablet],
@@ -47,6 +49,7 @@ const items = [
     caption:
       'The product of our experience over time is a consistent, disciplined and value added methodology that has yielded attractive investment returns.',
     header: 'Deep African Expertise. Consistent Sustainable Value.',
+    link: '/esg',
   },
 ];
 
@@ -54,11 +57,15 @@ class BgImageSlide extends Component {
   state = {
     activeIndex: 0,
     direction: 'prev',
-    deviceIdx: null,
+    deviceIdx: 2,
   };
 
   componentDidMount() {
     this.updateDimensions();
+  }
+
+  shouldComponentUpdate(newState, newProps) {
+    return this.state.deviceIdx !== newState.deviceIdx;
   }
 
   componentWillUnmount() {
@@ -95,6 +102,7 @@ class BgImageSlide extends Component {
         ? 0
         : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex, direction: 'next' });
+    // debugger;
   };
 
   previous = () => {
@@ -113,40 +121,40 @@ class BgImageSlide extends Component {
     this.setState({ activeIndex: newIndex });
   };
 
-  renderLink(item) {
-    console.log('renderLink');
-    if (item === 'Slide1') {
-      const text = filter(items, { name: item });
-      // debugger;
-      const caption = text.caption;
-      return (
-        <div className="linkContainer">
-          <Link className="link" to={`/approach`} replace>
-            a {caption}
-            READ MORE
-          </Link>
-        </div>
-      );
-    } else if (item === 'slide2') {
-      return (
-        <div className="linkContainer">
-          {item.caption}
-          <Link className="link" to={`/opportunity`} replace>
-            READ MORE
-          </Link>
-        </div>
-      );
-    } else {
-      return (
-        <div className="linkContainer">
-          {item.caption}
-          <Link className="link" to={`/esg`} replace>
-            READ MORE
-          </Link>
-        </div>
-      );
-    }
-  }
+  // renderLink(item) {
+  //   console.log('renderLink');
+  //   if (item === 'Slide1') {
+  //     const text = filter(items, { name: item });
+  //     // debugger;
+  //     const caption = text.caption;
+  //     return (
+  //       <div className="linkContainer">
+  //         <Link className="link" to={`/approach`} replace>
+  //           a {caption}
+  //           READ MORE
+  //         </Link>
+  //       </div>
+  //     );
+  //   } else if (item === 'slide2') {
+  //     return (
+  //       <div className="linkContainer">
+  //         {item.caption}
+  //         <Link className="link" to={`/opportunity`} replace>
+  //           READ MORE
+  //         </Link>
+  //       </div>
+  //     );
+  //   } else {
+  //     return (
+  //       <div className="linkContainer">
+  //         {item.caption}
+  //         <Link className="link" to={`/esg`} replace>
+  //           READ MORE
+  //         </Link>
+  //       </div>
+  //     );
+  //   }
+  // }
 
   render() {
     const { activeIndex, deviceIdx } = this.state;
@@ -167,9 +175,12 @@ class BgImageSlide extends Component {
             className={`backgroundImage ${item.name}`}
           />
           <CarouselCaption
-            captionText={this.renderLink(item.name)}
+            captionText={item.caption}
             captionHeader={item.header}
           />
+          <Link className="link" to={item.link} replace>
+            READ MORE
+          </Link>
         </CarouselItem>
       );
     });

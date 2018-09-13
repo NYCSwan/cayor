@@ -365,11 +365,11 @@
         .text-table.other .headerContainer h4 {
           font-size: 1.2em;
           width: 100%; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .text-table.other .headerContainer h4 {
           font-size: 1.2em;
           width: 100%; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .text-table.other .headerContainer h4 {
           font-size: 1.2em;
           width: 100%; } }
@@ -594,12 +594,12 @@
             width: 100%;
             font-size: 0.9em;
             margin-left: 0; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
           .text-table.other .approach .subHeader {
             width: 100%;
             font-size: 0.9em;
             margin-left: 0; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 800px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
           .text-table.other .approach .subHeader {
             width: 100%;
             font-size: 0.9em;
