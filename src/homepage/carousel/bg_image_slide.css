@@ -492,7 +492,8 @@
                       width: 85%; } }
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
                   font-family: "Josefin Sans", sans-serif;
-                  font-size: 1.5em;
+                  font-size: 1.3em;
+                  font-weight: 400;
                   width: 70%;
                   margin: 30px auto;
                   /* iPhone 4 ----------- */
