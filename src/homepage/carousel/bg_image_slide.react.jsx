@@ -125,7 +125,8 @@ class BgImageSlide extends Component {
     console.log('render bg image');
     const { activeIndex, deviceIdx } = this.state;
     const { height, width } = this.props;
-
+    const captionHeight = Math.floor(height / 3);
+    // debugger;
     const slides = items.map(item => {
       return (
         <CarouselItem
@@ -143,7 +144,6 @@ class BgImageSlide extends Component {
           <CarouselCaption
             captionText={item.caption}
             captionHeader={item.header}
-            style={{ height: height / 2, width: width }}
           />
           <Link className="link" to={item.link} replace>
             READ MORE
@@ -154,7 +154,7 @@ class BgImageSlide extends Component {
     // ride='carousel'
     return (
       <Carousel
-        interval={10000}
+        interval={100000}
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
