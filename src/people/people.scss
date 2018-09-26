@@ -8,7 +8,6 @@
     overflow: auto;
   }
 
-  // @include slide-appear;
   @include slide-enter;
   @include slide-exit;
 }

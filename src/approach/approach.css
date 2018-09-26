@@ -49,13 +49,7 @@
     display: flex;
     flex: row;
     align-items: stretch;
-    justify-content: space-between;
-    /* iPhone 4 ----------- */
-    /* iPhone 5 ----------- */
-    /* iPhone 6 ----------- */
-    /* Samsung Galaxy S3 ----------- */
-    /* Samsung Galaxy S4 ----------- */
-    /* Samsung Galaxy S5 ----------- */ }
+    justify-content: space-between; }
   .approach.slide-enter {
     z-index: 10;
     opacity: 0.1; }

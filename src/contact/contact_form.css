@@ -106,13 +106,7 @@
         width: 60%;
         height: auto;
         padding-bottom: 5%;
-        font-family: "Josefin Sans", sans-serif;
-        /* iPhone 4 ----------- */
-        /* iPhone 5 ----------- */
-        /* iPhone 6 ----------- */
-        /* Samsung Galaxy S3 ----------- */
-        /* Samsung Galaxy S4 ----------- */
-        /* Samsung Galaxy S5 ----------- */ }
+        font-family: "Josefin Sans", sans-serif; }
         .popover.show.contactForm.bs-popover-bottom .popover-inner {
           width: 100%;
           height: auto;

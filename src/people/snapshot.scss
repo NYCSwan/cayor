@@ -15,7 +15,6 @@
     border-top: 1px solid $primaryBlue;
     border-right: 1px solid $primaryBlue;
     border-bottom: 2px solid $primaryBlue;
-    // max-height: 70px;
     box-shadow: 0 0 5px $lightGreySemiTransparent,
       5px 5px 8px $primaryBlueSemiTransparent;
     @include respond-to(phone) {
@@ -85,8 +84,6 @@
       @include respond-to(phone) {
         box-shadow: none;
         margin-left: 10px;
-        // float: none;
-        // align-self: flex-end;
       }
     }
     .close {
@@ -107,7 +104,6 @@
         box-shadow: 0 0 0 $lightGreySemiTransparent,
           5px 5px 8px $primaryBlueSemiTransparent;
         @include respond-to(phone) {
-          // position: absolute;
           height: auto;
           overflow: scroll;
 
@@ -117,7 +113,6 @@
           overflow-y: scroll;
           border-left: 0;
           border-right: 0;
-          // height: inherit;
           position: relative;
           .card-body {
             overflow-y: scroll;

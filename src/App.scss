@@ -1,6 +1,5 @@
 @import './_variables';
 @import './_defaults';
-// @import './_mixins';
 
 html {
   height: 100%;
@@ -23,7 +22,6 @@ html {
           display: block;
           z-index: 10;
           background-color: #260606;
-          // background: linear-gradient(90deg, $accentGrey, $accentGrey);
           opacity: 0.7;
           position: fixed;
           top: 0;

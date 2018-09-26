@@ -34,7 +34,6 @@
           height: 100%;
           @include respond-to(phone) {
             justify-content: flex-start;
-            // padding-top: 3%;
             width: 100%;
           }
           .headerContainer {
