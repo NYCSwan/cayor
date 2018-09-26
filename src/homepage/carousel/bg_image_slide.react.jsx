@@ -124,7 +124,7 @@ class BgImageSlide extends Component {
   render() {
     console.log('render bg image');
     const { activeIndex } = this.state;
-    const { height, deviceIdx } = this.props;
+    const { deviceIdx } = this.props;
     // debugger;
     const slides = items.map(item => {
       return (
@@ -132,10 +132,8 @@ class BgImageSlide extends Component {
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.src[deviceIdx]}
-          style={{ height: height }}
         >
           <img
-            style={{ height: height }}
             src={item.src[deviceIdx]}
             alt={item.altText}
             className={`backgroundImage ${item.name}`}
@@ -157,7 +155,6 @@ class BgImageSlide extends Component {
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
-        style={{ height: height }}
       >
         <CarouselIndicators
           items={items}

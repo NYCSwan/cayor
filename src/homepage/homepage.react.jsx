@@ -43,11 +43,7 @@ class Homepage extends React.Component {
           isContactModalOpen={this.props.isContactModalOpen}
         />
         {this.props.width !== null && (
-          <BgImageSlide
-            height={this.props.height}
-            width={this.props.width}
-            deviceIdx={this.state.deviceIdx}
-          />
+          <BgImageSlide deviceIdx={this.state.deviceIdx} />
         )}
       </div>
     );
