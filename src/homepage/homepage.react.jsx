@@ -4,9 +4,30 @@ import './homepage.css';
 import Navigation from '../navigation/navigation.react';
 
 class Homepage extends React.Component {
+  state = {
+    deviceIdx: 2,
+  };
+
+  componentDidMount() {
+    this.updateDimensions();
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     return this.props.width !== nextProps.width;
   }
+
+  updateDimensions = () => {
+    console.log('update dimensions');
+    // debugger;
+    if (this.props.width <= 490 && this.props.width > 0) {
+      this.setState({ deviceIdx: 1 });
+    } else if (this.props.width >= 780 && this.props.width < 1025) {
+      this.setState({ deviceIdx: 2 });
+    } else {
+      this.setState({ deviceIdx: 0 });
+      console.log('deviceIdx 0', this.props.width);
+    }
+  };
 
   render() {
     console.log('render homepage');
@@ -22,7 +43,11 @@ class Homepage extends React.Component {
           isContactModalOpen={this.props.isContactModalOpen}
         />
         {this.props.width !== null && (
-          <BgImageSlide height={this.props.height} width={this.props.width} />
+          <BgImageSlide
+            height={this.props.height}
+            width={this.props.width}
+            deviceIdx={this.state.deviceIdx}
+          />
         )}
       </div>
     );

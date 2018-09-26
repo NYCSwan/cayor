@@ -57,12 +57,12 @@ class BgImageSlide extends Component {
   state = {
     activeIndex: 0,
     direction: 'prev',
-    deviceIdx: 2,
+    // deviceIdx: 2,
   };
 
-  componentDidMount() {
-    this.updateDimensions();
-  }
+  // componentDidMount() {
+  //   this.updateDimensions();
+  // }
 
   shouldComponentUpdate(nextState, nextProps) {
     return this.props.width !== nextProps.width;
@@ -72,18 +72,18 @@ class BgImageSlide extends Component {
     this.animating = false;
   }
 
-  updateDimensions = () => {
-    console.log('update dimensions');
-    // debugger;
-    if (this.props.width <= 490 && this.props.width > 0) {
-      this.setState({ deviceIdx: 1 });
-    } else if (this.props.width >= 780 && this.props.width < 1025) {
-      this.setState({ deviceIdx: 2 });
-    } else {
-      this.setState({ deviceIdx: 0 });
-      console.log('deviceIdx 0', this.props.width);
-    }
-  };
+  // updateDimensions = () => {
+  //   console.log('update dimensions');
+  //   // debugger;
+  //   if (this.props.width <= 490 && this.props.width > 0) {
+  //     this.setState({ deviceIdx: 1 });
+  //   } else if (this.props.width >= 780 && this.props.width < 1025) {
+  //     this.setState({ deviceIdx: 2 });
+  //   } else {
+  //     this.setState({ deviceIdx: 0 });
+  //     console.log('deviceIdx 0', this.props.width);
+  //   }
+  // };
 
   onExiting = () => {
     console.log('on exiting');
@@ -123,9 +123,8 @@ class BgImageSlide extends Component {
 
   render() {
     console.log('render bg image');
-    const { activeIndex, deviceIdx } = this.state;
-    const { height, width } = this.props;
-    const captionHeight = Math.floor(height / 3);
+    const { activeIndex } = this.state;
+    const { height, deviceIdx } = this.props;
     // debugger;
     const slides = items.map(item => {
       return (
@@ -154,7 +153,7 @@ class BgImageSlide extends Component {
     // ride='carousel'
     return (
       <Carousel
-        interval={100000}
+        interval={10000}
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
