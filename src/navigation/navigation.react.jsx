@@ -14,11 +14,11 @@ class Navigation extends Component {
     contactLocation: '',
     joburgContactDetails: [
       {
-        location: 'Johannesburg',
+        location: 'Johannesburg, South Africa',
         street_address: 'Suite No. 23, Unit E0002, Building 4',
         street_address2: 'Asbury Park, Magalieszight Ave',
         city: 'Dunkeld West Johannesburg',
-        phone: '+2711 593 3266',
+        phone: '+27 11 593 3266',
         imageUrl: Joburg,
         imageAlt:
           "Map of Johannesburg, South Africa, Cayor's first business location.",
@@ -26,7 +26,7 @@ class Navigation extends Component {
     ],
     accraContactDetails: [
       {
-        location: 'Accra',
+        location: 'Accra, Ghana',
         street_address: 'tbd',
         street_address2: 'tbd',
         city: 'tbd',
@@ -36,10 +36,6 @@ class Navigation extends Component {
       },
     ],
   };
-
-  // shouldComponentUpdate(nextState) {
-  //   return ( this.state.contactLocation !== nextState.contactLocation )
-  // }
 
   handleClockClick = e => {
     const contactLocation = e.target.className.split(' ')[0];

@@ -3,7 +3,6 @@ import findKey from 'lodash/findKey';
 import pickBy from 'lodash/pickBy';
 
 import TextTableContainer from '../layout/text-table-container.react';
-// import PageDetails from '../layout/pageDetails.react';
 import SubNav from '../sub_navigation/sub_navigation.react';
 import Footer from '../layout/footer.react';
 import ScrollIndicator from '../layout/scrollIndicator.react';

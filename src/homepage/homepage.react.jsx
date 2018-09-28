@@ -46,10 +46,15 @@ const items = [
 ];
 
 class Homepage extends React.Component {
-  state = {
-    deviceIdx: null,
-  };
-
+  constructor() {
+    super();
+    this.state = {
+      deviceIdx: null,
+    };
+  }
+  componentDidMount() {
+    this.updateDimensions();
+  }
   componentDidUpdate(prevProps) {
     if (this.props.width !== prevProps.width) {
       this.updateDimensions();

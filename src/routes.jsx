@@ -21,7 +21,7 @@ class Routes extends Component {
 
   render() {
     const currentKey = this.props.location.pathname.split('/')[1] || '/';
-    const timeout = { enter: 1850, exit: 800 };
+    const timeout = { enter: 1800, exit: 800 };
     console.log('currentKey', currentKey);
     const {
       handleClick,

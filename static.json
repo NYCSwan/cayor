@@ -7,6 +7,10 @@
   "headers": {
     "/**": {
       "Strict-Transport-Security": "max-age=86400"
+    },
+    "/media/**": {
+      "Cache-Control": "public, max-age=512000"
     }
-  }
+  },
+  "clean_urls": true
 }

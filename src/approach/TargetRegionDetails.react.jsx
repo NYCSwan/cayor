@@ -4,10 +4,12 @@ import './region-details.css';
 
 const RegionDetails = props => (
   <div className="regionDetails">
+    <h4 className="header">
+      We focus on multiple regions across Sub-Saharan Africa
+    </h4>
     {props.text.map(region => {
       return (
         <div className={region.className}>
-          <h4>We focus on multiple regions across Sub-Saharan Africa</h4>
           <TextTable location={props.location} key={region} text={region} />
         </div>
       );

@@ -136,6 +136,12 @@
       background-size: auto 35%;
       justify-content: center;
       height: auto; } }
+  .regionDetails .header {
+    color: #113a6e;
+    font-size: 1.75em;
+    text-align: left;
+    align-self: flex-start;
+    width: auto; }
   .regionDetails .west-africa {
     width: 300px;
     order: 1;

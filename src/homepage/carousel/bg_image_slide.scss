@@ -15,13 +15,11 @@
     transition: opacity 600s ease;
 
     .carousel-inner {
-      // eslint-disable-next-line
-      // min-height: -webkit-fill-available;
       max-width: 100%;
       display: block;
       .carousel-item {
-        opacity: 0.1; // eslint-disable-next-line
-        min-height: 100vh; // eslint-disable-next-line
+        opacity: 0.1;
+        min-height: 100vh;
         max-height: 100vh;
         max-width: 100%;
         width: 100%;
@@ -64,7 +62,7 @@
               flex-direction: column;
               align-items: center;
               align-content: center;
-              height: 50%;
+              height: 45%;
               @include respond-to(phone) {
                 width: 80%;
                 height: 200px;

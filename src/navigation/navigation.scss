@@ -163,7 +163,7 @@
               &.selected {
                 height: 100%;
                 font-size: 1.1em;
-                align-self: center;
+                // align-self: flex-start;
                 border-bottom: 3px solid $cayorRed;
                 line-height: 1.3;
                 @include respond-to(phone) {
@@ -174,7 +174,6 @@
                   align-self: flex-end;
                 }
                 @include respond-to(large-screen) {
-                  height: 100%;
                   align-self: center;
                 }
               }

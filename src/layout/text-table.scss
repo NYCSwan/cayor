@@ -42,7 +42,7 @@
         width: 70%;
         font-family: $open-sans-font-family;
         color: $primaryBlue;
-        font-size: 1.4em;
+        font-size: 1.75em;
         height: auto;
         @include respond-to(phone phone-long) {
           font-size: 1em;
@@ -55,6 +55,9 @@
     }
     ul {
       overflow-y: scroll;
+      .subHeader {
+        font-size: 1.2em;
+      }
       .text {
         list-style: none;
         padding: 7px 0;
@@ -79,6 +82,7 @@
     height: 100%;
     .headerContainer {
       h4 {
+        font-size: 1.75em;
         @include respond-to(phone) {
           font-size: 1.2em;
           width: 100%;
@@ -98,6 +102,7 @@
       }
       .subHeader {
         width: 100%;
+        font-size: 1.2em;
       }
     }
     .approach {
@@ -107,6 +112,7 @@
         height: 100%;
       }
       .subHeader {
+        font-size: 1.2em;
         @include respond-to(phone) {
           width: 100%;
           font-size: 0.9em;
@@ -132,9 +138,10 @@
       height: 100%;
     }
     .subHeader {
+      font-size: 1.2em;
       @include respond-to(phone) {
         width: 100%;
-        font-size: 0.9em;
+        font-size: 1em;
         margin-left: 0;
       }
     }
@@ -146,7 +153,7 @@
     text-align: left;
     width: 80%;
     margin-left: -3.4%;
-    font-size: 1em;
+    font-size: 1.2em;
     @include respond-to(phone) {
       font-size: 0.8em;
       margin-left: -3%;
@@ -192,13 +199,16 @@
     }
   }
   .subHeader {
-    font-weight: bold;
+    // font-weight: bold;
     color: $cayorRed;
     width: 90%;
+    font-size: 1.2em;
+    padding-bottom: 20px;
     @include respond-to(phone) {
       margin-top: 10px;
       margin-left: -5%;
       width: 100%;
+      padding-bottom: 10px;
     }
   }
 }
