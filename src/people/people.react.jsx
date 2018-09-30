@@ -6,6 +6,11 @@ import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
+import Dafe from '../media/Accra.jpg';
+import Fungai from '../media/Accra.jpg';
+import Yannick from '../media/Accra.jpg';
+import Kofi from '../media/Accra.jpg';
+
 import './people.css';
 
 class People extends Component {
@@ -23,7 +28,7 @@ class People extends Component {
             dKey: 'e00',
             style: 'subHeader',
             text:
-              'We have in excess of 30 years of Africa specific principal investment experience. As such, we are among the most experienced private equity investors active on the continent today.',
+              'We have in excess of 30 years of Africa specific principal investment experience. As such, we are among the most experienced private equity investors active on the continent today',
           },
           {
             dKey: 'e01',
@@ -52,19 +57,19 @@ class People extends Component {
           {
             dKey: 'n00',
             text:
-              'Our team currently consists of four African nationals: a Nigerian, Zimbabwean, Cameroonian and Ghanaian.',
-            style: 'subHeader',
+              'Our team currently consists of four African nationals: a Nigerian, Zimbabwean, Cameroonian and Ghanaian. We’ve grown up, been educated in, and worked on the continent, and as a result have developed deep and broad relationship networks with business owners, regulators, intermediaries, advisors and co-investment partners.',
+            style: 'text',
           },
           {
             dKey: 'n01',
             text:
-              'We’ve grown up, been educated in, and worked on the continent, and as a result have developed deep and broad relationship networks with business owners, regulators, intermediaries, advisors and co-investment partners.',
+              'Our sensitivity to African cultural norms and owners’ aspirations, that affect business operations and outcomes, helps build rapport with African business owners.',
             style: 'text',
           },
           {
             dKey: 'n02',
             text:
-              'Our wide network includes peers who are key decision makers in corporations and high-level government officials (central bankers, ministers, exchange regulators, etc.).',
+              'Our wide network includes peers who are key decision makers in corporations and high-level government officials.',
             style: 'text',
           },
         ],
@@ -85,7 +90,9 @@ class People extends Component {
         ],
         education:
           'MBA from Harvard Business School and a BSc Eng. with Honours from the University of Zimbabwe',
-        url: 'fungai',
+        alt:
+          'Photograph of Fungai Ruwende, Managing Partner Cayor Capital Sub-Saharan Africa Equity Fund',
+        image: Fungai,
       },
       {
         name: 'Dafe Diejomaoh',
@@ -100,7 +107,9 @@ class People extends Component {
         ],
         education:
           'BA in Economics from Harvard University, M.B.A. from Harvard Business School, Master of Science in Development Economics Master of Science in Development Economics',
-        url: 'dafe',
+        alt:
+          'Photograph of Dafe Diejomaoh, Managing Partner Cayor Capital Sub-Saharan Africa Equity Fund',
+        image: Dafe,
       },
       {
         name: 'Yannick Mpollo',
@@ -115,7 +124,9 @@ class People extends Component {
         ],
         education:
           'Master degree and Honours bachelor degree in the field of financial economics from the University of Johannesburg, in South Africa',
-        url: 'yannick',
+        alt:
+          'Photograph of Yannick Mpollo, Principal Cayor Capital Sub-Saharan Africa Equity Fund',
+        image: Yannick,
       },
       {
         name: 'Kofi Domfeh',
@@ -129,7 +140,9 @@ class People extends Component {
         ],
         education:
           'BA in Economics from Pomona College, and an M.B.A. from Columbia University Graduate School of Business',
-        url: 'kofi',
+        alt:
+          'Photograph of Kofi Domfeh, Vice President Cayor Capital Sub-Saharan Africa Equity Fund',
+        image: Kofi,
       },
     ],
     fadeIn: true,

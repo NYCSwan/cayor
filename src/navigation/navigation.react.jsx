@@ -21,7 +21,7 @@ class Navigation extends Component {
         phone: '+27 11 593 3266',
         imageUrl: Joburg,
         imageAlt:
-          "Map of Johannesburg, South Africa, Cayor's first business location.",
+          "Map of Johannesburg, South Africa, Cayor's first Sub-Saharan Africa equity business location",
       },
     ],
     accraContactDetails: [
@@ -32,7 +32,7 @@ class Navigation extends Component {
         city: 'tbd',
         phone: '+',
         imageUrl: Accra,
-        imageAlt: "Map of Accra Ghana, Cayor's second office location.",
+        imageAlt: "Map of Accra Ghana, Cayor's second office location",
       },
     ],
   };

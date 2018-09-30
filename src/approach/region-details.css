@@ -5,7 +5,9 @@
   flex: row wrap;
   justify-content: space-between;
   width: 70%;
-  height: 60%;
+  height: 70%;
+  align-self: flex-start;
+  margin-top: 3%;
   /* iPhone 4 ----------- */
   /* iPhone 5 ----------- */
   /* iPhone 6 ----------- */
@@ -137,16 +139,16 @@
       justify-content: center;
       height: auto; } }
   .regionDetails .header {
-    color: #113a6e;
-    font-size: 1.75em;
-    text-align: left;
+    color: #9b1d1f;
+    font-size: 1.4em;
+    text-align: center;
     align-self: flex-start;
     width: auto; }
   .regionDetails .west-africa {
     width: 300px;
     order: 1;
     position: fixed;
-    top: 30%;
+    top: 32%;
     align-self: flex-start;
     font-size: 1.2em;
     line-height: normal;
@@ -285,7 +287,7 @@
   .regionDetails .east-africa {
     order: 10;
     position: fixed;
-    top: 30%;
+    top: 32%;
     right: 0;
     width: 250px;
     align-self: flex-start;

@@ -30,9 +30,8 @@ class Opportunities extends Component {
     whyAfricaTableText: [
       {
         header:
-          'Demographic & cultural shifts will drive economic growth in African middle markets',
+          'Demographic & cultural shifts will drive economic growth in African mid markets',
         template: 'other',
-        // image: Demographics,
         details: [
           {
             dKey: 'w01',
@@ -48,17 +47,17 @@ class Opportunities extends Component {
           },
           {
             dKey: 'w03',
-            text: 'Growth in consumer demand;',
+            text: 'Growth in consumer demand',
             style: 'text bullet',
           },
           {
             dKey: 'w04',
-            text: 'Closing the infrastructure deficit gap;',
+            text: 'Closing the infrastructure deficit gap',
             style: 'text bullet',
           },
           {
             dKey: 'w05',
-            text: 'Increased financial inclusion;',
+            text: 'Increased financial inclusion',
             style: 'text bullet',
           },
           {
@@ -71,24 +70,24 @@ class Opportunities extends Component {
     ],
     whyCayorTableText: [
       {
-        header: 'Experienced Africa Private Equity Investors:',
+        header: 'Experienced Africa Private Equity Investors',
         details: [
           {
             dKey: 'i00',
             text:
-              'We are Seasoned private equity investors with investment experience gained in Africa over a combined 30 years',
+              'We are well-grounded in private equity having risen to partnership/senior management in internationally recognized and established principal investment firms',
             style: 'subHeader',
           },
           {
             dKey: 'i01',
             text:
-              'In prior roles, we evaluated in excess of 300 investment opportunities and invested in 11 companies, and as a result acquired invaluable investment knowledge related to what pitfalls to avoid and how to increase, and monetize, shareholder value',
+              'We are Seasoned private equity investors with investment experience gained in Africa over a combined 30 years',
             style: 'text',
           },
           {
             dKey: 'i02',
             text:
-              'We are well-grounded in private equity having risen to partnership/senior management in internationally recognized and established principal investment firms',
+              'In prior roles, we evaluated in excess of 300 investment opportunities and invested in 11 companies, and as a result acquired invaluable investment knowledge related to what pitfalls to avoid and how to increase, and monetize, shareholder value',
             style: 'text',
           },
           {
@@ -106,18 +105,18 @@ class Opportunities extends Component {
         ],
       },
       {
-        header: 'Extensive Africa Network:',
+        header: 'Extensive Africa Network',
         details: [
           {
             dKey: 'n00',
             text:
-              'We are native Africans with peers who are now key decision makers across Africa in government and in boardrooms',
+              'We have an extensive network of industry experts, managers,  advisors, and a successful track record of collaborating with these partners to improve financial performance of portfolio companies',
             style: 'subHeader',
           },
           {
             dKey: 'n01',
             text:
-              'We have a track record of successfully collaborating with industry experts, managers and advisors to improve financial performance of portfolio companies',
+              'We are native Africans with peers who are now key decision makers across Africa in government and in boardrooms',
             style: 'text',
           },
           {
@@ -129,30 +128,24 @@ class Opportunities extends Component {
         ],
       },
       {
-        header: 'Entrepreneurial:',
+        header: 'Entrepreneurial',
         details: [
           {
             dKey: 'e00',
             text:
-              'As a newly established and growing company, we can identify with mid-market owners and managers',
+              'As a newly established and growing company, we can identify with mid market owners and managers',
             style: 'subHeader',
           },
           {
             dKey: 'e01',
             text:
-              'Our flat and highly responsive decision-making structure (Investment Committee consists of the Partners who are hands on in transaction execution and are based in Africa) allows for a higher level of flexibility and responsiveness, crucial for complex and often challenging Africa transactions',
-            style: 'text',
-          },
-          {
-            dKey: 'e02',
-            text:
-              'Our sensitivity to African cultural norms and owners’ aspirations, that affect business operations and outcomes, helps build rapport with African business owners',
+              'We are able to quickly identify value and opportunity where others may not while managing down side risk. Our flat and highly responsive decision-making structure allows for a higher level of flexibility and responsiveness, crucial for complex and often challenging Africa transactions',
             style: 'text',
           },
         ],
       },
       {
-        header: 'Trusted Partnerships:',
+        header: 'Trusted Partnerships',
         details: [
           {
             dKey: 'p00',

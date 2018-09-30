@@ -19,7 +19,7 @@ class Approach extends Component {
     navItems: [
       { value: 'The Cayor Approach', key: 'approach', style: 'top' },
       { value: 'Clear Investment Philosophy', key: 'strategy', style: 'sub' },
-      { value: 'Middle Market Focus', key: 'middle', style: 'sub' },
+      { value: 'Mid Market Focus', key: 'middle', style: 'sub' },
       {
         value: 'Structured Deal Origination',
         key: 'structuredDeals',
@@ -77,22 +77,22 @@ class Approach extends Component {
       },
       {
         header:
-          'We believe the middle market is attractive for a number of reasons:',
+          'We believe the mid market is attractive for a number of reasons:',
         details: [
           {
             dKey: 'a00',
-            text: 'reduced competition',
+            text: 'Moderate competitive intensity',
             style: 'subHeader',
           },
           {
             dKey: 'a01',
             text:
-              'In our experience to date, there is less competition for middle market assets, resulting in more attractive asset pricing and superior returns for investors.',
+              'In our experience to date, there has been limited competition for mid= market assets, resulting in more attractive asset pricing and superior returns for investors.',
             style: 'text',
           },
           {
             dKey: 'a02',
-            text: 'Superior Transaction Flow',
+            text: 'Significant Transaction Flow',
             style: 'subHeader',
           },
           {
@@ -109,7 +109,7 @@ class Approach extends Component {
           {
             dKey: 'a05',
             text:
-              'Our team’s cumulative experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.',
+              'Our team’s cumulative mid market experience, cultural and geographic diversity, excellent analytical and portfolio management skills; extensive deep networks in sub-Saharan Africa and sterling reputation, further differentiates us from many of our competitors.',
             style: 'text',
           },
         ],
@@ -126,13 +126,13 @@ class Approach extends Component {
           {
             dKey: 'a02',
             text:
-              'Continually mapping market sectors and engaging associated professional networks.',
+              'Continually mapping market sectors and engaging associated professional networks',
             style: 'text',
           },
           {
             dKey: 'a03',
             text:
-              'Adopting a geographic approach to sourcing investments that positions Cayor as a preferred capital partner and recognized brand, thus driving inbound enquiries.',
+              'Adopting a geographic approach to sourcing investments that positions Cayor as a preferred capital partner and recognized brand, thus driving inbound enquiries',
             style: 'text',
           },
         ],
@@ -347,7 +347,7 @@ class Approach extends Component {
           },
           {
             dKey: 'c03',
-            text: 'Acquisition:',
+            text: 'Buyouts:',
             style: 'subHeader',
           },
           {
@@ -358,33 +358,28 @@ class Approach extends Component {
           },
           {
             dKey: 'c05',
-            text: 'Management Buy Outs (MBO):',
-            style: 'subHeader',
-          },
-          {
-            dKey: 'c06',
             text:
               'Provide reputable management teams with funding to acquire a controlling stake in private companies',
             style: 'text',
           },
           {
-            dKey: 'c07',
+            dKey: 'c06',
             text: 'Replacement:',
             style: 'subHeader',
           },
           {
-            dKey: 'c08',
+            dKey: 'c07',
             text:
               'Provide capital to acquire equity stakes from shareholders who are seeking to exit',
             style: 'text',
           },
           {
-            dKey: 'c09',
+            dKey: 'c08',
             text: 'Other:',
             style: 'subHeader',
           },
           {
-            dKey: 'c10',
+            dKey: 'c09',
             text: 'PIPE, Pre-IPO, Quasi Equity and Structured Transactions',
             style: 'text',
           },
@@ -403,7 +398,7 @@ class Approach extends Component {
           },
           {
             dKey: 's01',
-            text: 'Size',
+            text: 'Size:',
             style: 'subHeader',
           },
           {
@@ -418,7 +413,7 @@ class Approach extends Component {
           },
           {
             dKey: 'p00',
-            text: 'Performance',
+            text: 'Performance:',
             style: 'subHeader',
           },
           {
@@ -430,12 +425,12 @@ class Approach extends Component {
           {
             dKey: 'p02',
             text:
-              'Profitable and cash flow positive businesses with favourable working capital dynamics',
+              '3 -5 years of cash flow positive & profitable growth with favorable working capital dynamics',
             style: 'text bullet',
           },
           {
             dKey: 'm00',
-            text: 'Management',
+            text: 'Management:',
             style: 'subHeader',
           },
           {
@@ -539,7 +534,7 @@ class Approach extends Component {
 
     if (
       currentDetails === 'clear investment philosophy' ||
-      currentDetails === 'middle market focus' ||
+      currentDetails === 'mid market focus' ||
       currentDetails === 'structured deal origination' ||
       currentDetails === 'deal & portfolio mgmt'
     ) {

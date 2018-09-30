@@ -5,7 +5,7 @@ import './region-details.css';
 const RegionDetails = props => (
   <div className="regionDetails">
     <h4 className="header">
-      We focus on multiple regions across Sub-Saharan Africa
+      {'We focus on a select number of countries across Sub-Saharan Africa'.toUpperCase()}
     </h4>
     {props.text.map(region => {
       return (

@@ -4,38 +4,50 @@ import Snapshot from './snapshot.react';
 import './team-details.css';
 
 class TeamDetails extends Component {
-  state = {
-    isOpen: false,
-    personDetails: [],
-    currentPerson: '',
-  };
+  constructor() {
+    super();
+    this.state = {
+      isOpen: false,
+      personDetails: [],
+      currentPerson: '',
+    };
+    this.handleTeamSplit();
+  }
   // refactor
-  handleClick = e => {
+  handleTeamSplit = () => {
     console.log('handle person click');
     const { teamDetails } = this.props;
     const teamMember = [];
-
-    if (e.target.classList.value.includes('Fungai Ruwende')) {
+    debugger;
+    if (this.props.classList.value.includes('Fungai Ruwende')) {
       teamMember.push(teamDetails[0].summary);
       teamMember.push(teamDetails[0].experience);
       teamMember.push(teamDetails[0].education);
+      teamMember.push(teamDetails[0].alt);
+      teamMember.push(teamDetails[0].image);
 
       this.setState({
         personDetails: teamMember,
         currentPerson: 'Fungai',
       });
-    } else if (e.target.classList.value.includes('Dafe Diejomaoh')) {
+    } else if (this.props.classList.value.includes('Dafe Diejomaoh')) {
       teamMember.push(teamDetails[1].summary);
       teamMember.push(teamDetails[1].experience);
       teamMember.push(teamDetails[1].education);
+      teamMember.push(teamDetails[1].alt);
+      teamMember.push(teamDetails[1].image);
+
       this.setState({
         personDetails: teamMember,
         currentPerson: 'Dafe',
       });
-    } else if (e.target.classList.value.includes('Yannick Mpollo')) {
+    } else if (this.props.classList.value.includes('Yannick Mpollo')) {
       teamMember.push(teamDetails[2].summary);
       teamMember.push(teamDetails[2].experience);
       teamMember.push(teamDetails[2].education);
+      teamMember.push(teamDetails[2].alt);
+      teamMember.push(teamDetails[2].image);
+
       this.setState({
         personDetails: teamMember,
         currentPerson: 'Yannick',
@@ -44,6 +56,9 @@ class TeamDetails extends Component {
       teamMember.push(teamDetails[3].summary);
       teamMember.push(teamDetails[3].experience);
       teamMember.push(teamDetails[3].education);
+      teamMember.push(teamDetails[3].alt);
+      teamMember.push(teamDetails[3].image);
+
       this.setState({
         personDetails: teamMember,
         currentPerson: 'Kofi',
@@ -69,9 +84,7 @@ class TeamDetails extends Component {
               key={member.name}
               isOpen={isOpen}
               currentPerson={currentPerson}
-              name={member.name}
               role={member.position}
-              height={height}
               handleClose={this.handleClose}
               handleClick={this.handleClick}
               personDetails={personDetails}
