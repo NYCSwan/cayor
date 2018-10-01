@@ -1,8 +1,8 @@
-.TeamDetails {
+.TeamDetails.fade.show {
   width: 70%;
   display: flex;
   flex-flow: row wrap;
-  height: 100%;
+  height: 70%;
   padding-left: 5%;
   padding-top: 2%;
   /* iPhone 4 ----------- */
@@ -18,121 +18,121 @@
   /* iPads (portrait and landscape) ----------- */
   /* kindle fire (portrait and landscape) ----------- */ }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       height: 100%;
       align-items: flex-start;
       align-content: baseline;
       padding-left: 0; } }
   @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2.6) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2.6) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3.5) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 10%; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 5%;
       width: 75%;
       padding-left: 0;
       justify-content: center; } }
   @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
-    .TeamDetails {
+    .TeamDetails.fade.show {
       margin-top: 5%;
       width: 75%;
       padding-left: 0;
       justify-content: center; } }
-  .TeamDetails .shaddow {
+  .TeamDetails.fade.show .shaddow {
     z-index: 10;
-    background-color: #484848;
-    width: 60%;
+    display: block;
+    width: 100%;
     height: auto; }

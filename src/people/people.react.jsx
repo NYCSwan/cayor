@@ -6,10 +6,10 @@ import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
-import Dafe from '../media/Accra.jpg';
-import Fungai from '../media/Accra.jpg';
-import Yannick from '../media/Accra.jpg';
-import Kofi from '../media/Accra.jpg';
+import Dafe from '../media/stock.jpg';
+import Fungai from '../media/stock.jpg';
+import Yannick from '../media/stock.jpg';
+import Kofi from '../media/stock.jpg';
 
 import './people.css';
 

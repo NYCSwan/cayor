@@ -1,11 +1,11 @@
 @import '../_variables';
 @import '../_mixins';
 
-.TeamDetails {
+.TeamDetails.fade.show {
   width: 70%;
   display: flex;
   flex-flow: row wrap;
-  height: 100%;
+  height: 70%;
   padding-left: 5%;
   padding-top: 2%;
   @include respond-to(phone) {
@@ -25,9 +25,9 @@
   }
   .shaddow {
     z-index: 10;
-    background-color: $accentGrey;
-    // opacity: 0.7;
-    width: 60%;
+    // background-color: $accentGrey;
+    display: block;
+    width: 100%;
     height: auto;
   }
 }

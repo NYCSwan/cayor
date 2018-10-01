@@ -1,49 +1,25 @@
 @import '../_variables';
 @import '../_mixins';
 
-.snapshot {
-  width: 48%;
-  max-height: 40%;
+.bio {
+  width: 35%;
+  max-height: 45%;
   color: $primaryBlue;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   margin: 2% 1% 0 1%;
-  justify-content: flex-start;
-  align-content: flex-start;
+  justify-content: space-between;
+  align-content: center;
   background-color: $transparent;
-  &.fade.show {
-    border-top: 1px solid $primaryBlue;
-    border-right: 1px solid $primaryBlue;
-    border-bottom: 2px solid $primaryBlue;
-    box-shadow: 0 0 5px $lightGreySemiTransparent,
-      5px 5px 8px $primaryBlueSemiTransparent;
-    @include respond-to(phone) {
-      border: none;
-      flex-flow: column nowrap;
-      max-height: 300px;
-      justify-content: space-around;
-      align-items: stretch;
-      align-content: center;
-      margin: 10% 0;
-      height: 30%;
-      padding-top: 10px;
-    }
-    @include respond-to(phone-long) {
-      height: 35%;
-    }
-    @include respond-to(tablets) {
-      flex-wrap: nowrap;
-      width: 45%;
-      height: 250px;
-    }
-  }
+
   .headshot {
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
-    border-left: 1px solid $primaryBlue;
-    border-bottom: 2px solid $primaryBlue;
-    border-right: 1px solid $primaryBlue;
+    width: 70%;
+    height: auto;
+    align-self: center;
+    // box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
+    // border-left: 1px solid $primaryBlue;
+    // border-bottom: 2px solid $primaryBlue;
+    // border-right: 1px solid $primaryBlue;
     @include respond-to(phone) {
       border-radius: 50%;
       align-self: center;
@@ -55,128 +31,15 @@
       width: 145px;
     }
   }
-
-  &.active.fade.show {
-    width: 50%;
-    transform: scale(1.1);
-    border: none;
-    position: fixed;
-    z-index: 100;
-    background-color: $lightGrey;
-    justify-content: flex-start;
-    @include respond-to(phone) {
-      width: 80%;
-      margin: 0;
-      left: 8%;
-      max-height: 125px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-    }
-    @include respond-to(tablets) {
-      width: 55%;
-    }
-    .headshot {
-      float: right;
-      width: 100px;
-      height: 100px;
-      @include respond-to(phone) {
-        box-shadow: none;
-        margin-left: 10px;
-      }
-    }
-    .close {
-      position: fixed;
-      top: 5%;
-      left: 95%;
-      @include respond-to(phone) {
-        left: 90%;
-      }
-    }
-    .collapse {
-      border-top: 2px solid $cayorRed;
-      display: block;
-      &.show {
-        width: 100%;
-        position: fixed;
-        top: 100%;
-        box-shadow: 0 0 0 $lightGreySemiTransparent,
-          5px 5px 8px $primaryBlueSemiTransparent;
-        @include respond-to(phone) {
-          height: auto;
-          overflow: scroll;
-
-          -webkit-overflow-scrolling: touch;
-        }
-        .card {
-          overflow-y: scroll;
-          border-left: 0;
-          border-right: 0;
-          position: relative;
-          .card-body {
-            overflow-y: scroll;
-            @include respond-to(phone) {
-              -webkit-overflow-scrolling: touch;
-            }
-            .card-text {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &.inactive {
-    transform: scale(0.8);
-    order: 10;
-    display: none;
-  }
-
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    width: 68%;
-    margin-left: 5%;
-    @include respond-to(phone) {
-      width: 100%;
-      height: 60%;
-      text-align: center;
-      margin-left: 0;
-    }
-    @include respond-to(phone-long) {
-      width: 100%;
-      height: 40%;
-      text-align: center;
-      margin-left: 0;
-    }
-    h4,
-    h5 {
-      text-align: justify;
-    }
-    h4 {
-      border-bottom: 1px solid $white;
-      color: $cayorRed;
-      font-size: 1.5em;
-      @include respond-to(phone) {
-        font-size: 1.2em;
-        font-weight: bolder;
-        align-self: center;
-        text-align: center;
-      }
-    }
-    h5 {
-      align-self: baseline;
+  .title {
+    width: 100%;
+    height: auto;
+    .bio {
       font-size: 1.2em;
-      @include respond-to(phone) {
-        font-size: 0.9em;
-        font-weight: bold;
-        margin-bottom: 0;
-        align-self: center;
-      }
+      color: $cayorRed;
+      line-height: 2em;
+      font-weight: lighter;
+      text-align: center;
     }
   }
 }
