@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Snapshot from './snapshot.react';
 import { Fade } from 'reactstrap';
+import { filter, findKey } from 'lodash';
+import PersonDetails from './personDetails';
 
 import './team-details.css';
 
@@ -11,20 +13,73 @@ class TeamDetails extends Component {
       isOpen: false,
       personDetails: [],
       currentPerson: '',
+      idx: null,
     };
+  }
+  shouldComponentUpdate(nextState, nextProps) {
+    return this.state.idx !== nextState.idx;
   }
 
   handleClick = e => {
     console.log('handle person click');
-    const currentPerson = e.target.innerText;
+    const { teamDetails } = this.props;
 
-    debugger;
-    this.setState({ isOpen: true, currentPerson });
+    const currentPerson = e._targetInst.return.key;
+    const idx = Number(
+      findKey(teamDetails, details => details.name === currentPerson)
+    );
+
+    this.setState({ isOpen: true, currentPerson, idx });
   };
 
   handleClose = () => {
     this.setState({ isOpen: false });
   };
+
+  handleNextClick = e => {
+    console.log('handleNextClick');
+    const { teamDetails } = this.props;
+    const { idx } = this.state;
+
+    const nextIdx = idx + 1;
+    const nextPerson = teamDetails[nextIdx].name;
+    this.setState({
+      idx: nextIdx,
+      currentPerson: nextPerson,
+    });
+    // debugger;
+  };
+
+  renderBios() {
+    const { teamDetails } = this.props;
+    return teamDetails.map(member => {
+      return (
+        <Snapshot
+          key={member.name}
+          handleClick={this.handleClick}
+          personDetails={member}
+        />
+      );
+    });
+  }
+
+  renderDetails() {
+    const { currentPerson, idx } = this.state;
+    const { teamDetails } = this.props;
+    const personDetails = filter(
+      teamDetails,
+      details => currentPerson === details.name
+    );
+    const key = findKey(personDetails);
+    debugger;
+
+    return (
+      <PersonDetails
+        personDetails={personDetails[key]}
+        handleNextClick={this.handleNextClick}
+      />
+    );
+  }
 
   render() {
     const { isOpen, personDetails, currentPerson } = this.state;
@@ -36,17 +91,7 @@ class TeamDetails extends Component {
         className="TeamDetails"
         onClick={this.handleClick}
       >
-        {teamDetails.map(member => {
-          return (
-            <Snapshot
-              key={member.name}
-              isOpen={isOpen}
-              handleClose={this.handleClose}
-              handleClick={this.handleClick}
-              personDetails={member}
-            />
-          );
-        })}
+        {isOpen ? this.renderDetails() : this.renderBios()}
       </Fade>
     );
   }

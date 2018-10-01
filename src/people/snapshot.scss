@@ -5,21 +5,17 @@
   width: 35%;
   max-height: 45%;
   color: $primaryBlue;
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 2% 1% 0 1%;
-  justify-content: space-between;
-  align-content: center;
   background-color: $transparent;
-
+  &.card {
+    border: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
   .headshot {
     width: 70%;
     height: auto;
-    align-self: center;
-    // box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
-    // border-left: 1px solid $primaryBlue;
-    // border-bottom: 2px solid $primaryBlue;
-    // border-right: 1px solid $primaryBlue;
+    border-radius: 5px;
     @include respond-to(phone) {
       border-radius: 50%;
       align-self: center;
@@ -32,14 +28,18 @@
     }
   }
   .title {
-    width: 100%;
-    height: auto;
-    .bio {
+    width: 70%;
+    height: 20%;
+
+    &.card-img-overlay {
       font-size: 1.2em;
       color: $cayorRed;
       line-height: 2em;
       font-weight: lighter;
       text-align: center;
+      background-color: $lightGreySemiTransparent;
+      bottom: 0;
+      top: 80%;
     }
   }
 }

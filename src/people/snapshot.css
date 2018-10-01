@@ -2,16 +2,15 @@
   width: 35%;
   max-height: 45%;
   color: #113a6e;
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 2% 1% 0 1%;
-  justify-content: space-between;
-  align-content: center;
   background-color: rgba(0, 0, 0, 0); }
+  .bio.card {
+    border: none; }
+    .bio.card:hover {
+      opacity: 0.8; }
   .bio .headshot {
     width: 70%;
     height: auto;
-    align-self: center;
+    border-radius: 5px;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -101,11 +100,14 @@
         height: 145px;
         width: 145px; } }
   .bio .title {
-    width: 100%;
-    height: auto; }
-    .bio .title .bio {
+    width: 70%;
+    height: 20%; }
+    .bio .title.card-img-overlay {
       font-size: 1.2em;
       color: #9b1d1f;
       line-height: 2em;
       font-weight: lighter;
-      text-align: center; }
+      text-align: center;
+      background-color: #d5d5d561;
+      bottom: 0;
+      top: 80%; }

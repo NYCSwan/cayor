@@ -10,15 +10,19 @@ import {
 import './snapshot.css';
 
 const Snapshot = props => (
-  <Card className="bio">
+  <Card
+    className="bio"
+    key={props.personDetails.name}
+    onClick={props.handleClick}
+  >
     <CardImg
+      key={props.personDetails.name}
       className={`headshot ${props.personDetails.name}`}
       src={props.personDetails.image}
       alt={props.personDetails.alt}
-      onClick={props.handleClick}
     />
-    <CardImgOverlay className="title">
-      >{props.personDetails.name}
+    <CardImgOverlay key={props.personDetails.name} className="title">
+      {props.personDetails.name}
     </CardImgOverlay>
   </Card>
 );

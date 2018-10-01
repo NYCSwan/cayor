@@ -2,7 +2,9 @@
   width: 70%;
   display: flex;
   flex-flow: row wrap;
-  height: 70%;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
   padding-left: 5%;
   padding-top: 2%;
   /* iPhone 4 ----------- */
@@ -131,8 +133,3 @@
       width: 75%;
       padding-left: 0;
       justify-content: center; } }
-  .TeamDetails.fade.show .shaddow {
-    z-index: 10;
-    display: block;
-    width: 100%;
-    height: auto; }
