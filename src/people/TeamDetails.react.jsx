@@ -71,7 +71,7 @@ class TeamDetails extends Component {
       details => currentPerson === details.name
     );
     const key = findKey(personDetails);
-    debugger;
+    // debugger;
 
     return (
       <PersonDetails
