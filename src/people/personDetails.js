@@ -3,7 +3,7 @@ import './personDetails.css';
 import Button from '../layout/button.react';
 
 const PersonDetails = props => (
-  <div className="personDetails">
+  <main className="personDetails">
     <aside className="right">
       <div className="info">
         <img
@@ -30,7 +30,7 @@ const PersonDetails = props => (
 
       <p>{props.personDetails.education}</p>
     </div>
-  </div>
+  </main>
 );
 
 export default PersonDetails;

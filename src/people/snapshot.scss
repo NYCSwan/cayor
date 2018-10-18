@@ -1,45 +1,59 @@
 @import '../_variables';
 @import '../_mixins';
 
-.bio {
-  width: 35%;
-  max-height: 45%;
-  color: $primaryBlue;
-  background-color: $transparent;
-  &.card {
-    border: none;
-    &:hover {
-      opacity: 0.8;
-    }
+.bioContainer {
+  margin: 0;
+  // background-color: $cayorRed;
+  // background-color: $transparent;
+  // height: 45%;
+  &.blue {
+    background-color: $primaryBlue;
   }
-  .headshot {
-    width: 70%;
-    height: auto;
-    border-radius: 5px;
-    @include respond-to(phone) {
-      border-radius: 50%;
-      align-self: center;
-      height: 80px;
-      width: 80px;
-    }
-    @include respond-to(tablets) {
-      height: 145px;
-      width: 145px;
-    }
+  &.red {
+    background-color: $cayorRed;
   }
-  .title {
-    width: 70%;
-    height: 20%;
-
-    &.card-img-overlay {
-      font-size: 1.2em;
-      color: $cayorRed;
-      line-height: 2em;
-      font-weight: lighter;
-      text-align: center;
-      background-color: $lightGreySemiTransparent;
-      bottom: 0;
-      top: 80%;
+  .bio {
+    // width: 35%;
+    color: $primaryBlue;
+    max-height: 40%;
+    &.card {
+      border: none;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .headshot {
+      // width: 100%;
+      height: 50%;
+      // border-radius: 5px;
+      @include respond-to(phone) {
+        // border-radius: 50%;
+        align-self: center;
+        height: 80px;
+        width: 80px;
+      }
+      @include respond-to(tablets) {
+        height: 145px;
+        width: 145px;
+      }
+    }
+    .title {
+      width: 70%;
+      height: 20%;
+      display: none;
+      &.card-img-overlay {
+        font-size: 1.2em;
+        color: $cayorRed;
+        line-height: 2em;
+        font-weight: lighter;
+        text-align: center;
+        background-color: $lightGreySemiTransparent;
+        bottom: 0;
+        top: 80%;
+      }
+      &:hover {
+        display: inline;
+      }
     }
   }
 }

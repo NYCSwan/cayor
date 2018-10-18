@@ -6,10 +6,10 @@ import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
-import Dafe from '../media/stock.jpg';
+import Dafe from '../media/DafeC.jpeg';
 import Fungai from '../media/stock.jpg';
 import Yannick from '../media/stock.jpg';
-import Kofi from '../media/stock.jpg';
+import Kofi from '../media/KDomfeh.Portrait.jpg';
 
 import './people.css';
 
@@ -82,10 +82,10 @@ class People extends Component {
         summary:
           'Zimbabwean citizen with over fourteen years of principal investment experience in Africa, and a combined 25 years of private equity, consulting and corporate experience',
         experience: [
-          'Founding Partner of Cayor. Previously, served as a non-executive director on a number of boards in Africa, and on one of the investment committees of the PIC, a South African pension fund manager with in excess of US$100 billion in AUM',
-          'Partner at Actis, a leading emerging markets fund with over US$5 billion of AUM, where he rose through the ranks from Associate to Deal Partner',
-          'As Deal Partner at Actis, he was a member of the management team and partnership group responsible for managing over US$2 billion, 30 investment professionals and 10 operations staff, across 5 offices in Africa',
-          'Deputy Head of the Actis South Africa Office and led the Africa Business Services Sector',
+          'Founding Partner of Cayor. Previously, served as a non-executive director on a number of boards in Africa, and on one of the investment committees of the PIC, a South African pension fund manager with in excess of US$100 billion in AUM. ',
+          'Partner at Actis, a leading emerging markets fund with over US$5 billion of AUM, where he rose through the ranks from Associate to Deal Partner. ',
+          'As Deal Partner at Actis, he was a member of the management team and partnership group responsible for managing over US$2 billion, 30 investment professionals and 10 operations staff, across 5 offices in Africa. ',
+          'Deputy Head of the Actis South Africa Office and led the Africa Business Services Sector. ',
           'Strategy Consultant with BCG in New York, and Bain in London and Johannesburg.',
         ],
         education:
@@ -112,6 +112,9 @@ class People extends Component {
         image: Dafe,
       },
       {
+        name: 'grey',
+      },
+      {
         name: 'Yannick Mpollo',
         position: 'Principal',
         summary:
@@ -127,6 +130,9 @@ class People extends Component {
         alt:
           'Photograph of Yannick Mpollo, Principal Cayor Capital Sub-Saharan Africa Equity Fund',
         image: Yannick,
+      },
+      {
+        name: 'blue',
       },
       {
         name: 'Kofi Domfeh',
@@ -229,7 +235,7 @@ class People extends Component {
     const { currentDetails, navItems, fadeIn } = this.state;
     const { width, height } = this.props;
     return (
-      <div className="people" style={{ minHeight: height, minWidth: width }}>
+      <main className="people" style={{ minHeight: height, minWidth: width }}>
         <Navigation
           fadeIn={fadeIn}
           headerImg="people"
@@ -247,7 +253,7 @@ class People extends Component {
         />
         {this.renderDetails()}
         <Footer location={this.props.location} />
-      </div>
+      </main>
     );
   }
 }

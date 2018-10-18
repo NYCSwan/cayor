@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Container, Row } from 'reactstrap';
 import Snapshot from './snapshot.react';
 import { Fade } from 'reactstrap';
-import { filter, findKey } from 'lodash';
+import { filter, findKey, slice } from 'lodash';
 import PersonDetails from './personDetails';
 
 import './team-details.css';
@@ -52,15 +53,34 @@ class TeamDetails extends Component {
 
   renderBios() {
     const { teamDetails } = this.props;
-    return teamDetails.map(member => {
-      return (
-        <Snapshot
-          key={member.name}
-          handleClick={this.handleClick}
-          personDetails={member}
-        />
-      );
-    });
+    const row1 = slice(teamDetails, 0, 3);
+    const row2 = slice(teamDetails, 3);
+    return (
+      <Container>
+        <Row>
+          {row1.map(member => {
+            return (
+              <Snapshot
+                key={member.name}
+                handleClick={this.handleClick}
+                personDetails={member}
+              />
+            );
+          })}
+        </Row>
+        <Row>
+          {row2.map(member => {
+            return (
+              <Snapshot
+                key={member.name}
+                handleClick={this.handleClick}
+                personDetails={member}
+              />
+            );
+          })}
+        </Row>
+      </Container>
+    );
   }
 
   renderDetails() {
