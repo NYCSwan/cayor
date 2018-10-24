@@ -2,9 +2,9 @@
 @import '../_mixins';
 
 .TeamDetails.fade.show {
-  width: 75%;
+  width: 70%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   height: 80%;
   // padding-top: 2%;
   @include respond-to(phone) {
@@ -22,16 +22,43 @@
     padding-left: 0;
     justify-content: center;
   }
-  .container {
+  .main {
     width: 100%;
-    height: 100%;
-    margin: 0;
-    padding-left: 0;
-    .row {
-      width: 90%;
-      height: 33%;
+    .header {
+      font-family: $open-sans-font-family;
+      color: $cayorRed;
+      position: absolute;
+      right: 5%;
+      padding-top: 10%;
+      width: auto;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
       margin: 0;
-      // display:;
+      padding-left: 0;
+      .row {
+        width: 90%;
+        height: 33%;
+        margin: 0;
+        // display:;
+        border: none;
+        &.offset {
+          background-image: linear-gradient(
+            to right,
+            $cayorRed,
+            $accentGrey,
+            $accentGrey
+          );
+          right: 0;
+          justify-content: center;
+          .colorContainer {
+            &:first {
+              margin-left: 50%;
+            }
+          }
+        }
+      }
     }
   }
 }

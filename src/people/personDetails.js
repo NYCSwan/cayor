@@ -11,8 +11,8 @@ const PersonDetails = props => (
           alt={props.personDetails.alt}
           className="portrait"
         />
-        <h1 className="name">{props.personDetails.name}</h1>
-        <h2 className="role">{props.personDetails.position}</h2>
+        <h1 className="name">{props.personDetails.name.toUpperCase()}</h1>
+        <h2 className="role">{props.personDetails.position.toLowerCase()}</h2>
       </div>
       <Button
         disabled={props.personDetails.name === 'Kofi Domfeh'}

@@ -3,45 +3,10 @@
   background-color: #d5d5d5;
   height: 100%;
   padding: 0; }
-  .bioContainer.blue {
-    background-color: #113a6e; }
-    .bioContainer.blue .bio {
-      display: none; }
-  .bioContainer.blue2 {
-    background-color: #ffad2f; }
-    .bioContainer.blue2 .bio {
-      display: none; }
-  .bioContainer.blue3 {
-    background-color: #113a6e; }
-    .bioContainer.blue3 .bio {
-      display: none; }
-  .bioContainer.red {
-    background-color: #9b1d1f; }
-    .bioContainer.red .bio {
-      display: none; }
-  .bioContainer.red2 {
-    background-color: #9b1d1f; }
-    .bioContainer.red2 .bio {
-      display: none; }
-  .bioContainer.red3 {
-    background-color: #9b1d1f; }
-    .bioContainer.red3 .bio {
-      display: none; }
-  .bioContainer.grey {
-    background-color: #484848; }
-    .bioContainer.grey .bio {
-      display: none; }
-  .bioContainer.grey2 {
-    background-color: #484848; }
-    .bioContainer.grey2 .bio {
-      display: none; }
-  .bioContainer.gold {
-    background-color: #ffad2f; }
-    .bioContainer.gold .bio {
-      display: none; }
   .bioContainer .bio {
     color: #113a6e;
-    height: 100%; }
+    height: 100%;
+    display: block; }
     .bioContainer .bio.card {
       border: none; }
       .bioContainer .bio.card:hover {
@@ -49,6 +14,7 @@
     .bioContainer .bio .headshot {
       width: 100%;
       height: inherit;
+      filter: grayscale(100%);
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */
@@ -126,17 +92,51 @@
           height: 145px;
           width: 145px; } }
     .bioContainer .bio .title {
-      width: 70%;
-      height: 20%;
-      display: none; }
+      background-color: #d5d5d599;
+      text-align: center; }
       .bioContainer .bio .title.card-img-overlay {
+        height: 25%;
+        padding: 0;
         font-size: 1.2em;
-        color: #9b1d1f;
+        color: #113a6e;
         line-height: 2em;
         font-weight: lighter;
-        text-align: center;
-        background-color: #d5d5d561;
+        font-family: "Josefin Sans", sans-serif;
         bottom: 0;
-        top: 80%; }
+        top: 75%; }
+        .bioContainer .bio .title.card-img-overlay .card-body {
+          height: 100%;
+          padding: 0; }
+          .bioContainer .bio .title.card-img-overlay .card-body .card-title {
+            font-size: 0.9em;
+            line-height: 1.1em;
+            margin-top: 5px; }
+          .bioContainer .bio .title.card-img-overlay .card-body .card-subtitle {
+            font-size: 0.7em;
+            color: #484848;
+            font-family: "Open Sans", sans-serif; }
       .bioContainer .bio .title:hover {
         display: inline; }
+
+.colorContainer {
+  margin: 0;
+  height: 100%;
+  padding: 0; }
+  .colorContainer.blue {
+    background-color: #113a6e; }
+  .colorContainer.blue2 {
+    background-color: #113a6e; }
+  .colorContainer.blue3 {
+    background-color: #113a6e; }
+  .colorContainer.red {
+    background-color: #9b1d1f; }
+  .colorContainer.red2 {
+    background-color: #9b1d1f; }
+  .colorContainer.red3 {
+    background-color: #9b1d1f; }
+  .colorContainer.grey {
+    background-color: #484848; }
+  .colorContainer.grey2 {
+    background-color: #484848; }
+  .colorContainer.grey3 {
+    background-color: #484848; }

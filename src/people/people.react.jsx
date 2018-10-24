@@ -95,6 +95,12 @@ class People extends Component {
         image: Fungai,
       },
       {
+        name: 'grey',
+      },
+      {
+        name: 'blue3',
+      },
+      {
         name: 'Dafe Diejomaoh',
         position: 'Managing Partner',
         summary:
@@ -112,19 +118,10 @@ class People extends Component {
         image: Dafe,
       },
       {
-        name: 'grey',
-      },
-      {
-        name: 'blue2',
-      },
-      {
         name: 'blue',
       },
       {
         name: 'red2',
-      },
-      {
-        name: 'blue3',
       },
       {
         name: 'Yannick Mpollo',
@@ -144,10 +141,7 @@ class People extends Component {
         image: Yannick,
       },
       {
-        name: 'gold',
-      },
-      {
-        name: 'grey2',
+        name: 'grey3',
       },
       {
         name: 'Kofi Domfeh',
@@ -166,7 +160,10 @@ class People extends Component {
         image: Kofi,
       },
       {
-        name: 'red3',
+        name: 'blue2',
+      },
+      {
+        name: 'grey2',
       },
     ],
     fadeIn: true,

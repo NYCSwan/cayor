@@ -1,15 +1,17 @@
 .personDetails {
-  height: 95%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between; }
   .personDetails .right {
     height: 90%;
-    font-family: "Merriweather", serif; }
+    font-family: "Merriweather", serif;
+    width: 40%; }
     .personDetails .right .info {
-      border-bottom: #d5d5d5 1px solid; }
+      border-bottom: #d5d5d5 1px solid;
+      height: 100%; }
       .personDetails .right .info .portrait {
-        border-radius: 50px; }
+        height: auto;
+        width: 80%; }
       .personDetails .right .info .name {
         font-size: 1.2em;
         color: #9b1d1f;

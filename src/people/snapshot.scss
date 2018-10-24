@@ -1,31 +1,20 @@
 @import '../_variables';
 @import '../_mixins';
 
-$class-color-list: (blue, $primaryBlue),  (blue2, $gold),  (blue3, $primaryBlue),
-   (red, $cayorRed),  (red2, $cayorRed),  (red3, $cayorRed),
-   (grey, $accentGrey),  (grey2, $accentGrey),  (gold, $gold);
+$class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
+   (blue3, $primaryBlue),  (red, $cayorRed),  (red2, $cayorRed),
+   (red3, $cayorRed),  (grey, $accentGrey),  (grey2, $accentGrey),
+   (grey3, $accentGrey);
 
 .bioContainer {
   margin: 0;
-  // background-color: $cayorRed;
   background-color: $lightGrey;
   height: 100%;
-  // width: 15%;
   padding: 0;
-
-  // height: -webkit-fill-available;
-  @each $color, $hex in $class-color-list {
-    &.#{$color} {
-      background-color: #{$hex};
-      .bio {
-        display: none;
-      }
-    }
-  }
   .bio {
-    // width: 95%;
     color: $primaryBlue;
     height: 100%;
+    display: block;
     &.card {
       border: none;
       &:hover {
@@ -35,7 +24,8 @@ $class-color-list: (blue, $primaryBlue),  (blue2, $gold),  (blue3, $primaryBlue)
     .headshot {
       width: 100%;
       height: inherit;
-      // border-radius: 5px;
+      filter: grayscale(100%);
+
       @include respond-to(phone) {
         // border-radius: 50%;
         align-self: center;
@@ -48,22 +38,49 @@ $class-color-list: (blue, $primaryBlue),  (blue2, $gold),  (blue3, $primaryBlue)
       }
     }
     .title {
-      width: 70%;
-      height: 20%;
-      display: none;
+      background-color: $greySemiTransparent;
+      text-align: center;
       &.card-img-overlay {
+        height: 25%;
+        padding: 0;
         font-size: 1.2em;
-        color: $cayorRed;
+        color: $primaryBlue;
         line-height: 2em;
         font-weight: lighter;
-        text-align: center;
-        background-color: $lightGreySemiTransparent;
+        font-family: $copy-font-family;
         bottom: 0;
-        top: 80%;
+        top: 75%;
+
+        .card-body {
+          height: 100%;
+          padding: 0;
+          .card-title {
+            font-size: 0.9em;
+            line-height: 1.1em;
+            margin-top: 5px;
+          }
+          .card-subtitle {
+            font-size: 0.7em;
+            color: $accentGrey;
+            font-family: $open-sans-font-family;
+          }
+        }
       }
       &:hover {
         display: inline;
       }
+    }
+  }
+}
+
+.colorContainer {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+
+  @each $color, $hex in $class-color-list {
+    &.#{$color} {
+      background-color: #{$hex};
     }
   }
 }

@@ -4,8 +4,9 @@ import {
   CardImg,
   Col,
   CardImgOverlay,
-  // CardTitle,
-  // CardSubtitle,
+  CardBody,
+  CardSubtitle,
+  CardTitle,
 } from 'reactstrap';
 import './snapshot.css';
 
@@ -14,8 +15,9 @@ const Snapshot = props => (
     xs={props.xs}
     sm={props.sm}
     className={`bioContainer ${props.value.name}`}
+    onClick={props.handleClick}
   >
-    <Card className="bio" key={props.value.name} onClick={props.handleClick}>
+    <Card className="bio" key={props.value.name}>
       <CardImg
         key={props.value.position}
         className={`headshot ${props.value.name}`}
@@ -26,7 +28,12 @@ const Snapshot = props => (
         key={props.value.name + props.value.position}
         className="title"
       >
-        {props.value.name}
+        <CardBody>
+          <CardTitle>{props.value.name}</CardTitle>
+          <CardSubtitle key={props.value.name}>
+            {props.value.position}
+          </CardSubtitle>
+        </CardBody>
       </CardImgOverlay>
     </Card>
   </Col>
