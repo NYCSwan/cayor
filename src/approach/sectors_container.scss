@@ -14,72 +14,72 @@
   @include respond-to(tablets) {
     margin-top: 2%;
   }
-  ul {
-    padding-left: 0;
-  }
-  .Financial,
-  .Infrastructure {
-    &.Services {
-      width: 45%;
-      height: 40%;
-      .text-table {
-        @include respond-to(phone) {
-          width: 100%;
-        }
-        .headerContainer {
-          border-top: 1px solid $primaryBlue;
-          border-right: 1px solid $primaryBlue;
-          border-bottom: 2px solid $primaryBlue;
-          background-color: $transparent;
-          max-height: 70px;
-          box-shadow: 0 0 5px $lightGreySemiTransparent,
-            5px 5px 8px $primaryBlueSemiTransparent;
-          @include respond-to(phone) {
-            max-height: none;
-            height: auto;
-            width: 100%;
-          }
-          .headerImg {
-            box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
-            border-left: 1px solid $primaryBlue;
-            border-bottom: 2px solid $primaryBlue;
-            border-right: 1px solid $primaryBlue;
-            @include respond-to(phone) {
-              display: none;
-            }
-          }
-          h4 {
-            display: inline-block;
-            line-height: normal;
-            padding-top: 5%;
-            color: $cayorRed;
-            font-size: 1.2em;
-            text-align: center;
-            @include respond-to(phone) {
-              font-size: 1em;
-              text-align: left;
-              word-wrap: break-word;
-              height: auto;
-              display: inline;
-              width: 100%;
-              margin-left: 5px;
-            }
-          }
-        }
-
-        .approach {
-          padding-top: 10px;
-          .text {
-            padding-top: 5px;
-            padding-bottom: 0;
-            margin-left: 30%;
-            @include respond-to(phone) {
-              margin-left: 15%;
-            }
-          }
-        }
-      }
-    }
+  // ul {
+  //   padding-left: 0;
+  // }
+  // .Financial,
+  // .Infrastructure {
+  //   &.Services {
+  //     width: 45%;
+  //     height: 40%;
+  //     .text-table {
+  //       @include respond-to(phone) {
+  //         width: 100%;
+  //       }
+  //       .headerContainer {
+  //         border-top: 1px solid $primaryBlue;
+  //         border-right: 1px solid $primaryBlue;
+  //         border-bottom: 2px solid $primaryBlue;
+  //         background-color: $transparent;
+  //         max-height: 70px;
+  //         box-shadow: 0 0 5px $lightGreySemiTransparent,
+  //           5px 5px 8px $primaryBlueSemiTransparent;
+  //         @include respond-to(phone) {
+  //           max-height: none;
+  //           height: auto;
+  //           width: 100%;
+  //         }
+  //         .headerImg {
+  //           box-shadow: 0 8px 4px -1px $primaryBlueSemiTransparent;
+  //           border-left: 1px solid $primaryBlue;
+  //           border-bottom: 2px solid $primaryBlue;
+  //           border-right: 1px solid $primaryBlue;
+  //           @include respond-to(phone) {
+  //             display: none;
+  //           }
+  //         }
+  //         h4 {
+  //           display: inline-block;
+  //           line-height: normal;
+  //           padding-top: 5%;
+  //           color: $cayorRed;
+  //           font-size: 1.2em;
+  //           text-align: center;
+  //           @include respond-to(phone) {
+  //             font-size: 1em;
+  //             text-align: left;
+  //             word-wrap: break-word;
+  //             height: auto;
+  //             display: inline;
+  //             width: 100%;
+  //             margin-left: 5px;
+  //           }
+  //         }
+  //       }
+  //
+  //       .approach {
+  //         padding-top: 10px;
+  //         .text {
+  //           padding-top: 5px;
+  //           padding-bottom: 0;
+  //           margin-left: 30%;
+  //           @include respond-to(phone) {
+  //             margin-left: 15%;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
   }
 
   .Consumer {

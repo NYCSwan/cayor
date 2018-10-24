@@ -6,10 +6,10 @@ import TeamDetails from './TeamDetails.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
-import Dafe from '../media/DafeC.jpeg';
-import Fungai from '../media/stock.jpg';
-import Yannick from '../media/stock.jpg';
-import Kofi from '../media/KDomfeh.Portrait.jpg';
+import Dafe from '../media/Dafe.jpeg';
+import Fungai from '../media/Dafe.jpeg';
+import Yannick from '../media/KDomfeh.Portraitfull.jpg';
+import Kofi from '../media/KDomfeh.Portraitfull.jpg';
 
 import './people.css';
 
@@ -115,6 +115,18 @@ class People extends Component {
         name: 'grey',
       },
       {
+        name: 'blue2',
+      },
+      {
+        name: 'blue',
+      },
+      {
+        name: 'red2',
+      },
+      {
+        name: 'blue3',
+      },
+      {
         name: 'Yannick Mpollo',
         position: 'Principal',
         summary:
@@ -132,7 +144,10 @@ class People extends Component {
         image: Yannick,
       },
       {
-        name: 'blue',
+        name: 'gold',
+      },
+      {
+        name: 'grey2',
       },
       {
         name: 'Kofi Domfeh',
@@ -149,6 +164,9 @@ class People extends Component {
         alt:
           'Photograph of Kofi Domfeh, Vice President Cayor Capital Sub-Saharan Africa Equity Fund',
         image: Kofi,
+      },
+      {
+        name: 'red3',
       },
     ],
     fadeIn: true,

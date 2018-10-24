@@ -142,7 +142,9 @@ class Approach extends Component {
       {
         header: 'Financial Services',
         image: FinTech,
+        alt: 'Cayor Capital expertise in Financial Services',
         template: 'bullet',
+        key: 'FinServices',
         details: [
           {
             dKey: 'f00',
@@ -174,7 +176,9 @@ class Approach extends Component {
       {
         header: 'Infrastructure Services',
         template: 'bullet',
+        alt: "Cayor Capital invsting in Africa's Infrastructure Services",
         image: Infrastructure,
+        key: 'Infrastructure1',
         details: [
           {
             dKey: 'i00',
@@ -205,8 +209,10 @@ class Approach extends Component {
       },
       {
         header: 'Consumer Goods & Services',
+        alt: 'Cayor Capital building better Consumer Goods and Services',
         image: Manufacturing,
         template: 'bullet',
+        key: 'CGS',
         details: [
           {
             dKey: 'c00',
@@ -232,8 +238,11 @@ class Approach extends Component {
       },
       {
         header: 'Agribusiness',
+        alt:
+          'Cayor Capital driving growth in Agribusiness, Agricultural Technology, and Farming',
         image: Agribusiness,
         template: 'bullet',
+        key: 'Agribusiness1',
         details: [
           {
             // eslint-disable-line

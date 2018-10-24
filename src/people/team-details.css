@@ -131,9 +131,10 @@
       justify-content: center; } }
   .TeamDetails.fade.show .container {
     width: 100%;
-    height: 70%;
-    margin: 0; }
+    height: 100%;
+    margin: 0;
+    padding-left: 0; }
     .TeamDetails.fade.show .container .row {
-      width: 100%;
-      height: 45%;
+      width: 90%;
+      height: 33%;
       margin: 0; }

@@ -1,21 +1,31 @@
 @import '../_variables';
 @import '../_mixins';
 
+$class-color-list: (blue, $primaryBlue),  (blue2, $gold),  (blue3, $primaryBlue),
+   (red, $cayorRed),  (red2, $cayorRed),  (red3, $cayorRed),
+   (grey, $accentGrey),  (grey2, $accentGrey),  (gold, $gold);
+
 .bioContainer {
   margin: 0;
   // background-color: $cayorRed;
-  // background-color: $transparent;
-  // height: 45%;
-  &.blue {
-    background-color: $primaryBlue;
-  }
-  &.red {
-    background-color: $cayorRed;
+  background-color: $lightGrey;
+  height: 100%;
+  // width: 15%;
+  padding: 0;
+
+  // height: -webkit-fill-available;
+  @each $color, $hex in $class-color-list {
+    &.#{$color} {
+      background-color: #{$hex};
+      .bio {
+        display: none;
+      }
+    }
   }
   .bio {
-    // width: 35%;
+    // width: 95%;
     color: $primaryBlue;
-    max-height: 40%;
+    height: 100%;
     &.card {
       border: none;
       &:hover {
@@ -23,8 +33,8 @@
       }
     }
     .headshot {
-      // width: 100%;
-      height: 50%;
+      width: 100%;
+      height: inherit;
       // border-radius: 5px;
       @include respond-to(phone) {
         // border-radius: 50%;

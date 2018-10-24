@@ -10,23 +10,23 @@ import {
 import './snapshot.css';
 
 const Snapshot = props => (
-  <Col xs="auto" sm="4" className={`bioContainer ${props.personDetails.name}`}>
-    <Card
-      className="bio"
-      key={props.personDetails.name}
-      onClick={props.handleClick}
-    >
+  <Col
+    xs={props.xs}
+    sm={props.sm}
+    className={`bioContainer ${props.value.name}`}
+  >
+    <Card className="bio" key={props.value.name} onClick={props.handleClick}>
       <CardImg
-        key={props.personDetails.position}
-        className={`headshot ${props.personDetails.name}`}
-        src={props.personDetails.image}
-        alt={props.personDetails.alt}
+        key={props.value.position}
+        className={`headshot ${props.value.name}`}
+        src={props.value.image}
+        alt={props.value.alt}
       />
       <CardImgOverlay
-        key={props.personDetails.name + props.personDetails.position}
+        key={props.value.name + props.value.position}
         className="title"
       >
-        {props.personDetails.name}
+        {props.value.name}
       </CardImgOverlay>
     </Card>
   </Col>

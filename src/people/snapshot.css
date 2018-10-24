@@ -1,18 +1,54 @@
 .bioContainer {
-  margin: 0; }
+  margin: 0;
+  background-color: #d5d5d5;
+  height: 100%;
+  padding: 0; }
   .bioContainer.blue {
     background-color: #113a6e; }
+    .bioContainer.blue .bio {
+      display: none; }
+  .bioContainer.blue2 {
+    background-color: #ffad2f; }
+    .bioContainer.blue2 .bio {
+      display: none; }
+  .bioContainer.blue3 {
+    background-color: #113a6e; }
+    .bioContainer.blue3 .bio {
+      display: none; }
   .bioContainer.red {
     background-color: #9b1d1f; }
+    .bioContainer.red .bio {
+      display: none; }
+  .bioContainer.red2 {
+    background-color: #9b1d1f; }
+    .bioContainer.red2 .bio {
+      display: none; }
+  .bioContainer.red3 {
+    background-color: #9b1d1f; }
+    .bioContainer.red3 .bio {
+      display: none; }
+  .bioContainer.grey {
+    background-color: #484848; }
+    .bioContainer.grey .bio {
+      display: none; }
+  .bioContainer.grey2 {
+    background-color: #484848; }
+    .bioContainer.grey2 .bio {
+      display: none; }
+  .bioContainer.gold {
+    background-color: #ffad2f; }
+    .bioContainer.gold .bio {
+      display: none; }
   .bioContainer .bio {
     color: #113a6e;
-    max-height: 40%; }
+    height: 100%; }
     .bioContainer .bio.card {
       border: none; }
       .bioContainer .bio.card:hover {
         opacity: 0.8; }
     .bioContainer .bio .headshot {
-      height: 50%;
+      width: 100%;
+      height: inherit;
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */

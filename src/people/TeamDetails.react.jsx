@@ -53,8 +53,9 @@ class TeamDetails extends Component {
 
   renderBios() {
     const { teamDetails } = this.props;
-    const row1 = slice(teamDetails, 0, 3);
-    const row2 = slice(teamDetails, 3);
+    const row1 = slice(teamDetails, 0, 4);
+    const row2 = slice(teamDetails, 4, 8);
+    const row3 = slice(teamDetails, 8, 12);
     return (
       <Container>
         <Row>
@@ -63,7 +64,9 @@ class TeamDetails extends Component {
               <Snapshot
                 key={member.name}
                 handleClick={this.handleClick}
-                personDetails={member}
+                value={member}
+                xs="3"
+                sm="3"
               />
             );
           })}
@@ -74,7 +77,22 @@ class TeamDetails extends Component {
               <Snapshot
                 key={member.name}
                 handleClick={this.handleClick}
-                personDetails={member}
+                value={member}
+                xs={{ size: '3', offset: 0.5 }}
+                sm={{ size: '3', offset: 0.5 }}
+              />
+            );
+          })}
+        </Row>
+        <Row>
+          {row3.map(member => {
+            return (
+              <Snapshot
+                key={member.name}
+                handleClick={this.handleClick}
+                value={member}
+                xs="3"
+                sm="3"
               />
             );
           })}
