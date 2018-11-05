@@ -192,7 +192,7 @@
             padding: 0; }
             .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
               display: flex !important;
-              justify-content: space-evenly;
+              justify-content: space-around;
               flex-direction: column;
               align-items: center;
               align-content: center;
@@ -211,98 +211,100 @@
               /* kindle fire (portrait and landscape) ----------- */ }
               @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2.6) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2.6) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 414px) and (max-device-height: 823px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3.5) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 414px) and (max-device-width: 600px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3.5) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%;
+                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%; } }
+                  width: 70%;
+                  margin: 0; } }
               @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 80%; } }
+                  width: 70%;
+                  margin: 0; } }
               .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
                 font-family: "Merriweather", serif;
                 font-stretch: extra-expanded;

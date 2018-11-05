@@ -5,7 +5,7 @@
   width: 100%;
   order: 1;
   display: flex;
-  color: $primaryGrey;
+  color: $white;
   justify-content: flex-end;
   align-content: flex-end;
   background-color: $transparent;
@@ -20,7 +20,7 @@
     object-fit: contain;
     background-position: center top;
     background-repeat: no-repeat;
-    border-bottom: 2px solid $lightGrey;
+    border-bottom: 1px solid $primaryGrey;
     @include respond-to(phone) {
       max-height: 100px;
     }
@@ -33,7 +33,6 @@
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
       url('../media/joburg_header.jpeg');
     background-size: 100% 100%;
-    border-bottom: $primaryGrey 1px;
   }
 
   &.opportunity {
@@ -55,7 +54,7 @@
 
   &.homepage {
     height: 120px;
-    color: $white;
+    // color: $white;
     z-index: 1000;
   }
 
@@ -93,6 +92,7 @@
     width: 80%;
     z-index: 1000;
     height: 100%;
+    margin-right: 10px;
     #jbg {
       display: flex;
       flex-flow: row wrap;
@@ -110,9 +110,10 @@
         color: $white;
         z-index: 1000;
         height: 100%;
+        padding-right: 2%;
         .nav {
           width: 30%;
-          margin-right: 4%;
+          margin-right: 2%;
           display: flex;
           flex-flow: row wrap;
           justify-content: space-around;
@@ -198,14 +199,17 @@
           justify-content: center;
           align-items: center;
           align-content: center;
+          margin-right: 4%;
           @include respond-to(phone) {
             width: 45%;
             height: 60%;
             align-self: center;
+            margin-right: 3%;
             order: 1;
           }
           @include respond-to(phone-long) {
             width: 35%;
+            margin-right: 3%;
           }
           @include respond-to(tablets) {
             width: 25%;
@@ -229,7 +233,6 @@
             justify-content: center;
             align-items: center;
 
-            margin-right: 2%;
             height: 100%;
             @include respond-to(phone) {
               justify-content: center;

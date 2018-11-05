@@ -6,7 +6,8 @@
   .bioContainer .bio {
     color: #113a6e;
     height: 100%;
-    display: block; }
+    display: block;
+    border-radius: 0; }
     .bioContainer .bio.card {
       border: none; }
       .bioContainer .bio.card:hover {
@@ -14,83 +15,17 @@
     .bioContainer .bio .headshot {
       width: 100%;
       height: inherit;
-      filter: grayscale(100%);
-      /* iPhone 4 ----------- */
-      /* iPhone 5 ----------- */
-      /* iPhone 6 ----------- */
-      /* Samsung Galaxy S3 ----------- */
-      /* Samsung Galaxy S4 ----------- */
-      /* Samsung Galaxy S5 ----------- */
-      /* iPads (portrait and landscape) ----------- */
-      /* kindle fire (portrait and landscape) ----------- */ }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .bioContainer .bio .headshot {
-          align-self: center;
-          height: 80px;
-          width: 80px; } }
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        .bioContainer .bio .headshot {
-          height: 145px;
-          width: 145px; } }
-      @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
-        .bioContainer .bio .headshot {
-          height: 145px;
-          width: 145px; } }
+      filter: grayscale(100%); }
+      .bioContainer .bio .headshot.card-img {
+        border-radius: 0;
+        /* iPhone 4 ----------- */
+        /* iPhone 5 ----------- */
+        /* iPhone 6 ----------- */
+        /* Samsung Galaxy S3 ----------- */
+        /* Samsung Galaxy S4 ----------- */
+        /* Samsung Galaxy S5 ----------- */
+        /* iPads (portrait and landscape) ----------- */
+        /* kindle fire (portrait and landscape) ----------- */ }
     .bioContainer .bio .title {
       background-color: #d5d5d599;
       text-align: center; }
@@ -98,7 +33,6 @@
         height: 25%;
         padding: 0;
         font-size: 1.2em;
-        color: #113a6e;
         line-height: 2em;
         font-weight: lighter;
         font-family: "Josefin Sans", sans-serif;
@@ -108,6 +42,7 @@
           height: 100%;
           padding: 0; }
           .bioContainer .bio .title.card-img-overlay .card-body .card-title {
+            color: #9b1d1f;
             font-size: 0.9em;
             line-height: 1.1em;
             margin-top: 5px; }
@@ -140,3 +75,5 @@
     background-color: #484848; }
   .colorContainer.grey3 {
     background-color: #484848; }
+  .colorContainer.Team {
+    background-color: #ffffff; }

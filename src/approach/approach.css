@@ -48,8 +48,7 @@
     height: 100%;
     display: flex;
     flex: row;
-    align-items: stretch;
-    justify-content: space-between; }
+    line-height: auto; }
   .approach.slide-enter {
     z-index: 10;
     opacity: 0.1; }

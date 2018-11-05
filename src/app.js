@@ -34,7 +34,7 @@ class App extends Component {
     console.log('clock click contact', e);
     e.preventDefault();
     const { isContactModalOpen } = this.state;
-    // debugger;
+
     this.setState({
       isContactModalOpen: !isContactModalOpen,
     });

@@ -395,6 +395,8 @@
         width: 100%;
         font-size: 1.2em; }
     .text-table.other .approach {
+      font-family: "Josefin Sans", sans-serif;
+      overflow-y: scroll;
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */
@@ -462,7 +464,7 @@
           padding-left: 0;
           height: 100%; } }
       .text-table.other .approach .subHeader {
-        font-size: 1.2em;
+        font-size: 1em;
         /* iPhone 4 ----------- */
         /* iPhone 5 ----------- */
         /* iPhone 6 ----------- */
@@ -583,141 +585,6 @@
             width: 100%;
             font-size: 0.9em;
             margin-left: 0; } }
-  .text-table .approach {
-    /* iPhone 4 ----------- */
-    /* iPhone 5 ----------- */
-    /* iPhone 6 ----------- */
-    /* Samsung Galaxy S3 ----------- */
-    /* Samsung Galaxy S4 ----------- */
-    /* Samsung Galaxy S5 ----------- */ }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-      .text-table .approach {
-        overflow-y: scroll;
-        padding-left: 0;
-        height: 100%; } }
-    .text-table .approach .subHeader {
-      font-size: 1.2em;
-      /* iPhone 4 ----------- */
-      /* iPhone 5 ----------- */
-      /* iPhone 6 ----------- */
-      /* Samsung Galaxy S3 ----------- */
-      /* Samsung Galaxy S4 ----------- */
-      /* Samsung Galaxy S5 ----------- */ }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 0; } }
   .text-table .text {
     list-style: none;
     padding: 7px 0;

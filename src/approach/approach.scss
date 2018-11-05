@@ -13,8 +13,7 @@
     height: 100%;
     display: flex;
     flex: row;
-    align-items: stretch;
-    justify-content: space-between;
+    line-height: auto;
   }
 
   @include slide-enter;

@@ -15,7 +15,6 @@ const Snapshot = props => (
     xs={props.xs}
     sm={props.sm}
     className={`bioContainer ${props.value.name}`}
-    onClick={props.handleClick}
   >
     <Card className="bio" key={props.value.name}>
       <CardImg
@@ -25,13 +24,14 @@ const Snapshot = props => (
         alt={props.value.alt}
       />
       <CardImgOverlay
+        onClick={props.handleClick}
         key={props.value.name + props.value.position}
         className="title"
       >
         <CardBody>
-          <CardTitle>{props.value.name}</CardTitle>
+          <CardTitle>{props.value.name.toUpperCase()}</CardTitle>
           <CardSubtitle key={props.value.name}>
-            {props.value.position}
+            {props.value.position.toLowerCase()}
           </CardSubtitle>
         </CardBody>
       </CardImgOverlay>

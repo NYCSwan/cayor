@@ -9,11 +9,11 @@ const ContactForm = props => (
     className="contactForm"
     target={props.contactLocation}
     hideArrow={true}
-    placement={'top-end'}
+    placement={props.location.pathname === '/' ? 'auto-end' : 'top-end'}
     isOpen={props.isContactModalOpen}
   >
     <PopoverHeader>
-      CONTACT US
+      contact us
       <FontAwesomeIcon
         onClick={props.handleClose}
         className={'times'}
@@ -25,13 +25,17 @@ const ContactForm = props => (
       {props.contactDetails.map(detail => {
         return (
           <Fade in={props.fadeIn} key={detail.location} className="contactBody">
-            <h3>{detail.location}</h3>
+            <h3>{detail.location.toUpperCase()}</h3>
             <img src={detail.imageUrl} alt={detail.imageAlt} />
             <aside className="address">
-              <h4>{detail.street_address}</h4>
-              <h4>{detail.street_address2}</h4>
-              <h4>{detail.city}</h4>
-              <h4>{detail.phone}</h4>
+              <h4>
+                <strong>Address:</strong> {detail.street_address}
+              </h4>
+              <h4 className="right">{detail.street_address2}</h4>
+              <h4 className="right">{detail.city}</h4>
+              <h4>
+                <strong>Phone:</strong> {detail.phone}
+              </h4>
             </aside>
           </Fade>
         );

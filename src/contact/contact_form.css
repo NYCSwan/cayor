@@ -1,7 +1,12 @@
 .popover {
-  border-top: 1px solid #9b1d1f;
+  border-top: 2px solid #9b1d1f;
   height: auto;
-  min-width: 50%;
+  min-width: 60%;
+  z-index: 5000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #696969;
+  border-left: 1px solid #696969;
+  margin-right: 10px;
   /* iPhone 4 ----------- */
   /* iPhone 5 ----------- */
   /* iPhone 6 ----------- */
@@ -57,9 +62,9 @@
       min-width: 85%;
       height: 50%; } }
   .popover.show {
-    width: 60%; }
+    width: 100%; }
     .popover.show.contactForm {
-      width: 60%;
+      width: 100%;
       /* iPhone 4 ----------- */
       /* iPhone 5 ----------- */
       /* iPhone 6 ----------- */
@@ -103,7 +108,7 @@
         .popover.show.contactForm {
           width: 100%; } }
       .popover.show.contactForm.bs-popover-bottom {
-        width: 60%;
+        width: 100%;
         height: auto;
         padding-bottom: 5%;
         font-family: "Josefin Sans", sans-serif; }
@@ -155,9 +160,9 @@
           .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-header {
             background-color: rgba(0, 0, 0, 0);
             color: #113a6e;
-            padding-right: 5%;
             padding-top: 3%;
-            text-align: right;
+            font-size: 1.2em;
+            text-align: center;
             width: 100%; }
             .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-header .times {
               position: absolute;
@@ -165,15 +170,16 @@
               top: 10px;
               color: #696969; }
             .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-header h5 {
-              padding-right: 3%; }
+              font-size: 1em; }
           .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body {
-            padding: 1rem; }
+            padding: 1rem;
+            width: 100%; }
             .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody {
               padding-left: 5%; }
               .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody h3 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 font-family: "Merriweather", serif;
-                line-height: 1.7rem;
+                line-height: 1.5em;
                 color: #9b1d1f;
                 padding-bottom: 2%;
                 padding-top: 2%; }
@@ -224,11 +230,21 @@
                   .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody img {
                     width: 200px; } }
               .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody .address {
-                padding-top: 5%; }
+                padding-top: 5%;
+                width: 42%;
+                height: auto;
+                display: flex;
+                flex-flow: column nowrap; }
                 .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody .address h4 {
-                  font-size: 1.2rem;
+                  font-size: 1em;
+                  line-height: 1.2em;
                   font-family: "Josefin Sans", sans-serif;
                   color: #696969; }
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody .address h4.right {
+                    width: 80%;
+                    margin-left: 20%; }
+                  .popover.show.contactForm.bs-popover-bottom .popover-inner .popover-body .contactBody .address h4:last-child {
+                    margin-top: 3%; }
   .popover.slide-down {
     z-index: 10;
     opacity: 0.1; }

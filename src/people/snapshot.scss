@@ -4,7 +4,7 @@
 $class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
    (blue3, $primaryBlue),  (red, $cayorRed),  (red2, $cayorRed),
    (red3, $cayorRed),  (grey, $accentGrey),  (grey2, $accentGrey),
-   (grey3, $accentGrey);
+   (grey3, $accentGrey),  (Team, $white);
 
 .bioContainer {
   margin: 0;
@@ -15,6 +15,7 @@ $class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
     color: $primaryBlue;
     height: 100%;
     display: block;
+    border-radius: 0;
     &.card {
       border: none;
       &:hover {
@@ -25,16 +26,18 @@ $class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
       width: 100%;
       height: inherit;
       filter: grayscale(100%);
-
-      @include respond-to(phone) {
-        // border-radius: 50%;
-        align-self: center;
-        height: 80px;
-        width: 80px;
-      }
-      @include respond-to(tablets) {
-        height: 145px;
-        width: 145px;
+      &.card-img {
+        border-radius: 0;
+        @include respond-to(phone) {
+          // border-radius: 50%;
+          // align-self: center;
+          // height: 80px;
+          // width: 80px;
+        }
+        @include respond-to(tablets) {
+          // height: 145px;
+          // width: 145px;
+        }
       }
     }
     .title {
@@ -44,7 +47,6 @@ $class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
         height: 25%;
         padding: 0;
         font-size: 1.2em;
-        color: $primaryBlue;
         line-height: 2em;
         font-weight: lighter;
         font-family: $copy-font-family;
@@ -55,6 +57,7 @@ $class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
           height: 100%;
           padding: 0;
           .card-title {
+            color: $cayorRed;
             font-size: 0.9em;
             line-height: 1.1em;
             margin-top: 5px;

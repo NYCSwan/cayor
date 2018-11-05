@@ -7,11 +7,11 @@ import TextTableContainer from '../layout/text-table-container.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
-import Agribusiness from '../media/shipping.jpg';
+import Agribusiness from '../media/agribusiness.jpg';
 import Manufacturing from '../media/manufacturing.jpg';
-import Infrastructure from '../media/machine_industrialCropped.jpeg';
+import Infrastructure from '../media/delicatessen.jpg';
 import SectorsContainer from './sectors_container.react';
-import FinTech from '../media/United_Bank_for_Africa_in_Ghana.jpg';
+import FinTech from '../media/banking.jpg';
 import './approach.css';
 
 class Approach extends Component {
@@ -174,6 +174,9 @@ class Approach extends Component {
         ],
       },
       {
+        header: 'grey',
+      },
+      {
         header: 'Infrastructure Services',
         template: 'bullet',
         alt: "Cayor Capital invsting in Africa's Infrastructure Services",
@@ -235,6 +238,9 @@ class Approach extends Component {
             style: 'text',
           },
         ],
+      },
+      {
+        header: 'red',
       },
       {
         header: 'Agribusiness',
@@ -475,19 +481,20 @@ class Approach extends Component {
       item => e.target.innerText.toLowerCase() === item.value.toLowerCase()
     );
     const index = Number(findKey(currentNavItem)) - 1;
-    // debugger;
-    // const newIndex = navItems.indexOf({value: e.target.innerText)
-    if (index === 3 || index === 8) {
-      this.setState({ buttonDisabled: true });
-    } else {
-      this.setState({ buttonDisabled: false });
-    }
 
-    this.setState({
-      currentDetails: e.target.innerText.toLowerCase(),
-      fadeIn: true,
-      currentDetailIdx: index,
-    });
+    if (index === 3 || index === 8) {
+      this.setState({
+        buttonDisabled: true,
+        currentDetails: e.target.innerText.toLowerCase(),
+        currentDetailIdx: index,
+      });
+    } else {
+      this.setState({
+        buttonDisabled: false,
+        currentDetails: e.target.innerText.toLowerCase(),
+        currentDetailIdx: index,
+      });
+    }
   };
 
   handleButtonClick = () => {
@@ -495,7 +502,7 @@ class Approach extends Component {
     const maxIndex = navItems.length - 2;
     const index = currentDetailIdx + 1;
     const details = navItems[index + 1].value.toLowerCase();
-    // debugger
+
     if (currentDetailIdx === -1) {
       this.setState({
         currentDetailIdx: index,
@@ -547,7 +554,6 @@ class Approach extends Component {
       currentDetails === 'structured deal origination' ||
       currentDetails === 'deal & portfolio mgmt'
     ) {
-      // debugger
       return (
         <TextTableContainer
           location={this.props.location.pathname.split('/')[1]}
@@ -560,7 +566,6 @@ class Approach extends Component {
         />
       );
     } else if (currentDetails === 'investment sectors') {
-      // debugger;
       return (
         <SectorsContainer
           location={this.props.location.pathname.split('/')[1]}

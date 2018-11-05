@@ -5,7 +5,8 @@
   // height: 70%;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 4%;
   // align-items: flex-start;
   .right {
     height: 90%;
@@ -13,11 +14,11 @@
     width: 40%;
     .info {
       border-bottom: $lightGrey 1px solid;
-      height: 100%;
+      height: 90%;
       .portrait {
         // border-radius: 50px;
         height: auto;
-        width: 80%;
+        width: 70%;
       }
       .name {
         font-size: 1.2em;
@@ -30,6 +31,14 @@
         font-size: 1em;
       }
     }
+    .button {
+      margin-top: 3%;
+      // margin-left: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      text-align: right;
+      color: $primaryBlue;
+    }
   }
   .bioDetails {
     width: 50%;
@@ -37,7 +46,16 @@
     text-align: left;
     p {
       font-family: $open-sans-font-family;
-      font-size: 1em;
+      font-size: 0.9em;
+      color: $primaryText;
+      &:first-of-type {
+        color: $cayorRed;
+        text-align: left;
+        width: 90%;
+        text-align: justify;
+        font-style: $headline-font-family;
+        padding-bottom: 2%;
+      }
     }
     h5 {
       font-family: $copy-font-family;

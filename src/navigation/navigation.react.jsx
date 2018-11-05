@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 import Clock from '../clocks/clock.react';
 import WhiteLogo from '../media/grey-white-icon.png';
 import ContactForm from '../contact/contact_form.react';
-import Accra from '../media/Ghana_map.jpg';
-import Joburg from '../media/SAfrica_map.jpg';
+import Accra from '../media/map.jpg';
+import Joburg from '../media/map3.jpg';
 
 import './navigation.css';
 
@@ -32,7 +32,8 @@ class Navigation extends Component {
         city: 'tbd',
         phone: '+',
         imageUrl: Accra,
-        imageAlt: "Map of Accra Ghana, Cayor's second office location",
+        imageAlt:
+          "Map of Accra Ghana, Cayor's second Sub-Saharan Africa equity office location",
       },
     ],
   };
@@ -52,11 +53,12 @@ class Navigation extends Component {
       accraContactDetails,
       joburgContactDetails,
     } = this.state;
-    const { isContactModalOpen, fadeIn, handleClose } = this.props;
+    const { isContactModalOpen, fadeIn, handleClose, location } = this.props;
     // debugger
     if (contactLocation === 'accra') {
       return (
         <ContactForm
+          location={location}
           fadeIn={fadeIn}
           contactDetails={accraContactDetails}
           contactLocation={contactLocation}
@@ -68,6 +70,7 @@ class Navigation extends Component {
       return (
         <ContactForm
           fadeIn={fadeIn}
+          location={location}
           contactDetails={joburgContactDetails}
           contactLocation={contactLocation}
           handleClose={handleClose}

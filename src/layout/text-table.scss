@@ -106,13 +106,15 @@
       }
     }
     .approach {
+      font-family: $copy-font-family;
+      overflow-y: scroll;
       @include respond-to(phone) {
         overflow-y: scroll;
         padding-left: 0;
         height: 100%;
       }
       .subHeader {
-        font-size: 1.2em;
+        font-size: 1em;
         @include respond-to(phone) {
           width: 100%;
           font-size: 0.9em;
@@ -131,21 +133,20 @@
       }
     }
   }
-  .approach {
-    @include respond-to(phone) {
-      overflow-y: scroll;
-      padding-left: 0;
-      height: 100%;
-    }
-    .subHeader {
-      font-size: 1.2em;
-      @include respond-to(phone) {
-        width: 100%;
-        font-size: 1em;
-        margin-left: 0;
-      }
-    }
-  }
+  // .approach {
+  //   @include respond-to(phone) {
+  //     padding-left: 0;
+  //     height: 100%;
+  //   }
+  //   .subHeader {
+  //     font-size: 1.2em;
+  //     @include respond-to(phone) {
+  //       width: 100%;
+  //       font-size: 1em;
+  //       margin-left: 0;
+  //     }
+  //   }
+  // }
 
   .text {
     list-style: none;

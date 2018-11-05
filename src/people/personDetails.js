@@ -15,7 +15,6 @@ const PersonDetails = props => (
         <h2 className="role">{props.personDetails.position.toLowerCase()}</h2>
       </div>
       <Button
-        disabled={props.personDetails.name === 'Kofi Domfeh'}
         className="next"
         handleClick={props.handleNextClick}
         value={props.personDetails.name}
@@ -23,7 +22,7 @@ const PersonDetails = props => (
       />
     </aside>
     <div className="bioDetails">
-      <p>{props.personDetails.summary}</p>
+      <p>{props.personDetails.summary.toUpperCase()}</p>
       <h5>Experience</h5>
       <p>{props.personDetails.experience}</p>
       <h5>Education</h5>

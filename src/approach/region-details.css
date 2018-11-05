@@ -1,5 +1,5 @@
 .regionDetails {
-  background: url("../media/countries.jpg") no-repeat center center;
+  background: url("../media/map2.jpg") no-repeat center center;
   background-size: auto 75%;
   display: flex;
   flex: row wrap;
@@ -143,15 +143,17 @@
     font-size: 1.4em;
     text-align: center;
     align-self: flex-start;
-    width: auto; }
+    justify-content: center;
+    width: 100%; }
   .regionDetails .west-africa {
     width: 300px;
     order: 1;
     position: fixed;
     top: 32%;
     align-self: flex-start;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: normal;
+    margin-right: 3%;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -284,11 +286,16 @@
       .regionDetails .west-africa {
         top: 20%;
         left: 30%; } }
+    .regionDetails .west-africa .text-table {
+      padding-right: 0; }
+      .regionDetails .west-africa .text-table .headerContainer {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 100; }
   .regionDetails .east-africa {
     order: 10;
     position: fixed;
     top: 32%;
-    right: 0;
+    right: 5%;
     width: 250px;
     align-self: flex-start;
     font-size: 1.2em;
@@ -371,7 +378,7 @@
     width: 400px;
     order: 1;
     position: fixed;
-    left: inherit;
+    left: 50%;
     align-self: flex-end;
     font-size: 1em;
     line-height: normal;

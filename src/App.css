@@ -17,7 +17,7 @@ html {
         html body .App .shaddow.true {
           display: block;
           z-index: 10;
-          background-color: #260606;
+          background-color: #470c0d;
           opacity: 0.7;
           position: fixed;
           top: 0;

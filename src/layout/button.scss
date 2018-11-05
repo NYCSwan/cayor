@@ -28,7 +28,7 @@
     }
     @include respond-to(tablets) {
       width: 10%;
-      top: 70%;
+      top: 30%;
     }
     &:disabled {
       background-color: $lightGrey;

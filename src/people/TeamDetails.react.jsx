@@ -15,8 +15,19 @@ class TeamDetails extends Component {
       personDetails: [],
       currentPerson: '',
       idx: null,
+      teamDetailsNoColors: [],
     };
   }
+
+  componentDidMount() {
+    const { teamDetails } = this.props;
+
+    const teamDetailsNoColors = filter(teamDetails, detail => {
+      return detail.position !== undefined;
+    });
+    this.setState({ teamDetailsNoColors });
+  }
+
   shouldComponentUpdate(nextState, nextProps) {
     return this.state.idx !== nextState.idx;
   }
@@ -24,30 +35,44 @@ class TeamDetails extends Component {
   handleClick = e => {
     console.log('handle person click');
     const { teamDetails } = this.props;
+    const { teamDetailsNoColors } = this.state;
     const currentPerson = e.target.textContent; //return.key;
     e.preventDefault();
+
     if (
       currentPerson.includes('red') ||
       currentPerson.includes('blue') ||
-      currentPerson.includes('grey')
+      currentPerson.includes('grey') ||
+      currentPerson.includes('Our') ||
+      currentPerson === undefined
     ) {
       this.setState({ isOpen: false });
       return;
     } else if (
-      currentPerson === 'Managing Partner' ||
-      currentPerson === 'Vice President' ||
-      currentPerson === 'Principal'
+      currentPerson.includes('managing partner') ||
+      currentPerson.includes('vice president') ||
+      currentPerson.includes('principal')
     ) {
       const idx = Number(
-        findKey(
-          teamDetails,
-          details => details.name === e.target.previousElementSibling.innerText
+        findKey(teamDetailsNoColors, details =>
+          e.target.previousElementSibling.innerText
+            .toUpperCase()
+            .includes(details.name.toUpperCase())
         )
       );
 
-      this.setState({ isOpen: true, currentPerson: teamDetails[idx].name });
+      this.setState({
+        isOpen: true,
+        idx,
+        currentPerson: teamDetailsNoColors[idx].name,
+      });
     } else {
-      this.setState({ isOpen: true, currentPerson });
+      const idx = Number(
+        findKey(teamDetailsNoColors, details =>
+          currentPerson.toUpperCase().includes(details.name.toUpperCase())
+        )
+      );
+      this.setState({ isOpen: true, idx, currentPerson });
     }
   };
 
@@ -56,12 +81,17 @@ class TeamDetails extends Component {
   };
 
   handleNextClick = e => {
-    console.log('handleNextClick');
+    console.log('handleNextClick -- personDetails');
     const { teamDetails } = this.props;
-    const { idx } = this.state;
+    const { idx, teamDetailsNoColors } = this.state;
+    let nextIdx = 0;
 
-    const nextIdx = idx + 1;
-    const nextPerson = teamDetails[nextIdx].name;
+    if (idx === teamDetailsNoColors.length - 1) {
+      nextIdx = 0;
+    } else {
+      nextIdx = idx + 1;
+    }
+    const nextPerson = teamDetailsNoColors[nextIdx].name;
     this.setState({
       idx: nextIdx,
       currentPerson: nextPerson,
@@ -73,9 +103,9 @@ class TeamDetails extends Component {
     const row1 = slice(teamDetails, 0, 4);
     const row2 = slice(teamDetails, 4, 7);
     const row3 = slice(teamDetails, 7, 11);
+
     return (
       <main className="main">
-        <h5 className="header">OUR TEAM</h5>
         <Container>
           <Row>
             {row1.map(member => {
@@ -119,6 +149,17 @@ class TeamDetails extends Component {
                     xs={{ size: '3' }}
                     sm={{ size: '3' }}
                   />
+                );
+              } else if (member.name.includes('Our')) {
+                return (
+                  <Col
+                    className={`colorContainer ${member.name}`}
+                    key={member.name}
+                    xs={{ size: '3' }}
+                    sm={{ size: '3' }}
+                  >
+                    <h5 className="header">{member.name.toUpperCase()}</h5>
+                  </Col>
                 );
               } else {
                 return (
@@ -167,14 +208,13 @@ class TeamDetails extends Component {
   }
 
   renderDetails() {
-    const { currentPerson } = this.state;
-    const { teamDetails } = this.props;
+    const { currentPerson, teamDetailsNoColors } = this.state;
+
     const personDetails = filter(
-      teamDetails,
-      details => currentPerson === details.name
+      teamDetailsNoColors,
+      details => currentPerson.toUpperCase() === details.name.toUpperCase()
     );
     const key = findKey(personDetails);
-
     return (
       <PersonDetails
         personDetails={personDetails[key]}
@@ -185,14 +225,9 @@ class TeamDetails extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { fadeIn } = this.props;
+    const { fadeIn, closeDetails } = this.props;
     return (
-      <Fade
-        in={fadeIn}
-        key={'teamPage'}
-        className="TeamDetails"
-        onClick={this.handleClick}
-      >
+      <Fade in={fadeIn} key={'teamPage'} className="TeamDetails">
         {isOpen ? this.renderDetails() : this.renderBios()}
       </Fade>
     );
