@@ -7,10 +7,8 @@ import {
   Col,
   CardImgOverlay,
   CardTitle,
-  CardText,
   CardBody,
 } from 'reactstrap';
-import TextTable from '../layout/text-table.react';
 import List from '../layout/list.react.js';
 import './sectors_container.css';
 

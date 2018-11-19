@@ -30,7 +30,7 @@ const items = [
       'We are driven and entrepreneurial, and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
     caption:
       'We are driven and entrepreneurial and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
-    header: 'Building New Platforms' + '\n' + "In Africa's Mid Markets",
+    header: `Building New Platforms \n In Africa's Mid Markets`,
     link: '/opportunity',
   },
   {
@@ -40,7 +40,7 @@ const items = [
       'The product of our experience over time is a consistent, disciplined and value added methodology that has yielded attractive investment returns.',
     caption:
       'The product of our experience over time is a consistent, disciplined and value added methodology that has yielded attractive investment returns.',
-    header: 'Seasoned African Investors' + '\n' + 'Generating Super Returns',
+    header: `Seasoned African Investors \n Generating Super Returns`,
     link: '/esg',
   },
 ];

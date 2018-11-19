@@ -34,7 +34,7 @@ class TeamDetails extends Component {
 
   handleClick = e => {
     console.log('handle person click');
-    const { teamDetails } = this.props;
+    // const { teamDetails } = this.props;
     const { teamDetailsNoColors } = this.state;
     const currentPerson = e.target.textContent; //return.key;
     e.preventDefault();
@@ -82,7 +82,7 @@ class TeamDetails extends Component {
 
   handleNextClick = e => {
     console.log('handleNextClick -- personDetails');
-    const { teamDetails } = this.props;
+    // const { teamDetails } = this.props;
     const { idx, teamDetailsNoColors } = this.state;
     let nextIdx = 0;
 
@@ -225,7 +225,7 @@ class TeamDetails extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { fadeIn, closeDetails } = this.props;
+    const { fadeIn } = this.props;
     return (
       <Fade in={fadeIn} key={'teamPage'} className="TeamDetails">
         {isOpen ? this.renderDetails() : this.renderBios()}

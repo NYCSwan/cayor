@@ -174,8 +174,8 @@ class Opportunities extends Component {
       navItems,
       item => e.target.innerText.toLowerCase() === item.value.toLowerCase()
     );
-    const index = Number(findKey(currentNavItem)) - 1;
-    if (index === 3) {
+    const index = Number(findKey(currentNavItem));
+    if (index === 5) {
       this.setState({ buttonDisabled: true });
     } else {
       this.setState({ buttonDisabled: false });
@@ -190,10 +190,9 @@ class Opportunities extends Component {
   handleButtonClick = () => {
     const { currentDetailIdx, navItems } = this.state;
     // const {text} = this.props;
-    const maxIndex = navItems.length;
+    const maxIndex = navItems.length - 1;
     const index = currentDetailIdx + 1;
     const details = navItems[index + 1].value.toLowerCase();
-    // debugger
     if (currentDetailIdx === -1) {
       this.setState({
         currentDetailIdx: index,
@@ -206,12 +205,12 @@ class Opportunities extends Component {
         currentDetails: 'extensive africa network',
         buttonDisabled: false,
       });
-    } else if (index === 3) {
-      this.setState({
-        currentDetailIdx: index,
-        currentDetails: details,
-        buttonDisabled: true,
-      });
+      // } else if (index === 3) {
+      //   this.setState({
+      //     currentDetailIdx: index,
+      //     currentDetails: details,
+      //     buttonDisabled: true,
+      //   });
     } else if (currentDetailIdx !== maxIndex) {
       this.setState({
         currentDetailIdx: index,
@@ -219,6 +218,7 @@ class Opportunities extends Component {
         buttonDisabled: false,
       });
     } else {
+      debugger;
       this.setState({
         currentDetailIdx: maxIndex,
         currentDetails: details,
@@ -238,6 +238,7 @@ class Opportunities extends Component {
       buttonDisabled,
     } = this.state;
     if (currentDetails === 'why africa') {
+      debugger;
       return (
         <TextTableContainer
           fadeIn={fadeIn}

@@ -24,7 +24,7 @@
   @include respond-to(tablets) {
     background-position-y: 40%;
     background-position-x: 45%;
-    background-size: auto 35%;
+    background-size: auto 50%;
     justify-content: center;
     height: auto;
   }
@@ -44,7 +44,6 @@
     align-self: flex-start;
     font-size: 1.1em;
     line-height: normal;
-    margin-right: 3%;
     @include respond-to(phone) {
       left: 30%;
       width: 100px;
@@ -60,6 +59,7 @@
       left: 30%;
     }
     .text-table {
+      margin-left: 15%;
       padding-right: 0;
       .headerContainer {
         font-family: $open-sans-font-family;
@@ -71,7 +71,7 @@
     order: 10;
     position: fixed;
     top: 32%;
-    right: 5%;
+    right: 1%;
     width: 250px;
     align-self: flex-start;
     font-size: 1.2em;
@@ -89,7 +89,7 @@
     width: 400px;
     order: 1;
     position: fixed;
-    left: 50%;
+    left: 52%;
     align-self: flex-end;
     font-size: 1em;
     line-height: normal;

@@ -39,37 +39,36 @@ class Approach extends Component {
         details: [
           {
             dKey: 's00',
-            text:
-              'Cayor’s investment philosophy has clearly defined principles. Whenever we consider an opportunity, we focus on investments that possess the following attributes:',
+            text: `Cayor’s investment philosophy has clearly defined principles. \nWhenever we consider an opportunity, we focus on investments that possess the following attributes:`,
             style: 'subHeader',
           },
           {
-            dKey: 's02',
+            dKey: 's01',
             text: 'Strong Management Team',
             style: 'text bullet',
           },
           {
-            dKey: 's03',
+            dKey: 's02',
             text: 'Clearly Identifiable Growth Prospects',
             style: 'text bullet',
           },
           {
-            dKey: 's04',
+            dKey: 's03',
             text: 'Cash Flow Generative',
             style: 'text bullet',
           },
           {
-            dKey: 's05',
+            dKey: 's04',
             text: 'Scope To Add Value',
             style: 'text bullet',
           },
           {
-            dKey: 's06',
+            dKey: 's05',
             text: 'Clear Prospects For Exit',
             style: 'text bullet',
           },
           {
-            dKey: 's07',
+            dKey: 's06',
             text: 'Demonstrated ESG Excellence',
             style: 'text bullet',
           },
@@ -481,7 +480,6 @@ class Approach extends Component {
       item => e.target.innerText.toLowerCase() === item.value.toLowerCase()
     );
     const index = Number(findKey(currentNavItem)) - 1;
-
     if (index === 3 || index === 8) {
       this.setState({
         buttonDisabled: true,
@@ -512,7 +510,7 @@ class Approach extends Component {
     } else if (currentDetailIdx === 0) {
       this.setState({
         currentDetailIdx: index,
-        currentDetails: 'middle market focus',
+        currentDetails: 'mid market focus',
         buttonDisabled: false,
       });
     } else if (currentDetailIdx === 2) {
