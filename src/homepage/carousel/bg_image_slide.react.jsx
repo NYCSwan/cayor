@@ -83,7 +83,7 @@ class BgImageSlide extends Component {
             captionText={item.caption}
             captionHeader={item.header}
           />
-          <Link className="link" to={item.link} replace>
+          <Link className={`link ${item.name}`} to={item.link} replace>
             READ MORE
           </Link>
         </CarouselItem>

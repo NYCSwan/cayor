@@ -186,6 +186,10 @@
             .carousel.slide .carousel-inner .carousel-item .link {
               top: 70%;
               left: 40%; } }
+          .carousel.slide .carousel-inner .carousel-item .link.Slide2 {
+            background-color: rgba(0, 0, 0, 0); }
+          .carousel.slide .carousel-inner .carousel-item .link.Slide3 {
+            background-color: #00142861; }
         .carousel.slide .carousel-inner .carousel-item.active {
           z-index: 100;
           opacity: 1;

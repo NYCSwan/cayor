@@ -29,7 +29,7 @@ const items = [
     altText:
       'We are driven and entrepreneurial, and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
     caption:
-      'We are driven and entrepreneurial and leverage the team’s combined 30-year track record investing in Africa to generate superior risk-adjusted returns for our investor partners.',
+      'We are driven and entrepreneurial and\nleverage the team’s combined 30-year track record investing in Africa\nto generate superior risk-adjusted returns for our investor partners.',
     header: `Building New Platforms\nIn Africa's Mid Markets`,
     link: '/opportunity',
   },

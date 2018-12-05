@@ -51,6 +51,12 @@
             top: 70%;
             left: 40%;
           }
+          &.Slide2 {
+            background-color: $transparent;
+          }
+          &.Slide3 {
+            background-color: #00142861;
+          }
         }
         &.active {
           z-index: 100;
