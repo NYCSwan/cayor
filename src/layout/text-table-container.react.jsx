@@ -1,7 +1,6 @@
 import React from 'react';
 // import { Fade } from 'reactstrap';
 import TextTable from './text-table.react';
-import Button from './button.react';
 import './text-table-container.css';
 
 const TextTableContainer = props => (
@@ -14,17 +13,6 @@ const TextTableContainer = props => (
       fadeIn={props.fadeIn}
       text={props.text[props.currentDetailIdx]}
     />
-    {props.text.length > 1 && (
-      <div>
-        <Button
-          disabled={props.disabled}
-          styles="button next interior"
-          handleClick={props.handleButtonClick}
-          value="Next"
-          text=">>"
-        />
-      </div>
-    )}
   </div>
 );
 

@@ -46,10 +46,10 @@
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .homepage {
       overflow: auto; } }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
     .homepage {
       overflow: auto; } }
-  @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+  @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
     .homepage {
       overflow: auto; } }
   .homepage.slide-appear.slide-appear-active {

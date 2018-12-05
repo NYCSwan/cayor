@@ -71,6 +71,7 @@
     list-style: none;
     padding-inline-start: 0;
     float: right;
+    align-items: flex-start;
     /* iPhone 4 ----------- */
     /* iPhone 5 ----------- */
     /* iPhone 6 ----------- */
@@ -139,14 +140,12 @@
         text-align: fit-content;
         width: 85%;
         margin: 0; } }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
       .sub_navigation .list {
-        margin-top: 20%;
-        align-items: flex-start; } }
-    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+        margin-top: 20%; } }
+    @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
       .sub_navigation .list {
-        margin-top: 20%;
-        align-items: flex-start; } }
+        margin-top: 20%; } }
     .sub_navigation .list .hideIcon {
       display: none; }
     .sub_navigation .list .active {
@@ -209,7 +208,7 @@
     .sub_navigation .list .top {
       list-style: none;
       display: block;
-      align-self: flex-end;
+      align-self: flex-start;
       color: #113a6e;
       font-weight: 700;
       width: fit-content;
@@ -222,83 +221,58 @@
       /* Samsung Galaxy S3 ----------- */
       /* Samsung Galaxy S4 ----------- */
       /* Samsung Galaxy S5 ----------- */
-      /* Large screens ----------- */
-      /* iPads (portrait and landscape) ----------- */
-      /* kindle fire (portrait and landscape) ----------- */ }
+      /* Large screens ----------- */ }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
       @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
         .sub_navigation .list .top {
           font-size: 0.9em;
-          align-self: flex-start;
           padding-bottom: 5px; } }
-      @media only screen and (min-width: 1824px) {
+      @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
         .sub_navigation .list .top {
-          align-self: flex-start;
           margin-top: 0; } }
-      @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
-        .sub_navigation .list .top {
-          align-self: flex-start;
-          margin-top: 0; } }
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        .sub_navigation .list .top {
-          align-self: flex-start; } }
-      @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
-        .sub_navigation .list .top {
-          align-self: flex-start; } }
       .sub_navigation .list .top.active {
         font-weight: bolder;
         margin-left: -4%;
@@ -432,12 +406,7 @@
         .sub_navigation .list .sub {
           width: 100%;
           max-height: 75px; } }
-      @media only screen and (min-width: 1824px) {
-        .sub_navigation .list .sub {
-          max-height: 100px;
-          align-self: flex-start;
-          margin-top: 0; } }
-      @media only screen and (min-width: 1440px) and (max-device-height: 900px) {
+      @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
         .sub_navigation .list .sub {
           max-height: 100px;
           align-self: flex-start;

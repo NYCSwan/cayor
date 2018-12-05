@@ -7,8 +7,8 @@ import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import TextTableContainer from '../layout/text-table-container.react';
 import Dafe from '../media/Dafe.jpeg';
-import Fungai from '../media/Dafe.jpeg';
-import Yannick from '../media/KDomfeh.Portraitfull.jpg';
+import Fungai from '../media/fungai.JPG';
+import Yannick from '../media/yannick.JPG';
 import Kofi from '../media/KDomfeh.Portraitfull.jpg';
 
 import './people.css';

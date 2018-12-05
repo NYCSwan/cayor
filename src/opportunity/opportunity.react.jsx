@@ -75,31 +75,31 @@ class Opportunities extends Component {
           {
             dKey: 'i00',
             text:
-              'We are well-grounded in private equity having risen to partnership/senior management in internationally recognized and established principal investment firms',
+              'We are well-grounded in private equity having risen to partnership/senior management in internationally recognized and established principal investment firms.',
             style: 'subHeader',
           },
           {
             dKey: 'i01',
             text:
-              'We are Seasoned private equity investors with investment experience gained in Africa over a combined 30 years',
+              'We are seasoned private equity investors with investment experience gained in Africa over a combined 30 years.',
             style: 'text',
           },
           {
             dKey: 'i02',
             text:
-              'In prior roles, we evaluated in excess of 300 investment opportunities and invested in 11 companies, and as a result acquired invaluable investment knowledge related to what pitfalls to avoid and how to increase, and monetize, shareholder value',
+              'In prior roles, we evaluated in excess of 300 investment opportunities and invested in 11 companies, and as a result acquired invaluable investment knowledge related to what pitfalls to avoid and how to increase, and monetize, shareholder value.',
             style: 'text',
           },
           {
             dKey: 'i03',
             text:
-              'We leverage tactical and strategic investment approaches in deal execution to achieve superior returns for our investors',
+              'We leverage tactical and strategic investment approaches in deal execution to achieve superior returns for our investors.',
             style: 'text',
           },
           {
             dKey: 'i04',
             text:
-              'We have an established track record of leading successful and difficult investments with invaluable lessons learnt and have invested different vintage funds through up and down cycles.  We are as a result experienced in navigating exogenous factors',
+              'We have an established track record of leading successful and difficult investments with invaluable lessons learnt and have invested different vintage funds through up and down cycles.  We are as a result experienced in navigating exogenous factors.',
             style: 'text',
           },
         ],
@@ -164,7 +164,6 @@ class Opportunities extends Component {
     ],
     fadeIn: true,
     currentDetailIdx: 0,
-    buttonDisabled: false,
   };
 
   handleClick = e => {
@@ -174,12 +173,8 @@ class Opportunities extends Component {
       navItems,
       item => e.target.innerText.toLowerCase() === item.value.toLowerCase()
     );
-    const index = Number(findKey(currentNavItem));
-    if (index === 5) {
-      this.setState({ buttonDisabled: true });
-    } else {
-      this.setState({ buttonDisabled: false });
-    }
+    const index = Number(findKey(currentNavItem) - 1);
+
     this.setState({
       currentDetails: e.target.innerText.toLowerCase(),
       fadeIn: true,
@@ -187,45 +182,41 @@ class Opportunities extends Component {
     });
   };
 
-  handleButtonClick = () => {
-    const { currentDetailIdx, navItems } = this.state;
-    // const {text} = this.props;
-    const maxIndex = navItems.length - 1;
-    const index = currentDetailIdx + 1;
-    const details = navItems[index + 1].value.toLowerCase();
-    if (currentDetailIdx === -1) {
-      this.setState({
-        currentDetailIdx: index,
-        currentDetails: 'experienced africa private equity investors',
-        buttonDisabled: false,
-      });
-    } else if (currentDetailIdx === 0) {
-      this.setState({
-        currentDetailIdx: index,
-        currentDetails: 'extensive africa network',
-        buttonDisabled: false,
-      });
-      // } else if (index === 3) {
-      //   this.setState({
-      //     currentDetailIdx: index,
-      //     currentDetails: details,
-      //     buttonDisabled: true,
-      //   });
-    } else if (currentDetailIdx !== maxIndex) {
-      this.setState({
-        currentDetailIdx: index,
-        currentDetails: details,
-        buttonDisabled: false,
-      });
-    } else {
-      debugger;
-      this.setState({
-        currentDetailIdx: maxIndex,
-        currentDetails: details,
-        buttonDisabled: true,
-      });
-    }
-  };
+  // handleButtonClick = () => {
+  //   const { currentDetailIdx, navItems } = this.state;
+  //   // const {text} = this.props;
+  //   const maxIndex = navItems.length - 1;
+  //   const index = currentDetailIdx + 1;
+  //   const details = navItems[index + 1].value.toLowerCase();
+  //
+  //   if (currentDetailIdx === -1) {
+  //     this.setState({
+  //       currentDetailIdx: index,
+  //       currentDetails: 'experienced africa private equity investors',
+  //     });
+  //   } else if (currentDetailIdx === 0) {
+  //     this.setState({
+  //       currentDetailIdx: index,
+  //       currentDetails: 'extensive africa network',
+  //     });
+  //     // } else if (index === 3) {
+  //     //   this.setState({
+  //     //     currentDetailIdx: index,
+  //     //     currentDetails: details,
+  //     //   });
+  //   } else if (currentDetailIdx !== maxIndex) {
+  //     this.setState({
+  //       currentDetailIdx: index,
+  //       currentDetails: details,
+  //     });
+  //   } else {
+  //     debugger;
+  //     this.setState({
+  //       currentDetailIdx: maxIndex,
+  //       currentDetails: details,
+  //     });
+  //   }
+  // };
 
   renderDetails() {
     console.log('renderDetails');
@@ -235,40 +226,32 @@ class Opportunities extends Component {
       fadeIn,
       whyAfricaTableText,
       whyCayorTableText,
-      buttonDisabled,
     } = this.state;
     if (currentDetails === 'why africa') {
-      debugger;
       return (
         <TextTableContainer
           fadeIn={fadeIn}
-          disabled={buttonDisabled}
           currentDetails={currentDetails}
           text={whyAfricaTableText}
           currentDetailIdx={0}
-          handleButtonClick={this.handleButtonClick}
         />
       );
     } else if (currentDetails === 'why cayor') {
       return (
         <TextTableContainer
-          disabled={buttonDisabled}
           fadeIn={fadeIn}
           currentDetails={currentDetails}
           text={whyCayorTableText}
           currentDetailIdx={0}
-          handleButtonClick={this.handleButtonClick}
         />
       );
     } else {
       return (
         <TextTableContainer
           fadeIn={fadeIn}
-          disabled={buttonDisabled}
           currentDetails={currentDetails}
           text={whyCayorTableText}
           currentDetailIdx={currentDetailIdx}
-          handleButtonClick={this.handleButtonClick}
         />
       );
     }

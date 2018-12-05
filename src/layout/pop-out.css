@@ -4,8 +4,7 @@
   border-left: 1px solid #470c0d;
   border-radius: 0; }
   .card .card-body {
-    margin: 10px 10% 10px 0;
-    overflow-y: scroll; }
+    margin: 10px 10% 10px 0; }
     .card .card-body .card-subtitle {
       color: #9b1d1f;
       float: left;

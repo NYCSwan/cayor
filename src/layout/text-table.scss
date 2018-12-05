@@ -9,7 +9,7 @@
   padding-right: 5%;
   color: $primaryGrey;
   @include respond-to(phone) {
-    overflow-y: scroll;
+    // overflow-y: scroll;
     overflow: auto;
   }
   &.bullet {
@@ -24,7 +24,7 @@
       flex-flow: row;
       justify-content: flex-start;
       align-content: center;
-      height: 150px;
+      height: 125px;
       @include respond-to(phone) {
         height: 150px;
         width: 100%;
@@ -61,13 +61,14 @@
       }
     }
     ul {
-      overflow-y: scroll;
+      // // overflow-y: scroll;
       .subHeader {
         font-size: 1.2em;
+        padding-bottom: 0px;
       }
       .text {
         list-style: none;
-        padding: 7px 0;
+        padding: 5px 0;
         margin-left: 4%;
         text-align: left;
         width: 80%;
@@ -115,14 +116,15 @@
     }
     .approach {
       font-family: $copy-font-family;
-      overflow-y: scroll;
+      // // overflow-y: scroll;
       @include respond-to(phone) {
-        overflow-y: scroll;
+        // // overflow-y: scroll;
         padding-left: 0;
         height: 100%;
       }
       .subHeader {
         font-size: 1em;
+        padding-bottom: 0;
         @include respond-to(phone) {
           width: 100%;
           font-size: 0.9em;
@@ -141,20 +143,23 @@
       }
     }
   }
-  // .approach {
-  //   @include respond-to(phone) {
-  //     padding-left: 0;
-  //     height: 100%;
-  //   }
-  //   .subHeader {
-  //     font-size: 1.2em;
-  //     @include respond-to(phone) {
-  //       width: 100%;
-  //       font-size: 1em;
-  //       margin-left: 0;
-  //     }
-  //   }
-  // }
+  .approach {
+    @include respond-to(phone) {
+      padding-left: 0;
+      height: 100%;
+    }
+    .subHeader {
+      font-size: 1.2em;
+      @include respond-to(phone) {
+        width: 100%;
+        font-size: 1em;
+        margin-left: 0;
+      }
+    }
+    .text {
+      padding-bottom: 5px;
+    }
+  }
 
   .text {
     list-style: none;
@@ -196,7 +201,7 @@
   .text,
   .subHeader {
     list-style: none;
-    padding: 10px 0 0 0;
+    padding: 5px 0 0 0;
     margin-left: -3.4%;
     text-align: left;
     font-size: 1em;
@@ -212,7 +217,7 @@
     color: $cayorRed;
     width: 90%;
     font-size: 1.2em;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     @include respond-to(phone) {
       margin-top: 10px;
       margin-left: -5%;

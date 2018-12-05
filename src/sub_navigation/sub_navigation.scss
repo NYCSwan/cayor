@@ -24,6 +24,7 @@
     list-style: none;
     padding-inline-start: 0;
     float: right;
+    align-items: flex-start;
     @include respond-to(phone) {
       text-align: fit-content;
       width: 85%;
@@ -31,7 +32,6 @@
     }
     @include respond-to(tablets) {
       margin-top: 20%;
-      align-items: flex-start;
     }
     .hideIcon {
       display: none;
@@ -48,7 +48,7 @@
     .top {
       list-style: none;
       display: block;
-      align-self: flex-end;
+      align-self: flex-start;
       color: $primaryBlue;
       font-weight: 700;
       width: fit-content;
@@ -57,16 +57,16 @@
       flex-grow: 1;
       @include respond-to(phone) {
         font-size: 0.9em;
-        align-self: flex-start;
+        // align-self: flex-start;
         padding-bottom: 5px;
       }
       @include respond-to(large-screen) {
-        align-self: flex-start;
+        // align-self: flex-start;
         margin-top: 0;
       }
-      @include respond-to(tablets) {
-        align-self: flex-start;
-      }
+      // @include respond-to(tablets) {
+      //   align-self: flex-start;
+      // }
       &.active {
         font-weight: bolder;
         margin-left: -4%;
