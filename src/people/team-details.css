@@ -122,24 +122,24 @@
       padding-left: 0; }
       .TeamDetails.fade.show .main .container .row {
         width: 90%;
-        height: 33%;
+        height: 36%;
         margin: 0;
         border: none; }
         .TeamDetails.fade.show .main .container .row.offset {
           background-color: #9b1d1f;
-          right: 0;
+          height: 20%;
           justify-content: center; }
           .TeamDetails.fade.show .main .container .row.offset .colorContainer:first {
             margin-left: 50%; }
           .TeamDetails.fade.show .main .container .row.offset .colorContainer.Our.Team {
-            padding-top: 10%; }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center; }
             .TeamDetails.fade.show .main .container .row.offset .colorContainer.Our.Team .header {
-              justify-content: center;
               font-family: "Open Sans", sans-serif;
               color: #9b1d1f;
-              align-items: center;
               height: auto;
-              align-content: center;
               text-align: left;
               width: auto;
               z-index: 1; }

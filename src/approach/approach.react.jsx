@@ -7,11 +7,11 @@ import TextTableContainer from '../layout/text-table-container.react';
 import Footer from '../layout/footer.react';
 import Navigation from '../navigation/navigation.react';
 import RegionDetails from './TargetRegionDetails.react';
-import Agribusiness from '../media/agribusiness.jpg';
+import Agribusiness from '../media/agribus.jpg';
 import Manufacturing from '../media/manufacturing.jpg';
-import Infrastructure from '../media/delicatessen.jpg';
+import Infrastructure from '../media/infrastructure.jpg';
 import SectorsContainer from './sectors_container.react';
-import FinTech from '../media/banking.jpg';
+import FinTech from '../media/fin.jpg';
 import './approach.css';
 
 class Approach extends Component {

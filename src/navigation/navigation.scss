@@ -152,14 +152,14 @@
               font-weight: bold;
               color: inherit;
               order: 1;
-              height: 60%;
+              height: 100%;
               @include respond-to(large-screen) {
                 height: 53%;
                 align-self: flex-start;
                 margin-top: 0;
               }
               &.selected {
-                height: 60%;
+                height: 100%;
                 font-size: 1.1em;
                 // align-self: center;
                 border-bottom: 3px solid $cayorRed;
@@ -169,10 +169,11 @@
                 }
               }
               &:hover {
+                height: 100%;
                 border-bottom: 3px solid $cayorRed;
                 font-weight: 700;
                 text-decoration: none;
-                color: $cayorRed;
+                color: $white;
               }
             }
           }

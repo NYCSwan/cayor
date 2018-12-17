@@ -1,10 +1,10 @@
 @import '../_variables';
 @import '../_mixins';
 
-$class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
+$class-color-list: (blue, $cayorRed),  (blue2, $primaryBlue),
    (blue3, $primaryBlue),  (red, $cayorRed),  (red2, $cayorRed),
    (red3, $cayorRed),  (grey, $accentGrey),  (grey2, $accentGrey),
-   (grey3, $accentGrey),  (Team, $white);
+   (grey3, $cayorRed),  (Team, $white);
 
 .bioContainer {
   margin: 0;
@@ -41,36 +41,50 @@ $class-color-list: (blue, $primaryBlue),  (blue2, $primaryBlue),
       }
     }
     .title {
-      background-color: $greySemiTransparent;
+      display: block;
       text-align: center;
+      opacity: 0;
       &.card-img-overlay {
-        height: 25%;
+        height: 100%;
         padding: 0;
+        display: flex;
         font-size: 1.2em;
         line-height: 2em;
         font-weight: lighter;
         font-family: $copy-font-family;
-        bottom: 0;
-        top: 75%;
-
+        align-content: flex-end;
+        align-items: flex-end;
         .card-body {
-          height: 100%;
+          bottom: 0;
+          background-color: $greySemiTransparent;
+          height: 30%;
           padding: 0;
+          display: flex;
+          // position: fixed;
+          // top: 70%;
+          justify-content: space-around;
+          align-items: center;
+          // align-content: flex-end;
+          flex-direction: column;
           .card-title {
+            top: 75%;
+            bottom: 0;
             color: $cayorRed;
             font-size: 0.9em;
             line-height: 1.1em;
             margin-top: 5px;
+            letter-spacing: 1px;
           }
           .card-subtitle {
             font-size: 0.7em;
+            letter-spacing: 0.5px;
             color: $accentGrey;
             font-family: $open-sans-font-family;
           }
         }
       }
       &:hover {
-        display: inline;
+        opacity: 1;
       }
     }
   }

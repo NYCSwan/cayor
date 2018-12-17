@@ -27,9 +27,9 @@ class Navigation extends Component {
     accraContactDetails: [
       {
         location: 'Accra, Ghana',
-        street_address: 'tbd',
-        street_address2: 'tbd',
-        city: 'tbd',
+        street_address: '41 Tafawa Balawa St.',
+        street_address2: 'North Ridge',
+        city: 'Accra',
         phone: '+',
         imageUrl: Accra,
         imageAlt:
