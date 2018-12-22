@@ -20,12 +20,15 @@ class TeamDetails extends Component {
   }
 
   componentDidMount() {
-    const { teamDetails } = this.props;
+    const { teamDetails, closeDetails } = this.props;
 
     const teamDetailsNoColors = filter(teamDetails, detail => {
       return detail.position !== undefined;
     });
     this.setState({ teamDetailsNoColors });
+    if (closeDetails) {
+      this.setState({ isOpen: false });
+    }
   }
 
   shouldComponentUpdate(nextState, nextProps) {
@@ -36,7 +39,8 @@ class TeamDetails extends Component {
     console.log('handle person click');
     // const { teamDetails } = this.props;
     const { teamDetailsNoColors } = this.state;
-    const currentPerson = e.target.textContent; //return.key;
+    const currentPerson = e.target.textContent.toLowerCase(); //return.key;
+    let index;
     e.preventDefault();
 
     if (
@@ -48,36 +52,47 @@ class TeamDetails extends Component {
     ) {
       this.setState({ isOpen: false });
       return;
-    } else if (
-      currentPerson.includes('managing partner') ||
-      currentPerson.includes('vice president') ||
-      currentPerson.includes('principal')
-    ) {
-      const idx = Number(
-        findKey(teamDetailsNoColors, details =>
-          e.target.previousElementSibling.innerText
-            .toUpperCase()
-            .includes(details.name.toUpperCase())
-        )
-      );
-
+    } else if (currentPerson.includes('dafe')) {
       this.setState({
         isOpen: true,
-        idx,
-        currentPerson: teamDetailsNoColors[idx].name,
+        idx: 1,
+        currentPerson: teamDetailsNoColors[1].name,
       });
-    } else {
-      const idx = Number(
-        findKey(teamDetailsNoColors, details =>
-          currentPerson.toUpperCase().includes(details.name.toUpperCase())
-        )
-      );
-      this.setState({ isOpen: true, idx, currentPerson });
-    }
-  };
+      this.props.handleBioClick();
+    } else if (currentPerson.includes('kofi')) {
+      this.setState({
+        isOpen: true,
+        idx: 3,
+        currentPerson: teamDetailsNoColors[3].name,
+      });
 
-  handleClose = () => {
-    this.setState({ isOpen: false });
+      this.props.handleBioClick();
+    } else if (currentPerson.includes('fungai')) {
+      this.setState({
+        isOpen: true,
+        idx: 0,
+        currentPerson: teamDetailsNoColors[0].name,
+      });
+
+      this.props.handleBioClick();
+      // } else if (currentPerson.includes('yannick')) {
+      //
+      //   this.setState({
+      //     isOpen: true,
+      //     idx: 3,
+      //     currentPerson: teamDetailsNoColors[3].name,
+      //   });
+
+      this.props.handleBioClick();
+    } else {
+      this.setState({
+        isOpen: true,
+        idx: 2,
+        currentPerson: teamDetailsNoColors[2].name,
+      });
+
+      this.props.handleBioClick();
+    }
   };
 
   handleNextClick = e => {
@@ -215,6 +230,7 @@ class TeamDetails extends Component {
       details => currentPerson.toUpperCase() === details.name.toUpperCase()
     );
     const key = findKey(personDetails);
+
     return (
       <PersonDetails
         personDetails={personDetails[key]}
@@ -225,10 +241,12 @@ class TeamDetails extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { fadeIn } = this.props;
+    const { fadeIn, closeDetails } = this.props;
     return (
       <Fade in={fadeIn} key={'teamPage'} className="TeamDetails">
-        {isOpen ? this.renderDetails() : this.renderBios()}
+        {isOpen === true && closeDetails === false
+          ? this.renderDetails()
+          : this.renderBios()}
       </Fade>
     );
   }

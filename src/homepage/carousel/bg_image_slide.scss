@@ -38,13 +38,15 @@
           width: 150px;
           position: absolute;
           left: 45%;
+          letter-spacing: 2px;
           height: auto;
-          top: 55%;
+          top: 52%;
           z-index: 500;
           color: $cayorRed;
           text-shadow: 0px 0px 1px $cayorRedShaddow, -1px -1px $cayorRedShaddow,
             1px 1px $white;
-          font-weight: bold;
+          font-family: $open-sans-font-family;
+          // font-weight: bold;
           background-color: $backgroundOverlayTransparent;
           line-height: 2em;
           @include respond-to(phone) {
@@ -53,9 +55,11 @@
           }
           &.Slide2 {
             background-color: $transparent;
+            letter-spacing: 3px;
           }
           &.Slide3 {
-            background-color: #00142861;
+            // background-color: $backgroundOverlayTransparent;
+            letter-spacing: 3px;
           }
         }
         &.active {

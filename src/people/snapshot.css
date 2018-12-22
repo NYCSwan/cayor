@@ -27,38 +27,50 @@
         /* iPads (portrait and landscape) ----------- */
         /* kindle fire (portrait and landscape) ----------- */ }
     .bioContainer .bio .title {
-      background-color: #d5d5d599;
-      text-align: center; }
+      display: block;
+      text-align: center;
+      opacity: 0; }
       .bioContainer .bio .title.card-img-overlay {
-        height: 25%;
+        height: 100%;
         padding: 0;
+        display: flex;
         font-size: 1.2em;
         line-height: 2em;
         font-weight: lighter;
         font-family: "Josefin Sans", sans-serif;
-        bottom: 0;
-        top: 75%; }
+        align-content: flex-end;
+        align-items: flex-end; }
         .bioContainer .bio .title.card-img-overlay .card-body {
-          height: 100%;
-          padding: 0; }
+          bottom: 0;
+          background-color: #d5d5d599;
+          height: 30%;
+          padding: 0;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column; }
           .bioContainer .bio .title.card-img-overlay .card-body .card-title {
+            top: 75%;
+            bottom: 0;
             color: #9b1d1f;
             font-size: 0.9em;
             line-height: 1.1em;
-            margin-top: 5px; }
+            margin-top: 5px;
+            letter-spacing: 1px; }
           .bioContainer .bio .title.card-img-overlay .card-body .card-subtitle {
             font-size: 0.7em;
+            letter-spacing: 0.5px;
             color: #484848;
             font-family: "Open Sans", sans-serif; }
       .bioContainer .bio .title:hover {
-        display: inline; }
+        opacity: 1; }
 
 .colorContainer {
   margin: 0;
   height: 100%;
   padding: 0; }
   .colorContainer.blue {
-    background-color: #113a6e; }
+    background-color: #9b1d1f; }
   .colorContainer.blue2 {
     background-color: #113a6e; }
   .colorContainer.blue3 {
@@ -74,6 +86,6 @@
   .colorContainer.grey2 {
     background-color: #484848; }
   .colorContainer.grey3 {
-    background-color: #484848; }
+    background-color: #9b1d1f; }
   .colorContainer.Team {
     background-color: #ffffff; }

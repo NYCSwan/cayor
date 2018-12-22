@@ -25,7 +25,6 @@ const ContactForm = props => (
       {props.contactDetails.map(detail => {
         return (
           <Fade in={props.fadeIn} key={detail.location} className="contactBody">
-            <h3>{detail.location.toUpperCase()}</h3>
             <img src={detail.imageUrl} alt={detail.imageAlt} />
             <aside className="address">
               <h4>
@@ -33,10 +32,11 @@ const ContactForm = props => (
               </h4>
               <h4 className="right">{detail.street_address2}</h4>
               <h4 className="right">{detail.city}</h4>
-              <h4>
+              <h4 className="phone">
                 <strong>Phone:</strong> {detail.phone}
               </h4>
             </aside>
+            <h3>{detail.location.toUpperCase()}</h3>
           </Fade>
         );
       })}

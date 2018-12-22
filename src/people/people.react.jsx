@@ -186,6 +186,7 @@ class People extends Component {
       currentDetailIdx: index,
       closeDetails: true,
     });
+    // }
   };
 
   handleButtonClick = e => {
@@ -206,6 +207,10 @@ class People extends Component {
         currentDetailIdx: maxIndex,
       });
     }
+  };
+
+  handleBioClick = () => {
+    this.setState({ closeDetails: false });
   };
 
   renderDetails() {
@@ -246,6 +251,7 @@ class People extends Component {
           teamDetails={teamDetails}
           pageDetails={teamText}
           closeDetails={closeDetails}
+          handleBioClick={this.handleBioClick}
         />
       );
     }
