@@ -4,7 +4,7 @@ import './homepage.css';
 import Navigation from '../navigation/navigation.react';
 import Slide1 from '../media/slide1Cropped.jpeg';
 import Slide2 from '../media/anastasiaCropped.jpeg';
-import Slide3 from '../media/slide3.jpeg';
+import Slide3 from '../media/joberg.jpg';
 import Slide1Mobile from '../media/slide1Mobile.jpeg';
 import Slide2Mobile from '../media/slide2Mobile.jpeg';
 import Slide3Mobile from '../media/slide3Mobile.jpeg';
