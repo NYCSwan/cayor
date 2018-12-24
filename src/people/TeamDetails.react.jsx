@@ -40,7 +40,7 @@ class TeamDetails extends Component {
     // const { teamDetails } = this.props;
     const { teamDetailsNoColors } = this.state;
     const currentPerson = e.target.textContent.toLowerCase(); //return.key;
-    let index;
+    // let index;
     e.preventDefault();
 
     if (
@@ -73,15 +73,6 @@ class TeamDetails extends Component {
         idx: 0,
         currentPerson: teamDetailsNoColors[0].name,
       });
-
-      this.props.handleBioClick();
-      // } else if (currentPerson.includes('yannick')) {
-      //
-      //   this.setState({
-      //     isOpen: true,
-      //     idx: 3,
-      //     currentPerson: teamDetailsNoColors[3].name,
-      //   });
 
       this.props.handleBioClick();
     } else {
