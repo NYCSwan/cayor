@@ -19,9 +19,7 @@
         max-height: 100vh;
         max-width: 100%;
         width: 100%;
-        height: 100%;
-        /* iPhone 4 ----------- */
-        /* iphoneX----------- */ }
+        height: 100%; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .carousel.slide .carousel-inner .carousel-item {
             min-height: 440px;
@@ -52,8 +50,7 @@
           text-shadow: 0px 0px 1px #470c0d, -1px -1px #470c0d, 1px 1px #ffffff;
           font-family: "Open Sans", sans-serif;
           background-color: #383a3e48;
-          line-height: 2em;
-          /* iPhone 4 ----------- */ }
+          line-height: 2em; }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .carousel.slide .carousel-inner .carousel-item .link {
               top: 70%;
@@ -80,8 +77,6 @@
               align-items: center;
               align-content: center;
               height: 40%;
-              /* iPhone 4 ----------- */
-              /* iphoneX----------- */
               /* iPads (portrait and landscape) ----------- */
               /* kindle fire (portrait and landscape) ----------- */ }
               @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -114,8 +109,6 @@
                 color: #ffffff;
                 top: 20%;
                 z-index: 100;
-                /* iPhone 4 ----------- */
-                /* iphoneX----------- */
                 /* iPads (portrait and landscape) ----------- */
                 /* kindle fire (portrait and landscape) ----------- */ }
                 @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -151,8 +144,7 @@
                   font-weight: lighter;
                   width: 75%;
                   text-align: center;
-                  margin-bottom: 0;
-                  /* iPhone 4 ----------- */ }
+                  margin-bottom: 0; }
                   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                     .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block h3 {
                       font-size: 28px;
@@ -166,8 +158,7 @@
                   font-size: 1.1em;
                   font-weight: 400;
                   width: 70%;
-                  margin: 30px auto;
-                  /* iPhone 4 ----------- */ }
+                  margin: 30px auto; }
                   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                     .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
                       font-size: 14px;
@@ -192,8 +183,7 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
         opacity: 1;
         height: 40px;
-        width: 40px;
-        /* iPhone 4 ----------- */ }
+        width: 40px; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .carousel.slide .carousel-control-next .carousel-control-next-icon {
             width: 30px;
@@ -207,8 +197,7 @@
       .carousel.slide .carousel-control-prev .carousel-control-prev-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
         height: 40px;
-        width: 40px;
-        /* iPhone 4 ----------- */ }
+        width: 40px; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .carousel.slide .carousel-control-prev .carousel-control-prev-icon {
             width: 30px;

@@ -14,7 +14,6 @@
     background-position: center top;
     background-repeat: no-repeat;
     border-bottom: 1px solid #696969;
-    /* iPhone 4 ----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -48,7 +47,6 @@
   .header.homepage {
     height: 120px;
     z-index: 1000;
-    /* iPhone 4 ----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -68,7 +66,6 @@
     display: flex;
     margin-left: 0;
     z-index: 1000;
-    /* iPhone 4 ----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -90,7 +87,6 @@
       width: 150px;
       height: auto;
       padding-top: 2px;
-      /* iPhone 4 ----------- */
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -130,7 +126,6 @@
         z-index: 100;
         height: 100%;
         padding-right: 2%;
-        /* iPhone 4 ----------- */
         /* iPads (portrait and landscape) ----------- */
         /* kindle fire (portrait and landscape) ----------- */ }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -161,7 +156,6 @@
           font-weight: 400;
           height: 100%;
           z-index: 1000;
-          /* iPhone 4 ----------- */
           /* iPads (portrait and landscape) ----------- */
           /* kindle fire (portrait and landscape) ----------- */ }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -213,8 +207,6 @@
           align-items: center;
           align-content: center;
           margin-right: 4%;
-          /* iPhone 4 ----------- */
-          /* iphoneX----------- */
           /* iPads (portrait and landscape) ----------- */
           /* kindle fire (portrait and landscape) ----------- */
           /* Large screens ----------- */ }
@@ -276,7 +268,6 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            /* iPhone 4 ----------- */
             /* iPads (portrait and landscape) ----------- */
             /* kindle fire (portrait and landscape) ----------- */
             /* Large screens ----------- */ }
@@ -318,7 +309,6 @@
               font-size: 0.8em;
               align-self: center;
               margin-bottom: 0;
-              /* iPhone 4 ----------- */
               /* iPads (portrait and landscape) ----------- */
               /* kindle fire (portrait and landscape) ----------- */
               /* Large screens ----------- */ }
@@ -349,7 +339,6 @@
                   margin-top: 0; } }
   .header .dropdown {
     display: none;
-    /* iPhone 4 ----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -369,7 +358,6 @@
       .header .dropdown {
         display: block; } }
     .header .dropdown.show {
-      /* iPhone 4 ----------- */
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -385,7 +373,6 @@
         .header .dropdown.show {
           overflow-y: visible; } }
       .header .dropdown.show .dropdown-menu.show {
-        /* iPhone 4 ----------- */
         /* iPads (portrait and landscape) ----------- */
         /* kindle fire (portrait and landscape) ----------- */ }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -411,7 +398,6 @@
           .header .dropdown.show .dropdown-menu.show {
             overflow-y: visible; } }
     .header .dropdown.nav-item {
-      /* iPhone 4 ----------- */
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {

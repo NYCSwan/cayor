@@ -14,7 +14,6 @@
   .footer .right {
     margin-right: 1%; }
 
-/* iPhone 4 ----------- */
 @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .footer {
     height: 20px;

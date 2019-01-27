@@ -5,8 +5,7 @@
   display: inline-block;
   width: 25%;
   border-right: 1px solid #d5d5d5;
-  background-color: #d5d5d561;
-  /* iPhone 4 ----------- */ }
+  background-color: #d5d5d561; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .sub_navigation {
       margin-left: 0;
@@ -27,7 +26,6 @@
     padding-inline-start: 0;
     float: right;
     align-items: flex-start;
-    /* iPhone 4 ----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -50,8 +48,7 @@
       display: none; }
     .sub_navigation .list .active {
       color: #9b1d1f;
-      line-height: normal;
-      /* iPhone 4 ----------- */ }
+      line-height: normal; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .active {
           width: 90%;
@@ -70,7 +67,6 @@
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
-      /* iPhone 4 ----------- */
       /* Large screens ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .top {
@@ -87,8 +83,7 @@
         font-weight: bolder;
         margin-left: -4%;
         width: fit-content;
-        word-wrap: normal;
-        /* iPhone 4 ----------- */ }
+        word-wrap: normal; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .sub_navigation .list .top.active {
             margin-left: -5%;
@@ -116,8 +111,6 @@
       -moz-text-align-last: left;
       flex-grow: 1;
       display: block;
-      /* iPhone 4 ----------- */
-      /* iphoneX----------- */
       /* Large screens ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .sub {

@@ -6,8 +6,7 @@
     background-color: #113a6e;
     color: #ffffff;
     align-self: flex-end;
-    display: inline;
-    /* iPhone 4 ----------- */ }
+    display: inline; }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .button.more {
         display: none; } }

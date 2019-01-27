@@ -4,8 +4,7 @@
   width: 90%;
   display: inline-block;
   padding-right: 5%;
-  color: #696969;
-  /* iPhone 4 ----------- */ }
+  color: #696969; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .text-table {
       overflow: auto; } }
@@ -24,8 +23,7 @@
       flex-flow: row;
       justify-content: flex-start;
       align-content: center;
-      height: 125px;
-      /* iPhone 4 ----------- */ }
+      height: 125px; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .text-table.bullet .headerContainer {
           height: 150px;
@@ -36,8 +34,7 @@
           width: 100%; } }
       .text-table.bullet .headerContainer .headerImg {
         width: 90px;
-        height: 90px;
-        /* iPhone 4 ----------- */ }
+        height: 90px; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .text-table.bullet .headerContainer .headerImg {
             display: none; } }
@@ -51,9 +48,7 @@
         font-family: "Open Sans", sans-serif;
         color: #113a6e;
         font-size: 1.75em;
-        height: auto;
-        /* iPhone 4 ----------- */
-        /* iphoneX----------- */ }
+        height: auto; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .text-table.bullet .headerContainer h4 {
             font-size: 1em;
@@ -92,8 +87,7 @@
       text-align: left;
       width: 80%;
       font-size: 1em;
-      flex-grow: 1;
-      /* iPhone 4 ----------- */ }
+      flex-grow: 1; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .text-table.bullet ul .text {
           font-size: 0.8em; } }
@@ -109,8 +103,6 @@
     height: 100%; }
     .text-table.other .headerContainer h4 {
       font-size: 1.75em;
-      /* iPhone 4 ----------- */
-      /* iphoneX----------- */
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -137,23 +129,20 @@
         .text-table.other .headerContainer h4 {
           width: 100%;
           font-size: 1.2em; } }
-    .text-table.other ul {
-      /* iPhone 4 ----------- */ }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .text-table.other ul {
-          padding-left: 20px; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .text-table.other ul {
-          padding-left: 20px; } }
-      .text-table.other ul .subHeader {
-        width: 100%;
-        font-size: 1.2em; }
-      .text-table.other ul .list-group-item {
-        padding-top: 5px;
-        margin-left: 4%; }
+    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .text-table.other ul {
+        padding-left: 20px; } }
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      .text-table.other ul {
+        padding-left: 20px; } }
+    .text-table.other ul .subHeader {
+      width: 100%;
+      font-size: 1.2em; }
+    .text-table.other ul .list-group-item {
+      padding-top: 5px;
+      margin-left: 4%; }
     .text-table.other .approach {
-      font-family: "Josefin Sans", sans-serif;
-      /* iPhone 4 ----------- */ }
+      font-family: "Josefin Sans", sans-serif; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .text-table.other .approach {
           padding-left: 0;
@@ -164,9 +153,7 @@
           height: 100%; } }
       .text-table.other .approach .subHeader {
         font-size: 1em;
-        padding-bottom: 0;
-        /* iPhone 4 ----------- */
-        /* iphoneX----------- */ }
+        padding-bottom: 0; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .text-table.other .approach .subHeader {
             width: 100%;
@@ -187,40 +174,36 @@
             width: 100%;
             font-size: 0.9em;
             margin-left: 0; } }
-  .text-table .approach {
-    /* iPhone 4 ----------- */ }
+  @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .text-table .approach {
+      padding-left: 0;
+      height: 100%; } }
+  @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .text-table .approach {
+      padding-left: 0;
+      height: 100%; } }
+  .text-table .approach .subHeader {
+    font-size: 1.2em; }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .text-table .approach {
-        padding-left: 0;
-        height: 100%; } }
+      .text-table .approach .subHeader {
+        width: 100%;
+        font-size: 1em;
+        margin-left: 4%; } }
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .text-table .approach {
-        padding-left: 0;
-        height: 100%; } }
-    .text-table .approach .subHeader {
-      font-size: 1.2em;
-      /* iPhone 4 ----------- */ }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 4%; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .text-table .approach .subHeader {
-          width: 100%;
-          font-size: 1em;
-          margin-left: 4%; } }
-    .text-table .approach .text {
-      padding-bottom: 5px;
-      margin-left: 4%; }
+      .text-table .approach .subHeader {
+        width: 100%;
+        font-size: 1em;
+        margin-left: 4%; } }
+  .text-table .approach .text {
+    padding-bottom: 5px;
+    margin-left: 4%; }
   .text-table .text {
     list-style: none;
     padding: 7px 0;
     text-align: left;
     width: 80%;
     margin-left: 4%;
-    font-size: 1.2em;
-    /* iPhone 4 ----------- */ }
+    font-size: 1.2em; }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .text-table .text {
         font-size: 0.8em;
@@ -232,8 +215,7 @@
         margin-left: 3%;
         width: 100%; } }
     .text-table .text.bullet {
-      margin-left: 0;
-      /* iPhone 4 ----------- */ }
+      margin-left: 0; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .text-table .text.bullet {
           margin-left: 3%; } }
@@ -247,8 +229,7 @@
     font-family: "Open Sans", sans-serif;
     color: #113a6e;
     padding-bottom: 3%;
-    font-weight: bold;
-    /* iPhone 4 ----------- */ }
+    font-weight: bold; }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .text-table .headerContainer h4 {
         color: #113a6e;
@@ -265,8 +246,7 @@
     padding: 5px 0 0 0;
     margin-left: 4%;
     text-align: left;
-    font-size: 1em;
-    /* iPhone 4 ----------- */ }
+    font-size: 1em; }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .text-table .text,
       .text-table .subHeader {
@@ -285,8 +265,7 @@
     color: #9b1d1f;
     width: 90%;
     font-size: 1.2em;
-    padding-bottom: 10px;
-    /* iPhone 4 ----------- */ }
+    padding-bottom: 10px; }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .text-table .subHeader {
         margin-top: 10px;

@@ -8,7 +8,6 @@
   height: 70%;
   align-self: flex-start;
   margin-top: 3%;
-  /* iPhone 4 ----------- */
   /* iPads (portrait and landscape) ----------- */
   /* kindle fire (portrait and landscape) ----------- */ }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -55,8 +54,6 @@
     align-self: flex-start;
     justify-content: center;
     width: 100%;
-    /* iPhone 4 ----------- */
-    /* iphoneX----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -97,8 +94,6 @@
     align-self: flex-start;
     font-size: 1.1em;
     line-height: normal;
-    /* iPhone 4 ----------- */
-    /* iphoneX----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -150,8 +145,6 @@
     align-self: flex-start;
     font-size: 1.2em;
     line-height: normal;
-    /* iPhone 4 ----------- */
-    /* iphoneX----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -191,8 +184,6 @@
     .regionDetails .east-africa .text-table .headerContainer h4 {
       font-family: "Open Sans", sans-serif;
       font-size: 1.2em;
-      /* iPhone 4 ----------- */
-      /* iphoneX----------- */
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
   .regionDetails .south-africa {
@@ -204,8 +195,6 @@
     align-self: flex-end;
     font-size: 1em;
     line-height: normal;
-    /* iPhone 4 ----------- */
-    /* iphoneX----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -245,15 +234,11 @@
     .regionDetails .south-africa .text-table .headerContainer h4 {
       font-family: "Open Sans", sans-serif;
       font-size: 1.2em;
-      /* iPhone 4 ----------- */
-      /* iphoneX----------- */
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
     .regionDetails .south-africa .text-table .text {
       font-size: 1.2em;
       line-height: normal;
-      /* iPhone 4 ----------- */
-      /* iphoneX----------- */
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {

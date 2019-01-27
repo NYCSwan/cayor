@@ -5,8 +5,7 @@
   height: 20px;
   position: relative;
   width: 20px;
-  display: inline-block;
-  /* iPhone 4 ----------- */ }
+  display: inline-block; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .clock {
       height: 15px;
