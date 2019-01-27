@@ -24,6 +24,7 @@
   .TeamDetails.fade.show .main {
     width: 100%;
     /* iPhone 4 ----------- */
+    /* iphoneX----------- */
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -43,6 +44,7 @@
         margin: 0;
         border: none;
         /* iPhone 4 ----------- */
+        /* iphoneX----------- */
         /* iPads (portrait and landscape) ----------- */
         /* kindle fire (portrait and landscape) ----------- */ }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -51,11 +53,18 @@
         @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
           .TeamDetails.fade.show .main .container .row {
             width: 100%; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          .TeamDetails.fade.show .main .container .row {
+            width: 100%; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+          .TeamDetails.fade.show .main .container .row {
+            width: 100%; } }
         .TeamDetails.fade.show .main .container .row.offset {
           background-color: #9b1d1f;
           height: 20%;
           justify-content: center;
           /* iPhone 4 ----------- */
+          /* iphoneX----------- */
           /* iPads (portrait and landscape) ----------- */
           /* kindle fire (portrait and landscape) ----------- */ }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -64,6 +73,12 @@
           @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
             .TeamDetails.fade.show .main .container .row.offset {
               height: 12%; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+            .TeamDetails.fade.show .main .container .row.offset {
+              height: 15%; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+            .TeamDetails.fade.show .main .container .row.offset {
+              height: 15%; } }
           @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
             .TeamDetails.fade.show .main .container .row.offset {
               height: 15%; } }

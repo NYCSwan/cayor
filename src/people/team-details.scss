@@ -30,7 +30,7 @@
     @include respond-to(phone) {
       height: 70%;
     }
-    @include respond-to(large-phone) {
+    @include respond-to(phone-long) {
       // height: 90%;
     }
     @include respond-to(tablets) {
@@ -50,7 +50,7 @@
           width: 100%;
           // height: 100%;
         }
-        @include respond-to(large-phone) {
+        @include respond-to(phone-long) {
           width: 100%;
           // height: 100%;
         }
@@ -65,7 +65,7 @@
           @include respond-to(phone) {
             height: 12%;
           }
-          @include respond-to(large-phone) {
+          @include respond-to(phone-long) {
             height: 15%;
           }
           @include respond-to(tablets) {
@@ -84,7 +84,7 @@
               // @include respond-to(phone) {
               //   flex-flow: column wrap;
               // }
-              // @include respond-to(large-phone) {
+              // @include respond-to(phone-long) {
               //   flex-flow: column wrap;
               // }
               // @include respond-to(tablets) {
