@@ -1,8 +1,8 @@
-@import '../_mixins';
-@import '../_variables';
+@import "../_mixins";
+@import "../_variables";
 
 .regionDetails {
-  background: url('../media/map2.jpg') no-repeat center center;
+  background: url("../media/map2.jpg") no-repeat center center;
   background-size: auto 75%;
   display: flex;
   flex: row wrap;
@@ -13,33 +13,51 @@
   margin-top: 3%;
 
   @include respond-to(phone) {
-    background-size: auto 30%;
+    background-size: auto 50%;
     justify-content: center;
-    width: 100%;
-    height: auto;
+    width: 70%;
+    height: 70%;
     background-position: unset;
-    background-position-y: 30%;
+    background-position-y: 70%;
     background-position-x: 45%;
   }
   @include respond-to(tablets) {
-    background-position-y: 40%;
-    background-position-x: 45%;
     background-size: auto 50%;
     justify-content: center;
-    height: auto;
+    width: 90%;
+    height: 90%;
+    background-position: unset;
+    background-position-y: 45%;
+    background-position-x: 45%;
   }
   .header {
+    display: flex;
     color: $cayorRed;
     font-size: 1.4em;
     text-align: center;
     align-self: flex-start;
     justify-content: center;
     width: 100%;
+    @include respond-to(phone) {
+      font-size: 1em;
+      letter-spacing: normal;
+      padding: 1%;
+    }
+    @include respond-to(phone-long) {
+      font-size: 1em;
+      letter-spacing: normal;
+      padding: 1%;
+    }
+    @include respond-to(tablets) {
+      font-size: 1.2em;
+      letter-spacing: normal;
+      padding: 3%;
+    }
   }
   .west-africa {
     width: 300px;
     order: 1;
-    position: fixed;
+    position: absolute;
     top: 32%;
     align-self: flex-start;
     font-size: 1.1em;
@@ -48,22 +66,39 @@
       left: 30%;
       width: 100px;
       align-self: flex-start;
-      top: 17%;
+      top: 30%;
+      font-size: 0.8em;
     }
     @include respond-to(phone-long) {
-      top: 17%;
-      left: 23%;
+      top: 30%;
+      left: 30%;
+      font-size: 0.8em;
     }
     @include respond-to(tablets) {
-      top: 20%;
-      left: 30%;
+      top: 30%;
+      left: 25%;
+      font-size: 1em;
     }
     .text-table {
       margin-left: 15%;
       padding-right: 0;
       .headerContainer {
-        font-family: $open-sans-font-family;
-        font-weight: 100;
+        h4 {
+          font-family: $open-sans-font-family;
+          // font-weight: 100;
+          font-size: 1em;
+          // @include respond-to(phone) {
+          //   font-size: 0.8em;
+          //   // font-weight: lighter;
+          // }
+          // @include respond-to(phone-long) {
+          //   font-size: 0.8em;
+          //   // font-weight: lighter;
+          // }
+          // @include respond-to(tablets) {
+          //   font-size: 0.8em;
+          // }
+        }
       }
     }
   }
@@ -77,12 +112,41 @@
     font-size: 1.2em;
     line-height: normal;
     @include respond-to(phone) {
+      right: 3%;
       width: 100px;
-      top: 17%;
-      padding-right: 20px;
+      align-self: flex-start;
+      top: 30%;
+      font-size: 0.8em;
+    }
+    @include respond-to(phone-long) {
+      top: 30%;
+      right: 3%;
+      font-size: 0.8em;
     }
     @include respond-to(tablets) {
-      top: 20%;
+      top: 30%;
+      right: 0;
+      font-size: 1em;
+    }
+    .text-table {
+      .headerContainer {
+        h4 {
+          font-family: $open-sans-font-family;
+          // font-weight: 100;
+          font-size: 1.2em;
+          @include respond-to(phone) {
+            // font-size: 0.8em;
+            // font-weight: lighter;
+          }
+          @include respond-to(phone-long) {
+            // font-size: 0.8em;
+            // font-weight: lighter;
+          }
+          @include respond-to(tablets) {
+            // font-size: 0.8em;
+          }
+        }
+      }
     }
   }
   .south-africa {
@@ -95,15 +159,53 @@
     font-size: 1em;
     line-height: normal;
     @include respond-to(phone) {
-      width: 150px;
-      bottom: 100px;
+      left: 45%;
+      width: 100px;
+      align-self: flex-start;
+      bottom: 10%;
+      font-size: 0.8em;
+    }
+    @include respond-to(phone-long) {
+      bottom: 10%;
+      left: 45%;
+      font-size: 0.8em;
     }
     @include respond-to(tablets) {
-      bottom: 10%;
+      bottom: 8%;
+      left: 40%;
+      font-size: 1em;
     }
-    .text {
-      font-size: 1.2em;
-      line-height: normal;
+    .text-table {
+      .headerContainer {
+        h4 {
+          font-family: $open-sans-font-family;
+          font-size: 1.2em;
+          @include respond-to(phone) {
+            // font-size: 0.8em;
+            // font-weight: lighter;
+          }
+          @include respond-to(phone-long) {
+            // font-size: 0.8em;
+            // font-weight: lighter;
+          }
+          @include respond-to(tablets) {
+            // font-size: 0.8em;
+          }
+        }
+      }
+      .text {
+        font-size: 1.2em;
+        line-height: normal;
+        @include respond-to(phone) {
+          font-size: 0.8em;
+        }
+        @include respond-to(phone-long) {
+          font-size: 0.8em;
+        }
+        @include respond-to(tablets) {
+          font-size: 0.8em;
+        }
+      }
     }
   }
 }

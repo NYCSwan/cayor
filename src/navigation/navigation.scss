@@ -1,5 +1,5 @@
-@import '../_variables';
-@import '../_mixins';
+@import "../_variables";
+@import "../_mixins";
 
 .header {
   width: 100%;
@@ -9,7 +9,7 @@
   justify-content: flex-end;
   align-content: flex-end;
   background-color: $transparent;
-  z-index: 1000;
+  z-index: 100;
 
   &.people,
   &.opportunity,
@@ -22,33 +22,38 @@
     background-repeat: no-repeat;
     border-bottom: 1px solid $primaryGrey;
     @include respond-to(phone) {
+      overflow: visible;
       max-height: 100px;
     }
     @include respond-to(tablets) {
       height: 200px;
+      overflow: visible;
+    }
+    @include respond-to(large-phone) {
+      overflow: visible;
     }
   }
 
   &.people {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-      url('../media/jobrg.jpeg');
+      url("../media/jobrg.jpeg");
     background-size: 100% 100%;
   }
 
   &.opportunity {
-    background: url('../media/opportunity_banner.jpg');
+    background: url("../media/opportunity_banner.jpg");
     background-size: 100% 100%;
   }
 
   &.approach {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)),
-      url('../media/approach_banner.jpg');
+      url("../media/approach_banner.jpg");
     background-size: 100% 100%;
   }
 
   &.esg {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-      url('../media/esg_banner.jpg');
+      url("../media/esg_banner.jpg");
     background-size: 100% 100%;
   }
 
@@ -56,6 +61,15 @@
     height: 120px;
     // color: $white;
     z-index: 1000;
+    @include respond-to(phone) {
+      overflow-y: visible;
+    }
+    @include respond-to(large-phone) {
+      overflow-y: visible;
+    }
+    @include respond-to(tablets) {
+      overflow-y: visible;
+    }
   }
 
   .logo-container {
@@ -64,11 +78,11 @@
     margin-left: 0;
     z-index: 1000;
     @include respond-to(phone) {
-      width: 140px;
+      width: 100px;
       padding-left: 1%;
     }
     @include respond-to(tablets) {
-      width: 150px;
+      width: 100px;
     }
 
     .logo {
@@ -77,8 +91,11 @@
       height: auto;
       padding-top: 2px;
       @include respond-to(phone) {
-        width: 120px;
+        width: 100px;
         padding: 0;
+      }
+      @include respond-to(tablets) {
+        width: 100px;
       }
     }
   }
@@ -104,76 +121,71 @@
         align-content: stretch;
         align-items: stretch;
         color: $white;
-        z-index: 1000;
+        z-index: 100;
         height: 100%;
         padding-right: 2%;
+        @include respond-to(phone) {
+          flex-flow: column-reverse;
+          justify-content: flex-end;
+          padding-right: 0;
+        }
+        @include respond-to(large-phone) {
+          flex-flow: column-reverse;
+          justify-content: space-around;
+        }
+        @include respond-to(tablets) {
+          flex-flow: column-reverse;
+          justify-content: space-around;
+        }
         .nav {
-          width: 30%;
-          margin-right: 2%;
+          width: 35%;
+          // margin-right: 2%;
           display: flex;
           flex-flow: row wrap;
           justify-content: space-around;
+          // align-items: center;
+          align-content: center;
           font-size: 0.8em;
           font-weight: 400;
           height: 100%;
           z-index: 1000;
           @include respond-to(phone) {
-            order: 5;
-            width: 100%;
-            // height: 30px;
-            align-self: flex-end;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: center;
+            display: none;
+          }
+          @include respond-to(large-phone) {
+            display: none;
           }
           @include respond-to(tablets) {
-            width: 40%;
-            height: 100%;
-            align-items: flex-end;
+            display: none;
           }
-          // @include respond-to(large-screen) {
-          //   background-color: 'pink';
-          //   align-items: flex-end;
-          //   height: 100%;
-          // }
           .linkContainer {
             height: 100%;
             display: flex;
-            align-self: flex-end;
-            // @include respond-to(tablets) {
-            // }
-            @include respond-to(large-screen) {
-              // align-self: flex-end;
-              height: 55%;
-            }
-            .link {
-              align-self: flex-end;
+            align-content: flex-end;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            align-items: flex-end;
+            &.nav-item {
               list-style: none;
               font-weight: bold;
-              color: inherit;
               order: 1;
-              height: 100%;
-              @include respond-to(large-screen) {
-                height: 53%;
-                align-self: flex-start;
-                margin-top: 0;
-              }
-              &.selected {
-                height: 100%;
-                font-size: 1.1em;
-                // align-self: center;
-                border-bottom: 3px solid $cayorRed;
-                line-height: 1.3;
-                @include respond-to(phone) {
-                  height: 50%;
-                }
-              }
-              &:hover {
-                height: 100%;
-                border-bottom: 3px solid $cayorRed;
-                font-weight: 700;
-                text-decoration: none;
+              .link {
                 color: $white;
+                height: 55%;
+                align-self: flex-start;
+                padding-top: 0;
+                &.selected {
+                  font-size: 1.1em;
+                  border-bottom: 3px solid $cayorRed;
+                  line-height: 1.3;
+                }
+                &:hover {
+                  height: 60%;
+                  border-bottom: 3px solid $cayorRed;
+                  font-weight: 700;
+                  text-decoration: none;
+                  color: $white;
+                }
               }
             }
           }
@@ -191,15 +203,18 @@
           align-content: center;
           margin-right: 4%;
           @include respond-to(phone) {
-            width: 45%;
-            height: 60%;
-            align-self: center;
-            margin-right: 3%;
+            width: 55%;
+            height: 45%;
+            align-self: flex-end;
+            margin-right: 0;
             order: 1;
           }
           @include respond-to(phone-long) {
-            width: 35%;
-            margin-right: 3%;
+            width: 55%;
+            height: 45%;
+            align-self: flex-end;
+            margin-right: 0;
+            order: 1;
           }
           @include respond-to(tablets) {
             width: 25%;
@@ -268,6 +283,85 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  .dropdown {
+    display: none;
+    @include respond-to(phone) {
+      display: inline;
+      align-self: flex-end;
+      height: auto;
+    }
+    @include respond-to(large-phone) {
+      display: block;
+    }
+    @include respond-to(tablets) {
+      display: block;
+    }
+    &.show {
+      @include respond-to(phone) {
+        overflow-y: visible;
+      }
+      @include respond-to(large-phone) {
+        overflow-y: visible;
+      }
+      @include respond-to(tablets) {
+        overflow-y: visible;
+      }
+
+      .dropdown-menu.show {
+        @include respond-to(phone) {
+          overflow-y: visible;
+          .dropdown-item {
+            font-family: $copy-font-family;
+            font-size: 1em;
+            .nav-link {
+              color: $primaryBlue;
+            }
+          }
+        }
+        @include respond-to(large-phone) {
+          overflow-y: visible;
+        }
+        @include respond-to(tablets) {
+          overflow-y: visible;
+        }
+      }
+    }
+    &.nav-item {
+      @include respond-to(phone) {
+        display: block;
+        align-self: flex-end;
+        width: 25%;
+        height: auto;
+        .btn.btn-secondary {
+          background-color: $transparent;
+          color: $white;
+          border: none;
+        }
+      }
+      @include respond-to(large-phone) {
+        display: block;
+        align-self: flex-end;
+        width: 45%;
+        height: auto;
+        .btn.btn-secondary {
+          background-color: $transparent;
+          color: $white;
+          border: none;
+        }
+      }
+      @include respond-to(tablets) {
+        display: block;
+        align-self: flex-end;
+        width: 60%;
+        height: auto;
+        .btn.btn-secondary {
+          background-color: $transparent;
+          color: $white;
+          border: none;
         }
       }
     }

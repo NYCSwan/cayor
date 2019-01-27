@@ -2,48 +2,15 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /* iPhone 4 ----------- */
-  /* iPhone 5 ----------- */
-  /* iPhone 6 ----------- */
-  /* Samsung Galaxy S3 ----------- */
-  /* Samsung Galaxy S4 ----------- */
-  /* Samsung Galaxy S5 ----------- */ }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* iPhone 4 ----------- */ }
+  @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      overflow: auto;
+      max-height: 90%; } }
+  @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .people {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .people {
-      overflow: auto; } }
+      overflow: auto;
+      max-height: 90%; } }
   .people .sub_navigation {
     width: 20%; }
   .people.slide-enter {

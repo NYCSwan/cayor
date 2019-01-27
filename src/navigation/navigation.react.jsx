@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import { Nav, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faAlignJustify } from '@fortawesome/fontawesome-free-solid';
 
 import Clock from '../clocks/clock.react';
 import WhiteLogo from '../media/grey-white-icon.png';
@@ -36,6 +39,7 @@ class Navigation extends Component {
           "Map of Accra Ghana, Cayor's second Sub-Saharan Africa equity office location",
       },
     ],
+    collapse: false
   };
 
   handleClockClick = e => {
@@ -45,6 +49,10 @@ class Navigation extends Component {
     this.props.handleClockClick(e);
     // this.handleModalToggle();
   };
+
+  toggle = () => {
+    this.setState({ collapse: !this.state.collapse });
+  }
 
   renderContactPopover = () => {
     console.log('renderContactPopover');
@@ -81,11 +89,11 @@ class Navigation extends Component {
   };
 
   render() {
-    const { contactLocation } = this.state;
+    const { contactLocation, collapse } = this.state;
     const { isContactModalOpen } = this.props;
     return (
       <header className={`header ${this.props.headerImg}`}>
-        <NavLink to="/" className="logo-container">
+        <NavLink href="/" className="logo-container">
           <img className="logo" src={WhiteLogo} alt="logo" />
         </NavLink>
 
@@ -98,44 +106,44 @@ class Navigation extends Component {
                   : 'right'
               }
             >
-              <ul className="nav">
-                <li className="linkContainer">
+              <Nav>
+                <NavItem className="linkContainer">
                   <NavLink
-                    to="/people"
+                    href="/people"
                     activeClassName="selected"
                     className="link people"
                   >
                     PEOPLE
                   </NavLink>
-                </li>
-                <li className="linkContainer">
+                </NavItem>
+                <NavItem className="linkContainer">
                   <NavLink
-                    to="/opportunity"
+                    href="/opportunity"
                     activeClassName="selected"
                     className="link opportunity"
                   >
                     OPPORTUNITY
                   </NavLink>
-                </li>
-                <li className="linkContainer">
+                </NavItem>
+                <NavItem className="linkContainer">
                   <NavLink
-                    to="/approach"
+                    href="/approach"
                     activeClassName="selected"
                     className="link approach"
                   >
                     APPROACH
                   </NavLink>
-                </li>
-                <li className="linkContainer">
+                </NavItem>
+                <NavItem className="linkContainer">
                   <NavLink
-                    to="/esg"
+                    href="/esg"
                     activeClassName="selected"
                     className="link esg"
                   >
                     ESG
                   </NavLink>
-                </li>
-              </ul>
+                </NavItem>
+              </Nav>
               <div className="clocks">
                 <div
                   onClick={this.handleClockClick}
@@ -152,6 +160,56 @@ class Navigation extends Component {
                   <h6 className="jbg">JHB</h6>
                 </div>
               </div>
+              <Dropdown nav={true} isOpen={collapse} toggle={this.toggle}>
+              <DropdownToggle>
+              <FontAwesomeIcon
+              className={'menu'}
+              icon={faAlignJustify}
+              size='xl'
+              />
+              </DropdownToggle>
+              <DropdownMenu>
+              <DropdownItem>
+              <NavLink
+              href="/people"
+              activeClassName="selected"
+              className="link people"
+              >
+              PEOPLE
+              </NavLink>
+              </DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>
+              <NavLink
+              href="/opportunity"
+              activeClassName="selected"
+              className="link opportunity"
+              >
+              OPPORTUNITY
+              </NavLink>
+              </DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>
+              <NavLink
+              href="/approach"
+              activeClassName="selected"
+              className="link approach"
+              >
+              APPROACH
+              </NavLink>
+              </DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>
+              <NavLink
+              href="/esg"
+              activeClassName="selected"
+              className="link esg"
+              >
+              ESG
+              </NavLink>
+              </DropdownItem>
+              </DropdownMenu>
+              </Dropdown>
             </div>
             {isContactModalOpen && contactLocation !== ''
               ? this.renderContactPopover()

@@ -2,46 +2,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /* iPhone 4 ----------- */
-  /* iPhone 5 ----------- */
-  /* iPhone 6 ----------- */
-  /* Samsung Galaxy S3 ----------- */
-  /* Samsung Galaxy S4 ----------- */
-  /* Samsung Galaxy S5 ----------- */ }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* iPhone 4 ----------- */ }
+  @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .esg {
       overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .esg {
-      overflow: auto; } }
-  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .esg {
       overflow: auto; } }
   .esg .sub_navigation {
@@ -55,46 +20,11 @@
     .esg .body .text-table-container {
       height: 100%; }
     .esg .body .framework {
-      /* iPhone 4 ----------- */
-      /* iPhone 5 ----------- */
-      /* iPhone 6 ----------- */
-      /* Samsung Galaxy S3 ----------- */
-      /* Samsung Galaxy S4 ----------- */
-      /* Samsung Galaxy S5 ----------- */ }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      /* iPhone 4 ----------- */ }
+      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .esg .body .framework {
           padding-top: 3%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .esg .body .framework {
-          padding-top: 3%; } }
-      @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
         .esg .body .framework {
           padding-top: 3%; } }
       .esg .body .framework .text-table-container {
@@ -103,57 +33,12 @@
         .esg .body .framework .text-table-container .text-table.bullet {
           justify-content: flex-start;
           height: 100%;
-          /* iPhone 4 ----------- */
-          /* iPhone 5 ----------- */
-          /* iPhone 6 ----------- */
-          /* Samsung Galaxy S3 ----------- */
-          /* Samsung Galaxy S4 ----------- */
-          /* Samsung Galaxy S5 ----------- */ }
-          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          /* iPhone 4 ----------- */ }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .esg .body .framework .text-table-container .text-table.bullet {
               justify-content: flex-start;
               width: 100%; } }
-          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-            .esg .body .framework .text-table-container .text-table.bullet {
-              justify-content: flex-start;
-              width: 100%; } }
-          @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
             .esg .body .framework .text-table-container .text-table.bullet {
               justify-content: flex-start;
               width: 100%; } }
@@ -167,57 +52,12 @@
             scroll-behavior: smooth;
             overflow-y: scroll;
             height: 80%;
-            /* iPhone 4 ----------- */
-            /* iPhone 5 ----------- */
-            /* iPhone 6 ----------- */
-            /* Samsung Galaxy S3 ----------- */
-            /* Samsung Galaxy S4 ----------- */
-            /* Samsung Galaxy S5 ----------- */ }
-            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            /* iPhone 4 ----------- */ }
+            @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
               .esg .body .framework .text-table-container .text-table.bullet ul {
                 padding-top: 3%;
                 margin-bottom: 0; } }
-            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-              .esg .body .framework .text-table-container .text-table.bullet ul {
-                padding-top: 3%;
-                margin-bottom: 0; } }
-            @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+            @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
               .esg .body .framework .text-table-container .text-table.bullet ul {
                 padding-top: 3%;
                 margin-bottom: 0; } }
@@ -227,68 +67,13 @@
         height: auto;
         right: 50px;
         bottom: 150px;
-        /* iPhone 4 ----------- */
-        /* iPhone 5 ----------- */
-        /* iPhone 6 ----------- */
-        /* Samsung Galaxy S3 ----------- */
-        /* Samsung Galaxy S4 ----------- */
-        /* Samsung Galaxy S5 ----------- */ }
-        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        /* iPhone 4 ----------- */ }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .esg .body .framework .scrollIcon {
             width: 40px;
             right: 10px;
             bottom: 10px; } }
-        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-          .esg .body .framework .scrollIcon {
-            width: 40px;
-            right: 10px;
-            bottom: 10px; } }
-        @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
           .esg .body .framework .scrollIcon {
             width: 40px;
             right: 10px;

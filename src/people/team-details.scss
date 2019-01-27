@@ -1,5 +1,5 @@
-@import '../_variables';
-@import '../_mixins';
+@import "../_variables";
+@import "../_mixins";
 
 .TeamDetails.fade.show {
   width: 75%;
@@ -8,23 +8,34 @@
   height: 80%;
   // padding-top: 2%;
   @include respond-to(phone) {
-    // height: 100%;
+    height: 70%;
+    width: 80%;
+    // flex-flow: column wrap;
     align-items: flex-start;
     align-content: flex-end;
     padding-left: 0;
   }
   @include respond-to(phone-long) {
-    margin-top: 10%;
+    // margin-top: 10%;
   }
   @include respond-to(tablets) {
     // margin-top: 5%;
-    width: 75%;
-    height: 78%;
+    // width: 75%;
+    // height: 78%;
     // padding-left: 0;
     // justify-content: center;
   }
   .main {
     width: 100%;
+    @include respond-to(phone) {
+      height: 70%;
+    }
+    @include respond-to(large-phone) {
+      // height: 90%;
+    }
+    @include respond-to(tablets) {
+      // height: 90%;
+    }
     .container {
       width: 100%;
       height: 100%;
@@ -35,26 +46,50 @@
         height: 36%;
         margin: 0;
         border: none;
+        @include respond-to(phone) {
+          width: 100%;
+          // height: 100%;
+        }
+        @include respond-to(large-phone) {
+          width: 100%;
+          // height: 100%;
+        }
+        @include respond-to(tablets) {
+          // width: 100%;
+          // height: 100%;
+        }
         &.offset {
           background-color: $cayorRed;
           height: 20%;
-          // background-image: linear-gradient(
-          //   to right,
-          //   $cayorRed,
-          //   $accentGrey,
-          //   $accentGrey
-          // );
-          // right: 0;
           justify-content: center;
+          @include respond-to(phone) {
+            height: 12%;
+          }
+          @include respond-to(large-phone) {
+            height: 15%;
+          }
+          @include respond-to(tablets) {
+            height: 15%;
+          }
           .colorContainer {
             &:first {
               margin-left: 50%;
             }
             &.Our.Team {
               display: flex;
+              flex-flow: row wrap;
               justify-content: center;
               align-items: center;
               align-content: center;
+              // @include respond-to(phone) {
+              //   flex-flow: column wrap;
+              // }
+              // @include respond-to(large-phone) {
+              //   flex-flow: column wrap;
+              // }
+              // @include respond-to(tablets) {
+              //   flex-flow: column wrap;
+              // }
               .header {
                 font-family: $open-sans-font-family;
                 color: $cayorRed;
