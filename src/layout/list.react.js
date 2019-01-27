@@ -1,12 +1,15 @@
 import React from 'react';
 import { ListGroupItem, ListGroup } from 'reactstrap';
+import './list.css';
 
 const List = props => (
-  <ListGroup>
+  <ListGroup className={props.style ? props.style : null}>
     {props.items.map(item => {
       return (
         <ListGroupItem key={item.dKey} className={item.style}>
-          {item.text}
+          {item.style === 'subHeader'
+            ? item.text.toUpperCase()
+            : item.text}
         </ListGroupItem>
       );
     })}

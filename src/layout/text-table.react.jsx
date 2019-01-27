@@ -1,6 +1,6 @@
 import React from 'react';
 import { Fade } from 'reactstrap';
-
+import List from './list.react';
 import './text-table.css';
 
 const TextTable = props => (
@@ -22,17 +22,10 @@ const TextTable = props => (
           <h4>{props.text.header.toUpperCase()}</h4>
         </div>
       ) : null}
-      <ul className={props.location}>
-        {props.text.details.map(detail => {
-          return (
-            <li key={detail.dKey} className={detail.style}>
-              {detail.style === 'subHeader'
-                ? detail.text.toUpperCase()
-                : detail.text}
-            </li>
-          );
-        })}
-      </ul>
+      <List
+        style={props.location}
+        items={props.text.details} />
+
     </div>
   </Fade>
 );

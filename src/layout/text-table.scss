@@ -112,13 +112,16 @@
       .subHeader {
         width: 100%;
         font-size: 1.2em;
+
+      }
+      .list-group-item {
+        padding-top: 5px;
+        margin-left: 4%;
       }
     }
     .approach {
       font-family: $copy-font-family;
-      // // overflow-y: scroll;
       @include respond-to(phone) {
-        // // overflow-y: scroll;
         padding-left: 0;
         height: 100%;
       }
@@ -153,11 +156,12 @@
       @include respond-to(phone) {
         width: 100%;
         font-size: 1em;
-        margin-left: 0;
+        margin-left: 4%;
       }
     }
     .text {
       padding-bottom: 5px;
+      margin-left: 4%;
     }
   }
 
@@ -166,11 +170,11 @@
     padding: 7px 0;
     text-align: left;
     width: 80%;
-    margin-left: -3.4%;
+    margin-left: 4%;
     font-size: 1.2em;
     @include respond-to(phone) {
       font-size: 0.8em;
-      margin-left: -3%;
+      margin-left: 3%;
       width: 100%;
     }
     &.bullet {
@@ -202,7 +206,7 @@
   .subHeader {
     list-style: none;
     padding: 5px 0 0 0;
-    margin-left: -3.4%;
+    margin-left: 4%;
     text-align: left;
     font-size: 1em;
     @include respond-to(phone) {
@@ -220,7 +224,7 @@
     padding-bottom: 10px;
     @include respond-to(phone) {
       margin-top: 10px;
-      margin-left: -5%;
+      margin-left: 0;
       width: 100%;
       padding-bottom: 10px;
     }

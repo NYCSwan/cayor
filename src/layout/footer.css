@@ -15,7 +15,7 @@
     margin-right: 1%; }
 
 /* iPhone 4 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .footer {
     height: 20px;
     position: absolute;
@@ -27,132 +27,7 @@
       margin-right: 1%;
       width: 45%; } }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-/* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-/* iPhone 6 ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-/* Samsung Galaxy S3 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-/* Samsung Galaxy S4 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-/* Samsung Galaxy S5 ----------- */
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  .footer {
-    height: 20px;
-    position: absolute;
-    bottom: 0; }
-    .footer .left {
-      margin-left: 1%;
-      width: 45%; }
-    .footer .right {
-      margin-right: 1%;
-      width: 45%; } }
-
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   .footer {
     height: 20px;
     position: absolute;

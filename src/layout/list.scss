@@ -1,0 +1,21 @@
+.list-group {
+  list-style: none;
+  border-bottom: 0;
+  border-radius: 0;
+  border-top: 0;
+  border-image-width: 0;
+  border: none;
+
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    line-height: auto;
+    padding-left: 5%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  }
+}
