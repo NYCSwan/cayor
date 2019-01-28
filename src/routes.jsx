@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
-import { Switch, Route, Router } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import createHistory from 'history/createBrowserHistory';
+import React, { Component } from "react";
+import { Switch, Route, Router } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import createHistory from "history/createBrowserHistory";
 
-import Homepage from './homepage/homepage.react';
-import People from './people/people.react';
-import Opportunities from './opportunity/opportunity.react';
-import Approach from './approach/approach.react';
-import Esg from './esg/esg.react';
+import Homepage from "./homepage/homepage.react";
+import People from "./people/people.react";
+import Opportunities from "./opportunity/opportunity.react";
+import Approach from "./approach/approach.react";
+import Esg from "./esg/esg.react";
 
-import './routes.css';
+import "./routes.css";
 
 const history = createHistory();
 
 class Routes extends Component {
   state = {
     // currentImageIdx: 0,
-    showTest: false,
+    showTest: false
   };
 
   render() {
-    const currentKey = this.props.location.pathname.split('/')[1] || '/';
+    const currentKey = this.props.location.pathname.split("/")[1] || "/";
     const timeout = { enter: 1800, exit: 800 };
-    console.log('currentKey', currentKey);
+    console.log("currentKey", currentKey);
     const {
       handleClick,
       isContactModalOpen,
       height,
       width,
       handleClose,
+      deviceIdx
     } = this.props;
 
     return (
@@ -39,9 +40,10 @@ class Routes extends Component {
               className="router"
               childFactory={child =>
                 React.cloneElement(child, {
-                  classNames: 'slide',
-                  timeout: timeout,
-                })}
+                  classNames: "slide",
+                  timeout: timeout
+                })
+              }
             >
               <CSSTransition timeout={timeout} key={location.key} mountOnEnter>
                 <Switch location={location}>
@@ -57,6 +59,7 @@ class Routes extends Component {
                           isContactModalOpen={isContactModalOpen}
                           height={height}
                           width={width}
+                          deviceIdx={deviceIdx}
                           {...routeProps}
                         />
                       );
@@ -72,8 +75,8 @@ class Routes extends Component {
                           handleClose={handleClose}
                           handleClockClick={handleClick}
                           isContactModalOpen={isContactModalOpen}
-                          height={height}
-                          width={width}
+                          // height={height}
+                          // width={width}
                           {...routeProps}
                         />
                       );
@@ -89,8 +92,8 @@ class Routes extends Component {
                           handleClose={handleClose}
                           handleClockClick={handleClick}
                           isContactModalOpen={isContactModalOpen}
-                          height={height}
-                          width={width}
+                          // height={height}
+                          // width={width}
                           {...routeProps}
                         />
                       );
@@ -106,8 +109,8 @@ class Routes extends Component {
                           handleClose={handleClose}
                           handleClockClick={handleClick}
                           isContactModalOpen={isContactModalOpen}
-                          height={height}
-                          width={width}
+                          // height={height}
+                          // width={width}
                           {...routeProps}
                         />
                       );
@@ -123,8 +126,8 @@ class Routes extends Component {
                           handleClose={handleClose}
                           handleClockClick={handleClick}
                           isContactModalOpen={isContactModalOpen}
-                          height={height}
-                          width={width}
+                          // height={height}
+                          // width={width}
                           {...routeProps}
                         />
                       );

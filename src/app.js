@@ -1,52 +1,64 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
-import './App.css';
-import Routes from './routes';
+import "./App.css";
+import Routes from "./routes";
 class App extends Component {
   state = {
     isContactModalOpen: false,
     height: null,
     width: null,
+    deviceIdx: -1
   };
 
   componentDidMount() {
-    console.log('componentDidMount');
+    console.log("componentDidMount");
     this.updateDimensions();
-    window.addEventListener('resize', this.updateDimensions);
+    window.addEventListener("resize", this.updateDimensions);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   updateDimensions = () => {
     const height = window.innerHeight;
     const width = window.innerWidth;
-    // debugger;
+
+    if (width === null) {
+      return;
+    } else if (width <= 490 && width > 0) {
+      this.setState({ deviceIdx: 1 });
+    } else if (width >= 780 && width <= 1024) {
+      this.setState({ deviceIdx: 2 });
+    } else {
+      this.setState({ deviceIdx: 0 });
+      console.log("deviceIdx 0", width);
+    }
+
     this.setState({
       height,
-      width,
+      width
     });
   };
 
   handleClick = e => {
-    console.log('clock click contact', e);
+    console.log("clock click contact", e);
     e.preventDefault();
     const { isContactModalOpen } = this.state;
 
     this.setState({
-      isContactModalOpen: !isContactModalOpen,
+      isContactModalOpen: !isContactModalOpen
     });
   };
 
   handleModalClose = () => {
-    console.log('handle modal close');
+    console.log("handle modal close");
     this.setState({ isContactModalOpen: false });
   };
 
   render() {
-    const { height, width, isContactModalOpen } = this.state;
+    const { height, width, isContactModalOpen, deviceIdx } = this.state;
     return (
       <div className="App">
         <Routes
@@ -59,6 +71,7 @@ class App extends Component {
           location={this.props.location}
           match={this.props.match}
           isContactModalOpen={isContactModalOpen}
+          deviceIdx={deviceIdx}
         />
         <div
           className={`shaddow ${isContactModalOpen}`}

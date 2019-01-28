@@ -46,59 +46,38 @@ const items = [
 ];
 
 class Homepage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      deviceIdx: null
-    };
-  }
-  componentDidMount() {
-    this.updateDimensions();
-  }
-  componentDidUpdate(prevProps) {
-    if (this.props.width !== prevProps.width) {
-      this.updateDimensions();
-    }
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.props.width !== nextProps.width ||
-      this.state.deviceIdx !== nextState.deviceIdx ||
+      this.props.deviceIdx !== nextProps.deviceIdx ||
       this.props.isContactModalOpen !== nextProps.isContactModalOpen
     );
   }
 
-  updateDimensions = () => {
-    console.log("update dimensions");
-    if (this.props.width === null) {
-      return;
-    } else if (this.props.width <= 490 && this.props.width > 0) {
-      this.setState({ deviceIdx: 1 });
-    } else if (this.props.width >= 780 && this.props.width <= 1024) {
-      this.setState({ deviceIdx: 2 });
-    } else {
-      this.setState({ deviceIdx: 0 });
-      console.log("deviceIdx 0", this.props.width);
-    }
-  };
-
   render() {
     console.log("render homepage");
-    const { deviceIdx } = this.state;
+    const {
+      deviceIdx,
+      width,
+      history,
+      location,
+      handleClockClick,
+      handleClose,
+      isContactModalOpen
+    } = this.props;
 
     return (
       <div className="homepage">
         <Navigation
-          history={this.props.history}
-          location={this.props.location}
-          handleClockClick={this.props.handleClockClick}
+          history={history}
+          location={location}
+          handleClockClick={handleClockClick}
           headerImg="homepage"
           fadeIn={true}
-          handleClose={this.props.handleClose}
-          isContactModalOpen={this.props.isContactModalOpen}
+          handleClose={handleClose}
+          isContactModalOpen={isContactModalOpen}
         />
-        {this.props.width !== null && deviceIdx !== null && (
+        {width !== null && deviceIdx !== null && (
           <BgImageSlide deviceIdx={deviceIdx} items={items} />
         )}
       </div>
