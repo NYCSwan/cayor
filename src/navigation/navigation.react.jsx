@@ -1,49 +1,58 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import { NavLink } from 'react-router-dom';
-import { Nav, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faAlignJustify } from '@fortawesome/fontawesome-free-solid';
+import {
+  Nav,
+  NavItem,
+  NavLink,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { faAlignJustify } from "@fortawesome/fontawesome-free-solid";
 
-import Clock from '../clocks/clock.react';
-import WhiteLogo from '../media/grey-white-icon.png';
-import ContactForm from '../contact/contact_form.react';
-import Accra from '../media/map.jpg';
-import Joburg from '../media/map3.jpg';
+import Clock from "../clocks/clock.react";
+import WhiteLogo from "../media/grey-white-icon.png";
+import ContactForm from "../contact/contact_form.react";
+import Accra from "../media/map.jpg";
+import Joburg from "../media/map3.jpg";
 
-import './navigation.css';
+import "./navigation.css";
 
 class Navigation extends Component {
   state = {
-    contactLocation: '',
+    contactLocation: "",
     joburgContactDetails: [
       {
-        location: 'Johannesburg, South Africa',
-        street_address: 'Suite No. 23, Unit E0002, Building 4',
-        street_address2: 'Asbury Park, Magalieszight Ave',
-        city: 'Dunkeld West Johannesburg',
-        phone: '+27 11 593 3266',
+        location: "Johannesburg, South Africa",
+        street_address: "Suite No. 23, Unit E0002, Building 4",
+        street_address2: "Asbury Park, Magalieszight Ave",
+        city: "Dunkeld West Johannesburg",
+        phone: "+27 11 593 3266",
         imageUrl: Joburg,
         imageAlt:
-          "Map of Johannesburg, South Africa, Cayor's first Sub-Saharan Africa equity business location",
-      },
+          "Map of Johannesburg, South Africa, Cayor's first Sub-Saharan Africa equity business location"
+      }
     ],
     accraContactDetails: [
       {
-        location: 'Accra, Ghana',
-        street_address: '41 Tafawa Balawa St.',
-        street_address2: 'North Ridge',
-        city: 'Accra',
-        phone: '+',
+        location: "Accra, Ghana",
+        street_address: "41 Tafawa Balawa St.",
+        street_address2: "North Ridge",
+        city: "Accra",
+        phone: "+",
         imageUrl: Accra,
         imageAlt:
-          "Map of Accra Ghana, Cayor's second Sub-Saharan Africa equity office location",
-      },
+          "Map of Accra Ghana, Cayor's second Sub-Saharan Africa equity office location"
+      }
     ],
-    collapse: false
+    collapse: false,
+    active: ""
   };
 
   handleClockClick = e => {
-    const contactLocation = e.target.className.split(' ')[0];
+    const contactLocation = e.target.className.split(" ")[0];
     // debugger
     this.setState({ contactLocation });
     this.props.handleClockClick(e);
@@ -52,18 +61,18 @@ class Navigation extends Component {
 
   toggle = () => {
     this.setState({ collapse: !this.state.collapse });
-  }
+  };
 
   renderContactPopover = () => {
-    console.log('renderContactPopover');
+    console.log("renderContactPopover");
     const {
       contactLocation,
       accraContactDetails,
-      joburgContactDetails,
+      joburgContactDetails
     } = this.state;
     const { isContactModalOpen, fadeIn, handleClose, location } = this.props;
     // debugger
-    if (contactLocation === 'accra') {
+    if (contactLocation === "accra") {
       return (
         <ContactForm
           location={location}
@@ -87,10 +96,16 @@ class Navigation extends Component {
       );
     }
   };
+  // handleClick = e => {
+  //   // e.preventDefault();
+  //   const activeItem = e.target.classList[1];
+  //   this.setState({ active: activeItem });
+  //   // debugger;
+  // };
 
   render() {
     const { contactLocation, collapse } = this.state;
-    const { isContactModalOpen } = this.props;
+    const { isContactModalOpen, headerImg } = this.props;
     return (
       <header className={`header ${this.props.headerImg}`}>
         <NavLink href="/" className="logo-container">
@@ -101,16 +116,16 @@ class Navigation extends Component {
           <div id="jbg">
             <div
               className={
-                this.props.location.pathname === '/'
-                  ? 'right homepage'
-                  : 'right'
+                this.props.location.pathname === "/"
+                  ? "right homepage"
+                  : "right"
               }
             >
               <Nav>
                 <NavItem className="linkContainer">
                   <NavLink
                     href="/people"
-                    activeClassName="selected"
+                    active={headerImg === "people"}
                     className="link people"
                   >
                     PEOPLE
@@ -119,7 +134,7 @@ class Navigation extends Component {
                 <NavItem className="linkContainer">
                   <NavLink
                     href="/opportunity"
-                    activeClassName="selected"
+                    active={headerImg === "opportunity"}
                     className="link opportunity"
                   >
                     OPPORTUNITY
@@ -128,7 +143,7 @@ class Navigation extends Component {
                 <NavItem className="linkContainer">
                   <NavLink
                     href="/approach"
-                    activeClassName="selected"
+                    active={headerImg === "approach"}
                     className="link approach"
                   >
                     APPROACH
@@ -137,7 +152,7 @@ class Navigation extends Component {
                 <NavItem className="linkContainer">
                   <NavLink
                     href="/esg"
-                    activeClassName="selected"
+                    active={headerImg === "esg"}
                     className="link esg"
                   >
                     ESG
@@ -161,57 +176,57 @@ class Navigation extends Component {
                 </div>
               </div>
               <Dropdown nav={true} isOpen={collapse} toggle={this.toggle}>
-              <DropdownToggle>
-              <FontAwesomeIcon
-              className={'menu'}
-              icon={faAlignJustify}
-              size='xl'
-              />
-              </DropdownToggle>
-              <DropdownMenu>
-              <DropdownItem>
-              <NavLink
-              href="/people"
-              activeClassName="selected"
-              className="link people"
-              >
-              PEOPLE
-              </NavLink>
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>
-              <NavLink
-              href="/opportunity"
-              activeClassName="selected"
-              className="link opportunity"
-              >
-              OPPORTUNITY
-              </NavLink>
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>
-              <NavLink
-              href="/approach"
-              activeClassName="selected"
-              className="link approach"
-              >
-              APPROACH
-              </NavLink>
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>
-              <NavLink
-              href="/esg"
-              activeClassName="selected"
-              className="link esg"
-              >
-              ESG
-              </NavLink>
-              </DropdownItem>
-              </DropdownMenu>
+                <DropdownToggle>
+                  <FontAwesomeIcon
+                    className={"menu"}
+                    icon={faAlignJustify}
+                    size="xl"
+                  />
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>
+                    <NavLink
+                      href="/people"
+                      activeClassName="selected"
+                      className="link people"
+                    >
+                      PEOPLE
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink
+                      href="/opportunity"
+                      activeClassName="selected"
+                      className="link opportunity"
+                    >
+                      OPPORTUNITY
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink
+                      href="/approach"
+                      activeClassName="selected"
+                      className="link approach"
+                    >
+                      APPROACH
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink
+                      href="/esg"
+                      activeClassName="selected"
+                      className="link esg"
+                    >
+                      ESG
+                    </NavLink>
+                  </DropdownItem>
+                </DropdownMenu>
               </Dropdown>
             </div>
-            {isContactModalOpen && contactLocation !== ''
+            {isContactModalOpen && contactLocation !== ""
               ? this.renderContactPopover()
               : null}
           </div>

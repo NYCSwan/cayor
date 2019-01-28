@@ -149,9 +149,9 @@
         .header #accra #jbg .right .nav {
           width: 35%;
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: row nowrap;
           justify-content: space-around;
-          align-content: center;
+          align-items: flex-end;
           font-size: 0.8em;
           font-weight: 400;
           height: 100%;
@@ -171,7 +171,7 @@
             .header #accra #jbg .right .nav {
               display: none; } }
           .header #accra #jbg .right .nav .linkContainer {
-            height: 100%;
+            height: 57%;
             display: flex;
             align-content: flex-end;
             flex-flow: row wrap;
@@ -183,16 +183,15 @@
               order: 1; }
               .header #accra #jbg .right .nav .linkContainer.nav-item .link {
                 color: #ffffff;
-                height: 55%;
                 align-self: flex-start;
                 padding-top: 0; }
-                .header #accra #jbg .right .nav .linkContainer.nav-item .link.selected {
+                .header #accra #jbg .right .nav .linkContainer.nav-item .link.active {
                   font-size: 1.1em;
-                  border-bottom: 3px solid #9b1d1f;
+                  border-bottom: 4px solid #9b1d1f;
                   line-height: 1.3; }
                 .header #accra #jbg .right .nav .linkContainer.nav-item .link:hover {
-                  height: 60%;
-                  border-bottom: 3px solid #9b1d1f;
+                  height: 100%;
+                  border-bottom: 4px solid #9b1d1f;
                   font-weight: 700;
                   text-decoration: none;
                   color: #ffffff; }

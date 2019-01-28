@@ -141,10 +141,10 @@
           width: 35%;
           // margin-right: 2%;
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: row nowrap;
           justify-content: space-around;
-          // align-items: center;
-          align-content: center;
+          align-items: flex-end;
+          // align-content: center;
           font-size: 0.8em;
           font-weight: 400;
           height: 100%;
@@ -159,7 +159,7 @@
             display: none;
           }
           .linkContainer {
-            height: 100%;
+            height: 57%;
             display: flex;
             align-content: flex-end;
             flex-flow: row wrap;
@@ -171,17 +171,17 @@
               order: 1;
               .link {
                 color: $white;
-                height: 55%;
+                // height: 59%;
                 align-self: flex-start;
                 padding-top: 0;
-                &.selected {
+                &.active {
                   font-size: 1.1em;
-                  border-bottom: 3px solid $cayorRed;
+                  border-bottom: 4px solid $cayorRed;
                   line-height: 1.3;
                 }
                 &:hover {
-                  height: 60%;
-                  border-bottom: 3px solid $cayorRed;
+                  height: 100%;
+                  border-bottom: 4px solid $cayorRed;
                   font-weight: 700;
                   text-decoration: none;
                   color: $white;
