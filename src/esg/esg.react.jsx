@@ -12,7 +12,7 @@ import "./esg.css";
 
 class Esg extends Component {
   state = {
-    currentDetails: "esg philosophy",
+    currentDetails: "philosophy",
     navItems: [
       {
         value: "ESG Philosophy",
@@ -156,12 +156,13 @@ class Esg extends Component {
     const { location } = this.props;
     const { navItems } = this.state;
     if (location.pathname === "/esg") {
-      this.setState({ currentDetails: "philosophy" });
+      // this.setState({ currentDetails: "philosophy" });
+      return;
     } else {
-      const topic = location.pathname.replace("/esg/", ""),
+      const topic = location.state.id,
         currentNavItem = pickBy(navItems, item => {
           // debugger;
-          return topic === item.url; //.replace(" ", "")
+          return topic === item.url.split(" ")[1]; //.replace(" ", "")
         }),
         index = Number(findKey(currentNavItem)),
         subNavTopic = topic.toLowerCase();
@@ -288,7 +289,6 @@ class Esg extends Component {
                   currentDetails={currentDetails}
                   text={frameworkTableText}
                   currentDetailIdx={0}
-                  // handleButtonClick={this.handleButtonClick}
                 />
               </div>
             )}

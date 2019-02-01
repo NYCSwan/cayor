@@ -176,23 +176,19 @@ class People extends Component {
   componentDidMount() {
     const { location } = this.props;
     const { navItems } = this.state;
-    if (location.pathname === "people") {
+    if (location.pathname === "/people") {
       this.setState({ currentDetails: "experienced" });
+      return;
+    } else {
+      const topic = location.state.id,
+        subNavTopic = topic.toLowerCase();
+      this.setState({
+        currentDetails: subNavTopic
+        // fadeIn: false,
+        // currentDetailIdx: index
+        // closeDetails: true
+      });
     }
-    const topic = location.pathname.replace("/people/", ""),
-      //   currentNavItem = pickBy(navItems, item => {
-      //     // debugger;
-      //     return topic === item.value; //.replace(" ", "")
-      //   });
-      // // debugger;
-      // const index = Number(findKey(currentNavItem)),
-      subNavTopic = topic.toLowerCase();
-    this.setState({
-      currentDetails: subNavTopic
-      // fadeIn: false,
-      // currentDetailIdx: index
-      // closeDetails: true
-    });
   }
 
   componentWillUnmount() {
@@ -202,52 +198,8 @@ class People extends Component {
     // history.go(-1);
   }
 
-  // handleClick = e => {
-  //   console.log("handle sub navigation click opportunity");
-  //   const { navItems } = this.state;
-  //   const currentNavItem = pickBy(
-  //     navItems,
-  //     item => e.target.innerText.toLowerCase() === item.value.toLowerCase()
-  //   );
-  //   const index = Number(findKey(currentNavItem)),
-  //     subNavTopic = e.target.innerText.replace(" ", "").toLowerCase();
-  //   // debugger;
-  //   this.setState({
-  //     currentDetails: subNavTopic,
-  //     fadeIn: true,
-  //     currentDetailIdx: index,
-  //     closeDetails: true
-  //   });
-  //
-  //   this.props.history.push(
-  //     `/people/${e.target.innerText.replace(" ", "").toLowerCase()}`
-  //   );
-  // };
-
-  // handleButtonClick = e => {
-  //   console.log("handle interior button click");
-  //   const { currentDetailIdx, navItems } = this.state;
-  //   const maxIndex = navItems.length - 1;
-  //
-  //   if (e.target.value === "Next" && currentDetailIdx !== maxIndex) {
-  //     this.setState({
-  //       currentDetailIdx: currentDetailIdx + 1
-  //     });
-  //   } else if (e.target.value === "Next" && currentDetailIdx === maxIndex) {
-  //     this.setState({
-  //       currentDetailIdx: 0
-  //     });
-  //   } else {
-  //     this.setState({
-  //       currentDetailIdx: maxIndex
-  //     });
-  //   }
-  // };
-
   handleBioClick = () => {
-    // const { history } = this.props;
     this.setState({ closeDetails: false });
-    // history.push("/people");
   };
 
   render() {
