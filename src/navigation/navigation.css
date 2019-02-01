@@ -33,7 +33,7 @@
         height: 200px;
         overflow: visible; } }
   .header.people {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../media/jobrg.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../media/jobrg.jpg");
     background-size: 100% 100%; }
   .header.opportunity {
     background: url("../media/opportunity_banner.jpg");

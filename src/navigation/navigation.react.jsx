@@ -180,46 +180,30 @@ class Navigation extends Component {
                   <FontAwesomeIcon
                     className={"menu"}
                     icon={faAlignJustify}
-                    size="xl"
+                    size={"2x"}
                   />
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <NavLink
-                      href="/people"
-                      activeClassName="selected"
-                      className="link people"
-                    >
+                    <NavLink href="/people" className="link people">
                       PEOPLE
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink
-                      href="/opportunity"
-                      activeClassName="selected"
-                      className="link opportunity"
-                    >
+                    <NavLink href="/opportunity" className="link opportunity">
                       OPPORTUNITY
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink
-                      href="/approach"
-                      activeClassName="selected"
-                      className="link approach"
-                    >
+                    <NavLink href="/approach" className="link approach">
                       APPROACH
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink
-                      href="/esg"
-                      activeClassName="selected"
-                      className="link esg"
-                    >
+                    <NavLink href="/esg" className="link esg">
                       ESG
                     </NavLink>
                   </DropdownItem>
