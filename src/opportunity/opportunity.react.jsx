@@ -221,7 +221,7 @@ class Opportunities extends Component {
           match={match}
           // handleClick={this.handleButtonClick}
           currentDetails={currentDetails}
-          location={location}
+          // location={location}
         />
         <Switch>
           <Route

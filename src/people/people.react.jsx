@@ -19,9 +19,9 @@ class People extends Component {
   state = {
     currentDetails: "experienced",
     navItems: [
-      { value: "Experienced", url: "experienced", style: "top" },
-      { value: "Native", url: "native", style: "top" },
-      { value: "Team Bios", url: "team_bios", style: "top" }
+      { value: "Experienced", url: "experienced experienced", style: "top" },
+      { value: "Native", url: "native native", style: "top" },
+      { value: "Team Bios", url: "team_bios team_bios", style: "top" }
     ],
     experiencedTextTable: [
       {
@@ -169,25 +169,28 @@ class People extends Component {
       }
     ],
     fadeIn: true,
-    currentDetailIdx: 0,
+    // currentDetailIdx: 0,
     closeDetails: true
   };
 
   componentDidMount() {
     const { location } = this.props;
     const { navItems } = this.state;
+    if (location.pathname === "people") {
+      this.setState({ currentDetails: "experienced" });
+    }
     const topic = location.pathname.replace("/people/", ""),
-      currentNavItem = pickBy(navItems, item => {
-        // debugger;
-        return topic === item.value; //.replace(" ", "")
-      });
-    // debugger;
-    const index = Number(findKey(currentNavItem)),
+      //   currentNavItem = pickBy(navItems, item => {
+      //     // debugger;
+      //     return topic === item.value; //.replace(" ", "")
+      //   });
+      // // debugger;
+      // const index = Number(findKey(currentNavItem)),
       subNavTopic = topic.toLowerCase();
     this.setState({
-      currentDetails: subNavTopic,
+      currentDetails: subNavTopic
       // fadeIn: false,
-      currentDetailIdx: index
+      // currentDetailIdx: index
       // closeDetails: true
     });
   }
@@ -221,25 +224,25 @@ class People extends Component {
   //   );
   // };
 
-  handleButtonClick = e => {
-    console.log("handle interior button click");
-    const { currentDetailIdx, navItems } = this.state;
-    const maxIndex = navItems.length - 1;
-
-    if (e.target.value === "Next" && currentDetailIdx !== maxIndex) {
-      this.setState({
-        currentDetailIdx: currentDetailIdx + 1
-      });
-    } else if (e.target.value === "Next" && currentDetailIdx === maxIndex) {
-      this.setState({
-        currentDetailIdx: 0
-      });
-    } else {
-      this.setState({
-        currentDetailIdx: maxIndex
-      });
-    }
-  };
+  // handleButtonClick = e => {
+  //   console.log("handle interior button click");
+  //   const { currentDetailIdx, navItems } = this.state;
+  //   const maxIndex = navItems.length - 1;
+  //
+  //   if (e.target.value === "Next" && currentDetailIdx !== maxIndex) {
+  //     this.setState({
+  //       currentDetailIdx: currentDetailIdx + 1
+  //     });
+  //   } else if (e.target.value === "Next" && currentDetailIdx === maxIndex) {
+  //     this.setState({
+  //       currentDetailIdx: 0
+  //     });
+  //   } else {
+  //     this.setState({
+  //       currentDetailIdx: maxIndex
+  //     });
+  //   }
+  // };
 
   handleBioClick = () => {
     // const { history } = this.props;
@@ -265,7 +268,7 @@ class People extends Component {
           navItems={navItems}
           match={match}
           currentDetails={currentDetails}
-          handleClick={this.handleClick}
+          // handleClick={this.handleClick}
         />
         <Switch>
           <Route
@@ -278,7 +281,7 @@ class People extends Component {
                 currentDetailIdx={0}
                 closeDetails={closeDetails}
                 handleBioClick={this.handleBioClick}
-                handleClose={this.handleClose}
+                // handleClose={this.handleClose}
                 {...routeProps}
               />
             )}
@@ -291,7 +294,6 @@ class People extends Component {
                 currentDetails={currentDetails}
                 text={nativeTextTable}
                 currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
               />
             )}
           />
@@ -303,7 +305,6 @@ class People extends Component {
                 currentDetails={currentDetails}
                 text={experiencedTextTable}
                 currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
               />
             )}
           />
@@ -315,7 +316,6 @@ class People extends Component {
                 currentDetails={currentDetails}
                 text={experiencedTextTable}
                 currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
               />
             )}
           />

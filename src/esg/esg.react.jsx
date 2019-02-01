@@ -1,21 +1,37 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
 import findKey from "lodash/findKey";
 import pickBy from "lodash/pickBy";
 
 import TextTableContainer from "../layout/text-table-container.react";
 import SubNav from "../sub_navigation/sub_navigation.react";
-import Footer from "../layout/footer.react";
-import ScrollIndicator from "../layout/scrollIndicator.react";
-import Navigation from "../navigation/navigation.react";
+// import Footer from "../layout/footer.react";
+// import ScrollIndicator from "../layout/scrollIndicator.react";
+// import Navigation from "../navigation/navigation.react";
 import "./esg.css";
 
 class Esg extends Component {
   state = {
     currentDetails: "esg philosophy",
     navItems: [
-      { value: "ESG Philosophy", key: "philosophy", style: "top" },
-      { value: "ESG Strategy", key: "strategy", style: "top" },
-      { value: "ESG Framework", key: "framework", style: "top" }
+      {
+        value: "ESG Philosophy",
+        url: "philosophy philosophy",
+        key: "philosophy",
+        style: "top"
+      },
+      {
+        value: "ESG Strategy",
+        url: "strategy strategy",
+        key: "strategy",
+        style: "top"
+      },
+      {
+        value: "ESG Framework",
+        url: "framework framework",
+        key: "framework",
+        style: "top"
+      }
     ],
     philosophyTextTable: [
       {
@@ -133,8 +149,30 @@ class Esg extends Component {
       }
     ],
     fadeIn: true
+    // navIndex: 0
   };
 
+  componentDidMount() {
+    const { location } = this.props;
+    const { navItems } = this.state;
+    if (location.pathname === "/esg") {
+      this.setState({ currentDetails: "philosophy" });
+    } else {
+      const topic = location.pathname.replace("/esg/", ""),
+        currentNavItem = pickBy(navItems, item => {
+          // debugger;
+          return topic === item.url; //.replace(" ", "")
+        }),
+        index = Number(findKey(currentNavItem)),
+        subNavTopic = topic.toLowerCase();
+      this.setState({
+        currentDetails: subNavTopic
+      });
+    }
+    // fadeIn: false,
+    // currentDetailIdx: index
+    // closeDetails: true
+  }
   // handleClick = e => {
   //   console.log("handle sub navigation click esg");
   //   const { navItems } = this.state;
@@ -198,18 +236,25 @@ class Esg extends Component {
   // }
 
   render() {
-    const { currentDetails, fadeIn, navItems } = this.state;
-    const { width, height } = this.props;
+    const {
+      currentDetails,
+      philosophyTextTable,
+      strategyTextTable,
+      frameworkTableText,
+      fadeIn,
+      navItems
+    } = this.state;
+    const { width, height, match } = this.props;
 
     return (
       <main className="esg" style={{ maxHeight: height, maxWidth: width }}>
         <SubNav
           navItems={navItems}
-          match={this.props.match}
-          handleClick={this.handleClick}
+          match={match}
+          // handleClick={this.handleClick}
           currentDetails={currentDetails}
-          currentDetailIdx={currentDetailIdx}
-          fadeIn={false}
+          // currentDetailIdx={currentDetailIdx}
+          // fadeIn={false}
         />
         <Switch>
           <Route
@@ -220,7 +265,6 @@ class Esg extends Component {
                 currentDetails={currentDetails}
                 text={philosophyTextTable}
                 currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
               />
             )}
           />
@@ -230,9 +274,8 @@ class Esg extends Component {
               <TextTableContainer
                 fadeIn={true}
                 currentDetails={currentDetails}
-                text={nativeTextTable}
+                text={strategyTextTable}
                 currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
               />
             )}
           />
@@ -245,9 +288,8 @@ class Esg extends Component {
                   currentDetails={currentDetails}
                   text={frameworkTableText}
                   currentDetailIdx={0}
-                  handleButtonClick={this.handleButtonClick}
+                  // handleButtonClick={this.handleButtonClick}
                 />
-                <ScrollIndicator />
               </div>
             )}
           />
@@ -259,7 +301,6 @@ class Esg extends Component {
                 currentDetails={currentDetails}
                 text={philosophyTextTable}
                 currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
               />
             )}
           />

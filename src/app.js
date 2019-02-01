@@ -14,6 +14,8 @@ class App extends Component {
 
   componentDidMount() {
     console.log("componentDidMount");
+    const { width, height } = this.state;
+    if (width !== null && height !== null) return;
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions);
   }
