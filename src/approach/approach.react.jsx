@@ -538,7 +538,7 @@ class Approach extends Component {
       });
     }
   }
-
+  g;
   render() {
     const {
       navItems,

@@ -169,7 +169,6 @@ class People extends Component {
       }
     ],
     fadeIn: true,
-    // currentDetailIdx: 0,
     closeDetails: true
   };
 
@@ -184,18 +183,8 @@ class People extends Component {
         subNavTopic = topic.toLowerCase();
       this.setState({
         currentDetails: subNavTopic
-        // fadeIn: false,
-        // currentDetailIdx: index
-        // closeDetails: true
       });
     }
-  }
-
-  componentWillUnmount() {
-    // const { history, location } = this.props;
-    // debugger;
-    // history.push("/people");
-    // history.go(-1);
   }
 
   handleBioClick = () => {
@@ -220,7 +209,6 @@ class People extends Component {
           navItems={navItems}
           match={match}
           currentDetails={currentDetails}
-          // handleClick={this.handleClick}
         />
         <Switch>
           <Route
@@ -233,7 +221,6 @@ class People extends Component {
                 currentDetailIdx={0}
                 closeDetails={closeDetails}
                 handleBioClick={this.handleBioClick}
-                // handleClose={this.handleClose}
                 {...routeProps}
               />
             )}

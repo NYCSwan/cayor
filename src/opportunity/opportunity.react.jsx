@@ -183,14 +183,11 @@ class Opportunities extends Component {
       this.setState({ currentDetails: "why_cayor" });
     } else {
       const target = location.state.id,
-        //     target = path.replace("/opportunity/", ""),
         currentNavItem = pickBy(navItems, item => {
           return target === item.value;
         }),
         index = Number(findKey(currentNavItem)),
-        //     // nextIdx = index - 1,
         nextDetails = currentNavItem[index].url.split(" ")[1];
-      debugger;
       //
       this.setState({
         currentDetails: nextDetails,
@@ -206,7 +203,6 @@ class Opportunities extends Component {
       whyCayorTableText,
       navItems,
       fadeIn
-      // currentDetailIdx
     } = this.state;
     const { width, height, match, location } = this.props;
     // debugger;
@@ -219,9 +215,7 @@ class Opportunities extends Component {
         <SubNav
           navItems={navItems}
           match={match}
-          // handleClick={this.handleButtonClick}
           currentDetails={currentDetails}
-          // location={location}
         />
         <Switch>
           <Route
@@ -232,7 +226,6 @@ class Opportunities extends Component {
                 currentDetails={currentDetails}
                 text={whyAfricaTableText}
                 currentDetailIdx={0}
-                // handleClick={this.handleButtonClick}
                 location={location}
               />
             )}
@@ -241,12 +234,8 @@ class Opportunities extends Component {
             path={match.url + "/why_cayor"}
             render={routeProps => (
               <WhyCayor
-                // location={location}
-                // fadeIn={fadeIn}
                 currentDetails={currentDetails}
                 text={whyCayorTableText}
-                // currentDetailIdx={currentDetailIdx}
-                // handleClick={this.handleButtonClick}
                 {...routeProps}
               />
             )}
