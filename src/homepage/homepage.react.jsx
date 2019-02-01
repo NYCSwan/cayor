@@ -1,16 +1,16 @@
 import React from "react";
 import BgImageSlide from "./carousel/bg_image_slide.react";
 import "./homepage.css";
-import Navigation from "../navigation/navigation.react";
-import Slide1 from "../media/slide1Cropped.jpeg";
-import Slide2 from "../media/anastasiaCropped.jpeg";
-import Slide3 from "../media/slide3.jpg";
-import Slide1Mobile from "../media/slide1Mobile.jpeg";
-import Slide2Mobile from "../media/slide2Mobile.jpeg";
-import Slide3Mobile from "../media/slide3Mobile.jpeg";
-import Slide1Tablet from "../media/slide1Mobile.jpeg";
-import Slide2Tablet from "../media/slide2Mobile.jpeg";
-import Slide3Tablet from "../media/slide3Mobile.jpeg";
+// import Navigation from "../navigation/navigation.react";
+import Slide1 from "../media/slide1Cropped.jpg";
+import Slide2 from "../media/anastasiaCropped.jpg";
+import Slide3 from "../media/slide4.jpg";
+import Slide1Mobile from "../media/slide1Mobile.jpg";
+import Slide2Mobile from "../media/slide3Mobile.jpg";
+import Slide3Mobile from "../media/slide3Mobile.jpg";
+import Slide1Tablet from "../media/slide3Tablet.jpg";
+import Slide2Tablet from "../media/slide3Tablet.jpg";
+import Slide3Tablet from "../media/slide3Tablet.jpg";
 
 const items = [
   {
@@ -46,6 +46,13 @@ const items = [
 ];
 
 class Homepage extends React.Component {
+  // componentDidMount() {
+  //   // this.isMounted = true;
+  //   // window.onpopstate = function(e) {
+  //   //   debugger;
+  //   // };
+  // }
+
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.props.width !== nextProps.width ||
@@ -58,25 +65,16 @@ class Homepage extends React.Component {
     console.log("render homepage");
     const {
       deviceIdx,
-      width,
-      history,
-      location,
-      handleClockClick,
-      handleClose,
-      isContactModalOpen
+      width
+      // history,
+      // location,
+      // handleClockClick,
+      // handleClose,
+      // isContactModalOpen
     } = this.props;
 
     return (
       <div className="homepage">
-        <Navigation
-          history={history}
-          location={location}
-          handleClockClick={handleClockClick}
-          headerImg="homepage"
-          fadeIn={true}
-          handleClose={handleClose}
-          isContactModalOpen={isContactModalOpen}
-        />
         {width !== null && deviceIdx !== null && (
           <BgImageSlide deviceIdx={deviceIdx} items={items} />
         )}

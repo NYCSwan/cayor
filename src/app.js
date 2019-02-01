@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 
 import "./App.css";
 import Routes from "./routes";
+
 class App extends Component {
   state = {
     isContactModalOpen: false,
