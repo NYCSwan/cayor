@@ -1,231 +1,243 @@
-import React, { Component } from 'react';
-import findKey from 'lodash/findKey';
-import pickBy from 'lodash/pickBy';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import findKey from "lodash/findKey";
+import pickBy from "lodash/pickBy";
 
-import TextTableContainer from '../layout/text-table-container.react';
-import SubNav from '../sub_navigation/sub_navigation.react';
-import Footer from '../layout/footer.react';
-import ScrollIndicator from '../layout/scrollIndicator.react';
-import Navigation from '../navigation/navigation.react';
-import './esg.css';
+import TextTableContainer from "../layout/text-table-container.react";
+import SubNav from "../sub_navigation/sub_navigation.react";
+// import Footer from "../layout/footer.react";
+// import ScrollIndicator from "../layout/scrollIndicator.react";
+// import Navigation from "../navigation/navigation.react";
+import "./esg.css";
 
 class Esg extends Component {
   state = {
-    currentDetails: 'esg philosophy',
+    currentDetails: "philosophy",
     navItems: [
-      { value: 'ESG Philosophy', key: 'philosophy', style: 'top' },
-      { value: 'ESG Strategy', key: 'strategy', style: 'top' },
-      { value: 'ESG Framework', key: 'framework', style: 'top' },
+      {
+        value: "ESG Philosophy",
+        url: "philosophy philosophy",
+        key: "philosophy",
+        style: "top"
+      },
+      {
+        value: "ESG Strategy",
+        url: "strategy strategy",
+        key: "strategy",
+        style: "top"
+      },
+      {
+        value: "ESG Framework",
+        url: "framework framework",
+        key: "framework",
+        style: "top"
+      }
     ],
     philosophyTextTable: [
       {
-        header: 'ESG Philosophy',
+        header: "ESG Philosophy",
         details: [
           {
-            dKey: 'p00',
+            dKey: "p00",
             text:
-              'We consider our approach to responsible investing to be both risk and return focused.',
-            style: 'subHeader',
+              "We consider our approach to responsible investing to be both risk and return focused.",
+            style: "subHeader"
           },
           {
-            dKey: 'p01',
+            dKey: "p01",
             text:
-              'ESG factors inform our investment decision-making and ownership practices. We believe assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives of our fund and investments. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.',
-            style: 'text',
+              "ESG factors inform our investment decision-making and ownership practices. We believe assessing and managing ESG factors will enhance our ability to meet the long-term investment objectives of our fund and investments. With regard to establishing a trade-off between impact and returns, we do not see ESG considerations as being contradictory to our commercial objectives.",
+            style: "text"
           },
           {
-            dKey: 'p02',
+            dKey: "p02",
             text:
-              'Instead, through active ESG management, we seek to identify opportunities to enhance the internal efficiencies of our portfolio companies and reduce the risks associated with our investment process. This approach is premised on the belief that active management of ESG factors can tangibly increase exit valuations of our investments and simultaneously contribute to the advancement of sustainable development in Arica.',
-            style: 'text',
-          },
-        ],
-      },
+              "Instead, through active ESG management, we seek to identify opportunities to enhance the internal efficiencies of our portfolio companies and reduce the risks associated with our investment process. This approach is premised on the belief that active management of ESG factors can tangibly increase exit valuations of our investments and simultaneously contribute to the advancement of sustainable development in Arica.",
+            style: "text"
+          }
+        ]
+      }
     ],
     strategyTextTable: [
       {
-        header: 'ESG Strategy',
+        header: "ESG Strategy",
         details: [
           {
-            dKey: 's00',
+            dKey: "s00",
             text:
-              'We have developed a strategy to achieve the requisite balance between environmental and social impact and generating commercial returns, all of which is underpinned by our ESG philosophy.',
-            style: 'subHeader',
+              "We have developed a strategy to achieve the requisite balance between environmental and social impact and generating commercial returns, all of which is underpinned by our ESG philosophy.",
+            style: "subHeader"
           },
           {
-            dKey: 's01',
+            dKey: "s01",
             text:
-              'At the initial stages of the investment process, we apply the principles outlined in our ESG Framework to the Fund’s portfolio companies and their operational activities. Post-investment, we will closely monitor progress on ESG matters and compliance by portfolio companies relative to Cayor’s ESG framework and policy guidelines.',
-            style: 'text',
-          },
-        ],
-      },
+              "At the initial stages of the investment process, we apply the principles outlined in our ESG Framework to the Fund’s portfolio companies and their operational activities. Post-investment, we will closely monitor progress on ESG matters and compliance by portfolio companies relative to Cayor’s ESG framework and policy guidelines.",
+            style: "text"
+          }
+        ]
+      }
     ],
     frameworkTableText: [
       {
         header:
-          'Our Framework and Policy Guidelines have been formulated with the following objectives:',
-        template: 'bullet',
+          "Our Framework and Policy Guidelines have been formulated with the following objectives:",
+        template: "bullet",
         details: [
           {
-            dKey: 'f00',
-            text: 'Policy',
-            style: 'subHeader',
+            dKey: "f00",
+            text: "Policy",
+            style: "subHeader"
           },
           {
-            dKey: 'f08',
-            text: 'To adhere to the UNPRI, and the IFC performance standards;',
-            style: 'text',
+            dKey: "f08",
+            text: "To adhere to the UNPRI, and the IFC performance standards;",
+            style: "text"
           },
           {
-            dKey: 'f01',
+            dKey: "f01",
             text:
-              'To partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;',
-            style: 'text',
+              "To partner with appropriate ESG experts to provide independent guidance on best international practice relating to ESG matters;",
+            style: "text"
           },
           {
-            dKey: 'f07',
+            dKey: "f07",
             text:
-              'To fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;',
-            style: 'text',
+              "To fulfill the requirements of applicable National, Provincial and Local legislation where our portfolio companies operate;",
+            style: "text"
           },
           {
-            dKey: 'f09',
-            text: 'Process',
-            style: 'subHeader',
+            dKey: "f09",
+            text: "Process",
+            style: "subHeader"
           },
           {
-            dKey: 'f03',
+            dKey: "f03",
             text:
-              'To integrate ESG into our investment management framework through our ESG management system;',
-            style: 'text',
+              "To integrate ESG into our investment management framework through our ESG management system;",
+            style: "text"
           },
           {
-            dKey: 'f02',
+            dKey: "f02",
             text:
-              'To conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications, as required;',
-            style: 'text',
+              "To conduct ESG due diligence assessments on all potential investment opportunities to requisite specifications, as required;",
+            style: "text"
           },
           {
-            dKey: 'f05',
+            dKey: "f05",
             text:
-              'To implement reasonable precautions to protect the health and safety of portfolio company employees and any external parties such as affected communities; and',
-            style: 'text',
+              "To implement reasonable precautions to protect the health and safety of portfolio company employees and any external parties such as affected communities; and",
+            style: "text"
           },
           {
-            dKey: 'f10',
-            text: 'Management',
-            style: 'subHeader',
+            dKey: "f10",
+            text: "Management",
+            style: "subHeader"
           },
           {
-            dKey: 'f04',
+            dKey: "f04",
             text:
-              'To communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to conformance with our policy;',
-            style: 'text',
+              "To communicate and work closely with investee companies to ensure management and employees’ understanding and shared commitment to conformance with our policy;",
+            style: "text"
           },
           {
-            dKey: 'f06',
+            dKey: "f06",
             text:
-              'To implement responsible practices to ensure that good governance will enhance the reputation of the Fund and Cayor brand at all times',
-            style: 'text',
-          },
-        ],
-      },
+              "To implement responsible practices to ensure that good governance will enhance the reputation of the Fund and Cayor brand at all times",
+            style: "text"
+          }
+        ]
+      }
     ],
-    fadeIn: true,
-    currentDetailIdx: 0,
+    fadeIn: true
+    // navIndex: 0
   };
 
-  handleClick = e => {
-    console.log('handle sub navigation click esg');
+  componentDidMount() {
+    const { location } = this.props;
     const { navItems } = this.state;
-    const currentNavItem = pickBy(
-      navItems,
-      item => e.target.innerText.toLowerCase() === item.value.toLowerCase()
-    );
-    const index = Number(findKey(currentNavItem)) - 1;
-    // debugger;
-    // const newIndex = navItems.indexOf({value: e.target.innerText)
-    this.setState({
-      currentDetails: e.target.innerText.toLowerCase(),
-      fadeIn: true,
-      currentDetailIdx: index,
-    });
-  };
-
-  renderDetails() {
-    console.log('renderDetails');
-    const {
-      currentDetails,
-      fadeIn,
-      philosophyTextTable,
-      strategyTextTable,
-      frameworkTableText,
-    } = this.state;
-    if (currentDetails === 'esg philosophy') {
-      return (
-        <TextTableContainer
-          fadeIn={fadeIn}
-          currentDetails={currentDetails}
-          text={philosophyTextTable}
-          currentDetailIdx={0}
-          handleButtonClick={this.handleButtonClick}
-        />
-      );
-    } else if (currentDetails === 'esg strategy') {
-      return (
-        <TextTableContainer
-          fadeIn={fadeIn}
-          currentDetails={currentDetails}
-          text={strategyTextTable}
-          currentDetailIdx={0}
-          handleButtonClick={this.handleButtonClick}
-        />
-      );
+    if (location.pathname === "/esg") {
+      // this.setState({ currentDetails: "philosophy" });
+      return;
     } else {
-      return (
-        <div className="framework">
-          <TextTableContainer
-            fadeIn={fadeIn}
-            currentDetails={currentDetails}
-            text={frameworkTableText}
-            currentDetailIdx={0}
-            handleButtonClick={this.handleButtonClick}
-          />
-          <ScrollIndicator />
-        </div>
-      );
+      const topic = location.state.id,
+        currentNavItem = pickBy(navItems, item => {
+          // debugger;
+          return topic === item.url.split(" ")[1]; //.replace(" ", "")
+        }),
+        subNavTopic = topic.toLowerCase();
+      this.setState({
+        currentDetails: subNavTopic
+      });
     }
   }
 
   render() {
-    const { currentDetails, currentDetailIdx, fadeIn, navItems } = this.state;
-    const { width, height } = this.props;
+    const {
+      currentDetails,
+      philosophyTextTable,
+      strategyTextTable,
+      frameworkTableText,
+      fadeIn,
+      navItems
+    } = this.state;
+    const { width, height, match } = this.props;
 
     return (
-      <div className="esg" style={{ maxHeight: height, maxWidth: width }}>
-        <Navigation
-          fadeIn={fadeIn}
-          history={this.props.history}
-          location={this.props.location}
-          handleClose={this.props.handleClose}
-          handleClockClick={this.props.handleClockClick}
-          isContactModalOpen={this.props.isContactModalOpen}
-          headerImg="esg"
+      <main className="esg" style={{ maxHeight: height, maxWidth: width }}>
+        <SubNav
+          navItems={navItems}
+          match={match}
+          currentDetails={currentDetails}
         />
-        <main className="body">
-          <SubNav
-            navItems={navItems}
-            match={this.props.match}
-            handleClick={this.handleClick}
-            currentDetails={currentDetails}
-            currentDetailIdx={currentDetailIdx}
-            fadeIn={fadeIn}
+        <Switch>
+          <Route
+            path={`${match.url}/philosophy`}
+            render={routeProps => (
+              <TextTableContainer
+                fadeIn={true}
+                currentDetails={currentDetails}
+                text={philosophyTextTable}
+                currentDetailIdx={0}
+              />
+            )}
           />
-          {this.renderDetails()}
-        </main>
-        <Footer location={this.props.location} />
-      </div>
+          <Route
+            path={`${match.url}/strategy`}
+            render={() => (
+              <TextTableContainer
+                fadeIn={true}
+                currentDetails={currentDetails}
+                text={strategyTextTable}
+                currentDetailIdx={0}
+              />
+            )}
+          />
+          <Route
+            path={`${match.url}/framework`}
+            render={() => (
+              <div className="framework">
+                <TextTableContainer
+                  fadeIn={fadeIn}
+                  currentDetails={currentDetails}
+                  text={frameworkTableText}
+                  currentDetailIdx={0}
+                />
+              </div>
+            )}
+          />
+          <Route
+            path={match.url}
+            render={() => (
+              <TextTableContainer
+                fadeIn={fadeIn}
+                currentDetails={currentDetails}
+                text={philosophyTextTable}
+                currentDetailIdx={0}
+              />
+            )}
+          />
+        </Switch>
+      </main>
     );
   }
 }

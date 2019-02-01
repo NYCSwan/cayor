@@ -1,16 +1,16 @@
 import React from "react";
 import BgImageSlide from "./carousel/bg_image_slide.react";
 import "./homepage.css";
-import Navigation from "../navigation/navigation.react";
-import Slide1 from "../media/slide1Cropped.jpeg";
-import Slide2 from "../media/anastasiaCropped.jpeg";
-import Slide3 from "../media/slide3.jpg";
-import Slide1Mobile from "../media/slide1Mobile.jpeg";
-import Slide2Mobile from "../media/slide2Mobile.jpeg";
-import Slide3Mobile from "../media/slide3Mobile.jpeg";
-import Slide1Tablet from "../media/slide1Mobile.jpeg";
-import Slide2Tablet from "../media/slide2Mobile.jpeg";
-import Slide3Tablet from "../media/slide3Mobile.jpeg";
+// import Navigation from "../navigation/navigation.react";
+import Slide1 from "../media/slide1Cropped.jpg";
+import Slide2 from "../media/anastasiaCropped.jpg";
+import Slide3 from "../media/slide4.jpg";
+import Slide1Mobile from "../media/slide1Mobile.jpg";
+import Slide2Mobile from "../media/slide3Mobile.jpg";
+import Slide3Mobile from "../media/slide3Mobile.jpg";
+import Slide1Tablet from "../media/slide3Tablet.jpg";
+import Slide2Tablet from "../media/slide3Tablet.jpg";
+import Slide3Tablet from "../media/slide3Tablet.jpg";
 
 const items = [
   {
@@ -46,59 +46,36 @@ const items = [
 ];
 
 class Homepage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      deviceIdx: null
-    };
-  }
-  componentDidMount() {
-    this.updateDimensions();
-  }
-  componentDidUpdate(prevProps) {
-    if (this.props.width !== prevProps.width) {
-      this.updateDimensions();
-    }
-  }
+  // componentDidMount() {
+  //   // this.isMounted = true;
+  //   // window.onpopstate = function(e) {
+  //   //   debugger;
+  //   // };
+  // }
 
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.props.width !== nextProps.width ||
-      this.state.deviceIdx !== nextState.deviceIdx ||
+      this.props.deviceIdx !== nextProps.deviceIdx ||
       this.props.isContactModalOpen !== nextProps.isContactModalOpen
     );
   }
 
-  updateDimensions = () => {
-    console.log("update dimensions");
-    if (this.props.width === null) {
-      return;
-    } else if (this.props.width <= 490 && this.props.width > 0) {
-      this.setState({ deviceIdx: 1 });
-    } else if (this.props.width >= 780 && this.props.width <= 1024) {
-      this.setState({ deviceIdx: 2 });
-    } else {
-      this.setState({ deviceIdx: 0 });
-      console.log("deviceIdx 0", this.props.width);
-    }
-  };
-
   render() {
     console.log("render homepage");
-    const { deviceIdx } = this.state;
+    const {
+      deviceIdx,
+      width
+      // history,
+      // location,
+      // handleClockClick,
+      // handleClose,
+      // isContactModalOpen
+    } = this.props;
 
     return (
       <div className="homepage">
-        <Navigation
-          history={this.props.history}
-          location={this.props.location}
-          handleClockClick={this.props.handleClockClick}
-          headerImg="homepage"
-          fadeIn={true}
-          handleClose={this.props.handleClose}
-          isContactModalOpen={this.props.isContactModalOpen}
-        />
-        {this.props.width !== null && deviceIdx !== null && (
+        {width !== null && deviceIdx !== null && (
           <BgImageSlide deviceIdx={deviceIdx} items={items} />
         )}
       </div>
