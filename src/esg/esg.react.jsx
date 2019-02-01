@@ -164,77 +164,12 @@ class Esg extends Component {
           // debugger;
           return topic === item.url.split(" ")[1]; //.replace(" ", "")
         }),
-        index = Number(findKey(currentNavItem)),
         subNavTopic = topic.toLowerCase();
       this.setState({
         currentDetails: subNavTopic
       });
     }
-    // fadeIn: false,
-    // currentDetailIdx: index
-    // closeDetails: true
   }
-  // handleClick = e => {
-  //   console.log("handle sub navigation click esg");
-  //   const { navItems } = this.state;
-  //   const currentNavItem = pickBy(
-  //     navItems,
-  //     item => e.target.innerText.toLowerCase() === item.value.toLowerCase()
-  //   );
-  //   const index = Number(findKey(currentNavItem)) - 1;
-  //   // debugger;
-  //   // const newIndex = navItems.indexOf({value: e.target.innerText)
-  //   this.setState({
-  //     currentDetails: e.target.innerText.toLowerCase(),
-  //     fadeIn: true,
-  //     currentDetailIdx: index
-  //   });
-  // };
-
-  // renderDetails() {
-  //   console.log("renderDetails");
-  //   const {
-  //     currentDetails,
-  //     fadeIn,
-  //     philosophyTextTable,
-  //     strategyTextTable,
-  //     frameworkTableText
-  //   } = this.state;
-  //   if (currentDetails === "esg philosophy") {
-  //     return (
-  //       <TextTableContainer
-  //         fadeIn={fadeIn}
-  //         currentDetails={currentDetails}
-  //         text={philosophyTextTable}
-  //         currentDetailIdx={0}
-  //         handleButtonClick={this.handleButtonClick}
-  //       />
-  //     );
-  //   } else if (currentDetails === "esg strategy") {
-  //     return (
-  //       <TextTableContainer
-  //         fadeIn={fadeIn}
-  //         currentDetails={currentDetails}
-  //         text={strategyTextTable}
-  //         currentDetailIdx={0}
-  //         handleButtonClick={this.handleButtonClick}
-  //       />
-  //     );
-  //   } else {
-  //     return (
-  //       <div className="framework">
-  //         <TextTableContainer
-  //           fadeIn={fadeIn}
-  //           currentDetails={currentDetails}
-  //           text={frameworkTableText}
-  //           currentDetailIdx={0}
-  //           handleButtonClick={this.handleButtonClick}
-  //         />
-  //         <ScrollIndicator />
-  //       </div>
-  //     );
-  //   }
-  // }
 
   render() {
     const {
@@ -252,10 +187,7 @@ class Esg extends Component {
         <SubNav
           navItems={navItems}
           match={match}
-          // handleClick={this.handleClick}
           currentDetails={currentDetails}
-          // currentDetailIdx={currentDetailIdx}
-          // fadeIn={false}
         />
         <Switch>
           <Route

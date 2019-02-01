@@ -542,7 +542,6 @@ class Approach extends Component {
   render() {
     const {
       navItems,
-      fadeIn,
       currentDetails,
       currentDetailIdx,
       sectorsTableText,

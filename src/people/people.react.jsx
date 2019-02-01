@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import findKey from "lodash/findKey";
-// import upperFirst from "lodash/upperFirst";
-import pickBy from "lodash/pickBy";
 import SubNav from "../sub_navigation/sub_navigation.react";
 import TeamDetails from "./TeamDetails.react";
-// import Navigation from "../navigation/navigation.react";
 import TextTableContainer from "../layout/text-table-container.react";
 import Dafe from "../media/Dafe.jpg";
 import Fungai from "../media/fungai.jpg";
 import Yannick from "../media/yannick.jpg";
 import Kofi from "../media/KDomfeh.Portraitfull.jpg";
-// import PeopleDetails from "./peopleDetails.react";
 
 import "./people.css";
 
@@ -174,7 +169,6 @@ class People extends Component {
 
   componentDidMount() {
     const { location } = this.props;
-    const { navItems } = this.state;
     if (location.pathname === "/people") {
       this.setState({ currentDetails: "experienced" });
       return;
