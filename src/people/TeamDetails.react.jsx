@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import Snapshot from './snapshot.react';
-import { Fade } from 'reactstrap';
-import { filter, findKey, slice } from 'lodash';
-import PersonDetails from './personDetails';
+import React, { Component } from "react";
+// import Row from "reactstrap/Row";
+// import Container from "reactstrap/Container";
+import { Col, Row, Container, Fade } from "reactstrap";
+// import Fade from "reactstrap/Fade";
+import filter from "lodash/filter";
+import findKey from "lodash/findKey";
+import slice from "lodash/slice";
 
-import './team-details.css';
+import Snapshot from "./snapshot.react";
+import PersonDetails from "./personDetails";
+
+import "./team-details.css";
 
 class TeamDetails extends Component {
   constructor() {
@@ -13,13 +18,14 @@ class TeamDetails extends Component {
     this.state = {
       isOpen: false,
       personDetails: [],
-      currentPerson: '',
+      currentPerson: "",
       idx: null,
-      teamDetailsNoColors: [],
+      teamDetailsNoColors: []
     };
   }
 
   componentDidMount() {
+    console.log("componentDidMount team details");
     const { teamDetails, closeDetails } = this.props;
 
     const teamDetailsNoColors = filter(teamDetails, detail => {
@@ -36,7 +42,7 @@ class TeamDetails extends Component {
   }
 
   handleClick = e => {
-    console.log('handle person click');
+    console.log("handle person click");
     // const { teamDetails } = this.props;
     const { teamDetailsNoColors } = this.state;
     const currentPerson = e.target.textContent.toLowerCase(); //return.key;
@@ -44,34 +50,34 @@ class TeamDetails extends Component {
     e.preventDefault();
 
     if (
-      currentPerson.includes('red') ||
-      currentPerson.includes('blue') ||
-      currentPerson.includes('grey') ||
-      currentPerson.includes('Our') ||
+      currentPerson.includes("red") ||
+      currentPerson.includes("blue") ||
+      currentPerson.includes("grey") ||
+      currentPerson.includes("Our") ||
       currentPerson === undefined
     ) {
       this.setState({ isOpen: false });
       return;
-    } else if (currentPerson.includes('dafe')) {
+    } else if (currentPerson.includes("dafe")) {
       this.setState({
         isOpen: true,
         idx: 1,
-        currentPerson: teamDetailsNoColors[1].name,
+        currentPerson: teamDetailsNoColors[1].name
       });
       this.props.handleBioClick();
-    } else if (currentPerson.includes('kofi')) {
+    } else if (currentPerson.includes("kofi")) {
       this.setState({
         isOpen: true,
         idx: 3,
-        currentPerson: teamDetailsNoColors[3].name,
+        currentPerson: teamDetailsNoColors[3].name
       });
 
       this.props.handleBioClick();
-    } else if (currentPerson.includes('fungai')) {
+    } else if (currentPerson.includes("fungai")) {
       this.setState({
         isOpen: true,
         idx: 0,
-        currentPerson: teamDetailsNoColors[0].name,
+        currentPerson: teamDetailsNoColors[0].name
       });
 
       this.props.handleBioClick();
@@ -79,7 +85,7 @@ class TeamDetails extends Component {
       this.setState({
         isOpen: true,
         idx: 2,
-        currentPerson: teamDetailsNoColors[2].name,
+        currentPerson: teamDetailsNoColors[2].name
       });
 
       this.props.handleBioClick();
@@ -87,7 +93,7 @@ class TeamDetails extends Component {
   };
 
   handleNextClick = e => {
-    console.log('handleNextClick -- personDetails');
+    console.log("handleNextClick -- personDetails");
     // const { teamDetails } = this.props;
     const { idx, teamDetailsNoColors } = this.state;
     let nextIdx = 0;
@@ -100,7 +106,7 @@ class TeamDetails extends Component {
     const nextPerson = teamDetailsNoColors[nextIdx].name;
     this.setState({
       idx: nextIdx,
-      currentPerson: nextPerson,
+      currentPerson: nextPerson
     });
   };
 
@@ -111,14 +117,14 @@ class TeamDetails extends Component {
     const row3 = slice(teamDetails, 7, 11);
 
     return (
-      <main className="main">
+      <div className="main">
         <Container>
           <Row>
             {row1.map(member => {
               if (
-                member.name.includes('blue') ||
-                member.name.includes('red') ||
-                member.name.includes('grey')
+                member.name.includes("blue") ||
+                member.name.includes("red") ||
+                member.name.includes("grey")
               ) {
                 return (
                   <Col
@@ -144,25 +150,25 @@ class TeamDetails extends Component {
           <Row className="offset">
             {row2.map(member => {
               if (
-                member.name.includes('blue') ||
-                member.name.includes('red') ||
-                member.name.includes('grey')
+                member.name.includes("blue") ||
+                member.name.includes("red") ||
+                member.name.includes("grey")
               ) {
                 return (
                   <Col
                     className={`colorContainer ${member.name}`}
                     key={member.name}
-                    xs={{ size: '3' }}
-                    sm={{ size: '3' }}
+                    xs={{ size: "3" }}
+                    sm={{ size: "3" }}
                   />
                 );
-              } else if (member.name.includes('Our')) {
+              } else if (member.name.includes("Our")) {
                 return (
                   <Col
                     className={`colorContainer ${member.name}`}
                     key={member.name}
-                    xs={{ size: '3' }}
-                    sm={{ size: '3' }}
+                    xs={{ size: "3" }}
+                    sm={{ size: "3" }}
                   >
                     <h5 className="header">{member.name.toUpperCase()}</h5>
                   </Col>
@@ -173,8 +179,8 @@ class TeamDetails extends Component {
                     key={member.name}
                     handleClick={this.handleClick}
                     value={member}
-                    xs={{ size: '3' }}
-                    sm={{ size: '3' }}
+                    xs={{ size: "3" }}
+                    sm={{ size: "3" }}
                   />
                 );
               }
@@ -183,9 +189,9 @@ class TeamDetails extends Component {
           <Row>
             {row3.map(member => {
               if (
-                member.name.includes('blue') ||
-                member.name.includes('red') ||
-                member.name.includes('grey')
+                member.name.includes("blue") ||
+                member.name.includes("red") ||
+                member.name.includes("grey")
               ) {
                 return (
                   <Col
@@ -209,7 +215,7 @@ class TeamDetails extends Component {
             })}
           </Row>
         </Container>
-      </main>
+      </div>
     );
   }
 
@@ -234,7 +240,7 @@ class TeamDetails extends Component {
     const { isOpen } = this.state;
     const { fadeIn, closeDetails } = this.props;
     return (
-      <Fade in={fadeIn} key={'teamPage'} className="TeamDetails">
+      <Fade in={fadeIn} key={"teamPage"} className="TeamDetails">
         {isOpen === true && closeDetails === false
           ? this.renderDetails()
           : this.renderBios()}
