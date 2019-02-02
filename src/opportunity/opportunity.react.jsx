@@ -190,8 +190,7 @@ class Opportunities extends Component {
         nextDetails = currentNavItem[index].url.split(" ")[1];
       //
       this.setState({
-        currentDetails: nextDetails,
-        fadeIn: false
+        currentDetails: nextDetails
       });
     }
   }
@@ -222,7 +221,7 @@ class Opportunities extends Component {
             path={match.url + "/why_africa"}
             render={() => (
               <TextTableContainer
-                fadeIn={fadeIn}
+                fadeIn={true}
                 currentDetails={currentDetails}
                 text={whyAfricaTableText}
                 currentDetailIdx={0}

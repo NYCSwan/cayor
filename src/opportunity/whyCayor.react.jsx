@@ -18,7 +18,7 @@ export default class WhyCayor extends Component {
         return target === item.header;
       }),
       index = Number(findKey(currentNavItem));
-    debugger;
+
     this.setState({ currentDetailIdx: index });
   }
 
