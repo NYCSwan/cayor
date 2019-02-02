@@ -26,6 +26,8 @@
     padding-inline-start: 0;
     float: right;
     align-items: flex-start;
+    margin-top: -8px;
+    padding-right: 4%;
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -48,7 +50,8 @@
       display: none; }
     .sub_navigation .list .active {
       color: #9b1d1f;
-      line-height: normal; }
+      line-height: normal;
+      margin-top: 5px; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .sub_navigation .list .active {
           width: 90%;
@@ -57,95 +60,94 @@
         .sub_navigation .list .active {
           width: 90%;
           text-align: fit-content; } }
-    .sub_navigation .list .top {
+    .sub_navigation .list .top a {
       list-style: none;
       display: block;
       align-self: flex-start;
       color: #113a6e;
       font-weight: 700;
-      width: fit-content;
+      min-width: 25vmin;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
+      padding-bottom: 1vmin;
+      padding-top: 1vmin;
       /* Large screens ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top {
-          font-size: 0.8em;
-          padding-bottom: 2px; } }
+        .sub_navigation .list .top a {
+          font-size: 0.8em; } }
       @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top {
-          font-size: 0.8em;
-          padding-bottom: 2px; } }
+        .sub_navigation .list .top a {
+          font-size: 0.8em; } }
       @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
-        .sub_navigation .list .top {
+        .sub_navigation .list .top a {
           margin-top: 0; } }
-      .sub_navigation .list .top.active {
-        font-weight: bolder;
-        margin-left: -4%;
-        width: fit-content;
-        word-wrap: normal; }
-        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-          .sub_navigation .list .top.active {
-            margin-left: -5%;
-            width: 100%; } }
-        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-          .sub_navigation .list .top.active {
-            margin-left: -5%;
-            width: 100%; } }
-        .sub_navigation .list .top.active:hover {
-          font-weight: bolder; }
-        .sub_navigation .list .top.active .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
-          width: auto;
-          margin-left: -10px;
-          display: inline; }
-      .sub_navigation .list .top:hover {
-        text-decoration: underline;
-        font-weight: bold;
-        cursor: grab; }
+    .sub_navigation .list .top.active {
+      font-weight: bolder;
+      margin-left: -10%;
+      width: 100%;
+      word-wrap: normal; }
+      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        .sub_navigation .list .top.active {
+          margin-left: -5%;
+          width: 100%; } }
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .sub_navigation .list .top.active {
+          margin-left: -5%;
+          width: 100%; } }
+      .sub_navigation .list .top.active:hover {
+        font-weight: bolder; }
+      .sub_navigation .list .top.active .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
+        width: auto;
+        margin-left: -10px;
+        display: inline; }
+    .sub_navigation .list .top:hover {
+      text-decoration: underline;
+      font-weight: bold;
+      cursor: grab; }
     .sub_navigation .list .sub {
-      color: #696969;
-      padding: 4px 10px;
-      list-style: none;
-      width: fit-content;
-      text-align: left;
-      -moz-text-align-last: left;
-      flex-grow: 1;
-      display: block;
-      /* Large screens ----------- */ }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .sub {
-          width: 100%;
-          max-height: 70px;
-          font-size: 0.8em; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .sub {
-          width: 100%;
-          max-height: 70px;
-          font-size: 0.8em; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-        .sub_navigation .list .sub {
-          width: 100%;
-          max-height: 70px;
-          font-size: 0.8em; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-        .sub_navigation .list .sub {
-          width: 100%;
-          max-height: 70px;
-          font-size: 0.8em; } }
-      @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
-        .sub_navigation .list .sub {
-          max-height: 100px;
-          align-self: flex-start;
-          margin-top: 0; } }
+      display: block; }
+      .sub_navigation .list .sub a {
+        color: #696969;
+        padding: 4px 10px;
+        list-style: none;
+        width: 100%;
+        text-align: left;
+        -moz-text-align-last: left;
+        /* Large screens ----------- */ }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .sub a {
+            width: 100%;
+            max-height: 70px;
+            font-size: 0.8em; } }
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .sub a {
+            width: 100%;
+            max-height: 70px;
+            font-size: 0.8em; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          .sub_navigation .list .sub a {
+            width: 100%;
+            max-height: 70px;
+            font-size: 0.8em; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+          .sub_navigation .list .sub a {
+            width: 100%;
+            max-height: 70px;
+            font-size: 0.8em; } }
+        @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
+          .sub_navigation .list .sub a {
+            max-height: 100px;
+            align-self: flex-start;
+            margin-top: 0; } }
       .sub_navigation .list .sub.active {
         color: #9b1d1f;
-        margin-left: -1%;
-        width: fit-content; }
+        margin-left: -3%;
+        width: 100%; }
       .sub_navigation .list .sub:hover {
         text-decoration: underline;
         font-weight: bold;
         cursor: grab; }
-      .sub_navigation .list .sub .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
+      .sub_navigation .list .sub .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
         width: auto;
-        margin-left: -10px;
-        display: inline; }
+        margin-left: -10px; }

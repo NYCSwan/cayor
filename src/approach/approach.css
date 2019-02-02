@@ -1,18 +1,16 @@
 .approach {
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex: row;
+  line-height: auto; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .approach {
       overflow: auto; } }
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .approach {
       overflow: auto; } }
-  .approach .body {
-    height: 100%;
-    display: flex;
-    flex: row;
-    line-height: auto; }
   .approach.slide-enter {
     z-index: 10;
     opacity: 0.1; }

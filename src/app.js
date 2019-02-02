@@ -5,14 +5,14 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faTimes,
   faAlignJustify,
-  faLongArrowAltRight
+  faArrowRight
 } from "@fortawesome/free-solid-svg-icons";
 // import { faArrowAltCircleDown } from "@fortawesome/fontawesome-free-regular";
 
 import "./App.css";
 import Routes from "./routes";
 
-library.add(faTimes, faAlignJustify, faLongArrowAltRight);
+library.add(faTimes, faAlignJustify, faArrowRight);
 
 class App extends Component {
   state = {

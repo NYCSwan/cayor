@@ -16,7 +16,7 @@ const SubNav = props => (
             key={navItem.value}
             // onClick={navItem.style === "sub" ? props.handleClick : null}
             className={
-              props.currentDetails === navItem.url
+              props.currentDetails === navItem.url.split(" ")[1]
                 ? `${navItem.style} active`
                 : navItem.style
             }
@@ -27,7 +27,7 @@ const SubNav = props => (
                   ? `active`
                   : "hideIcon"
               }
-              icon="faLongArrowAltRight"
+              icon="arrow-right"
               pull="left"
             />
             <Link to={location}>

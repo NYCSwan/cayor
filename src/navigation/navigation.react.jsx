@@ -173,7 +173,7 @@ class Navigation extends Component {
                   <FontAwesomeIcon
                     className={"menu"}
                     icon="align-justify"
-                    size={"2x"}
+                    size={"lg"}
                   />
                 </DropdownToggle>
                 <DropdownMenu>
