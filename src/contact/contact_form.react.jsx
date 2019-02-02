@@ -1,23 +1,22 @@
-import React from 'react';
-import { Popover, PopoverHeader, PopoverBody, Fade } from 'reactstrap';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/fontawesome-free-solid';
-import './contact_form.css';
+import React from "react";
+import { Popover, PopoverHeader, PopoverBody, Fade } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./contact_form.css";
 
 const ContactForm = props => (
   <Popover
     className="contactForm"
     target={props.contactLocation}
     hideArrow={true}
-    placement={props.location.pathname === '/' ? 'auto-end' : 'top-end'}
+    placement={props.location.pathname === "/" ? "auto-end" : "top-end"}
     isOpen={props.isContactModalOpen}
   >
     <PopoverHeader>
       contact us
       <FontAwesomeIcon
         onClick={props.handleClose}
-        className={'times'}
-        icon={faTimes}
+        className="times"
+        icon="times"
         pull="right"
       />
     </PopoverHeader>

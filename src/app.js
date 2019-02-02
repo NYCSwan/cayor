@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTimes,
+  faAlignJustify,
+  faLongArrowAltRight
+} from "@fortawesome/free-solid-svg-icons";
+// import { faArrowAltCircleDown } from "@fortawesome/fontawesome-free-regular";
 
 import "./App.css";
 import Routes from "./routes";
+
+library.add(faTimes, faAlignJustify, faLongArrowAltRight);
 
 class App extends Component {
   state = {

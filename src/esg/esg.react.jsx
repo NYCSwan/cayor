@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import findKey from "lodash/findKey";
-import pickBy from "lodash/pickBy";
 
 import TextTableContainer from "../layout/text-table-container.react";
 import SubNav from "../sub_navigation/sub_navigation.react";
-// import Footer from "../layout/footer.react";
-// import ScrollIndicator from "../layout/scrollIndicator.react";
-// import Navigation from "../navigation/navigation.react";
 import "./esg.css";
 
 class Esg extends Component {
@@ -154,16 +149,12 @@ class Esg extends Component {
 
   componentDidMount() {
     const { location } = this.props;
-    const { navItems } = this.state;
+    // const { navItems } = this.state;
     if (location.pathname === "/esg") {
       // this.setState({ currentDetails: "philosophy" });
       return;
     } else {
       const topic = location.state.id,
-        currentNavItem = pickBy(navItems, item => {
-          // debugger;
-          return topic === item.url.split(" ")[1]; //.replace(" ", "")
-        }),
         subNavTopic = topic.toLowerCase();
       this.setState({
         currentDetails: subNavTopic

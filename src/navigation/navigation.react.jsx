@@ -9,8 +9,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import { faAlignJustify } from "@fortawesome/fontawesome-free-solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Clock from "../clocks/clock.react";
 import WhiteLogo from "../media/grey-white-icon.png";
@@ -96,12 +95,6 @@ class Navigation extends Component {
       );
     }
   };
-  // handleClick = e => {
-  //   // e.preventDefault();
-  //   const activeItem = e.target.classList[1];
-  //   this.setState({ active: activeItem });
-  //   // debugger;
-  // };
 
   render() {
     const { contactLocation, collapse } = this.state;
@@ -179,7 +172,7 @@ class Navigation extends Component {
                 <DropdownToggle>
                   <FontAwesomeIcon
                     className={"menu"}
-                    icon={faAlignJustify}
+                    icon="align-justify"
                     size={"2x"}
                   />
                 </DropdownToggle>

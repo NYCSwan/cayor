@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import { faLongArrowAltRight } from "@fortawesome/fontawesome-free-solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./sub_navigation.css";
 
 const SubNav = props => (
@@ -28,7 +27,7 @@ const SubNav = props => (
                   ? `active`
                   : "hideIcon"
               }
-              icon={faLongArrowAltRight}
+              icon="faLongArrowAltRight"
               pull="left"
             />
             <Link to={location}>
