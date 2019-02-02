@@ -27,7 +27,7 @@ const SubNav = props => (
                   ? `active`
                   : "hideIcon"
               }
-              icon="faLongArrowAltRight"
+              icon="arrow-right"
               pull="left"
             />
             <Link to={location}>
