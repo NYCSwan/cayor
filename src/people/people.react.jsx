@@ -5,8 +5,8 @@ import TeamDetails from "./TeamDetails.react";
 import TextTableContainer from "../layout/text-table-container.react";
 import Dafe from "../media/Dafe.jpg";
 import Fungai from "../media/Dafe.jpg";
-import Yannick from "../media/yannick.jpg";
-import Kofi from "../media/KDomfeh.Portraitfull.jpg";
+import Yannick from "../media/Dafe.jpg";
+import Kofi from "../media/Dafe.jpg";
 
 import "./people.css";
 
