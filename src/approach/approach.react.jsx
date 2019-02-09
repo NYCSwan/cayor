@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import findKey from "lodash/findKey";
 import pickBy from "lodash/pickBy";
 import { Switch, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import SubNav from "../sub_navigation/sub_navigation.react";
 import TextTableContainer from "../layout/text-table-container.react";
-// import Footer from "../layout/footer.react";
-// import Navigation from "../navigation/navigation.react";
 import RegionDetails from "./TargetRegionDetails.react";
 import Agribusiness from "../media/agriculture.jpg";
 import Manufacturing from "../media/supermarket.jpg";
@@ -16,6 +15,10 @@ import FinTech from "../media/fin.jpg";
 import "./approach.css";
 
 class Approach extends Component {
+  static defaultProps = {
+    inTransition: true
+  };
+
   state = {
     navItems: [
       {
@@ -538,7 +541,7 @@ class Approach extends Component {
       });
     }
   }
-  g;
+
   render() {
     const {
       navItems,
@@ -549,9 +552,11 @@ class Approach extends Component {
       investmentCriteriaTableText,
       buttonDisabled,
       cayorApproachTableText
+      // fadeIn
     } = this.state;
-    const { width, height, match, location } = this.props;
+    const { inTransition, width, height, match, location } = this.props;
 
+    // debugger;
     return (
       <main className="approach" style={{ maxHeight: height, maxWidth: width }}>
         <SubNav
@@ -559,74 +564,111 @@ class Approach extends Component {
           match={match}
           currentDetails={currentDetails}
         />
-        <Switch>
-          <Route
-            path={`${match.url}/cayor_approach`}
-            render={routeProps => (
-              <TextTableContainer
-                disabled={buttonDisabled}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={cayorApproachTableText}
-                currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
-                {...routeProps}
-              />
-            )}
-          />
-          <Route
-            path={`${match.url}/sectors`}
-            render={() => (
-              <SectorsContainer
-                location={location}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={sectorsTableText}
-                currentDetailIdx={currentDetailIdx}
-                handleButtonClick={this.handleButtonClick}
-              />
-            )}
-          />
-          <Route
-            path={`${match.url}/regions`}
-            render={() => (
-              <RegionDetails
-                location={location}
-                fadeIn={true}
-                text={regionsTableText}
-                // handleButtonClick={this.handleButtonClick}
-              />
-            )}
-          />
-          <Route
-            path={`${match.url}/investments`}
-            render={() => (
-              <TextTableContainer
-                location={location}
-                disabled={buttonDisabled}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                currentDetailIdx={0}
-                text={investmentCriteriaTableText}
-                // handleButtonClick={this.handleButtonClick}
-              />
-            )}
-          />
-          <Route
-            path={match.url}
-            render={routeProps => (
-              <TextTableContainer
-                disabled={buttonDisabled}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={cayorApproachTableText}
-                currentDetailIdx={0}
-                // handleButtonClick={this.handleButtonClick}
-                {...routeProps}
-              />
-            )}
-          />
-        </Switch>
+        <TransitionGroup className="slide">
+          <Switch location={location}>
+            <Route
+              path={`${match.url}/cayor_approach`}
+              render={routeProps => (
+                <CSSTransition
+                  key={location.key}
+                  in={inTransition}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <TextTableContainer
+                    disabled={buttonDisabled}
+                    fadeIn={true}
+                    currentDetails={currentDetails}
+                    text={cayorApproachTableText}
+                    currentDetailIdx={0}
+                    handleButtonClick={this.handleButtonClick}
+                    {...routeProps}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={`${match.url}/sectors`}
+              render={() => (
+                <CSSTransition
+                  key={location.key}
+                  in={inTransition}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <SectorsContainer
+                    location={location}
+                    fadeIn={true}
+                    currentDetails={currentDetails}
+                    text={sectorsTableText}
+                    currentDetailIdx={currentDetailIdx}
+                    handleButtonClick={this.handleButtonClick}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={`${match.url}/regions`}
+              render={() => (
+                <CSSTransition
+                  key={location.key}
+                  in={inTransition}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <RegionDetails
+                    location={location}
+                    fadeIn={true}
+                    text={regionsTableText}
+                    // handleButtonClick={this.handleButtonClick}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={`${match.url}/investments`}
+              render={() => (
+                <CSSTransition
+                  key={location.key}
+                  in={inTransition}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <TextTableContainer
+                    location={location}
+                    disabled={buttonDisabled}
+                    fadeIn={true}
+                    currentDetails={currentDetails}
+                    currentDetailIdx={0}
+                    text={investmentCriteriaTableText}
+                    // handleButtonClick={this.handleButtonClick}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={match.url}
+              render={routeProps => (
+                <CSSTransition
+                  key={location.key}
+                  in={inTransition}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <TextTableContainer
+                    disabled={buttonDisabled}
+                    fadeIn={true}
+                    currentDetails={currentDetails}
+                    text={cayorApproachTableText}
+                    currentDetailIdx={0}
+                    // handleButtonClick={this.handleButtonClick}
+                    {...routeProps}
+                  />
+                </CSSTransition>
+              )}
+            />
+          </Switch>
+        </TransitionGroup>
       </main>
     );
   }
