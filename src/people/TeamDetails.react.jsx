@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Row from "reactstrap/Row";
 // import Container from "reactstrap/Container";
-import { Col, Row, Container, Fade } from "reactstrap";
+import { Col, Row, Container } from "reactstrap";
 // import Fade from "reactstrap/Fade";
 import filter from "lodash/filter";
 import findKey from "lodash/findKey";
@@ -238,13 +238,13 @@ class TeamDetails extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { fadeIn, closeDetails } = this.props;
+    const { closeDetails } = this.props;
     return (
-      <Fade in={fadeIn} key={"teamPage"} className="TeamDetails">
+      <div className="TeamDetails">
         {isOpen === true && closeDetails === false
           ? this.renderDetails()
           : this.renderBios()}
-      </Fade>
+      </div>
     );
   }
 }
