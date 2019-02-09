@@ -9,105 +9,82 @@
     .esg {
       overflow: auto; } }
   .esg .sub_navigation {
-    width: 20%; }
-  .esg .body {
+    width: 25%; }
+  .esg .slide {
     height: 1000px;
     display: flex;
     flex: row;
     align-items: stretch;
     justify-content: space-between; }
-    .esg .body .text-table-container {
+    .esg .slide .text-table-container {
       height: 100%; }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .esg .body .framework {
+      .esg .slide .framework {
         padding-top: 3%; } }
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .esg .body .framework {
+      .esg .slide .framework {
         padding-top: 3%; } }
-    .esg .body .framework .text-table-container {
+    .esg .slide .framework .text-table-container {
       width: inherit;
       height: 55%; }
-      .esg .body .framework .text-table-container .text-table.bullet {
+      .esg .slide .framework .text-table-container .text-table.bullet {
         justify-content: flex-start;
         height: 100%; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-          .esg .body .framework .text-table-container .text-table.bullet {
+          .esg .slide .framework .text-table-container .text-table.bullet {
             justify-content: flex-start;
             width: 100%; } }
         @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-          .esg .body .framework .text-table-container .text-table.bullet {
+          .esg .slide .framework .text-table-container .text-table.bullet {
             justify-content: flex-start;
             width: 100%; } }
-        .esg .body .framework .text-table-container .text-table.bullet .headerContainer {
+        .esg .slide .framework .text-table-container .text-table.bullet .headerContainer {
           width: auto;
           height: auto; }
-          .esg .body .framework .text-table-container .text-table.bullet .headerContainer h4 {
+          .esg .slide .framework .text-table-container .text-table.bullet .headerContainer h4 {
             width: auto;
             height: auto; }
-        .esg .body .framework .text-table-container .text-table.bullet ul {
+        .esg .slide .framework .text-table-container .text-table.bullet .list-group {
           scroll-behavior: smooth;
           overflow-y: scroll;
           height: 80%; }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet ul {
+            .esg .slide .framework .text-table-container .text-table.bullet .list-group {
               padding-top: 3%;
               margin-bottom: 0; } }
           @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet ul {
+            .esg .slide .framework .text-table-container .text-table.bullet .list-group {
               padding-top: 3%;
               margin-bottom: 0; } }
-    .esg .body .framework .scrollIcon {
-      position: fixed;
-      width: 100px;
-      height: auto;
-      right: 50px;
-      bottom: 150px; }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .esg .body .framework .scrollIcon {
-          width: 40px;
-          right: 10px;
-          bottom: 10px; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .esg .body .framework .scrollIcon {
-          width: 40px;
-          right: 10px;
-          bottom: 10px; } }
-  .esg.slide-appear.slide-appear-active {
-    height: 100%;
-    transition: height 400ms ease; }
+  .esg .slide {
+    overflow: hidden; }
+    .esg .slide .slide-enter,
+    .esg .slide .slide-appear {
+      z-index: 1; }
+      .esg .slide .slide-enter.slide-enter-active, .esg .slide .slide-enter.slide-appear-active,
+      .esg .slide .slide-appear.slide-enter-active,
+      .esg .slide .slide-appear.slide-appear-active {
+        animation: slide-in 800ms forwards;
+        -webkit-animation: slide-in 800ms forwards;
+        transition: animation 800ms ease 1s, transform 800ms ease 1s; }
 
 @keyframes slide-in {
   0% {
-    transform: translateX(-100%); }
+    transform: translate3d(-100%, 0, 0); }
   100% {
-    transform: translateX(0%); } }
+    transform: translate3d(0%, 0, 0); } }
 
 @-webkit-keyframes slide-in {
   0% {
-    -webkit-transform: translateX(-100%); }
+    -webkit-transform: translate3d(-100%, 0, 0); }
   100% {
-    -webkit-transform: translateX(0%); } }
-  .esg .slide-enter,
-  .esg .slide-appear {
-    z-index: 1; }
-    .esg .slide-enter.slide-enter-active, .esg .slide-enter.slide-appear-active,
-    .esg .slide-appear.slide-enter-active,
-    .esg .slide-appear.slide-appear-active {
-      animation: slide-in 800ms forwards;
-      transition: animation 800ms ease 1s, transform 800ms ease 1s; }
-
-@keyframes slide-in {
-  0% {
-    transform: translate3d(-80%, 0, 0); }
-  100% {
-    transform: translate3d(0%, 0, 0); } }
+    -webkit-transform: translate3d(0%, 0, 0); } }
   .esg .slide-exit {
-    transform: scale(1); }
+    background-color: green; }
     .esg .slide-exit.slide-exit-active {
-      transform: scale(0);
       animation: slide-out 800ms forwards;
       -webkit-animation: slide-out 800ms forwards;
-      transition: transform 500ms ease; }
+      transition: animation 500ms ease; }
 
 @keyframes slide-out {
   0% {

@@ -172,10 +172,11 @@ class Esg extends Component {
       fadeIn,
       navItems
     } = this.state;
-    const { width, height, match, location } = this.props;
+    const { width, height, match, location } = this.props,
+      bodyHeight = Math.floor(height * 0.8);
 
     return (
-      <main className="esg" style={{ maxHeight: height, maxWidth: width }}>
+      <main className="esg" style={{ maxHeight: bodyHeight, maxWidth: width }}>
         <SubNav
           navItems={navItems}
           match={match}
