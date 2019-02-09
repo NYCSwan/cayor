@@ -2,10 +2,8 @@
 @import "../_mixins";
 
 .approach {
-  // width: 100%;
-  // height: 100%;
   overflow: hidden;
-  // height: 100%;
+  height: 100%;
   display: flex;
   flex: row;
   line-height: auto;
@@ -14,6 +12,5 @@
   }
 
   @include slide-enter;
-  @include enter;
   @include slide-exit;
 }
