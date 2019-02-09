@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import MinuteHand from './hands/minute_hand.react';
-import HourHand from './hands/hour_hand.react';
+import MinuteHand from "./hands/minute_hand.react";
+import HourHand from "./hands/hour_hand.react";
 
-import './clock.css';
+import "./clock.css";
 
 class Clock extends Component {
   state = {
     currentLocalDateTime: new Date(),
     time: null,
     hourHand: null
-
-  }
+  };
 
   componentDidMount() {
-    console.log('componentDidMount clock');
+    // console.log('componentDidMount clock');
     this.setTime();
   }
 
@@ -28,31 +27,32 @@ class Clock extends Component {
     const utc = localTime + localOffset;
     // joburg time
     const offset = this.props.offset;
-    const location = utc + (3600000 * offset);
+    const location = utc + 3600000 * offset;
     const locationDate = new Date(location);
 
     this.setState({
       time: locationDate
-    })
-
-  }
+    });
+  };
 
   render() {
     return (
       <div className={`${this.props.className} clock`}>
-      { this.state.time &&
-        <div>
-          <MinuteHand className={this.props.className} time={this.state.time} />
-          <div className='clockButton'></div>
-          <HourHand className={this.props.className} time={this.state.time} />
-        </div>
-      }
+        {this.state.time && (
+          <div>
+            <MinuteHand
+              className={this.props.className}
+              time={this.state.time}
+            />
+            <div className="clockButton" />
+            <HourHand className={this.props.className} time={this.state.time} />
+          </div>
+        )}
       </div>
-    )
+    );
   }
 }
 
 export default Clock;
-
 
 // turn into React.Fragment
