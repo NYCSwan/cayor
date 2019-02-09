@@ -16,60 +16,68 @@ const history = createHistory();
 
 class Routes extends Component {
   state = {
-    // currentImageIdx: 0,
+    slideIn: true,
     showTest: false
   };
 
+  componentDidMount() {
+    console.log("routes mounted");
+    this.setState({ slideIn: false });
+  }
+
   render() {
-    const currentKey = this.props.location.pathname.split("/")[1] || "/";
-    const timeout = { enter: 1800, exit: 800 };
-    console.log("currentKey", currentKey);
     const {
-      handleClick,
-      isContactModalOpen,
-      height,
-      width,
-      handleClose,
-      deviceIdx
-    } = this.props;
+        handleClick,
+        isContactModalOpen,
+        height,
+        width,
+        handleClose,
+        deviceIdx,
+        fadeIn
+      } = this.props,
+      timeout = { enter: 1200, exit: 800 },
+      currentKey = this.props.location.pathname.split("/")[1] || "/";
 
     return (
       <Router history={history}>
         <Route
           render={({ location }) => (
-            <div>
-              <Navigation
-                fadeIn={false}
-                headerImg={
-                  location.pathname.split("/")[1] === ""
-                    ? "homepage"
-                    : location.pathname.split("/")[1]
-                }
-                history={history}
-                location={location}
-                handleClose={handleClose}
-                isContactModalOpen={isContactModalOpen}
-                handleClockClick={handleClick}
-              />
-              <TransitionGroup
-                className="router"
-                childFactory={child =>
-                  React.cloneElement(child, {
-                    classNames: "slide",
-                    timeout: timeout
-                  })
-                }
+            // <div>
+            <TransitionGroup
+              className="router"
+              childFactory={child =>
+                React.cloneElement(child, {
+                  classNames: "slide",
+                  timeout: timeout
+                })
+              }
+            >
+              <CSSTransition
+                classNames="slide"
+                timeout={timeout}
+                key={currentKey}
+                in={fadeIn}
+                mountOnEnter
+                unmountOnExit
               >
-                <CSSTransition
-                  timeout={timeout}
-                  key={location.key}
-                  mountOnEnter
-                >
+                <div className="root-container">
+                  <Navigation
+                    fadeIn={fadeIn}
+                    headerImg={
+                      location.pathname.split("/")[1] === ""
+                        ? "homepage"
+                        : location.pathname.split("/")[1]
+                    }
+                    history={history}
+                    location={location}
+                    handleClose={handleClose}
+                    isContactModalOpen={isContactModalOpen}
+                    handleClockClick={handleClick}
+                  />
                   <Switch location={location}>
                     <Route
                       exact
                       path="/"
-                      // component={Homepage}
                       render={routeProps => {
                         // eslint-disable-line
                         return (
@@ -87,7 +95,6 @@ class Routes extends Component {
                     />
                     <Route
                       path="/people"
-                      // component={PeopleRoutes}
                       render={routeProps => {
                         // eslint-disable-line
                         return (
@@ -151,10 +158,11 @@ class Routes extends Component {
                       }}
                     />
                   </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-              <Footer location={location} />
-            </div>
+                  <Footer location={location} />
+                </div>
+              </CSSTransition>
+            </TransitionGroup>
+            // </div>
           )}
         />
       </Router>
