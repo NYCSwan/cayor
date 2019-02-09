@@ -1,10 +1,9 @@
 import React from "react";
-// import { Fade } from 'reactstrap';
+
 import List from "./list.react";
 import "./text-table.css";
 
 const TextTable = props => (
-  // <Fade in={props.fadeIn}>
   <div
     className={
       props.text.template ? `text-table ${props.text.template}` : "text-table"
@@ -24,6 +23,5 @@ const TextTable = props => (
     ) : null}
     <List style={props.location} items={props.text.details} />
   </div>
-  // </Fade>
 );
 export default TextTable;

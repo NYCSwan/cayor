@@ -1,5 +1,5 @@
 .text-table-container {
-  width: 70%;
+  width: 80%;
   display: inline-block;
   margin-bottom: 0;
   margin-top: 3%;
@@ -12,12 +12,10 @@
   @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
     .text-table-container {
       margin-top: 8%; } }
-  .text-table-container .fade.show {
-    height: 100%; }
-    .text-table-container .fade.show .header.left {
-      float: left;
-      font-size: 1.75rem;
-      width: 40%;
-      display: inline-block;
-      color: #696969;
-      background: rgba(0, 0, 0, 0); }
+  .text-table-container .header.left {
+    float: left;
+    font-size: 1.75rem;
+    width: 40%;
+    display: inline-block;
+    color: #696969;
+    background: rgba(0, 0, 0, 0); }
