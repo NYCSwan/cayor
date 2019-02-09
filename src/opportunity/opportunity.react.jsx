@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import findKey from "lodash/findKey";
 import pickBy from "lodash/pickBy";
-// import Footer from "../layout/footer.react";
-// import Navigation from "../navigation/navigation.react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import SubNav from "../sub_navigation/sub_navigation.react";
 import TextTableContainer from "../layout/text-table-container.react";
 import WhyCayor from "./whyCayor.react";
@@ -216,45 +215,73 @@ class Opportunities extends Component {
           match={match}
           currentDetails={currentDetails}
         />
-        <Switch>
-          <Route
-            path={match.url + "/why_africa"}
-            render={() => (
-              <TextTableContainer
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={whyAfricaTableText}
-                currentDetailIdx={0}
-                location={location}
-              />
-            )}
-          />
-          <Route
-            path={match.url + "/why_cayor"}
-            render={routeProps => (
-              <WhyCayor
-                currentDetails={currentDetails}
-                text={whyCayorTableText}
-                {...routeProps}
-              />
-            )}
-          />
-
-          <Route
-            exact
-            path={match.url}
-            render={routeProps => (
-              <TextTableContainer
-                fadeIn={fadeIn}
-                currentDetails={currentDetails}
-                text={whyCayorTableText}
-                currentDetailIdx={0}
-                handleClick={this.handleButtonClick}
-                {...routeProps}
-              />
-            )}
-          />
-        </Switch>
+        <TransitionGroup className="slide">
+          <Switch location={location}>
+            <Route
+              path={match.url + "/why_africa"}
+              render={() => (
+                <CSSTransition
+                  key={location.key}
+                  in={fadeIn}
+                  timeout={1000}
+                  classNames={"slide"}
+                  mountOnEnter
+                  unmountOnExit
+                >
+                  <TextTableContainer
+                    fadeIn={true}
+                    currentDetails={currentDetails}
+                    text={whyAfricaTableText}
+                    currentDetailIdx={0}
+                    location={location}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={match.url + "/why_cayor"}
+              render={routeProps => (
+                <CSSTransition
+                  key={location.key}
+                  in={fadeIn}
+                  timeout={1000}
+                  classNames={"slide"}
+                  mountOnEnter
+                  unmountOnExit
+                >
+                  <WhyCayor
+                    currentDetails={currentDetails}
+                    text={whyCayorTableText}
+                    {...routeProps}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              exact
+              path={match.url}
+              render={routeProps => (
+                <CSSTransition
+                  key={location.key}
+                  in={fadeIn}
+                  timeout={1000}
+                  classNames={"slide"}
+                  mountOnEnter
+                  unmountOnExit
+                >
+                  <TextTableContainer
+                    fadeIn={fadeIn}
+                    currentDetails={currentDetails}
+                    text={whyCayorTableText}
+                    currentDetailIdx={0}
+                    handleClick={this.handleButtonClick}
+                    {...routeProps}
+                  />
+                </CSSTransition>
+              )}
+            />
+          </Switch>
+        </TransitionGroup>
       </main>
     );
   }

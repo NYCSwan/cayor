@@ -8,49 +8,29 @@
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .opportunity {
       overflow: auto; } }
-  .opportunity.slide-appear.slide-appear-active {
-    height: 100%;
-    transition: height 400ms ease; }
+  .opportunity .slide {
+    height: 80%; }
+    .opportunity .slide .slide-enter,
+    .opportunity .slide .slide-appear {
+      z-index: 1; }
+      .opportunity .slide .slide-enter.slide-enter-active, .opportunity .slide .slide-enter.slide-appear-active,
+      .opportunity .slide .slide-appear.slide-enter-active,
+      .opportunity .slide .slide-appear.slide-appear-active {
+        animation: slide-in 800ms forwards;
+        transition: animation 800ms ease 1s, transform 800ms ease 1s; }
 
 @keyframes slide-in {
   0% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(0%); } }
-
-@-webkit-keyframes slide-in {
-  0% {
-    -webkit-transform: translateX(-100%); }
-  100% {
-    -webkit-transform: translateX(0%); } }
-  .opportunity.slide-enter {
-    z-index: 10;
-    opacity: 0.1; }
-    .opportunity.slide-enter.slide-enter-active {
-      opacity: 1;
-      animation: slide-in 800ms forwards;
-      -webkit-animation: slide-in 800ms forwards;
-      transition: height 500ms ease 800ms, animation 1s ease 850ms, opacity 1s ease 850ms; }
-
-@keyframes slide-in {
-  0% {
-    transform: translate3d(-100%, 0, 0); }
+    transform: translate3d(-80%, 0, 0); }
   100% {
     transform: translate3d(0%, 0, 0); } }
-
-@-webkit-keyframes slide-in {
-  0% {
-    -webkit-transform: translate3d(-100%, 0, 0); }
-  100% {
-    -webkit-transform: translate3d(0%, 0, 0); } }
-  .opportunity.slide-exit {
-    z-index: 10;
-    opacity: 1; }
-    .opportunity.slide-exit.slide-exit-active {
-      opacity: 0;
-      animation: slide-out 800ms forwards;
-      -webkit-animation: slide-out 800ms forwards;
-      transition: all 800ms ease; }
+    .opportunity .slide .slide-exit {
+      transform: scale(1); }
+      .opportunity .slide .slide-exit.slide-exit-active {
+        transform: scale(0);
+        animation: slide-out 800ms forwards;
+        -webkit-animation: slide-out 800ms forwards;
+        transition: transform 500ms ease; }
 
 @keyframes slide-out {
   0% {
