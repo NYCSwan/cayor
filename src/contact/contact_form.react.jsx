@@ -1,5 +1,5 @@
 import React from "react";
-import { Popover, PopoverHeader, PopoverBody, Fade } from "reactstrap";
+import { Popover, PopoverHeader, PopoverBody } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./contact_form.css";
 
@@ -20,10 +20,10 @@ const ContactForm = props => (
         pull="right"
       />
     </PopoverHeader>
-    <PopoverBody>
+    <PopoverBody className="contactBody">
       {props.contactDetails.map(detail => {
         return (
-          <Fade in={props.fadeIn} key={detail.location} className="contactBody">
+          <div key={props.contactLocation}>
             <img src={detail.imageUrl} alt={detail.imageAlt} />
             <aside className="address">
               <h4>
@@ -36,7 +36,7 @@ const ContactForm = props => (
               </h4>
             </aside>
             <h3>{detail.location.toUpperCase()}</h3>
-          </Fade>
+          </div>
         );
       })}
     </PopoverBody>
