@@ -1,48 +1,48 @@
-.personDetails {
+.fade.show .personDetails {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
   margin-top: 4%; }
-  .personDetails .right {
+  .fade.show .personDetails .right {
     height: 90%;
     font-family: "Merriweather", serif;
     width: 40%; }
-    .personDetails .right .info {
+    .fade.show .personDetails .right .info {
       border-bottom: #d5d5d5 1px solid;
       height: 90%; }
-      .personDetails .right .info .portrait {
+      .fade.show .personDetails .right .info .portrait {
         height: auto;
         width: 70%; }
-      .personDetails .right .info .name {
+      .fade.show .personDetails .right .info .name {
         font-size: 1.2em;
         color: #9b1d1f;
         line-height: 2em;
         margin-top: 5%; }
-      .personDetails .right .info .role {
+      .fade.show .personDetails .right .info .role {
         color: #113a6e;
         font-size: 1em; }
-    .personDetails .right .button {
+    .fade.show .personDetails .right .button {
       margin-top: 3%;
       padding-left: 30px;
       padding-right: 30px;
       text-align: right;
       color: #113a6e; }
-  .personDetails .bioDetails {
+  .fade.show .personDetails .bioDetails {
     width: 50%;
     align-self: flex-start;
     text-align: left; }
-    .personDetails .bioDetails p {
+    .fade.show .personDetails .bioDetails p {
       font-family: "Open Sans", sans-serif;
       font-size: 0.9em;
       color: #444444; }
-      .personDetails .bioDetails p:first-of-type {
+      .fade.show .personDetails .bioDetails p:first-of-type {
         color: #9b1d1f;
         text-align: left;
         width: 90%;
         text-align: justify;
         font-style: "Merriweather", serif;
         padding-bottom: 2%; }
-    .personDetails .bioDetails h5 {
+    .fade.show .personDetails .bioDetails h5 {
       font-family: "Josefin Sans", sans-serif;
       color: #113a6e;
       font-size: 1.2em; }

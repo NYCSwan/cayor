@@ -6,11 +6,11 @@
   overflow: hidden;
   @include respond-to(phone) {
     overflow: auto;
-    max-height: 90%;
+    // max-height: 90%;
   }
-  .sub_navigation {
-    width: 25%;
-  }
+  // .sub_navigation {
+  //   width: 25%;
+  // }
   .slide {
     height: inherit;
     @include slide-enter;

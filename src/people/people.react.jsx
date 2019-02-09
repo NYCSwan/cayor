@@ -196,10 +196,14 @@ class People extends Component {
       teamDetails,
       closeDetails
     } = this.state;
-    const { width, height, match, location } = this.props;
+    const { width, height, match, location } = this.props,
+      bodyHeight = Math.floor(height * 0.8);
 
     return (
-      <main className="people" style={{ minHeight: height, minWidth: width }}>
+      <main
+        className="people"
+        style={{ minHeight: bodyHeight, minWidth: width }}
+      >
         <SubNav
           navItems={navItems}
           match={match}

@@ -4,14 +4,10 @@
   overflow: hidden; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .people {
-      overflow: auto;
-      max-height: 90%; } }
+      overflow: auto; } }
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .people {
-      overflow: auto;
-      max-height: 90%; } }
-  .people .sub_navigation {
-    width: 25%; }
+      overflow: auto; } }
   .people .slide {
     height: inherit; }
     .people .slide .slide {

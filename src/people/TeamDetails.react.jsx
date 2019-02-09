@@ -2,11 +2,10 @@ import React, { Component } from "react";
 // import Row from "reactstrap/Row";
 // import Container from "reactstrap/Container";
 import { Col, Row, Container } from "reactstrap";
-// import Fade from "reactstrap/Fade";
 import filter from "lodash/filter";
 import findKey from "lodash/findKey";
 import slice from "lodash/slice";
-
+import TeamContainer from "./teamContainer.react";
 import Snapshot from "./snapshot.react";
 import PersonDetails from "./personDetails";
 
@@ -110,114 +109,114 @@ class TeamDetails extends Component {
     });
   };
 
-  renderBios() {
-    const { teamDetails } = this.props;
-    const row1 = slice(teamDetails, 0, 4);
-    const row2 = slice(teamDetails, 4, 7);
-    const row3 = slice(teamDetails, 7, 11);
-
-    return (
-      <div className="main">
-        <Container>
-          <Row>
-            {row1.map(member => {
-              if (
-                member.name.includes("blue") ||
-                member.name.includes("red") ||
-                member.name.includes("grey")
-              ) {
-                return (
-                  <Col
-                    className={`colorContainer ${member.name}`}
-                    key={member.name}
-                    xs="3"
-                    sm="3"
-                  />
-                );
-              } else {
-                return (
-                  <Snapshot
-                    key={member.name}
-                    handleClick={this.handleClick}
-                    value={member}
-                    xs="3"
-                    sm="3"
-                  />
-                );
-              }
-            })}
-          </Row>
-          <Row className="offset">
-            {row2.map(member => {
-              if (
-                member.name.includes("blue") ||
-                member.name.includes("red") ||
-                member.name.includes("grey")
-              ) {
-                return (
-                  <Col
-                    className={`colorContainer ${member.name}`}
-                    key={member.name}
-                    xs={{ size: "3" }}
-                    sm={{ size: "3" }}
-                  />
-                );
-              } else if (member.name.includes("Our")) {
-                return (
-                  <Col
-                    className={`colorContainer ${member.name}`}
-                    key={member.name}
-                    xs={{ size: "3" }}
-                    sm={{ size: "3" }}
-                  >
-                    <h5 className="header">{member.name.toUpperCase()}</h5>
-                  </Col>
-                );
-              } else {
-                return (
-                  <Snapshot
-                    key={member.name}
-                    handleClick={this.handleClick}
-                    value={member}
-                    xs={{ size: "3" }}
-                    sm={{ size: "3" }}
-                  />
-                );
-              }
-            })}
-          </Row>
-          <Row>
-            {row3.map(member => {
-              if (
-                member.name.includes("blue") ||
-                member.name.includes("red") ||
-                member.name.includes("grey")
-              ) {
-                return (
-                  <Col
-                    className={`colorContainer ${member.name}`}
-                    key={member.name}
-                    xs="3"
-                    sm="3"
-                  />
-                );
-              } else {
-                return (
-                  <Snapshot
-                    key={member.name}
-                    handleClick={this.handleClick}
-                    value={member}
-                    xs="3"
-                    sm="3"
-                  />
-                );
-              }
-            })}
-          </Row>
-        </Container>
-      </div>
-    );
-  }
+  // renderBios() {
+  //   const { teamDetails } = this.props;
+  //   const row1 = slice(teamDetails, 0, 4);
+  //   const row2 = slice(teamDetails, 4, 7);
+  //   const row3 = slice(teamDetails, 7, 11);
+  //
+  //   return (
+  //     <div className="main">
+  //       <Container>
+  //         <Row>
+  //           {row1.map(member => {
+  //             if (
+  //               member.name.includes("blue") ||
+  //               member.name.includes("red") ||
+  //               member.name.includes("grey")
+  //             ) {
+  //               return (
+  //                 <Col
+  //                   className={`colorContainer ${member.name}`}
+  //                   key={member.name}
+  //                   xs="3"
+  //                   sm="3"
+  //                 />
+  //               );
+  //             } else {
+  //               return (
+  //                 <Snapshot
+  //                   key={member.name}
+  //                   handleClick={this.handleClick}
+  //                   value={member}
+  //                   xs="3"
+  //                   sm="3"
+  //                 />
+  //               );
+  //             }
+  //           })}
+  //         </Row>
+  //         <Row className="offset">
+  //           {row2.map(member => {
+  //             if (
+  //               member.name.includes("blue") ||
+  //               member.name.includes("red") ||
+  //               member.name.includes("grey")
+  //             ) {
+  //               return (
+  //                 <Col
+  //                   className={`colorContainer ${member.name}`}
+  //                   key={member.name}
+  //                   xs={{ size: "3" }}
+  //                   sm={{ size: "3" }}
+  //                 />
+  //               );
+  //             } else if (member.name.includes("Our")) {
+  //               return (
+  //                 <Col
+  //                   className={`colorContainer ${member.name}`}
+  //                   key={member.name}
+  //                   xs={{ size: "3" }}
+  //                   sm={{ size: "3" }}
+  //                 >
+  //                   <h5 className="header">{member.name.toUpperCase()}</h5>
+  //                 </Col>
+  //               );
+  //             } else {
+  //               return (
+  //                 <Snapshot
+  //                   key={member.name}
+  //                   handleClick={this.handleClick}
+  //                   value={member}
+  //                   xs={{ size: "3" }}
+  //                   sm={{ size: "3" }}
+  //                 />
+  //               );
+  //             }
+  //           })}
+  //         </Row>
+  //         <Row>
+  //           {row3.map(member => {
+  //             if (
+  //               member.name.includes("blue") ||
+  //               member.name.includes("red") ||
+  //               member.name.includes("grey")
+  //             ) {
+  //               return (
+  //                 <Col
+  //                   className={`colorContainer ${member.name}`}
+  //                   key={member.name}
+  //                   xs="3"
+  //                   sm="3"
+  //                 />
+  //               );
+  //             } else {
+  //               return (
+  //                 <Snapshot
+  //                   key={member.name}
+  //                   handleClick={this.handleClick}
+  //                   value={member}
+  //                   xs="3"
+  //                   sm="3"
+  //                 />
+  //               );
+  //             }
+  //           })}
+  //         </Row>
+  //       </Container>
+  //     </div>
+  //   );
+  // }
 
   renderDetails() {
     const { currentPerson, teamDetailsNoColors } = this.state;
@@ -238,12 +237,17 @@ class TeamDetails extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { closeDetails } = this.props;
+    const { closeDetails, teamDetails } = this.props;
     return (
       <div className="TeamDetails">
-        {isOpen === true && closeDetails === false
-          ? this.renderDetails()
-          : this.renderBios()}
+        {isOpen === true && closeDetails === false ? (
+          this.renderDetails()
+        ) : (
+          <TeamContainer
+            teamDetails={teamDetails}
+            handleClick={this.handleClick}
+          />
+        )}
       </div>
     );
   }
