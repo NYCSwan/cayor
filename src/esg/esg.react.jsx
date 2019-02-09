@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import TextTableContainer from "../layout/text-table-container.react";
 import SubNav from "../sub_navigation/sub_navigation.react";
@@ -171,7 +172,7 @@ class Esg extends Component {
       fadeIn,
       navItems
     } = this.state;
-    const { width, height, match } = this.props;
+    const { width, height, match, location } = this.props;
 
     return (
       <main className="esg" style={{ maxHeight: height, maxWidth: width }}>
@@ -180,54 +181,84 @@ class Esg extends Component {
           match={match}
           currentDetails={currentDetails}
         />
-        <Switch>
-          <Route
-            path={`${match.url}/philosophy`}
-            render={routeProps => (
-              <TextTableContainer
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={philosophyTextTable}
-                currentDetailIdx={0}
-              />
-            )}
-          />
-          <Route
-            path={`${match.url}/strategy`}
-            render={() => (
-              <TextTableContainer
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={strategyTextTable}
-                currentDetailIdx={0}
-              />
-            )}
-          />
-          <Route
-            path={`${match.url}/framework`}
-            render={() => (
-              <div className="framework">
-                <TextTableContainer
-                  fadeIn={fadeIn}
-                  currentDetails={currentDetails}
-                  text={frameworkTableText}
-                  currentDetailIdx={0}
-                />
-              </div>
-            )}
-          />
-          <Route
-            path={match.url}
-            render={() => (
-              <TextTableContainer
-                fadeIn={fadeIn}
-                currentDetails={currentDetails}
-                text={philosophyTextTable}
-                currentDetailIdx={0}
-              />
-            )}
-          />
-        </Switch>
+        <TransitionGroup className="slide">
+          <Switch location={location}>
+            <Route
+              path={`${match.url}/philosophy`}
+              render={routeProps => (
+                <CSSTransition
+                  key={location.key}
+                  in={fadeIn}
+                  timeout={2000}
+                  classNames="slide"
+                >
+                  <TextTableContainer
+                    // fadeIn={true}
+                    currentDetails={currentDetails}
+                    text={philosophyTextTable}
+                    currentDetailIdx={0}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={`${match.url}/strategy`}
+              render={() => (
+                <CSSTransition
+                  key={location.key}
+                  in={fadeIn}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <TextTableContainer
+                    fadeIn={true}
+                    currentDetails={currentDetails}
+                    text={strategyTextTable}
+                    currentDetailIdx={0}
+                  />
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={`${match.url}/framework`}
+              render={() => (
+                <CSSTransition
+                  key={location.key}
+                  in={fadeIn}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <div className="framework">
+                    <TextTableContainer
+                      fadeIn={fadeIn}
+                      currentDetails={currentDetails}
+                      text={frameworkTableText}
+                      currentDetailIdx={0}
+                    />
+                  </div>
+                </CSSTransition>
+              )}
+            />
+            <Route
+              path={match.url}
+              render={() => (
+                <CSSTransition
+                  key={location.key}
+                  in={fadeIn}
+                  timeout={1000}
+                  classNames="slide"
+                >
+                  <TextTableContainer
+                    fadeIn={fadeIn}
+                    currentDetails={currentDetails}
+                    text={philosophyTextTable}
+                    currentDetailIdx={0}
+                  />
+                </CSSTransition>
+              )}
+            />
+          </Switch>
+        </TransitionGroup>
       </main>
     );
   }
