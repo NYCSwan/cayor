@@ -9,12 +9,12 @@ const SubNav = props => (
       {props.navItems.map(navItem => {
         const location = {
           pathname: `${props.match.url}/${navItem.url.split(" ")[0]}`,
-          state: { id: navItem.value }
+          state: { id: navItem.value, transition: "slide" }
         };
+        // debugger;
         return (
           <li
             key={navItem.value}
-            // onClick={navItem.style === "sub" ? props.handleClick : null}
             className={
               props.currentDetails === navItem.url.split(" ")[1]
                 ? `${navItem.style} active`
