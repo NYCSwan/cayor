@@ -1,11 +1,9 @@
 .sub_navigation {
   float: left;
-  position: relative;
-  z-index: 10;
+  width: 22%;
   height: 100%;
   padding-top: 3%;
   display: inline-block;
-  width: 25%;
   border-right: 1px solid #d5d5d5;
   background-color: #d5d5d561; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -70,6 +68,7 @@
       color: #113a6e;
       font-weight: 700;
       min-width: 25vmin;
+      margin-bottom: 7%;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
@@ -87,7 +86,7 @@
           margin-top: 0; } }
     .sub_navigation .list .top.active {
       font-weight: bolder;
-      margin-left: -10%;
+      margin-left: -8%;
       width: 100%;
       word-wrap: normal; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -109,9 +108,11 @@
       font-weight: bold;
       cursor: grab; }
     .sub_navigation .list .sub {
-      display: block; }
+      display: block;
+      margin-bottom: 7%; }
       .sub_navigation .list .sub a {
         color: #696969;
+        margin-top: 5%;
         padding: 4px 10px;
         list-style: none;
         width: 100%;

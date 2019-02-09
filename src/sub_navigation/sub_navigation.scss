@@ -3,12 +3,12 @@
 
 .sub_navigation {
   float: left;
-  position: relative;
-  z-index: 10;
+  // position: relative;
+  // z-index: 10;
+  width: 22%;
   height: 100%;
   padding-top: 3%;
   display: inline-block;
-  width: 25%;
   border-right: 1px solid $lightGrey;
   background-color: $lightGreySemiTransparent;
   @include respond-to(phone) {
@@ -27,6 +27,7 @@
     padding-inline-start: 0;
     float: right;
     align-items: flex-start;
+    // justify-content: space-around;
     margin-top: -8px;
     padding-right: 4%;
     z-index: 10;
@@ -58,7 +59,7 @@
         color: $primaryBlue;
         font-weight: 700;
         min-width: 25vmin;
-        // width: 100%;
+        margin-bottom: 7%;
         text-align: left;
         -moz-text-align-last: left;
         flex-grow: 1;
@@ -66,16 +67,14 @@
         padding-top: 1vmin;
         @include respond-to(phone) {
           font-size: 0.8em;
-          // align-self: flex-start;
         }
         @include respond-to(large-screen) {
-          // align-self: flex-start;
           margin-top: 0;
         }
       }
       &.active {
         font-weight: bolder;
-        margin-left: -10%;
+        margin-left: -8%;
         width: 100%;
         word-wrap: normal;
 
@@ -101,9 +100,10 @@
     }
     .sub {
       display: block;
+      margin-bottom: 7%;
       a {
         color: $primaryGrey;
-        // flex-grow: 1;
+        margin-top: 5%;
         padding: 4px 10px;
         list-style: none;
         width: 100%;
