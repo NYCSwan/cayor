@@ -61,7 +61,7 @@
         .sub_navigation .list .active {
           width: 90%;
           text-align: fit-content; } }
-    .sub_navigation .list .top a {
+    .sub_navigation .list .top {
       list-style: none;
       display: block;
       align-self: flex-start;
@@ -76,37 +76,40 @@
       padding-top: 1vmin;
       /* Large screens ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top a {
+        .sub_navigation .list .top {
           font-size: 0.8em; } }
       @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top a {
+        .sub_navigation .list .top {
           font-size: 0.8em; } }
       @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
-        .sub_navigation .list .top a {
+        .sub_navigation .list .top {
           margin-top: 0; } }
-    .sub_navigation .list .top.active {
-      font-weight: bolder;
-      margin-left: -8%;
-      width: 100%;
-      word-wrap: normal; }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top.active {
-          margin-left: -5%;
-          width: 100%; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top.active {
-          margin-left: -5%;
-          width: 100%; } }
-      .sub_navigation .list .top.active:hover {
-        font-weight: bolder; }
-      .sub_navigation .list .top.active .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
-        width: auto;
-        margin-left: -10px;
-        display: inline; }
-    .sub_navigation .list .top:hover {
-      text-decoration: underline;
-      font-weight: bold;
-      cursor: grab; }
+      .sub_navigation .list .top a {
+        list-style: none;
+        color: inherit; }
+        .sub_navigation .list .top a:hover {
+          text-decoration: underline;
+          font-weight: bold;
+          cursor: grab; }
+      .sub_navigation .list .top.active {
+        font-weight: bolder;
+        margin-left: -8%;
+        width: 100%;
+        word-wrap: normal; }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: -5%;
+            width: 100%; } }
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: -5%;
+            width: 100%; } }
+        .sub_navigation .list .top.active:hover {
+          font-weight: bolder; }
+        .sub_navigation .list .top.active .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
+          width: auto;
+          margin-left: -10px;
+          display: inline; }
     .sub_navigation .list .sub {
       display: block;
       margin-bottom: 7%; }

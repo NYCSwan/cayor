@@ -9,32 +9,37 @@ const SubNav = props => (
       {props.navItems.map(navItem => {
         const location = {
           pathname: `${props.match.url}/${navItem.url.split(" ")[0]}`,
-          state: { id: navItem.value, transition: "slide" }
+          state: { id: navItem.url, transition: "slide" }
         };
-        // debugger;
         return (
           <li
             key={navItem.value}
             className={
-              props.currentDetails === navItem.url.split(" ")[1]
+              props.location.state !== undefined &&
+              props.location.state.id === navItem.url
                 ? `${navItem.style} active`
                 : navItem.style
             }
           >
             <FontAwesomeIcon
               className={
-                props.currentDetails.includes(navItem.url.split(" ")[1])
+                props.location.state !== undefined &&
+                props.location.state.id === navItem.url
                   ? `active`
                   : "hideIcon"
               }
               icon="arrow-right"
               pull="left"
             />
-            <Link to={location}>
-              {navItem.style === "top"
-                ? navItem.value.toUpperCase()
-                : navItem.value}
-            </Link>
+            {navItem.key.includes("no-link") ? (
+              navItem.value.toUpperCase()
+            ) : (
+              <Link to={location}>
+                {navItem.style === "top"
+                  ? navItem.value.toUpperCase()
+                  : navItem.value}
+              </Link>
+            )}
           </li>
         );
       })}

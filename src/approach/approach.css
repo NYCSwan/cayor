@@ -1,9 +1,7 @@
 .approach {
-  overflow: hidden;
   height: 100%;
-  display: flex;
-  flex: row;
-  line-height: auto; }
+  width: 100%;
+  overflow: hidden; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .approach {
       overflow: auto; } }
@@ -11,16 +9,18 @@
     .approach {
       overflow: auto; } }
   .approach .slide {
-    overflow: hidden; }
-    .approach .slide .slide-enter,
-    .approach .slide .slide-appear {
-      z-index: 1; }
-      .approach .slide .slide-enter.slide-enter-active, .approach .slide .slide-enter.slide-appear-active,
-      .approach .slide .slide-appear.slide-enter-active,
-      .approach .slide .slide-appear.slide-appear-active {
-        animation: slide-in 800ms forwards;
-        -webkit-animation: slide-in 800ms forwards;
-        transition: animation 800ms ease 1s, transform 800ms ease 1s; }
+    height: inherit; }
+    .approach .slide .slide {
+      overflow: hidden; }
+      .approach .slide .slide .slide-enter,
+      .approach .slide .slide .slide-appear {
+        z-index: 1; }
+        .approach .slide .slide .slide-enter.slide-enter-active, .approach .slide .slide .slide-enter.slide-appear-active,
+        .approach .slide .slide .slide-appear.slide-enter-active,
+        .approach .slide .slide .slide-appear.slide-appear-active {
+          animation: slide-in 800ms forwards;
+          -webkit-animation: slide-in 800ms forwards;
+          transition: animation 800ms ease 1s, transform 800ms ease 1s; }
 
 @keyframes slide-in {
   0% {
@@ -33,12 +33,12 @@
     -webkit-transform: translate3d(-100%, 0, 0); }
   100% {
     -webkit-transform: translate3d(0%, 0, 0); } }
-  .approach .slide-exit {
-    background-color: green; }
-    .approach .slide-exit.slide-exit-active {
-      animation: slide-out 800ms forwards;
-      -webkit-animation: slide-out 800ms forwards;
-      transition: animation 500ms ease; }
+    .approach .slide .slide-exit {
+      background-color: green; }
+      .approach .slide .slide-exit.slide-exit-active {
+        animation: slide-out 800ms forwards;
+        -webkit-animation: slide-out 800ms forwards;
+        transition: animation 500ms ease; }
 
 @keyframes slide-out {
   0% {

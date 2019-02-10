@@ -3,8 +3,6 @@
 
 .sub_navigation {
   float: left;
-  // position: relative;
-  // z-index: 10;
   width: 22%;
   height: 100%;
   padding-top: 3%;
@@ -52,24 +50,31 @@
       }
     }
     .top {
+      list-style: none;
+      display: block;
+      align-self: flex-start;
+      color: $primaryBlue;
+      font-weight: 700;
+      min-width: 25vmin;
+      margin-bottom: 7%;
+      text-align: left;
+      -moz-text-align-last: left;
+      flex-grow: 1;
+      padding-bottom: 1vmin;
+      padding-top: 1vmin;
+      @include respond-to(phone) {
+        font-size: 0.8em;
+      }
+      @include respond-to(large-screen) {
+        margin-top: 0;
+      }
       a {
         list-style: none;
-        display: block;
-        align-self: flex-start;
-        color: $primaryBlue;
-        font-weight: 700;
-        min-width: 25vmin;
-        margin-bottom: 7%;
-        text-align: left;
-        -moz-text-align-last: left;
-        flex-grow: 1;
-        padding-bottom: 1vmin;
-        padding-top: 1vmin;
-        @include respond-to(phone) {
-          font-size: 0.8em;
-        }
-        @include respond-to(large-screen) {
-          margin-top: 0;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+          font-weight: bold;
+          cursor: grab;
         }
       }
       &.active {
@@ -91,11 +96,6 @@
           margin-left: -10px;
           display: inline;
         }
-      }
-      &:hover {
-        text-decoration: underline;
-        font-weight: bold;
-        cursor: grab;
       }
     }
     .sub {

@@ -2,15 +2,22 @@
 @import "../_mixins";
 
 .approach {
-  overflow: hidden;
   height: 100%;
-  display: flex;
-  flex: row;
-  line-height: auto;
+  width: 100%;
+  // display: flex;
+  overflow: hidden;
+  // flex: row;
+  // line-height: auto;
   @include respond-to(phone) {
     overflow: auto;
   }
+  // .sub_navigation {
+  //   width: 30%;
+  // }
+  .slide {
+    height: inherit;
 
-  @include slide-enter;
-  @include slide-exit;
+    @include slide-enter;
+    @include slide-exit;
+  }
 }

@@ -15,16 +15,12 @@ import FinTech from "../media/fin.jpg";
 import "./approach.css";
 
 class Approach extends Component {
-  static defaultProps = {
-    inTransition: true
-  };
-
   state = {
     navItems: [
       {
         value: "The Cayor Approach",
         url: "cayor_approach cayor_approach",
-        key: "approach",
+        key: "approach no-link",
         style: "top"
       },
       {
@@ -60,7 +56,7 @@ class Approach extends Component {
       {
         value: "Investment Criteria",
         url: "investments investment",
-        key: "criteria",
+        key: "criteria no-link",
         style: "top"
       },
       {
@@ -76,7 +72,7 @@ class Approach extends Component {
         style: "sub"
       }
     ],
-    currentDetails: "cayor_approach",
+    currentDetails: "cayor_approach cayor_approach",
     cayorApproachTableText: [
       {
         header: "Execute a Strategy With A Clear Investment Philosophy",
@@ -447,7 +443,6 @@ class Approach extends Component {
       {
         header: "Target Company Criteria",
         template: "other",
-        // images: [],
         details: [
           {
             dKey: "s00",
@@ -511,10 +506,7 @@ class Approach extends Component {
           }
         ]
       }
-    ],
-    fadeIn: true,
-    currentDetailIdx: 0,
-    buttonDisabled: false
+    ]
   };
 
   componentDidMount() {
@@ -522,48 +514,74 @@ class Approach extends Component {
     const { navItems } = this.state;
     const { location } = this.props;
 
-    if (location.pathname === "/approach") {
+    if (location.state === undefined) {
       return;
     } else {
+      // debugger;
       const target = location.state.id,
-        //     target = path.replace("/opportunity/", ""),
         currentNavItem = pickBy(navItems, item => {
-          return target === item.value;
+          return target === item.url;
         }),
         index = Number(findKey(currentNavItem)),
-        //     // nextIdx = index - 1,
-        nextDetails = currentNavItem[index].url.split(" ")[1];
+        nextDetails = currentNavItem[index].url;
 
-      //
       this.setState({
-        currentDetails: nextDetails,
-        fadeIn: false
+        currentDetails: nextDetails
       });
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    console.log("shouldComponentUpdate");
+    return (
+      this.props.location !== nextProps.location ||
+      this.props.height !== nextProps.height
+    );
+  }
+
   render() {
+    console.log("render approach");
     const {
       navItems,
       currentDetails,
-      currentDetailIdx,
       sectorsTableText,
       regionsTableText,
       investmentCriteriaTableText,
-      buttonDisabled,
       cayorApproachTableText
-      // fadeIn
     } = this.state;
-    const { inTransition, width, height, match, location } = this.props;
+    const { width, height, match, location } = this.props,
+      bodyHeight = Math.floor(height * 0.82);
+    let index = 0;
 
-    // debugger;
+    if (
+      location.state !== undefined &&
+      location.pathname === "/approach/investments"
+    ) {
+      const investmentItem = pickBy(investmentCriteriaTableText, item => {
+        return item.header
+          .toLowerCase()
+          .includes(location.state.id.split(" ")[1]);
+      });
+      index = Number(findKey(investmentItem));
+    } else if (
+      location.state !== undefined &&
+      location.pathname === "/approach/cayor_approach"
+    ) {
+      const cayorItem = pickBy(cayorApproachTableText, item => {
+        // debugger;
+        return item.header
+          .toLowerCase()
+          .includes(location.state.id.split(" ")[1]);
+      });
+      index = Number(findKey(cayorItem));
+    }
+
     return (
-      <main className="approach" style={{ maxHeight: height, maxWidth: width }}>
-        <SubNav
-          navItems={navItems}
-          match={match}
-          currentDetails={currentDetails}
-        />
+      <main
+        className="approach"
+        style={{ maxHeight: bodyHeight, maxWidth: width }}
+      >
+        <SubNav navItems={navItems} match={match} location={location} />
         <TransitionGroup className="slide">
           <Switch location={location}>
             <Route
@@ -571,18 +589,14 @@ class Approach extends Component {
               render={routeProps => (
                 <CSSTransition
                   key={location.key}
-                  in={inTransition}
-                  timeout={1000}
+                  in={true}
+                  timeout={2000}
                   classNames="slide"
                 >
                   <TextTableContainer
-                    disabled={buttonDisabled}
-                    fadeIn={true}
-                    currentDetails={currentDetails}
                     text={cayorApproachTableText}
-                    currentDetailIdx={0}
-                    handleButtonClick={this.handleButtonClick}
-                    {...routeProps}
+                    currentDetailIdx={index}
+                    location={location.pathname.slice(1).split("/")[0]}
                   />
                 </CSSTransition>
               )}
@@ -592,7 +606,7 @@ class Approach extends Component {
               render={() => (
                 <CSSTransition
                   key={location.key}
-                  in={inTransition}
+                  in={true}
                   timeout={1000}
                   classNames="slide"
                 >
@@ -601,7 +615,7 @@ class Approach extends Component {
                     fadeIn={true}
                     currentDetails={currentDetails}
                     text={sectorsTableText}
-                    currentDetailIdx={currentDetailIdx}
+                    currentDetailIdx={0}
                     handleButtonClick={this.handleButtonClick}
                   />
                 </CSSTransition>
@@ -612,7 +626,7 @@ class Approach extends Component {
               render={() => (
                 <CSSTransition
                   key={location.key}
-                  in={inTransition}
+                  in={true}
                   timeout={1000}
                   classNames="slide"
                 >
@@ -620,7 +634,6 @@ class Approach extends Component {
                     location={location}
                     fadeIn={true}
                     text={regionsTableText}
-                    // handleButtonClick={this.handleButtonClick}
                   />
                 </CSSTransition>
               )}
@@ -630,39 +643,32 @@ class Approach extends Component {
               render={() => (
                 <CSSTransition
                   key={location.key}
-                  in={inTransition}
+                  in={true}
                   timeout={1000}
                   classNames="slide"
                 >
                   <TextTableContainer
-                    location={location}
-                    disabled={buttonDisabled}
-                    fadeIn={true}
-                    currentDetails={currentDetails}
-                    currentDetailIdx={0}
+                    location={location.pathname.slice(1).split("/")[0]}
+                    currentDetailIdx={index}
                     text={investmentCriteriaTableText}
-                    // handleButtonClick={this.handleButtonClick}
                   />
                 </CSSTransition>
               )}
             />
             <Route
+              exact
               path={match.url}
               render={routeProps => (
                 <CSSTransition
                   key={location.key}
-                  in={inTransition}
+                  in={true}
                   timeout={1000}
                   classNames="slide"
                 >
                   <TextTableContainer
-                    disabled={buttonDisabled}
-                    fadeIn={true}
-                    currentDetails={currentDetails}
                     text={cayorApproachTableText}
                     currentDetailIdx={0}
-                    // handleButtonClick={this.handleButtonClick}
-                    {...routeProps}
+                    location={location.pathname.slice(1)}
                   />
                 </CSSTransition>
               )}
