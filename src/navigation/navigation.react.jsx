@@ -69,13 +69,12 @@ class Navigation extends Component {
       accraContactDetails,
       joburgContactDetails
     } = this.state;
-    const { isContactModalOpen, fadeIn, handleClose, location } = this.props;
+    const { isContactModalOpen, handleClose, location } = this.props;
     // debugger
     if (contactLocation === "accra") {
       return (
         <ContactForm
           location={location}
-          fadeIn={fadeIn}
           contactDetails={accraContactDetails}
           contactLocation={contactLocation}
           handleClose={handleClose}
@@ -85,7 +84,6 @@ class Navigation extends Component {
     } else {
       return (
         <ContactForm
-          fadeIn={fadeIn}
           location={location}
           contactDetails={joburgContactDetails}
           contactLocation={contactLocation}
