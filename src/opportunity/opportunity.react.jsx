@@ -13,28 +13,42 @@ class Opportunities extends Component {
   state = {
     currentDetails: "experienced_investors",
     navItems: [
-      { value: "Why Cayor", url: "why_cayor why_cayor", style: "top" },
+      {
+        value: "Why Cayor",
+        url: "why_cayor why_cayor",
+        key: "cayor no-link",
+        style: "top"
+      },
       {
         value: "Experienced Africa Private Equity Investors",
         url: "why_cayor experienced_investors",
+        key: "experienced",
         style: "sub"
       },
       {
         value: "Extensive Africa Network",
-        url: "why_cayor african_network",
+        url: "why_cayor network",
+        key: "network",
         style: "sub"
       },
       {
         value: "Entrepreneurial",
         url: "why_cayor entrepreneurial",
+        key: "entrepreneurial",
         style: "sub"
       },
       {
         value: "Trusted Partnerships",
         url: "why_cayor partnerships",
+        key: "partnerships",
         style: "sub"
       },
-      { value: "Why Africa", url: "why_africa why_africa", style: "top" }
+      {
+        value: "Why Africa",
+        url: "why_africa why_africa",
+        key: "africa",
+        style: "top"
+      }
     ],
     whyAfricaTableText: [
       {
@@ -175,23 +189,32 @@ class Opportunities extends Component {
   };
 
   componentDidMount() {
-    console.log("CDM handle sub navigation click opportunity");
+    console.log("CDM opportunity");
     const { location } = this.props;
     const { navItems } = this.state;
-    if (location.pathname === "/opportunity") {
-      this.setState({ currentDetails: "why_cayor" });
+
+    if (location.state === undefined) {
+      return;
     } else {
       const target = location.state.id,
         currentNavItem = pickBy(navItems, item => {
-          return target === item.value;
+          return target === item.url;
         }),
         index = Number(findKey(currentNavItem)),
-        nextDetails = currentNavItem[index].url.split(" ")[1];
-      //
+        nextDetails = currentNavItem[index].url;
+
       this.setState({
         currentDetails: nextDetails
       });
     }
+  }
+
+  shouldComponentUpdate(nextProps) {
+    console.log("shouldComponentUpdate");
+    return (
+      this.props.location !== nextProps.location ||
+      this.props.height !== nextProps.height
+    );
   }
 
   render() {
@@ -202,38 +225,33 @@ class Opportunities extends Component {
       navItems,
       fadeIn
     } = this.state;
-    const { width, height, match, location } = this.props;
+    const { width, height, match, location } = this.props,
+      bodyHeight = Math.floor(height * 0.82);
     // debugger;
 
     return (
       <main
         className="opportunity"
-        style={{ maxHeight: height, maxWidth: width }}
+        style={{ maxHeight: bodyHeight, maxWidth: width }}
       >
-        <SubNav
-          navItems={navItems}
-          match={match}
-          currentDetails={currentDetails}
-        />
+        <SubNav navItems={navItems} match={match} location={location} />
         <TransitionGroup className="slide">
           <Switch location={location}>
             <Route
-              path={match.url + "/why_africa"}
+              path={`${match.url}/why_africa`}
               render={() => (
                 <CSSTransition
                   key={location.key}
                   in={fadeIn}
-                  timeout={1000}
-                  classNames={"slide"}
+                  timeout={1500}
+                  classNames="slide"
                   mountOnEnter
                   unmountOnExit
                 >
                   <TextTableContainer
-                    fadeIn={true}
-                    currentDetails={currentDetails}
                     text={whyAfricaTableText}
                     currentDetailIdx={0}
-                    location={location}
+                    location={location.pathname.slice(1).split("/")[0]}
                   />
                 </CSSTransition>
               )}
@@ -244,7 +262,7 @@ class Opportunities extends Component {
                 <CSSTransition
                   key={location.key}
                   in={fadeIn}
-                  timeout={1000}
+                  timeout={1500}
                   classNames={"slide"}
                   mountOnEnter
                   unmountOnExit
@@ -264,18 +282,15 @@ class Opportunities extends Component {
                 <CSSTransition
                   key={location.key}
                   in={fadeIn}
-                  timeout={1000}
-                  classNames={"slide"}
+                  timeout={1500}
+                  classNames="slide"
                   mountOnEnter
                   unmountOnExit
                 >
                   <TextTableContainer
-                    fadeIn={fadeIn}
-                    currentDetails={currentDetails}
                     text={whyCayorTableText}
                     currentDetailIdx={0}
-                    handleClick={this.handleButtonClick}
-                    {...routeProps}
+                    location={location.pathname.slice(1)}
                   />
                 </CSSTransition>
               )}
