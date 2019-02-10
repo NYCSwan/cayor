@@ -10,7 +10,7 @@ const TextTable = props => (
     }
   >
     {props.text.header ? (
-      <div className="headerContainer">
+      <header className="headerContainer">
         {props.text.image ? (
           <img
             src={props.text.image}
@@ -19,7 +19,7 @@ const TextTable = props => (
           />
         ) : null}
         <h4>{props.text.header.toUpperCase()}</h4>
-      </div>
+      </header>
     ) : null}
     <List style={props.location} items={props.text.details} />
   </div>
