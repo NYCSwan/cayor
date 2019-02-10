@@ -8,11 +8,11 @@
   @include respond-to(phone) {
     overflow: auto;
   }
-  .sub_navigation {
-    width: 25%;
-  }
+  // .sub_navigation {
+  //   // width: 22%;
+  // }
   .slide {
-    height: 1000px;
+    height: 100%;
     display: flex;
     flex: row;
     align-items: stretch;
@@ -31,7 +31,7 @@
       }
       .text-table-container {
         width: inherit;
-        height: 55%;
+        height: 85%;
         .text-table.bullet {
           justify-content: flex-start;
           height: 100%;

@@ -8,10 +8,8 @@
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .esg {
       overflow: auto; } }
-  .esg .sub_navigation {
-    width: 25%; }
   .esg .slide {
-    height: 1000px;
+    height: 100%;
     display: flex;
     flex: row;
     align-items: stretch;
@@ -26,7 +24,7 @@
         padding-top: 3%; } }
     .esg .slide .framework .text-table-container {
       width: inherit;
-      height: 55%; }
+      height: 85%; }
       .esg .slide .framework .text-table-container .text-table.bullet {
         justify-content: flex-start;
         height: 100%; }

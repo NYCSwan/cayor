@@ -145,20 +145,17 @@ class Esg extends Component {
       }
     ],
     fadeIn: true
-    // navIndex: 0
   };
 
   componentDidMount() {
     const { location } = this.props;
-    // const { navItems } = this.state;
+
     if (location.pathname === "/esg") {
-      // this.setState({ currentDetails: "philosophy" });
       return;
     } else {
-      const topic = location.state.id,
-        subNavTopic = topic.toLowerCase();
+      const topic = location.state.id.toLowerCase();
       this.setState({
-        currentDetails: subNavTopic
+        currentDetails: topic
       });
     }
   }
@@ -173,15 +170,11 @@ class Esg extends Component {
       navItems
     } = this.state;
     const { width, height, match, location } = this.props,
-      bodyHeight = Math.floor(height * 0.8);
+      bodyHeight = Math.floor(height * 0.82);
 
     return (
       <main className="esg" style={{ maxHeight: bodyHeight, maxWidth: width }}>
-        <SubNav
-          navItems={navItems}
-          match={match}
-          currentDetails={currentDetails}
-        />
+        <SubNav navItems={navItems} match={match} location={location} />
         <TransitionGroup className="slide">
           <Switch location={location}>
             <Route
@@ -190,12 +183,11 @@ class Esg extends Component {
                 <CSSTransition
                   key={location.key}
                   in={fadeIn}
-                  timeout={2000}
+                  timeout={1800}
                   classNames="slide"
                 >
                   <TextTableContainer
-                    // fadeIn={true}
-                    currentDetails={currentDetails}
+                    location={location.pathname.slice(1).split("/")[0]}
                     text={philosophyTextTable}
                     currentDetailIdx={0}
                   />
@@ -208,12 +200,11 @@ class Esg extends Component {
                 <CSSTransition
                   key={location.key}
                   in={fadeIn}
-                  timeout={1000}
+                  timeout={1800}
                   classNames="slide"
                 >
                   <TextTableContainer
-                    fadeIn={true}
-                    currentDetails={currentDetails}
+                    location={location.pathname.slice(1).split("/")[0]}
                     text={strategyTextTable}
                     currentDetailIdx={0}
                   />
@@ -226,13 +217,12 @@ class Esg extends Component {
                 <CSSTransition
                   key={location.key}
                   in={fadeIn}
-                  timeout={1000}
+                  timeout={1800}
                   classNames="slide"
                 >
                   <div className="framework">
                     <TextTableContainer
-                      fadeIn={fadeIn}
-                      currentDetails={currentDetails}
+                      location={location.pathname.slice(1).split("/")[0]}
                       text={frameworkTableText}
                       currentDetailIdx={0}
                     />
@@ -246,12 +236,11 @@ class Esg extends Component {
                 <CSSTransition
                   key={location.key}
                   in={fadeIn}
-                  timeout={1000}
+                  timeout={1800}
                   classNames="slide"
                 >
                   <TextTableContainer
-                    fadeIn={fadeIn}
-                    currentDetails={currentDetails}
+                    location={location.pathname.slice(1)}
                     text={philosophyTextTable}
                     currentDetailIdx={0}
                   />
