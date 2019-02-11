@@ -86,7 +86,8 @@
           margin-top: 0; } }
       .sub_navigation .list .top a {
         list-style: none;
-        color: inherit; }
+        color: inherit;
+        word-wrap: normal; }
         .sub_navigation .list .top a:hover {
           text-decoration: underline;
           font-weight: bold;

@@ -71,6 +71,7 @@
       a {
         list-style: none;
         color: inherit;
+        word-wrap: normal;
         &:hover {
           text-decoration: underline;
           font-weight: bold;
