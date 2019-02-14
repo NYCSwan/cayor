@@ -12,7 +12,7 @@ class HourHand extends Component {
   }
 
   setHourHand = () => {
-    console.log("set hour hand");
+    // console.log("set hour hand");
     const { time } = this.props;
     const hours = time.getHours();
     const minutes = time.getMinutes();

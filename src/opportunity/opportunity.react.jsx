@@ -11,7 +11,7 @@ import "./opportunity.css";
 
 class Opportunities extends Component {
   state = {
-    currentDetails: "experienced_investors",
+    currentDetails: "why_cayor experienced_investors",
     navItems: [
       {
         value: "Why Cayor",
@@ -227,6 +227,8 @@ class Opportunities extends Component {
     } = this.state;
     const { width, height, match, location } = this.props,
       bodyHeight = Math.floor(height * 0.82);
+    // currentKey = this.props.location.pathname.split("/")[0] || "/";
+
     // debugger;
 
     return (
@@ -236,66 +238,50 @@ class Opportunities extends Component {
       >
         <SubNav navItems={navItems} match={match} location={location} />
         <TransitionGroup className="slide">
-          <Switch location={location}>
-            <Route
-              path={`${match.url}/why_africa`}
-              render={() => (
-                <CSSTransition
-                  key={location.key}
-                  in={fadeIn}
-                  timeout={1500}
-                  classNames="slide"
-                  mountOnEnter
-                  unmountOnExit
-                >
+          <CSSTransition
+            key={location.state.interiorTransitionKey}
+            in={fadeIn}
+            timeout={1500}
+            classNames="slide"
+            mountOnEnter
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route
+                path={`${match.url}/why_africa`}
+                render={() => (
                   <TextTableContainer
                     text={whyAfricaTableText}
                     currentDetailIdx={0}
                     location={location.pathname.slice(1).split("/")[0]}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={match.url + "/why_cayor"}
-              render={routeProps => (
-                <CSSTransition
-                  key={location.key}
-                  in={fadeIn}
-                  timeout={1500}
-                  classNames={"slide"}
-                  mountOnEnter
-                  unmountOnExit
-                >
+                )}
+              />
+
+              <Route
+                path={match.url + "/why_cayor"}
+                render={() => (
                   <WhyCayor
+                    location={location}
                     currentDetails={currentDetails}
                     text={whyCayorTableText}
-                    {...routeProps}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              exact
-              path={match.url}
-              render={routeProps => (
-                <CSSTransition
-                  key={location.key}
-                  in={fadeIn}
-                  timeout={1500}
-                  classNames="slide"
-                  mountOnEnter
-                  unmountOnExit
-                >
+                )}
+              />
+
+              <Route
+                exact
+                path={match.url}
+                render={() => (
                   <TextTableContainer
                     text={whyCayorTableText}
                     currentDetailIdx={0}
                     location={location.pathname.slice(1)}
                   />
-                </CSSTransition>
-              )}
-            />
-          </Switch>
+                )}
+              />
+            </Switch>
+          </CSSTransition>
         </TransitionGroup>
       </main>
     );

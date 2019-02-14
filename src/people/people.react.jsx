@@ -15,9 +15,19 @@ class People extends Component {
   state = {
     currentDetails: "experienced",
     navItems: [
-      { value: "Experienced", url: "experienced experienced", style: "top" },
-      { value: "Native", url: "native native", style: "top" },
-      { value: "Team Bios", url: "team_bios team_bios", style: "top" }
+      {
+        value: "Experienced",
+        url: "experienced experienced",
+        key: "experienced",
+        style: "top"
+      },
+      { value: "Native", url: "native native", key: "native", style: "top" },
+      {
+        value: "Team Bios",
+        url: "team_bios team_bios",
+        key: "bios",
+        style: "top"
+      }
     ],
     experiencedTextTable: [
       {
@@ -182,6 +192,14 @@ class People extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    console.log("shouldComponentUpdate");
+    return (
+      this.props.location !== nextProps.location ||
+      this.props.height !== nextProps.height
+    );
+  }
+
   handleBioClick = () => {
     this.setState({ closeDetails: false });
   };
@@ -197,33 +215,29 @@ class People extends Component {
       closeDetails
     } = this.state;
     const { width, height, match, location } = this.props,
-      bodyHeight = Math.floor(height * 0.8);
+      bodyHeight = Math.floor(height * 0.82);
+    // currentKey = this.props.location.pathname.split("/")[1];
 
     return (
       <main
         className="people"
         style={{ minHeight: bodyHeight, minWidth: width }}
       >
-        <SubNav
-          navItems={navItems}
-          match={match}
-          currentDetails={currentDetails}
-        />
+        <SubNav navItems={navItems} match={match} location={location} />
         <TransitionGroup className="slide">
-          <Switch location={location}>
-            <Route
-              path={`/people/team_bios`}
-              render={routeProps => (
-                <CSSTransition
-                  in={fadeIn}
-                  timeout={2000}
-                  key={location.key}
-                  classNames="slide"
-                  mountOnEnter
-                  unmountOnExit
-                >
+          <CSSTransition
+            in={fadeIn}
+            timeout={{ enter: 1000, exit: 500 }}
+            key={location.state.interiorTransitionKey}
+            classNames="slide"
+            mountOnEnter
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route
+                path={`/people/team_bios`}
+                render={routeProps => (
                   <TeamDetails
-                    fadeIn={true}
                     currentDetails={currentDetails}
                     teamDetails={teamDetails}
                     currentDetailIdx={0}
@@ -231,70 +245,40 @@ class People extends Component {
                     handleBioClick={this.handleBioClick}
                     {...routeProps}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={`${match.url}/native`}
-              render={() => (
-                <CSSTransition
-                  in={fadeIn}
-                  timeout={1000}
-                  key={location.key}
-                  classNames="slide"
-                  mountOnEnter
-                  unmountOnExit
-                >
+                )}
+              />
+              <Route
+                path={`${match.url}/native`}
+                render={() => (
                   <TextTableContainer
-                    fadeIn={true}
-                    currentDetails={currentDetails}
+                    location={location.pathname.slice(1).split("/")[0]}
                     text={nativeTextTable}
                     currentDetailIdx={0}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={`${match.url}/:id`}
-              render={() => (
-                <CSSTransition
-                  in={fadeIn}
-                  timeout={1000}
-                  key={location.key}
-                  classNames="slide"
-                  mountOnEnter
-                  unmountOnExit
-                >
+                )}
+              />
+              <Route
+                path={`${match.url}/:id`}
+                render={() => (
                   <TextTableContainer
-                    fadeIn={true}
-                    currentDetails={currentDetails}
+                    location={location.pathname.slice(1).split("/")[0]}
                     text={experiencedTextTable}
                     currentDetailIdx={0}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={match.url}
-              render={() => (
-                <CSSTransition
-                  in={fadeIn}
-                  timeout={1000}
-                  key={location.key}
-                  classNames="slide"
-                  mountOnEnter
-                  unmountOnExit
-                >
+                )}
+              />
+              <Route
+                path={match.url}
+                render={() => (
                   <TextTableContainer
-                    fadeIn={fadeIn}
-                    currentDetails={currentDetails}
+                    location={location.pathname.slice(1)}
                     text={experiencedTextTable}
                     currentDetailIdx={0}
                   />
-                </CSSTransition>
-              )}
-            />
-          </Switch>
+                )}
+              />
+            </Switch>
+          </CSSTransition>
         </TransitionGroup>
       </main>
     );

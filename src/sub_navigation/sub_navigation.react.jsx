@@ -7,10 +7,21 @@ const SubNav = props => (
   <aside className="sub_navigation">
     <ul className="list">
       {props.navItems.map(navItem => {
+        const tKey = props.location.pathname.slice(1).split("/")[0];
+        const key = navItem.url.split(" ");
+        const iKey = key[1];
+        const work = key[0];
+        const path = `${props.match.url}/${work}`;
         const location = {
-          pathname: `${props.match.url}/${navItem.url.split(" ")[0]}`,
-          state: { id: navItem.url, transition: "slide" }
+          pathname: path,
+          state: {
+            id: navItem.url,
+            transitionKey: tKey,
+            interiorTransitionKey: iKey
+          }
         };
+        // debugger;
+
         return (
           <li
             key={navItem.value}

@@ -8,24 +8,24 @@ import "./esg.css";
 
 class Esg extends Component {
   state = {
-    currentDetails: "philosophy",
+    currentDetails: "philosophy philosophy",
     navItems: [
       {
         value: "ESG Philosophy",
         url: "philosophy philosophy",
-        key: "philosophy",
+        key: "philosophy philosophy",
         style: "top"
       },
       {
         value: "ESG Strategy",
         url: "strategy strategy",
-        key: "strategy",
+        key: "strategy strategy",
         style: "top"
       },
       {
         value: "ESG Framework",
         url: "framework framework",
-        key: "framework",
+        key: "framework framework",
         style: "top"
       }
     ],
@@ -160,9 +160,17 @@ class Esg extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    console.log("shouldComponentUpdate");
+    return (
+      this.props.location !== nextProps.location ||
+      this.props.height !== nextProps.height
+    );
+  }
+
   render() {
     const {
-      currentDetails,
+      // currentDetails,
       philosophyTextTable,
       strategyTextTable,
       frameworkTableText,
@@ -175,51 +183,57 @@ class Esg extends Component {
     return (
       <main className="esg" style={{ maxHeight: bodyHeight, maxWidth: width }}>
         <SubNav navItems={navItems} match={match} location={location} />
-        <TransitionGroup className="slide">
-          <Switch location={location}>
-            <Route
-              path={`${match.url}/philosophy`}
-              render={routeProps => (
-                <CSSTransition
-                  key={location.key}
-                  in={fadeIn}
-                  timeout={1800}
-                  classNames="slide"
-                >
+        <TransitionGroup className="fade">
+          <CSSTransition
+            key={location.state.interiorTransitionKey}
+            in={fadeIn}
+            timeout={2300}
+            classNames="slide"
+            mountOnEnter
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route
+                path={`${match.url}/philosophy`}
+                render={routeProps => (
                   <TextTableContainer
                     location={location.pathname.slice(1).split("/")[0]}
                     text={philosophyTextTable}
                     currentDetailIdx={0}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={`${match.url}/strategy`}
-              render={() => (
-                <CSSTransition
-                  key={location.key}
-                  in={fadeIn}
-                  timeout={1800}
-                  classNames="slide"
-                >
+                  // </CSSTransition>
+                )}
+              />
+              <Route
+                path={`${match.url}/strategy`}
+                render={() => (
+                  // <CSSTransition
+                  //   key={location.key}
+                  //   in={fadeIn}
+                  //   timeout={1800}
+                  //   classNames="slide"
+                  //   mountOnEnter
+                  //   unmountOnExit
+                  // >
                   <TextTableContainer
                     location={location.pathname.slice(1).split("/")[0]}
                     text={strategyTextTable}
                     currentDetailIdx={0}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={`${match.url}/framework`}
-              render={() => (
-                <CSSTransition
-                  key={location.key}
-                  in={fadeIn}
-                  timeout={1800}
-                  classNames="slide"
-                >
+                  // </CSSTransition>
+                )}
+              />
+              <Route
+                path={`${match.url}/framework`}
+                render={() => (
+                  // <CSSTransition
+                  //   key={location.key}
+                  //   in={fadeIn}
+                  //   timeout={1800}
+                  //   classNames="slide"
+                  //   mountOnEnter
+                  //   unmountOnExit
+                  // >
                   <div className="framework">
                     <TextTableContainer
                       location={location.pathname.slice(1).split("/")[0]}
@@ -227,27 +241,29 @@ class Esg extends Component {
                       currentDetailIdx={0}
                     />
                   </div>
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={match.url}
-              render={() => (
-                <CSSTransition
-                  key={location.key}
-                  in={fadeIn}
-                  timeout={1800}
-                  classNames="slide"
-                >
+                  // </CSSTransition>
+                )}
+              />
+              <Route
+                path={match.url}
+                render={() => (
+                  // <CSSTransition
+                  //   key={location.key}
+                  //   in={fadeIn}
+                  //   timeout={1800}
+                  //   classNames="slide"
+                  //   mountOnEnter
+                  //   unmountOnExit
+                  // >
                   <TextTableContainer
                     location={location.pathname.slice(1)}
                     text={philosophyTextTable}
                     currentDetailIdx={0}
                   />
-                </CSSTransition>
-              )}
-            />
-          </Switch>
+                )}
+              />
+            </Switch>
+          </CSSTransition>
         </TransitionGroup>
       </main>
     );

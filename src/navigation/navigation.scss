@@ -58,7 +58,7 @@
   }
 
   &.homepage {
-    height: 120px;
+    height: 100px;
     // color: $white;
     z-index: 1000;
     @include respond-to(phone) {

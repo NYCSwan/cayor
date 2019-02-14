@@ -12,8 +12,11 @@
   //   width: 25%;
   // }
   .slide {
-    height: inherit;
+    height: 80%;
+    display: flex;
     @include slide-enter;
     @include slide-exit;
   }
+  @include slide-enter;
+  @include slide-exit;
 }

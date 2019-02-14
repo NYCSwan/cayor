@@ -4,11 +4,7 @@
   height: 100vh;
   .root-container {
     height: inherit;
-    // .slide-enter-done,
-    // .slide-enter-active {
-    //   height: inherit;
-    // }
-    @include slide-exit;
     @include slide-enter;
+    @include slide-exit;
   }
 }

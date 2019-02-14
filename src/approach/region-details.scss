@@ -1,5 +1,6 @@
 @import "../_mixins";
 @import "../_variables";
+@import "../_slide";
 
 .regionDetails {
   background: url("../media/map2.jpg") no-repeat center center;
@@ -7,11 +8,12 @@
   display: flex;
   flex: row wrap;
   justify-content: space-between;
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   align-self: flex-start;
   margin-top: 3%;
-
+  @include slide-enter;
+  @include slide-exit;
   @include respond-to(phone) {
     background-size: auto 50%;
     justify-content: center;

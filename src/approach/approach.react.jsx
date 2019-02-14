@@ -26,13 +26,13 @@ class Approach extends Component {
       {
         value: "Clear Investment Philosophy",
         url: "cayor_approach philosophy",
-        key: "strategy",
+        key: "philosophy",
         style: "sub"
       },
       {
         value: "Mid Market Focus",
         url: "cayor_approach mid",
-        key: "middle",
+        key: "mid",
         style: "sub"
       },
       {
@@ -62,13 +62,13 @@ class Approach extends Component {
       {
         value: "Deal Type Criteria",
         url: "investments deal",
-        key: "deals",
+        key: "deal",
         style: "sub"
       },
       {
         value: "Target Company Criteria",
         url: "investments company",
-        key: "companies",
+        key: "company",
         style: "sub"
       }
     ],
@@ -583,33 +583,32 @@ class Approach extends Component {
       >
         <SubNav navItems={navItems} match={match} location={location} />
         <TransitionGroup className="slide">
-          <Switch location={location}>
-            <Route
-              path={`${match.url}/cayor_approach`}
-              render={routeProps => (
-                <CSSTransition
-                  key={location.key}
-                  in={true}
-                  timeout={2000}
-                  classNames="slide"
-                >
+          <CSSTransition
+            key={
+              location.state
+                ? location.state.interiorTransitionKey
+                : location.key
+            }
+            in={true}
+            timeout={1000}
+            classNames="slide"
+            mountOnEnter
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route
+                path={`${match.url}/cayor_approach`}
+                render={() => (
                   <TextTableContainer
                     text={cayorApproachTableText}
                     currentDetailIdx={index}
                     location={location.pathname.slice(1).split("/")[0]}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={`${match.url}/sectors`}
-              render={() => (
-                <CSSTransition
-                  key={location.key}
-                  in={true}
-                  timeout={1000}
-                  classNames="slide"
-                >
+                )}
+              />
+              <Route
+                path={`${match.url}/sectors`}
+                render={() => (
                   <SectorsContainer
                     location={location}
                     fadeIn={true}
@@ -618,62 +617,41 @@ class Approach extends Component {
                     currentDetailIdx={0}
                     handleButtonClick={this.handleButtonClick}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={`${match.url}/regions`}
-              render={() => (
-                <CSSTransition
-                  key={location.key}
-                  in={true}
-                  timeout={1000}
-                  classNames="slide"
-                >
+                )}
+              />
+              <Route
+                path={`${match.url}/regions`}
+                render={() => (
                   <RegionDetails
                     location={location}
                     fadeIn={true}
                     text={regionsTableText}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              path={`${match.url}/investments`}
-              render={() => (
-                <CSSTransition
-                  key={location.key}
-                  in={true}
-                  timeout={1000}
-                  classNames="slide"
-                >
+                )}
+              />
+              <Route
+                path={`${match.url}/investments`}
+                render={() => (
                   <TextTableContainer
                     location={location.pathname.slice(1).split("/")[0]}
                     currentDetailIdx={index}
                     text={investmentCriteriaTableText}
                   />
-                </CSSTransition>
-              )}
-            />
-            <Route
-              exact
-              path={match.url}
-              render={routeProps => (
-                <CSSTransition
-                  key={location.key}
-                  in={true}
-                  timeout={1000}
-                  classNames="slide"
-                >
+                )}
+              />
+              <Route
+                exact
+                path={match.url}
+                render={routeProps => (
                   <TextTableContainer
                     text={cayorApproachTableText}
                     currentDetailIdx={0}
                     location={location.pathname.slice(1)}
                   />
-                </CSSTransition>
-              )}
-            />
-          </Switch>
+                )}
+              />
+            </Switch>
+          </CSSTransition>
         </TransitionGroup>
       </main>
     );

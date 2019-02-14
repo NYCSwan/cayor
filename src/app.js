@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTimes,
   faAlignJustify,
   faArrowRight
 } from "@fortawesome/free-solid-svg-icons";
-// import { faArrowAltCircleDown } from "@fortawesome/fontawesome-free-regular";
 
 import "./App.css";
 import Routes from "./routes";
@@ -41,18 +39,17 @@ class App extends Component {
     if (width === null) {
       return;
     } else if (width <= 490 && width > 0) {
-      this.setState({ deviceIdx: 1 });
+      this.setState({ deviceIdx: 1, height, width });
     } else if (width >= 780 && width <= 1024) {
-      this.setState({ deviceIdx: 2 });
+      this.setState({ deviceIdx: 2, height, width });
     } else {
-      this.setState({ deviceIdx: 0 });
-      console.log("deviceIdx 0", width);
+      this.setState({ deviceIdx: 0, height, width });
+      // console.log("deviceIdx 0", width);
     }
 
-    this.setState({
-      height,
-      width
-    });
+    // this.setState({
+    //
+    // });
   };
 
   handleClick = e => {
@@ -75,7 +72,6 @@ class App extends Component {
     return (
       <div className="App">
         <Routes
-          className="routes"
           height={height}
           width={width}
           handleClose={this.handleModalClose}

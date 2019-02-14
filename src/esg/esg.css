@@ -9,62 +9,14 @@
     .esg {
       overflow: auto; } }
   .esg .slide {
-    height: 100%;
-    display: flex;
-    flex: row;
-    align-items: stretch;
-    justify-content: space-between; }
-    .esg .slide .text-table-container {
-      height: 100%; }
-    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .esg .slide .framework {
-        padding-top: 3%; } }
-    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .esg .slide .framework {
-        padding-top: 3%; } }
-    .esg .slide .framework .text-table-container {
-      width: inherit;
-      height: 85%; }
-      .esg .slide .framework .text-table-container .text-table.bullet {
-        justify-content: flex-start;
-        height: 100%; }
-        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-          .esg .slide .framework .text-table-container .text-table.bullet {
-            justify-content: flex-start;
-            width: 100%; } }
-        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-          .esg .slide .framework .text-table-container .text-table.bullet {
-            justify-content: flex-start;
-            width: 100%; } }
-        .esg .slide .framework .text-table-container .text-table.bullet .headerContainer {
-          width: auto;
-          height: auto; }
-          .esg .slide .framework .text-table-container .text-table.bullet .headerContainer h4 {
-            width: auto;
-            height: auto; }
-        .esg .slide .framework .text-table-container .text-table.bullet .list-group {
-          scroll-behavior: smooth;
-          overflow-y: scroll;
-          height: 80%; }
-          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-            .esg .slide .framework .text-table-container .text-table.bullet .list-group {
-              padding-top: 3%;
-              margin-bottom: 0; } }
-          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-            .esg .slide .framework .text-table-container .text-table.bullet .list-group {
-              padding-top: 3%;
-              margin-bottom: 0; } }
-  .esg .slide {
-    overflow: hidden; }
-    .esg .slide .slide-enter,
-    .esg .slide .slide-appear {
+    height: inherit;
+    display: flex; }
+    .esg .slide.slide-enter, .esg .slide.slide-appear {
       z-index: 1; }
-      .esg .slide .slide-enter.slide-enter-active, .esg .slide .slide-enter.slide-appear-active,
-      .esg .slide .slide-appear.slide-enter-active,
-      .esg .slide .slide-appear.slide-appear-active {
-        animation: slide-in 800ms forwards;
-        -webkit-animation: slide-in 800ms forwards;
-        transition: animation 800ms ease 1s, transform 800ms ease 1s; }
+      .esg .slide.slide-enter.slide-enter-active, .esg .slide.slide-enter.slide-appear-active, .esg .slide.slide-appear.slide-enter-active, .esg .slide.slide-appear.slide-appear-active {
+        animation: slide-in 800ms linear 300ms;
+        -webkit-animation: slide-in 800ms linear;
+        transition: animation 1200ms; }
 
 @keyframes slide-in {
   0% {
@@ -77,21 +29,51 @@
     -webkit-transform: translate3d(-100%, 0, 0); }
   100% {
     -webkit-transform: translate3d(0%, 0, 0); } }
-  .esg .slide-exit {
-    background-color: green; }
-    .esg .slide-exit.slide-exit-active {
-      animation: slide-out 800ms forwards;
-      -webkit-animation: slide-out 800ms forwards;
-      transition: animation 500ms ease; }
+    .esg .slide.slide-exit {
+      opacity: 1; }
+      .esg .slide.slide-exit.slide-exit-active {
+        opacity: 0; }
 
 @keyframes slide-out {
-  0% {
-    transform: translate3d(0%, 0, 0); }
-  100% {
-    transform: translate3d(-100%, 0, 0); } }
-
-@-webkit-keyframes slide-out {
-  0% {
-    -webkit-transform: translate3d(0%, 0, 0); }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0); } }
+  0% { }
+  100% { } }
+    .esg .slide .framework {
+      height: 85%; }
+      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        .esg .slide .framework {
+          padding-top: 3%; } }
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .esg .slide .framework {
+          padding-top: 3%; } }
+      .esg .slide .framework .text-table-container {
+        width: inherit;
+        height: 100%; }
+        .esg .slide .framework .text-table-container .text-table.bullet {
+          justify-content: flex-start;
+          height: 100%; }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .esg .slide .framework .text-table-container .text-table.bullet {
+              justify-content: flex-start;
+              width: 100%; } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .esg .slide .framework .text-table-container .text-table.bullet {
+              justify-content: flex-start;
+              width: 100%; } }
+          .esg .slide .framework .text-table-container .text-table.bullet .headerContainer {
+            width: auto;
+            height: auto; }
+            .esg .slide .framework .text-table-container .text-table.bullet .headerContainer h4 {
+              width: auto;
+              height: auto; }
+          .esg .slide .framework .text-table-container .text-table.bullet .list-group {
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+            height: 80%; }
+            @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+              .esg .slide .framework .text-table-container .text-table.bullet .list-group {
+                padding-top: 3%;
+                margin-bottom: 0; } }
+            @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+              .esg .slide .framework .text-table-container .text-table.bullet .list-group {
+                padding-top: 3%;
+                margin-bottom: 0; } }

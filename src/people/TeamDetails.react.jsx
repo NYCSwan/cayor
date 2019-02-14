@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 // import Row from "reactstrap/Row";
 // import Container from "reactstrap/Container";
-import { Col, Row, Container } from "reactstrap";
+// import { Col, Row, Container } from "reactstrap";
 import filter from "lodash/filter";
 import findKey from "lodash/findKey";
-import slice from "lodash/slice";
+// import slice from "lodash/slice";
 import TeamContainer from "./teamContainer.react";
-import Snapshot from "./snapshot.react";
+// import Snapshot from "./snapshot.react";
 import PersonDetails from "./personDetails";
 
 import "./team-details.css";
@@ -42,10 +42,8 @@ class TeamDetails extends Component {
 
   handleClick = e => {
     console.log("handle person click");
-    // const { teamDetails } = this.props;
-    const { teamDetailsNoColors } = this.state;
-    const currentPerson = e.target.textContent.toLowerCase(); //return.key;
-    // let index;
+    const { teamDetailsNoColors } = this.state,
+      currentPerson = e.target.textContent.toLowerCase();
     e.preventDefault();
 
     if (
@@ -108,115 +106,6 @@ class TeamDetails extends Component {
       currentPerson: nextPerson
     });
   };
-
-  // renderBios() {
-  //   const { teamDetails } = this.props;
-  //   const row1 = slice(teamDetails, 0, 4);
-  //   const row2 = slice(teamDetails, 4, 7);
-  //   const row3 = slice(teamDetails, 7, 11);
-  //
-  //   return (
-  //     <div className="main">
-  //       <Container>
-  //         <Row>
-  //           {row1.map(member => {
-  //             if (
-  //               member.name.includes("blue") ||
-  //               member.name.includes("red") ||
-  //               member.name.includes("grey")
-  //             ) {
-  //               return (
-  //                 <Col
-  //                   className={`colorContainer ${member.name}`}
-  //                   key={member.name}
-  //                   xs="3"
-  //                   sm="3"
-  //                 />
-  //               );
-  //             } else {
-  //               return (
-  //                 <Snapshot
-  //                   key={member.name}
-  //                   handleClick={this.handleClick}
-  //                   value={member}
-  //                   xs="3"
-  //                   sm="3"
-  //                 />
-  //               );
-  //             }
-  //           })}
-  //         </Row>
-  //         <Row className="offset">
-  //           {row2.map(member => {
-  //             if (
-  //               member.name.includes("blue") ||
-  //               member.name.includes("red") ||
-  //               member.name.includes("grey")
-  //             ) {
-  //               return (
-  //                 <Col
-  //                   className={`colorContainer ${member.name}`}
-  //                   key={member.name}
-  //                   xs={{ size: "3" }}
-  //                   sm={{ size: "3" }}
-  //                 />
-  //               );
-  //             } else if (member.name.includes("Our")) {
-  //               return (
-  //                 <Col
-  //                   className={`colorContainer ${member.name}`}
-  //                   key={member.name}
-  //                   xs={{ size: "3" }}
-  //                   sm={{ size: "3" }}
-  //                 >
-  //                   <h5 className="header">{member.name.toUpperCase()}</h5>
-  //                 </Col>
-  //               );
-  //             } else {
-  //               return (
-  //                 <Snapshot
-  //                   key={member.name}
-  //                   handleClick={this.handleClick}
-  //                   value={member}
-  //                   xs={{ size: "3" }}
-  //                   sm={{ size: "3" }}
-  //                 />
-  //               );
-  //             }
-  //           })}
-  //         </Row>
-  //         <Row>
-  //           {row3.map(member => {
-  //             if (
-  //               member.name.includes("blue") ||
-  //               member.name.includes("red") ||
-  //               member.name.includes("grey")
-  //             ) {
-  //               return (
-  //                 <Col
-  //                   className={`colorContainer ${member.name}`}
-  //                   key={member.name}
-  //                   xs="3"
-  //                   sm="3"
-  //                 />
-  //               );
-  //             } else {
-  //               return (
-  //                 <Snapshot
-  //                   key={member.name}
-  //                   handleClick={this.handleClick}
-  //                   value={member}
-  //                   xs="3"
-  //                   sm="3"
-  //                 />
-  //               );
-  //             }
-  //           })}
-  //         </Row>
-  //       </Container>
-  //     </div>
-  //   );
-  // }
 
   renderDetails() {
     const { currentPerson, teamDetailsNoColors } = this.state;
