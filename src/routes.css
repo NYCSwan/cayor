@@ -1,2 +1,37 @@
 .router {
   height: 100vh; }
+  .router .root-container {
+    height: inherit; }
+    .router .root-container.slide-enter, .router .root-container.slide-appear {
+      opacity: 0;
+      z-index: 1;
+      transform: translate3d(-80%, 0, 0); }
+      .router .root-container.slide-enter.slide-enter-active, .router .root-container.slide-enter.slide-appear-active, .router .root-container.slide-appear.slide-enter-active, .router .root-container.slide-appear.slide-appear-active {
+        width: 80%;
+        opacity: 1;
+        transform: translate3d(0%, 0, 0);
+        transition: opacity 500ms, transform 800ms ease; }
+
+@keyframes slide-in {
+  0% { }
+  100% { } }
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0%, 0, 0); } }
+    .router .root-container.slide-exit {
+      opacity: 1; }
+      .router .root-container.slide-exit.slide-exit-active {
+        opacity: 0;
+        display: none;
+        animation: slide-out;
+        -webkit-animation: slide-out;
+        transition: animation 300ms ease; }
+
+@keyframes slide-out {
+  0% {
+    transform: translate3d(0%, 0, 0); }
+  100% {
+    transform: translate3d(-200%, 0, 0); } }

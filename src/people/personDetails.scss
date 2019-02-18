@@ -1,66 +1,68 @@
-@import '../_mixins';
-@import '../_variables';
+@import "../_mixins";
+@import "../_variables";
 
-.personDetails {
-  // height: 70%;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  margin-top: 4%;
-  // align-items: flex-start;
-  .right {
-    height: 90%;
-    font-family: $headline-font-family;
-    width: 40%;
-    .info {
-      border-bottom: $lightGrey 1px solid;
+.fade.show {
+  .personDetails {
+    // height: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-top: 4%;
+    // align-items: flex-start;
+    .right {
       height: 90%;
-      .portrait {
-        // border-radius: 50px;
-        height: auto;
-        width: 70%;
+      font-family: $headline-font-family;
+      width: 40%;
+      .info {
+        border-bottom: $lightGrey 1px solid;
+        height: 90%;
+        .portrait {
+          // border-radius: 50px;
+          height: auto;
+          width: 70%;
+        }
+        .name {
+          font-size: 1.2em;
+          color: $cayorRed;
+          line-height: 2em;
+          margin-top: 5%;
+        }
+        .role {
+          color: $primaryBlue;
+          font-size: 1em;
+        }
       }
-      .name {
-        font-size: 1.2em;
-        color: $cayorRed;
-        line-height: 2em;
-        margin-top: 5%;
-      }
-      .role {
+      .button {
+        margin-top: 3%;
+        // margin-left: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: right;
         color: $primaryBlue;
-        font-size: 1em;
       }
     }
-    .button {
-      margin-top: 3%;
-      // margin-left: 20px;
-      padding-left: 30px;
-      padding-right: 30px;
-      text-align: right;
-      color: $primaryBlue;
-    }
-  }
-  .bioDetails {
-    width: 50%;
-    align-self: flex-start;
-    text-align: left;
-    p {
-      font-family: $open-sans-font-family;
-      font-size: 0.9em;
-      color: $primaryText;
-      &:first-of-type {
-        color: $cayorRed;
-        text-align: left;
-        width: 90%;
-        text-align: justify;
-        font-style: $headline-font-family;
-        padding-bottom: 2%;
+    .bioDetails {
+      width: 50%;
+      align-self: flex-start;
+      text-align: left;
+      p {
+        font-family: $open-sans-font-family;
+        font-size: 0.9em;
+        color: $primaryText;
+        &:first-of-type {
+          color: $cayorRed;
+          text-align: left;
+          width: 90%;
+          text-align: justify;
+          font-style: $headline-font-family;
+          padding-bottom: 2%;
+        }
       }
-    }
-    h5 {
-      font-family: $copy-font-family;
-      color: $primaryBlue;
-      font-size: 1.2em;
+      h5 {
+        font-family: $copy-font-family;
+        color: $primaryBlue;
+        font-size: 1.2em;
+      }
     }
   }
 }

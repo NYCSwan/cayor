@@ -45,7 +45,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../media/esg_banner.jpg");
     background-size: 100% 100%; }
   .header.homepage {
-    height: 120px;
+    height: 100px;
     z-index: 1000;
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }

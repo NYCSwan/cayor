@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import {
   Nav,
   NavItem,
-  NavLink,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+// import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Clock from "../clocks/clock.react";
@@ -69,13 +70,12 @@ class Navigation extends Component {
       accraContactDetails,
       joburgContactDetails
     } = this.state;
-    const { isContactModalOpen, fadeIn, handleClose, location } = this.props;
+    const { isContactModalOpen, handleClose, location } = this.props;
     // debugger
     if (contactLocation === "accra") {
       return (
         <ContactForm
           location={location}
-          fadeIn={fadeIn}
           contactDetails={accraContactDetails}
           contactLocation={contactLocation}
           handleClose={handleClose}
@@ -85,7 +85,6 @@ class Navigation extends Component {
     } else {
       return (
         <ContactForm
-          fadeIn={fadeIn}
           location={location}
           contactDetails={joburgContactDetails}
           contactLocation={contactLocation}
@@ -98,36 +97,48 @@ class Navigation extends Component {
 
   render() {
     const { contactLocation, collapse } = this.state;
-    const { isContactModalOpen, headerImg } = this.props;
+    const { isContactModalOpen, headerImg, location } = this.props;
+
+    // const location = ;
+
     return (
-      <header className={`header ${this.props.headerImg}`}>
-        <NavLink href="/" className="logo-container">
+      <header className={`header ${headerImg}`}>
+        <NavLink to="/" className="logo-container">
           <img className="logo" src={WhiteLogo} alt="logo" />
         </NavLink>
 
         <div id="accra">
           <div id="jbg">
             <div
-              className={
-                this.props.location.pathname === "/"
-                  ? "right homepage"
-                  : "right"
-              }
+              className={location.pathname === "/" ? "right homepage" : "right"}
             >
               <Nav>
                 <NavItem className="linkContainer">
                   <NavLink
-                    href="/people"
-                    active={headerImg === "people"}
+                    to={{
+                      pathname: "/people",
+                      state: {
+                        id: "experienced experienced",
+                        transitionKey: "people"
+                      }
+                    }}
+                    activeClassName={"active"}
                     className="link people"
+                    // state: { id: navItem.url, transitionKey: navItem.url.split()[0] }
                   >
                     PEOPLE
                   </NavLink>
                 </NavItem>
                 <NavItem className="linkContainer">
                   <NavLink
-                    href="/opportunity"
-                    active={headerImg === "opportunity"}
+                    to={{
+                      pathname: "/opportunity",
+                      state: {
+                        id: "why_cayor experienced_investors",
+                        transitionKey: "opportunity"
+                      }
+                    }}
+                    activeClassName={"active"}
                     className="link opportunity"
                   >
                     OPPORTUNITY
@@ -135,8 +146,14 @@ class Navigation extends Component {
                 </NavItem>
                 <NavItem className="linkContainer">
                   <NavLink
-                    href="/approach"
-                    active={headerImg === "approach"}
+                    to={{
+                      pathname: "/approach",
+                      state: {
+                        id: "cayor_approach cayor_approach",
+                        transitionKey: "approach"
+                      }
+                    }}
+                    activeClassName={"active"}
                     className="link approach"
                   >
                     APPROACH
@@ -144,8 +161,14 @@ class Navigation extends Component {
                 </NavItem>
                 <NavItem className="linkContainer">
                   <NavLink
-                    href="/esg"
-                    active={headerImg === "esg"}
+                    to={{
+                      pathname: "/esg",
+                      state: {
+                        id: "philosophy philosophy",
+                        transitionKey: "esg"
+                      }
+                    }}
+                    activeClassName={"active"}
                     className="link esg"
                   >
                     ESG
@@ -178,25 +201,25 @@ class Navigation extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <NavLink href="/people" className="link people">
+                    <NavLink to="/people" className="link people">
                       PEOPLE
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/opportunity" className="link opportunity">
+                    <NavLink to="/opportunity" className="link opportunity">
                       OPPORTUNITY
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/approach" className="link approach">
+                    <NavLink to="/approach" className="link approach">
                       APPROACH
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/esg" className="link esg">
+                    <NavLink to="/esg" className="link esg">
                       ESG
                     </NavLink>
                   </DropdownItem>

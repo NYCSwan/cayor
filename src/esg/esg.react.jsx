@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import TextTableContainer from "../layout/text-table-container.react";
 import SubNav from "../sub_navigation/sub_navigation.react";
@@ -7,24 +8,24 @@ import "./esg.css";
 
 class Esg extends Component {
   state = {
-    currentDetails: "philosophy",
+    currentDetails: "philosophy philosophy",
     navItems: [
       {
         value: "ESG Philosophy",
         url: "philosophy philosophy",
-        key: "philosophy",
+        key: "philosophy philosophy",
         style: "top"
       },
       {
         value: "ESG Strategy",
         url: "strategy strategy",
-        key: "strategy",
+        key: "strategy strategy",
         style: "top"
       },
       {
         value: "ESG Framework",
         url: "framework framework",
-        key: "framework",
+        key: "framework framework",
         style: "top"
       }
     ],
@@ -144,90 +145,126 @@ class Esg extends Component {
       }
     ],
     fadeIn: true
-    // navIndex: 0
   };
 
   componentDidMount() {
     const { location } = this.props;
-    // const { navItems } = this.state;
+
     if (location.pathname === "/esg") {
-      // this.setState({ currentDetails: "philosophy" });
       return;
     } else {
-      const topic = location.state.id,
-        subNavTopic = topic.toLowerCase();
+      const topic = location.state.id.toLowerCase();
       this.setState({
-        currentDetails: subNavTopic
+        currentDetails: topic
       });
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    console.log("shouldComponentUpdate");
+    return (
+      this.props.location !== nextProps.location ||
+      this.props.height !== nextProps.height
+    );
+  }
+
   render() {
     const {
-      currentDetails,
+      // currentDetails,
       philosophyTextTable,
       strategyTextTable,
       frameworkTableText,
       fadeIn,
       navItems
     } = this.state;
-    const { width, height, match } = this.props;
+    const { width, height, match, location } = this.props,
+      bodyHeight = Math.floor(height * 0.82);
 
     return (
-      <main className="esg" style={{ maxHeight: height, maxWidth: width }}>
-        <SubNav
-          navItems={navItems}
-          match={match}
-          currentDetails={currentDetails}
-        />
-        <Switch>
-          <Route
-            path={`${match.url}/philosophy`}
-            render={routeProps => (
-              <TextTableContainer
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={philosophyTextTable}
-                currentDetailIdx={0}
+      <main className="esg" style={{ maxHeight: bodyHeight, maxWidth: width }}>
+        <SubNav navItems={navItems} match={match} location={location} />
+        <TransitionGroup className="fade">
+          <CSSTransition
+            key={location.state.interiorTransitionKey}
+            in={fadeIn}
+            timeout={2300}
+            classNames="slide"
+            mountOnEnter
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route
+                path={`${match.url}/philosophy`}
+                render={routeProps => (
+                  <TextTableContainer
+                    location={location.pathname.slice(1).split("/")[0]}
+                    text={philosophyTextTable}
+                    currentDetailIdx={0}
+                  />
+                  // </CSSTransition>
+                )}
               />
-            )}
-          />
-          <Route
-            path={`${match.url}/strategy`}
-            render={() => (
-              <TextTableContainer
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={strategyTextTable}
-                currentDetailIdx={0}
+              <Route
+                path={`${match.url}/strategy`}
+                render={() => (
+                  // <CSSTransition
+                  //   key={location.key}
+                  //   in={fadeIn}
+                  //   timeout={1800}
+                  //   classNames="slide"
+                  //   mountOnEnter
+                  //   unmountOnExit
+                  // >
+                  <TextTableContainer
+                    location={location.pathname.slice(1).split("/")[0]}
+                    text={strategyTextTable}
+                    currentDetailIdx={0}
+                  />
+                  // </CSSTransition>
+                )}
               />
-            )}
-          />
-          <Route
-            path={`${match.url}/framework`}
-            render={() => (
-              <div className="framework">
-                <TextTableContainer
-                  fadeIn={fadeIn}
-                  currentDetails={currentDetails}
-                  text={frameworkTableText}
-                  currentDetailIdx={0}
-                />
-              </div>
-            )}
-          />
-          <Route
-            path={match.url}
-            render={() => (
-              <TextTableContainer
-                fadeIn={fadeIn}
-                currentDetails={currentDetails}
-                text={philosophyTextTable}
-                currentDetailIdx={0}
+              <Route
+                path={`${match.url}/framework`}
+                render={() => (
+                  // <CSSTransition
+                  //   key={location.key}
+                  //   in={fadeIn}
+                  //   timeout={1800}
+                  //   classNames="slide"
+                  //   mountOnEnter
+                  //   unmountOnExit
+                  // >
+                  <div className="framework">
+                    <TextTableContainer
+                      location={location.pathname.slice(1).split("/")[0]}
+                      text={frameworkTableText}
+                      currentDetailIdx={0}
+                    />
+                  </div>
+                  // </CSSTransition>
+                )}
               />
-            )}
-          />
-        </Switch>
+              <Route
+                path={match.url}
+                render={() => (
+                  // <CSSTransition
+                  //   key={location.key}
+                  //   in={fadeIn}
+                  //   timeout={1800}
+                  //   classNames="slide"
+                  //   mountOnEnter
+                  //   unmountOnExit
+                  // >
+                  <TextTableContainer
+                    location={location.pathname.slice(1)}
+                    text={philosophyTextTable}
+                    currentDetailIdx={0}
+                  />
+                )}
+              />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
       </main>
     );
   }

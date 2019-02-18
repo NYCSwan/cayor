@@ -1,3 +1,10 @@
+@import "./_slide";
+
 .router {
   height: 100vh;
+  .root-container {
+    height: inherit;
+    @include slide-enter;
+    @include slide-exit;
+  }
 }

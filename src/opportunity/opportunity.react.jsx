@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import findKey from "lodash/findKey";
 import pickBy from "lodash/pickBy";
-// import Footer from "../layout/footer.react";
-// import Navigation from "../navigation/navigation.react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import SubNav from "../sub_navigation/sub_navigation.react";
 import TextTableContainer from "../layout/text-table-container.react";
 import WhyCayor from "./whyCayor.react";
@@ -12,30 +11,44 @@ import "./opportunity.css";
 
 class Opportunities extends Component {
   state = {
-    currentDetails: "experienced_investors",
+    currentDetails: "why_cayor experienced_investors",
     navItems: [
-      { value: "Why Cayor", url: "why_cayor why_cayor", style: "top" },
+      {
+        value: "Why Cayor",
+        url: "why_cayor why_cayor",
+        key: "cayor no-link",
+        style: "top"
+      },
       {
         value: "Experienced Africa Private Equity Investors",
         url: "why_cayor experienced_investors",
+        key: "experienced",
         style: "sub"
       },
       {
         value: "Extensive Africa Network",
-        url: "why_cayor african_network",
+        url: "why_cayor network",
+        key: "network",
         style: "sub"
       },
       {
         value: "Entrepreneurial",
         url: "why_cayor entrepreneurial",
+        key: "entrepreneurial",
         style: "sub"
       },
       {
         value: "Trusted Partnerships",
         url: "why_cayor partnerships",
+        key: "partnerships",
         style: "sub"
       },
-      { value: "Why Africa", url: "why_africa why_africa", style: "top" }
+      {
+        value: "Why Africa",
+        url: "why_africa why_africa",
+        key: "africa",
+        style: "top"
+      }
     ],
     whyAfricaTableText: [
       {
@@ -176,23 +189,32 @@ class Opportunities extends Component {
   };
 
   componentDidMount() {
-    console.log("CDM handle sub navigation click opportunity");
+    console.log("CDM opportunity");
     const { location } = this.props;
     const { navItems } = this.state;
-    if (location.pathname === "/opportunity") {
-      this.setState({ currentDetails: "why_cayor" });
+
+    if (location.state === undefined) {
+      return;
     } else {
       const target = location.state.id,
         currentNavItem = pickBy(navItems, item => {
-          return target === item.value;
+          return target === item.url;
         }),
         index = Number(findKey(currentNavItem)),
-        nextDetails = currentNavItem[index].url.split(" ")[1];
-      //
+        nextDetails = currentNavItem[index].url;
+
       this.setState({
         currentDetails: nextDetails
       });
     }
+  }
+
+  shouldComponentUpdate(nextProps) {
+    console.log("shouldComponentUpdate");
+    return (
+      this.props.location !== nextProps.location ||
+      this.props.height !== nextProps.height
+    );
   }
 
   render() {
@@ -203,58 +225,64 @@ class Opportunities extends Component {
       navItems,
       fadeIn
     } = this.state;
-    const { width, height, match, location } = this.props;
+    const { width, height, match, location } = this.props,
+      bodyHeight = Math.floor(height * 0.82);
+    // currentKey = this.props.location.pathname.split("/")[0] || "/";
+
     // debugger;
 
     return (
       <main
         className="opportunity"
-        style={{ maxHeight: height, maxWidth: width }}
+        style={{ maxHeight: bodyHeight, maxWidth: width }}
       >
-        <SubNav
-          navItems={navItems}
-          match={match}
-          currentDetails={currentDetails}
-        />
-        <Switch>
-          <Route
-            path={match.url + "/why_africa"}
-            render={() => (
-              <TextTableContainer
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={whyAfricaTableText}
-                currentDetailIdx={0}
-                location={location}
+        <SubNav navItems={navItems} match={match} location={location} />
+        <TransitionGroup className="slide">
+          <CSSTransition
+            key={location.state.interiorTransitionKey}
+            in={fadeIn}
+            timeout={1500}
+            classNames="slide"
+            mountOnEnter
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route
+                path={`${match.url}/why_africa`}
+                render={() => (
+                  <TextTableContainer
+                    text={whyAfricaTableText}
+                    currentDetailIdx={0}
+                    location={location.pathname.slice(1).split("/")[0]}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            path={match.url + "/why_cayor"}
-            render={routeProps => (
-              <WhyCayor
-                currentDetails={currentDetails}
-                text={whyCayorTableText}
-                {...routeProps}
-              />
-            )}
-          />
 
-          <Route
-            exact
-            path={match.url}
-            render={routeProps => (
-              <TextTableContainer
-                fadeIn={fadeIn}
-                currentDetails={currentDetails}
-                text={whyCayorTableText}
-                currentDetailIdx={0}
-                handleClick={this.handleButtonClick}
-                {...routeProps}
+              <Route
+                path={match.url + "/why_cayor"}
+                render={() => (
+                  <WhyCayor
+                    location={location}
+                    currentDetails={currentDetails}
+                    text={whyCayorTableText}
+                  />
+                )}
               />
-            )}
-          />
-        </Switch>
+
+              <Route
+                exact
+                path={match.url}
+                render={() => (
+                  <TextTableContainer
+                    text={whyCayorTableText}
+                    currentDetailIdx={0}
+                    location={location.pathname.slice(1)}
+                  />
+                )}
+              />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
       </main>
     );
   }

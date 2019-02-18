@@ -7,34 +7,50 @@ const SubNav = props => (
   <aside className="sub_navigation">
     <ul className="list">
       {props.navItems.map(navItem => {
+        const tKey = props.location.pathname.slice(1).split("/")[0];
+        const key = navItem.url.split(" ");
+        const iKey = key[1];
+        const work = key[0];
+        const path = `${props.match.url}/${work}`;
         const location = {
-          pathname: `${props.match.url}/${navItem.url.split(" ")[0]}`,
-          state: { id: navItem.value }
+          pathname: path,
+          state: {
+            id: navItem.url,
+            transitionKey: tKey,
+            interiorTransitionKey: iKey
+          }
         };
+        // debugger;
+
         return (
           <li
             key={navItem.value}
-            // onClick={navItem.style === "sub" ? props.handleClick : null}
             className={
-              props.currentDetails === navItem.url.split(" ")[1]
+              props.location.state !== undefined &&
+              props.location.state.id === navItem.url
                 ? `${navItem.style} active`
                 : navItem.style
             }
           >
             <FontAwesomeIcon
               className={
-                props.currentDetails.includes(navItem.url.split(" ")[1])
+                props.location.state !== undefined &&
+                props.location.state.id === navItem.url
                   ? `active`
                   : "hideIcon"
               }
               icon="arrow-right"
               pull="left"
             />
-            <Link to={location}>
-              {navItem.style === "top"
-                ? navItem.value.toUpperCase()
-                : navItem.value}
-            </Link>
+            {navItem.key.includes("no-link") ? (
+              navItem.value.toUpperCase()
+            ) : (
+              <Link to={location}>
+                {navItem.style === "top"
+                  ? navItem.value.toUpperCase()
+                  : navItem.value}
+              </Link>
+            )}
           </li>
         );
       })}

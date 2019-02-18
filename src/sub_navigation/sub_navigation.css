@@ -1,9 +1,9 @@
 .sub_navigation {
   float: left;
+  width: 22%;
   height: 100%;
   padding-top: 3%;
   display: inline-block;
-  width: 25%;
   border-right: 1px solid #d5d5d5;
   background-color: #d5d5d561; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -28,6 +28,7 @@
     align-items: flex-start;
     margin-top: -8px;
     padding-right: 4%;
+    z-index: 10;
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -60,13 +61,14 @@
         .sub_navigation .list .active {
           width: 90%;
           text-align: fit-content; } }
-    .sub_navigation .list .top a {
+    .sub_navigation .list .top {
       list-style: none;
       display: block;
       align-self: flex-start;
       color: #113a6e;
       font-weight: 700;
       min-width: 25vmin;
+      margin-bottom: 7%;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
@@ -74,41 +76,47 @@
       padding-top: 1vmin;
       /* Large screens ----------- */ }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top a {
+        .sub_navigation .list .top {
           font-size: 0.8em; } }
       @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top a {
+        .sub_navigation .list .top {
           font-size: 0.8em; } }
       @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
-        .sub_navigation .list .top a {
+        .sub_navigation .list .top {
           margin-top: 0; } }
-    .sub_navigation .list .top.active {
-      font-weight: bolder;
-      margin-left: -10%;
-      width: 100%;
-      word-wrap: normal; }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top.active {
-          margin-left: -5%;
-          width: 100%; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .sub_navigation .list .top.active {
-          margin-left: -5%;
-          width: 100%; } }
-      .sub_navigation .list .top.active:hover {
-        font-weight: bolder; }
-      .sub_navigation .list .top.active .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
-        width: auto;
-        margin-left: -10px;
-        display: inline; }
-    .sub_navigation .list .top:hover {
-      text-decoration: underline;
-      font-weight: bold;
-      cursor: grab; }
+      .sub_navigation .list .top a {
+        list-style: none;
+        color: inherit;
+        word-wrap: normal; }
+        .sub_navigation .list .top a:hover {
+          text-decoration: underline;
+          font-weight: bold;
+          cursor: grab; }
+      .sub_navigation .list .top.active {
+        font-weight: bolder;
+        margin-left: -8%;
+        width: 100%;
+        word-wrap: normal; }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: -5%;
+            width: 100%; } }
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .sub_navigation .list .top.active {
+            margin-left: -5%;
+            width: 100%; } }
+        .sub_navigation .list .top.active:hover {
+          font-weight: bolder; }
+        .sub_navigation .list .top.active .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
+          width: auto;
+          margin-left: -10px;
+          display: inline; }
     .sub_navigation .list .sub {
-      display: block; }
+      display: block;
+      margin-bottom: 7%; }
       .sub_navigation .list .sub a {
         color: #696969;
+        margin-top: 5%;
         padding: 4px 10px;
         list-style: none;
         width: 100%;

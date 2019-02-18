@@ -8,122 +8,79 @@
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .esg {
       overflow: auto; } }
-  .esg .sub_navigation {
-    width: 20%; }
-  .esg .body {
-    height: 1000px;
-    display: flex;
-    flex: row;
-    align-items: stretch;
-    justify-content: space-between; }
-    .esg .body .text-table-container {
-      height: 100%; }
-    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .esg .body .framework {
-        padding-top: 3%; } }
-    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .esg .body .framework {
-        padding-top: 3%; } }
-    .esg .body .framework .text-table-container {
-      width: inherit;
-      height: 55%; }
-      .esg .body .framework .text-table-container .text-table.bullet {
-        justify-content: flex-start;
-        height: 100%; }
-        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-          .esg .body .framework .text-table-container .text-table.bullet {
-            justify-content: flex-start;
-            width: 100%; } }
-        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-          .esg .body .framework .text-table-container .text-table.bullet {
-            justify-content: flex-start;
-            width: 100%; } }
-        .esg .body .framework .text-table-container .text-table.bullet .headerContainer {
-          width: auto;
-          height: auto; }
-          .esg .body .framework .text-table-container .text-table.bullet .headerContainer h4 {
-            width: auto;
-            height: auto; }
-        .esg .body .framework .text-table-container .text-table.bullet ul {
-          scroll-behavior: smooth;
-          overflow-y: scroll;
-          height: 80%; }
-          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet ul {
-              padding-top: 3%;
-              margin-bottom: 0; } }
-          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-            .esg .body .framework .text-table-container .text-table.bullet ul {
-              padding-top: 3%;
-              margin-bottom: 0; } }
-    .esg .body .framework .scrollIcon {
-      position: fixed;
-      width: 100px;
-      height: auto;
-      right: 50px;
-      bottom: 150px; }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .esg .body .framework .scrollIcon {
-          width: 40px;
-          right: 10px;
-          bottom: 10px; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .esg .body .framework .scrollIcon {
-          width: 40px;
-          right: 10px;
-          bottom: 10px; } }
-  .esg.slide-appear.slide-appear-active {
-    height: 100%;
-    transition: height 400ms ease; }
+  .esg .slide {
+    height: inherit;
+    display: flex; }
+    .esg .slide.slide-enter, .esg .slide.slide-appear {
+      opacity: 0;
+      z-index: 1;
+      transform: translate3d(-80%, 0, 0); }
+      .esg .slide.slide-enter.slide-enter-active, .esg .slide.slide-enter.slide-appear-active, .esg .slide.slide-appear.slide-enter-active, .esg .slide.slide-appear.slide-appear-active {
+        width: 80%;
+        opacity: 1;
+        transform: translate3d(0%, 0, 0);
+        transition: opacity 500ms, transform 800ms ease; }
 
 @keyframes slide-in {
-  0% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(0%); } }
+  0% { }
+  100% { } }
 
 @-webkit-keyframes slide-in {
   0% {
-    -webkit-transform: translateX(-100%); }
-  100% {
-    -webkit-transform: translateX(0%); } }
-  .esg.slide-enter {
-    z-index: 10;
-    opacity: 0.1; }
-    .esg.slide-enter.slide-enter-active {
-      opacity: 1;
-      animation: slide-in 800ms forwards;
-      -webkit-animation: slide-in 800ms forwards;
-      transition: height 500ms ease 800ms, animation 1s ease 850ms, opacity 1s ease 850ms; }
-
-@keyframes slide-in {
-  0% {
-    transform: translate3d(-100%, 0, 0); }
-  100% {
-    transform: translate3d(0%, 0, 0); } }
-
-@-webkit-keyframes slide-in {
-  0% {
-    -webkit-transform: translate3d(-100%, 0, 0); }
+    -webkit-transform: translate3d(-50%, 0, 0); }
   100% {
     -webkit-transform: translate3d(0%, 0, 0); } }
-  .esg.slide-exit {
-    z-index: 10;
-    opacity: 1; }
-    .esg.slide-exit.slide-exit-active {
-      opacity: 0;
-      animation: slide-out 800ms forwards;
-      -webkit-animation: slide-out 800ms forwards;
-      transition: all 800ms ease; }
+    .esg .slide.slide-exit {
+      opacity: 1; }
+      .esg .slide.slide-exit.slide-exit-active {
+        opacity: 0;
+        display: none;
+        animation: slide-out;
+        -webkit-animation: slide-out;
+        transition: animation 300ms ease; }
 
 @keyframes slide-out {
   0% {
     transform: translate3d(0%, 0, 0); }
   100% {
-    transform: translate3d(-100%, 0, 0); } }
-
-@-webkit-keyframes slide-out {
-  0% {
-    -webkit-transform: translate3d(0%, 0, 0); }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0); } }
+    transform: translate3d(-200%, 0, 0); } }
+    .esg .slide .framework {
+      height: 85%; }
+      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        .esg .slide .framework {
+          padding-top: 3%; } }
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .esg .slide .framework {
+          padding-top: 3%; } }
+      .esg .slide .framework .text-table-container {
+        width: inherit;
+        height: 100%; }
+        .esg .slide .framework .text-table-container .text-table.bullet {
+          justify-content: flex-start;
+          height: 100%; }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .esg .slide .framework .text-table-container .text-table.bullet {
+              justify-content: flex-start;
+              width: 100%; } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .esg .slide .framework .text-table-container .text-table.bullet {
+              justify-content: flex-start;
+              width: 100%; } }
+          .esg .slide .framework .text-table-container .text-table.bullet .headerContainer {
+            width: auto;
+            height: auto; }
+            .esg .slide .framework .text-table-container .text-table.bullet .headerContainer h4 {
+              width: auto;
+              height: auto; }
+          .esg .slide .framework .text-table-container .text-table.bullet .list-group {
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+            height: 80%; }
+            @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+              .esg .slide .framework .text-table-container .text-table.bullet .list-group {
+                padding-top: 3%;
+                margin-bottom: 0; } }
+            @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+              .esg .slide .framework .text-table-container .text-table.bullet .list-group {
+                padding-top: 3%;
+                margin-bottom: 0; } }

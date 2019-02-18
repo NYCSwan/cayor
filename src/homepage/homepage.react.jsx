@@ -46,32 +46,16 @@ const items = [
 ];
 
 class Homepage extends React.Component {
-  // componentDidMount() {
-  //   // this.isMounted = true;
-  //   // window.onpopstate = function(e) {
-  //   //   debugger;
-  //   // };
-  // }
-
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.props.width !== nextProps.width ||
-      this.props.deviceIdx !== nextProps.deviceIdx ||
-      this.props.isContactModalOpen !== nextProps.isContactModalOpen
+      this.props.deviceIdx !== nextProps.deviceIdx
     );
   }
 
   render() {
     console.log("render homepage");
-    const {
-      deviceIdx,
-      width
-      // history,
-      // location,
-      // handleClockClick,
-      // handleClose,
-      // isContactModalOpen
-    } = this.props;
+    const { deviceIdx, width } = this.props;
 
     return (
       <div className="homepage">

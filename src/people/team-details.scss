@@ -1,8 +1,8 @@
 @import "../_variables";
 @import "../_mixins";
 
-.TeamDetails.fade.show {
-  width: 75%;
+.TeamDetails {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   height: 80%;

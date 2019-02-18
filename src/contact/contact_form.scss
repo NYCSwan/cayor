@@ -1,6 +1,6 @@
-@import '../_slide';
-@import '../_variables';
-@import '../_mixins';
+@import "../_slide";
+@import "../_variables";
+@import "../_mixins";
 
 .popover {
   border-top: 2px solid $cayorRed;
@@ -14,17 +14,17 @@
   @include respond-to(phone) {
     min-width: 85%;
     margin-top: 10%;
-    // height: 60%;
   }
   &.show {
-    width: 100%;
+    width: inherit;
     &.contactForm {
       width: 100%;
       @include respond-to(phone) {
         width: 100%;
         // height: 100%;
       }
-      &.bs-popover-bottom {
+      &.bs-popover-bottom,
+      &.bs-popover-top {
         width: 100%;
         height: auto;
         padding-bottom: 5%;
@@ -67,7 +67,7 @@
             @include respond-to(tablets) {
               padding: 0;
             }
-            .contactBody {
+            &.contactBody {
               padding-left: 5%;
               @include respond-to(phone) {
                 padding-left: 1%;
@@ -156,5 +156,4 @@
       }
     }
   }
-  @include slide-down;
 }

@@ -1,5 +1,5 @@
-@import '../_slide';
-@import '../_mixins';
+@import "../_slide";
+@import "../_mixins";
 
 .esg {
   width: 100%;
@@ -8,30 +8,28 @@
   @include respond-to(phone) {
     overflow: auto;
   }
-  .sub_navigation {
-    width: 20%;
-  }
-  .body {
-    height: 1000px;
+  .slide {
+    height: inherit;
     display: flex;
-    flex: row;
-    align-items: stretch;
-    justify-content: space-between;
-    .text-table-container {
-      height: 100%;
-      .text-table {
-        // overflow-y: scroll;
-      }
-    }
+    @include slide-enter;
+    @include slide-exit;
+    // .text-table-container {
+    //   height: 100%;
+    //   width: 80%;
+    //   .text-table {
+    //   }
+    // }
     // FRAMEWORK VIEW
     .framework {
+      height: 85%;
+
       // padding-top: 0.6%;
       @include respond-to(phone) {
         padding-top: 3%;
       }
       .text-table-container {
         width: inherit;
-        height: 55%;
+        height: 100%;
         .text-table.bullet {
           justify-content: flex-start;
           height: 100%;
@@ -48,7 +46,7 @@
               // font-size: 1.2em;
             }
           }
-          ul {
+          .list-group {
             scroll-behavior: smooth;
             overflow-y: scroll;
             height: 80%;
@@ -59,21 +57,6 @@
           }
         }
       }
-      .scrollIcon {
-        position: fixed;
-        width: 100px;
-        height: auto;
-        right: 50px;
-        bottom: 150px;
-        @include respond-to(phone) {
-          width: 40px;
-          right: 10px;
-          bottom: 10px;
-        }
-      }
     }
   }
-  @include slide-appear;
-  @include slide-enter;
-  @include slide-exit;
 }

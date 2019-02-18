@@ -3,10 +3,10 @@
 
 .sub_navigation {
   float: left;
+  width: 22%;
   height: 100%;
   padding-top: 3%;
   display: inline-block;
-  width: 25%;
   border-right: 1px solid $lightGrey;
   background-color: $lightGreySemiTransparent;
   @include respond-to(phone) {
@@ -25,8 +25,10 @@
     padding-inline-start: 0;
     float: right;
     align-items: flex-start;
+    // justify-content: space-around;
     margin-top: -8px;
     padding-right: 4%;
+    z-index: 10;
     @include respond-to(phone) {
       text-align: fit-content;
       width: 85%;
@@ -48,31 +50,37 @@
       }
     }
     .top {
+      list-style: none;
+      display: block;
+      align-self: flex-start;
+      color: $primaryBlue;
+      font-weight: 700;
+      min-width: 25vmin;
+      margin-bottom: 7%;
+      text-align: left;
+      -moz-text-align-last: left;
+      flex-grow: 1;
+      padding-bottom: 1vmin;
+      padding-top: 1vmin;
+      @include respond-to(phone) {
+        font-size: 0.8em;
+      }
+      @include respond-to(large-screen) {
+        margin-top: 0;
+      }
       a {
         list-style: none;
-        display: block;
-        align-self: flex-start;
-        color: $primaryBlue;
-        font-weight: 700;
-        min-width: 25vmin;
-        // width: 100%;
-        text-align: left;
-        -moz-text-align-last: left;
-        flex-grow: 1;
-        padding-bottom: 1vmin;
-        padding-top: 1vmin;
-        @include respond-to(phone) {
-          font-size: 0.8em;
-          // align-self: flex-start;
-        }
-        @include respond-to(large-screen) {
-          // align-self: flex-start;
-          margin-top: 0;
+        color: inherit;
+        word-wrap: normal;
+        &:hover {
+          text-decoration: underline;
+          font-weight: bold;
+          cursor: grab;
         }
       }
       &.active {
         font-weight: bolder;
-        margin-left: -10%;
+        margin-left: -8%;
         width: 100%;
         word-wrap: normal;
 
@@ -90,17 +98,13 @@
           display: inline;
         }
       }
-      &:hover {
-        text-decoration: underline;
-        font-weight: bold;
-        cursor: grab;
-      }
     }
     .sub {
       display: block;
+      margin-bottom: 7%;
       a {
         color: $primaryGrey;
-        // flex-grow: 1;
+        margin-top: 5%;
         padding: 4px 10px;
         list-style: none;
         width: 100%;

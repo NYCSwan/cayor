@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import findKey from "lodash/findKey";
 import pickBy from "lodash/pickBy";
 import { Switch, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import SubNav from "../sub_navigation/sub_navigation.react";
 import TextTableContainer from "../layout/text-table-container.react";
-// import Footer from "../layout/footer.react";
-// import Navigation from "../navigation/navigation.react";
 import RegionDetails from "./TargetRegionDetails.react";
 import Agribusiness from "../media/agriculture.jpg";
 import Manufacturing from "../media/supermarket.jpg";
@@ -21,19 +20,19 @@ class Approach extends Component {
       {
         value: "The Cayor Approach",
         url: "cayor_approach cayor_approach",
-        key: "approach",
+        key: "approach no-link",
         style: "top"
       },
       {
         value: "Clear Investment Philosophy",
         url: "cayor_approach philosophy",
-        key: "strategy",
+        key: "philosophy",
         style: "sub"
       },
       {
         value: "Mid Market Focus",
         url: "cayor_approach mid",
-        key: "middle",
+        key: "mid",
         style: "sub"
       },
       {
@@ -57,23 +56,23 @@ class Approach extends Component {
       {
         value: "Investment Criteria",
         url: "investments investment",
-        key: "criteria",
+        key: "criteria no-link",
         style: "top"
       },
       {
         value: "Deal Type Criteria",
         url: "investments deal",
-        key: "deals",
+        key: "deal",
         style: "sub"
       },
       {
         value: "Target Company Criteria",
         url: "investments company",
-        key: "companies",
+        key: "company",
         style: "sub"
       }
     ],
-    currentDetails: "cayor_approach",
+    currentDetails: "cayor_approach cayor_approach",
     cayorApproachTableText: [
       {
         header: "Execute a Strategy With A Clear Investment Philosophy",
@@ -444,7 +443,6 @@ class Approach extends Component {
       {
         header: "Target Company Criteria",
         template: "other",
-        // images: [],
         details: [
           {
             dKey: "s00",
@@ -508,10 +506,7 @@ class Approach extends Component {
           }
         ]
       }
-    ],
-    fadeIn: true,
-    currentDetailIdx: 0,
-    buttonDisabled: false
+    ]
   };
 
   componentDidMount() {
@@ -519,114 +514,145 @@ class Approach extends Component {
     const { navItems } = this.state;
     const { location } = this.props;
 
-    if (location.pathname === "/approach") {
+    if (location.state === undefined) {
       return;
     } else {
+      // debugger;
       const target = location.state.id,
-        //     target = path.replace("/opportunity/", ""),
         currentNavItem = pickBy(navItems, item => {
-          return target === item.value;
+          return target === item.url;
         }),
         index = Number(findKey(currentNavItem)),
-        //     // nextIdx = index - 1,
-        nextDetails = currentNavItem[index].url.split(" ")[1];
+        nextDetails = currentNavItem[index].url;
 
-      //
       this.setState({
-        currentDetails: nextDetails,
-        fadeIn: false
+        currentDetails: nextDetails
       });
     }
   }
-  g;
+
+  shouldComponentUpdate(nextProps) {
+    console.log("shouldComponentUpdate");
+    return (
+      this.props.location !== nextProps.location ||
+      this.props.height !== nextProps.height
+    );
+  }
+
   render() {
+    console.log("render approach");
     const {
       navItems,
       currentDetails,
-      currentDetailIdx,
       sectorsTableText,
       regionsTableText,
       investmentCriteriaTableText,
-      buttonDisabled,
       cayorApproachTableText
     } = this.state;
-    const { width, height, match, location } = this.props;
+    const { width, height, match, location } = this.props,
+      bodyHeight = Math.floor(height * 0.82);
+    let index = 0;
+
+    if (
+      location.state !== undefined &&
+      location.pathname === "/approach/investments"
+    ) {
+      const investmentItem = pickBy(investmentCriteriaTableText, item => {
+        return item.header
+          .toLowerCase()
+          .includes(location.state.id.split(" ")[1]);
+      });
+      index = Number(findKey(investmentItem));
+    } else if (
+      location.state !== undefined &&
+      location.pathname === "/approach/cayor_approach"
+    ) {
+      const cayorItem = pickBy(cayorApproachTableText, item => {
+        // debugger;
+        return item.header
+          .toLowerCase()
+          .includes(location.state.id.split(" ")[1]);
+      });
+      index = Number(findKey(cayorItem));
+    }
 
     return (
-      <main className="approach" style={{ maxHeight: height, maxWidth: width }}>
-        <SubNav
-          navItems={navItems}
-          match={match}
-          currentDetails={currentDetails}
-        />
-        <Switch>
-          <Route
-            path={`${match.url}/cayor_approach`}
-            render={routeProps => (
-              <TextTableContainer
-                disabled={buttonDisabled}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={cayorApproachTableText}
-                currentDetailIdx={0}
-                handleButtonClick={this.handleButtonClick}
-                {...routeProps}
+      <main
+        className="approach"
+        style={{ maxHeight: bodyHeight, maxWidth: width }}
+      >
+        <SubNav navItems={navItems} match={match} location={location} />
+        <TransitionGroup className="slide">
+          <CSSTransition
+            key={
+              location.state
+                ? location.state.interiorTransitionKey
+                : location.key
+            }
+            in={true}
+            timeout={1000}
+            classNames="slide"
+            mountOnEnter
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route
+                path={`${match.url}/cayor_approach`}
+                render={() => (
+                  <TextTableContainer
+                    text={cayorApproachTableText}
+                    currentDetailIdx={index}
+                    location={location.pathname.slice(1).split("/")[0]}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            path={`${match.url}/sectors`}
-            render={() => (
-              <SectorsContainer
-                location={location}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={sectorsTableText}
-                currentDetailIdx={currentDetailIdx}
-                handleButtonClick={this.handleButtonClick}
+              <Route
+                path={`${match.url}/sectors`}
+                render={() => (
+                  <SectorsContainer
+                    location={location}
+                    fadeIn={true}
+                    currentDetails={currentDetails}
+                    text={sectorsTableText}
+                    currentDetailIdx={0}
+                    handleButtonClick={this.handleButtonClick}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            path={`${match.url}/regions`}
-            render={() => (
-              <RegionDetails
-                location={location}
-                fadeIn={true}
-                text={regionsTableText}
-                // handleButtonClick={this.handleButtonClick}
+              <Route
+                path={`${match.url}/regions`}
+                render={() => (
+                  <RegionDetails
+                    location={location}
+                    fadeIn={true}
+                    text={regionsTableText}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            path={`${match.url}/investments`}
-            render={() => (
-              <TextTableContainer
-                location={location}
-                disabled={buttonDisabled}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                currentDetailIdx={0}
-                text={investmentCriteriaTableText}
-                // handleButtonClick={this.handleButtonClick}
+              <Route
+                path={`${match.url}/investments`}
+                render={() => (
+                  <TextTableContainer
+                    location={location.pathname.slice(1).split("/")[0]}
+                    currentDetailIdx={index}
+                    text={investmentCriteriaTableText}
+                  />
+                )}
               />
-            )}
-          />
-          <Route
-            path={match.url}
-            render={routeProps => (
-              <TextTableContainer
-                disabled={buttonDisabled}
-                fadeIn={true}
-                currentDetails={currentDetails}
-                text={cayorApproachTableText}
-                currentDetailIdx={0}
-                // handleButtonClick={this.handleButtonClick}
-                {...routeProps}
+              <Route
+                exact
+                path={match.url}
+                render={routeProps => (
+                  <TextTableContainer
+                    text={cayorApproachTableText}
+                    currentDetailIdx={0}
+                    location={location.pathname.slice(1)}
+                  />
+                )}
               />
-            )}
-          />
-        </Switch>
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
       </main>
     );
   }
