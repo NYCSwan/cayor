@@ -11,6 +11,7 @@
   .slide {
     height: 80%;
     display: flex;
+
     @include slide-enter;
     @include slide-exit;
   }

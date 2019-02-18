@@ -229,7 +229,7 @@ class People extends Component {
             in={fadeIn}
             timeout={{ enter: 1000, exit: 500 }}
             key={location.state.interiorTransitionKey}
-            classNames="slide"
+            classNames={["slide", "fade"]}
             mountOnEnter
             unmountOnExit
           >
