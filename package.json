@@ -3,6 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://cayorcapital.herokuapp.com/",
+  "description": "Cayor Capital is a Sub-Saharan Africa Equity Fund, investing in mid markets across Africa. The Fund directed by experienced African investors, provides a diverse portfolio in growing industries including Financial Services, Agriculture, Consumer goods, and infrastructure. Cayor is committed to ESG and secure returns for investors.",
+  "keywords": [
+    "Sub-Saharan Africa",
+    "Africa",
+    "equity fund",
+    "investing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nycswan/cayor.git"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
