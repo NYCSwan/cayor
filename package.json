@@ -14,11 +14,16 @@
     "type": "git",
     "url": "https://github.com/nycswan/cayor.git"
   },
+  "engines": {
+    "node": "11.10.x",
+    "yarn": ">=1.0.0 <2.0.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.1.1",
+    "express": "^4.16.4",
     "node-sass-chokidar": "^1.2.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
