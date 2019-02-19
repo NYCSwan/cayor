@@ -1,5 +1,5 @@
-runtime: nodejs
-env: flex
+runtime: nodejs8
+# env: flex
 
 # This sample incurs costs to run on the App Engine flexible environment.
 # The settings below are to reduce costs during testing and are not appropriate
@@ -12,12 +12,15 @@ resources:
   memory_gb: 0.5
   disk_size_gb: 10
 handlers:
-  - url: /
-    static_files: build/index.html
-    upload: build/index.html
-  - url: /
-    static_dir: build
-  - url: /.*
-    secure: always
-    redirect_http_response_code: 301
-    script: auto
+- url: /images
+  static_dir: static/images
+- url: /
+  static_files: build/index.html
+  upload: build/index.html
+  secure: always
+  static_dir: build
+- url: /stylesheets
+  static_dir: build/static/css
+- url: /.*
+  redirect_http_response_code: 301
+  script: auto
