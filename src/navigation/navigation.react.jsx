@@ -41,7 +41,7 @@ class Navigation extends Component {
         street_address: "41 Tafawa Balawa St.",
         street_address2: "North Ridge",
         city: "Accra",
-        phone: "+",
+        phone: "+27 11 593 3266",
         imageUrl: Accra,
         imageAlt:
           "Map of Accra Ghana, Cayor's second Sub-Saharan Africa equity office location"
