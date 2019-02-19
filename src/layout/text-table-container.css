@@ -14,7 +14,7 @@
       width: 80%;
       opacity: 1;
       transform: translate3d(0%, 0, 0);
-      transition: opacity 500ms, transform 800ms ease; }
+      transition: opacity 500ms, transform 800ms linear; }
 
 @keyframes slide-in {
   0% { }
