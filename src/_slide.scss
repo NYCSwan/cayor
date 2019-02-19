@@ -12,7 +12,7 @@
       transform: translate3d(0%, 0, 0);
       // animation: slide-in 800ms linear 300ms;
       // -webkit-animation: slide-in 800ms linear;
-      transition: opacity 500ms, transform 800ms ease;
+      transition: opacity 500ms, transform 800ms linear;
     }
   }
 
