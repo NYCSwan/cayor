@@ -7,6 +7,39 @@
   left: 0;
   /* iPads (portrait and landscape) ----------- */
   /* kindle fire (portrait and landscape) ----------- */ }
+  .SectorsContainer.slide-enter, .SectorsContainer.slide-appear {
+    opacity: 0;
+    z-index: 1;
+    transform: translate3d(-80%, 0, 0); }
+    .SectorsContainer.slide-enter.slide-enter-active, .SectorsContainer.slide-enter.slide-appear-active, .SectorsContainer.slide-appear.slide-enter-active, .SectorsContainer.slide-appear.slide-appear-active {
+      width: 80%;
+      opacity: 1;
+      transform: translate3d(0%, 0, 0);
+      transition: opacity 500ms, transform 800ms linear; }
+
+@keyframes slide-in {
+  0% { }
+  100% { } }
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0%, 0, 0); } }
+  .SectorsContainer.slide-exit {
+    opacity: 1; }
+    .SectorsContainer.slide-exit.slide-exit-active {
+      opacity: 0;
+      display: none;
+      animation: slide-out;
+      -webkit-animation: slide-out;
+      transition: animation 300ms ease; }
+
+@keyframes slide-out {
+  0% {
+    transform: translate3d(0%, 0, 0); }
+  100% {
+    transform: translate3d(-200%, 0, 0); } }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .SectorsContainer {
       margin-top: 1%; } }
