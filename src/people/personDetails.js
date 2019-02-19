@@ -5,7 +5,7 @@ import "./personDetails.css";
 import Button from "../layout/button.react";
 
 const PersonDetails = props => (
-  <Fade fadeIn={true}>
+  <Fade in={true}>
     <main className="personDetails">
       <aside className="right">
         <div className="info">

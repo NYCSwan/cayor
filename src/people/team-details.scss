@@ -1,12 +1,14 @@
 @import "../_variables";
 @import "../_mixins";
+@import "../_slide";
 
 .TeamDetails {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  height: 80%;
-  // padding-top: 2%;
+  height: initial;
+  @include slide-exit;
+  @include slide-enter;
   @include respond-to(phone) {
     height: 70%;
     width: 80%;

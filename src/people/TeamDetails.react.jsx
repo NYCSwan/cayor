@@ -1,19 +1,14 @@
 import React, { Component } from "react";
-// import Row from "reactstrap/Row";
-// import Container from "reactstrap/Container";
-// import { Col, Row, Container } from "reactstrap";
 import filter from "lodash/filter";
 import findKey from "lodash/findKey";
-// import slice from "lodash/slice";
 import TeamContainer from "./teamContainer.react";
-// import Snapshot from "./snapshot.react";
 import PersonDetails from "./personDetails";
 
 import "./team-details.css";
 
 class TeamDetails extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       isOpen: false,
       personDetails: [],
@@ -36,15 +31,15 @@ class TeamDetails extends Component {
     }
   }
 
-  shouldComponentUpdate(nextState, nextProps) {
-    return this.state.idx !== nextState.idx;
-  }
+  // shouldComponentUpdate(nextState, nextProps) {
+  //   return this.state.idx !== nextState.idx || this.props.closeDetails !== nextProps.closeDetails;
+  // }
 
   handleClick = e => {
     console.log("handle person click");
     const { teamDetailsNoColors } = this.state,
       currentPerson = e.target.textContent.toLowerCase();
-    e.preventDefault();
+    // e.preventDefault();
 
     if (
       currentPerson.includes("red") ||
@@ -68,7 +63,6 @@ class TeamDetails extends Component {
         idx: 3,
         currentPerson: teamDetailsNoColors[3].name
       });
-
       this.props.handleBioClick();
     } else if (currentPerson.includes("fungai")) {
       this.setState({

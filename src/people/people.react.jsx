@@ -192,15 +192,16 @@ class People extends Component {
     }
   }
 
-  shouldComponentUpdate(nextProps) {
-    console.log("shouldComponentUpdate");
-    return (
-      this.props.location !== nextProps.location ||
-      this.props.height !== nextProps.height
-    );
-  }
+  // shouldComponentUpdate(nextProps) {
+  //   console.log("shouldComponentUpdate");
+  //   return (
+  //     this.props.location !== nextProps.location ||
+  //     this.props.height !== nextProps.height
+  //   );
+  // }
 
   handleBioClick = () => {
+    console.log('handleBioClick');
     this.setState({ closeDetails: false });
   };
 
@@ -229,7 +230,7 @@ class People extends Component {
             in={fadeIn}
             timeout={{ enter: 1000, exit: 500 }}
             key={location.state.interiorTransitionKey}
-            classNames={["slide", "fade"]}
+            classNames="slide"
             mountOnEnter
             unmountOnExit
           >

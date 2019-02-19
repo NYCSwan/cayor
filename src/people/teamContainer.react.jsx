@@ -1,20 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { Col, Row, Container } from "reactstrap";
 import slice from "lodash/slice";
 import Snapshot from "./snapshot.react";
 
-export default class TeamDetails extends Component {
-  render() {
-    const { teamDetails } = this.props,
-      row1 = slice(teamDetails, 0, 4),
-      row2 = slice(teamDetails, 4, 7),
-      row3 = slice(teamDetails, 7, 11);
-
-    return (
+const TeamDetails = props => (
       <div className="main">
         <Container>
           <Row>
-            {row1.map(member => {
+            {slice(props.teamDetails, 0, 4).map(member => {
               if (
                 member.name.includes("blue") ||
                 member.name.includes("red") ||
@@ -32,7 +25,7 @@ export default class TeamDetails extends Component {
                 return (
                   <Snapshot
                     key={member.name}
-                    handleClick={this.props.handleClick}
+                    handleClick={props.handleClick}
                     value={member}
                     xs="3"
                     sm="3"
@@ -42,7 +35,7 @@ export default class TeamDetails extends Component {
             })}
           </Row>
           <Row className="offset">
-            {row2.map(member => {
+            {slice(props.teamDetails, 4, 7).map(member => {
               if (
                 member.name.includes("blue") ||
                 member.name.includes("red") ||
@@ -71,7 +64,7 @@ export default class TeamDetails extends Component {
                 return (
                   <Snapshot
                     key={member.name}
-                    handleClick={this.props.handleClick}
+                    handleClick={props.handleClick}
                     value={member}
                     xs={{ size: "3" }}
                     sm={{ size: "3" }}
@@ -81,7 +74,7 @@ export default class TeamDetails extends Component {
             })}
           </Row>
           <Row>
-            {row3.map(member => {
+            {slice(props.teamDetails, 7, 11).map(member => {
               if (
                 member.name.includes("blue") ||
                 member.name.includes("red") ||
@@ -99,7 +92,7 @@ export default class TeamDetails extends Component {
                 return (
                   <Snapshot
                     key={member.name}
-                    handleClick={this.props.handleClick}
+                    handleClick={props.handleClick}
                     value={member}
                     xs="3"
                     sm="3"
@@ -111,5 +104,5 @@ export default class TeamDetails extends Component {
         </Container>
       </div>
     );
-  }
-}
+
+export default TeamDetails;
