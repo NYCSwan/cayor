@@ -10,16 +10,19 @@
       overflow: auto; } }
   .esg .slide {
     height: inherit;
-    display: flex; }
-    .esg .slide.slide-enter, .esg .slide.slide-appear {
-      opacity: 0;
-      z-index: 1;
-      transform: translate3d(-80%, 0, 0); }
-      .esg .slide.slide-enter.slide-enter-active, .esg .slide.slide-enter.slide-appear-active, .esg .slide.slide-appear.slide-enter-active, .esg .slide.slide-appear.slide-appear-active {
-        width: 80%;
-        opacity: 1;
-        transform: translate3d(0%, 0, 0);
-        transition: opacity 500ms, transform 800ms ease; }
+    display: flex;
+    justify-content: center; }
+    .esg .slide .framework {
+      height: 85%; }
+      .esg .slide .framework.slide-enter, .esg .slide .framework.slide-appear {
+        opacity: 0;
+        z-index: 1;
+        transform: translate3d(-80%, 0, 0); }
+        .esg .slide .framework.slide-enter.slide-enter-active, .esg .slide .framework.slide-enter.slide-appear-active, .esg .slide .framework.slide-appear.slide-enter-active, .esg .slide .framework.slide-appear.slide-appear-active {
+          width: 80%;
+          opacity: 1;
+          transform: translate3d(0%, 0, 0);
+          transition: opacity 500ms, transform 800ms linear; }
 
 @keyframes slide-in {
   0% { }
@@ -30,22 +33,20 @@
     -webkit-transform: translate3d(-50%, 0, 0); }
   100% {
     -webkit-transform: translate3d(0%, 0, 0); } }
-    .esg .slide.slide-exit {
-      opacity: 1; }
-      .esg .slide.slide-exit.slide-exit-active {
-        opacity: 0;
-        display: none;
-        animation: slide-out;
-        -webkit-animation: slide-out;
-        transition: animation 300ms ease; }
+      .esg .slide .framework.slide-exit {
+        opacity: 1; }
+        .esg .slide .framework.slide-exit.slide-exit-active {
+          opacity: 0;
+          display: none;
+          animation: slide-out;
+          -webkit-animation: slide-out;
+          transition: animation 300ms ease; }
 
 @keyframes slide-out {
   0% {
     transform: translate3d(0%, 0, 0); }
   100% {
     transform: translate3d(-200%, 0, 0); } }
-    .esg .slide .framework {
-      height: 85%; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .esg .slide .framework {
           padding-top: 3%; } }

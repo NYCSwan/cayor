@@ -11,17 +11,12 @@
   .slide {
     height: inherit;
     display: flex;
-    @include slide-enter;
-    @include slide-exit;
-    // .text-table-container {
-    //   height: 100%;
-    //   width: 80%;
-    //   .text-table {
-    //   }
-    // }
+    justify-content: center;
     // FRAMEWORK VIEW
     .framework {
       height: 85%;
+      @include slide-enter;
+      @include slide-exit;
 
       // padding-top: 0.6%;
       @include respond-to(phone) {

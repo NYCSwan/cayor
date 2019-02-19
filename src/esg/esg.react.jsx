@@ -183,7 +183,7 @@ class Esg extends Component {
     return (
       <main className="esg" style={{ maxHeight: bodyHeight, maxWidth: width }}>
         <SubNav navItems={navItems} match={match} location={location} />
-        <TransitionGroup className="fade">
+        <TransitionGroup className="slide">
           <CSSTransition
             key={location.state.interiorTransitionKey}
             in={fadeIn}
@@ -201,39 +201,21 @@ class Esg extends Component {
                     text={philosophyTextTable}
                     currentDetailIdx={0}
                   />
-                  // </CSSTransition>
                 )}
               />
               <Route
                 path={`${match.url}/strategy`}
                 render={() => (
-                  // <CSSTransition
-                  //   key={location.key}
-                  //   in={fadeIn}
-                  //   timeout={1800}
-                  //   classNames="slide"
-                  //   mountOnEnter
-                  //   unmountOnExit
-                  // >
                   <TextTableContainer
                     location={location.pathname.slice(1).split("/")[0]}
                     text={strategyTextTable}
                     currentDetailIdx={0}
                   />
-                  // </CSSTransition>
                 )}
               />
               <Route
                 path={`${match.url}/framework`}
                 render={() => (
-                  // <CSSTransition
-                  //   key={location.key}
-                  //   in={fadeIn}
-                  //   timeout={1800}
-                  //   classNames="slide"
-                  //   mountOnEnter
-                  //   unmountOnExit
-                  // >
                   <div className="framework">
                     <TextTableContainer
                       location={location.pathname.slice(1).split("/")[0]}
@@ -241,20 +223,11 @@ class Esg extends Component {
                       currentDetailIdx={0}
                     />
                   </div>
-                  // </CSSTransition>
                 )}
               />
               <Route
                 path={match.url}
                 render={() => (
-                  // <CSSTransition
-                  //   key={location.key}
-                  //   in={fadeIn}
-                  //   timeout={1800}
-                  //   classNames="slide"
-                  //   mountOnEnter
-                  //   unmountOnExit
-                  // >
                   <TextTableContainer
                     location={location.pathname.slice(1)}
                     text={philosophyTextTable}
