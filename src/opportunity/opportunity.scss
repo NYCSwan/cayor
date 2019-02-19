@@ -1,4 +1,4 @@
-@import "../_slide";
+
 @import "../_mixins";
 
 .opportunity {
@@ -11,8 +11,7 @@
   .slide {
     height: 80%;
     display: flex;
+    justify-content: center;
 
-    @include slide-enter;
-    @include slide-exit;
   }
 }
