@@ -31,10 +31,6 @@ class TeamDetails extends Component {
     }
   }
 
-  // shouldComponentUpdate(nextState, nextProps) {
-  //   return this.state.idx !== nextState.idx || this.props.closeDetails !== nextProps.closeDetails;
-  // }
-
   handleClick = e => {
     console.log("handle person click");
     const { teamDetailsNoColors } = this.state,

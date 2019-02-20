@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  height: initial;
+  height: 100%;
   /* iPads (portrait and landscape) ----------- */
   /* kindle fire (portrait and landscape) ----------- */ }
   .TeamDetails.slide-exit {
@@ -33,6 +33,7 @@
       padding-left: 0; } }
   .TeamDetails .main {
     width: 100%;
+    height: 100%;
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {

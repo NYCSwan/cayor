@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  height: initial;
+  height: 100%;
   @include slide-exit;
   @include slide-enter;
   @include respond-to(phone) {
@@ -29,6 +29,7 @@
   }
   .main {
     width: 100%;
+    height: 100%;
     @include respond-to(phone) {
       height: 70%;
     }

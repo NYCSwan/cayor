@@ -192,13 +192,13 @@ class People extends Component {
     }
   }
 
-  // shouldComponentUpdate(nextProps) {
-  //   console.log("shouldComponentUpdate");
-  //   return (
-  //     this.props.location !== nextProps.location ||
-  //     this.props.height !== nextProps.height
-  //   );
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.location.pathname === '/people/team_bios'
+      && this.props.location.pathname === prevProps.location.pathname
+      && prevState.closeDetails === false) {
+      this.setState({closeDetails: true})
+    }
+  }
 
   handleBioClick = () => {
     console.log('handleBioClick');
@@ -206,6 +206,7 @@ class People extends Component {
   };
 
   render() {
+    console.log('render people');
     const {
       currentDetails,
       navItems,
@@ -228,7 +229,7 @@ class People extends Component {
         <TransitionGroup className="slide">
           <CSSTransition
             in={fadeIn}
-            timeout={{ enter: 1000, exit: 500 }}
+            timeout={1350}
             key={location.state.interiorTransitionKey}
             classNames="slide"
             mountOnEnter
