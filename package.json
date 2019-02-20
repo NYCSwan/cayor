@@ -2,7 +2,6 @@
   "name": "Cayor_Capital",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cayorcapital.appspot.com/",
   "description": "Cayor Capital is a Sub-Saharan Africa Equity Fund, investing in mid markets across Africa. The Fund directed by experienced African investors, provides a diverse portfolio in growing industries including Financial Services, Agriculture, Consumer goods, and infrastructure. Cayor is committed to ESG and secure returns for investors.",
   "keywords": [
     "Sub-Saharan Africa",
@@ -23,7 +22,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.1.1",
-    "express": "^4.16.4",
     "node-sass-chokidar": "^1.2.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -35,7 +33,8 @@
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
-    "start": "node server.js",
+    "prestart": "npm install -g serve",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive --scripts-prepend-node-path",

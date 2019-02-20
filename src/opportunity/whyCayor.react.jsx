@@ -23,6 +23,7 @@ export default class WhyCayor extends Component {
     console.log("shouldComponentUpdate");
     return this.state.currentDetailIdx !== nextState.currentDetailIdx;
   }
+  
   render() {
     const { currentDetailIdx } = this.state;
     const path = this.props.location.pathname.slice(1).split("/")[0];

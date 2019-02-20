@@ -9,6 +9,7 @@
   display: inline-block;
   border-right: 1px solid $lightGrey;
   background-color: $lightGreySemiTransparent;
+  z-index: 10;
   @include respond-to(phone) {
     margin-left: 0;
     width: 30%;

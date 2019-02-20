@@ -18,10 +18,13 @@ class BgImageSlide extends Component {
   shouldComponentUpdate(nextState, nextProps) {
     return (
       this.props.width !== nextProps.width ||
-      this.props.deviceIdx !== nextProps.deviceIdx
+      this.state.activeIndex !== nextState.activeIdx
     );
   }
 
+  // componentDidMount() {
+  //   this.animating = true;
+  // }
   componentWillUnmount() {
     this.animating = false;
   }
@@ -65,17 +68,17 @@ class BgImageSlide extends Component {
   render() {
     // console.log('render bg image');
     const { activeIndex } = this.state;
-    const { deviceIdx, items } = this.props;
+    const { items } = this.props;
     // debugger;
     const slides = items.map(item => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src[deviceIdx]}
+          key={item.src}
         >
           <img
-            src={item.src[deviceIdx]}
+            src={item.src}
             alt={item.altText}
             className={`backgroundImage ${item.name}`}
           />
@@ -92,8 +95,8 @@ class BgImageSlide extends Component {
 
     return (
       <Carousel
-        interval={10000}
-        ride="carousel"
+        interval={9500}
+        ride={"carousel"}
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}

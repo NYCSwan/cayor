@@ -1,35 +1,12 @@
-runtime: nodejs10
+runtime: nodejs8
 
+# [START handlers]
 handlers:
-  - url: /static
-    static_dir: public
+ - url: /
+   static_files: build/index.html
+   upload: build/index.html
 
-  - url: /.*
-    script: auto
-
-# runtime: nodejs8
-# # env: flex
-#
-# # This sample incurs costs to run on the App Engine flexible environment.
-# # The settings below are to reduce costs during testing and are not appropriate
-# # for production use. For more information, see:
-# # https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml
-# manual_scaling:
-#   instances: 1
-# resources:
-#   cpu: 1
-#   memory_gb: 0.5
-#   disk_size_gb: 10
-# handlers:
-# # - url: /images
-# #   static_dir: static/images
-# - url: /
-#   static_files: build/index.html
-#   upload: build/index.html
-#   secure: always
-#   static_dir: build
-# - url: /stylesheets
-#   static_dir: build/static/css
-# - url: /.*
-#   redirect_http_response_code: 301
-#   script: auto
+ - url: /(.*)
+   static_files: build/\1
+   upload: build/(.*)
+# [END handlers]
