@@ -14,7 +14,7 @@
       max-width: 100%;
       display: block; }
       .carousel.slide .carousel-inner .carousel-item {
-        opacity: 0.1;
+        opacity: 0.4;
         min-height: 100vh;
         max-height: 100vh;
         max-width: 100%;
@@ -39,7 +39,7 @@
         .carousel.slide .carousel-inner .carousel-item .link {
           text-align: center;
           display: block;
-          width: 150px;
+          width: 10em;
           position: absolute;
           left: 45%;
           letter-spacing: 2px;
@@ -50,7 +50,8 @@
           text-shadow: 0px 0px 1px #470c0d, -1px -1px #470c0d, 1px 1px #ffffff;
           font-family: "Open Sans", sans-serif;
           background-color: #383a3e48;
-          line-height: 2em; }
+          line-height: 2em;
+          font-size: 1.2em; }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .carousel.slide .carousel-inner .carousel-item .link {
               top: 70%;
@@ -63,6 +64,7 @@
             background-color: rgba(0, 0, 0, 0);
             letter-spacing: 3px; }
           .carousel.slide .carousel-inner .carousel-item .link.Slide3 {
+            background-color: #383a3e48;
             letter-spacing: 3px; }
         .carousel.slide .carousel-inner .carousel-item.active {
           z-index: 100;
@@ -77,31 +79,26 @@
               align-items: center;
               align-content: center;
               height: 40%;
+              width: 70%;
               /* iPads (portrait and landscape) ----------- */
               /* kindle fire (portrait and landscape) ----------- */ }
               @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 70%;
                   height: 200px; } }
               @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 70%;
                   height: 200px; } }
               @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 70%;
                   margin: 0; } }
               @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
-                  width: 70%;
                   margin: 0; } }
               .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
                 font-family: "Merriweather", serif;
@@ -158,14 +155,16 @@
                   font-size: 1.1em;
                   font-weight: 400;
                   width: 70%;
-                  margin: 30px auto; }
+                  margin: 40px auto; }
                   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                     .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                      font-size: 14px;
+                      font-size: 1.1em;
+                      line-height: 2em;
                       width: 75%; } }
                   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
                     .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block p {
-                      font-size: 14px;
+                      font-size: 1.1em;
+                      line-height: 2em;
                       width: 75%; } }
         .carousel.slide .carousel-inner .carousel-item .backgroundImage {
           top: 0;
@@ -209,12 +208,13 @@
     .carousel.slide .carousel-indicators {
       position: absolute;
       bottom: 15%;
-      z-index: 150; }
+      z-index: 110;
+      left: 40px; }
       .carousel.slide .carousel-indicators li {
         background-color: #ffffff;
         border-radius: 50%;
         width: 10px;
         height: 10px;
-        z-index: 150; }
+        z-index: inherit; }
         .carousel.slide .carousel-indicators li.active {
           background-color: #9b1d1f; }

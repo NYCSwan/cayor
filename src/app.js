@@ -39,11 +39,11 @@ class App extends Component {
     if (width === null) {
       return;
     } else if (width <= 490 && width > 0) {
-      this.setState({ deviceIdx: 1, height, width });
+      this.setState({ deviceIdx: 1, height, width }); //mobile
     } else if (width >= 780 && width <= 1024) {
-      this.setState({ deviceIdx: 2, height, width });
+      this.setState({ deviceIdx: 2, height, width }); //tablet
     } else {
-      this.setState({ deviceIdx: 0, height, width });
+      this.setState({ deviceIdx: 0, height, width }); // web
       // console.log("deviceIdx 0", width);
     }
 
