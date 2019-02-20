@@ -10,5 +10,6 @@
       overflow: auto; } }
   .people .slide {
     height: 80%;
-    display: flex;
-    justify-content: center; }
+    display: block;
+    position: relative;
+    overflow: hidden; }

@@ -6,38 +6,17 @@
   /* iPads (portrait and landscape) ----------- */
   /* kindle fire (portrait and landscape) ----------- */ }
   .TeamDetails.slide-exit {
-    opacity: 1; }
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0%, -100%, 0); }
     .TeamDetails.slide-exit.slide-exit-active {
-      opacity: 0;
-      display: none;
-      animation: slide-out;
-      -webkit-animation: slide-out;
-      transition: animation 300ms ease; }
-
-@keyframes slide-out {
-  0% {
-    transform: translate3d(0%, 0, 0); }
-  100% {
-    transform: translate3d(-200%, 0, 0); } }
+      transform: translate3d(-100%, -100%, 0);
+      transition: transform 500ms linear; }
   .TeamDetails.slide-enter, .TeamDetails.slide-appear {
-    opacity: 0;
-    z-index: 1;
-    transform: translate3d(-80%, 0, 0); }
+    transform: translate3d(-100%, 0, 0); }
     .TeamDetails.slide-enter.slide-enter-active, .TeamDetails.slide-enter.slide-appear-active, .TeamDetails.slide-appear.slide-enter-active, .TeamDetails.slide-appear.slide-appear-active {
-      width: 80%;
-      opacity: 1;
       transform: translate3d(0%, 0, 0);
-      transition: opacity 500ms, transform 800ms linear; }
-
-@keyframes slide-in {
-  0% { }
-  100% { } }
-
-@-webkit-keyframes slide-in {
-  0% {
-    -webkit-transform: translate3d(-50%, 0, 0); }
-  100% {
-    -webkit-transform: translate3d(0%, 0, 0); } }
+      transition: transform 800ms linear 550ms; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .TeamDetails {
       height: 70%;

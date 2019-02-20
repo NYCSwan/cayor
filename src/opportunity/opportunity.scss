@@ -9,9 +9,9 @@
     overflow: auto;
   }
   .slide {
-    height: 80%;
-    display: flex;
-    justify-content: center;
-
+    height: inherit;
+    display: block;
+    position: relative;
+    overflow: hidden;
   }
 }

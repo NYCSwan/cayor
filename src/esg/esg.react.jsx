@@ -187,7 +187,7 @@ class Esg extends Component {
           <CSSTransition
             key={location.state.interiorTransitionKey}
             in={fadeIn}
-            timeout={2300}
+            timeout={1300}
             classNames="slide"
             mountOnEnter
             unmountOnExit

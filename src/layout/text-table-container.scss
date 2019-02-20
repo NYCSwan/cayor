@@ -4,11 +4,11 @@
 
 .text-table-container {
   width: 80%;
-  display: flex;
+  display: block;
   margin-bottom: 0;
   margin-top: 3%;
   height: 100%;
-
+  position: relative;
   @include slide-enter;
   @include slide-exit;
   @include respond-to(tablets) {

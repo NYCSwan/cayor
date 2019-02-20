@@ -10,8 +10,9 @@
   }
   .slide {
     height: inherit;
-    display: flex;
-    justify-content: center;
+    display: block;
+    position: relative;
+    overflow: hidden;
     // FRAMEWORK VIEW
     .framework {
       height: 85%;

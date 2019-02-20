@@ -241,7 +241,7 @@ class Opportunities extends Component {
           <CSSTransition
             key={location.state.interiorTransitionKey}
             in={fadeIn}
-            timeout={1500}
+            timeout={1300}
             classNames="slide"
             mountOnEnter
             unmountOnExit
