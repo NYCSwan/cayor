@@ -34,6 +34,7 @@
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
     "prestart": "npm install -g serve",
+    "startdev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "build-css": "node-sass-chokidar src/ -o src/",
