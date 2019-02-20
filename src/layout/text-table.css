@@ -153,7 +153,8 @@
           height: 100%; } }
       .text-table.other .approach .subHeader {
         font-size: 1em;
-        padding-bottom: 0; }
+        padding-bottom: 0;
+        width: 90%; }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .text-table.other .approach .subHeader {
             width: 100%;

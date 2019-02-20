@@ -9,7 +9,8 @@ html {
       font-family: "Josefin Sans", sans-serif;
       font-weight: 400;
       word-wrap: normal;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      background-color: #FFF; }
       html body .App .routes {
         min-height: 100vh; }
       html body .App .shaddow {

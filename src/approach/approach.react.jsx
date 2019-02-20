@@ -590,7 +590,7 @@ class Approach extends Component {
                 : location.key
             }
             in={true}
-            timeout={1000}
+            timeout={1350}
             classNames="slide"
             mountOnEnter
             unmountOnExit

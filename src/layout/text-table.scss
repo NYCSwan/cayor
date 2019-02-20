@@ -128,6 +128,7 @@
       .subHeader {
         font-size: 1em;
         padding-bottom: 0;
+        width: 90%;
         @include respond-to(phone) {
           width: 100%;
           font-size: 0.9em;

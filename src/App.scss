@@ -12,6 +12,7 @@ html {
       font-weight: 400;
       word-wrap: normal;
       box-sizing: border-box;
+      background-color: $backgroundColor;
       .routes {
         min-height: 100vh;
       }
