@@ -35,7 +35,7 @@
     .header.people.smoosh, .header.opportunity.smoosh, .header.approach.smoosh, .header.esg.smoosh {
       height: 100px; }
   .header.people {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../media/jobrg.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url("../media/jobrg.jpg");
     background-size: 100% 100%; }
   .header.opportunity {
     background: url("../media/opportunity_banner.jpg");
@@ -174,16 +174,16 @@
           .header #accra #jbg .right .nav .linkContainer {
             height: 57%;
             display: flex;
-            align-content: flex-end;
+            align-content: flex-start;
             flex-flow: row wrap;
-            justify-content: flex-end;
-            align-items: flex-end; }
+            align-items: flex-start; }
             .header #accra #jbg .right .nav .linkContainer.nav-item {
               list-style: none;
               font-weight: bold;
               order: 1; }
               .header #accra #jbg .right .nav .linkContainer.nav-item .link {
                 color: #ffffff;
+                height: 5vmin;
                 align-self: flex-start;
                 padding-top: 0; }
                 .header #accra #jbg .right .nav .linkContainer.nav-item .link.active {
@@ -309,6 +309,7 @@
               font-size: 0.8em;
               align-self: center;
               margin-bottom: 0;
+              font-weight: normal;
               /* iPads (portrait and landscape) ----------- */
               /* kindle fire (portrait and landscape) ----------- */
               /* Large screens ----------- */ }

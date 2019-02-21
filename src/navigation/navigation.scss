@@ -38,7 +38,7 @@
   }
 
   &.people {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
       url("../media/jobrg.jpg");
     background-size: 100% 100%;
   }
@@ -164,17 +164,17 @@
           .linkContainer {
             height: 57%;
             display: flex;
-            align-content: flex-end;
+            align-content: flex-start;
             flex-flow: row wrap;
-            justify-content: flex-end;
-            align-items: flex-end;
+            // justify-content: flex-end;
+            align-items: flex-start;
             &.nav-item {
               list-style: none;
               font-weight: bold;
               order: 1;
               .link {
                 color: $white;
-                // height: 59%;
+                height: 5vmin;
                 align-self: flex-start;
                 padding-top: 0;
                 &.active {
@@ -269,6 +269,7 @@
               font-size: 0.8em;
               align-self: center;
               margin-bottom: 0;
+              font-weight: normal;
               @include respond-to(phone) {
                 margin-top: 5%;
                 align-self: center;

@@ -39,7 +39,7 @@ class Navigation extends Component {
       {
         location: "Accra, Ghana",
         street_address: "41 Tafawa Balawa St.",
-        street_address2: "North Ridge",
+        street_address2: "North Ridge  Residential",
         city: "Accra",
         phone: "+27 11 593 3266",
         imageUrl: Accra,
@@ -70,7 +70,7 @@ class Navigation extends Component {
       accraContactDetails,
       joburgContactDetails
     } = this.state;
-    const { isContactModalOpen, handleClose, location } = this.props;
+    const { isContactModalOpen, handleClose, location, smoosh } = this.props;
     // debugger
     if (contactLocation === "accra") {
       return (
@@ -80,11 +80,13 @@ class Navigation extends Component {
           contactLocation={contactLocation}
           handleClose={handleClose}
           isContactModalOpen={isContactModalOpen}
+          smoosh={smoosh}
         />
       );
     } else {
       return (
         <ContactForm
+          smoosh={smoosh}
           location={location}
           contactDetails={joburgContactDetails}
           contactLocation={contactLocation}
@@ -180,14 +182,14 @@ class Navigation extends Component {
                   onClick={this.handleClockClick}
                   className="accra clock-container"
                 >
-                  <Clock className="accra" offset="2" />
+                  <Clock className="accra" offset="0" />
                   <h6 className="accra">ACCRA</h6>
                 </div>
                 <div
                   onClick={this.handleClockClick}
                   className="jbg clock-container"
                 >
-                  <Clock className="jbg" offset="0" />
+                  <Clock className="jbg" offset="2" />
                   <h6 className="jbg">JHB</h6>
                 </div>
               </div>

@@ -4,8 +4,8 @@
 
 .popover {
   border-top: 2px solid $cayorRed;
-  height: auto;
-  min-width: 60%;
+  height: 60%;
+  width: 55%;
   z-index: 5000;
   background-color: $white;
   border-bottom: 1px solid $primaryGrey;
@@ -23,6 +23,8 @@
         width: 100%;
         // height: 100%;
       }
+      &.accra, &.jbg {
+        margin-right: 10%;
       &.bs-popover-bottom,
       &.bs-popover-top {
         width: 100%;
@@ -33,9 +35,9 @@
         .popover-inner {
           width: 100%;
           height: 100%;
-          @include respond-to(phone) {
-            width: 100%;
-          }
+          // @include respond-to(phone) {
+          //   width: 100%;
+          // }
           .popover-header {
             background-color: $transparent;
             color: $primaryBlue;
@@ -50,7 +52,7 @@
               color: $primaryGrey;
             }
             h5 {
-              font-size: 1em;
+              font-size: 1.2em;
               // padding-right: 3%;
             }
           }
@@ -91,8 +93,9 @@
                 letter-spacing: 1px;
                 align-self: flex-end;
               }
-              img {
-                width: 400px;
+              #map {
+                min-width: 250px;
+                width: 45%;
                 height: auto;
                 float: right;
                 @include respond-to(phone) {
@@ -154,6 +157,26 @@
           }
         }
       }
+    }
+    &.smoosh {
+      margin-right: 15%;
+      height: 70%;
+      min-width: 50%;
+      &.accra {
+        margin-right: 5%;
+        #map {
+          min-width: 250px;
+          width: 40%;
+        }
+      }
+      &.jbg {
+        margin-right: 3%;
+        #map {
+          min-width: 250px;
+          width: 40%;
+        }
+      }
+    }
     }
   }
 }

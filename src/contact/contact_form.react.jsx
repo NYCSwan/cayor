@@ -5,7 +5,7 @@ import "./contact_form.css";
 
 const ContactForm = props => (
   <Popover
-    className="contactForm"
+    className={props.smoosh ? `contactForm smoosh ${props.contactLocation}` : `contactForm ${props.contactLocation}`}
     target={props.contactLocation}
     hideArrow={true}
     placement={props.location.pathname === "/" ? "auto-end" : "top-end"}
@@ -24,7 +24,7 @@ const ContactForm = props => (
       {props.contactDetails.map(detail => {
         return (
           <div key={props.contactLocation}>
-            <img src={detail.imageUrl} alt={detail.imageAlt} />
+            <img id='map' src={detail.imageUrl} alt={detail.imageAlt} />
             <aside className="address">
               <h4>
                 <strong>Address:</strong> {detail.street_address}
