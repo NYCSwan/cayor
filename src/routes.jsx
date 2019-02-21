@@ -30,7 +30,7 @@ class Routes extends Component {
       deviceIdx,
       smoosh
     } = this.props,
-    timeout = { enter: 1000, exit: 800 };
+    timeout = { enter: 1200, exit: 1000 };
     // debugger;
     return (
       <Route

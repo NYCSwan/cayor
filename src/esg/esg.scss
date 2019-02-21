@@ -1,6 +1,6 @@
 @import "../_slide";
 @import "../_mixins";
-
+@import "../_variables";
 .esg {
   width: 100%;
   height: 100%;
@@ -13,6 +13,7 @@
     display: block;
     position: relative;
     overflow: hidden;
+    background-color: $white;
     // FRAMEWORK VIEW
     .framework {
       height: 85%;

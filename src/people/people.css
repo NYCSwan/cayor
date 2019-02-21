@@ -9,7 +9,8 @@
     .people {
       overflow: auto; } }
   .people .slide {
-    height: 80%;
+    height: 83%;
     display: block;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #ffffff; }

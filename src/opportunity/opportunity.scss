@@ -1,4 +1,4 @@
-
+@import '../_variables';
 @import "../_mixins";
 
 .opportunity {
@@ -9,6 +9,7 @@
     overflow: auto;
   }
   .slide {
+    background-color: $white;
     height: inherit;
     display: block;
     position: relative;

@@ -12,4 +12,5 @@
     height: inherit;
     display: block;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #ffffff; }

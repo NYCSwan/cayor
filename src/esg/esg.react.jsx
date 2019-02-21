@@ -178,7 +178,7 @@ class Esg extends Component {
       navItems
     } = this.state;
     const { width, height, match, location, smoosh } = this.props,
-      bodyHeight = Math.floor(height * 0.82);
+      bodyHeight = Math.floor(height * 0.84);
 
     return (
       <main className="esg" style={{ maxHeight: bodyHeight, maxWidth: width }}>

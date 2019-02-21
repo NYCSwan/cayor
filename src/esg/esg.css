@@ -12,21 +12,22 @@
     height: inherit;
     display: block;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #ffffff; }
     .esg .slide .framework {
       height: 85%; }
       .esg .slide .framework.slide-enter, .esg .slide .framework.slide-appear {
         transform: translate3d(-100%, 0, 0); }
         .esg .slide .framework.slide-enter.slide-enter-active, .esg .slide .framework.slide-enter.slide-appear-active, .esg .slide .framework.slide-appear.slide-enter-active, .esg .slide .framework.slide-appear.slide-appear-active {
           transform: translate3d(0%, 0, 0);
-          transition: transform 800ms linear 550ms; }
+          transition: transform 800ms linear 650ms; }
       .esg .slide .framework.slide-exit {
         position: relative;
         overflow: hidden;
         transform: translate3d(0%, -100%, 0); }
         .esg .slide .framework.slide-exit.slide-exit-active {
           transform: translate3d(-100%, -100%, 0);
-          transition: transform 500ms linear; }
+          transition: transform 600ms linear; }
       @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         .esg .slide .framework {
           padding-top: 3%; } }

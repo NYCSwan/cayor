@@ -550,7 +550,7 @@ class Approach extends Component {
       cayorApproachTableText
     } = this.state;
     const { width, height, match, location, smoosh } = this.props,
-      bodyHeight = Math.floor(height * 0.82);
+      bodyHeight = Math.floor(height * 0.84);
     let index = 0;
 
     if (

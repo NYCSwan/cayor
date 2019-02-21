@@ -9,6 +9,7 @@
     .opportunity {
       overflow: auto; } }
   .opportunity .slide {
+    background-color: #ffffff;
     height: inherit;
     display: block;
     position: relative;

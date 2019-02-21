@@ -1,5 +1,5 @@
 @import "../_mixins";
-
+@import "../_variables";
 .approach {
   height: 100%;
   width: 100%;
@@ -13,5 +13,6 @@
     display: block;
     position: relative;
     overflow: hidden;
+    background-color: $white;
   }
 }

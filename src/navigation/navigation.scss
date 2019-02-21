@@ -10,12 +10,12 @@
   align-content: flex-end;
   background-color: $transparent;
   z-index: 10;
-  height: 125px;
 
   &.people,
   &.opportunity,
   &.approach,
   &.esg {
+    height: 125px;
     width: 100%;
     object-fit: contain;
     background-position: center top;
@@ -183,7 +183,6 @@
                   line-height: 1.3;
                 }
                 &:hover {
-                  height: 100%;
                   border-bottom: 4px solid $cayorRed;
                   font-weight: 700;
                   text-decoration: none;

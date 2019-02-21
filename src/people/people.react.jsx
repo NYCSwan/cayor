@@ -217,7 +217,7 @@ class People extends Component {
       closeDetails
     } = this.state;
     const { width, height, match, location, smoosh } = this.props,
-      bodyHeight = Math.floor(height * 0.82);
+      bodyHeight = Math.floor(height * 0.84);
     // currentKey = this.props.location.pathname.split("/")[1];
 
     return (

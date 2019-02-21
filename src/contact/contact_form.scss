@@ -4,9 +4,9 @@
 
 .popover {
   border-top: 2px solid $cayorRed;
-  height: 60%;
-  width: 55%;
-  z-index: 5000;
+  max-height: 65%;
+  max-width: 60%;
+  z-index: 200;
   background-color: $white;
   border-bottom: 1px solid $primaryGrey;
   border-left: 1px solid $primaryGrey;
@@ -16,7 +16,6 @@
     margin-top: 10%;
   }
   &.show {
-    width: inherit;
     &.contactForm {
       width: 100%;
       @include respond-to(phone) {
@@ -24,7 +23,7 @@
         // height: 100%;
       }
       &.accra, &.jbg {
-        margin-right: 10%;
+        margin-right: 5%;
       &.bs-popover-bottom,
       &.bs-popover-top {
         width: 100%;
