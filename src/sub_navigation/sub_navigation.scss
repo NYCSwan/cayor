@@ -44,7 +44,6 @@
     .active {
       color: $cayorRed;
       line-height: normal;
-      margin-top: 5px;
       @include respond-to(phone) {
         width: 90%;
         text-align: fit-content;
