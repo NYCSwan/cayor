@@ -225,7 +225,7 @@ class Opportunities extends Component {
       navItems,
       fadeIn
     } = this.state;
-    const { width, height, match, location } = this.props,
+    const { width, height, match, location, smoosh } = this.props,
       bodyHeight = Math.floor(height * 0.82);
     // currentKey = this.props.location.pathname.split("/")[0] || "/";
 
@@ -236,7 +236,7 @@ class Opportunities extends Component {
         className="opportunity"
         style={{ maxHeight: bodyHeight, maxWidth: width }}
       >
-        <SubNav navItems={navItems} match={match} location={location} />
+        <SubNav navItems={navItems} match={match} location={location} smoosh={smoosh} />
         <TransitionGroup className="slide">
           <CSSTransition
             key={location.state.interiorTransitionKey}
@@ -254,6 +254,7 @@ class Opportunities extends Component {
                     text={whyAfricaTableText}
                     currentDetailIdx={0}
                     location={location.pathname.slice(1).split("/")[0]}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -265,6 +266,7 @@ class Opportunities extends Component {
                     location={location}
                     currentDetails={currentDetails}
                     text={whyCayorTableText}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -277,6 +279,7 @@ class Opportunities extends Component {
                     text={whyCayorTableText}
                     currentDetailIdx={0}
                     location={location.pathname.slice(1)}
+                    smoosh={smoosh}
                   />
                 )}
               />

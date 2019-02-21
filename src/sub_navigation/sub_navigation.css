@@ -111,7 +111,8 @@
         .sub_navigation .list .top.active .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
           width: auto;
           margin-left: -10px;
-          display: inline; }
+          display: inline;
+          padding-bottom: 2px; }
     .sub_navigation .list .sub {
       display: block;
       margin-bottom: 7%; }
@@ -160,3 +161,10 @@
       .sub_navigation .list .sub .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
         width: auto;
         margin-left: -10px; }
+    .sub_navigation .list.smoosh {
+      height: 80%;
+      width: 90%; }
+      .sub_navigation .list.smoosh .top {
+        margin-bottom: 5%; }
+      .sub_navigation .list.smoosh .sub {
+        margin-bottom: 4%; }

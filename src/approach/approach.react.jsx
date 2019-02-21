@@ -549,7 +549,7 @@ class Approach extends Component {
       investmentCriteriaTableText,
       cayorApproachTableText
     } = this.state;
-    const { width, height, match, location } = this.props,
+    const { width, height, match, location, smoosh } = this.props,
       bodyHeight = Math.floor(height * 0.82);
     let index = 0;
 
@@ -581,7 +581,7 @@ class Approach extends Component {
         className="approach"
         style={{ maxHeight: bodyHeight, maxWidth: width }}
       >
-        <SubNav navItems={navItems} match={match} location={location} />
+        <SubNav navItems={navItems} match={match} location={location} smoosh={smoosh} />
         <TransitionGroup className="slide">
           <CSSTransition
             key={
@@ -603,6 +603,7 @@ class Approach extends Component {
                     text={cayorApproachTableText}
                     currentDetailIdx={index}
                     location={location.pathname.slice(1).split("/")[0]}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -616,6 +617,7 @@ class Approach extends Component {
                     text={sectorsTableText}
                     currentDetailIdx={0}
                     handleButtonClick={this.handleButtonClick}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -626,6 +628,7 @@ class Approach extends Component {
                     location={location}
                     fadeIn={true}
                     text={regionsTableText}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -636,6 +639,7 @@ class Approach extends Component {
                     location={location.pathname.slice(1).split("/")[0]}
                     currentDetailIdx={index}
                     text={investmentCriteriaTableText}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -647,6 +651,7 @@ class Approach extends Component {
                     text={cayorApproachTableText}
                     currentDetailIdx={0}
                     location={location.pathname.slice(1)}
+                    smoosh={smoosh}
                   />
                 )}
               />

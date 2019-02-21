@@ -177,12 +177,12 @@ class Esg extends Component {
       fadeIn,
       navItems
     } = this.state;
-    const { width, height, match, location } = this.props,
+    const { width, height, match, location, smoosh } = this.props,
       bodyHeight = Math.floor(height * 0.82);
 
     return (
       <main className="esg" style={{ maxHeight: bodyHeight, maxWidth: width }}>
-        <SubNav navItems={navItems} match={match} location={location} />
+        <SubNav navItems={navItems} match={match} location={location} smoosh={smoosh} />
         <TransitionGroup className="slide">
           <CSSTransition
             key={location.state.interiorTransitionKey}
@@ -200,6 +200,7 @@ class Esg extends Component {
                     location={location.pathname.slice(1).split("/")[0]}
                     text={philosophyTextTable}
                     currentDetailIdx={0}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -210,6 +211,7 @@ class Esg extends Component {
                     location={location.pathname.slice(1).split("/")[0]}
                     text={strategyTextTable}
                     currentDetailIdx={0}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -221,6 +223,7 @@ class Esg extends Component {
                       location={location.pathname.slice(1).split("/")[0]}
                       text={frameworkTableText}
                       currentDetailIdx={0}
+                      smoosh={smoosh}
                     />
                   </div>
                 )}
@@ -232,6 +235,7 @@ class Esg extends Component {
                     location={location.pathname.slice(1)}
                     text={philosophyTextTable}
                     currentDetailIdx={0}
+                    smoosh={smoosh}
                   />
                 )}
               />

@@ -97,12 +97,12 @@ class Navigation extends Component {
 
   render() {
     const { contactLocation, collapse } = this.state;
-    const { isContactModalOpen, headerImg, location } = this.props;
+    const { isContactModalOpen, headerImg, location, smoosh } = this.props;
 
     // const location = ;
 
     return (
-      <header className={`header ${headerImg}`}>
+      <header className={smoosh ? `header ${headerImg} smoosh` : `header ${headerImg}`}>
         <NavLink to="/" className="logo-container">
           <img className="logo" src={WhiteLogo} alt="logo" />
         </NavLink>

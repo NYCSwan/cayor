@@ -22,6 +22,7 @@ const Root = props => (
       handleClose={props.handleClose}
       isContactModalOpen={props.isContactModalOpen}
       handleClockClick={props.handleClick}
+      smoosh={props.smoosh}
     />
     <Switch location={props.location}>
       <Route
@@ -29,17 +30,18 @@ const Root = props => (
         path="/"
         render={routeProps => {
           // eslint-disable-line
-          return (
-            <Homepage
-              handleClose={props.handleClose}
-              handleClockClick={props.handleClick}
-              isContactModalOpen={props.isContactModalOpen}
-              height={props.height}
-              width={props.width}
-              deviceIdx={props.deviceIdx}
-              {...routeProps}
-            />
-          );
+            return (
+              <Homepage
+                handleClose={props.handleClose}
+                handleClockClick={props.handleClick}
+                isContactModalOpen={props.isContactModalOpen}
+                height={props.height}
+                width={props.width}
+                deviceIdx={props.deviceIdx}
+                smoosh={props.smoosh}
+                {...routeProps}
+                />
+            )
         }}
       />
       <Route
@@ -53,6 +55,7 @@ const Root = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              smoosh={props.smoosh}
               {...routeProps}
             />
           );
@@ -69,6 +72,7 @@ const Root = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              smoosh={props.smoosh}
               {...routeProps}
             />
           );
@@ -85,6 +89,7 @@ const Root = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              smoosh={props.smoosh}
               {...routeProps}
             />
           );
@@ -101,6 +106,7 @@ const Root = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              smoosh={props.smoosh}
               {...routeProps}
             />
           );

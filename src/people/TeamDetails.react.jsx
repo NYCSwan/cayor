@@ -116,9 +116,9 @@ class TeamDetails extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { closeDetails, teamDetails } = this.props;
+    const { closeDetails, teamDetails, smoosh } = this.props;
     return (
-      <div className="TeamDetails">
+      <div className={smoosh ? "TeamDetails smoosh" : "TeamDetails"}>
         {isOpen === true && closeDetails === false ? (
           this.renderDetails()
         ) : (

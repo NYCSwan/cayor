@@ -97,6 +97,7 @@
           width: auto;
           margin-left: -10px;
           display: inline;
+          padding-bottom: 2px;
         }
       }
     }
@@ -142,6 +143,17 @@
         width: auto;
         margin-left: -10px;
         // display: inline;
+      }
+    }
+    &.smoosh {
+      height: 80%;
+      width: 90%;
+      .top {
+        margin-bottom: 5%;
+      }
+      .sub {
+        // @extend .sub;
+        margin-bottom: 4%;
       }
     }
   }

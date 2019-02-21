@@ -5,7 +5,7 @@ import "./sub_navigation.css";
 
 const SubNav = props => (
   <aside className="sub_navigation">
-    <ul className="list">
+    <ul className={props.smoosh ? 'list smoosh' : "list"}>
       {props.navItems.map(navItem => {
         const tKey = props.location.pathname.slice(1).split("/")[0];
         const key = navItem.url.split(" ");

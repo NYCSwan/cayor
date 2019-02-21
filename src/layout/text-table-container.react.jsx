@@ -3,7 +3,7 @@ import TextTable from "./text-table.react";
 import "./text-table-container.css";
 
 const TextTableContainer = props => (
-  <div className="text-table-container">
+  <div className={props.smoosh ? "text-table-container smoosh" : "test-table-container"}>
     {props.mainHeader ? (
       <h4 className="header left">{props.mainHeader}</h4>
     ) : null}

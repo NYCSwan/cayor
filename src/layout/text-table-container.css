@@ -25,6 +25,12 @@
   @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
     .text-table-container {
       margin-top: 8%; } }
+  .text-table-container.smoosh {
+    overflow: scroll;
+    width: 100%;
+    height: 85%; }
+    .text-table-container.smoosh .approach {
+      overflow: inherit; }
   .text-table-container .header.left {
     float: left;
     font-size: 1.75rem;

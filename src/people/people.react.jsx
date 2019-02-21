@@ -216,7 +216,7 @@ class People extends Component {
       teamDetails,
       closeDetails
     } = this.state;
-    const { width, height, match, location } = this.props,
+    const { width, height, match, location, smoosh } = this.props,
       bodyHeight = Math.floor(height * 0.82);
     // currentKey = this.props.location.pathname.split("/")[1];
 
@@ -225,7 +225,7 @@ class People extends Component {
         className="people"
         style={{ minHeight: bodyHeight, minWidth: width }}
       >
-        <SubNav navItems={navItems} match={match} location={location} />
+        <SubNav navItems={navItems} match={match} location={location} smoosh={smoosh} />
         <TransitionGroup className="slide">
           <CSSTransition
             in={fadeIn}
@@ -245,6 +245,7 @@ class People extends Component {
                     currentDetailIdx={0}
                     closeDetails={closeDetails}
                     handleBioClick={this.handleBioClick}
+                    smoosh={smoosh}
                     {...routeProps}
                   />
                 )}
@@ -256,6 +257,7 @@ class People extends Component {
                     location={location.pathname.slice(1).split("/")[0]}
                     text={nativeTextTable}
                     currentDetailIdx={0}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -266,6 +268,7 @@ class People extends Component {
                     location={location.pathname.slice(1).split("/")[0]}
                     text={experiencedTextTable}
                     currentDetailIdx={0}
+                    smoosh={smoosh}
                   />
                 )}
               />
@@ -276,6 +279,7 @@ class People extends Component {
                     location={location.pathname.slice(1)}
                     text={experiencedTextTable}
                     currentDetailIdx={0}
+                    smoosh={smoosh}
                   />
                 )}
               />

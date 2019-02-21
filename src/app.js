@@ -17,15 +17,23 @@ class App extends Component {
     isContactModalOpen: false,
     height: null,
     width: null,
-    deviceIdx: -1
+    deviceIdx: -1,
+    shortScreen: false
   };
 
   componentDidMount() {
     console.log("componentDidMount");
     const { width, height } = this.state;
+    window.addEventListener("resize", this.updateDimensions);
+
     if (width !== null && height !== null) return;
     this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.height !== null && prevState.height !== this.state.height) {
+
+    }
   }
 
   componentWillUnmount() {
@@ -43,13 +51,10 @@ class App extends Component {
     } else if (width >= 780 && width <= 1024) {
       this.setState({ deviceIdx: 2, height, width }); //tablet
     } else {
-      this.setState({ deviceIdx: 0, height, width }); // web
+      const short = height < width/2;
+      this.setState({ deviceIdx: 0, height, width, shortScreen: short }); // web
       // console.log("deviceIdx 0", width);
     }
-
-    // this.setState({
-    //
-    // });
   };
 
   handleClick = e => {
@@ -68,12 +73,13 @@ class App extends Component {
   };
 
   render() {
-    const { height, width, isContactModalOpen, deviceIdx } = this.state;
+    const { height, width, isContactModalOpen, deviceIdx, shortScreen } = this.state;
     return (
       <div className="App">
         <Routes
           height={height}
           width={width}
+          smoosh={shortScreen}
           handleClose={this.handleModalClose}
           transitionKey={this.props.match.path}
           handleClick={this.handleClick}
