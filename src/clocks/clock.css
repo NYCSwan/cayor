@@ -2,9 +2,9 @@
   border-radius: 50%;
   background: #d5d5d566;
   border: 1px solid #ffffff;
-  height: 20px;
+  height: 22px;
   position: relative;
-  width: 20px;
+  width: 22px;
   display: inline-block; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .clock {
