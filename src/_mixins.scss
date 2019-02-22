@@ -10,11 +10,11 @@
     }
   } @else if $media == tablets {
     /* iPads (portrait and landscape) ----------- */
-    @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
       @content;
     }
     /* kindle fire (portrait and landscape) ----------- */
-    @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
       @content;
     }
   } @else if $media == large-screen {

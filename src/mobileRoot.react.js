@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 // import { CSSTransition } from "react-transition-group";
 import Navigation from "./navigation/navigation.react";
 import Footer from "./layout/footer.react";
-import MobileHomepage from "./homepage/MobileHomepage.react";
+import MobileHomepage from "./mobile/MobileHomepage.react";
 import People from "./people/people.react";
 import Opportunities from "./opportunity/opportunity.react";
 import Approach from "./approach/approach.react";
@@ -53,6 +53,8 @@ const MobileRoot = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              deviceIdx={props.deviceIdx}
+
               {...routeProps}
             />
           );
@@ -69,6 +71,7 @@ const MobileRoot = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              deviceIdx={props.deviceIdx}
               {...routeProps}
             />
           );
@@ -84,6 +87,7 @@ const MobileRoot = props => (
               handleClockClick={props.handleClick}
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
+              deviceIdx={props.deviceIdx}
               width={props.width}
               {...routeProps}
             />
@@ -100,6 +104,7 @@ const MobileRoot = props => (
               handleClockClick={props.handleClick}
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
+              deviceIdx={props.deviceIdx}
               width={props.width}
               {...routeProps}
             />

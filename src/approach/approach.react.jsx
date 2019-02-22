@@ -517,7 +517,6 @@ class Approach extends Component {
     if (location.state === undefined) {
       return;
     } else {
-      // debugger;
       const target = location.state.id,
         currentNavItem = pickBy(navItems, item => {
           return target === item.url;

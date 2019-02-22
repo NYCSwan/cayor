@@ -12,6 +12,10 @@
     // overflow-y: scroll;
     overflow: auto;
   }
+  @include respond-to(tablets) {
+    width: 100%;
+    padding-left: 5%;
+  }
   &.bullet {
     display: flex;
     flex-flow: column;
@@ -77,6 +81,9 @@
         @include respond-to(phone) {
           font-size: 0.8em;
         }
+        @include respond-to(tablets) {
+          padding: 1% 0;
+        };
       }
     }
   }
@@ -109,6 +116,10 @@
       @include respond-to(phone) {
         padding-left: 20px;
       }
+      @include respond-to(tablets) {
+        // height: auto;
+        overflow: visible;
+      };
       .subHeader {
         width: 100%;
         font-size: 1.2em;
@@ -117,6 +128,9 @@
       .list-group-item {
         padding-top: 5px;
         margin-left: 4%;
+        @include respond-to(tablets) {
+          padding: 1% 0;
+        };
       }
     }
     .approach {
@@ -126,7 +140,7 @@
         height: 100%;
       }
       .subHeader {
-        font-size: 1em;
+        font-size: 1.2em;
         padding-bottom: 0;
         width: 90%;
         @include respond-to(phone) {
@@ -141,12 +155,11 @@
         }
         @include respond-to(tables) {
           width: 100%;
-          font-size: 0.9em;
           margin-left: 10px;
         }
       }
     }
-  }
+  } //other
   .approach {
     @include respond-to(phone) {
       padding-left: 0;
@@ -163,25 +176,8 @@
     .text {
       padding-bottom: 5px;
       margin-left: 4%;
-    }
-  }
-
-  .text {
-    list-style: none;
-    padding: 7px 0;
-    text-align: left;
-    width: 80%;
-    margin-left: 4%;
-    font-size: 1.2em;
-    @include respond-to(phone) {
-      font-size: 0.8em;
-      margin-left: 3%;
-      width: 100%;
-    }
-    &.bullet {
-      margin-left: 0;
-      @include respond-to(phone) {
-        margin-left: 3%;
+      @include respond-to(tablets) {
+        padding: 1% 0;
       }
     }
   }
@@ -193,14 +189,55 @@
       width: 90%;
       font-family: $open-sans-font-family;
       color: $primaryBlue;
-      padding-bottom: 3%;
+      padding-bottom: 1%;
       font-weight: bold;
       @include respond-to(phone) {
         color: $primaryBlue;
         margin: 0;
         width: 100%;
       }
+      @include respond-to(tablets) {
+        width: 100%;
+        padding-bottom: 5%;
+      };
     }
+  }
+
+  .text {
+    width: 80%;
+    font-size: 1em;
+    @include respond-to(tablets) {
+      padding: 1% 0;
+    }
+    @include respond-to(phone) {
+      font-size: 0.8em;
+    }
+    &.bullet {
+      margin-left: 0;
+      @include respond-to(phone) {
+        margin-left: 1%;
+      }
+      @include respond-to(tablets) {
+        margin-left: 4%;
+      };
+    }
+  }
+
+  .subHeader {
+    // font-weight: bold;
+    color: $cayorRed;
+    width: 90%;
+    font-size: 1.2em;
+    margin-bottom: 5%;
+    @include respond-to(phone) {
+      margin-top: 10px;
+      margin-left: 0;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    @include respond-to(tablets) {
+      margin-bottom: 2%;
+    };
   }
 
   .text,
@@ -209,25 +246,14 @@
     padding: 5px 0 0 0;
     margin-left: 4%;
     text-align: left;
-    font-size: 1em;
     @include respond-to(phone) {
-      font-size: 0.8em;
       padding: 4px 0 2px 5px;
       margin-left: 0;
       width: 100%;
     }
-  }
-  .subHeader {
-    // font-weight: bold;
-    color: $cayorRed;
-    width: 90%;
-    font-size: 1.2em;
-    padding-bottom: 10px;
-    @include respond-to(phone) {
-      margin-top: 10px;
-      margin-left: 0;
-      width: 100%;
-      padding-bottom: 10px;
-    }
+    @include respond-to(tablets) {
+      padding: 1% 0;
+      margin-left: 5%;
+    };
   }
 }

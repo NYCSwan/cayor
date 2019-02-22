@@ -56,6 +56,8 @@ const Root = props => (
               height={props.height}
               width={props.width}
               smoosh={props.smoosh}
+              deviceIdx={props.deviceIdx}
+
               {...routeProps}
             />
           );
@@ -73,6 +75,8 @@ const Root = props => (
               height={props.height}
               width={props.width}
               smoosh={props.smoosh}
+              deviceIdx={props.deviceIdx}
+
               {...routeProps}
             />
           );
@@ -89,6 +93,7 @@ const Root = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              deviceIdx={props.deviceIdx}
               smoosh={props.smoosh}
               {...routeProps}
             />
@@ -106,6 +111,7 @@ const Root = props => (
               isContactModalOpen={props.isContactModalOpen}
               height={props.height}
               width={props.width}
+              deviceIdx={props.deviceIdx}
               smoosh={props.smoosh}
               {...routeProps}
             />

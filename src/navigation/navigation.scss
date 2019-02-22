@@ -26,8 +26,8 @@
       max-height: 100px;
     }
     @include respond-to(tablets) {
-      height: 200px;
-      overflow: visible;
+      height: 150px;
+      overflow: hidden;
     }
     @include respond-to(large-phone) {
       overflow: visible;
@@ -61,7 +61,7 @@
   }
 
   &.homepage {
-    height: 100px;
+    height: 6.2em;
     // color: $white;
     // z-index: 1000;
     @include respond-to(phone) {
@@ -71,7 +71,7 @@
       overflow-y: visible;
     }
     @include respond-to(tablets) {
-      overflow-y: visible;
+      height: 8em;
     }
   }
 
@@ -81,11 +81,16 @@
     margin-left: 0;
     z-index: 1000;
     @include respond-to(phone) {
-      width: 100px;
-      padding-left: 1%;
+      width: 120px;
+      padding-left: 3%;
+    }
+    @include respond-to(phone) {
+      width: 120px;
+      padding-left: 3%;
     }
     @include respond-to(tablets) {
-      width: 100px;
+      width: 150px;
+      padding-left: 5%;
     }
 
     .logo {
@@ -109,6 +114,10 @@
     z-index: 1000;
     height: 100%;
     margin-right: 10px;
+    @include respond-to(tablets) {
+      // width: 80%;
+      align-content: flex-end;
+    }
     #jbg {
       display: flex;
       flex-flow: row wrap;
@@ -131,18 +140,20 @@
           flex-flow: column-reverse;
           justify-content: flex-end;
           padding-right: 0;
+          width: 50%;
         }
         @include respond-to(large-phone) {
           flex-flow: column-reverse;
           justify-content: space-around;
+          width: 50%;
         }
         @include respond-to(tablets) {
-          flex-flow: column-reverse;
-          justify-content: space-around;
+          // align-items: flex-end;
+          justify-content: flex-end;
+          // align-content: flex-end;
         }
         .nav {
           width: 35%;
-          // margin-right: 2%;
           display: flex;
           flex-flow: row nowrap;
           justify-content: space-around;
@@ -159,7 +170,9 @@
             display: none;
           }
           @include respond-to(tablets) {
-            display: none;
+            width: 50%;
+            margin-right: 2%;
+            justify-content: space-between;
           }
           .linkContainer {
             height: 57%;
@@ -219,12 +232,12 @@
             order: 1;
           }
           @include respond-to(tablets) {
-            width: 25%;
-            height: 100%;
+            width: 30%;
             align-self: center;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             align-content: center;
+            margin-right: 0;
           }
           @include respond-to(large-screen) {
             height: 100%;
@@ -301,7 +314,7 @@
       display: block;
     }
     @include respond-to(tablets) {
-      display: block;
+      display: none;
     }
     &.show {
       @include respond-to(phone) {
@@ -310,9 +323,7 @@
       @include respond-to(large-phone) {
         overflow-y: visible;
       }
-      @include respond-to(tablets) {
-        overflow-y: visible;
-      }
+
 
       .dropdown-menu.show {
         @include respond-to(phone) {
@@ -328,9 +339,7 @@
         @include respond-to(large-phone) {
           overflow-y: visible;
         }
-        @include respond-to(tablets) {
-          overflow-y: visible;
-        }
+
       }
     }
     &.nav-item {
@@ -357,15 +366,7 @@
         }
       }
       @include respond-to(tablets) {
-        display: block;
-        align-self: flex-end;
-        width: 60%;
-        height: auto;
-        .btn.btn-secondary {
-          background-color: $transparent;
-          color: $white;
-          border: none;
-        }
+        display: none;
       }
     }
   }
