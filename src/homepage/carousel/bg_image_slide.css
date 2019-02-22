@@ -94,10 +94,10 @@
               @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
                   height: 200px; } }
-              @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
+              @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
                   margin: 0; } }
-              @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
+              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
                 .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none {
                   margin: 0; } }
               .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
@@ -126,12 +126,12 @@
                     top: 20%;
                     display: flex;
                     flex-direction: column; } }
-                @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
+                @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
                   .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
                     top: 20%;
                     display: flex;
                     flex-direction: column; } }
-                @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
+                @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
                   .carousel.slide .carousel-inner .carousel-item.active .carousel-caption.d-none.d-md-block {
                     top: 20%;
                     display: flex;
