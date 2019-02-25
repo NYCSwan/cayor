@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Slide1Mobile from "../media/slide1Mobile.jpg";
-import Slide2Mobile from "../media/slide3Mobile.jpg";
+import Slide2Mobile from "../media/slide2Mobile.jpg";
 import Slide3Mobile from "../media/slide3Mobile.jpg";
-import Slide1Tablet from "../media/slide3Tablet.jpg";
-import Slide2Tablet from "../media/slide3Tablet.jpg";
+import Slide1Tablet from "../media/slide1Tablet.jpg";
+import Slide2Tablet from "../media/slide2Tablet.jpg";
 import Slide3Tablet from "../media/slide3Tablet.jpg";
 import BgImageSlide from "./carousel/bg_image_slide.react";
 import "./homepage.css";

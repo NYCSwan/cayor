@@ -71,7 +71,7 @@
       overflow-y: visible;
     }
     @include respond-to(tablets) {
-      overflow-y: visible;
+      height: 150px;
     }
   }
 
@@ -81,11 +81,12 @@
     margin-left: 0;
     z-index: 1000;
     @include respond-to(phone) {
-      width: 100px;
-      padding-left: 1%;
+      width: 150px;
+      padding-left: 3%;
     }
     @include respond-to(tablets) {
-      width: 100px;
+      width: 175px;
+      padding-left: 5%;
     }
 
     .logo {
@@ -98,7 +99,7 @@
         padding: 0;
       }
       @include respond-to(tablets) {
-        width: 100px;
+        width: 150px;
       }
     }
   }
@@ -136,10 +137,10 @@
           flex-flow: column-reverse;
           justify-content: space-around;
         }
-        @include respond-to(tablets) {
-          flex-flow: column-reverse;
-          justify-content: space-around;
-        }
+        // @include respond-to(tablets) {
+        //   // flex-flow: column-reverse;
+        //   justify-content: space-around;
+        // }
         .nav {
           width: 35%;
           // margin-right: 2%;
@@ -151,7 +152,7 @@
           font-size: 0.8em;
           font-weight: 400;
           height: 100%;
-          z-index: 1000;
+          z-index: 200;
           @include respond-to(phone) {
             display: none;
           }
@@ -159,14 +160,13 @@
             display: none;
           }
           @include respond-to(tablets) {
-            display: none;
-          }
+            width: 55%;
+          };
           .linkContainer {
             height: 57%;
             display: flex;
             align-content: flex-start;
             flex-flow: row wrap;
-            // justify-content: flex-end;
             align-items: flex-start;
             &.nav-item {
               list-style: none;
@@ -219,7 +219,7 @@
             order: 1;
           }
           @include respond-to(tablets) {
-            width: 25%;
+            width: 35%;
             height: 100%;
             align-self: center;
             justify-content: center;
@@ -296,44 +296,44 @@
       display: inline;
       align-self: flex-end;
       height: auto;
+      overflow: visible;
     }
     @include respond-to(large-phone) {
       display: block;
-    }
-    @include respond-to(tablets) {
-      display: block;
+      overflow: visible;
+
     }
     &.show {
       @include respond-to(phone) {
-        overflow-y: visible;
+        overflow: visible;
       }
       @include respond-to(large-phone) {
-        overflow-y: visible;
-      }
-      @include respond-to(tablets) {
-        overflow-y: visible;
+        overflow: visible;
       }
 
       .dropdown-menu.show {
         @include respond-to(phone) {
-          overflow-y: visible;
+          overflow: visible;
           .dropdown-item {
             font-family: $copy-font-family;
-            font-size: 1em;
+            font-size: 0.8em;
             .nav-link {
               color: $primaryBlue;
             }
           }
         }
         @include respond-to(large-phone) {
-          overflow-y: visible;
+          overflow: visible;
+          .dropdown-item {
+            font-family: $copy-font-family;
+            font-size: 0.8em;
+            .nav-link {
+              color: $primaryBlue;
+            }
+          }
         }
-        @include respond-to(tablets) {
-          overflow-y: visible;
-        }
-      }
-    }
-    &.nav-item {
+
+    .dropdown-item {
       @include respond-to(phone) {
         display: block;
         align-self: flex-end;
@@ -345,7 +345,7 @@
           border: none;
         }
       }
-      @include respond-to(large-phone) {
+      @include respond-to(phone-long) {
         display: block;
         align-self: flex-end;
         width: 45%;
@@ -356,17 +356,8 @@
           border: none;
         }
       }
-      @include respond-to(tablets) {
-        display: block;
-        align-self: flex-end;
-        width: 60%;
-        height: auto;
-        .btn.btn-secondary {
-          background-color: $transparent;
-          color: $white;
-          border: none;
-        }
-      }
+    }
+    }
     }
   }
 }

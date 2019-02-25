@@ -174,15 +174,33 @@
     margin-left: 4%;
     font-size: 1.2em;
     @include respond-to(phone) {
-      font-size: 0.8em;
+      font-size: 1em;
       margin-left: 3%;
       width: 100%;
     }
+    @include respond-to(phone-long) {
+      font-size: 1em;
+      margin-left: 3%;
+      width: 100%;
+    }
+    @include respond-to(tablets) {
+      font-size: 1.1em;
+      margin-left: 3%;
+      width: 100%;
+    };
     &.bullet {
       margin-left: 0;
       @include respond-to(phone) {
         margin-left: 3%;
       }
+      @include respond-to(phone-long) {
+        margin-left: 3%;
+
+      }
+      @include respond-to(tablets) {
+        // font-size: .9em;
+        // line-height: 1.3em;
+      };
     }
   }
 
@@ -200,6 +218,13 @@
         margin: 0;
         width: 100%;
       }
+      @include respond-to(phone-long) {
+        font-size: .9em;
+      }
+      @include respond-to(tablets) {
+        font-size: 1.2em;
+        line-height: 1.3em;
+      };
     }
   }
 
@@ -216,6 +241,13 @@
       margin-left: 0;
       width: 100%;
     }
+    @include respond-to(phone-long) {
+
+    }
+    @include respond-to(tablets) {
+      font-size: .9em;
+      line-height: 1.3em;
+    };
   }
   .subHeader {
     // font-weight: bold;
