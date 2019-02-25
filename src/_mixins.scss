@@ -1,20 +1,21 @@
 // Media queries
 
 @mixin respond-to($media) {
-  @if $media == phone {
-    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  @if $media == phone-long {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
       @content;
     }
-    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
       @content;
     }
   } @else if $media == tablets {
     /* iPads (portrait and landscape) ----------- */
-    @media only screen and (max-device-width: 800px) and (max-device-height: 1280px) and (min-device-height: 800px) and (orientation: portrait) {
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
       @content;
     }
     /* kindle fire (portrait and landscape) ----------- */
-    @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (min-device-width: 1000px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
       @content;
     }
   } @else if $media == large-screen {
@@ -22,12 +23,11 @@
     @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
       @content;
     }
-  } @else if $media == phone-long {
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  } @else if $media == phone {
+    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       @content;
     }
-
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
       @content;
     }
   }

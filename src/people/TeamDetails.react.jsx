@@ -3,7 +3,7 @@ import filter from "lodash/filter";
 import findKey from "lodash/findKey";
 import TeamContainer from "./teamContainer.react";
 import PersonDetails from "./personDetails";
-
+import MobileTeamContainer from '../mobile/MobileTeamContainer'
 import "./team-details.css";
 
 class TeamDetails extends Component {
@@ -113,19 +113,39 @@ class TeamDetails extends Component {
       />
     );
   }
+  renderTeam() {
+    const { teamDetails, deviceIdx } = this.props;
+    if (deviceIdx === 1 || deviceIdx === 2) {
+    
+      return (
+          <MobileTeamContainer
+            teamDetails={teamDetails}
+            handleClick={this.handleClick}
+            deviceIdx={deviceIdx}
+          />
+      )
+    } else {
+        return (
+          <TeamContainer
+            teamDetails={teamDetails}
+            handleClick={this.handleClick}
+            deviceIdx={deviceIdx}
+          />
+        )
+      }
+  }
 
   render() {
     const { isOpen } = this.state;
-    const { closeDetails, teamDetails, smoosh } = this.props;
+    const { closeDetails, smoosh } = this.props;
+
     return (
       <div className={smoosh ? "TeamDetails smoosh" : "TeamDetails"}>
         {isOpen === true && closeDetails === false ? (
           this.renderDetails()
         ) : (
-          <TeamContainer
-            teamDetails={teamDetails}
-            handleClick={this.handleClick}
-          />
+          this.renderTeam()
+
         )}
       </div>
     );

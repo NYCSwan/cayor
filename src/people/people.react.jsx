@@ -214,9 +214,9 @@ class People extends Component {
       experiencedTextTable,
       nativeTextTable,
       teamDetails,
-      closeDetails
+      closeDetails,
     } = this.state;
-    const { width, height, match, location, smoosh } = this.props,
+    const { width, height, match, location, smoosh, deviceIdx } = this.props,
       bodyHeight = Math.floor(height * 0.84);
     // currentKey = this.props.location.pathname.split("/")[1];
 
@@ -245,6 +245,7 @@ class People extends Component {
                     currentDetailIdx={0}
                     closeDetails={closeDetails}
                     handleBioClick={this.handleBioClick}
+                    deviceIdx={deviceIdx}
                     smoosh={smoosh}
                     {...routeProps}
                   />

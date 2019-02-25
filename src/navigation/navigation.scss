@@ -26,10 +26,10 @@
       max-height: 100px;
     }
     @include respond-to(tablets) {
-      height: 200px;
-      overflow: visible;
+      height: 150px;
+      overflow: hidden;
     }
-    @include respond-to(large-phone) {
+    @include respond-to(phone-long) {
       overflow: visible;
     }
     &.smoosh {
@@ -61,17 +61,17 @@
   }
 
   &.homepage {
-    height: 100px;
+    height: 6.2em;
     // color: $white;
     // z-index: 1000;
     @include respond-to(phone) {
       overflow-y: visible;
     }
-    @include respond-to(large-phone) {
+    @include respond-to(phone-long) {
       overflow-y: visible;
     }
     @include respond-to(tablets) {
-      height: 150px;
+      height: 8em;
     }
   }
 
@@ -79,13 +79,17 @@
     width: 200px;
     display: flex;
     margin-left: 0;
-    z-index: 1000;
+    z-index: 100;
     @include respond-to(phone) {
-      width: 150px;
+      width: 120px;
+      padding-left: 3%;
+    }
+    @include respond-to(phone) {
+      width: 120px;
       padding-left: 3%;
     }
     @include respond-to(tablets) {
-      width: 175px;
+      width: 150px;
       padding-left: 5%;
     }
 
@@ -110,6 +114,9 @@
     z-index: 1000;
     height: 100%;
     margin-right: 10px;
+    @include respond-to(tablets) {
+      align-content: flex-end;
+    }
     #jbg {
       display: flex;
       flex-flow: row wrap;
@@ -133,17 +140,17 @@
           justify-content: flex-end;
           padding-right: 0;
         }
-        @include respond-to(large-phone) {
+        @include respond-to(phone-long) {
           flex-flow: column-reverse;
           justify-content: space-around;
         }
-        // @include respond-to(tablets) {
-        //   // flex-flow: column-reverse;
-        //   justify-content: space-around;
-        // }
+        @include respond-to(tablets) {
+          align-items: flex-end;
+          justify-content: flex-end;
+          padding-right: 0;
+        }
         .nav {
           width: 35%;
-          // margin-right: 2%;
           display: flex;
           flex-flow: row nowrap;
           justify-content: space-around;
@@ -155,13 +162,16 @@
           z-index: 200;
           @include respond-to(phone) {
             display: none;
+            width: 0;
           }
-          @include respond-to(large-phone) {
+          @include respond-to(phone-long) {
             display: none;
+            width: 0;
           }
           @include respond-to(tablets) {
-            width: 55%;
-          };
+            width: 50%;
+            margin-right: 1%;
+          }
           .linkContainer {
             height: 57%;
             display: flex;
@@ -222,9 +232,10 @@
             width: 35%;
             height: 100%;
             align-self: center;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             align-content: center;
+            margin-right: 0;
           }
           @include respond-to(large-screen) {
             height: 100%;
@@ -298,18 +309,20 @@
       height: auto;
       overflow: visible;
     }
-    @include respond-to(large-phone) {
+    @include respond-to(phone-long) {
       display: block;
-      overflow: visible;
-
+    }
+    @include respond-to(tablets) {
+      display: none;
     }
     &.show {
       @include respond-to(phone) {
         overflow: visible;
       }
-      @include respond-to(large-phone) {
-        overflow: visible;
+      @include respond-to(phone-long) {
+        overflow-y: visible;
       }
+
 
       .dropdown-menu.show {
         @include respond-to(phone) {
@@ -322,7 +335,7 @@
             }
           }
         }
-        @include respond-to(large-phone) {
+        @include respond-to(phone-long) {
           overflow: visible;
           .dropdown-item {
             font-family: $copy-font-family;

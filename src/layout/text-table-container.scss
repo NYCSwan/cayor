@@ -12,8 +12,21 @@
   overflow: hidden;
   @include slide-enter;
   @include slide-exit;
+  @include respond-to(phone) {
+    overflow: visible;
+    width: 95%;
+    height: 90%;
+  };
+  @include respond-to(phone-long) {
+    overflow: visible;
+    width: 95%;
+    height: 90%;
+  };
   @include respond-to(tablets) {
     margin-top: 8%;
+    width: 95%;
+    overflow: scroll;
+    height: 85%
   }
   &.smoosh {
     overflow: scroll;
@@ -32,6 +45,18 @@
       display: inline-block;
       color: $primaryGrey;
       background: $transparent;
+      @include respond-to(phone) {
+        font-size: 1.5em;
+        width: 60%;
+      };
+      @include respond-to(phone-long) {
+        font-size: 1.5em;
+        width: 60%;
+      };
+      @include respond-to(tablets) {
+        font-size: 2rem;
+        width: 50%;
+      }
     }
   }
 }

@@ -14,6 +14,14 @@
     margin-left: 0;
     width: 30%;
   }
+  @include respond-to(phone-long) {
+    width: 30%;
+    margin-left: 0;
+  }
+  @include respond-to(tablets) {
+    margin-left: 0;
+    width: 30%;
+  }
   .list {
     display: flex;
     flex-flow: column;
@@ -21,34 +29,33 @@
     text-align: left;
     width: 80%;
     font-size: 1em;
-    height: 50%;
     list-style: none;
     padding-inline-start: 0;
     float: right;
     align-items: flex-start;
-    // justify-content: space-around;
+    justify-content: flex-start;
     margin-top: -8px;
     padding-right: 4%;
     z-index: 10;
     @include respond-to(phone) {
       text-align: fit-content;
-      width: 85%;
+      width: 90%;
       margin: 0;
+      font-size: 0.8em;
+    }
+    @include respond-to(phone-long) {
+      width: 90%;
+      font-size: 0.8em;
     }
     @include respond-to(tablets) {
-      margin-top: 20%;
+      margin-top: 10%;
+      text-align: fit-content;
+
     }
     .hideIcon {
       display: none;
     }
-    .active {
-      color: $cayorRed;
-      line-height: normal;
-      @include respond-to(phone) {
-        width: 90%;
-        text-align: fit-content;
-      }
-    }
+
     .top {
       list-style: none;
       display: block;
@@ -56,7 +63,7 @@
       color: $primaryBlue;
       font-weight: 700;
       min-width: 25vmin;
-      margin-bottom: 7%;
+      margin-bottom: 0%;
       text-align: left;
       -moz-text-align-last: left;
       flex-grow: 1;
@@ -64,14 +71,43 @@
       padding-top: 1vmin;
       @include respond-to(phone) {
         font-size: 0.8em;
+        margin-bottom: 4%;
+      }
+      @include respond-to(phone-long) {
+        font-size: 0.8em;
+        margin-bottom: 4%;
+
       }
       @include respond-to(large-screen) {
         margin-top: 0;
+        margin-bottom: 4%;
+
       }
+      .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
+       display: none;
+       height: 0;
+     }
       a {
+        display: inline;
         list-style: none;
         color: inherit;
         word-wrap: normal;
+        @include respond-to(phone) {
+          float: right;
+          font-size: 0.8em;
+          // margin-bottom: 4%;
+        }
+        @include respond-to(phone-long) {
+          font-size: 0.8em;
+          float: right;
+
+        }
+        @include respond-to(large-screen) {
+          font-size: 1em;
+          // margin-top: 0;
+          // margin-bottom: 4%;
+
+        }
         &:hover {
           text-decoration: underline;
           font-weight: bold;
@@ -83,27 +119,50 @@
         margin-left: -8%;
         width: 100%;
         word-wrap: normal;
-
         @include respond-to(phone) {
           margin-left: -5%;
-          width: 100%;
+          // width: 90%;
+        }
+        @include respond-to(phone-long) {
+          width: 90%;
+          margin-left: -2px;
         }
         &:hover {
           font-weight: bolder;
         }
         // arrow inline
-        .svg-inline--fa.fa-long-arrow-alt-right.fa-w-14.fa-pull-left.active {
+        .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
           width: auto;
-          margin-left: -10px;
+          margin-right: 10px;
           display: inline;
           padding-bottom: 2px;
+          height: 15px;
+          color: $cayorRed;
+          @include respond-to(phone) {
+            height: 10px;
+            height: 10px;
+            margin-left: 0;
+            margin-right: 0;
+          }
+          @include respond-to(phone-long) {
+            width: 10px;
+            margin-left: 0;
+          }
+          @include respond-to(tablets) {
+            margin-right: 10px;
+            margin-left: 10px;
+
+            width: 15px;
+          }
         }
       }
     }
     .sub {
       display: block;
       margin-bottom: 7%;
+      height: auto;
       a {
+        float: right;
         color: $primaryGrey;
         margin-top: 5%;
         padding: 4px 10px;
@@ -113,13 +172,18 @@
         -moz-text-align-last: left;
         @include respond-to(phone) {
           width: 100%;
-          max-height: 70px;
-          font-size: 0.8em;
+          max-height: 50px;
+          font-size: 0.7em;
+          margin-top: 0;
+          // padding-left: 4px;
+          padding-right: 0;
         }
         @include respond-to(phone-long) {
           width: 100%;
           max-height: 70px;
-          font-size: 0.8em;
+          font-size: 0.7em;
+          margin-top: 0;
+          padding-right: 0;
         }
         @include respond-to(large-screen) {
           max-height: 100px;
@@ -130,18 +194,71 @@
       &.active {
         color: $cayorRed;
         margin-left: -3%;
-        width: 100%;
+        @include respond-to(phone) {
+          margin-left: 0;
+        };
+        @include respond-to(phone-long) {
+          margin-left: 0;
+        };
+        a {
+          float: right;
+          color: $primaryGrey;
+          margin-top: 5%;
+          padding: 4px 10px;
+          list-style: none;
+          width: 100%;
+          text-align: left;
+          -moz-text-align-last: left;
+          @include respond-to(phone) {
+            width: 100%;
+            max-height: 50px;
+            font-size: 0.7em;
+            margin-top: 0;
+            padding-left: 0;
+          }
+          @include respond-to(phone-long) {
+            width: 100%;
+            max-height: 70px;
+            font-size: 0.7em;
+            margin-top: 0;
+
+          }
+          @include respond-to(large-screen) {
+            max-height: 100px;
+            // align-self: flex-start;
+            margin-top: 0;
+          }
+        }
+        // arrow
+        .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
+          width: auto;
+          margin-right: 10px;
+          display: inline;
+          padding-bottom: 2px;
+          height: 15px;
+          color: $cayorRed;
+          @include respond-to(phone) {
+            height: 10px;
+            height: 10px;
+            margin-left: 0;
+            margin-right: 0;
+          }
+          @include respond-to(phone-long) {
+            width: 10px;
+            margin-left: 0;
+          }
+          @include respond-to(tablets) {
+            margin-right: 10px;
+            margin-left: 10px;
+
+            width: 15px;
+          }
+        }
       }
       &:hover {
         text-decoration: underline;
         font-weight: bold;
         cursor: grab;
-      }
-      // arrow
-      .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
-        width: auto;
-        margin-left: -10px;
-        // display: inline;
       }
     }
     &.smoosh {
@@ -151,7 +268,6 @@
         margin-bottom: 5%;
       }
       .sub {
-        // @extend .sub;
         margin-bottom: 4%;
       }
     }

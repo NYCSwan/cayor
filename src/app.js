@@ -49,7 +49,7 @@ class App extends Component {
       return;
     } else if (width <= 490 && width > 0) {
       this.setState({ deviceIdx: 1, height, width }); //mobile
-    } else if (width >= 780 && width <= 1024) {
+    } else if (width >= 760 && width <= 1024 && height >= 1000 && height <= 1366) {
       this.setState({ deviceIdx: 2, height, width }); //tablet
     } else {
       const short = height < width/2;
