@@ -3,6 +3,7 @@ runtime: nodejs8
 # [START handlers]
 handlers:
  - url: /
+  script: auto
   static_files: build/index.html
   upload: build/index.html
 - url: /favicon\.ico
