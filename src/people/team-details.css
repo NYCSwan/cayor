@@ -19,24 +19,36 @@
       transition: transform 800ms linear 650ms; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .TeamDetails {
-      height: 70%;
-      width: 80%;
+      height: 90%;
+      width: 90%;
+      overflow: visible;
       align-items: flex-start;
       align-content: flex-end;
       padding-left: 0; } }
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .TeamDetails {
-      height: 70%;
-      width: 80%;
+      height: 90%;
+      width: 90%;
+      overflow: visible;
       align-items: flex-start;
       align-content: flex-end;
       padding-left: 0; } }
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+    .TeamDetails {
+      height: 85%;
+      overflow: visible; } }
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    .TeamDetails {
+      height: 85%;
+      overflow: visible; } }
   @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
     .TeamDetails {
-      height: 85%; } }
+      height: 85%;
+      overflow: visible; } }
   @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
     .TeamDetails {
-      height: 85%; } }
+      height: 85%;
+      overflow: visible; } }
   .TeamDetails .main {
     width: 100%;
     height: 100%; }
@@ -46,6 +58,12 @@
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
       .TeamDetails .main {
         height: 70%; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .TeamDetails .main {
+        height: 80%; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .TeamDetails .main {
+        height: 80%; } }
     .TeamDetails .main .container {
       width: 100%;
       height: 100%;
@@ -86,22 +104,22 @@
           /* kindle fire (portrait and landscape) ----------- */ }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .TeamDetails .main .container .row.offset {
-              height: 25%; } }
+              height: 36%; } }
           @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
             .TeamDetails .main .container .row.offset {
-              height: 25%; } }
+              height: 36%; } }
           @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
             .TeamDetails .main .container .row.offset {
-              height: 25%; } }
+              height: 36%; } }
           @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
             .TeamDetails .main .container .row.offset {
-              height: 25%; } }
+              height: 36%; } }
           @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
             .TeamDetails .main .container .row.offset {
-              height: 25%; } }
+              height: 36%; } }
           @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
             .TeamDetails .main .container .row.offset {
-              height: 25%; } }
+              height: 36%; } }
           .TeamDetails .main .container .row.offset .colorContainer:first {
             margin-left: 50%; }
           .TeamDetails .main .container .row.offset .colorContainer.Our.Team {
@@ -142,19 +160,19 @@
               @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                 .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
                   color: #ffffff;
-                  font-size: 2em; } }
+                  font-size: 1em; } }
               @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
                 .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
                   color: #ffffff;
-                  font-size: 2em; } }
+                  font-size: 1em; } }
               @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
                 .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
                   color: #ffffff;
-                  font-size: 2em; } }
+                  font-size: 1em; } }
               @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
                 .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
                   color: #ffffff;
-                  font-size: 2em; } }
+                  font-size: 1em; } }
               @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
                 .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
                   color: #ffffff;

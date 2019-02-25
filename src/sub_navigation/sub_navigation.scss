@@ -93,13 +93,13 @@
         color: inherit;
         word-wrap: normal;
         @include respond-to(phone) {
-          float: right;
+          float: left;
           font-size: 0.8em;
           // margin-bottom: 4%;
         }
         @include respond-to(phone-long) {
           font-size: 0.8em;
-          float: right;
+          float: left;
 
         }
         @include respond-to(large-screen) {
@@ -175,7 +175,7 @@
           max-height: 50px;
           font-size: 0.7em;
           margin-top: 0;
-          // padding-left: 4px;
+          float: left;
           padding-right: 0;
         }
         @include respond-to(phone-long) {
@@ -184,6 +184,7 @@
           font-size: 0.7em;
           margin-top: 0;
           padding-right: 0;
+          float: left;
         }
         @include respond-to(large-screen) {
           max-height: 100px;
@@ -210,14 +211,14 @@
           text-align: left;
           -moz-text-align-last: left;
           @include respond-to(phone) {
-            width: 100%;
+            width: 90%;
             max-height: 50px;
             font-size: 0.7em;
             margin-top: 0;
             padding-left: 0;
           }
           @include respond-to(phone-long) {
-            width: 100%;
+            width: 85%;
             max-height: 70px;
             font-size: 0.7em;
             margin-top: 0;

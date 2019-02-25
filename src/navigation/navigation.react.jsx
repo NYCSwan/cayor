@@ -8,7 +8,6 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
-// import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -111,9 +110,7 @@ class Navigation extends Component {
 
         <div id="accra">
           <div id="jbg">
-            <div
-              className={location.pathname === "/" ? "right homepage" : "right"}
-            >
+            <div className={location.pathname === "/" ? "right homepage" : "right"}>
               <Nav>
                 <NavItem className="linkContainer">
                   <NavLink

@@ -10,22 +10,20 @@
   @include slide-exit;
   @include slide-enter;
   @include respond-to(phone) {
-    height: 70%;
-    width: 80%;
-    // flex-flow: column wrap;
+    height: 90%;
+    width: 90%;
+    overflow: visible;
     align-items: flex-start;
     align-content: flex-end;
     padding-left: 0;
   }
   @include respond-to(phone-long) {
-    // margin-top: 10%;
+    height: 85%;
+    overflow: visible;
   }
   @include respond-to(tablets) {
-    // margin-top: 5%;
-    // width: 75%;
     height: 85%;
-    // padding-left: 0;
-    // justify-content: center;
+    overflow: visible;
   }
   .main {
     width: 100%;
@@ -34,7 +32,7 @@
       height: 70%;
     }
     @include respond-to(phone-long) {
-      // height: 90%;
+      height: 80%;
     }
     .container {
       width: 100%;
@@ -63,13 +61,13 @@
           height: 20%;
           justify-content: center;
           @include respond-to(phone) {
-            height: 25%;
+            height: 36%;
           }
           @include respond-to(phone-long) {
-            height: 25%;
+            height: 36%;
           }
           @include respond-to(tablets) {
-            height: 25%;
+            height: 36%;
           }
           .colorContainer {
             &:first {
@@ -99,11 +97,11 @@
                 z-index: 1;
                 @include respond-to(phone) {
                   color: $white;
-                  font-size: 2em;
+                  font-size: 1em;
                 }
                 @include respond-to(phone-long) {
                   color: $white;
-                  font-size: 2em;
+                  font-size: 1em;
                 }
                 @include respond-to(tablets) {
                   color: $white;

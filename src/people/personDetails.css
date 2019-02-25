@@ -1,48 +1,353 @@
-.fade.show .personDetails {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  margin-top: 4%; }
-  .fade.show .personDetails .right {
-    height: 90%;
-    font-family: "Merriweather", serif;
-    width: 40%; }
-    .fade.show .personDetails .right .info {
-      border-bottom: #d5d5d5 1px solid;
-      height: 90%; }
-      .fade.show .personDetails .right .info .portrait {
-        height: auto;
-        width: 70%; }
-      .fade.show .personDetails .right .info .name {
-        font-size: 1.2em;
-        color: #9b1d1f;
-        line-height: 2em;
-        margin-top: 5%; }
-      .fade.show .personDetails .right .info .role {
+.fade.show {
+  height: 100%; }
+  .fade.show .personDetails {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-top: 4%;
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
+    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .fade.show .personDetails {
+        padding: 0;
+        margin-top: 5%;
+        flex-direction: column-reverse;
+        width: 100%;
+        overflow: auto;
+        height: 100%;
+        justify-content: flex-start; } }
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      .fade.show .personDetails {
+        padding: 0;
+        margin-top: 5%;
+        flex-direction: column-reverse;
+        width: 100%;
+        overflow: auto;
+        height: 100%;
+        justify-content: flex-start; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .fade.show .personDetails {
+        padding: 0;
+        margin-top: 5%;
+        flex-direction: column;
+        overflow: auto;
+        height: 100%;
+        justify-content: flex-start; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .fade.show .personDetails {
+        padding: 0;
+        margin-top: 5%;
+        flex-direction: column;
+        overflow: auto;
+        height: 100%;
+        justify-content: flex-start; } }
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+      .fade.show .personDetails {
+        padding: 0;
+        margin-top: 5%;
+        overflow: scroll;
+        justify-content: flex-start; } }
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      .fade.show .personDetails {
+        padding: 0;
+        margin-top: 5%;
+        overflow: scroll;
+        justify-content: flex-start; } }
+    .fade.show .personDetails .right {
+      height: 90%;
+      font-family: "Merriweather", serif;
+      width: 40%;
+      /* iPads (portrait and landscape) ----------- */
+      /* kindle fire (portrait and landscape) ----------- */ }
+      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        .fade.show .personDetails .right {
+          height: 50%;
+          width: 100%;
+          margin-bottom: 10px; } }
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .fade.show .personDetails .right {
+          height: 50%;
+          width: 100%;
+          margin-bottom: 10px; } }
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+        .fade.show .personDetails .right {
+          height: 50%;
+          width: 100%;
+          margin-bottom: 10px; } }
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        .fade.show .personDetails .right {
+          height: 50%;
+          width: 100%;
+          margin-bottom: 10px; } }
+      @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+        .fade.show .personDetails .right {
+          height: 35%;
+          width: 100%;
+          margin-bottom: 20px; } }
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        .fade.show .personDetails .right {
+          height: 35%;
+          width: 100%;
+          margin-bottom: 20px; } }
+      .fade.show .personDetails .right .info {
+        border-bottom: #d5d5d5 1px solid;
+        height: 90%;
+        /* iPads (portrait and landscape) ----------- */
+        /* kindle fire (portrait and landscape) ----------- */ }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .right .info {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .right .info {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+          .fade.show .personDetails .right .info {
+            margin-left: 5%; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+          .fade.show .personDetails .right .info {
+            margin-left: 5%; } }
+        @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+          .fade.show .personDetails .right .info {
+            height: 20%;
+            margin-left: 5%; } }
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          .fade.show .personDetails .right .info {
+            height: 20%;
+            margin-left: 5%; } }
+        .fade.show .personDetails .right .info .portrait {
+          height: auto;
+          width: 70%;
+          /* iPads (portrait and landscape) ----------- */
+          /* kindle fire (portrait and landscape) ----------- */ }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .right .info .portrait {
+              width: 150px; } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .right .info .portrait {
+              width: 150px; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+            .fade.show .personDetails .right .info .portrait {
+              width: 150px; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            .fade.show .personDetails .right .info .portrait {
+              width: 150px; } }
+          @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+            .fade.show .personDetails .right .info .portrait {
+              width: 300px; } }
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+            .fade.show .personDetails .right .info .portrait {
+              width: 300px; } }
+        .fade.show .personDetails .right .info .name {
+          font-size: 1.2em;
+          color: #9b1d1f;
+          line-height: 2em;
+          margin-top: 5%;
+          /* iPads (portrait and landscape) ----------- */
+          /* kindle fire (portrait and landscape) ----------- */ }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .right .info .name {
+              font-size: 1em;
+              line-height: 1.5em; } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .right .info .name {
+              font-size: 1em;
+              line-height: 1.5em; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+            .fade.show .personDetails .right .info .name {
+              font-size: 1em;
+              line-height: 1.5em; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            .fade.show .personDetails .right .info .name {
+              font-size: 1em;
+              line-height: 1.5em; } }
+          @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+            .fade.show .personDetails .right .info .name {
+              font-size: 1em;
+              line-height: 1.5em; } }
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+            .fade.show .personDetails .right .info .name {
+              font-size: 1em;
+              line-height: 1.5em; } }
+        .fade.show .personDetails .right .info .role {
+          color: #113a6e;
+          font-size: 1em; }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .right .info .role {
+              font-size: 0.8em;
+              line-height: 1em; } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .right .info .role {
+              font-size: 0.8em;
+              line-height: 1em; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+            .fade.show .personDetails .right .info .role {
+              font-size: 0.8em;
+              line-height: 1em; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            .fade.show .personDetails .right .info .role {
+              font-size: 0.8em;
+              line-height: 1em; } }
+      .fade.show .personDetails .right .button {
+        margin-top: 3%;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: right;
         color: #113a6e;
-        font-size: 1em; }
-    .fade.show .personDetails .right .button {
-      margin-top: 3%;
-      padding-left: 30px;
-      padding-right: 30px;
-      text-align: right;
-      color: #113a6e; }
-  .fade.show .personDetails .bioDetails {
-    width: 50%;
-    align-self: flex-start;
-    text-align: left; }
-    .fade.show .personDetails .bioDetails p {
-      font-family: "Open Sans", sans-serif;
-      font-size: 0.9em;
-      color: #444444; }
-      .fade.show .personDetails .bioDetails p:first-of-type {
-        color: #9b1d1f;
-        text-align: left;
-        width: 90%;
-        text-align: justify;
-        font-style: "Merriweather", serif;
-        padding-bottom: 2%; }
-    .fade.show .personDetails .bioDetails h5 {
-      font-family: "Josefin Sans", sans-serif;
-      color: #113a6e;
-      font-size: 1.2em; }
+        /* iPads (portrait and landscape) ----------- */
+        /* kindle fire (portrait and landscape) ----------- */ }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .right .button {
+            margin-bottom: 5%;
+            font-size: .8em;
+            width: 50px;
+            height: 20px;
+            text-align: left;
+            padding-left: 20px; } }
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .right .button {
+            margin-bottom: 5%;
+            font-size: .8em;
+            width: 50px;
+            height: 20px;
+            text-align: left;
+            padding-left: 20px; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+          .fade.show .personDetails .right .button {
+            margin-bottom: 5%;
+            font-size: .8em;
+            width: 50px;
+            height: 20px;
+            text-align: left;
+            padding-left: 20px; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+          .fade.show .personDetails .right .button {
+            margin-bottom: 5%;
+            font-size: .8em;
+            width: 50px;
+            height: 20px;
+            text-align: left;
+            padding-left: 20px; } }
+        @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+          .fade.show .personDetails .right .button {
+            margin-bottom: 3%;
+            width: 60px;
+            height: 30px;
+            text-align: left;
+            padding-left: 20px; } }
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          .fade.show .personDetails .right .button {
+            margin-bottom: 3%;
+            width: 60px;
+            height: 30px;
+            text-align: left;
+            padding-left: 20px; } }
+    .fade.show .personDetails .bioDetails {
+      width: 50%;
+      align-self: flex-start;
+      text-align: left;
+      /* iPads (portrait and landscape) ----------- */
+      /* kindle fire (portrait and landscape) ----------- */ }
+      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        .fade.show .personDetails .bioDetails {
+          width: 100%;
+          height: 50%;
+          overflow: scroll;
+          margin-left: 3%; } }
+      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .fade.show .personDetails .bioDetails {
+          width: 100%;
+          height: 50%;
+          overflow: scroll;
+          margin-left: 3%; } }
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+        .fade.show .personDetails .bioDetails {
+          width: 100%;
+          height: 55%;
+          overflow: scroll;
+          margin-left: 3%; } }
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        .fade.show .personDetails .bioDetails {
+          width: 100%;
+          height: 55%;
+          overflow: scroll;
+          margin-left: 3%; } }
+      @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+        .fade.show .personDetails .bioDetails {
+          width: 100%;
+          overflow: scroll;
+          margin-left: 3%;
+          height: 50%; } }
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        .fade.show .personDetails .bioDetails {
+          width: 100%;
+          overflow: scroll;
+          margin-left: 3%;
+          height: 50%; } }
+      .fade.show .personDetails .bioDetails p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.9em;
+        color: #444444;
+        /* iPads (portrait and landscape) ----------- */
+        /* kindle fire (portrait and landscape) ----------- */ }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .bioDetails p {
+            font-size: 0.7em; } }
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .bioDetails p {
+            font-size: 0.7em; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+          .fade.show .personDetails .bioDetails p {
+            font-size: 0.7em; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+          .fade.show .personDetails .bioDetails p {
+            font-size: 0.7em; } }
+        @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+          .fade.show .personDetails .bioDetails p {
+            font-size: 0.7em; } }
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          .fade.show .personDetails .bioDetails p {
+            font-size: 0.7em; } }
+        .fade.show .personDetails .bioDetails p:first-of-type {
+          color: #9b1d1f;
+          text-align: left;
+          width: 90%;
+          font-style: "Merriweather", serif;
+          padding-bottom: 2%;
+          /* iPads (portrait and landscape) ----------- */
+          /* kindle fire (portrait and landscape) ----------- */ }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .bioDetails p:first-of-type {
+              float: right; } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .fade.show .personDetails .bioDetails p:first-of-type {
+              float: right; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+            .fade.show .personDetails .bioDetails p:first-of-type {
+              float: right; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            .fade.show .personDetails .bioDetails p:first-of-type {
+              float: right; } }
+      .fade.show .personDetails .bioDetails h5 {
+        font-family: "Josefin Sans", sans-serif;
+        color: #113a6e;
+        font-size: 1.2em;
+        /* iPads (portrait and landscape) ----------- */
+        /* kindle fire (portrait and landscape) ----------- */ }
+        @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .bioDetails h5 {
+            font-size: 0.8em; } }
+        @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+          .fade.show .personDetails .bioDetails h5 {
+            font-size: 0.8em; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+          .fade.show .personDetails .bioDetails h5 {
+            font-size: 0.8em; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+          .fade.show .personDetails .bioDetails h5 {
+            font-size: 0.8em; } }
+        @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+          .fade.show .personDetails .bioDetails h5 {
+            font-size: 0.8em; } }
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          .fade.show .personDetails .bioDetails h5 {
+            font-size: 0.8em; } }

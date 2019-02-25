@@ -2,34 +2,114 @@
 @import "../_variables";
 
 .fade.show {
+  height: 100%;
   .personDetails {
     // height: 70%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     margin-top: 4%;
-    // align-items: flex-start;
+    @include respond-to(phone) {
+      padding: 0;
+      margin-top: 5%;
+      flex-direction: column-reverse;
+      width: 100%;
+      overflow: auto;
+      height: 100%;
+      justify-content: flex-start;
+    }
+    @include respond-to(phone-long) {
+      padding: 0;
+      margin-top: 5%;
+      flex-direction: column;
+      overflow: auto;
+      height: 100%;
+      justify-content: flex-start;
+    }
+    @include respond-to(tablets) {
+      padding: 0;
+      margin-top: 5%;
+      overflow: scroll;
+      // height: 90%;
+      justify-content: flex-start;
+    }
     .right {
       height: 90%;
       font-family: $headline-font-family;
       width: 40%;
+      @include respond-to(phone) {
+        height: 50%;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      @include respond-to(phone-long) {
+        height: 50%;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      @include respond-to(tablets) {
+        height: 35%;
+        width: 100%;
+        margin-bottom: 20px;
+      }
       .info {
         border-bottom: $lightGrey 1px solid;
         height: 90%;
+        @include respond-to(phone) {
+          // height: 50%;
+          margin-left: 5%;
+        }
+        @include respond-to(phone-long) {
+          // height: 50%;
+          margin-left: 5%;
+        }
+        @include respond-to(tablets) {
+          height: 20%;
+          margin-left: 5%;
+        }
         .portrait {
-          // border-radius: 50px;
           height: auto;
           width: 70%;
+          @include respond-to(phone) {
+            width: 150px;
+          }
+          @include respond-to(phone-long) {
+            width: 150px;
+          }
+          @include respond-to(tablets) {
+            width: 300px;
+          }
         }
         .name {
           font-size: 1.2em;
           color: $cayorRed;
           line-height: 2em;
           margin-top: 5%;
+          @include respond-to(phone) {
+            font-size: 1em;
+            line-height: 1.5em;
+          }
+          @include respond-to(phone-long) {
+            font-size: 1em;
+            line-height: 1.5em;
+          }
+          @include respond-to(tablets) {
+            font-size: 1em;
+            line-height: 1.5em;
+          }
         }
         .role {
           color: $primaryBlue;
           font-size: 1em;
+          @include respond-to(phone) {
+            font-size: 0.8em;
+            line-height: 1em;
+          }
+          @include respond-to(phone-long) {
+            font-size: 0.8em;
+            line-height: 1em;
+          }
+
         }
       }
       .button {
@@ -39,29 +119,97 @@
         padding-right: 30px;
         text-align: right;
         color: $primaryBlue;
+        @include respond-to(phone) {
+          margin-bottom: 5%;
+          font-size: .8em;
+          width: 50px;
+          height: 20px;
+          text-align: left;
+          padding-left: 20px;
+        }
+        @include respond-to(phone-long) {
+          margin-bottom: 5%;
+          font-size: .8em;
+          width: 50px;
+          height: 20px;
+          text-align: left;
+          padding-left: 20px;
+        }
+        @include respond-to(tablets) {
+          margin-bottom: 3%;
+          width: 60px;
+          height: 30px;
+          text-align: left;
+          padding-left: 20px;
+        }
       }
     }
     .bioDetails {
       width: 50%;
       align-self: flex-start;
       text-align: left;
+      @include respond-to(phone) {
+        width: 100%;
+        height: 50%;
+        overflow: scroll;
+        margin-left: 3%;
+      }
+      @include respond-to(phone-long) {
+        width: 100%;
+        height: 55%;
+        overflow: scroll;
+        margin-left: 3%;
+      }
+      @include respond-to(tablets) {
+        width: 100%;
+        overflow: scroll;
+        margin-left: 3%;
+        height: 50%;
+      }
       p {
         font-family: $open-sans-font-family;
         font-size: 0.9em;
         color: $primaryText;
+        @include respond-to(phone) {
+          font-size: 0.7em;
+        }
+        @include respond-to(phone-long) {
+          font-size: 0.7em;
+        }
+        @include respond-to(tablets) {
+          font-size: 0.7em;
+        }
         &:first-of-type {
           color: $cayorRed;
           text-align: left;
           width: 90%;
-          text-align: justify;
           font-style: $headline-font-family;
           padding-bottom: 2%;
+          @include respond-to(phone) {
+            float: right;
+
+          }
+          @include respond-to(phone-long) {
+            float: right;
+          }
+          @include respond-to(tablets) {
+
+          }
         }
       }
       h5 {
         font-family: $copy-font-family;
         color: $primaryBlue;
         font-size: 1.2em;
+        @include respond-to(phone) {
+          font-size: 0.8em;
+        }
+        @include respond-to(phone-long) {
+          font-size: 0.8em;
+        }
+        @include respond-to(tablets) {
+          font-size: 0.8em;
+        }
       }
     }
   }

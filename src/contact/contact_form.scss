@@ -14,6 +14,22 @@
   @include respond-to(phone) {
     min-width: 85%;
     margin-top: 10%;
+    max-width: 90%;
+    max-height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  @include respond-to(phone-long) {
+    max-width: 90%;
+    max-height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  @include respond-to(tablets) {
+    max-width: 90%;
+    max-height: 80%;
   }
   &.show {
     &.contactForm {
@@ -24,13 +40,32 @@
       }
       &.accra, &.jbg {
         margin-right: 5%;
+        @include respond-to(phone) {
+          margin-right: 0;
+        }
+        @include respond-to(phone-long) {
+          margin-right: 0;
+        }
+        @include respond-to(tablets) {
+          margin-right: 0;
+        }
       &.bs-popover-bottom,
       &.bs-popover-top {
         width: 100%;
         height: auto;
         padding-bottom: 5%;
         font-family: $copy-font-family;
-
+        @include respond-to(phone) {
+          transform: translate3d(20px, 60px, -10px);
+          height: 60%;
+        }
+        @include respond-to(phone-long) {
+          height: 60%;
+          transform: translate3d(31px, 60px, 0px);
+        }
+        @include respond-to(tablets) {
+          height: 60%;
+        }
         .popover-inner {
           width: 100%;
           height: 100%;
@@ -91,6 +126,24 @@
                 padding-top: 2%;
                 letter-spacing: 1px;
                 align-self: flex-end;
+                @include respond-to(phone) {
+                  font-size: 1em;
+                  margin-top: 50%;
+                  width: 100%;
+                  text-align: center;
+                }
+                @include respond-to(phone-long) {
+                  font-size: 1em;
+                  margin-top: 50%;
+                  width: 100%;
+                  text-align: center;
+                }
+                @include respond-to(tablets) {
+                  font-size: 2em;
+                  margin-top: 10%;
+                  width: 100%;
+                  text-align: center;
+                }
               }
               #map {
                 min-width: 250px;
@@ -98,20 +151,25 @@
                 height: auto;
                 float: right;
                 @include respond-to(phone) {
-                  width: 80%;
-                  left: 10%;
+                  width:50%;
+                  left: 25%;
+                  top: 30%;
                   position: absolute;
                   z-index: -1;
+                  min-width: 150px;
                 }
                 @include respond-to(phone-long) {
-                  width: 80%;
-                  left: 10%;
+                  width:50%;
+                  left: 25%;
+                  top: 30%;
                   position: absolute;
                   z-index: -1;
+                  min-width: 150px;
                 }
                 @include respond-to(tablets) {
-                  width: 80%;
-                  left: 10%;
+                  width: 50%;
+                  left: 45%;
+                  top: 20%;
                   position: absolute;
                   z-index: -1;
                 }
@@ -133,17 +191,39 @@
                 }
                 @include respond-to(tablets) {
                   width: 80%;
-                  margin-left: 5%;
+                  margin-left: 10%;
+                  padding-top: 10%;
                 }
                 h4 {
                   font-size: 1.1em;
-                  line-height: 1.5em;
+                  line-height: 1.3em;
                   font-family: $copy-font-family;
                   color: $primaryGrey;
+                  @include respond-to(phone) {
+                    font-size: 0.9em;
+                    line-height: 1.2em;
+                  }
+                  @include respond-to(phone-long) {
+                    font-size: 0.9em;
+                    line-height: 1.2em;
+                  }
+                  @include respond-to(tablets) {
+                    font-size: 1.5em;
+                    line-height: 1.8em;
+                  }
                   &.right {
                     align-self: flex-end;
                     width: 80%;
                     padding-bottom: 0;
+                    @include respond-to(phone) {
+                      width: 90%;
+                    }
+                    @include respond-to(phone-long) {
+                      width: 90%;
+                    }
+                    @include respond-to(tablets) {
+                      width: 90%;
+                    }
                   }
                 }
                 .phone {
