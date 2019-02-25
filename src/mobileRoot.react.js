@@ -6,7 +6,7 @@ import Footer from "./layout/footer.react";
 import MobileHomepage from "./mobile/MobileHomepage.react";
 import People from "./people/people.react";
 import Opportunities from "./opportunity/opportunity.react";
-import Approach from "./approach/approach.react";
+import Approach from "./mobile/MobileApproach";
 import Esg from "./esg/esg.react";
 
 const MobileRoot = props => (

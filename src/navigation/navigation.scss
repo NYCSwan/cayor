@@ -29,7 +29,7 @@
       height: 150px;
       overflow: hidden;
     }
-    @include respond-to(large-phone) {
+    @include respond-to(phone-long) {
       overflow: visible;
     }
     &.smoosh {
@@ -67,7 +67,7 @@
     @include respond-to(phone) {
       overflow-y: visible;
     }
-    @include respond-to(large-phone) {
+    @include respond-to(phone-long) {
       overflow-y: visible;
     }
     @include respond-to(tablets) {
@@ -79,7 +79,7 @@
     width: 200px;
     display: flex;
     margin-left: 0;
-    z-index: 1000;
+    z-index: 100;
     @include respond-to(phone) {
       width: 120px;
       padding-left: 3%;
@@ -115,7 +115,6 @@
     height: 100%;
     margin-right: 10px;
     @include respond-to(tablets) {
-      // width: 80%;
       align-content: flex-end;
     }
     #jbg {
@@ -140,17 +139,15 @@
           flex-flow: column-reverse;
           justify-content: flex-end;
           padding-right: 0;
-          width: 50%;
         }
-        @include respond-to(large-phone) {
+        @include respond-to(phone-long) {
           flex-flow: column-reverse;
           justify-content: space-around;
-          width: 50%;
         }
         @include respond-to(tablets) {
-          // align-items: flex-end;
+          align-items: flex-end;
           justify-content: flex-end;
-          // align-content: flex-end;
+          padding-right: 0;
         }
         .nav {
           width: 35%;
@@ -165,21 +162,21 @@
           z-index: 1000;
           @include respond-to(phone) {
             display: none;
+            width: 0;
           }
-          @include respond-to(large-phone) {
+          @include respond-to(phone-long) {
             display: none;
+            width: 0;
           }
           @include respond-to(tablets) {
             width: 50%;
-            margin-right: 2%;
-            justify-content: space-between;
+            margin-right: 1%;
           }
           .linkContainer {
             height: 57%;
             display: flex;
             align-content: flex-start;
             flex-flow: row wrap;
-            // justify-content: flex-end;
             align-items: flex-start;
             &.nav-item {
               list-style: none;
@@ -310,7 +307,7 @@
       align-self: flex-end;
       height: auto;
     }
-    @include respond-to(large-phone) {
+    @include respond-to(phone-long) {
       display: block;
     }
     @include respond-to(tablets) {
@@ -320,7 +317,7 @@
       @include respond-to(phone) {
         overflow-y: visible;
       }
-      @include respond-to(large-phone) {
+      @include respond-to(phone-long) {
         overflow-y: visible;
       }
 
@@ -336,7 +333,7 @@
             }
           }
         }
-        @include respond-to(large-phone) {
+        @include respond-to(phone-long) {
           overflow-y: visible;
         }
 
@@ -354,7 +351,7 @@
           border: none;
         }
       }
-      @include respond-to(large-phone) {
+      @include respond-to(phone-long) {
         display: block;
         align-self: flex-end;
         width: 45%;

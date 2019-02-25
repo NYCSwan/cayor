@@ -21,98 +21,213 @@
       transition: transform 600ms linear; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .SectorsContainer {
-      margin-top: 1%; } }
+      height: 90%; } }
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .SectorsContainer {
-      margin-top: 1%; } }
-  @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+      height: 90%; } }
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
     .SectorsContainer {
-      margin-top: 2%; } }
-  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+      height: 90%; } }
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
     .SectorsContainer {
-      margin-top: 2%; } }
+      height: 90%; } }
+  @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+    .SectorsContainer {
+      height: 88%; } }
+  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    .SectorsContainer {
+      height: 88%; } }
   .SectorsContainer .row {
     height: 50%;
-    margin: 0; }
+    margin: 0;
+    /* iPads (portrait and landscape) ----------- */
+    /* kindle fire (portrait and landscape) ----------- */ }
+    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .SectorsContainer .row {
+        height: 33.33%;
+        width: 100%; } }
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      .SectorsContainer .row {
+        height: 33.33%;
+        width: 100%; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .SectorsContainer .row {
+        height: 33.33%;
+        width: 100%; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .SectorsContainer .row {
+        height: 33.33%;
+        width: 100%; } }
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+      .SectorsContainer .row {
+        height: 33.33%;
+        width: 100%; } }
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      .SectorsContainer .row {
+        height: 33.33%;
+        width: 100%; } }
     .SectorsContainer .row .sector {
       width: 100%;
+      padding: 0;
       background-color: #470c0d; }
-      .SectorsContainer .row .sector.col-4 {
+      .SectorsContainer .row .sector.col-4, .SectorsContainer .row .sector.col-6 {
         height: 100%;
         padding-left: 0;
         padding-right: 0; }
-        .SectorsContainer .row .sector.col-4 .Infrastructure.Services {
-          width: 100%; }
-          .SectorsContainer .row .sector.col-4 .Infrastructure.Services.card {
-            padding: 0; }
-            .SectorsContainer .row .sector.col-4 .Infrastructure.Services.card .image {
-              width: 100%; }
-        .SectorsContainer .row .sector.col-4 .Consumer.Goods.card .text.card-img-overlay .card-body:hover .card-title {
-          line-height: 2em; }
-        .SectorsContainer .row .sector.col-4 .Consumer.Goods.card .text.card-img-overlay .card-body:hover .list-group {
-          height: 100%; }
-          .SectorsContainer .row .sector.col-4 .Consumer.Goods.card .text.card-img-overlay .card-body:hover .list-group .text {
-            line-height: 2.3em; }
-        .SectorsContainer .row .sector.col-4 .Agribusiness.card .text.card-img-overlay .card-body:hover .card-title {
-          line-height: 2em; }
-        .SectorsContainer .row .sector.col-4 .Agribusiness.card .text.card-img-overlay .card-body:hover .list-group {
-          height: 100%; }
-          .SectorsContainer .row .sector.col-4 .Agribusiness.card .text.card-img-overlay .card-body:hover .list-group .text {
-            line-height: 1.3em; }
-        .SectorsContainer .row .sector.col-4 .card {
+        .SectorsContainer .row .sector.col-4 .card, .SectorsContainer .row .sector.col-6 .card {
           width: 100%;
           height: 100%;
           border: none; }
-          .SectorsContainer .row .sector.col-4 .card .image {
+          .SectorsContainer .row .sector.col-4 .card .image, .SectorsContainer .row .sector.col-6 .card .image {
             height: inherit;
             border-radius: 0; }
-          .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay {
+          .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay {
             height: 100%;
             width: 100%;
             padding: 0;
             bottom: 0; }
-            .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body {
-              width: inherit;
+            .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body {
+              display: block;
               height: 100%;
-              padding: 0; }
-              .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title {
+              width: 100%; }
+              .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
+                line-height: 3em;
                 position: absolute;
                 color: #9b1d1f;
                 text-shadow: #470c0d 0 1px 0;
                 font-family: "Merriweather", serif;
                 width: 100%;
                 bottom: 0;
-                margin: 0;
-                line-height: 3em;
-                background-color: #d5d5d599;
-                border: none; }
-              .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body:hover .card-title {
-                display: block;
-                z-index: 100; }
-              .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body:hover .list-group {
-                display: flex;
-                height: 100%;
-                align-content: flex-start;
-                background-color: #d5d5d599; }
-                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body:hover .list-group .text.list-group-item {
-                  background-color: rgba(0, 0, 0, 0);
-                  border: none;
-                  line-height: auto;
-                  transition: 1s;
-                  -webkit-transition: 1s;
-                  -moz-transition: 1s;
-                  -ms-transition: 1s;
-                  transition-property: all;
-                  transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
-              .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .list-group {
-                position: absolute;
-                bottom: 0;
                 left: 0;
-                right: 0;
-                overflow: hidden;
-                width: 100%;
-                height: 0;
-                transition: 0.5s ease; }
+                margin: 0;
+                background-color: #d5d5d599;
+                border: none;
+                /* iPads (portrait and landscape) ----------- */
+                /* kindle fire (portrait and landscape) ----------- */ }
+                @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
+                    line-height: 1.3em;
+                    font-size: .9em;
+                    word-break: normal; } }
+                @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
+                    line-height: 1.3em;
+                    font-size: .9em;
+                    word-break: normal; } }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
+                    line-height: 1.3em;
+                    font-size: .9em;
+                    word-break: normal; } }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
+                    line-height: 1.3em;
+                    font-size: .9em;
+                    word-break: normal; } }
+                @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
+                    line-height: 1.5em;
+                    font-size: 1.2em; } }
+                @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
+                    line-height: 1.5em;
+                    font-size: 1.2em; } }
+              .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .list-group {
+                display: none;
+                height: 0%;
+                overflow: hidden; }
+            .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
+              line-height: 1.5em;
+              z-index: 10;
+              /* iPads (portrait and landscape) ----------- */
+              /* kindle fire (portrait and landscape) ----------- */ }
+              @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
+                  line-height: 2em;
+                  font-size: .66em;
+                  word-break: normal; } }
+              @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
+                  line-height: 2em;
+                  font-size: .66em;
+                  word-break: normal; } }
+              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
+                  line-height: 1.7em;
+                  font-size: .66em;
+                  word-break: normal; } }
+              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
+                  line-height: 1.7em;
+                  font-size: .66em;
+                  word-break: normal; } }
+              @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
+                  line-height: 1.7em;
+                  font-size: 1em; } }
+              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
+                  line-height: 1.7em;
+                  font-size: 1em; } }
+            .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
+              display: block;
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              margin: 0;
+              top: 0;
+              left: 0;
+              justify-content: space-evenly;
+              background-color: #d5d5d599;
+              /* iPads (portrait and landscape) ----------- */
+              /* kindle fire (portrait and landscape) ----------- */ }
+              @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
+                  height: 85%; } }
+              @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
+                  height: 85%; } }
+              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
+                  height: 90%; } }
+              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
+                  height: 90%; } }
+              @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
+                  height: 90%; } }
+              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+                .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
+                  height: 90%; } }
+              .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
+                line-height: 1.5em;
+                font-size: 1.2em;
+                /* iPads (portrait and landscape) ----------- */
+                /* kindle fire (portrait and landscape) ----------- */ }
+                @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
+                    line-height: 1em;
+                    font-size: .8em; } }
+                @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
+                    line-height: 1em;
+                    font-size: .8em; } }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
+                    line-height: 1em;
+                    font-size: .8em; } }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
+                    line-height: 1em;
+                    font-size: .8em; } }
+                @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
+                    line-height: 1.2em;
+                    font-size: 1em; } }
+                @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+                  .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
+                    line-height: 1.2em;
+                    font-size: 1em; } }
     .SectorsContainer .row .colorContainer {
       margin: 0;
       height: 100%;

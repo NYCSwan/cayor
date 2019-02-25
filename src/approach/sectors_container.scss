@@ -13,144 +13,155 @@ $class-color-list: (red, $primaryBlue), (grey, $accentGrey);
   left: 0;
   @include slide-enter;
   @include slide-exit;
-  
   @include respond-to(phone) {
-    margin-top: 1%;
+    height: 90%;
   }
+  @include respond-to(phone-long) {
+    height: 90%;
+  };
   @include respond-to(tablets) {
-    margin-top: 2%;
+    height: 88%;
   }
   .row {
     height: 50%;
     margin: 0;
+    @include respond-to(phone) {
+      height: 33.33%;
+      width: 100%;
+    }
+    @include respond-to(phone-long) {
+      height: 33.33%;
+      width: 100%;
+    };
+    @include respond-to(tablets) {
+      height: 33.33%;
+      width: 100%;
+    }
     .sector {
       width: 100%;
+      padding: 0;
       background-color: $cayorRedShaddow;
-      &.col-4 {
+      &.col-4, &.col-6 {
         height: 100%;
         padding-left: 0;
         padding-right: 0;
-        .Infrastructure.Services {
-          width: 100%;
-          &.card {
-            padding: 0;
-            .image {
-              width: 100%;
-            }
-          }
-        }
-        .Consumer.Goods {
-          &.card {
-            .text.card-img-overlay {
-              .card-body {
-                &:hover {
-                  .card-title {
-                    line-height: 2em;
-                  }
-                  .list-group {
-                    height: 100%;
-                    .text {
-                      line-height: 2.3em;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        .Agribusiness {
-          &.card {
-            .text.card-img-overlay {
-              .card-body {
-                &:hover {
-                  .card-title {
-                    line-height: 2em;
-                  }
-                  .list-group {
-                    height: 100%;
-                    .text {
-                      line-height: 1.3em;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        .card {
-          width: 100%;
-          height: 100%;
-          border: none;
-          .image {
-            height: inherit;
-            border-radius: 0;
-          }
-          .text.card-img-overlay {
-            height: 100%;
+          .card {
             width: 100%;
-            padding: 0;
-            bottom: 0;
-            .card-body {
-              width: inherit;
+            height: 100%;
+            border: none;
+            .image {
+              height: inherit;
+              border-radius: 0;
+            }
+            .text.card-img-overlay {
               height: 100%;
+              width: 100%;
               padding: 0;
-              .card-title {
-                position: absolute;
-                color: $cayorRed;
-                text-shadow: $cayorRedShaddow 0 1px 0;
-                font-family: $headline-font-family;
+              bottom: 0;
+              .card-body {
+                display: block;
+                height: 100%;
                 width: 100%;
-                bottom: 0;
-                margin: 0;
-                line-height: 3em;
-                background-color: $greySemiTransparent;
-                border: none;
-              }
-              &:hover {
                 .card-title {
-                  display: block;
-                  z-index: 100;
+                    line-height: 3em;
+                    position: absolute;
+                    color: $cayorRed;
+                    text-shadow: $cayorRedShaddow 0 1px 0;
+                    font-family: $headline-font-family;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    margin: 0;
+                    // line-height: 3em;
+                    background-color: $greySemiTransparent;
+                    border: none;
+                    @include respond-to(phone) {
+                      line-height: 1.3em;
+                      font-size: .9em;
+                      word-break: normal;
+                    }
+                    @include respond-to(phone-long) {
+                      line-height: 1.3em;
+                      font-size: .9em;
+                      word-break: normal;
+                    };
+                    @include respond-to(tablets) {
+                      line-height: 1.5em;
+                      font-size: 1.2em;
+                  }
                 }
                 .list-group {
-                  display: flex;
-                  height: 100%;
-                  align-content: flex-start;
-                  background-color: $greySemiTransparent;
-
-                  .text.list-group-item {
-                    background-color: $transparent;
-                    border: none;
-                    line-height: auto;
-                    transition: 1s;
-                    -webkit-transition: 1s;
-                    -moz-transition: 1s;
-                    -ms-transition: 1s;
-                    transition-property: all;
-                    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-                  }
-                }
+                  display: none;
+                  height: 0%;
+                  overflow: hidden;
               }
-              .list-group {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                overflow: hidden;
-                width: 100%;
-                height: 0;
-                transition: 0.5s ease;
+          }
+          &:hover {
+            .card-title{
+              line-height: 1.5em;
+              z-index: 10;
+                @include respond-to(phone) {
+                  line-height: 2em;
+                  font-size: .66em;
+                  word-break: normal;
+                }
+                @include respond-to(phone-long) {
+                  line-height: 1.7em;
+                  font-size: .66em;
+                  word-break: normal;
+                };
+                @include respond-to(tablets) {
+                  line-height: 1.7em;
+                  font-size: 1em;
+              }
+
+            }
+            .list-group {
+              display: block;
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              margin: 0;
+              top: 0;
+              left: 0;
+              justify-content: space-evenly;
+              background-color: $greySemiTransparent;
+              @include respond-to(phone) {
+                height: 85%;
+              }
+              @include respond-to(phone-long) {
+                height: 90%;
+              };
+              @include respond-to(tablets) {
+                height: 90%;
+              }
+              .text {
+                line-height: 1.5em;
+                font-size: 1.2em;
+                @include respond-to(phone) {
+                  line-height: 1em;
+                  font-size: .8em;
+                }
+                @include respond-to(phone-long) {
+                  line-height: 1em;
+                  font-size: .8em;
+                };
+                @include respond-to(tablets) {
+                  line-height: 1.2em;
+                  font-size: 1em;
+                }
               }
             }
           }
         }
       }
     }
+    }
     .colorContainer {
       margin: 0;
       height: 100%;
       padding: 0;
       width: 100%;
-
       @each $color, $hex in $class-color-list {
         &.#{$color} {
           background-color: #{$hex};

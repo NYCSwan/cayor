@@ -22,17 +22,31 @@
       transition: transform 600ms linear; }
   @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .text-table-container {
-      overflow: visible; } }
+      overflow: visible;
+      width: 95%;
+      height: 90%; } }
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .text-table-container {
-      overflow: visible; } }
-  @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+      overflow: visible;
+      width: 95%;
+      height: 90%; } }
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+    .text-table-container {
+      overflow: visible;
+      width: 95%;
+      height: 90%; } }
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    .text-table-container {
+      overflow: visible;
+      width: 95%;
+      height: 90%; } }
+  @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
     .text-table-container {
       margin-top: 8%;
       width: 95%;
       overflow: scroll;
       height: 85%; } }
-  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
     .text-table-container {
       margin-top: 8%;
       width: 95%;
@@ -53,11 +67,27 @@
     background: rgba(0, 0, 0, 0);
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
-    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .text-table-container .header.left {
+        font-size: 1.5em;
+        width: 60%; } }
+    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      .text-table-container .header.left {
+        font-size: 1.5em;
+        width: 60%; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .text-table-container .header.left {
+        font-size: 1.5em;
+        width: 60%; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .text-table-container .header.left {
+        font-size: 1.5em;
+        width: 60%; } }
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
       .text-table-container .header.left {
         font-size: 2rem;
         width: 50%; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
       .text-table-container .header.left {
         font-size: 2rem;
         width: 50%; } }

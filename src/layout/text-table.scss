@@ -9,12 +9,15 @@
   padding-right: 5%;
   color: $primaryGrey;
   @include respond-to(phone) {
-    // overflow-y: scroll;
-    overflow: auto;
+    overflow: visible;
+  }
+  @include respond-to(phone-long) {
+    overflow: visible;
   }
   @include respond-to(tablets) {
     width: 100%;
     padding-left: 5%;
+    overflow: visible;
   }
   &.bullet {
     display: flex;
@@ -65,7 +68,6 @@
       }
     }
     ul {
-      // // overflow-y: scroll;
       .subHeader {
         font-size: 1.2em;
         padding-bottom: 0px;
@@ -123,7 +125,13 @@
       .subHeader {
         width: 100%;
         font-size: 1.2em;
-
+        word-wrap: normal;
+        @include respond-to(phone) {
+          font-size: 1em;
+        }
+        @include respond-to(tablets) {
+          font-size: 1em;
+        };
       }
       .list-group-item {
         padding-top: 5px;
@@ -189,12 +197,21 @@
       width: 90%;
       font-family: $open-sans-font-family;
       color: $primaryBlue;
-      padding-bottom: 1%;
+      padding-bottom: 3%;
       font-weight: bold;
       @include respond-to(phone) {
         color: $primaryBlue;
         margin: 0;
         width: 100%;
+        padding-bottom: 2%;
+
+      }
+      @include respond-to(phone-long) {
+        color: $primaryBlue;
+        margin: 0;
+        width: 100%;
+        padding-bottom: 2%;
+
       }
       @include respond-to(tablets) {
         width: 100%;
@@ -228,7 +245,7 @@
     color: $cayorRed;
     width: 90%;
     font-size: 1.2em;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     @include respond-to(phone) {
       margin-top: 10px;
       margin-left: 0;

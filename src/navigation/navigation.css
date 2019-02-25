@@ -24,14 +24,20 @@
       .header.people, .header.opportunity, .header.approach, .header.esg {
         overflow: visible;
         max-height: 100px; } }
-    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
       .header.people, .header.opportunity, .header.approach, .header.esg {
         height: 150px;
         overflow: hidden; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
       .header.people, .header.opportunity, .header.approach, .header.esg {
         height: 150px;
         overflow: hidden; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .header.people, .header.opportunity, .header.approach, .header.esg {
+        overflow: visible; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .header.people, .header.opportunity, .header.approach, .header.esg {
+        overflow: visible; } }
     .header.people.smoosh, .header.opportunity.smoosh, .header.approach.smoosh, .header.esg.smoosh {
       height: 100px; }
   .header.people {
@@ -56,17 +62,23 @@
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
       .header.homepage {
         overflow-y: visible; } }
-    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .header.homepage {
+        overflow-y: visible; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .header.homepage {
+        overflow-y: visible; } }
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
       .header.homepage {
         height: 8em; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
       .header.homepage {
         height: 8em; } }
   .header .logo-container {
     width: 200px;
     display: flex;
     margin-left: 0;
-    z-index: 1000;
+    z-index: 100;
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -85,11 +97,11 @@
       .header .logo-container {
         width: 120px;
         padding-left: 3%; } }
-    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
       .header .logo-container {
         width: 150px;
         padding-left: 5%; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
       .header .logo-container {
         width: 150px;
         padding-left: 5%; } }
@@ -108,10 +120,10 @@
         .header .logo-container .logo {
           width: 100px;
           padding: 0; } }
-      @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+      @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
         .header .logo-container .logo {
           width: 100px; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
         .header .logo-container .logo {
           width: 100px; } }
   .header #accra {
@@ -121,10 +133,10 @@
     margin-right: 10px;
     /* iPads (portrait and landscape) ----------- */
     /* kindle fire (portrait and landscape) ----------- */ }
-    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
       .header #accra {
         align-content: flex-end; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
       .header #accra {
         align-content: flex-end; } }
     .header #accra #jbg {
@@ -151,20 +163,30 @@
           .header #accra #jbg .right {
             flex-flow: column-reverse;
             justify-content: flex-end;
-            padding-right: 0;
-            width: 50%; } }
+            padding-right: 0; } }
         @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
           .header #accra #jbg .right {
             flex-flow: column-reverse;
             justify-content: flex-end;
-            padding-right: 0;
-            width: 50%; } }
-        @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+            padding-right: 0; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
           .header #accra #jbg .right {
-            justify-content: flex-end; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+            flex-flow: column-reverse;
+            justify-content: space-around; } }
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
           .header #accra #jbg .right {
-            justify-content: flex-end; } }
+            flex-flow: column-reverse;
+            justify-content: space-around; } }
+        @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+          .header #accra #jbg .right {
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 0; } }
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          .header #accra #jbg .right {
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 0; } }
         .header #accra #jbg .right .nav {
           width: 35%;
           display: flex;
@@ -179,20 +201,28 @@
           /* kindle fire (portrait and landscape) ----------- */ }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
-              display: none; } }
+              display: none;
+              width: 0; } }
           @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
             .header #accra #jbg .right .nav {
-              display: none; } }
-          @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+              display: none;
+              width: 0; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+            .header #accra #jbg .right .nav {
+              display: none;
+              width: 0; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            .header #accra #jbg .right .nav {
+              display: none;
+              width: 0; } }
+          @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
             .header #accra #jbg .right .nav {
               width: 50%;
-              margin-right: 2%;
-              justify-content: space-between; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+              margin-right: 1%; } }
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
             .header #accra #jbg .right .nav {
               width: 50%;
-              margin-right: 2%;
-              justify-content: space-between; } }
+              margin-right: 1%; } }
           .header #accra #jbg .right .nav .linkContainer {
             height: 57%;
             display: flex;
@@ -245,21 +275,21 @@
               align-self: flex-end;
               margin-right: 0;
               order: 1; } }
-          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
             .header #accra #jbg .right .clocks {
               width: 55%;
               height: 45%;
               align-self: flex-end;
               margin-right: 0;
               order: 1; } }
-          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
             .header #accra #jbg .right .clocks {
               width: 55%;
               height: 45%;
               align-self: flex-end;
               margin-right: 0;
               order: 1; } }
-          @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+          @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
             .header #accra #jbg .right .clocks {
               width: 30%;
               align-self: center;
@@ -267,7 +297,7 @@
               align-items: center;
               align-content: center;
               margin-right: 0; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
             .header #accra #jbg .right .clocks {
               width: 30%;
               align-self: center;
@@ -302,13 +332,13 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: nowrap; } }
-            @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+            @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
               .header #accra #jbg .right .clocks .clock-container {
                 justify-content: space-evenly;
                 height: 100%;
                 align-items: center;
                 margin-right: 0; } }
-            @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+            @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
               .header #accra #jbg .right .clocks .clock-container {
                 justify-content: space-evenly;
                 height: 100%;
@@ -344,12 +374,12 @@
                   margin-top: 5%;
                   align-self: center;
                   font-size: 0.7em; } }
-              @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+              @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
                   height: 55%;
                   align-self: flex-end;
                   margin-top: 0; } }
-              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
                 .header #accra #jbg .right .clocks .clock-container h6 {
                   height: 55%;
                   align-self: flex-end;
@@ -373,16 +403,28 @@
         display: inline;
         align-self: flex-end;
         height: auto; } }
-    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .header .dropdown {
+        display: block; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .header .dropdown {
+        display: block; } }
+    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
       .header .dropdown {
         display: none; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
       .header .dropdown {
         display: none; } }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
       .header .dropdown.show {
         overflow-y: visible; } }
     @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+      .header .dropdown.show {
+        overflow-y: visible; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .header .dropdown.show {
+        overflow-y: visible; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
       .header .dropdown.show {
         overflow-y: visible; } }
     @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -401,6 +443,12 @@
           font-size: 1em; }
           .header .dropdown.show .dropdown-menu.show .dropdown-item .nav-link {
             color: #113a6e; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+      .header .dropdown.show .dropdown-menu.show {
+        overflow-y: visible; } }
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      .header .dropdown.show .dropdown-menu.show {
+        overflow-y: visible; } }
     .header .dropdown.nav-item {
       /* iPads (portrait and landscape) ----------- */
       /* kindle fire (portrait and landscape) ----------- */ }
@@ -424,9 +472,29 @@
             background-color: rgba(0, 0, 0, 0);
             color: #ffffff;
             border: none; } }
-      @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (orientation: portrait) {
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+        .header .dropdown.nav-item {
+          display: block;
+          align-self: flex-end;
+          width: 45%;
+          height: auto; }
+          .header .dropdown.nav-item .btn.btn-secondary {
+            background-color: rgba(0, 0, 0, 0);
+            color: #ffffff;
+            border: none; } }
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        .header .dropdown.nav-item {
+          display: block;
+          align-self: flex-end;
+          width: 45%;
+          height: auto; }
+          .header .dropdown.nav-item .btn.btn-secondary {
+            background-color: rgba(0, 0, 0, 0);
+            color: #ffffff;
+            border: none; } }
+      @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
         .header .dropdown.nav-item {
           display: none; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
         .header .dropdown.nav-item {
           display: none; } }
