@@ -122,10 +122,10 @@
           padding: 0; } }
       @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
         .header .logo-container .logo {
-          width: 100px; } }
+          width: 150px; } }
       @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
         .header .logo-container .logo {
-          width: 100px; } }
+          width: 150px; } }
   .header #accra {
     width: 80%;
     z-index: 1000;
@@ -196,7 +196,7 @@
           font-size: 0.8em;
           font-weight: 400;
           height: 100%;
-          z-index: 1000;
+          z-index: 200;
           /* iPads (portrait and landscape) ----------- */
           /* kindle fire (portrait and landscape) ----------- */ }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -291,7 +291,8 @@
               order: 1; } }
           @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
             .header #accra #jbg .right .clocks {
-              width: 30%;
+              width: 35%;
+              height: 100%;
               align-self: center;
               justify-content: flex-end;
               align-items: center;
@@ -299,7 +300,8 @@
               margin-right: 0; } }
           @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
             .header #accra #jbg .right .clocks {
-              width: 30%;
+              width: 35%;
+              height: 100%;
               align-self: center;
               justify-content: flex-end;
               align-items: center;
@@ -389,112 +391,97 @@
                   height: 55%;
                   align-self: flex-end;
                   margin-top: 0; } }
-  .header .dropdown {
-    display: none;
-    /* iPads (portrait and landscape) ----------- */
-    /* kindle fire (portrait and landscape) ----------- */ }
-    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .header .dropdown {
-        display: inline;
-        align-self: flex-end;
-        height: auto; } }
-    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .header .dropdown {
-        display: inline;
-        align-self: flex-end;
-        height: auto; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
-      .header .dropdown {
-        display: block; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
-      .header .dropdown {
-        display: block; } }
-    @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
-      .header .dropdown {
-        display: none; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
-      .header .dropdown {
-        display: none; } }
-    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .header .dropdown.show {
-        overflow-y: visible; } }
-    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .header .dropdown.show {
-        overflow-y: visible; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
-      .header .dropdown.show {
-        overflow-y: visible; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
-      .header .dropdown.show {
-        overflow-y: visible; } }
-    @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-      .header .dropdown.show .dropdown-menu.show {
-        overflow-y: visible; }
-        .header .dropdown.show .dropdown-menu.show .dropdown-item {
-          font-family: "Josefin Sans", sans-serif;
-          font-size: 1em; }
-          .header .dropdown.show .dropdown-menu.show .dropdown-item .nav-link {
-            color: #113a6e; } }
-    @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-      .header .dropdown.show .dropdown-menu.show {
-        overflow-y: visible; }
-        .header .dropdown.show .dropdown-menu.show .dropdown-item {
-          font-family: "Josefin Sans", sans-serif;
-          font-size: 1em; }
-          .header .dropdown.show .dropdown-menu.show .dropdown-item .nav-link {
-            color: #113a6e; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
-      .header .dropdown.show .dropdown-menu.show {
-        overflow-y: visible; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
-      .header .dropdown.show .dropdown-menu.show {
-        overflow-y: visible; } }
-    .header .dropdown.nav-item {
-      /* iPads (portrait and landscape) ----------- */
-      /* kindle fire (portrait and landscape) ----------- */ }
-      @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        .header .dropdown.nav-item {
-          display: block;
-          align-self: flex-end;
-          width: 25%;
-          height: auto; }
-          .header .dropdown.nav-item .btn.btn-secondary {
+        .header #accra #jbg .right .dropdown {
+          display: none;
+          /* iPads (portrait and landscape) ----------- */
+          /* kindle fire (portrait and landscape) ----------- */ }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .header #accra #jbg .right .dropdown {
+              display: inline;
+              align-self: flex-end;
+              height: auto;
+              padding-bottom: 8%; } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .header #accra #jbg .right .dropdown {
+              display: inline;
+              align-self: flex-end;
+              height: auto;
+              padding-bottom: 8%; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+            .header #accra #jbg .right .dropdown {
+              display: inline;
+              align-self: flex-end;
+              height: auto;
+              padding-bottom: 8%; } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            .header #accra #jbg .right .dropdown {
+              display: inline;
+              align-self: flex-end;
+              height: auto;
+              padding-bottom: 8%; } }
+          @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
+            .header #accra #jbg .right .dropdown {
+              display: none; } }
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+            .header #accra #jbg .right .dropdown {
+              display: none; } }
+          .header #accra #jbg .right .dropdown.nav-item .btn.btn-secondary {
             background-color: rgba(0, 0, 0, 0);
-            color: #ffffff;
-            border: none; } }
-      @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .header .dropdown.nav-item {
-          display: block;
-          align-self: flex-end;
-          width: 25%;
-          height: auto; }
-          .header .dropdown.nav-item .btn.btn-secondary {
-            background-color: rgba(0, 0, 0, 0);
-            color: #ffffff;
-            border: none; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
-        .header .dropdown.nav-item {
-          display: block;
-          align-self: flex-end;
-          width: 45%;
-          height: auto; }
-          .header .dropdown.nav-item .btn.btn-secondary {
-            background-color: rgba(0, 0, 0, 0);
-            color: #ffffff;
-            border: none; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
-        .header .dropdown.nav-item {
-          display: block;
-          align-self: flex-end;
-          width: 45%;
-          height: auto; }
-          .header .dropdown.nav-item .btn.btn-secondary {
-            background-color: rgba(0, 0, 0, 0);
-            color: #ffffff;
-            border: none; } }
-      @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
-        .header .dropdown.nav-item {
-          display: none; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
-        .header .dropdown.nav-item {
-          display: none; } }
+            border: none; }
+          @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+            .header #accra #jbg .right .dropdown.nav-item.show {
+              margin-right: 1%;
+              overflow: visible;
+              transform: translate3d(10px 10px, 0); } }
+          @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+            .header #accra #jbg .right .dropdown.nav-item.show {
+              margin-right: 1%;
+              overflow: visible;
+              transform: translate3d(10px 10px, 0); } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+            .header #accra #jbg .right .dropdown.nav-item.show {
+              margin-right: 1%;
+              overflow-y: visible;
+              transform: translate3d(10px 10px, 0); } }
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            .header #accra #jbg .right .dropdown.nav-item.show {
+              margin-right: 1%;
+              overflow-y: visible;
+              transform: translate3d(10px 10px, 0); } }
+          .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show {
+            background-color: #ffffff; }
+            @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+              .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show {
+                transform: translate3d(-125px, 37px, 0px);
+                overflow: visible; } }
+            @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+              .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show {
+                transform: translate3d(-125px, 37px, 0px);
+                overflow: visible; } }
+            @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+              .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show {
+                transform: translate3d(-125px, 37px, 0px);
+                overflow: visible; } }
+            @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+              .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show {
+                transform: translate3d(-125px, 37px, 0px);
+                overflow: visible; } }
+            .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show .dropdown-item {
+              height: 100%;
+              width: 100%; }
+              .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show .dropdown-item .link {
+                font-size: 0.8em;
+                font-family: "Josefin Sans", sans-serif;
+                color: #113a6e; }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
+                  .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show .dropdown-item .link {
+                    font-size: 0.8em;
+                    font-family: "Josefin Sans", sans-serif;
+                    color: #113a6e; } }
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                  .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show .dropdown-item .link {
+                    font-size: 0.8em;
+                    font-family: "Josefin Sans", sans-serif;
+                    color: #113a6e; } }
+                .header #accra #jbg .right .dropdown.nav-item.show .dropdown-menu.show .dropdown-item .link.active {
+                  color: #9b1d1f; }

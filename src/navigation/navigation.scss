@@ -103,7 +103,7 @@
         padding: 0;
       }
       @include respond-to(tablets) {
-        width: 100px;
+        width: 150px;
       }
     }
   }
@@ -159,7 +159,7 @@
           font-size: 0.8em;
           font-weight: 400;
           height: 100%;
-          z-index: 1000;
+          z-index: 200;
           @include respond-to(phone) {
             display: none;
             width: 0;
@@ -229,7 +229,8 @@
             order: 1;
           }
           @include respond-to(tablets) {
-            width: 30%;
+            width: 35%;
+            height: 100%;
             align-self: center;
             justify-content: flex-end;
             align-items: center;
@@ -297,74 +298,106 @@
             }
           }
         }
-      }
-    }
-  }
-  .dropdown {
-    display: none;
-    @include respond-to(phone) {
-      display: inline;
-      align-self: flex-end;
-      height: auto;
-    }
-    @include respond-to(phone-long) {
-      display: block;
-    }
-    @include respond-to(tablets) {
+
+
+
+    .dropdown {
       display: none;
-    }
-    &.show {
       @include respond-to(phone) {
-        overflow-y: visible;
+        display: inline;
+        align-self: flex-end;
+        height: auto;
+        padding-bottom: 8%;
       }
       @include respond-to(phone-long) {
-        overflow-y: visible;
-      }
-
-
-      .dropdown-menu.show {
-        @include respond-to(phone) {
-          overflow-y: visible;
-          .dropdown-item {
-            font-family: $copy-font-family;
-            font-size: 1em;
-            .nav-link {
-              color: $primaryBlue;
-            }
-          }
-        }
-        @include respond-to(phone-long) {
-          overflow-y: visible;
-        }
-
-      }
-    }
-    &.nav-item {
-      @include respond-to(phone) {
-        display: block;
+        display: inline;
         align-self: flex-end;
-        width: 25%;
         height: auto;
-        .btn.btn-secondary {
-          background-color: $transparent;
-          color: $white;
-          border: none;
-        }
-      }
-      @include respond-to(phone-long) {
-        display: block;
-        align-self: flex-end;
-        width: 45%;
-        height: auto;
-        .btn.btn-secondary {
-          background-color: $transparent;
-          color: $white;
-          border: none;
-        }
+        padding-bottom: 8%;
       }
       @include respond-to(tablets) {
         display: none;
       }
+      &.nav-item {
+        // margin-right: 20%;
+        .btn.btn-secondary {
+          background-color: $transparent;
+          border: none;
+        }
+        &.show {
+          @include respond-to(phone) {
+            margin-right: 1%;
+            overflow: visible;
+            transform: translate3d(10px 10px, 0);
+          }
+          @include respond-to(phone-long) {
+            margin-right: 1%;
+            overflow-y: visible;
+            transform: translate3d(10px 10px, 0);
+          }
+
+          .dropdown-menu.show {
+            background-color: $white;
+
+            @include respond-to(phone) {
+              transform: translate3d(-125px, 37px, 0px);
+              overflow: visible;
+            }
+            @include respond-to(phone-long) {
+              transform: translate3d(-125px, 37px, 0px);
+              overflow: visible;
+            }
+            .dropdown-item {
+              height: 100%;
+              width: 100%;
+              // background-color: $greySemiTransparent;
+              .link {
+                font-size: 0.8em;
+                font-family: $copy-font-family;
+                color: $primaryBlue;
+                // @include respond-to(phone) {
+                // }
+                @include respond-to(phone-long) {
+                  font-size: 0.8em;
+                  font-family: $copy-font-family;
+                  color: $primaryBlue;
+                }
+                &.active {
+                  color: $cayorRed;
+                }
+              }
+            }
+          }
+        }
+      }
+      }
     }
   }
+ }
 }
+
+
+    // .dropdown-item {
+    //   @include respond-to(phone) {
+    //     display: block;
+    //     align-self: flex-end;
+    //     width: 25%;
+    //     height: auto;
+    //     .btn.btn-secondary {
+    //       background-color: $transparent;
+    //       color: $white;
+    //       border: none;
+    //     }
+    //   }
+    //   @include respond-to(phone-long) {
+    //     display: block;
+    //     align-self: flex-end;
+    //     width: 45%;
+    //     height: auto;
+    //     .btn.btn-secondary {
+    //       background-color: $transparent;
+    //       color: $white;
+    //       border: none;
+    //     }
+    //   }
+    // }

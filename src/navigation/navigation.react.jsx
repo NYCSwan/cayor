@@ -8,7 +8,6 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
-// import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -111,9 +110,7 @@ class Navigation extends Component {
 
         <div id="accra">
           <div id="jbg">
-            <div
-              className={location.pathname === "/" ? "right homepage" : "right"}
-            >
+            <div className={location.pathname === "/" ? "right homepage" : "right"}>
               <Nav>
                 <NavItem className="linkContainer">
                   <NavLink
@@ -203,25 +200,49 @@ class Navigation extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <NavLink to="/people" className="link people">
+                    <NavLink to={{
+                      pathname: "/people",
+                      state: {
+                        id: "experienced experienced",
+                        transitionKey: "people"
+                      }
+                    }} className="link people">
                       PEOPLE
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/opportunity" className="link opportunity">
+                    <NavLink to={{
+                      pathname: "/opportunity",
+                      state: {
+                        id: "why_cayor experienced_investors",
+                        transitionKey: "opportunity"
+                      }
+                    }} className="link opportunity">
                       OPPORTUNITY
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/approach" className="link approach">
+                    <NavLink to={{
+                      pathname: "/approach",
+                      state: {
+                        id: "cayor_approach cayor_approach",
+                        transitionKey: "approach"
+                      }
+                    }} className="link approach">
                       APPROACH
                     </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/esg" className="link esg">
+                    <NavLink to={{
+                      pathname: "/esg",
+                      state: {
+                        id: "philosophy philosophy",
+                        transitionKey: "esg"
+                      }
+                    }} className="link esg">
                       ESG
                     </NavLink>
                   </DropdownItem>

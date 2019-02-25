@@ -125,20 +125,20 @@
         /* Large screens ----------- */ }
         @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
           .sub_navigation .list .top a {
-            float: right;
+            float: left;
             font-size: 0.8em; } }
         @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
           .sub_navigation .list .top a {
-            float: right;
+            float: left;
             font-size: 0.8em; } }
         @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
           .sub_navigation .list .top a {
             font-size: 0.8em;
-            float: right; } }
+            float: left; } }
         @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
           .sub_navigation .list .top a {
             font-size: 0.8em;
-            float: right; } }
+            float: left; } }
         @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
           .sub_navigation .list .top a {
             font-size: 1em; } }
@@ -226,6 +226,7 @@
             max-height: 50px;
             font-size: 0.7em;
             margin-top: 0;
+            float: left;
             padding-right: 0; } }
         @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
           .sub_navigation .list .sub a {
@@ -233,6 +234,7 @@
             max-height: 50px;
             font-size: 0.7em;
             margin-top: 0;
+            float: left;
             padding-right: 0; } }
         @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
           .sub_navigation .list .sub a {
@@ -240,14 +242,16 @@
             max-height: 70px;
             font-size: 0.7em;
             margin-top: 0;
-            padding-right: 0; } }
+            padding-right: 0;
+            float: left; } }
         @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
           .sub_navigation .list .sub a {
             width: 100%;
             max-height: 70px;
             font-size: 0.7em;
             margin-top: 0;
-            padding-right: 0; } }
+            padding-right: 0;
+            float: left; } }
         @media only screen and (min-device-width: 1440px) and (min-device-height: 900px) {
           .sub_navigation .list .sub a {
             max-height: 100px;
@@ -280,27 +284,27 @@
           /* Large screens ----------- */ }
           @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
             .sub_navigation .list .sub.active a {
-              width: 100%;
+              width: 90%;
               max-height: 50px;
               font-size: 0.7em;
               margin-top: 0;
               padding-left: 0; } }
           @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
             .sub_navigation .list .sub.active a {
-              width: 100%;
+              width: 90%;
               max-height: 50px;
               font-size: 0.7em;
               margin-top: 0;
               padding-left: 0; } }
           @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
             .sub_navigation .list .sub.active a {
-              width: 100%;
+              width: 85%;
               max-height: 70px;
               font-size: 0.7em;
               margin-top: 0; } }
           @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
             .sub_navigation .list .sub.active a {
-              width: 100%;
+              width: 85%;
               max-height: 70px;
               font-size: 0.7em;
               margin-top: 0; } }
