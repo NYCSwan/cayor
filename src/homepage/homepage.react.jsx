@@ -17,7 +17,9 @@ const items = {
     caption:
       "We are a principal investment firm focused on investing in high growth sectors\nin select sub-Saharan African countries",
     header: "Invested In Africa",
-    link: "/approach"
+    link: "/approach",
+    key: "approach no-link",
+
   },
   {
     src: Slide2,
@@ -27,7 +29,9 @@ const items = {
     caption:
       "We are driven and entrepreneurial and\nleverage the team’s combined 30-year track record investing in Africa\nto generate superior risk-adjusted returns for our investor partners.",
     header: `Building New Platforms\nIn Africa's Mid Markets`,
-    link: "/opportunity"
+    link: "/opportunity",
+    key: "cayor no-link",
+
   },
   {
     src: Slide3,
@@ -37,7 +41,8 @@ const items = {
     caption:
       "The product of our experience over time is a consistent, disciplined and value added methodology that has yielded attractive investment returns.",
     header: `Seasoned African Investors\nGenerating Super Returns`,
-    link: "/esg"
+    link: "/esg",
+    key: "philosophy philosophy",
   }
 ]
 };

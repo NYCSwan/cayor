@@ -6,15 +6,15 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import SubNav from "../sub_navigation/sub_navigation.react";
 import TextTableContainer from "../layout/text-table-container.react";
-import RegionDetails from "./TargetRegionDetails.react";
+import RegionDetails from "../approach/TargetRegionDetails.react";
 import Agribusiness from "../media/agriculture.jpg";
 import Manufacturing from "../media/supermarket.jpg";
 import Infrastructure from "../media/infrastructure.jpg";
-import SectorsContainer from "./sectors_container.react";
+import SectorsContainer from "./MobileSectors";
 import FinTech from "../media/fin.jpg";
-import "./approach.css";
+import "../approach/approach.css";
 
-class Approach extends Component {
+class MobileApproach extends Component {
   state = {
     navItems: [
       {
@@ -662,4 +662,4 @@ class Approach extends Component {
   }
 }
 
-export default Approach;
+export default MobileApproach;

@@ -22,9 +22,10 @@ class BgImageSlide extends Component {
     );
   }
 
-  // componentDidMount() {
-  //   this.animating = true;
-  // }
+  componentDidMount() {
+    this.animating = true;
+  }
+
   componentWillUnmount() {
     this.animating = false;
   }
@@ -69,8 +70,19 @@ class BgImageSlide extends Component {
     // console.log('render bg image');
     const { activeIndex } = this.state;
     const { items } = this.props;
-    // debugger;
+
     const slides = items.map(item => {
+      const key = item.key.split(' ');
+      const iKey = key[1];
+      const tKey = key[0];
+      const location = {
+        pathname: item.link,
+        state: {
+          id: item.url,
+          transitionKey: tKey,
+          interiorTransitionKey: iKey
+        }};
+
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -86,7 +98,7 @@ class BgImageSlide extends Component {
             captionText={item.caption}
             captionHeader={item.header}
           />
-          <Link className={`link ${item.name}`} to={item.link} replace>
+        <Link className={`link ${item.name}`} to={location} replace>
             READ MORE
           </Link>
         </CarouselItem>
