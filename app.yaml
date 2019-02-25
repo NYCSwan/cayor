@@ -11,6 +11,6 @@ handlers:
   upload: build/cayor_icon.ico
 - url: /.*
  script: auto
- static_files: build/\1
+ static_files: build/.*
    # upload: build/(.*)
 # [END handlers]
