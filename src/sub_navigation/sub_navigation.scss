@@ -71,13 +71,17 @@
       padding-top: 1vmin;
       @include respond-to(phone) {
         font-size: 0.8em;
-        margin-bottom: 4%;
+        margin-bottom: 1%;
       }
       @include respond-to(phone-long) {
         font-size: 0.8em;
-        margin-bottom: 4%;
+        margin-bottom: 1%;
 
       }
+      @include respond-to(tablets) {
+        font-size: .9em;
+        margin-bottom: 1em;
+      };
       @include respond-to(large-screen) {
         margin-top: 0;
         margin-bottom: 4%;
@@ -119,6 +123,7 @@
         margin-left: -8%;
         width: 100%;
         word-wrap: normal;
+        float: right;
         @include respond-to(phone) {
           margin-left: -5%;
           // width: 90%;
@@ -171,7 +176,7 @@
         text-align: left;
         -moz-text-align-last: left;
         @include respond-to(phone) {
-          width: 100%;
+          width: 90%;
           max-height: 50px;
           font-size: 0.7em;
           margin-top: 0;
@@ -179,7 +184,7 @@
           padding-right: 0;
         }
         @include respond-to(phone-long) {
-          width: 100%;
+          width: 90%;
           max-height: 70px;
           font-size: 0.7em;
           margin-top: 0;
@@ -187,14 +192,15 @@
           float: left;
         }
         @include respond-to(large-screen) {
-          max-height: 100px;
+          max-height: 90px;
           align-self: flex-start;
           margin-top: 0;
         }
       }
       &.active {
         color: $cayorRed;
-        margin-left: -3%;
+        margin-left: -5%;
+        float: right;
         @include respond-to(phone) {
           margin-left: 0;
         };
@@ -207,7 +213,7 @@
           margin-top: 5%;
           padding: 4px 10px;
           list-style: none;
-          width: 100%;
+          width: 90%;
           text-align: left;
           -moz-text-align-last: left;
           @include respond-to(phone) {
@@ -225,7 +231,7 @@
 
           }
           @include respond-to(large-screen) {
-            max-height: 100px;
+            max-height: 90px;
             // align-self: flex-start;
             margin-top: 0;
           }
@@ -238,11 +244,13 @@
           padding-bottom: 2px;
           height: 15px;
           color: $cayorRed;
+          margin-top: 7%;
           @include respond-to(phone) {
             height: 10px;
             height: 10px;
             margin-left: 0;
             margin-right: 0;
+            
           }
           @include respond-to(phone-long) {
             width: 10px;
