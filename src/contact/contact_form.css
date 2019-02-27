@@ -34,7 +34,7 @@
       display: flex;
       justify-content: space-around;
       flex-direction: column; } }
-  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
     .popover {
       max-width: 90%;
       max-height: 80%;
@@ -70,7 +70,7 @@
       @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
         .popover.show.contactForm.accra, .popover.show.contactForm.jbg {
           margin-right: 0; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
         .popover.show.contactForm.accra, .popover.show.contactForm.jbg {
           margin-right: 0; } }
       @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
@@ -98,16 +98,16 @@
           .popover.show.contactForm.accra.bs-popover-bottom, .popover.show.contactForm.accra.bs-popover-top, .popover.show.contactForm.jbg.bs-popover-bottom, .popover.show.contactForm.jbg.bs-popover-top {
             height: 60%;
             transform: translate3d(31px, 60px, 0px); } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
           .popover.show.contactForm.accra.bs-popover-bottom, .popover.show.contactForm.accra.bs-popover-top, .popover.show.contactForm.jbg.bs-popover-bottom, .popover.show.contactForm.jbg.bs-popover-top {
             height: 60%;
             transform: translate3d(31px, 60px, 0px); } }
         @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
           .popover.show.contactForm.accra.bs-popover-bottom, .popover.show.contactForm.accra.bs-popover-top, .popover.show.contactForm.jbg.bs-popover-bottom, .popover.show.contactForm.jbg.bs-popover-top {
-            height: 60%; } }
+            height: 100%; } }
         @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .popover.show.contactForm.accra.bs-popover-bottom, .popover.show.contactForm.accra.bs-popover-top, .popover.show.contactForm.jbg.bs-popover-bottom, .popover.show.contactForm.jbg.bs-popover-top {
-            height: 60%; } }
+            height: 100%; } }
         .popover.show.contactForm.accra.bs-popover-bottom .popover-inner, .popover.show.contactForm.accra.bs-popover-top .popover-inner, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner, .popover.show.contactForm.jbg.bs-popover-top .popover-inner {
           width: 100%;
           height: 100%; }
@@ -140,7 +140,7 @@
             @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
               .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body {
                 padding: 0; } }
-            @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+            @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
               .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body {
                 padding: 0; } }
             @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
@@ -165,7 +165,7 @@
                 .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody {
                   padding-left: 1%;
                   font-size: 1em; } }
-              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+              @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
                 .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody {
                   padding-left: 1%;
                   font-size: 1em; } }
@@ -191,25 +191,25 @@
                 @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody h3 {
                     font-size: 1em;
-                    margin-top: 50%;
+                    margin-top: 35%;
                     width: 100%;
                     text-align: center; } }
                 @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody h3 {
                     font-size: 1em;
-                    margin-top: 50%;
+                    margin-top: 35%;
                     width: 100%;
                     text-align: center; } }
                 @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody h3 {
                     font-size: 1em;
-                    margin-top: 50%;
+                    margin-top: 35%;
                     width: 100%;
                     text-align: center; } }
-                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody h3, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody h3 {
                     font-size: 1em;
-                    margin-top: 50%;
+                    margin-top: 35%;
                     width: 100%;
                     text-align: center; } }
                 @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
@@ -255,7 +255,7 @@
                     position: absolute;
                     z-index: -1;
                     min-width: 150px; } }
-                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody #map {
                     width: 50%;
                     left: 25%;
@@ -265,14 +265,14 @@
                     min-width: 150px; } }
                 @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody #map {
-                    width: 50%;
+                    width: 45%;
                     left: 45%;
                     top: 20%;
                     position: absolute;
                     z-index: -1; } }
                 @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody #map, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody #map {
-                    width: 50%;
+                    width: 45%;
                     left: 45%;
                     top: 20%;
                     position: absolute;
@@ -288,19 +288,19 @@
                 /* kindle fire (portrait and landscape) ----------- */ }
                 @media only screen and (min-device-height: 300px) and (max-device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address {
-                    width: 80%;
+                    width: 90%;
                     margin-left: 5%; } }
                 @media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address {
-                    width: 80%;
+                    width: 90%;
                     margin-left: 5%; } }
                 @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address {
-                    width: 80%;
+                    width: 90%;
                     margin-left: 5%; } }
-                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address {
-                    width: 80%;
+                    width: 90%;
                     margin-left: 5%; } }
                 @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
                   .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address {
@@ -331,7 +331,7 @@
                     .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address h4, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address h4 {
                       font-size: 0.9em;
                       line-height: 1.2em; } }
-                  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
                     .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address h4, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address h4 {
                       font-size: 0.9em;
                       line-height: 1.2em; } }
@@ -358,7 +358,7 @@
                     @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
                       .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4.right, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address h4.right, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4.right, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address h4.right {
                         width: 90%; } }
-                    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+                    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
                       .popover.show.contactForm.accra.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4.right, .popover.show.contactForm.accra.bs-popover-top .popover-inner .popover-body.contactBody .address h4.right, .popover.show.contactForm.jbg.bs-popover-bottom .popover-inner .popover-body.contactBody .address h4.right, .popover.show.contactForm.jbg.bs-popover-top .popover-inner .popover-body.contactBody .address h4.right {
                         width: 90%; } }
                     @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {

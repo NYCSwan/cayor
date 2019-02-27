@@ -21,7 +21,7 @@
     .sub_navigation {
       width: 30%;
       margin-left: 0; } }
-  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
     .sub_navigation {
       width: 30%;
       margin-left: 0; } }
@@ -66,7 +66,7 @@
       .sub_navigation .list {
         width: 90%;
         font-size: 0.8em; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
       .sub_navigation .list {
         width: 90%;
         font-size: 0.8em; } }
@@ -108,7 +108,7 @@
         .sub_navigation .list .top {
           font-size: 0.8em;
           margin-bottom: 1%; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
         .sub_navigation .list .top {
           font-size: 0.8em;
           margin-bottom: 1%; } }
@@ -145,7 +145,7 @@
           .sub_navigation .list .top a {
             font-size: 0.8em;
             float: left; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
           .sub_navigation .list .top a {
             font-size: 0.8em;
             float: left; } }
@@ -172,7 +172,7 @@
           .sub_navigation .list .top.active {
             width: 90%;
             margin-left: -2px; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
           .sub_navigation .list .top.active {
             width: 90%;
             margin-left: -2px; } }
@@ -203,7 +203,7 @@
             .sub_navigation .list .top.active .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
               width: 10px;
               margin-left: 0; } }
-          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
             .sub_navigation .list .top.active .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
               width: 10px;
               margin-left: 0; } }
@@ -255,7 +255,7 @@
             margin-top: 0;
             padding-right: 0;
             float: left; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
           .sub_navigation .list .sub a {
             width: 90%;
             max-height: 70px;
@@ -281,7 +281,7 @@
         @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
           .sub_navigation .list .sub.active {
             margin-left: 0; } }
-        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
           .sub_navigation .list .sub.active {
             margin-left: 0; } }
         .sub_navigation .list .sub.active a {
@@ -314,7 +314,7 @@
               max-height: 70px;
               font-size: 0.7em;
               margin-top: 0; } }
-          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
             .sub_navigation .list .sub.active a {
               width: 85%;
               max-height: 70px;
@@ -350,7 +350,7 @@
             .sub_navigation .list .sub.active .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
               width: 10px;
               margin-left: 0; } }
-          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+          @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
             .sub_navigation .list .sub.active .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
               width: 10px;
               margin-left: 0; } }

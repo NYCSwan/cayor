@@ -35,7 +35,7 @@
       overflow: scroll;
       width: 95%;
       height: 90%; } }
-  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
     .text-table-container {
       overflow: scroll;
       width: 95%;
@@ -79,7 +79,7 @@
       .text-table-container .header.left {
         font-size: 1.5em;
         width: 60%; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
       .text-table-container .header.left {
         font-size: 1.5em;
         width: 60%; } }

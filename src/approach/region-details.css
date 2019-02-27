@@ -49,7 +49,7 @@
       background-position: unset;
       background-position-y: 60%;
       background-position-x: 45%; } }
-  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+  @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
     .regionDetails {
       background-size: auto 40%;
       justify-content: center;
@@ -101,7 +101,7 @@
         font-size: 1em;
         letter-spacing: normal;
         padding: 2%; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
       .regionDetails .header {
         font-size: 1em;
         letter-spacing: normal;
@@ -146,7 +146,7 @@
         top: 15%;
         left: 0%;
         font-size: 0.8em; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
       .regionDetails .west-africa {
         top: 15%;
         left: 0%;
@@ -197,7 +197,7 @@
         top: 28%;
         right: 0%;
         font-size: 0.8em; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
       .regionDetails .east-africa {
         top: 28%;
         right: 0%;
@@ -247,7 +247,7 @@
         bottom: 20%;
         left: 50%;
         font-size: 0.8em; } }
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
       .regionDetails .south-africa {
         bottom: 20%;
         left: 50%;
@@ -279,7 +279,7 @@
       @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: portrait) {
         .regionDetails .south-africa .text-table .text {
           font-size: 0.8em; } }
-      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+      @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
         .regionDetails .south-africa .text-table .text {
           font-size: 0.8em; } }
       @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {

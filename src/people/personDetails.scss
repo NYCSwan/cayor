@@ -38,12 +38,12 @@
       font-family: $headline-font-family;
       width: 40%;
       @include respond-to(phone) {
-        height: 50%;
+        height: auto;
         width: 100%;
         margin-bottom: 10px;
       }
       @include respond-to(phone-long) {
-        height: 50%;
+        height: auto;
         width: 100%;
         margin-bottom: 10px;
       }
@@ -56,11 +56,11 @@
         border-bottom: $lightGrey 1px solid;
         height: 90%;
         @include respond-to(phone) {
-          // height: 50%;
+          height: auto;
           margin-left: 5%;
         }
         @include respond-to(phone-long) {
-          // height: 50%;
+          height: inherit;
           margin-left: 5%;
         }
         @include respond-to(tablets) {

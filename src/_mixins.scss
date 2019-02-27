@@ -6,7 +6,7 @@
       @content;
     }
 
-    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 370px) and (max-device-height: 830px) and (max-device-width: 830px) and (orientation: landscape) {
       @content;
     }
   } @else if $media == tablets {
