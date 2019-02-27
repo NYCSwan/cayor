@@ -9,7 +9,8 @@ import "./esg.css";
 class Esg extends Component {
   static defaultProps = {
     id: "philosophy philosophy",
-    transitionKey: "esg"
+    transitionKey: "esg",
+    interiorTransitionKey: "philosophy"
   };
 
   state = {

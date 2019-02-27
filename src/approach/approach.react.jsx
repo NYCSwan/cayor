@@ -17,7 +17,8 @@ import "./approach.css";
 class Approach extends Component {
   static defaultProps = {
     id: "cayor_approach cayor_approach",
-    transitionKey: "approach"
+    transitionKey: "approach",
+    interiorTransitionKey: "cayor_approach"
   };
 
   state = {

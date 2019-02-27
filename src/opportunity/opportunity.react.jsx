@@ -12,9 +12,10 @@ import "./opportunity.css";
 class Opportunities extends Component {
   static defaultProps = {
     id: "why_cayor experienced_investors",
-    transitionKey: "opportunity"
+    transitionKey: "opportunity",
+    interiorTransitionKey: "experienced_investors"
   };
-  
+
   state = {
     currentDetails: "why_cayor experienced_investors",
     navItems: [
