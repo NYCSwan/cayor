@@ -23,7 +23,7 @@ class BgImageSlide extends Component {
   }
 
   componentDidMount() {
-    this.animating = true;
+    // this.animating = true;
   }
 
   componentWillUnmount() {

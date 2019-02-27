@@ -46,7 +46,7 @@
       width: 95%;
       overflow: scroll;
       height: 85%; } }
-  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+  @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
     .text-table-container {
       margin-top: 8%;
       width: 95%;
@@ -87,7 +87,7 @@
       .text-table-container .header.left {
         font-size: 2rem;
         width: 50%; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .text-table-container .header.left {
         font-size: 2rem;
         width: 50%; } }

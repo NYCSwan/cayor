@@ -76,20 +76,22 @@
   }
 
   .logo-container {
-    width: 200px;
+    width: 20%;
     display: flex;
-    margin-left: 0;
+    margin-left: 5%;
     z-index: 100;
     @include respond-to(phone) {
-      width: 120px;
-      padding-left: 3%;
+      width: 30%;
+      // padding-left: 3%;
+      align-content: flex-start;
     }
-    @include respond-to(phone) {
-      width: 120px;
-      padding-left: 3%;
+    @include respond-to(phone-long) {
+      width: 30%;
+      // padding-left: 3%;
+      align-content: flex-start;
     }
     @include respond-to(tablets) {
-      width: 150px;
+      // width: 175px;
       padding-left: 5%;
     }
 
@@ -101,6 +103,12 @@
       @include respond-to(phone) {
         width: 100px;
         padding: 0;
+        // align-self: flex-start;
+      }
+      @include respond-to(phone-long) {
+        width: 100px;
+        padding: 0;
+        // align-self: flex-start;
       }
       @include respond-to(tablets) {
         width: 150px;
@@ -121,8 +129,8 @@
       display: flex;
       flex-flow: row wrap;
       width: 100%;
-      align-content: stretch;
-      align-items: stretch;
+      align-content: space-between;
+      align-items: center;
       height: 100%;
       .right {
         display: flex;
@@ -215,21 +223,23 @@
           align-content: center;
           margin-right: 4%;
           @include respond-to(phone) {
-            width: 55%;
+            width: 60%;
             height: 45%;
             align-self: flex-end;
+            justify-content: space-between;
             margin-right: 0;
             order: 1;
           }
           @include respond-to(phone-long) {
-            width: 55%;
+            width: 70%;
             height: 45%;
+            justify-content: space-between;
             align-self: flex-end;
             margin-right: 0;
             order: 1;
           }
           @include respond-to(tablets) {
-            width: 35%;
+            width: 30%;
             height: 100%;
             align-self: center;
             justify-content: flex-end;

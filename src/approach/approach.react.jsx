@@ -15,6 +15,11 @@ import FinTech from "../media/fin.jpg";
 import "./approach.css";
 
 class Approach extends Component {
+  static defaultProps = {
+    id: "cayor_approach cayor_approach",
+    transitionKey: "approach"
+  };
+
   state = {
     navItems: [
       {

@@ -45,7 +45,7 @@
     .TeamDetails {
       height: 85%;
       overflow: visible; } }
-  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+  @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
     .TeamDetails {
       height: 85%;
       overflow: visible; } }
@@ -92,7 +92,7 @@
           .TeamDetails .main .container .row {
             width: 95%;
             height: 25%; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .TeamDetails .main .container .row {
             width: 95%;
             height: 25%; } }
@@ -117,7 +117,7 @@
           @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
             .TeamDetails .main .container .row.offset {
               height: 36%; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
             .TeamDetails .main .container .row.offset {
               height: 36%; } }
           .TeamDetails .main .container .row.offset .colorContainer:first {
@@ -145,7 +145,7 @@
             @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
               .TeamDetails .main .container .row.offset .colorContainer.Our.Team {
                 background-color: #9b1d1f; } }
-            @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+            @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
               .TeamDetails .main .container .row.offset .colorContainer.Our.Team {
                 background-color: #9b1d1f; } }
             .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
@@ -177,7 +177,7 @@
                 .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
                   color: #ffffff;
                   font-size: 2em; } }
-              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+              @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
                 .TeamDetails .main .container .row.offset .colorContainer.Our.Team .header {
                   color: #ffffff;
                   font-size: 2em; } }
@@ -199,7 +199,7 @@
           @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
             .TeamDetails .main .container .row .blue3 {
               background-color: #484848; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
             .TeamDetails .main .container .row .blue3 {
               background-color: #484848; } }
   .TeamDetails.smoosh {

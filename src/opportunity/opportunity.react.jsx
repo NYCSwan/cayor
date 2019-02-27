@@ -10,6 +10,11 @@ import WhyCayor from "./whyCayor.react";
 import "./opportunity.css";
 
 class Opportunities extends Component {
+  static defaultProps = {
+    id: "why_cayor experienced_investors",
+    transitionKey: "opportunity"
+  };
+  
   state = {
     currentDetails: "why_cayor experienced_investors",
     navItems: [

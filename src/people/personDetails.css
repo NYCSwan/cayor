@@ -47,7 +47,7 @@
         margin-top: 5%;
         overflow: scroll;
         justify-content: flex-start; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .fade.show .personDetails {
         padding: 0;
         margin-top: 5%;
@@ -84,7 +84,7 @@
           height: 35%;
           width: 100%;
           margin-bottom: 20px; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .fade.show .personDetails .right {
           height: 35%;
           width: 100%;
@@ -110,7 +110,7 @@
           .fade.show .personDetails .right .info {
             height: 20%;
             margin-left: 5%; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .fade.show .personDetails .right .info {
             height: 20%;
             margin-left: 5%; } }
@@ -134,7 +134,7 @@
           @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
             .fade.show .personDetails .right .info .portrait {
               width: 300px; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
             .fade.show .personDetails .right .info .portrait {
               width: 300px; } }
         .fade.show .personDetails .right .info .name {
@@ -164,7 +164,7 @@
             .fade.show .personDetails .right .info .name {
               font-size: 1em;
               line-height: 1.5em; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
             .fade.show .personDetails .right .info .name {
               font-size: 1em;
               line-height: 1.5em; } }
@@ -234,7 +234,7 @@
             height: 30px;
             text-align: left;
             padding-left: 20px; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .fade.show .personDetails .right .button {
             margin-bottom: 3%;
             width: 60px;
@@ -277,7 +277,7 @@
           overflow: scroll;
           margin-left: 3%;
           height: 50%; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .fade.show .personDetails .bioDetails {
           width: 100%;
           overflow: scroll;
@@ -304,7 +304,7 @@
         @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
           .fade.show .personDetails .bioDetails p {
             font-size: 0.7em; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .fade.show .personDetails .bioDetails p {
             font-size: 0.7em; } }
         .fade.show .personDetails .bioDetails p:first-of-type {
@@ -348,6 +348,6 @@
         @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
           .fade.show .personDetails .bioDetails h5 {
             font-size: 0.8em; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .fade.show .personDetails .bioDetails h5 {
             font-size: 0.8em; } }

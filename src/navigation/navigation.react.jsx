@@ -118,12 +118,11 @@ class Navigation extends Component {
                       pathname: "/people",
                       state: {
                         id: "experienced experienced",
-                        transitionKey: "people"
+                        transitionKey: "people",
                       }
                     }}
                     activeClassName={"active"}
                     className="link people"
-                    // state: { id: navItem.url, transitionKey: navItem.url.split()[0] }
                   >
                     PEOPLE
                   </NavLink>

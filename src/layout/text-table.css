@@ -28,7 +28,7 @@
       width: 95%;
       padding-left: 5%;
       overflow: visible; } }
-  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+  @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
     .text-table {
       width: 95%;
       padding-left: 5%;
@@ -121,7 +121,7 @@
       @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
         .text-table.bullet ul .text {
           padding: 1% 0; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .text-table.bullet ul .text {
           padding: 1% 0; } }
   .text-table.other {
@@ -155,7 +155,7 @@
         .text-table.other .headerContainer h4 {
           width: 100%;
           font-size: 1em; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .text-table.other .headerContainer h4 {
           width: 100%;
           font-size: 1em; } }
@@ -171,7 +171,7 @@
       @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
         .text-table.other ul {
           overflow: visible; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .text-table.other ul {
           overflow: visible; } }
       .text-table.other ul .subHeader {
@@ -189,7 +189,7 @@
         @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
           .text-table.other ul .subHeader {
             font-size: .8em; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .text-table.other ul .subHeader {
             font-size: .8em; } }
       .text-table.other ul .list-group-item {
@@ -200,7 +200,7 @@
         @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
           .text-table.other ul .list-group-item {
             padding: 1% 0; } }
-        @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+        @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
           .text-table.other ul .list-group-item {
             padding: 1% 0; } }
     .text-table.other .approach {
@@ -294,7 +294,7 @@
         font-size: .5em;
         margin-left: 3%;
         width: 100%; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .text-table .text {
         font-size: .5em;
         margin-left: 3%;
@@ -318,7 +318,7 @@
       @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
         .text-table .text.bullet {
           padding: 1% 0; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .text-table .text.bullet {
           padding: 1% 0; } }
   .text-table .headerContainer h4 {
@@ -359,7 +359,7 @@
       .text-table .headerContainer h4 {
         width: 100%;
         padding-bottom: 5%; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .text-table .headerContainer h4 {
         width: 100%;
         padding-bottom: 5%; } }
@@ -373,7 +373,7 @@
         padding: 1% 0;
         font-size: 0.8em;
         line-height: 1.3em; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .text-table .text {
         padding: 1% 0;
         font-size: 0.8em;
@@ -406,7 +406,7 @@
         .text-table .text.bullet {
           margin-left: 4%;
           font-size: 0.8em; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .text-table .text.bullet {
           margin-left: 4%;
           font-size: 0.8em; } }
@@ -435,7 +435,7 @@
       .text-table .subHeader {
         margin-bottom: 2%;
         font-size: 1em; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .text-table .subHeader {
         margin-bottom: 2%;
         font-size: 1em; } }
@@ -464,7 +464,7 @@
       .text-table .subHeader {
         padding: 1% 0;
         margin-left: 5%; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .text-table .text,
       .text-table .subHeader {
         padding: 1% 0;

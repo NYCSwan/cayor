@@ -7,6 +7,11 @@ import SubNav from "../sub_navigation/sub_navigation.react";
 import "./esg.css";
 
 class Esg extends Component {
+  static defaultProps = {
+    id: "philosophy philosophy",
+    transitionKey: "esg"
+  };
+
   state = {
     currentDetails: "philosophy philosophy",
     navItems: [

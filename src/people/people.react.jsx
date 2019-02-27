@@ -12,6 +12,12 @@ import Kofi from "../media/KDomfeh.Portraitfull.jpg";
 import "./people.css";
 
 class People extends Component {
+  static defaultProps = {
+    id: "experienced experienced",
+    transitionKey: "people",
+    interiorTransitionKey: "experienced"
+  };
+
   state = {
     currentDetails: "experienced",
     navItems: [
@@ -190,6 +196,7 @@ class People extends Component {
         currentDetails: subNavTopic
       });
     }
+
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -203,6 +210,10 @@ class People extends Component {
   handleBioClick = () => {
     console.log('handleBioClick');
     this.setState({ closeDetails: false });
+    this.props.history.push('/people/team_bios', {
+      id: "team_bios team_bios",
+      transitionKey: "people",
+      interiorTransitionKey: "team_bios"})
   };
 
   render() {

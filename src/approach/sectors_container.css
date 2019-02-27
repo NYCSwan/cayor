@@ -34,7 +34,7 @@
   @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
     .SectorsContainer {
       height: 88%; } }
-  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+  @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
     .SectorsContainer {
       height: 88%; } }
   .SectorsContainer .row {
@@ -62,7 +62,7 @@
       .SectorsContainer .row {
         height: 33.33%;
         width: 100%; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .SectorsContainer .row {
         height: 33.33%;
         width: 100%; } }
@@ -128,7 +128,7 @@
                   .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
                     line-height: 1.5em;
                     font-size: 1.2em; } }
-                @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+                @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
                   .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay .card-body .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay .card-body .card-title {
                     line-height: 1.5em;
                     font-size: 1.2em; } }
@@ -165,7 +165,7 @@
                 .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
                   line-height: 1.7em;
                   font-size: 1em; } }
-              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+              @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
                 .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .card-title, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .card-title {
                   line-height: 1.7em;
                   font-size: 1em; } }
@@ -196,7 +196,7 @@
               @media only screen and (max-device-height: 1380px) and (min-device-height: 760px) and (min-device-width: 500px) and (orientation: portrait) {
                 .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
                   height: 90%; } }
-              @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+              @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
                 .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group {
                   height: 90%; } }
               .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
@@ -224,7 +224,7 @@
                   .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
                     line-height: 1.2em;
                     font-size: 1em; } }
-                @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+                @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
                   .SectorsContainer .row .sector.col-4 .card .text.card-img-overlay:hover .list-group .text, .SectorsContainer .row .sector.col-6 .card .text.card-img-overlay:hover .list-group .text {
                     line-height: 1.2em;
                     font-size: 1em; } }

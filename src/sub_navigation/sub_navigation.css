@@ -29,7 +29,7 @@
     .sub_navigation {
       margin-left: 0;
       width: 30%; } }
-  @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+  @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
     .sub_navigation {
       margin-left: 0;
       width: 30%; } }
@@ -74,7 +74,7 @@
       .sub_navigation .list {
         margin-top: 10%;
         text-align: fit-content; } }
-    @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
       .sub_navigation .list {
         margin-top: 10%;
         text-align: fit-content; } }
@@ -116,7 +116,7 @@
         .sub_navigation .list .top {
           font-size: .9em;
           margin-bottom: 1em; } }
-      @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+      @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
         .sub_navigation .list .top {
           font-size: .9em;
           margin-bottom: 1em; } }
@@ -212,7 +212,7 @@
               margin-right: 10px;
               margin-left: 10px;
               width: 15px; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
             .sub_navigation .list .top.active .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
               margin-right: 10px;
               margin-left: 10px;
@@ -359,7 +359,7 @@
               margin-right: 10px;
               margin-left: 10px;
               width: 15px; } }
-          @media only screen and (max-device-width: 1380px) and (min-device-width: 760px) and (min-device-height: 500px) and (orientation: landscape) {
+          @media only screen and (max-device-width: 1380px) and (min-device-width: 1060px) and (min-device-height: 700px) and (orientation: landscape) {
             .sub_navigation .list .sub.active .svg-inline--fa.fa-arrow-right.fa-w-14.fa-pull-left.active {
               margin-right: 10px;
               margin-left: 10px;
