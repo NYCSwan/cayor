@@ -22,9 +22,9 @@ class BgImageSlide extends Component {
     );
   }
 
-  componentDidMount() {
-    // this.animating = true;
-  }
+  // componentDidMount() {
+  //   this.animating = true;
+  // }
 
   componentWillUnmount() {
     this.animating = false;
@@ -89,18 +89,18 @@ class BgImageSlide extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img
-            src={item.src}
-            alt={item.altText}
-            className={`backgroundImage ${item.name}`}
-          />
           <CarouselCaption
             captionText={item.caption}
             captionHeader={item.header}
           />
-        <Link className={`link ${item.name}`} to={location} replace>
+          <Link className={`link ${item.name}`} to={location} replace>
             READ MORE
           </Link>
+          <img
+            src={item.src}
+            alt={item.altText}
+            className={`backgroundImage ${item.name}`}
+            />
         </CarouselItem>
       );
     });
