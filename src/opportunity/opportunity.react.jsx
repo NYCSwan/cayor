@@ -10,12 +10,6 @@ import WhyCayor from "./whyCayor.react";
 import "./opportunity.css";
 
 class Opportunities extends Component {
-  static defaultProps = {
-    id: "why_cayor experienced_investors",
-    transitionKey: "opportunity",
-    interiorTransitionKey: "experienced_investors"
-  };
-
   state = {
     currentDetails: "why_cayor experienced_investors",
     navItems: [
@@ -245,7 +239,7 @@ class Opportunities extends Component {
         <SubNav navItems={navItems} match={match} location={location} smoosh={smoosh} />
         <TransitionGroup className="slide">
           <CSSTransition
-            key={location.state.interiorTransitionKey}
+            key={location.state ? location.state.interiorTransitionKey : 'experienced_investors'}
             in={fadeIn}
             timeout={1350}
             classNames="slide"

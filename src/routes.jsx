@@ -28,9 +28,11 @@ class Routes extends Component {
       width,
       handleClose,
       deviceIdx,
-      smoosh
+      smoosh,
+      location
     } = this.props,
     timeout = { enter: 1200, exit: 1000 };
+    const defaultLocation = location.pathname.slice(1).split('/')[0];
     // debugger;
     return (
       <Route
@@ -42,7 +44,7 @@ class Routes extends Component {
             <CSSTransition
               classNames="slide"
               timeout={timeout}
-              key={location.state ? location.state.transitionKey : location.key}
+              key={location.state ? location.state.transitionKey : defaultLocation}
               in={true}
               mountOnEnter
               unmountOnExit

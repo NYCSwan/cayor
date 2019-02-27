@@ -119,6 +119,7 @@ class Navigation extends Component {
                       state: {
                         id: "experienced experienced",
                         transitionKey: "people",
+                        interiorTransitionKey: 'experienced'
                       }
                     }}
                     activeClassName={"active"}
@@ -133,7 +134,8 @@ class Navigation extends Component {
                       pathname: "/opportunity",
                       state: {
                         id: "why_cayor experienced_investors",
-                        transitionKey: "opportunity"
+                        transitionKey: "opportunity",
+                        interiorTransitionKey: "experienced_investors"
                       }
                     }}
                     activeClassName={"active"}
@@ -148,7 +150,8 @@ class Navigation extends Component {
                       pathname: "/approach",
                       state: {
                         id: "cayor_approach cayor_approach",
-                        transitionKey: "approach"
+                        transitionKey: "approach",
+                        interiorTransitionKey: 'cayor_approach'
                       }
                     }}
                     activeClassName={"active"}
@@ -163,7 +166,8 @@ class Navigation extends Component {
                       pathname: "/esg",
                       state: {
                         id: "philosophy philosophy",
-                        transitionKey: "esg"
+                        transitionKey: "esg",
+                        interiorTransitionKey: 'philosophy'
                       }
                     }}
                     activeClassName={"active"}
@@ -203,7 +207,8 @@ class Navigation extends Component {
                       pathname: "/people",
                       state: {
                         id: "experienced experienced",
-                        transitionKey: "people"
+                        transitionKey: "people",
+                        interiorTransitionKey: "experienced"
                       }
                     }} className="link people">
                       PEOPLE
@@ -215,7 +220,9 @@ class Navigation extends Component {
                       pathname: "/opportunity",
                       state: {
                         id: "why_cayor experienced_investors",
-                        transitionKey: "opportunity"
+                        transitionKey: "opportunity",
+                        interiorTransitionKey: "experienced_investors"
+
                       }
                     }} className="link opportunity">
                       OPPORTUNITY
@@ -227,7 +234,9 @@ class Navigation extends Component {
                       pathname: "/approach",
                       state: {
                         id: "cayor_approach cayor_approach",
-                        transitionKey: "approach"
+                        transitionKey: "approach",
+                        interiorTransitionKey: "cayor_approach"
+
                       }
                     }} className="link approach">
                       APPROACH
@@ -239,7 +248,8 @@ class Navigation extends Component {
                       pathname: "/esg",
                       state: {
                         id: "philosophy philosophy",
-                        transitionKey: "esg"
+                        transitionKey: "esg",
+                        interiorTransitionKey: 'philosophy'
                       }
                     }} className="link esg">
                       ESG

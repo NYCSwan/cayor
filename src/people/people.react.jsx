@@ -12,12 +12,6 @@ import Kofi from "../media/KDomfeh.Portraitfull.jpg";
 import "./people.css";
 
 class People extends Component {
-  static defaultProps = {
-    id: "experienced experienced",
-    transitionKey: "people",
-    interiorTransitionKey: "experienced"
-  };
-
   state = {
     currentDetails: "experienced",
     navItems: [
@@ -241,7 +235,7 @@ class People extends Component {
           <CSSTransition
             in={fadeIn}
             timeout={1350}
-            key={location.state.interiorTransitionKey}
+            key={location.state ? location.state.interiorTransitionKey : 'experienced'}
             classNames="slide"
             mountOnEnter
             unmountOnExit
