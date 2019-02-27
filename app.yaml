@@ -2,15 +2,22 @@ runtime: nodejs8
 
 # [START handlers]
 handlers:
- - url: /
- script: auto
- static_files: build/index.html
- upload: build/index.html
-- url: /favicon\.ico
- static_files: build/cayor_icon.ico
- upload: build/cayor_icon.ico
+- url: /static/js/(.*)
+  static_files: build/static/js/\1
+  upload: build/static/js/(.*)
+- url: /static/css/(.*)
+  static_files: build/static/css/\1
+  upload: build/static/css/(.*)
+- url: /static/media/(.*)
+  static_files: build/static/media/\1
+  upload: build/static/media/(.*)
+- url: /(.*\.(json|ico))$
+  static_files: build/\1
+  upload: build/.*\.(json|ico)$
+- url: /
+  static_files: build/index.html
+  upload: build/index.html
 - url: /.*
- script: auto
- static_files: build/.*
-   # upload: build/(.*)
+  static_files: build/index.html
+  upload: build/index.html
 # [END handlers]
