@@ -72,17 +72,6 @@ class BgImageSlide extends Component {
     const { items } = this.props;
 
     const slides = items.map(item => {
-      const key = item.key.split(' ');
-      const iKey = key[1];
-      const tKey = key[0];
-      const location = {
-        pathname: item.link,
-        state: {
-          id: item.url,
-          transitionKey: tKey,
-          interiorTransitionKey: iKey
-        }};
-
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -93,7 +82,14 @@ class BgImageSlide extends Component {
             captionText={item.caption}
             captionHeader={item.header}
           />
-          <Link className={`link ${item.name}`} to={location} replace>
+          <Link className={`link ${item.name}`} to={{
+            pathname: "/approach",
+            state: {
+              id: "cayor_approach cayor_approach",
+              transitionKey: "approach no-link",
+              interiorTransitionKey: "cayor_approach"
+            }
+          }}>
             READ MORE
           </Link>
           <img

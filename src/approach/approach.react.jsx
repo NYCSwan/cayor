@@ -518,11 +518,11 @@ class Approach extends Component {
       return;
     } else {
       const target = location.state.id,
-        currentNavItem = pickBy(navItems, item => {
-          return target === item.url;
-        }),
-        index = Number(findKey(currentNavItem)),
-        nextDetails = currentNavItem[index].url;
+        currentNavItem = pickBy(navItems, item => (
+          target === item.url));
+        debugger
+        const index = Number(findKey(currentNavItem));
+        const nextDetails = currentNavItem[index].url;
 
       this.setState({
         currentDetails: nextDetails
