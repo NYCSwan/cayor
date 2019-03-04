@@ -4,7 +4,7 @@ import "./homepage.css";
 // import Navigation from "../navigation/navigation.react";
 import Slide1 from "../media/slide1Cropped.jpg";
 import Slide2 from "../media/anastasiaCropped.jpg";
-import Slide3 from "../media/slide_3.jpg";
+import Slide3 from "../media/slide_3-og.jpg";
 
 
 const items = {

@@ -199,8 +199,9 @@
       }
       &.active {
         color: $cayorRed;
-        margin-left: -5%;
+        margin-left: -10%;
         float: right;
+        width: -webkit-fill-available;
         @include respond-to(phone) {
           margin-left: 0;
         };
@@ -250,7 +251,7 @@
             height: 10px;
             margin-left: 0;
             margin-right: 0;
-            
+
           }
           @include respond-to(phone-long) {
             width: 10px;
